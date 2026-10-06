@@ -1,0 +1,67 @@
+{
+  "utc": "2026-10-06T16:25:19.261105+00:00",
+  "records": [
+    {
+      "source": "https://github.com/MouseLand/facemap/blob/f8b5b518efcde8b4aae7727283bf017b23641c7f/paper/neuralpred.py",
+      "retrieved_bytes": 27363,
+      "sha256": "638d50ced23c97285047bd307459dbabc100ac4a22e6d4029aabdbfb604114bc",
+      "temporary_file": "/tmp/neuron_facemap_neuralpred.py"
+    },
+    {
+      "source": "https://github.com/MouseLand/facemap/blob/f8b5b518efcde8b4aae7727283bf017b23641c7f/paper/fig3.py",
+      "retrieved_bytes": 16504,
+      "sha256": "8488ffa685781b6c2ea20da36e3621a4b9c184fd813334f6027ff506ba9239ab",
+      "temporary_file": "/tmp/neuron_facemap_fig3.py"
+    },
+    {
+      "source": "https://github.com/MouseLand/facemap/blob/f8b5b518efcde8b4aae7727283bf017b23641c7f/paper/fig4.py",
+      "retrieved_bytes": 10564,
+      "sha256": "5e1bfd39276f99eb1c8e6dcc27c3dbaafeab62f96e3ccefc37750e502b8f2e58",
+      "temporary_file": "/tmp/neuron_facemap_fig4.py"
+    },
+    {
+      "source": "https://github.com/MouseLand/facemap/blob/f8b5b518efcde8b4aae7727283bf017b23641c7f/paper/fig_utils.py",
+      "retrieved_bytes": 2905,
+      "sha256": "b0467c46d7cbf08b5cc35859b9d3cce049dd85d5bd3c4aeebc91ba0baa792ad1",
+      "temporary_file": "/tmp/neuron_facemap_fig_utils.py"
+    },
+    {
+      "source": "https://github.com/MouseLand/facemap/blob/f8b5b518efcde8b4aae7727283bf017b23641c7f/facemap/neural_prediction/prediction_utils.py",
+      "retrieved_bytes": 22728,
+      "sha256": "f8ba4277663418a6cf703dd1939d402506a9e866e0638ee14883af0afcb53f3a",
+      "temporary_file": "/tmp/neuron_facemap_prediction_utils.py"
+    },
+    {
+      "source": "https://github.com/MouseLand/facemap/blob/f8b5b518efcde8b4aae7727283bf017b23641c7f/facemap/neural_prediction/neural_model.py",
+      "retrieved_bytes": 15960,
+      "sha256": "c4e6e483278df9146904be2b1a922374049ec718ed861604cf22c516cc0c21b0",
+      "temporary_file": "/tmp/neuron_facemap_neural_model.py"
+    },
+    {
+      "source": "https://github.com/MouseLand/facemap/blob/f8b5b518efcde8b4aae7727283bf017b23641c7f/docs/neural_activity_prediction_tutorial.md",
+      "retrieved_bytes": 1593,
+      "sha256": "0d359b96b61d3d2cf4c57ad6df4791385a76b7998a2a09d43a52a3f99dbcc07b",
+      "temporary_file": "/tmp/neuron_facemap_neural_activity_prediction_tutorial.md"
+    },
+    {
+      "source": "https://github.com/MouseLand/facemap/blob/f8b5b518efcde8b4aae7727283bf017b23641c7f/README.md",
+      "retrieved_bytes": 12800,
+      "sha256": "473b921e6f027757ca71029f85cf21496bf8cd4ad0685484d79008ec1a4aeff7",
+      "temporary_file": "/tmp/neuron_facemap_README.md"
+    },
+    {
+      "source": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10774130/fullTextXML",
+      "retrieved_bytes": 204508,
+      "sha256": "55733e99f883a521df4626b3a4d0bcd1ed369af925ff393dfd448dfe1d0dbe41",
+      "temporary_file": "/tmp/neuron_facemap_paper.xml"
+    }
+  ],
+  "findings": [
+    "Publisher defines spks as neurons by times and run as running speed.",
+    "Pinned fig4 uses neural test indices to select running entries and displays absolute running.",
+    "Pinned neuralpred uses len(tneural)-1 in one prediction split; timestamp lengths need not equal spks length.",
+    "Camera resampling code is not needed or adopted for native neural-to-running decoding.",
+    "Paper reports seven visual mice; five overlap its cited2021 High-precision coding study."
+  ],
+  "training_code_imports_these_downloads": false
+}

@@ -1,0 +1,71 @@
+{
+  "created_utc": "2026-10-02T17:26:58.702051+00:00",
+  "question": "Can a simple shared spatial prior improve few-shot reconstruction of new neurons beyond activity, running speed, and per-neuron ID coefficients?",
+  "scope": "deterministic conditional-mean reconstruction; not a stochastic generator or a causal locomotion model",
+  "seed": 20261003,
+  "reference_cells": 512,
+  "donor_cells": 1024,
+  "tuning_cells": 128,
+  "evaluation_cells": 128,
+  "disjoint_roles": true,
+  "eligible": "nonconstant activity in calibration [0,416)",
+  "shared_training": [
+    0,
+    4160
+  ],
+  "calibration": [
+    0,
+    416
+  ],
+  "evaluation": [
+    4260,
+    5564
+  ],
+  "examples": {
+    "shared": 4129,
+    "calibration": 385,
+    "evaluation": 1273
+  },
+  "test": "never construct or evaluate time bins >=5564",
+  "window": 8,
+  "target_offset": 31,
+  "features": "reference PCA16 x 8-bin history plus speed x 8-bin history, training-standardized; intercept",
+  "shared_learning": "donor-specific ridge coefficients from shared training, mean-loss penalty 0.01",
+  "spatial_prior": "weighted average coefficients of 32 closest donor coordinates; Gaussian weights with per-query 32nd distance bandwidth",
+  "none_prior": "mean donor coefficients; preserves donor transfer without geometry",
+  "coordinate_conditions": [
+    "none",
+    "real",
+    "shuffle1",
+    "shuffle2"
+  ],
+  "shuffles": "fixed independent permutations of donor/tuning/evaluation coordinate assignments together; seed10101/20202; activity and ID assignment fixed",
+  "adaptation": "per-target ID-specific coefficient residual fitted on calibration labels; intercept unpenalized",
+  "adaptation_lambdas": [
+    0.001,
+    0.01,
+    0.1,
+    1.0,
+    10.0
+  ],
+  "selection": "each condition independently chooses lambda by mean standardized MSE on 128 tuning cells at validation times; 128 evaluation cells never select a model",
+  "baselines": [
+    "calibration mean",
+    "speed-history-only ridge with target-specific coefficients",
+    "reference activity plus speed ridge with target-specific coefficients and zero shared prior"
+  ],
+  "normalization": "reference/donor activity uses shared training; tuning/evaluation activity uses their calibration only; no later target activity used in preprocessing",
+  "primary": "relative improvement in mean per-cell calibration-standardized evaluation MSE",
+  "promising_gate": "real at least 2% better than none; real better than each shuffle and independent activity+speed ridge; real mean R2 positive; >=80/128 cells beat none",
+  "secondary": "per-cell correlation, predicted/actual variance, lag1 autocorrelation error, population covariance error; conditional-mean predictions are not full generative samples",
+  "uncertainty": "2000 paired circular100-time-block resamples, conditional on this one population; cells not treated as independent animals",
+  "budget": "one fixed population; 20 adaptation fits plus five speed-only and five independent ridge fits; no gradient training or adaptive expansion",
+  "limitation": "different target cells but same previously examined recording and validation time interval; tuning and evaluation cells share population activity; no independent confirmation",
+  "application_hashes": {
+    "model.py": "2297af73466e1c85ee5774dc10a44a2a03f7a6f48919a111b43a8cf6d7d86a40",
+    "data.py": "894d5aea4dd0ce6a139178b66b1f8a5538f1c4f015081153d4c11fa55d78b7bf",
+    "train.py": "0361d216cd75616ed07501a019f4837f7c0acf57f0cd2edecb0fc6728064d7f9"
+  },
+  "implementation_sha256": "1e5ad9f3168dd918cd3b7df5237a6ce9f81564d20b2bc0716711e5a2e0140d02",
+  "dataset_sha256": "b92f153a965a6a25153c125ac88245f887f310b50285dc5af11f0b544ac3ba32"
+}

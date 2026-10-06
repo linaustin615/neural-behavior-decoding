@@ -1,0 +1,209 @@
+{
+  "created_utc": "2026-10-06T00:48:34.979918+00:00",
+  "analysis_role": "Post-hoc descriptive context from already scored later predictions. No new fits or predictions; no new scientific gate or significance test.",
+  "question": "Did expanding the panel also help the control models on later data?",
+  "seeds": [
+    10,
+    11,
+    12
+  ],
+  "rows": [
+    {
+      "mouse": "MP030",
+      "scores": {
+        "mlp512": {
+          "mse": 0.04053303698240572,
+          "mae": 0.07165684000941293,
+          "single_mse": [
+            0.05152170970902701,
+            0.04289710819354103,
+            0.04187118282669244
+          ]
+        },
+        "mlp128": {
+          "mse": 0.07942011731605367,
+          "mae": 0.09034043535394086,
+          "single_mse": [
+            0.07708879191570163,
+            0.0893885537534591,
+            0.07970362008042982
+          ]
+        },
+        "ridge512": {
+          "mse": 0.05789687158445404,
+          "mae": 0.12045760575773598,
+          "single_mse": [
+            0.05789687158445405,
+            0.05789687158445405,
+            0.05789687158445405
+          ]
+        },
+        "ridge128": {
+          "mse": 0.09296599640344504,
+          "mae": 0.14670248331095836,
+          "single_mse": [
+            0.09296599640344504,
+            0.09296599640344504,
+            0.09296599640344504
+          ]
+        }
+      }
+    },
+    {
+      "mouse": "MP032",
+      "scores": {
+        "mlp512": {
+          "mse": 0.007993305906265126,
+          "mae": 0.038841762767115665,
+          "single_mse": [
+            0.00841335377449644,
+            0.01029685981607342,
+            0.008679229722103466
+          ]
+        },
+        "mlp128": {
+          "mse": 0.013782598644399534,
+          "mae": 0.043729838236129644,
+          "single_mse": [
+            0.008125841765731986,
+            0.025726538009872464,
+            0.01691904093676947
+          ]
+        },
+        "ridge512": {
+          "mse": 0.007130625183692608,
+          "mae": 0.0371199474968066,
+          "single_mse": [
+            0.007130625183692607,
+            0.007130625183692607,
+            0.007130625183692607
+          ]
+        },
+        "ridge128": {
+          "mse": 0.017644595040020365,
+          "mae": 0.07995144689237317,
+          "single_mse": [
+            0.017644595040020368,
+            0.017644595040020368,
+            0.017644595040020368
+          ]
+        }
+      }
+    },
+    {
+      "mouse": "MP033",
+      "scores": {
+        "mlp512": {
+          "mse": 0.30807198636509925,
+          "mae": 0.38229520843456105,
+          "single_mse": [
+            0.32699222310548637,
+            0.35260823685462017,
+            0.30643423153260974
+          ]
+        },
+        "mlp128": {
+          "mse": 0.39468153403199974,
+          "mae": 0.43303708307557626,
+          "single_mse": [
+            0.3900788956686562,
+            0.5055312610736562,
+            0.43589299451412816
+          ]
+        },
+        "ridge512": {
+          "mse": 0.4477292168631893,
+          "mae": 0.5184915983857191,
+          "single_mse": [
+            0.44772921686318934,
+            0.44772921686318934,
+            0.44772921686318934
+          ]
+        },
+        "ridge128": {
+          "mse": 0.5414426742569431,
+          "mae": 0.5679957117941539,
+          "single_mse": [
+            0.5414426742569433,
+            0.5414426742569433,
+            0.5414426742569433
+          ]
+        }
+      }
+    },
+    {
+      "mouse": "MP034",
+      "scores": {
+        "mlp512": {
+          "mse": 0.10353870104156947,
+          "mae": 0.226311374862131,
+          "single_mse": [
+            0.11095079321167861,
+            0.09798972688733702,
+            0.12261878797429172
+          ]
+        },
+        "mlp128": {
+          "mse": 0.11312974992329357,
+          "mae": 0.26164788924964666,
+          "single_mse": [
+            0.09051557818230296,
+            0.25081383414567765,
+            0.08473571713673914
+          ]
+        },
+        "ridge512": {
+          "mse": 0.4174363216344185,
+          "mae": 0.5947579773532851,
+          "single_mse": [
+            0.41743632163441846,
+            0.41743632163441846,
+            0.41743632163441846
+          ]
+        },
+        "ridge128": {
+          "mse": 0.48735669519880603,
+          "mae": 0.5638148427967455,
+          "single_mse": [
+            0.4873566951988061,
+            0.4873566951988061,
+            0.4873566951988061
+          ]
+        }
+      }
+    }
+  ],
+  "contrasts": {
+    "mlp": {
+      "mean_mse_gain": 0.3034755202216534,
+      "mean_mae_gain": 0.14270564959811832,
+      "mouse_mse_gains": [
+        0.4896376591701088,
+        0.42004362801980366,
+        0.2194416008828992,
+        0.08477919281380197
+      ],
+      "mouse_wins": 4,
+      "individual_wins": 9
+    },
+    "ridge": {
+      "mean_mse_gain": 0.3224124301557364,
+      "mean_mae_gain": 0.18672289824111865,
+      "mouse_mse_gains": [
+        0.3772252885539066,
+        0.5958748178963943,
+        0.17308103304262623,
+        0.14346858113001837
+      ],
+      "mouse_wins": 4,
+      "individual_wins": null
+    }
+  },
+  "source_hashes": {
+    "experiments/2026-10-05_larger_panel/MP030/stage1_predictions.npz": "6f4b98982463cf8c7444e974147e4696b4a02b3cebb48d9dcdbb63443aa7595f",
+    "experiments/2026-10-05_larger_panel/MP032/stage1_predictions.npz": "f06f9cd68e37bfee8aa15bf11965edb4ae0fdae2028e1793999a91a0c9587cc4",
+    "experiments/2026-10-05_larger_panel/MP033/stage1_predictions.npz": "9e641dac658e5c17e6f3a984c10808569c19e2e9a6084d9da7cecf03498288d8",
+    "experiments/2026-10-05_larger_panel/MP034/stage1_predictions.npz": "6395137a9d4035412d680ef4fefd5df5038c78ac2ae8213d28dfc81821ed4250"
+  },
+  "caveats": "Same historically searched mice. Neural expansion also changes neuron-ID capacity and population summaries; raw ridge keeps the same penalty grid. This does not isolate information from capacity/regularization, does not establish attention superiority and cannot rescue a failed primary gate."
+}

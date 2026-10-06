@@ -1,0 +1,202 @@
+[
+  {
+    "mouse": "MP019",
+    "model": "depth_pool_ridge",
+    "seen": {
+      "r2": 0.3400236193381688,
+      "pearson": 0.7105298434602497,
+      "mse": 81.71759953264846
+    },
+    "unseen": {
+      "r2": 0.1392564419156126,
+      "pearson": 0.45376184590698354,
+      "mse": 106.57638582355226
+    },
+    "alphas": [
+      0.1,
+      0.1,
+      1.0,
+      0.1
+    ],
+    "depths": [
+      -390.0,
+      -360.0,
+      -330.0,
+      -300.0,
+      -270.0,
+      -240.0,
+      -210.0,
+      -180.0,
+      -150.0
+    ],
+    "note": "exploratory follow-up; deterministic ensemble on four matched neuron subsets"
+  },
+  {
+    "mouse": "MP019",
+    "model": "shuffled_depth_pool_ridge",
+    "seen": {
+      "r2": 0.2326988329177987,
+      "pearson": 0.6730969468626679,
+      "mse": 95.00644466954846
+    },
+    "unseen": {
+      "r2": -0.07011141980187152,
+      "pearson": 0.02163299809544888,
+      "mse": 132.50010003538387
+    },
+    "alphas": [
+      0.1,
+      0.1,
+      0.1,
+      0.1
+    ],
+    "depths": [
+      -390.0,
+      -360.0,
+      -330.0,
+      -300.0,
+      -270.0,
+      -240.0,
+      -210.0,
+      -180.0,
+      -150.0
+    ],
+    "note": "exploratory follow-up; deterministic ensemble on four matched neuron subsets"
+  },
+  {
+    "mouse": "MP027",
+    "model": "depth_pool_ridge",
+    "seen": {
+      "r2": 0.27172506695774756,
+      "pearson": 0.6121666438546101,
+      "mse": 17.863961589383543
+    },
+    "unseen": {
+      "r2": 0.10711128687336169,
+      "pearson": 0.3966892732026184,
+      "mse": 21.901796905541666
+    },
+    "alphas": [
+      1000.0,
+      1000.0,
+      100.0,
+      1000.0
+    ],
+    "depths": [
+      70.0,
+      105.0,
+      140.0,
+      175.0,
+      210.0,
+      245.0,
+      280.0,
+      315.0,
+      350.0,
+      385.0,
+      420.0
+    ],
+    "note": "exploratory follow-up; deterministic ensemble on four matched neuron subsets"
+  },
+  {
+    "mouse": "MP027",
+    "model": "shuffled_depth_pool_ridge",
+    "seen": {
+      "r2": 0.19852914995206516,
+      "pearson": 0.605235080625669,
+      "mse": 19.65939486679576
+    },
+    "unseen": {
+      "r2": -0.03414827853717051,
+      "pearson": 0.17750089245982348,
+      "mse": 25.366773298571463
+    },
+    "alphas": [
+      0.1,
+      1000.0,
+      1000.0,
+      1000.0
+    ],
+    "depths": [
+      70.0,
+      105.0,
+      140.0,
+      175.0,
+      210.0,
+      245.0,
+      280.0,
+      315.0,
+      350.0,
+      385.0,
+      420.0
+    ],
+    "note": "exploratory follow-up; deterministic ensemble on four matched neuron subsets"
+  },
+  {
+    "mouse": "MP028",
+    "model": "depth_pool_ridge",
+    "seen": {
+      "r2": 0.3189305303383979,
+      "pearson": 0.5656455755556515,
+      "mse": 2.73398337868895
+    },
+    "unseen": {
+      "r2": 0.06641676032976207,
+      "pearson": 0.30496114000505775,
+      "mse": 3.747636876380915
+    },
+    "alphas": [
+      100.0,
+      1000.0,
+      0.1,
+      0.1
+    ],
+    "depths": [
+      70.0,
+      105.0,
+      140.0,
+      175.0,
+      210.0,
+      245.0,
+      280.0,
+      315.0,
+      350.0,
+      385.0,
+      420.0
+    ],
+    "note": "exploratory follow-up; deterministic ensemble on four matched neuron subsets"
+  },
+  {
+    "mouse": "MP028",
+    "model": "shuffled_depth_pool_ridge",
+    "seen": {
+      "r2": 0.19747815242504752,
+      "pearson": 0.4596507696760713,
+      "mse": 3.2215236331101784
+    },
+    "unseen": {
+      "r2": 0.04308094970564591,
+      "pearson": 0.3453313993672502,
+      "mse": 3.8413126630906995
+    },
+    "alphas": [
+      100.0,
+      1000.0,
+      100.0,
+      10.0
+    ],
+    "depths": [
+      70.0,
+      105.0,
+      140.0,
+      175.0,
+      210.0,
+      245.0,
+      280.0,
+      315.0,
+      350.0,
+      385.0,
+      420.0
+    ],
+    "note": "exploratory follow-up; deterministic ensemble on four matched neuron subsets"
+  }
+]

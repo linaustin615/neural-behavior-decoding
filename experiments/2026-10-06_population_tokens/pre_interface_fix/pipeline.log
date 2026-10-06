@@ -1,0 +1,7 @@
+Started 10 pid 22254
+Started 11 pid 22255
+Started 12 pid 22256
+Traceback (most recent call last):
+  File "/Users/austinlin/neuron_transformer/experiments/2026-10-06_population_tokens/pipeline.py", line 44, in <module>
+    if any(p.returncode for _,p in processes):raise RuntimeError('Training failed')
+RuntimeError: Training failed

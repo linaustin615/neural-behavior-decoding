@@ -1,0 +1,551 @@
+{
+  "utc": "2026-10-06T16:17:05.849533+00:00",
+  "mice": [
+    "TX103",
+    "TX104",
+    "TX56",
+    "TX57",
+    "TX60",
+    "TX61",
+    "VR2"
+  ],
+  "metadata": [
+    {
+      "mouse": "TX103",
+      "prepared_utc": "2026-10-06T16:17:05.622000+00:00",
+      "frames": 25583,
+      "total_neurons": 84310,
+      "eligible_neurons": 84310,
+      "speed_mean": 0.18234805526757616,
+      "speed_std": 0.3921790709066958,
+      "lower": -0.46496120980142513,
+      "train_examples": 4096,
+      "boundaries": {
+        "train": [
+          0,
+          15349
+        ],
+        "validation": [
+          15413,
+          20466
+        ],
+        "test": [
+          20530,
+          25583
+        ]
+      },
+      "examples": {
+        "train": 4096,
+        "validation": 4990,
+        "test": 4990
+      },
+      "source_uncompressed_sha256": "4eb4974f3b82608c06ad869de947e1f2b2fc21417fefd405b6cefa4c7ed8c552",
+      "panel_sha256": "f688a8a7659d77bf5288a18324d391eb1f6f90f05d948c173e8d98ef2f20d6a7",
+      "schema_timing": {
+        "activity_frames": 25583,
+        "neural_timestamp_n": 25583,
+        "camera_n": 402891,
+        "timestamp_minus_activity_frames": 0,
+        "timestamp_units": "publisher acquisition units; seconds conversion not verified",
+        "timestamp_span": 0.09319605585187674,
+        "neural_dt_min": 6.017507985234261e-07,
+        "neural_dt_median": 3.496999852359295e-06,
+        "neural_dt_max": 6.243237294256687e-06,
+        "neural_monotonic": true,
+        "camera_monotonic": true,
+        "running_length_matches_activity": true,
+        "running_frames": 25583,
+        "paired_frames": 25583,
+        "discarded_terminal_activity_frames": 0,
+        "discarded_terminal_running_frames": 0,
+        "alignment": "published same-index activity/run common prefix; no shifts or camera resampling",
+        "limitation": "raw ball-to-neural alignment not independently reconstructed"
+      },
+      "test_data_quality_only": true,
+      "test_distribution_or_predictions_inspected": false,
+      "sha256": {
+        "activity_mean.npy": "7c4c7972d83677a9a012ba5ff11ea503cd1624c25318564bebef0f8337e7cd3c",
+        "activity_std.npy": "69eeeb955bba50316743cb80b67f7d6a9cc1def09899902ed39c63239d36349d",
+        "panel.npy": "f688a8a7659d77bf5288a18324d391eb1f6f90f05d948c173e8d98ef2f20d6a7",
+        "test_seq.npy": "454ddb908a1cbcaa1d38fec902a23407f5bb9a7420d1382cb716761be26c8fa5",
+        "test_y.npy": "641d348ed59d639c55cc7fa0a7c233b6bb35d20679ce642f01fe64822faa2771",
+        "train_indices.npy": "513b9dea02c7e5acaa8b82470a9a9dd89ee76ce33a6cdd2342307fb56d7bed2a",
+        "train_seq.npy": "9963e87369caa6e7fc3ab799432a2970f8a9e008f2ba967ab21830ab581d705a",
+        "train_y.npy": "d9675a850514c4613ec1f266b9df53efbafa45b35317441c6d83b4a3f0032209",
+        "validation_seq.npy": "f02da594dd0fc9e95f4c743b573f68db4dee1d90f4a13b3eb19415937bc2beb9",
+        "validation_y.npy": "dae2d65b41bf36c4523c363a8235ae86c8d5e7ee7ab3c699900c37d62a9a7479"
+      }
+    },
+    {
+      "mouse": "TX104",
+      "prepared_utc": "2026-10-06T16:14:36.906841+00:00",
+      "frames": 25193,
+      "total_neurons": 60649,
+      "eligible_neurons": 60649,
+      "speed_mean": 0.4076287491505606,
+      "speed_std": 0.4417290163910267,
+      "lower": -0.9228027456310909,
+      "train_examples": 4096,
+      "boundaries": {
+        "train": [
+          0,
+          15115
+        ],
+        "validation": [
+          15179,
+          20154
+        ],
+        "test": [
+          20218,
+          25193
+        ]
+      },
+      "examples": {
+        "train": 4096,
+        "validation": 4912,
+        "test": 4912
+      },
+      "source_uncompressed_sha256": "ba5b89b05e57aa1ef48dcdad5cc28ad72356cc2b08c6782e432fd90558d81158",
+      "panel_sha256": "0f56c98c1767c834488ae534d96a5c19e3cf80848aa830fa1443179aef38529a",
+      "schema_timing": {
+        "activity_frames": 25193,
+        "neural_timestamp_n": 25193,
+        "camera_n": 396836,
+        "timestamp_minus_activity_frames": 0,
+        "timestamp_units": "publisher acquisition units; seconds conversion not verified",
+        "timestamp_span": 0.09178013144992292,
+        "neural_dt_min": 6.002373993396759e-07,
+        "neural_dt_median": 3.498513251543045e-06,
+        "neural_dt_max": 5.31831756234169e-06,
+        "neural_monotonic": true,
+        "camera_monotonic": true,
+        "running_length_matches_activity": true,
+        "running_frames": 25193,
+        "paired_frames": 25193,
+        "discarded_terminal_activity_frames": 0,
+        "discarded_terminal_running_frames": 0,
+        "alignment": "published same-index activity/run common prefix; no shifts or camera resampling",
+        "limitation": "raw ball-to-neural alignment not independently reconstructed"
+      },
+      "test_data_quality_only": true,
+      "test_distribution_or_predictions_inspected": false,
+      "sha256": {
+        "activity_mean.npy": "a4a01b9a932df5d6815e076fa6f5fce78c0615144b7c0696f134ad8b1b479095",
+        "activity_std.npy": "feea7c66b585d8f3c69e739df9afa443814148b40e86aba363fefe6115527c4b",
+        "panel.npy": "0f56c98c1767c834488ae534d96a5c19e3cf80848aa830fa1443179aef38529a",
+        "test_seq.npy": "4325b7640350649a58fefed9e501e67f4d68b9a2bb29bdca9ea5cfd5d829531c",
+        "test_y.npy": "c6ffc0cc69f9e0f770ef77bb920a79e47a6ebd15e37288dff4031274b382f5f2",
+        "train_indices.npy": "c611ae8476b50fde225973fed808f5ccf6c7b9040ec85b4d7a0fa07fdea88ee8",
+        "train_seq.npy": "f8a123f6907e304297cbcc34b9456ec3448c83a113ddad27137d7a80661fce84",
+        "train_y.npy": "7a28c33c6f07b1bd9ae31455fa50564f55f89d31962617d8221a9fbc2814ab71",
+        "validation_seq.npy": "c269509abcbaed0fbdf464fd50dacb95f9f14c10b6bf61cec482dba3b36041bb",
+        "validation_y.npy": "d8b8a5da683497ed77f684339b4b50ce473f9c59448e11fd9eaecb86601feacb"
+      }
+    },
+    {
+      "mouse": "TX56",
+      "prepared_utc": "2026-10-06T16:10:02.141173+00:00",
+      "frames": 29617,
+      "total_neurons": 43787,
+      "eligible_neurons": 43787,
+      "speed_mean": 0.36463853643901545,
+      "speed_std": 0.6808645808391557,
+      "lower": -0.5355522180190424,
+      "train_examples": 4096,
+      "boundaries": {
+        "train": [
+          0,
+          17770
+        ],
+        "validation": [
+          17834,
+          23693
+        ],
+        "test": [
+          23757,
+          29617
+        ]
+      },
+      "examples": {
+        "train": 4096,
+        "validation": 5796,
+        "test": 5797
+      },
+      "source_uncompressed_sha256": "d29c3ebb3398714581c7282d9f86ed61aadfbd082994951859cb952cda6d7d75",
+      "panel_sha256": "3dc03abc83240f25b9e1257eadb782d9bef5918f60244a09614b7010c1428f8e",
+      "schema_timing": {
+        "activity_frames": 29618,
+        "neural_timestamp_n": 29618,
+        "camera_n": 466595,
+        "timestamp_minus_activity_frames": 0,
+        "timestamp_units": "publisher acquisition units; seconds conversion not verified",
+        "timestamp_span": 46628246.0,
+        "neural_dt_min": 1573.0,
+        "neural_dt_median": 1574.0,
+        "neural_dt_max": 1575.0,
+        "neural_monotonic": true,
+        "camera_monotonic": true,
+        "running_length_matches_activity": false,
+        "running_frames": 29617,
+        "paired_frames": 29617,
+        "discarded_terminal_activity_frames": 1,
+        "discarded_terminal_running_frames": 0,
+        "alignment": "published same-index activity/run common prefix; no shifts or camera resampling",
+        "limitation": "raw ball-to-neural alignment not independently reconstructed"
+      },
+      "test_data_quality_only": true,
+      "test_distribution_or_predictions_inspected": false,
+      "sha256": {
+        "activity_mean.npy": "abe2ecef9985515d2f5dc0c98d8a4f2e6c5c8769bcc987d57c04bec3449e9706",
+        "activity_std.npy": "5a36b3743cb28600e53dd07e33efc65634f6dab028073abe2a4d16a49cb2c7ac",
+        "panel.npy": "3dc03abc83240f25b9e1257eadb782d9bef5918f60244a09614b7010c1428f8e",
+        "test_seq.npy": "ce6125438916c84db6a57c74dde73adc459fd11457c53c089cc2b41739a6a254",
+        "test_y.npy": "7f7d2a4dd677460078e47323e2bf618aeb647be82201bd1dca16b954fc8f2872",
+        "train_indices.npy": "d8ff99e12841e8ffe487df6f823f66baee118a01f2caa926ca32353805fab05c",
+        "train_seq.npy": "b501b867dae10688830af9f5de5b7a6cc059f86cf43e881b7702f2ad73888ecf",
+        "train_y.npy": "d72add08667740051e9eed0da5cf1828e11cfc041f64fef75b608b3fcd784c1e",
+        "validation_seq.npy": "4641cc3ae69c13b001c84d53da0d20fbf5afc24d566e89b9a2e27661c11a8efd",
+        "validation_y.npy": "abf4ca40dab486cbe61156bd61e4b160ad30d9827a7cc31d90ca7a2977d2ea21"
+      }
+    },
+    {
+      "mouse": "TX57",
+      "prepared_utc": "2026-10-06T15:08:14.478622+00:00",
+      "frames": 23492,
+      "total_neurons": 37937,
+      "eligible_neurons": 37937,
+      "speed_mean": 0.44967931319247234,
+      "speed_std": 0.7637513498700439,
+      "lower": -0.5887771108607369,
+      "train_examples": 4096,
+      "boundaries": {
+        "train": [
+          0,
+          14095
+        ],
+        "validation": [
+          14159,
+          18793
+        ],
+        "test": [
+          18857,
+          23492
+        ]
+      },
+      "examples": {
+        "train": 4096,
+        "validation": 4571,
+        "test": 4572
+      },
+      "source_uncompressed_sha256": "54a7970c2ffc7daa773ac60d2acee4eae5bc8e8db8e39e34d28f1e06a4116c0e",
+      "panel_sha256": "2ad8eb5279bf63da6a5b5d4415ef98c916333a8160bf2e8e1652d0ac0b064e9e",
+      "schema_timing": {
+        "activity_frames": 23492,
+        "neural_timestamp_n": 23491,
+        "camera_n": 370107,
+        "timestamp_minus_activity_frames": -1,
+        "timestamp_units": "publisher acquisition units; seconds conversion not verified",
+        "timestamp_span": 36978375.0,
+        "neural_dt_min": 1573.0,
+        "neural_dt_median": 1574.0,
+        "neural_dt_max": 1575.0,
+        "neural_monotonic": true,
+        "camera_monotonic": true,
+        "running_length_matches_activity": true,
+        "alignment": "published same-index activity/run; no camera resampling or timestamp-based cropping",
+        "limitation": "raw ball-to-neural alignment not independently reconstructed"
+      },
+      "test_data_quality_only": true,
+      "test_distribution_or_predictions_inspected": false,
+      "sha256": {
+        "activity_mean.npy": "2f336903c7e84fe4d5f715c0f15ed526f26014ab1be92dfd4ce2f9d571a75cf1",
+        "activity_std.npy": "02c6fc35889c54445b454dda4c3c53a248673b414535a112c3e8bc36227a75c7",
+        "panel.npy": "2ad8eb5279bf63da6a5b5d4415ef98c916333a8160bf2e8e1652d0ac0b064e9e",
+        "test_seq.npy": "dbcb4e5d242fca5462bd67d6c0e96d963ae3197656d4ee801a3d4253b94b6663",
+        "test_y.npy": "2a4143d20edfaa6dbb2ccee1545eb381e9e70d9f8f1ccf00a12d4d35698fcc0a",
+        "train_indices.npy": "816f69599b26d61ab1d17c422c06de94da93de29746e1c6d775465ac2f7d6b98",
+        "train_seq.npy": "0d332485b0e7e1c99b3ba2991f802d77fdcada2a398ea5f437a0af1df19d0298",
+        "train_y.npy": "b2fd64d312cde0c1a7c12217ae6ef037d72063a24ae8c89f5705ee709060d610",
+        "validation_seq.npy": "e43487bbbb2102b126243282dcc0bd54fa4279be5e9ea8ddc9cc110d25f7ed62",
+        "validation_y.npy": "fe534b666491b39fcd21e4c1e37db10d498c4c9119548b34a749370001bc8fc9"
+      }
+    },
+    {
+      "mouse": "TX60",
+      "prepared_utc": "2026-10-06T16:10:10.031350+00:00",
+      "frames": 23185,
+      "total_neurons": 49626,
+      "eligible_neurons": 49626,
+      "speed_mean": 0.1994680974775515,
+      "speed_std": 0.35877399761414386,
+      "lower": -0.5559714438727985,
+      "train_examples": 4096,
+      "boundaries": {
+        "train": [
+          0,
+          13911
+        ],
+        "validation": [
+          13975,
+          18548
+        ],
+        "test": [
+          18612,
+          23185
+        ]
+      },
+      "examples": {
+        "train": 4096,
+        "validation": 4510,
+        "test": 4510
+      },
+      "source_uncompressed_sha256": "fbef2b306c1a9443b3487ded05ce8af94414ebdd5b52ff1377d182da19bb35f6",
+      "panel_sha256": "51c95c9fa055b9932a88d69f0b61f8a6274a3ff51b155a41cfecc9851e430a04",
+      "schema_timing": {
+        "activity_frames": 23185,
+        "neural_timestamp_n": 23184,
+        "camera_n": 365285,
+        "timestamp_minus_activity_frames": -1,
+        "timestamp_units": "publisher acquisition units; seconds conversion not verified",
+        "timestamp_span": 36496292.0,
+        "neural_dt_min": 1572.0,
+        "neural_dt_median": 1574.0,
+        "neural_dt_max": 1575.0,
+        "neural_monotonic": true,
+        "camera_monotonic": true,
+        "running_length_matches_activity": true,
+        "running_frames": 23185,
+        "paired_frames": 23185,
+        "discarded_terminal_activity_frames": 0,
+        "discarded_terminal_running_frames": 0,
+        "alignment": "published same-index activity/run common prefix; no shifts or camera resampling",
+        "limitation": "raw ball-to-neural alignment not independently reconstructed"
+      },
+      "test_data_quality_only": true,
+      "test_distribution_or_predictions_inspected": false,
+      "sha256": {
+        "activity_mean.npy": "2886489e1f6adca926d6b6bdb8d155da340c3dc4e9bf3e818d8949df38839631",
+        "activity_std.npy": "01d484b0c4e6d6535343d01bc22efc1394c6bb847167b73b4648d43c94499416",
+        "panel.npy": "51c95c9fa055b9932a88d69f0b61f8a6274a3ff51b155a41cfecc9851e430a04",
+        "test_seq.npy": "73c711d8fefc1c4c0825026f477d6339fb81c687162e4338a64dfdcd01119b9d",
+        "test_y.npy": "ea7c8cd85e40a79551d6f8e1caf52403a4cefbba6a9aa94e05ebffd7e3768273",
+        "train_indices.npy": "0be3a50a78a9c8c6985c5cb17eb7a30720e88d5cb6efdaa52176db723e678160",
+        "train_seq.npy": "ee14dcfe1829c8f8c0eadf0a074fb0e96a7e7c5de73794266d2e33973499e604",
+        "train_y.npy": "a7425f5ed5acfd43168aa39ab61cc2f4e01af677507f2387973474f3d0a1f077",
+        "validation_seq.npy": "5e5a39382414b0e2ed7eb4ad7b80653b271ba5ae70230d09af8babd8a84f3dd9",
+        "validation_y.npy": "b58aca49d26e0125adfb1b85728533249903990e67ae3a39a4535c84c897d73f"
+      }
+    },
+    {
+      "mouse": "TX61",
+      "prepared_utc": "2026-10-06T16:10:19.840182+00:00",
+      "frames": 24792,
+      "total_neurons": 50060,
+      "eligible_neurons": 50060,
+      "speed_mean": 0.279441580115148,
+      "speed_std": 0.5207913670607004,
+      "lower": -0.5365710681655327,
+      "train_examples": 4096,
+      "boundaries": {
+        "train": [
+          0,
+          14875
+        ],
+        "validation": [
+          14939,
+          19833
+        ],
+        "test": [
+          19897,
+          24792
+        ]
+      },
+      "examples": {
+        "train": 4096,
+        "validation": 4831,
+        "test": 4832
+      },
+      "source_uncompressed_sha256": "5b437f89978d2b01b266fae89b8b2e5c9eded7bd029ff6f57ba1223b8375baa6",
+      "panel_sha256": "fba38fffee60abc7031bae80aa3d3612a257150ae46711b12bb46ddb1538ec8e",
+      "schema_timing": {
+        "activity_frames": 24793,
+        "neural_timestamp_n": 24791,
+        "camera_n": 390621,
+        "timestamp_minus_activity_frames": -2,
+        "timestamp_units": "publisher acquisition units; seconds conversion not verified",
+        "timestamp_span": 39026988.0,
+        "neural_dt_min": 1573.0,
+        "neural_dt_median": 1574.0,
+        "neural_dt_max": 1575.0,
+        "neural_monotonic": true,
+        "camera_monotonic": true,
+        "running_length_matches_activity": false,
+        "running_frames": 24792,
+        "paired_frames": 24792,
+        "discarded_terminal_activity_frames": 1,
+        "discarded_terminal_running_frames": 0,
+        "alignment": "published same-index activity/run common prefix; no shifts or camera resampling",
+        "limitation": "raw ball-to-neural alignment not independently reconstructed"
+      },
+      "test_data_quality_only": true,
+      "test_distribution_or_predictions_inspected": false,
+      "sha256": {
+        "activity_mean.npy": "e597f5191297beb3e98dccc8c66e90a376bdba0eda41690f5de80a1f5a73a937",
+        "activity_std.npy": "86e3ef2a4eb6d4138cd7321d32c46b187919b48aa0dd5c34f44b9d0df1dc3f7b",
+        "panel.npy": "fba38fffee60abc7031bae80aa3d3612a257150ae46711b12bb46ddb1538ec8e",
+        "test_seq.npy": "e50e548ed009ec0df96ea0c9fe3ebf31a2875b44d12b9f41116b4f0162f1b1b2",
+        "test_y.npy": "82d929fd6b96056df5b80ea980ce8b3e8a7ed3e57c69370cd3911792a8be5d09",
+        "train_indices.npy": "42a804cdb2f9b7e20644e4ca4f86118b188a415b8c3e4f3c78d67ce50380de61",
+        "train_seq.npy": "fbaf28f07da3f85bd8ad6b5b1e07ec5ec995a8b86243f16677a1cf0fb6420a0b",
+        "train_y.npy": "75a52f797c8eed30572d73e2f5f9c290df12eb96646e9f82df84aa1748958823",
+        "validation_seq.npy": "7346a27ccdb8daf7423c0abc3e397c76482857b8cf2dcf606204daba8062f4eb",
+        "validation_y.npy": "68dae4001587565039290683d6a8b2a1e49fd515bf1aea0d23ca50457c5d0d64"
+      }
+    },
+    {
+      "mouse": "VR2",
+      "prepared_utc": "2026-10-06T16:14:13.965304+00:00",
+      "frames": 24621,
+      "total_neurons": 59296,
+      "eligible_neurons": 59296,
+      "speed_mean": 0.2270286584569266,
+      "speed_std": 0.5013219062774608,
+      "lower": -0.4528600398548627,
+      "train_examples": 4096,
+      "boundaries": {
+        "train": [
+          0,
+          14772
+        ],
+        "validation": [
+          14836,
+          19696
+        ],
+        "test": [
+          19760,
+          24621
+        ]
+      },
+      "examples": {
+        "train": 4096,
+        "validation": 4797,
+        "test": 4798
+      },
+      "source_uncompressed_sha256": "d8f3da8743edf31f9002aee3c5107899f72fef0ea03fd6dee3403787db825565",
+      "panel_sha256": "b0f7093ff8ce253bd84e6cc9908f6fa3ff3fe781e4bc80cc2624ec5dfc111fcb",
+      "schema_timing": {
+        "activity_frames": 24622,
+        "neural_timestamp_n": 24620,
+        "camera_n": 387929,
+        "timestamp_minus_activity_frames": -2,
+        "timestamp_units": "publisher acquisition units; seconds conversion not verified",
+        "timestamp_span": 38758923.0,
+        "neural_dt_min": 1573.0,
+        "neural_dt_median": 1574.0,
+        "neural_dt_max": 1575.0,
+        "neural_monotonic": true,
+        "camera_monotonic": true,
+        "running_length_matches_activity": false,
+        "running_frames": 24621,
+        "paired_frames": 24621,
+        "discarded_terminal_activity_frames": 1,
+        "discarded_terminal_running_frames": 0,
+        "alignment": "published same-index activity/run common prefix; no shifts or camera resampling",
+        "limitation": "raw ball-to-neural alignment not independently reconstructed"
+      },
+      "test_data_quality_only": true,
+      "test_distribution_or_predictions_inspected": false,
+      "sha256": {
+        "activity_mean.npy": "5b8c2bdf9b01caf731a6b93164239a37b5e89191c030315f5cab3f75e7e04194",
+        "activity_std.npy": "b2cb0ddb1aadb810b776fb768c30a784c06c379d007fdd6dfaf4341852bddf39",
+        "panel.npy": "b0f7093ff8ce253bd84e6cc9908f6fa3ff3fe781e4bc80cc2624ec5dfc111fcb",
+        "test_seq.npy": "3b5af17f141f2da625c4d79552dc2ff42016b16dff46e6b9b50b871c2ab0861b",
+        "test_y.npy": "9944e6cab5e8a8b49e90eb0c57d82aec6b4e2ccf1820e35f2cac1b9970e1e5e3",
+        "train_indices.npy": "3d10c0fbb8605c7e4fdf8e09d30964073711a661ba2a9017cecfc71080e610ac",
+        "train_seq.npy": "2fe35bec44414dbdaa31a92cf1d3af1c0be90062f2cab8f5c0e6dcaef2718216",
+        "train_y.npy": "83f7c9827a74af744dd792caba6d27f258120b2e993aed7e9a2d3e456d310e57",
+        "validation_seq.npy": "dd929173fb78bcedd5622a1d8709aaea08f6ac87232496ae88f8ab7098c7c4ba",
+        "validation_y.npy": "f75926c39cbcdc4b5c0c95589d4042bc8884d2bd008acce99b2b71cb52e8218d"
+      }
+    }
+  ],
+  "sha256": {
+    "prepared/TX103/activity_mean.npy": "7c4c7972d83677a9a012ba5ff11ea503cd1624c25318564bebef0f8337e7cd3c",
+    "prepared/TX103/activity_std.npy": "69eeeb955bba50316743cb80b67f7d6a9cc1def09899902ed39c63239d36349d",
+    "prepared/TX103/metadata.json": "ac952c252a85b0c27e9fd35d6a9ac6b496125076b67b009843ffb5746989c9c4",
+    "prepared/TX103/panel.npy": "f688a8a7659d77bf5288a18324d391eb1f6f90f05d948c173e8d98ef2f20d6a7",
+    "prepared/TX103/test_seq.npy": "454ddb908a1cbcaa1d38fec902a23407f5bb9a7420d1382cb716761be26c8fa5",
+    "prepared/TX103/test_y.npy": "641d348ed59d639c55cc7fa0a7c233b6bb35d20679ce642f01fe64822faa2771",
+    "prepared/TX103/train_indices.npy": "513b9dea02c7e5acaa8b82470a9a9dd89ee76ce33a6cdd2342307fb56d7bed2a",
+    "prepared/TX103/train_seq.npy": "9963e87369caa6e7fc3ab799432a2970f8a9e008f2ba967ab21830ab581d705a",
+    "prepared/TX103/train_y.npy": "d9675a850514c4613ec1f266b9df53efbafa45b35317441c6d83b4a3f0032209",
+    "prepared/TX103/validation_seq.npy": "f02da594dd0fc9e95f4c743b573f68db4dee1d90f4a13b3eb19415937bc2beb9",
+    "prepared/TX103/validation_y.npy": "dae2d65b41bf36c4523c363a8235ae86c8d5e7ee7ab3c699900c37d62a9a7479",
+    "prepared/TX104/activity_mean.npy": "a4a01b9a932df5d6815e076fa6f5fce78c0615144b7c0696f134ad8b1b479095",
+    "prepared/TX104/activity_std.npy": "feea7c66b585d8f3c69e739df9afa443814148b40e86aba363fefe6115527c4b",
+    "prepared/TX104/metadata.json": "b41d8d9066234c96197f2842b5a4826b071e96671565636409b581b8a2c1fe3d",
+    "prepared/TX104/panel.npy": "0f56c98c1767c834488ae534d96a5c19e3cf80848aa830fa1443179aef38529a",
+    "prepared/TX104/test_seq.npy": "4325b7640350649a58fefed9e501e67f4d68b9a2bb29bdca9ea5cfd5d829531c",
+    "prepared/TX104/test_y.npy": "c6ffc0cc69f9e0f770ef77bb920a79e47a6ebd15e37288dff4031274b382f5f2",
+    "prepared/TX104/train_indices.npy": "c611ae8476b50fde225973fed808f5ccf6c7b9040ec85b4d7a0fa07fdea88ee8",
+    "prepared/TX104/train_seq.npy": "f8a123f6907e304297cbcc34b9456ec3448c83a113ddad27137d7a80661fce84",
+    "prepared/TX104/train_y.npy": "7a28c33c6f07b1bd9ae31455fa50564f55f89d31962617d8221a9fbc2814ab71",
+    "prepared/TX104/validation_seq.npy": "c269509abcbaed0fbdf464fd50dacb95f9f14c10b6bf61cec482dba3b36041bb",
+    "prepared/TX104/validation_y.npy": "d8b8a5da683497ed77f684339b4b50ce473f9c59448e11fd9eaecb86601feacb",
+    "prepared/TX56/activity_mean.npy": "abe2ecef9985515d2f5dc0c98d8a4f2e6c5c8769bcc987d57c04bec3449e9706",
+    "prepared/TX56/activity_std.npy": "5a36b3743cb28600e53dd07e33efc65634f6dab028073abe2a4d16a49cb2c7ac",
+    "prepared/TX56/metadata.json": "ace61f1bb7fce39c8dc97b3354fa6404926cd144ee89a8ca2d137bffe1e8df19",
+    "prepared/TX56/panel.npy": "3dc03abc83240f25b9e1257eadb782d9bef5918f60244a09614b7010c1428f8e",
+    "prepared/TX56/test_seq.npy": "ce6125438916c84db6a57c74dde73adc459fd11457c53c089cc2b41739a6a254",
+    "prepared/TX56/test_y.npy": "7f7d2a4dd677460078e47323e2bf618aeb647be82201bd1dca16b954fc8f2872",
+    "prepared/TX56/train_indices.npy": "d8ff99e12841e8ffe487df6f823f66baee118a01f2caa926ca32353805fab05c",
+    "prepared/TX56/train_seq.npy": "b501b867dae10688830af9f5de5b7a6cc059f86cf43e881b7702f2ad73888ecf",
+    "prepared/TX56/train_y.npy": "d72add08667740051e9eed0da5cf1828e11cfc041f64fef75b608b3fcd784c1e",
+    "prepared/TX56/validation_seq.npy": "4641cc3ae69c13b001c84d53da0d20fbf5afc24d566e89b9a2e27661c11a8efd",
+    "prepared/TX56/validation_y.npy": "abf4ca40dab486cbe61156bd61e4b160ad30d9827a7cc31d90ca7a2977d2ea21",
+    "prepared/TX57/activity_mean.npy": "2f336903c7e84fe4d5f715c0f15ed526f26014ab1be92dfd4ce2f9d571a75cf1",
+    "prepared/TX57/activity_std.npy": "02c6fc35889c54445b454dda4c3c53a248673b414535a112c3e8bc36227a75c7",
+    "prepared/TX57/metadata.json": "fe65e2fc618de1464f67cd707fd125fddab11f1c0e8c7dc2393a0090726e7b46",
+    "prepared/TX57/panel.npy": "2ad8eb5279bf63da6a5b5d4415ef98c916333a8160bf2e8e1652d0ac0b064e9e",
+    "prepared/TX57/test_seq.npy": "dbcb4e5d242fca5462bd67d6c0e96d963ae3197656d4ee801a3d4253b94b6663",
+    "prepared/TX57/test_y.npy": "2a4143d20edfaa6dbb2ccee1545eb381e9e70d9f8f1ccf00a12d4d35698fcc0a",
+    "prepared/TX57/train_indices.npy": "816f69599b26d61ab1d17c422c06de94da93de29746e1c6d775465ac2f7d6b98",
+    "prepared/TX57/train_seq.npy": "0d332485b0e7e1c99b3ba2991f802d77fdcada2a398ea5f437a0af1df19d0298",
+    "prepared/TX57/train_y.npy": "b2fd64d312cde0c1a7c12217ae6ef037d72063a24ae8c89f5705ee709060d610",
+    "prepared/TX57/validation_seq.npy": "e43487bbbb2102b126243282dcc0bd54fa4279be5e9ea8ddc9cc110d25f7ed62",
+    "prepared/TX57/validation_y.npy": "fe534b666491b39fcd21e4c1e37db10d498c4c9119548b34a749370001bc8fc9",
+    "prepared/TX60/activity_mean.npy": "2886489e1f6adca926d6b6bdb8d155da340c3dc4e9bf3e818d8949df38839631",
+    "prepared/TX60/activity_std.npy": "01d484b0c4e6d6535343d01bc22efc1394c6bb847167b73b4648d43c94499416",
+    "prepared/TX60/metadata.json": "f0aefcb6673394284d1d9d350bce2ecb32cad518491425c9269d157348e6021e",
+    "prepared/TX60/panel.npy": "51c95c9fa055b9932a88d69f0b61f8a6274a3ff51b155a41cfecc9851e430a04",
+    "prepared/TX60/test_seq.npy": "73c711d8fefc1c4c0825026f477d6339fb81c687162e4338a64dfdcd01119b9d",
+    "prepared/TX60/test_y.npy": "ea7c8cd85e40a79551d6f8e1caf52403a4cefbba6a9aa94e05ebffd7e3768273",
+    "prepared/TX60/train_indices.npy": "0be3a50a78a9c8c6985c5cb17eb7a30720e88d5cb6efdaa52176db723e678160",
+    "prepared/TX60/train_seq.npy": "ee14dcfe1829c8f8c0eadf0a074fb0e96a7e7c5de73794266d2e33973499e604",
+    "prepared/TX60/train_y.npy": "a7425f5ed5acfd43168aa39ab61cc2f4e01af677507f2387973474f3d0a1f077",
+    "prepared/TX60/validation_seq.npy": "5e5a39382414b0e2ed7eb4ad7b80653b271ba5ae70230d09af8babd8a84f3dd9",
+    "prepared/TX60/validation_y.npy": "b58aca49d26e0125adfb1b85728533249903990e67ae3a39a4535c84c897d73f",
+    "prepared/TX61/activity_mean.npy": "e597f5191297beb3e98dccc8c66e90a376bdba0eda41690f5de80a1f5a73a937",
+    "prepared/TX61/activity_std.npy": "86e3ef2a4eb6d4138cd7321d32c46b187919b48aa0dd5c34f44b9d0df1dc3f7b",
+    "prepared/TX61/metadata.json": "72e4d9a425a820f698f80028c608b529b65f69b57df3bbc6db414192923668a1",
+    "prepared/TX61/panel.npy": "fba38fffee60abc7031bae80aa3d3612a257150ae46711b12bb46ddb1538ec8e",
+    "prepared/TX61/test_seq.npy": "e50e548ed009ec0df96ea0c9fe3ebf31a2875b44d12b9f41116b4f0162f1b1b2",
+    "prepared/TX61/test_y.npy": "82d929fd6b96056df5b80ea980ce8b3e8a7ed3e57c69370cd3911792a8be5d09",
+    "prepared/TX61/train_indices.npy": "42a804cdb2f9b7e20644e4ca4f86118b188a415b8c3e4f3c78d67ce50380de61",
+    "prepared/TX61/train_seq.npy": "fbaf28f07da3f85bd8ad6b5b1e07ec5ec995a8b86243f16677a1cf0fb6420a0b",
+    "prepared/TX61/train_y.npy": "75a52f797c8eed30572d73e2f5f9c290df12eb96646e9f82df84aa1748958823",
+    "prepared/TX61/validation_seq.npy": "7346a27ccdb8daf7423c0abc3e397c76482857b8cf2dcf606204daba8062f4eb",
+    "prepared/TX61/validation_y.npy": "68dae4001587565039290683d6a8b2a1e49fd515bf1aea0d23ca50457c5d0d64",
+    "prepared/VR2/activity_mean.npy": "5b8c2bdf9b01caf731a6b93164239a37b5e89191c030315f5cab3f75e7e04194",
+    "prepared/VR2/activity_std.npy": "b2cb0ddb1aadb810b776fb768c30a784c06c379d007fdd6dfaf4341852bddf39",
+    "prepared/VR2/metadata.json": "fd851073c893b5e7e9de966b0fe130959d30b36f8a6d2b488d68c4c3669fc039",
+    "prepared/VR2/panel.npy": "b0f7093ff8ce253bd84e6cc9908f6fa3ff3fe781e4bc80cc2624ec5dfc111fcb",
+    "prepared/VR2/test_seq.npy": "3b5af17f141f2da625c4d79552dc2ff42016b16dff46e6b9b50b871c2ab0861b",
+    "prepared/VR2/test_y.npy": "9944e6cab5e8a8b49e90eb0c57d82aec6b4e2ccf1820e35f2cac1b9970e1e5e3",
+    "prepared/VR2/train_indices.npy": "3d10c0fbb8605c7e4fdf8e09d30964073711a661ba2a9017cecfc71080e610ac",
+    "prepared/VR2/train_seq.npy": "2fe35bec44414dbdaa31a92cf1d3af1c0be90062f2cab8f5c0e6dcaef2718216",
+    "prepared/VR2/train_y.npy": "83f7c9827a74af744dd792caba6d27f258120b2e993aed7e9a2d3e456d310e57",
+    "prepared/VR2/validation_seq.npy": "dd929173fb78bcedd5622a1d8709aaea08f6ac87232496ae88f8ab7098c7c4ba",
+    "prepared/VR2/validation_y.npy": "f75926c39cbcdc4b5c0c95589d4042bc8884d2bd008acce99b2b71cb52e8218d"
+  }
+}

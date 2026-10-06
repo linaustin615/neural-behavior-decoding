@@ -1,0 +1,136 @@
+{
+  "created_utc": "2026-10-06T01:46:09.631230+00:00",
+  "new_neural_fits": 60,
+  "new_analytic_solutions": 216,
+  "analytic_breakdown": {
+    "regularized_residual_heads": 192,
+    "512_neuron_ridge_pilot": 24
+  },
+  "full_practical_candidates": [],
+  "independent_animal_significance": false,
+  "historical_mice": [
+    "MP030",
+    "MP032",
+    "MP033",
+    "MP034"
+  ],
+  "main_application_unchanged": true,
+  "studies": [
+    {
+      "folder": "2026-10-05_shared_finetuning",
+      "title": "Shared fine-tuning",
+      "new_neural_fits": 18,
+      "outcome": "Full practical improvement/confirmation gate failed",
+      "full_practical_pass": false,
+      "report": "../2026-10-05_shared_finetuning/report.md"
+    },
+    {
+      "folder": "2026-10-05_shared_head_adaptation",
+      "title": "Regularized frozen-encoder heads",
+      "new_neural_fits": 0,
+      "outcome": "Full practical improvement/confirmation gate failed",
+      "full_practical_pass": false,
+      "report": "../2026-10-05_shared_head_adaptation/report.md"
+    },
+    {
+      "folder": "2026-10-05_shared_confirmation",
+      "title": "Original transformer, additional seeds",
+      "new_neural_fits": 12,
+      "outcome": "Full practical improvement/confirmation gate failed",
+      "full_practical_pass": false,
+      "report": "../2026-10-05_shared_confirmation/report.md"
+    },
+    {
+      "folder": "2026-10-05_static_readout_replication",
+      "title": "Static readout replication",
+      "new_neural_fits": 6,
+      "outcome": "Full practical improvement/confirmation gate failed",
+      "full_practical_pass": false,
+      "report": "../2026-10-05_static_readout_replication/report.md"
+    },
+    {
+      "folder": "2026-10-05_neuron_panel_pilot",
+      "title": "Nested neuron-panel development pilot",
+      "new_neural_fits": 0,
+      "outcome": "Development screen passed; no later test in this pilot",
+      "full_practical_pass": false,
+      "report": "../2026-10-05_neuron_panel_pilot/report.md"
+    },
+    {
+      "folder": "2026-10-05_larger_panel",
+      "title": "512-neuron transformer and MLP",
+      "new_neural_fits": 6,
+      "outcome": "Full practical improvement/confirmation gate failed",
+      "full_practical_pass": false,
+      "report": "../2026-10-05_larger_panel/report.md"
+    },
+    {
+      "folder": "2026-10-06_large_panel_components",
+      "title": "512-neuron attention components",
+      "new_neural_fits": 6,
+      "outcome": "Full practical improvement/confirmation gate failed",
+      "full_practical_pass": false,
+      "report": "../2026-10-06_large_panel_components/report.md"
+    },
+    {
+      "folder": "2026-10-06_population_tokens",
+      "title": "Population-state temporal tokens",
+      "new_neural_fits": 6,
+      "outcome": "Full practical improvement/confirmation gate failed",
+      "full_practical_pass": false,
+      "report": "../2026-10-06_population_tokens/report.md"
+    },
+    {
+      "folder": "2026-10-06_context_query",
+      "title": "Population-context neuron readout",
+      "new_neural_fits": 6,
+      "outcome": "Full practical improvement/confirmation gate failed",
+      "full_practical_pass": false,
+      "report": "../2026-10-06_context_query/report.md"
+    }
+  ],
+  "source_hashes": {
+    "experiments/2026-10-05_shared_finetuning/STATUS.json": "3665c321479f22d1bd0e60c7eb004590e13f01f6bf556560b5f94db738731708",
+    "experiments/2026-10-05_shared_finetuning/protocol.json": "808cba23a56ced11d5cf6f085fa317d88de07c8cebf4b3ce46c972ae406fca03",
+    "experiments/2026-10-05_shared_finetuning/review.json": "d45115bb81f3cc6afeede833bc601ef4545a0dd141252869e3e7c021f79addaf",
+    "experiments/2026-10-05_shared_finetuning/report.md": "5d743ff3642a0aa870da1541507acc586344a9c4aed9fe31ef77505842f5b39a",
+    "experiments/2026-10-05_shared_finetuning/ASSESSMENT.md": "0b08a1b32759d59919f04627ac3a57ee7c8b03f8b5b9b9d711dea1e108845393",
+    "experiments/2026-10-05_shared_head_adaptation/STATUS.json": "6806c0a531d0a7bd7b7be19af006c5829fbda73c56bb32837be6b3499bfadac1",
+    "experiments/2026-10-05_shared_head_adaptation/protocol.json": "f3ceda7e432b8415f992fc26f957fc9e87db355c019d94ebdd419742f5a0ce5a",
+    "experiments/2026-10-05_shared_head_adaptation/report.md": "050092864086439a7266aee49ea2dd9721b13632b00ab1b64a3b8375b04e79de",
+    "experiments/2026-10-05_shared_head_adaptation/ASSESSMENT.md": "1e8e6f589511b3edf14dc11c90bb6bbd45ee49eb804cacc2253a56acd40d9e1e",
+    "experiments/2026-10-05_shared_confirmation/STATUS.json": "0cc7ce4e2656832b6c3a01b5a8b835f120d417a8d42718feca05fc38859fda8c",
+    "experiments/2026-10-05_shared_confirmation/protocol.json": "b9df165ad27d29aea7c91727a51032e6bc01699f322a2516e2e07d04905ca41e",
+    "experiments/2026-10-05_shared_confirmation/review.json": "8ba7d4a2ffe5a89d8d12ffa6a4e93c44c4f3dbf4ad04598579432f18c06d833e",
+    "experiments/2026-10-05_shared_confirmation/report.md": "3ef0068e82aa0d252a03b4a46fb98bef469b7dcd10af421ac286adca59e74ec3",
+    "experiments/2026-10-05_shared_confirmation/ASSESSMENT.md": "f24aab31d6c698f1b512ae55ae87f91f724ab33ae5b607dab8fe38ab87651b0c",
+    "experiments/2026-10-05_static_readout_replication/STATUS.json": "9fb098fb9e88ff616ba20e4b7e5c95cbb1bf4fa0a8e8b4398fe65a512f19b51c",
+    "experiments/2026-10-05_static_readout_replication/protocol.json": "d14d1ff1949f23e29627bb3cbde53eedd772cc34af3d5f975b7899205091cc30",
+    "experiments/2026-10-05_static_readout_replication/review.json": "fa16ac4dc54e3a7d032968e666079f4dd6fc5e9144bf8c0439ffbccab462e9ff",
+    "experiments/2026-10-05_static_readout_replication/report.md": "37a5ba1e8e234ac21973bc7a146e1126b8ac64be6a6b01cb4870c3f0eab58921",
+    "experiments/2026-10-05_static_readout_replication/ASSESSMENT.md": "72e0066a2ae3b072d247988fd2df1484225b59d254c3492a346b293d8a9bd7fb",
+    "experiments/2026-10-05_neuron_panel_pilot/STATUS.json": "a38db5e040f361e73c7c5181afeaced0f056520c087937cbfbc3d4c81146c12f",
+    "experiments/2026-10-05_neuron_panel_pilot/protocol.json": "fa6db394815182767f5b4c604592a765abfd4b3a8353c5576ad657568b410d3c",
+    "experiments/2026-10-05_neuron_panel_pilot/report.md": "fdd44f3c2bc61acd89b2a53eb8336b4f46a0070e1e65c6ccc4d8b11603d61f2c",
+    "experiments/2026-10-05_larger_panel/STATUS.json": "bf4b967619a85405e7179b38378efd6482fa72bd9426b552a27cca25d41ff3a6",
+    "experiments/2026-10-05_larger_panel/protocol.json": "ce0a79dd4f6c3cff8c4435f703041405bbe1d5576a8ac74717739adc58220d3b",
+    "experiments/2026-10-05_larger_panel/review.json": "b861e93ec897109e76e7708726714bc84f815d09ce525e76cba0883da0e10737",
+    "experiments/2026-10-05_larger_panel/report.md": "d5d0ce215034cb304c5a490bfbc9ceeefde3b84a9f47b14659b193cf169ce773",
+    "experiments/2026-10-05_larger_panel/ASSESSMENT.md": "bb5b4509ad628787afc26cce27b4d9f82d03398857cd6dcafbd8198e73d444f1",
+    "experiments/2026-10-06_large_panel_components/STATUS.json": "d718912386a3baf4b19637937c5864e02481f9875996c47b76b4b7ad1a9044ae",
+    "experiments/2026-10-06_large_panel_components/protocol.json": "141929188412edf79804d9977edeb9fe640848b1dff6e723b9548df9c7280dec",
+    "experiments/2026-10-06_large_panel_components/review.json": "5042a6250d6f184ada2098975cff4a9f66792df647da37e614354d2beee81d18",
+    "experiments/2026-10-06_large_panel_components/report.md": "84e336ca7bc824c14a74c4bdf8d0fee4654541b39b38e7f3b1a3aa842d8caa50",
+    "experiments/2026-10-06_large_panel_components/ASSESSMENT.md": "22043fe1664fc4b5d32c156fa6e4ec3b5abbb4e8e820a1de43413fd0a3366255",
+    "experiments/2026-10-06_population_tokens/STATUS.json": "8d108fbfaddeefd04107a07843b89436658bed6bc9c7de968b107a05e9a2b7bf",
+    "experiments/2026-10-06_population_tokens/protocol.json": "9c517cf9c06796fb18618249f094bf54c3fecc5d9fb337559e396a2b0f4dbf2b",
+    "experiments/2026-10-06_population_tokens/review.json": "5425d3d1aa7db26ea0b63d57d38684c084036fda77bdea80ebad324655d39b8f",
+    "experiments/2026-10-06_population_tokens/report.md": "f34de6aff522dc7c5e31eb1b2549388c4c7361ec9ee38471376634b57d6fd297",
+    "experiments/2026-10-06_population_tokens/ASSESSMENT.md": "730f6f563ef8a1469ab181bf57b3be420f3c4c18003d5a77f76a83b8c7379b93",
+    "experiments/2026-10-06_context_query/STATUS.json": "a6c6d601931fda4c400fa883318d7375d7039f8d9d94b977c1db831a431ff069",
+    "experiments/2026-10-06_context_query/protocol.json": "fa4b69244499f4b832d567a9542ebe1cd12686dbf05fb796122b645a6750f9e7",
+    "experiments/2026-10-06_context_query/review.json": "6b5a875ed7aaeb0b388de8821f5d9b38847c27ba60a29aa14068aea70e9a75ff",
+    "experiments/2026-10-06_context_query/report.md": "772208fb9c1e73d5a690af1ce6061184255327a7448091b0c09286dbb62e1f5b",
+    "experiments/2026-10-06_context_query/ASSESSMENT.md": "e165a94d7cbd026ba663aa03b35bada89886d5248d47da4bc96fcf6252c0af23"
+  }
+}

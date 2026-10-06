@@ -1,0 +1,382 @@
+{
+  "protocol": {
+    "created_utc": "2026-10-02T02:42:41.830268+00:00",
+    "question": "Does spatially anchored read-in improve speed decoding beyond equally diverse arbitrary and depth-matched groups?",
+    "dataset": "Stringer MP019, same repeatedly examined recording; exploratory only",
+    "dataset_sha256": "b92f153a965a6a25153c125ac88245f887f310b50285dc5af11f0b544ac3ba32",
+    "n": 2048,
+    "pool_seeds": [
+      101,
+      202,
+      303,
+      404,
+      505,
+      606
+    ],
+    "optimizer_seeds": [
+      10,
+      11
+    ],
+    "variants": [
+      "global",
+      "spatial",
+      "random",
+      "depth_random"
+    ],
+    "fits": 48,
+    "architecture": "16 read-in queries: first8 restricted to8 groups except global control, last8 unrestricted; same16-query transformer, mean pooling, width32, head4, IDs and real xyz embedding in ALL arms",
+    "patches": "Recursive coordinate threshold splits depth then x then y; threshold between distinct values closest to balanced cell counts; no physical distance assumptions",
+    "controls": "random permutes spatial group labels across cells preserving exact group sizes; depth_random permutes labels within each imaging plane preserving exact group-by-plane counts; group assignment independent of labels and activity",
+    "causal_scope": "Effect of spatial grouping conditional on true-coordinate token embeddings; not an ablation of all geometry",
+    "training": "Same chronological splits, train-only activity/speed normalization, window8, width32, AdamW .001 weight_decay.01, batch32, cosine24 eta_min.0001, clip1, min12/patience7, select best validation boundedMSE including epoch0",
+    "initialization": "Construct existing8-query Candidate then append8 queries using independent seeded generator; shared parameters equal existing baseline; exact initial state and batch order across4arms",
+    "primary_contrasts": [
+      "random MSE minus spatial MSE",
+      "depth_random MSE minus spatial MSE",
+      "global MSE minus spatial MSE"
+    ],
+    "budget": "All48 planned before observing new outcomes; no seed, architecture, or epoch changes based on outcomes",
+    "analysis": "Raw and bounded MSE, R2, per-repeat/pool wins; paired crossed pool/seed circular-time-block100 bootstrap2000 for conditional95% intervals; exploratory and not biological replication",
+    "success": "Candidate evidence: spatial mean MSE lower than both random controls and global, with >=8/12 pair wins against each. Stronger within-recording evidence: all3 paired intervals above0 and >=5/6 positive pool means. No cross-animal claim. No multiple-testing corrected claims.",
+    "mechanism": "Audit group attention supports, query diversity, gradients, joint neuron-permutation invariance, attention mask perturbations, and trained dependence on local read-in using ablation. Artificial data positive control for known regional interactions.",
+    "source_hashes": {
+      "model.py": "2297af73466e1c85ee5774dc10a44a2a03f7a6f48919a111b43a8cf6d7d86a40",
+      "data.py": "894d5aea4dd0ce6a139178b66b1f8a5538f1c4f015081153d4c11fa55d78b7bf",
+      "train.py": "0361d216cd75616ed07501a019f4837f7c0acf57f0cd2edecb0fc6728064d7f9"
+    },
+    "no_application_code_changes": true
+  },
+  "groups": {
+    "global": {
+      "validation_mse": 0.30506154243739914,
+      "validation_raw_mse": 0.30527489807571684,
+      "validation_r2": 0.8274156170443779,
+      "validation_pair_mse": [
+        [
+          0.30354624039576344,
+          0.29847986185141456
+        ],
+        [
+          0.3373566607141438,
+          0.3082234721741381
+        ],
+        [
+          0.33502324271004846,
+          0.36858983328251627
+        ],
+        [
+          0.2977932137609445,
+          0.29894517080076066
+        ],
+        [
+          0.2636408183750686,
+          0.2981659865513977
+        ],
+        [
+          0.26234221019314546,
+          0.2886317984394488
+        ]
+      ],
+      "test_mse": 0.36583538754987416,
+      "test_raw_mse": 0.366054632389798,
+      "test_r2": 0.839362735847932,
+      "test_pair_mse": [
+        [
+          0.35034221327165843,
+          0.3645203506382282
+        ],
+        [
+          0.313328546066166,
+          0.37973921518906345
+        ],
+        [
+          0.4141658118874486,
+          0.41367006821277164
+        ],
+        [
+          0.3166348653867424,
+          0.30329314930073165
+        ],
+        [
+          0.3442494396478114,
+          0.45817661905375034
+        ],
+        [
+          0.3389297368673998,
+          0.3929746350767184
+        ]
+      ],
+      "parameters": 81377
+    },
+    "spatial": {
+      "validation_mse": 0.3137545361079721,
+      "validation_raw_mse": 0.3140009274145059,
+      "validation_r2": 0.8224976751212959,
+      "validation_pair_mse": [
+        [
+          0.3130365758252378,
+          0.273860579480275
+        ],
+        [
+          0.3361243965370432,
+          0.33527094206028807
+        ],
+        [
+          0.36812359074535694,
+          0.361427356757743
+        ],
+        [
+          0.27729682109404497,
+          0.3097439178496208
+        ],
+        [
+          0.29119391071759376,
+          0.35910868194646767
+        ],
+        [
+          0.2671736262732692,
+          0.27269403400872466
+        ]
+      ],
+      "test_mse": 0.38002209043834173,
+      "test_raw_mse": 0.38027837339837517,
+      "test_r2": 0.8331333955027992,
+      "test_pair_mse": [
+        [
+          0.3693674724902045,
+          0.3854542944853502
+        ],
+        [
+          0.3283372664650185,
+          0.3482988728812146
+        ],
+        [
+          0.43063595684679573,
+          0.3762999831759833
+        ],
+        [
+          0.3510546929758894,
+          0.3442625020816968
+        ],
+        [
+          0.3655509753153521,
+          0.5039016283408165
+        ],
+        [
+          0.3852881361584101,
+          0.37181330404336893
+        ]
+      ],
+      "parameters": 81377
+    },
+    "random": {
+      "validation_mse": 0.3241505141921242,
+      "validation_raw_mse": 0.32468853675173287,
+      "validation_r2": 0.8166162931269012,
+      "validation_pair_mse": [
+        [
+          0.2730271657933946,
+          0.2853253606991122
+        ],
+        [
+          0.31734948784706546,
+          0.3259184798831359
+        ],
+        [
+          0.34972021161905364,
+          0.3331713895070588
+        ],
+        [
+          0.3851900304501245,
+          0.4131792600053076
+        ],
+        [
+          0.2854176749752071,
+          0.35635149384045217
+        ],
+        [
+          0.25775372978829053,
+          0.30740188589728834
+        ]
+      ],
+      "test_mse": 0.3812546864119857,
+      "test_raw_mse": 0.38173673763073623,
+      "test_r2": 0.832592166163732,
+      "test_pair_mse": [
+        [
+          0.32368810939419274,
+          0.3498841270029945
+        ],
+        [
+          0.37659036264151585,
+          0.3897977408381558
+        ],
+        [
+          0.44906800004711855,
+          0.3862233537151884
+        ],
+        [
+          0.41006677442973405,
+          0.3935385499585054
+        ],
+        [
+          0.3501758946167962,
+          0.42456615143136084
+        ],
+        [
+          0.32396531097195336,
+          0.3974918618963126
+        ]
+      ],
+      "parameters": 81377
+    },
+    "depth_random": {
+      "validation_mse": 0.328792540003867,
+      "validation_raw_mse": 0.32925162069636366,
+      "validation_r2": 0.8139901307008456,
+      "validation_pair_mse": [
+        [
+          0.28831390886495767,
+          0.2872109720474463
+        ],
+        [
+          0.3537076020647526,
+          0.34640618618730423
+        ],
+        [
+          0.37844154157573956,
+          0.38946997735934336
+        ],
+        [
+          0.316739363824372,
+          0.35119396694543387
+        ],
+        [
+          0.284174594827732,
+          0.36077900675937236
+        ],
+        [
+          0.2847530832748051,
+          0.30432027631514436
+        ]
+      ],
+      "test_mse": 0.3820087990977317,
+      "test_raw_mse": 0.3824575539149932,
+      "test_r2": 0.832261037457152,
+      "test_pair_mse": [
+        [
+          0.3812245829178324,
+          0.33937900866585474
+        ],
+        [
+          0.33930403849894586,
+          0.41655304654771047
+        ],
+        [
+          0.4175901362794226,
+          0.396308024056123
+        ],
+        [
+          0.3305287775117477,
+          0.35296154145813147
+        ],
+        [
+          0.3570081720421168,
+          0.4890453142538826
+        ],
+        [
+          0.3895696627115928,
+          0.3746332842294201
+        ]
+      ],
+      "parameters": 81377
+    }
+  },
+  "contrasts": {
+    "random": {
+      "mean_mse_improvement": 0.0012325959736439655,
+      "relative_improvement_percent": 0.32329988786341535,
+      "positive_pairs": 7,
+      "pairs": 12,
+      "positive_pool_means": 3,
+      "pool_means": {
+        "101": -0.04062476528918374,
+        "202": 0.04487598206671929,
+        "303": 0.014177706869763995,
+        "404": 0.05414406466532666,
+        "505": -0.047355278804005856,
+        "606": -0.01782213366675655
+      },
+      "interval95": [
+        -0.04499084840024594,
+        0.047157102390102616
+      ],
+      "raw_mean_mse_improvement": 0.0014583642323611294,
+      "validation_mean_improvement": 0.01039597808415214
+    },
+    "depth_random": {
+      "mean_mse_improvement": 0.00198670865939,
+      "relative_improvement_percent": 0.520068821472808,
+      "positive_pairs": 7,
+      "pairs": 12,
+      "positive_pool_means": 3,
+      "pool_means": {
+        "101": -0.017109087695933757,
+        "202": 0.039610472850211645,
+        "303": 0.0034811101563833107,
+        "404": -0.005913438043853513,
+        "505": -0.01169955868008465,
+        "606": 0.0035507533696169627
+      },
+      "interval95": [
+        -0.03662568523397132,
+        0.041753223876197815
+      ],
+      "raw_mean_mse_improvement": 0.0021791805166180792,
+      "validation_mean_improvement": 0.015038003895894875
+    },
+    "global": {
+      "mean_mse_improvement": -0.014186702888467517,
+      "relative_improvement_percent": -3.877892454166548,
+      "positive_pairs": 3,
+      "pairs": 12,
+      "positive_pool_means": 2,
+      "pool_means": {
+        "101": -0.019979601532834054,
+        "202": 0.00821581095449821,
+        "303": 0.01044997003872064,
+        "404": -0.03769459018505608,
+        "505": -0.033513272477303485,
+        "606": -0.012598534128830337
+      },
+      "interval95": [
+        -0.04772213034036659,
+        0.024335691264615832
+      ],
+      "raw_mean_mse_improvement": -0.01422374100857709,
+      "validation_mean_improvement": -0.008692993670572899
+    }
+  },
+  "audit": {
+    "records": 48,
+    "metrics_recomputed": true,
+    "checkpoint_selection_correct": true,
+    "finite_predictions": true,
+    "matched_weights": true,
+    "matched_parameter_counts": true,
+    "frozen_sources_and_application_hashes_match": true
+  },
+  "candidate_gate": false,
+  "stronger_within_recording_gate": false,
+  "learning_check": {
+    "beat_untrained": 48,
+    "beat_train_mean": 48,
+    "final_epoch_selected": 3,
+    "total_fit_seconds": 10180.082308210003
+  },
+  "previous8_summary_reference": {
+    "test_mse": 0.37262167828731735,
+    "validation_mse": 0.3159568200130924,
+    "note": "Reused exploratory comparison;8 queries versus16 and256 fewer parameters"
+  }
+}

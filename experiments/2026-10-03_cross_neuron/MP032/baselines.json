@@ -1,0 +1,53 @@
+{
+  "mouse": "MP032",
+  "train_n": 2024,
+  "selection_n": 555,
+  "candidates": [
+    {
+      "kind": "mean",
+      "mse": 0.5545820588054637
+    },
+    {
+      "kind": "ridge",
+      "lam": 0.0001,
+      "mse": 18.67046465740562,
+      "normal_equation_residual": 1.0047005427112993e-12
+    },
+    {
+      "kind": "ridge",
+      "lam": 0.001,
+      "mse": 6.642637843744436,
+      "normal_equation_residual": 2.6304610399378617e-13
+    },
+    {
+      "kind": "ridge",
+      "lam": 0.01,
+      "mse": 2.285924050219633,
+      "normal_equation_residual": 5.192012565122503e-14
+    },
+    {
+      "kind": "ridge",
+      "lam": 0.1,
+      "mse": 0.9400402706692512,
+      "normal_equation_residual": 1.0349852555034914e-14
+    },
+    {
+      "kind": "ridge",
+      "lam": 1.0,
+      "mse": 0.5487461968526138,
+      "normal_equation_residual": 2.9700594985900587e-15
+    },
+    {
+      "kind": "ridge",
+      "lam": 10.0,
+      "mse": 0.5034769064636424,
+      "normal_equation_residual": 2.084370243866369e-15
+    }
+  ],
+  "choice": {
+    "kind": "ridge",
+    "lam": 10.0,
+    "mse": 0.5034769064636424,
+    "normal_equation_residual": 2.084370243866369e-15
+  }
+}

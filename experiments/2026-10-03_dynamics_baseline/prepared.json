@@ -1,0 +1,375 @@
+{
+  "passed": true,
+  "rows": [
+    {
+      "mouse": "MP030",
+      "train_n": 2386,
+      "selection_n": 675,
+      "forecast_train_n": 2382,
+      "forecast_selection_n": 671,
+      "speed_settings": [
+        {
+          "lam": 0.001,
+          "mse": 0.6943948750288725
+        },
+        {
+          "lam": 0.01,
+          "mse": 0.6663312779535087
+        },
+        {
+          "lam": 0.1,
+          "mse": 0.5270835979734162
+        },
+        {
+          "lam": 1.0,
+          "mse": 0.39412520104483467
+        }
+      ],
+      "speed_choice": {
+        "lam": 1.0,
+        "mse": 0.39412520104483467
+      },
+      "forecast_settings": [
+        {
+          "kind": "mean",
+          "mse": 1.3279395790745854
+        },
+        {
+          "kind": "persistence",
+          "mse": 2.546905646662995
+        },
+        {
+          "kind": "population_ar",
+          "lam": 0.01,
+          "mse": 1.5961667358270395
+        },
+        {
+          "kind": "neuron_ar",
+          "lam": 0.01,
+          "mse": 1.342215463595197
+        },
+        {
+          "kind": "population_ar",
+          "lam": 0.1,
+          "mse": 1.548397852440652
+        },
+        {
+          "kind": "neuron_ar",
+          "lam": 0.1,
+          "mse": 1.337883595148774
+        },
+        {
+          "kind": "population_ar",
+          "lam": 1.0,
+          "mse": 1.3936841505038842
+        },
+        {
+          "kind": "neuron_ar",
+          "lam": 1.0,
+          "mse": 1.324789754788403
+        }
+      ],
+      "forecast_choice": {
+        "kind": "neuron_ar",
+        "lam": 1.0,
+        "mse": 1.324789754788403
+      }
+    },
+    {
+      "mouse": "MP032",
+      "train_n": 2024,
+      "selection_n": 555,
+      "forecast_train_n": 2020,
+      "forecast_selection_n": 551,
+      "speed_settings": [
+        {
+          "lam": 0.001,
+          "mse": 0.04594311982152052
+        },
+        {
+          "lam": 0.01,
+          "mse": 0.044489111955855205
+        },
+        {
+          "lam": 0.1,
+          "mse": 0.035576658885582826
+        },
+        {
+          "lam": 1.0,
+          "mse": 0.01917634788351088
+        }
+      ],
+      "speed_choice": {
+        "lam": 1.0,
+        "mse": 0.01917634788351088
+      },
+      "forecast_settings": [
+        {
+          "kind": "mean",
+          "mse": 0.5587565349238242
+        },
+        {
+          "kind": "persistence",
+          "mse": 1.0024761377328346
+        },
+        {
+          "kind": "population_ar",
+          "lam": 0.01,
+          "mse": 0.6671214701862281
+        },
+        {
+          "kind": "neuron_ar",
+          "lam": 0.01,
+          "mse": 0.5347995668392174
+        },
+        {
+          "kind": "population_ar",
+          "lam": 0.1,
+          "mse": 0.6369104068553578
+        },
+        {
+          "kind": "neuron_ar",
+          "lam": 0.1,
+          "mse": 0.5334468860636788
+        },
+        {
+          "kind": "population_ar",
+          "lam": 1.0,
+          "mse": 0.5550647437295653
+        },
+        {
+          "kind": "neuron_ar",
+          "lam": 1.0,
+          "mse": 0.5327470296259609
+        }
+      ],
+      "forecast_choice": {
+        "kind": "neuron_ar",
+        "lam": 1.0,
+        "mse": 0.5327470296259609
+      }
+    },
+    {
+      "mouse": "MP033",
+      "train_n": 1538,
+      "selection_n": 393,
+      "forecast_train_n": 1534,
+      "forecast_selection_n": 389,
+      "speed_settings": [
+        {
+          "lam": 0.001,
+          "mse": 1.057432160534188
+        },
+        {
+          "lam": 0.01,
+          "mse": 1.0545274450104178
+        },
+        {
+          "lam": 0.1,
+          "mse": 1.0302503055807708
+        },
+        {
+          "lam": 1.0,
+          "mse": 0.9622777136374251
+        }
+      ],
+      "speed_choice": {
+        "lam": 1.0,
+        "mse": 0.9622777136374251
+      },
+      "forecast_settings": [
+        {
+          "kind": "mean",
+          "mse": 0.9997389427300059
+        },
+        {
+          "kind": "persistence",
+          "mse": 1.9985297711273222
+        },
+        {
+          "kind": "population_ar",
+          "lam": 0.01,
+          "mse": 1.393765612767146
+        },
+        {
+          "kind": "neuron_ar",
+          "lam": 0.01,
+          "mse": 1.0086950690180378
+        },
+        {
+          "kind": "population_ar",
+          "lam": 0.1,
+          "mse": 1.3103564617429548
+        },
+        {
+          "kind": "neuron_ar",
+          "lam": 0.1,
+          "mse": 1.0048348350702851
+        },
+        {
+          "kind": "population_ar",
+          "lam": 1.0,
+          "mse": 1.0928453572337269
+        },
+        {
+          "kind": "neuron_ar",
+          "lam": 1.0,
+          "mse": 0.993658963828555
+        }
+      ],
+      "forecast_choice": {
+        "kind": "neuron_ar",
+        "lam": 1.0,
+        "mse": 0.993658963828555
+      }
+    },
+    {
+      "mouse": "MP034",
+      "train_n": 1540,
+      "selection_n": 393,
+      "forecast_train_n": 1536,
+      "forecast_selection_n": 389,
+      "speed_settings": [
+        {
+          "lam": 0.001,
+          "mse": 0.522774192259147
+        },
+        {
+          "lam": 0.01,
+          "mse": 0.5217469183148812
+        },
+        {
+          "lam": 0.1,
+          "mse": 0.5148304822091272
+        },
+        {
+          "lam": 1.0,
+          "mse": 0.529801185508234
+        }
+      ],
+      "speed_choice": {
+        "lam": 0.1,
+        "mse": 0.5148304822091272
+      },
+      "forecast_settings": [
+        {
+          "kind": "mean",
+          "mse": 0.9371545912902203
+        },
+        {
+          "kind": "persistence",
+          "mse": 1.7744763052996921
+        },
+        {
+          "kind": "population_ar",
+          "lam": 0.01,
+          "mse": 1.2815159383185408
+        },
+        {
+          "kind": "neuron_ar",
+          "lam": 0.01,
+          "mse": 0.9353983749967721
+        },
+        {
+          "kind": "population_ar",
+          "lam": 0.1,
+          "mse": 1.1991270246998824
+        },
+        {
+          "kind": "neuron_ar",
+          "lam": 0.1,
+          "mse": 0.9318894080312397
+        },
+        {
+          "kind": "population_ar",
+          "lam": 1.0,
+          "mse": 1.0036605618801555
+        },
+        {
+          "kind": "neuron_ar",
+          "lam": 1.0,
+          "mse": 0.9237739723596898
+        }
+      ],
+      "forecast_choice": {
+        "kind": "neuron_ar",
+        "lam": 1.0,
+        "mse": 0.9237739723596898
+      }
+    }
+  ],
+  "files": {
+    "MP030/population_ar_0.1.npz": "7687543e8c0ffc6a303e8dcf3fcbf5694a98053dc3960656b637b1dab81c0240",
+    "MP030/neuron_ar_0.01.npz": "396bc11e657a295b9bac0ebee18cd62a598abc18fa4b456eba11f1878cfdc49d",
+    "MP030/ridge_1.0.npz": "037cf12ac55710916df69e748c112e6a63c66ea714ccfdb9a57de2558cd2b195",
+    "MP030/ridge_0.001.npz": "1d24775d498c32083e902991077610a7ab5c6bb30655609640583763d7c29239",
+    "MP030/baselines.json": "abf8300628934bc1de06964be3b0b533084cb3eb3d5b0ee611601706d9f00edb",
+    "MP030/population_ar_1.0.npz": "40ae6c79afa3ce75eeca66aba768ffe93582b084ea48a2a741b3f42ff80a7f94",
+    "MP030/selection_future.npy": "deb79477c5da6dd3d26d8b5cd39faa6cad0d91532d5f61b11cdbcd328af0c952",
+    "MP030/selection_x.npy": "c39113dc5cbe9749acc55d5a12bb4e8ea2f73d474fb691c0e38b493c961292ef",
+    "MP030/selection_y.npy": "80b26de2780aaf5484431383bbae200146113bea9c0e31fc45b67df9f2ea6c91",
+    "MP030/ridge_0.1.npz": "d0baf155e327e71ef5578e64908df704f18303ec59d7adb0ab88e34d3cbf5931",
+    "MP030/neuron_ar_1.0.npz": "6a46d04accebc1ffc896d28497d3d54b2156a0b2ee80b4d4aa5d6522668433df",
+    "MP030/train_future.npy": "0b065dd36d53b940c16a581176284eabe3db2bdfd1cb3ac6fa4995e0c48a4834",
+    "MP030/train_y.npy": "6b3bed5964d3cee92be4d37e6e585f1096fb33e5ec6401d753b72d9a0e8a8d19",
+    "MP030/population_ar_0.01.npz": "84f470b015459c9c4ba99240193d18e61c0cf912b1099bbbc9e8bdfc0b83d1ab",
+    "MP030/train_x.npy": "162f592e1e65c731e7aa7461e1512ac161b5f8abfd53d13f6c6a6e2355583aeb",
+    "MP030/neuron_ar_0.1.npz": "6f0e09011376db49035a6e8294285e3deb754d251632ecd7a8c4722c480adbfe",
+    "MP030/ridge_0.01.npz": "1b2ed2c022fab805bc220dfcad2a900cd8eace678a56b4f85790e55eb8b7a8a3",
+    "MP030/columns.npy": "e846418dd7050cfe2a8079e41c29416e7e60627b8b3c4b25759a44b5a7381ecb",
+    "MP032/population_ar_0.1.npz": "713d136b2ec1957ed489beaf66c8902aa3fce08a382e1174961dd4dd505097e7",
+    "MP032/neuron_ar_0.01.npz": "f93af536607822e95a1f0d12dc0babf72984ea5b96b7abfa44d3a841a4e660ee",
+    "MP032/ridge_1.0.npz": "1ac0c7fd9266bac43df9f8072aff69b6b96fdf8bd8f7f6db0c014021ac56e539",
+    "MP032/ridge_0.001.npz": "6ec9d4fb71f69905002eabc52304406d95b56a7b3440f9e8d47c3389735c9a4b",
+    "MP032/baselines.json": "c6d8ae96b27f2e82c006624f6718278a41ff1514f1c6e88e2f00bd4752b0abab",
+    "MP032/population_ar_1.0.npz": "a8027c8ecada3939914d81a7cf0bb56ca0ddd44a67c34e489c7b0710b303a37a",
+    "MP032/selection_future.npy": "a2f43cf52fbce691b5c66b4062ed30a11da315475bc4bb436a9583fb2e9909e2",
+    "MP032/selection_x.npy": "6a74a6a51441486496b028eaf1548ba57c9ed9a5f54a39f06e23e224f23e11ba",
+    "MP032/selection_y.npy": "9e71c50a3f4df98ae7bba1a9bba553526e42bf7aed404a44dc0891fe2042fea5",
+    "MP032/ridge_0.1.npz": "302fd73e9a8070751d1a481a900dace86b39095afcdf3c9882ce30b6a2e20c58",
+    "MP032/neuron_ar_1.0.npz": "ddb2c97ce8cb8e470a75b980865925601d2ea10f8fe979ee629fb0e911aa1b44",
+    "MP032/train_future.npy": "299b5247de43ea7bef54f1c4d9d4dee9632d76059a3a66779e8c1d0371b49dcc",
+    "MP032/train_y.npy": "62e691c8fefbfcdf51d52f129475786e6143abbe83848560177f1a27d08e33c9",
+    "MP032/population_ar_0.01.npz": "0a73a929b6b797592e0694a04bd5fec8db7e93742970f0e480b0010ee901a608",
+    "MP032/train_x.npy": "3343b84c8ccfe775edfea64937dd309f17d0e659ffe87ed7f4f434a6e630f907",
+    "MP032/neuron_ar_0.1.npz": "5716d1dc327db27f84e3b1e44e388d2d86c7eee666267d55e8813f2b0dd7bd6b",
+    "MP032/ridge_0.01.npz": "5feb45dfd27eff75f3f5a6de1d94c8faaad0b23777fa5c3b8e26e317240dae57",
+    "MP032/columns.npy": "e846418dd7050cfe2a8079e41c29416e7e60627b8b3c4b25759a44b5a7381ecb",
+    "MP033/population_ar_0.1.npz": "3195c7f74a66110f390d222800ca76b28104140a571a302394d1f2bab2883050",
+    "MP033/neuron_ar_0.01.npz": "2ed2708a73889d3b4efa315773d36bd3a7f29e760a57e997c162b8b0c2de986d",
+    "MP033/ridge_1.0.npz": "6a17c7d28f171b7ecbc4d2103d9cf5cdbb31a7bd4c8280f99ab713aa17ceab1e",
+    "MP033/ridge_0.001.npz": "1560b760a0383526af85a2a2d69f27b65112c30278b821fb016039a0a3e6eedb",
+    "MP033/baselines.json": "88b1d91b6577b0910fdd0ed6b1ba673373d4109c62e16079feacc9d40bc293b5",
+    "MP033/population_ar_1.0.npz": "2757bcb2f6758f82e46b435413dee4aeb0038c28fd42f289166293e656397472",
+    "MP033/selection_future.npy": "7cc708496175411fa365c9dc6dcd81b16ab3a8c73a8ac4be2f870f00d2eac3a9",
+    "MP033/selection_x.npy": "d185cc0c39b4496a2d3101a8c22337476c88d1f05ffb42b44c59031a665c1acc",
+    "MP033/selection_y.npy": "81a66b745ecf99d549d3bb8ee867678c4d25292179869e4a03742028b09c360c",
+    "MP033/ridge_0.1.npz": "605b9e2e12e18af3213ad129c8d1b0cf97fad5bd1d3965509d31ee54eb1736f7",
+    "MP033/neuron_ar_1.0.npz": "1a7069df8a17e386fca57db2d9102eba593598eb67745119d9cf081ba96493ae",
+    "MP033/train_future.npy": "5d004d9836b40bb3c6200eb24c538233e52bf7c7049b7c86aef9aacd71cdd8bc",
+    "MP033/train_y.npy": "2d76a262b41e675b949c39a0145b73f15d07ecf4d260fca92ae19009e8e13899",
+    "MP033/population_ar_0.01.npz": "8d9b578f6fe1a755c3a78d34671ed6a48c5d0f6f1fd9379d3a24f4fb160f405e",
+    "MP033/train_x.npy": "7addec2cb2da5126af0106f9834eeb5d25cf4b6065b6ac15165c4746fc7009d1",
+    "MP033/neuron_ar_0.1.npz": "32a8470cfdcf05214893e854d26938a93292a82f57b8c87991331e7c79756022",
+    "MP033/ridge_0.01.npz": "954818035ffe8eff1ff3d10ae465c39652f895b7fd3aa1e12428297263c01452",
+    "MP033/columns.npy": "e846418dd7050cfe2a8079e41c29416e7e60627b8b3c4b25759a44b5a7381ecb",
+    "MP034/population_ar_0.1.npz": "c80330b32d029f9579cb464bb0ebe4b3c6b74b05dc67ce464987a0bc7c51db18",
+    "MP034/neuron_ar_0.01.npz": "9caf31db76dca27b2085479c6aa0901d63f7940d1df5866800efdafb7570c2b2",
+    "MP034/ridge_1.0.npz": "8cdfce42a5124b26e56bf2d4bc3753d8f10ebcca4bb58f6a24600311ef90cfd9",
+    "MP034/ridge_0.001.npz": "a9902dcede7054b7e62227559bbf097b977294884603812c26ed69709ae2ece0",
+    "MP034/baselines.json": "226fd5b710c1178979b3aade60209220531c787fe5d92495a3ee08c37f02184e",
+    "MP034/population_ar_1.0.npz": "31e98cbacf934c7bf13537104175bab0b739ad0fbba96bfb4a13b4a882661452",
+    "MP034/selection_future.npy": "c1ee30b304bf75f3f5e91bfece7c6e131c90ac45a6350522b2432b60384f8294",
+    "MP034/selection_x.npy": "4c8f2438afe43698795f7699d68e867afe26ddfac2c254eecace0a0ca129d20e",
+    "MP034/selection_y.npy": "33306d2af1f937ec3e0996d4cb6897981e345070c747a453f706b40e3457ccfc",
+    "MP034/ridge_0.1.npz": "561c7fe2179b47c33d423486b9adb72d92824ad51ed73362381babecfa98b4b0",
+    "MP034/neuron_ar_1.0.npz": "ae8bd015efb15562c42cd36cf21894e35b031ee9cd47e7b0798c8a29ca2e37fd",
+    "MP034/train_future.npy": "c3f03e8dfd3b6a5230c5032266b94ac44b1dd2e86cedb33bdd5335165a7578f3",
+    "MP034/train_y.npy": "25b6a05b9237407f7634df73fed17435a4867ac3468144af567530fed84e1862",
+    "MP034/population_ar_0.01.npz": "baf710275069d81581e11dcd9f3d9bd97534e6c9baae826667fd74a9286d0653",
+    "MP034/train_x.npy": "78a8624143594722ffd7fcf060ea36fd248517921dca54d65d1c3a4363b669ca",
+    "MP034/neuron_ar_0.1.npz": "358a9f16edb30a6f4db735f2b2e50436a9f07975aacd418932379ca077a821cc",
+    "MP034/ridge_0.01.npz": "f7149deb4a857423de2c8d6537d246ae12fa884175e2ee7466e7e85aa191513e",
+    "MP034/columns.npy": "e846418dd7050cfe2a8079e41c29416e7e60627b8b3c4b25759a44b5a7381ecb"
+  }
+}

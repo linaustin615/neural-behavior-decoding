@@ -1,0 +1,72 @@
+{
+  "mouse": "MP019",
+  "condition": "quality_shuffled",
+  "seed": 1,
+  "fraction": 1.0,
+  "null": false,
+  "steps": 1600,
+  "training_examples": 4153,
+  "label_normalization_mean": 2.927973747253418,
+  "label_normalization_std": 7.422715663909912,
+  "best_step": 1600,
+  "untrained_seen": {
+    "r2": -0.5229653193942594,
+    "pearson": -0.05284620556645393,
+    "mse": 3.422563850213937
+  },
+  "seen": {
+    "r2": 0.7462000580985537,
+    "pearson": 0.8765579921807295,
+    "mse": 0.5703652573545014
+  },
+  "unseen": {
+    "r2": -0.08861614984829425,
+    "pearson": 0.051497678014556826,
+    "mse": 2.4464498526544016
+  },
+  "history": [
+    {
+      "step": 200,
+      "train_batch_mse": 1.1159615516662598,
+      "validation_mse": 1.6332800388336182
+    },
+    {
+      "step": 400,
+      "train_batch_mse": 1.1958136558532715,
+      "validation_mse": 1.0252426862716675
+    },
+    {
+      "step": 600,
+      "train_batch_mse": 1.516079306602478,
+      "validation_mse": 0.7818605303764343
+    },
+    {
+      "step": 800,
+      "train_batch_mse": 0.44184911251068115,
+      "validation_mse": 0.6418361067771912
+    },
+    {
+      "step": 1000,
+      "train_batch_mse": 0.11409185826778412,
+      "validation_mse": 0.6613504886627197
+    },
+    {
+      "step": 1200,
+      "train_batch_mse": 0.45972973108291626,
+      "validation_mse": 0.6164424419403076
+    },
+    {
+      "step": 1400,
+      "train_batch_mse": 0.621609091758728,
+      "validation_mse": 0.5722880959510803
+    },
+    {
+      "step": 1600,
+      "train_batch_mse": 0.42561376094818115,
+      "validation_mse": 0.5435939431190491
+    }
+  ],
+  "seconds": 13.392137292,
+  "alpha": null,
+  "config_sha256": "e67d06f9ccb17e4fca618f07cce0cb6400d1d89483a4ca0f2da423af94c53423"
+}

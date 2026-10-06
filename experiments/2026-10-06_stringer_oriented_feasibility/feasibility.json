@@ -1,0 +1,158 @@
+{
+  "checked_utc": "2026-10-06T00:39:23.606590+00:00",
+  "dataset_title": "Recordings of ~20,000 neurons from V1 in response to oriented stimuli",
+  "doi": "10.25378/janelia.8279387.v3",
+  "version": 3,
+  "api": "https://api.figshare.com/v2/articles/8279387",
+  "source_code": "https://github.com/MouseLand/stringer-et-al-2019",
+  "notebook": "https://raw.githubusercontent.com/MouseLand/stringer-et-al-2019/master/run_processing.ipynb",
+  "decoder": "https://raw.githubusercontent.com/MouseLand/stringer-et-al-2019/master/decoders.py",
+  "distinct_first_six_mouse_ids": [
+    "GT1",
+    "GT2",
+    "GT3",
+    "TX38",
+    "TX39",
+    "TX40"
+  ],
+  "records": [
+    {
+      "database_index": 0,
+      "recording_metadata": {
+        "mouse_name": "GT1",
+        "date": "2019_04_17",
+        "expt": "gratings_static",
+        "block": "1",
+        "depth": 150,
+        "notes": ""
+      },
+      "response_file": "gratings_static_GT1_2019_04_17_1.npy",
+      "response_file_id": 15479342,
+      "response_bytes": 1050364757,
+      "running_shape": [
+        4598
+      ],
+      "running_dtype": "float32"
+    },
+    {
+      "database_index": 1,
+      "recording_metadata": {
+        "mouse_name": "GT2",
+        "date": "2019_04_17",
+        "expt": "gratings_static",
+        "block": "1",
+        "depth": 125,
+        "notes": ""
+      },
+      "response_file": "gratings_static_GT2_2019_04_17_1.npy",
+      "response_file_id": 15479336,
+      "response_bytes": 912725308,
+      "running_shape": [
+        5493
+      ],
+      "running_dtype": "float32"
+    },
+    {
+      "database_index": 2,
+      "recording_metadata": {
+        "mouse_name": "GT3",
+        "date": "2019_04_17",
+        "expt": "gratings_static",
+        "block": "1",
+        "depth": 125,
+        "notes": "not yet local"
+      },
+      "response_file": "gratings_static_GT3_2019_04_17_1.npy",
+      "response_file_id": 15479333,
+      "response_bytes": 598429165,
+      "running_shape": [
+        4279
+      ],
+      "running_dtype": "float32"
+    },
+    {
+      "database_index": 3,
+      "recording_metadata": {
+        "mouse_name": "TX38",
+        "date": "2019_05_02",
+        "expt": "gratings_static",
+        "block": "2",
+        "depth": 100,
+        "notes": "gratings(static(.54 .47))"
+      },
+      "response_file": "gratings_static_TX38_2019_05_02_2.npy",
+      "response_file_id": 15479330,
+      "response_bytes": 928951598,
+      "running_shape": [
+        4636
+      ],
+      "running_dtype": "float32"
+    },
+    {
+      "database_index": 4,
+      "recording_metadata": {
+        "mouse_name": "TX39",
+        "date": "2019_05_02",
+        "expt": "gratings_static",
+        "block": "1",
+        "depth": 100,
+        "notes": "gratings(static(.54 .36))"
+      },
+      "response_file": "gratings_static_TX39_2019_05_02_1.npy",
+      "response_file_id": 15568634,
+      "response_bytes": 842772380,
+      "running_shape": [
+        4637
+      ],
+      "running_dtype": "float32"
+    },
+    {
+      "database_index": 5,
+      "recording_metadata": {
+        "mouse_name": "TX40",
+        "date": "2019_05_02",
+        "expt": "gratings_static",
+        "block": "1",
+        "depth": 100,
+        "notes": "gratings(static(.46 .85))"
+      },
+      "response_file": "gratings_static_TX40_2019_05_02_1.npy",
+      "response_file_id": 15568649,
+      "response_bytes": 1048886433,
+      "running_shape": [
+        4738
+      ],
+      "running_dtype": "float32"
+    }
+  ],
+  "database_records": 38,
+  "running_array_records": 32,
+  "file_integrity": [
+    {
+      "file_id": 18517109,
+      "bytes": 2581,
+      "publisher_md5_verified": true,
+      "sha256": "f9727fbe8a6b342c7a223a8688ceef2910c0395ae8737132da6dc5add2bd5b69"
+    },
+    {
+      "file_id": 15568640,
+      "bytes": 659676,
+      "publisher_md5_verified": true,
+      "sha256": "528f5f64d7d8791c7965c5edda652ade5df0eb0f03a10369841314b172ffbdca"
+    }
+  ],
+  "finding": "Separate Stringer oriented-stimulus release contains six distinct named mice with running arrays referenced by the authors first-six-recording analysis. These identifiers differ from the seven MP identifiers in the already reviewed spontaneous release. This is a plausible additional validation cohort, not yet a validated replacement.",
+  "limitations": [
+    "The response files were not downloaded or inspected; response/running alignment and exact temporal aggregation remain unverified.",
+    "Author analysis uses trial-indexed sresp and paired running arrays. Do not reinterpret trial indices as the original uniformly binned continuous activity without documenting timing.",
+    "The current database has38records while all_running has32. Author notebook explicitly uses first6forrunning; later record mapping is not established.",
+    "No target values, target distributions, decoding metrics, neuron eligibility or model choices were inspected on this cohort. Only identifiers, array shapes, dtypes and publisher hashes were checked.",
+    "Stimulus-driven recordings change context from spontaneous behavior. Any future comparison needs a separately frozen protocol and equal preprocessing/controls.",
+    "New identifiers suggest new animals; full provenance and non-overlap still require verification before an independent-animal claim."
+  ],
+  "new_response_files_downloaded": 0,
+  "new_fits": 0,
+  "new_predictions": 0,
+  "response_total_bytes": 5382129641,
+  "metadata_only": true
+}

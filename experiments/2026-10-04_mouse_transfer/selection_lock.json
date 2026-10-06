@@ -1,0 +1,2074 @@
+{
+  "locked_utc": "2026-10-04T21:57:36.719248+00:00",
+  "records": [
+    {
+      "stage": "target",
+      "held": "MP030",
+      "held_index": 0,
+      "family": "attention",
+      "mode": "scratch",
+      "seed": 10,
+      "sessions": [
+        0
+      ],
+      "selected_epoch": 12,
+      "selection_score": 1.0685758205806664,
+      "updates": 120,
+      "examples": 3840,
+      "actual_adam_steps": [
+        120
+      ],
+      "epochs": 24,
+      "initial_hash": "f4c3c8df2eb300bc8dbad6be6d2ec2f1b5f11b21ef50f01af8c38f17b3150d71",
+      "selected_reload_exact": true,
+      "elapsed_seconds": 7.012873167000009,
+      "parameters": 12145,
+      "directory": "MP030/s10/attention_scratch"
+    },
+    {
+      "stage": "target",
+      "held": "MP030",
+      "held_index": 0,
+      "family": "attention",
+      "mode": "transfer",
+      "seed": 10,
+      "sessions": [
+        0
+      ],
+      "selected_epoch": 0,
+      "selection_score": 1.0710274345164488,
+      "updates": 120,
+      "examples": 3840,
+      "actual_adam_steps": [
+        120
+      ],
+      "epochs": 24,
+      "initial_hash": "03be07a855bd916400ca0777008ef0ff3e59a76cc184d4408a80d2093ffeb466",
+      "selected_reload_exact": true,
+      "elapsed_seconds": 7.016902999999985,
+      "parameters": 12145,
+      "directory": "MP030/s10/attention_transfer"
+    },
+    {
+      "stage": "target",
+      "held": "MP030",
+      "held_index": 0,
+      "family": "mlp",
+      "mode": "scratch",
+      "seed": 10,
+      "sessions": [
+        0
+      ],
+      "selected_epoch": 12,
+      "selection_score": 1.067073996628972,
+      "updates": 120,
+      "examples": 3840,
+      "actual_adam_steps": [
+        120
+      ],
+      "epochs": 24,
+      "initial_hash": "55fdf44c9b9050254194f3cc6100b9535f5df89a268dba160b606916040b0392",
+      "selected_reload_exact": true,
+      "elapsed_seconds": 2.8160101670000017,
+      "parameters": 12135,
+      "directory": "MP030/s10/mlp_scratch"
+    },
+    {
+      "stage": "target",
+      "held": "MP030",
+      "held_index": 0,
+      "family": "mlp",
+      "mode": "transfer",
+      "seed": 10,
+      "sessions": [
+        0
+      ],
+      "selected_epoch": 14,
+      "selection_score": 1.0269934938964655,
+      "updates": 120,
+      "examples": 3840,
+      "actual_adam_steps": [
+        120
+      ],
+      "epochs": 24,
+      "initial_hash": "e2f08aa981d47f09aba4e342ad20c8728f3abda84daa0a9cde85c5255a158c6f",
+      "selected_reload_exact": true,
+      "elapsed_seconds": 2.8208084579999877,
+      "parameters": 12135,
+      "directory": "MP030/s10/mlp_transfer"
+    },
+    {
+      "stage": "source",
+      "held": "MP030",
+      "held_index": 0,
+      "family": "attention",
+      "mode": "source",
+      "seed": 10,
+      "sessions": [
+        1,
+        2,
+        3
+      ],
+      "selected_epoch": 13,
+      "selection_score": 0.35232150449905847,
+      "updates": 3888,
+      "examples": 122448,
+      "actual_adam_steps": [
+        3888
+      ],
+      "epochs": 24,
+      "initial_hash": "2112989b49ae1ee98ebf29d311aa208b4bc0737ba0dfca420647a6f99448a378",
+      "selected_reload_exact": true,
+      "elapsed_seconds": 214.151022959,
+      "parameters": 16273,
+      "directory": "MP030/s10/source_attention"
+    },
+    {
+      "stage": "source",
+      "held": "MP030",
+      "held_index": 0,
+      "family": "mlp",
+      "mode": "source",
+      "seed": 10,
+      "sessions": [
+        1,
+        2,
+        3
+      ],
+      "selected_epoch": 11,
+      "selection_score": 0.32454491984950923,
+      "updates": 3888,
+      "examples": 122448,
+      "actual_adam_steps": [
+        3888
+      ],
+      "epochs": 24,
+      "initial_hash": "97a176ee03c74340f651d3d80c9b6959b142f814705db3960d7a508df42bf60a",
+      "selected_reload_exact": true,
+      "elapsed_seconds": 84.901767541,
+      "parameters": 16263,
+      "directory": "MP030/s10/source_mlp"
+    },
+    {
+      "stage": "target",
+      "held": "MP030",
+      "held_index": 0,
+      "family": "attention",
+      "mode": "scratch",
+      "seed": 11,
+      "sessions": [
+        0
+      ],
+      "selected_epoch": 19,
+      "selection_score": 1.0663001010522362,
+      "updates": 120,
+      "examples": 3840,
+      "actual_adam_steps": [
+        120
+      ],
+      "epochs": 24,
+      "initial_hash": "219dc28b71a4b9ec51390406ee20c24b8f4bdf78b196e3d4102d8aa0ca5e0337",
+      "selected_reload_exact": true,
+      "elapsed_seconds": 7.037767583000004,
+      "parameters": 12145,
+      "directory": "MP030/s11/attention_scratch"
+    },
+    {
+      "stage": "target",
+      "held": "MP030",
+      "held_index": 0,
+      "family": "attention",
+      "mode": "transfer",
+      "seed": 11,
+      "sessions": [
+        0
+      ],
+      "selected_epoch": 22,
+      "selection_score": 0.6462624071215723,
+      "updates": 120,
+      "examples": 3840,
+      "actual_adam_steps": [
+        120
+      ],
+      "epochs": 24,
+      "initial_hash": "bf7db3402ecd80db6eb7f906a1b4328b9cb9b1d1480e26e01e8b8f580db16873",
+      "selected_reload_exact": true,
+      "elapsed_seconds": 7.03538020900001,
+      "parameters": 12145,
+      "directory": "MP030/s11/attention_transfer"
+    },
+    {
+      "stage": "target",
+      "held": "MP030",
+      "held_index": 0,
+      "family": "mlp",
+      "mode": "scratch",
+      "seed": 11,
+      "sessions": [
+        0
+      ],
+      "selected_epoch": 1,
+      "selection_score": 1.0693767202550908,
+      "updates": 120,
+      "examples": 3840,
+      "actual_adam_steps": [
+        120
+      ],
+      "epochs": 24,
+      "initial_hash": "8198a44ec2e3380d7c8baa325a6bdf89f4019461b13c336cda035d93ce874fde",
+      "selected_reload_exact": true,
+      "elapsed_seconds": 2.8086352089999878,
+      "parameters": 12135,
+      "directory": "MP030/s11/mlp_scratch"
+    },
+    {
+      "stage": "target",
+      "held": "MP030",
+      "held_index": 0,
+      "family": "mlp",
+      "mode": "transfer",
+      "seed": 11,
+      "sessions": [
+        0
+      ],
+      "selected_epoch": 15,
+      "selection_score": 0.2525208448499349,
+      "updates": 120,
+      "examples": 3840,
+      "actual_adam_steps": [
+        120
+      ],
+      "epochs": 24,
+      "initial_hash": "8fa188597bb8f789ffdaadd43002c9ebd0de05eafa06f2e6ea524cec97e4b2f9",
+      "selected_reload_exact": true,
+      "elapsed_seconds": 2.826483082999971,
+      "parameters": 12135,
+      "directory": "MP030/s11/mlp_transfer"
+    },
+    {
+      "stage": "source",
+      "held": "MP030",
+      "held_index": 0,
+      "family": "attention",
+      "mode": "source",
+      "seed": 11,
+      "sessions": [
+        1,
+        2,
+        3
+      ],
+      "selected_epoch": 10,
+      "selection_score": 0.42034635517688423,
+      "updates": 3888,
+      "examples": 122448,
+      "actual_adam_steps": [
+        3888
+      ],
+      "epochs": 24,
+      "initial_hash": "55dd8a1a11f884a01fa20eb145ed4484a030c060148726d3302055cbb136a706",
+      "selected_reload_exact": true,
+      "elapsed_seconds": 214.46654516599997,
+      "parameters": 16273,
+      "directory": "MP030/s11/source_attention"
+    },
+    {
+      "stage": "source",
+      "held": "MP030",
+      "held_index": 0,
+      "family": "mlp",
+      "mode": "source",
+      "seed": 11,
+      "sessions": [
+        1,
+        2,
+        3
+      ],
+      "selected_epoch": 8,
+      "selection_score": 0.29429714362209863,
+      "updates": 3888,
+      "examples": 122448,
+      "actual_adam_steps": [
+        3888
+      ],
+      "epochs": 24,
+      "initial_hash": "f4ef34a07cae8dd72b8b06b584e1b368adc660955a666279871167aa1dadbff2",
+      "selected_reload_exact": true,
+      "elapsed_seconds": 84.9240235,
+      "parameters": 16263,
+      "directory": "MP030/s11/source_mlp"
+    },
+    {
+      "stage": "target",
+      "held": "MP030",
+      "held_index": 0,
+      "family": "attention",
+      "mode": "scratch",
+      "seed": 12,
+      "sessions": [
+        0
+      ],
+      "selected_epoch": 16,
+      "selection_score": 1.062752037953828,
+      "updates": 120,
+      "examples": 3840,
+      "actual_adam_steps": [
+        120
+      ],
+      "epochs": 24,
+      "initial_hash": "66c749f375c42bc87390e28ff483e011d7dd6a2c309838523c03e4026eb7bf4f",
+      "selected_reload_exact": true,
+      "elapsed_seconds": 7.6164541670000006,
+      "parameters": 12145,
+      "directory": "MP030/s12/attention_scratch"
+    },
+    {
+      "stage": "target",
+      "held": "MP030",
+      "held_index": 0,
+      "family": "attention",
+      "mode": "transfer",
+      "seed": 12,
+      "sessions": [
+        0
+      ],
+      "selected_epoch": 0,
+      "selection_score": 1.0710274345164488,
+      "updates": 120,
+      "examples": 3840,
+      "actual_adam_steps": [
+        120
+      ],
+      "epochs": 24,
+      "initial_hash": "8d53efdf0c305145cdd396a06d44092ddc90637530f41b8d5f02fb920bebbd52",
+      "selected_reload_exact": true,
+      "elapsed_seconds": 7.180935457999993,
+      "parameters": 12145,
+      "directory": "MP030/s12/attention_transfer"
+    },
+    {
+      "stage": "target",
+      "held": "MP030",
+      "held_index": 0,
+      "family": "mlp",
+      "mode": "scratch",
+      "seed": 12,
+      "sessions": [
+        0
+      ],
+      "selected_epoch": 14,
+      "selection_score": 1.067135715064185,
+      "updates": 120,
+      "examples": 3840,
+      "actual_adam_steps": [
+        120
+      ],
+      "epochs": 24,
+      "initial_hash": "2ae15b1c4d5a532a195a2cf193a2e6d983aa9c264868081b7cfc54a42f0474c0",
+      "selected_reload_exact": true,
+      "elapsed_seconds": 2.6489753750000204,
+      "parameters": 12135,
+      "directory": "MP030/s12/mlp_scratch"
+    },
+    {
+      "stage": "target",
+      "held": "MP030",
+      "held_index": 0,
+      "family": "mlp",
+      "mode": "transfer",
+      "seed": 12,
+      "sessions": [
+        0
+      ],
+      "selected_epoch": 11,
+      "selection_score": 0.9263091746210759,
+      "updates": 120,
+      "examples": 3840,
+      "actual_adam_steps": [
+        120
+      ],
+      "epochs": 24,
+      "initial_hash": "172c5aed3827e4859ce6116d3d1c05b6a2e823a3f09986499850033748f7cf53",
+      "selected_reload_exact": true,
+      "elapsed_seconds": 2.6374182920000067,
+      "parameters": 12135,
+      "directory": "MP030/s12/mlp_transfer"
+    },
+    {
+      "stage": "source",
+      "held": "MP030",
+      "held_index": 0,
+      "family": "attention",
+      "mode": "source",
+      "seed": 12,
+      "sessions": [
+        1,
+        2,
+        3
+      ],
+      "selected_epoch": 18,
+      "selection_score": 0.45917669465402094,
+      "updates": 3888,
+      "examples": 122448,
+      "actual_adam_steps": [
+        3888
+      ],
+      "epochs": 24,
+      "initial_hash": "7c392b7318d77ee459377eed1fd94c906f54c04ec5e3dde40541d491b89c4e26",
+      "selected_reload_exact": true,
+      "elapsed_seconds": 219.469873416,
+      "parameters": 16273,
+      "directory": "MP030/s12/source_attention"
+    },
+    {
+      "stage": "source",
+      "held": "MP030",
+      "held_index": 0,
+      "family": "mlp",
+      "mode": "source",
+      "seed": 12,
+      "sessions": [
+        1,
+        2,
+        3
+      ],
+      "selected_epoch": 11,
+      "selection_score": 0.34732193158481445,
+      "updates": 3888,
+      "examples": 122448,
+      "actual_adam_steps": [
+        3888
+      ],
+      "epochs": 24,
+      "initial_hash": "8796425fd79558c21baac39c80362d70d54331de47c9cf17793596eb6acc349c",
+      "selected_reload_exact": true,
+      "elapsed_seconds": 85.580238958,
+      "parameters": 16263,
+      "directory": "MP030/s12/source_mlp"
+    },
+    {
+      "stage": "target",
+      "held": "MP032",
+      "held_index": 1,
+      "family": "attention",
+      "mode": "scratch",
+      "seed": 10,
+      "sessions": [
+        1
+      ],
+      "selected_epoch": 10,
+      "selection_score": 0.9374686115365797,
+      "updates": 120,
+      "examples": 3840,
+      "actual_adam_steps": [
+        120
+      ],
+      "epochs": 24,
+      "initial_hash": "fd47abb5ac3050a2ae9398499169738809724348fd1d55f5295e1641d7127e0d",
+      "selected_reload_exact": true,
+      "elapsed_seconds": 7.013575833999994,
+      "parameters": 12145,
+      "directory": "MP032/s10/attention_scratch"
+    },
+    {
+      "stage": "target",
+      "held": "MP032",
+      "held_index": 1,
+      "family": "attention",
+      "mode": "transfer",
+      "seed": 10,
+      "sessions": [
+        1
+      ],
+      "selected_epoch": 3,
+      "selection_score": 0.9359729371953167,
+      "updates": 120,
+      "examples": 3840,
+      "actual_adam_steps": [
+        120
+      ],
+      "epochs": 24,
+      "initial_hash": "eae6b00746f44dfd64a7db95853259725c57322181d409e3894e29a5d784e728",
+      "selected_reload_exact": true,
+      "elapsed_seconds": 7.001625292000085,
+      "parameters": 12145,
+      "directory": "MP032/s10/attention_transfer"
+    },
+    {
+      "stage": "target",
+      "held": "MP032",
+      "held_index": 1,
+      "family": "mlp",
+      "mode": "scratch",
+      "seed": 10,
+      "sessions": [
+        1
+      ],
+      "selected_epoch": 12,
+      "selection_score": 0.9323186855521388,
+      "updates": 120,
+      "examples": 3840,
+      "actual_adam_steps": [
+        120
+      ],
+      "epochs": 24,
+      "initial_hash": "99a9ce367a72d9952e1bcafe52e387d2c6f91d4048740bab6a033073c789303e",
+      "selected_reload_exact": true,
+      "elapsed_seconds": 2.827952874999937,
+      "parameters": 12135,
+      "directory": "MP032/s10/mlp_scratch"
+    },
+    {
+      "stage": "target",
+      "held": "MP032",
+      "held_index": 1,
+      "family": "mlp",
+      "mode": "transfer",
+      "seed": 10,
+      "sessions": [
+        1
+      ],
+      "selected_epoch": 7,
+      "selection_score": 0.8197292831884329,
+      "updates": 120,
+      "examples": 3840,
+      "actual_adam_steps": [
+        120
+      ],
+      "epochs": 24,
+      "initial_hash": "4c86a51ff040b49702ac8aedab4a6d7e353162abd76680d6d407d4f920a4b7d3",
+      "selected_reload_exact": true,
+      "elapsed_seconds": 2.829980999999975,
+      "parameters": 12135,
+      "directory": "MP032/s10/mlp_transfer"
+    },
+    {
+      "stage": "source",
+      "held": "MP032",
+      "held_index": 1,
+      "family": "attention",
+      "mode": "source",
+      "seed": 10,
+      "sessions": [
+        0,
+        2,
+        3
+      ],
+      "selected_epoch": 10,
+      "selection_score": 0.48691205510290514,
+      "updates": 4152,
+      "examples": 131136,
+      "actual_adam_steps": [
+        4152
+      ],
+      "epochs": 24,
+      "initial_hash": "1c223a910bdd378f4aa1d8a2e2ee16cf58948ce1954e02bf891c6e151dd66d37",
+      "selected_reload_exact": true,
+      "elapsed_seconds": 229.27391054199995,
+      "parameters": 16273,
+      "directory": "MP032/s10/source_attention"
+    },
+    {
+      "stage": "source",
+      "held": "MP032",
+      "held_index": 1,
+      "family": "mlp",
+      "mode": "source",
+      "seed": 10,
+      "sessions": [
+        0,
+        2,
+        3
+      ],
+      "selected_epoch": 10,
+      "selection_score": 0.4751039350338077,
+      "updates": 4152,
+      "examples": 131136,
+      "actual_adam_steps": [
+        4152
+      ],
+      "epochs": 24,
+      "initial_hash": "018fef0924ab4d86a2baf914a162fd9d0a139d5cac9862eec8feb903d37eec7f",
+      "selected_reload_exact": true,
+      "elapsed_seconds": 91.37063333399999,
+      "parameters": 16263,
+      "directory": "MP032/s10/source_mlp"
+    },
+    {
+      "stage": "target",
+      "held": "MP032",
+      "held_index": 1,
+      "family": "attention",
+      "mode": "scratch",
+      "seed": 11,
+      "sessions": [
+        1
+      ],
+      "selected_epoch": 10,
+      "selection_score": 0.9484827566751707,
+      "updates": 120,
+      "examples": 3840,
+      "actual_adam_steps": [
+        120
+      ],
+      "epochs": 24,
+      "initial_hash": "0158ea07a07cae38ee3f8bc2518176b23f6fee3e51d332c3b1d1e2601773f1b6",
+      "selected_reload_exact": true,
+      "elapsed_seconds": 7.055464708000045,
+      "parameters": 12145,
+      "directory": "MP032/s11/attention_scratch"
+    },
+    {
+      "stage": "target",
+      "held": "MP032",
+      "held_index": 1,
+      "family": "attention",
+      "mode": "transfer",
+      "seed": 11,
+      "sessions": [
+        1
+      ],
+      "selected_epoch": 0,
+      "selection_score": 0.9498759892303993,
+      "updates": 120,
+      "examples": 3840,
+      "actual_adam_steps": [
+        120
+      ],
+      "epochs": 24,
+      "initial_hash": "677a06736534bd7a98978818a40b2f13ea817ee4a5409299a40e15d354102ed2",
+      "selected_reload_exact": true,
+      "elapsed_seconds": 7.016534125000021,
+      "parameters": 12145,
+      "directory": "MP032/s11/attention_transfer"
+    },
+    {
+      "stage": "target",
+      "held": "MP032",
+      "held_index": 1,
+      "family": "mlp",
+      "mode": "scratch",
+      "seed": 11,
+      "sessions": [
+        1
+      ],
+      "selected_epoch": 10,
+      "selection_score": 0.9481886397071145,
+      "updates": 120,
+      "examples": 3840,
+      "actual_adam_steps": [
+        120
+      ],
+      "epochs": 24,
+      "initial_hash": "1097325c8521cbe11b6d2b4e948aa86f16c4bec7d585ec22d427ecf2f03f4524",
+      "selected_reload_exact": true,
+      "elapsed_seconds": 2.8035716670000284,
+      "parameters": 12135,
+      "directory": "MP032/s11/mlp_scratch"
+    },
+    {
+      "stage": "target",
+      "held": "MP032",
+      "held_index": 1,
+      "family": "mlp",
+      "mode": "transfer",
+      "seed": 11,
+      "sessions": [
+        1
+      ],
+      "selected_epoch": 13,
+      "selection_score": 0.6972005765109907,
+      "updates": 120,
+      "examples": 3840,
+      "actual_adam_steps": [
+        120
+      ],
+      "epochs": 24,
+      "initial_hash": "d2591115895b929871cae5446090c62a84539c18b32a994af6e8d6cefc7c073b",
+      "selected_reload_exact": true,
+      "elapsed_seconds": 2.8411664589999646,
+      "parameters": 12135,
+      "directory": "MP032/s11/mlp_transfer"
+    },
+    {
+      "stage": "source",
+      "held": "MP032",
+      "held_index": 1,
+      "family": "attention",
+      "mode": "source",
+      "seed": 11,
+      "sessions": [
+        0,
+        2,
+        3
+      ],
+      "selected_epoch": 18,
+      "selection_score": 0.62822731363595,
+      "updates": 4152,
+      "examples": 131136,
+      "actual_adam_steps": [
+        4152
+      ],
+      "epochs": 24,
+      "initial_hash": "d03e036ac68871a548bd82f9c7b587d92b73acb255d028e21c228ea4149ca674",
+      "selected_reload_exact": true,
+      "elapsed_seconds": 229.72844625000005,
+      "parameters": 16273,
+      "directory": "MP032/s11/source_attention"
+    },
+    {
+      "stage": "source",
+      "held": "MP032",
+      "held_index": 1,
+      "family": "mlp",
+      "mode": "source",
+      "seed": 11,
+      "sessions": [
+        0,
+        2,
+        3
+      ],
+      "selected_epoch": 8,
+      "selection_score": 0.4658542165227144,
+      "updates": 4152,
+      "examples": 131136,
+      "actual_adam_steps": [
+        4152
+      ],
+      "epochs": 24,
+      "initial_hash": "daa3edbe6e80ac2f9b6a64640860887fb0420863e49518600ca4d08a48f7faa6",
+      "selected_reload_exact": true,
+      "elapsed_seconds": 91.48914208300005,
+      "parameters": 16263,
+      "directory": "MP032/s11/source_mlp"
+    },
+    {
+      "stage": "target",
+      "held": "MP032",
+      "held_index": 1,
+      "family": "attention",
+      "mode": "scratch",
+      "seed": 12,
+      "sessions": [
+        1
+      ],
+      "selected_epoch": 10,
+      "selection_score": 0.9309655465395402,
+      "updates": 120,
+      "examples": 3840,
+      "actual_adam_steps": [
+        120
+      ],
+      "epochs": 24,
+      "initial_hash": "bf85cb1b811e442e9487b6bdf885f484c0aba0193efb613b416ff846ac2b15bb",
+      "selected_reload_exact": true,
+      "elapsed_seconds": 7.815888541000049,
+      "parameters": 12145,
+      "directory": "MP032/s12/attention_scratch"
+    },
+    {
+      "stage": "target",
+      "held": "MP032",
+      "held_index": 1,
+      "family": "attention",
+      "mode": "transfer",
+      "seed": 12,
+      "sessions": [
+        1
+      ],
+      "selected_epoch": 3,
+      "selection_score": 0.9438765275319889,
+      "updates": 120,
+      "examples": 3840,
+      "actual_adam_steps": [
+        120
+      ],
+      "epochs": 24,
+      "initial_hash": "4f7aba6e8b06ef084e715af7a03360038396db9a01c076b8a40f87862d5a22ef",
+      "selected_reload_exact": true,
+      "elapsed_seconds": 7.643897459000073,
+      "parameters": 12145,
+      "directory": "MP032/s12/attention_transfer"
+    },
+    {
+      "stage": "target",
+      "held": "MP032",
+      "held_index": 1,
+      "family": "mlp",
+      "mode": "scratch",
+      "seed": 12,
+      "sessions": [
+        1
+      ],
+      "selected_epoch": 10,
+      "selection_score": 0.9314778789251114,
+      "updates": 120,
+      "examples": 3840,
+      "actual_adam_steps": [
+        120
+      ],
+      "epochs": 24,
+      "initial_hash": "8e1affbcea3509fc50d35893abd80cf2c0fde3678f9d52baea826c87f82be1a2",
+      "selected_reload_exact": true,
+      "elapsed_seconds": 2.646394292000082,
+      "parameters": 12135,
+      "directory": "MP032/s12/mlp_scratch"
+    },
+    {
+      "stage": "target",
+      "held": "MP032",
+      "held_index": 1,
+      "family": "mlp",
+      "mode": "transfer",
+      "seed": 12,
+      "sessions": [
+        1
+      ],
+      "selected_epoch": 6,
+      "selection_score": 0.8067955124706977,
+      "updates": 120,
+      "examples": 3840,
+      "actual_adam_steps": [
+        120
+      ],
+      "epochs": 24,
+      "initial_hash": "39ca40fc7a4fa0f66577013684bf8c0c908e5a4b7555a93f44e149ed0c53ca7e",
+      "selected_reload_exact": true,
+      "elapsed_seconds": 2.6469571249999717,
+      "parameters": 12135,
+      "directory": "MP032/s12/mlp_transfer"
+    },
+    {
+      "stage": "source",
+      "held": "MP032",
+      "held_index": 1,
+      "family": "attention",
+      "mode": "source",
+      "seed": 12,
+      "sessions": [
+        0,
+        2,
+        3
+      ],
+      "selected_epoch": 16,
+      "selection_score": 0.7277168651221064,
+      "updates": 4152,
+      "examples": 131136,
+      "actual_adam_steps": [
+        4152
+      ],
+      "epochs": 24,
+      "initial_hash": "783c9ac37432263a98fb4d9635c83a1f7abb4447691e8c325f4dd63dfcd083f2",
+      "selected_reload_exact": true,
+      "elapsed_seconds": 235.145247042,
+      "parameters": 16273,
+      "directory": "MP032/s12/source_attention"
+    },
+    {
+      "stage": "source",
+      "held": "MP032",
+      "held_index": 1,
+      "family": "mlp",
+      "mode": "source",
+      "seed": 12,
+      "sessions": [
+        0,
+        2,
+        3
+      ],
+      "selected_epoch": 10,
+      "selection_score": 0.45738123126445157,
+      "updates": 4152,
+      "examples": 131136,
+      "actual_adam_steps": [
+        4152
+      ],
+      "epochs": 24,
+      "initial_hash": "51df6cc3a84cde87d52313883303b2968207d11d801e91103b796ff398001419",
+      "selected_reload_exact": true,
+      "elapsed_seconds": 91.96999749999998,
+      "parameters": 16263,
+      "directory": "MP032/s12/source_mlp"
+    },
+    {
+      "stage": "target",
+      "held": "MP033",
+      "held_index": 2,
+      "family": "attention",
+      "mode": "scratch",
+      "seed": 10,
+      "sessions": [
+        2
+      ],
+      "selected_epoch": 5,
+      "selection_score": 2.278266444429436,
+      "updates": 120,
+      "examples": 3840,
+      "actual_adam_steps": [
+        120
+      ],
+      "epochs": 24,
+      "initial_hash": "302196ead43472dc23bbc06b43033e799cae9da51021cc7ec439fb75813e40f2",
+      "selected_reload_exact": true,
+      "elapsed_seconds": 7.0325048330000755,
+      "parameters": 12145,
+      "directory": "MP033/s10/attention_scratch"
+    },
+    {
+      "stage": "target",
+      "held": "MP033",
+      "held_index": 2,
+      "family": "attention",
+      "mode": "transfer",
+      "seed": 10,
+      "sessions": [
+        2
+      ],
+      "selected_epoch": 17,
+      "selection_score": 1.1554480151822264,
+      "updates": 120,
+      "examples": 3840,
+      "actual_adam_steps": [
+        120
+      ],
+      "epochs": 24,
+      "initial_hash": "a6e780744eb02e0e0ae708c1bebb17ee0af03aa5b2df8961c56040eebb9cf408",
+      "selected_reload_exact": true,
+      "elapsed_seconds": 7.02153450000003,
+      "parameters": 12145,
+      "directory": "MP033/s10/attention_transfer"
+    },
+    {
+      "stage": "target",
+      "held": "MP033",
+      "held_index": 2,
+      "family": "mlp",
+      "mode": "scratch",
+      "seed": 10,
+      "sessions": [
+        2
+      ],
+      "selected_epoch": 12,
+      "selection_score": 2.1676839351119437,
+      "updates": 120,
+      "examples": 3840,
+      "actual_adam_steps": [
+        120
+      ],
+      "epochs": 24,
+      "initial_hash": "f3f751f3af522853bf99d6f9e823e8c79f6a45c1ab191981b2f06ce49a105285",
+      "selected_reload_exact": true,
+      "elapsed_seconds": 2.846006541999941,
+      "parameters": 12135,
+      "directory": "MP033/s10/mlp_scratch"
+    },
+    {
+      "stage": "target",
+      "held": "MP033",
+      "held_index": 2,
+      "family": "mlp",
+      "mode": "transfer",
+      "seed": 10,
+      "sessions": [
+        2
+      ],
+      "selected_epoch": 14,
+      "selection_score": 0.2031420260264934,
+      "updates": 120,
+      "examples": 3840,
+      "actual_adam_steps": [
+        120
+      ],
+      "epochs": 24,
+      "initial_hash": "eaf804ad077dbb445857545949d96f46451f79213f0a11b351dc73543496031d",
+      "selected_reload_exact": true,
+      "elapsed_seconds": 2.8263126670001384,
+      "parameters": 12135,
+      "directory": "MP033/s10/mlp_transfer"
+    },
+    {
+      "stage": "source",
+      "held": "MP033",
+      "held_index": 2,
+      "family": "attention",
+      "mode": "source",
+      "seed": 10,
+      "sessions": [
+        0,
+        1,
+        3
+      ],
+      "selected_epoch": 24,
+      "selection_score": 0.33414682071175966,
+      "updates": 4512,
+      "examples": 142800,
+      "actual_adam_steps": [
+        4512
+      ],
+      "epochs": 24,
+      "initial_hash": "fad075d1bb4d2d7efa124783ef221c900fa8bdb9e996ca1d940a35a25be68619",
+      "selected_reload_exact": true,
+      "elapsed_seconds": 251.02228083300008,
+      "parameters": 16273,
+      "directory": "MP033/s10/source_attention"
+    },
+    {
+      "stage": "source",
+      "held": "MP033",
+      "held_index": 2,
+      "family": "mlp",
+      "mode": "source",
+      "seed": 10,
+      "sessions": [
+        0,
+        1,
+        3
+      ],
+      "selected_epoch": 14,
+      "selection_score": 0.3256239441470233,
+      "updates": 4512,
+      "examples": 142800,
+      "actual_adam_steps": [
+        4512
+      ],
+      "epochs": 24,
+      "initial_hash": "6c8d89d27e8c9d635657fce38a57c52da2af659cd9c3037058ee21f80e8fe327",
+      "selected_reload_exact": true,
+      "elapsed_seconds": 99.795264083,
+      "parameters": 16263,
+      "directory": "MP033/s10/source_mlp"
+    },
+    {
+      "stage": "target",
+      "held": "MP033",
+      "held_index": 2,
+      "family": "attention",
+      "mode": "scratch",
+      "seed": 11,
+      "sessions": [
+        2
+      ],
+      "selected_epoch": 22,
+      "selection_score": 2.1048929038817374,
+      "updates": 120,
+      "examples": 3840,
+      "actual_adam_steps": [
+        120
+      ],
+      "epochs": 24,
+      "initial_hash": "168341194e83188f74a2bcc977f57f976d756a00d93f29c1ded26fdd6e65a18e",
+      "selected_reload_exact": true,
+      "elapsed_seconds": 7.123713000000066,
+      "parameters": 12145,
+      "directory": "MP033/s11/attention_scratch"
+    },
+    {
+      "stage": "target",
+      "held": "MP033",
+      "held_index": 2,
+      "family": "attention",
+      "mode": "transfer",
+      "seed": 11,
+      "sessions": [
+        2
+      ],
+      "selected_epoch": 8,
+      "selection_score": 0.29232729002191593,
+      "updates": 120,
+      "examples": 3840,
+      "actual_adam_steps": [
+        120
+      ],
+      "epochs": 24,
+      "initial_hash": "dffb2e949572514fac57525788d06b1e0b3324eef07fa4e324ec5e7b1bf8daa9",
+      "selected_reload_exact": true,
+      "elapsed_seconds": 7.04107891700005,
+      "parameters": 12145,
+      "directory": "MP033/s11/attention_transfer"
+    },
+    {
+      "stage": "target",
+      "held": "MP033",
+      "held_index": 2,
+      "family": "mlp",
+      "mode": "scratch",
+      "seed": 11,
+      "sessions": [
+        2
+      ],
+      "selected_epoch": 22,
+      "selection_score": 2.090365313122321,
+      "updates": 120,
+      "examples": 3840,
+      "actual_adam_steps": [
+        120
+      ],
+      "epochs": 24,
+      "initial_hash": "3952f808a701b1484d4754bd24975ff234055a54fa41f7dce53851f8d2e8930c",
+      "selected_reload_exact": true,
+      "elapsed_seconds": 2.9365817499999594,
+      "parameters": 12135,
+      "directory": "MP033/s11/mlp_scratch"
+    },
+    {
+      "stage": "target",
+      "held": "MP033",
+      "held_index": 2,
+      "family": "mlp",
+      "mode": "transfer",
+      "seed": 11,
+      "sessions": [
+        2
+      ],
+      "selected_epoch": 10,
+      "selection_score": 0.2986908783074297,
+      "updates": 120,
+      "examples": 3840,
+      "actual_adam_steps": [
+        120
+      ],
+      "epochs": 24,
+      "initial_hash": "222751db04cd5ca0e035dc9953646a472b76be52de0fcbad3d73bf3eef9219c3",
+      "selected_reload_exact": true,
+      "elapsed_seconds": 2.817239499999914,
+      "parameters": 12135,
+      "directory": "MP033/s11/mlp_transfer"
+    },
+    {
+      "stage": "source",
+      "held": "MP033",
+      "held_index": 2,
+      "family": "attention",
+      "mode": "source",
+      "seed": 11,
+      "sessions": [
+        0,
+        1,
+        3
+      ],
+      "selected_epoch": 10,
+      "selection_score": 0.3415037056947317,
+      "updates": 4512,
+      "examples": 142800,
+      "actual_adam_steps": [
+        4512
+      ],
+      "epochs": 24,
+      "initial_hash": "911ca4a17a6c5b4833fed50502bbc4e54e133fc4b63205ee262cb742be28afa4",
+      "selected_reload_exact": true,
+      "elapsed_seconds": 251.66575733399998,
+      "parameters": 16273,
+      "directory": "MP033/s11/source_attention"
+    },
+    {
+      "stage": "source",
+      "held": "MP033",
+      "held_index": 2,
+      "family": "mlp",
+      "mode": "source",
+      "seed": 11,
+      "sessions": [
+        0,
+        1,
+        3
+      ],
+      "selected_epoch": 15,
+      "selection_score": 0.2991532041929858,
+      "updates": 4512,
+      "examples": 142800,
+      "actual_adam_steps": [
+        4512
+      ],
+      "epochs": 24,
+      "initial_hash": "8386f496483973c56847a85cc1d43d5cccd8f70c0dc16053017dcde3c3cb3b46",
+      "selected_reload_exact": true,
+      "elapsed_seconds": 100.01335279099987,
+      "parameters": 16263,
+      "directory": "MP033/s11/source_mlp"
+    },
+    {
+      "stage": "target",
+      "held": "MP033",
+      "held_index": 2,
+      "family": "attention",
+      "mode": "scratch",
+      "seed": 12,
+      "sessions": [
+        2
+      ],
+      "selected_epoch": 23,
+      "selection_score": 2.1595634253319247,
+      "updates": 120,
+      "examples": 3840,
+      "actual_adam_steps": [
+        120
+      ],
+      "epochs": 24,
+      "initial_hash": "a557928bc5e413886a5f40252b4077d43786b8e2b83e0f4b981a0fdfd06c2a76",
+      "selected_reload_exact": true,
+      "elapsed_seconds": 7.834616582999956,
+      "parameters": 12145,
+      "directory": "MP033/s12/attention_scratch"
+    },
+    {
+      "stage": "target",
+      "held": "MP033",
+      "held_index": 2,
+      "family": "attention",
+      "mode": "transfer",
+      "seed": 12,
+      "sessions": [
+        2
+      ],
+      "selected_epoch": 15,
+      "selection_score": 0.2449744203076287,
+      "updates": 120,
+      "examples": 3840,
+      "actual_adam_steps": [
+        120
+      ],
+      "epochs": 24,
+      "initial_hash": "8fba529d61410a52ce857fb939a8004b8fc42df5f9f65a0c866555540e58b162",
+      "selected_reload_exact": true,
+      "elapsed_seconds": 7.88278716700006,
+      "parameters": 12145,
+      "directory": "MP033/s12/attention_transfer"
+    },
+    {
+      "stage": "target",
+      "held": "MP033",
+      "held_index": 2,
+      "family": "mlp",
+      "mode": "scratch",
+      "seed": 12,
+      "sessions": [
+        2
+      ],
+      "selected_epoch": 24,
+      "selection_score": 1.5898644945640905,
+      "updates": 120,
+      "examples": 3840,
+      "actual_adam_steps": [
+        120
+      ],
+      "epochs": 24,
+      "initial_hash": "ff936c891aa43b51e608e955092a9c1fb0d19a022c3011d87bda0af7f3641676",
+      "selected_reload_exact": true,
+      "elapsed_seconds": 2.6437199169999985,
+      "parameters": 12135,
+      "directory": "MP033/s12/mlp_scratch"
+    },
+    {
+      "stage": "target",
+      "held": "MP033",
+      "held_index": 2,
+      "family": "mlp",
+      "mode": "transfer",
+      "seed": 12,
+      "sessions": [
+        2
+      ],
+      "selected_epoch": 12,
+      "selection_score": 0.11283066760725713,
+      "updates": 120,
+      "examples": 3840,
+      "actual_adam_steps": [
+        120
+      ],
+      "epochs": 24,
+      "initial_hash": "19420eddc0c0990da518f17693b3991be62ba8d3d9736c139f9d8db4cd50acab",
+      "selected_reload_exact": true,
+      "elapsed_seconds": 2.679319208999914,
+      "parameters": 12135,
+      "directory": "MP033/s12/mlp_transfer"
+    },
+    {
+      "stage": "source",
+      "held": "MP033",
+      "held_index": 2,
+      "family": "attention",
+      "mode": "source",
+      "seed": 12,
+      "sessions": [
+        0,
+        1,
+        3
+      ],
+      "selected_epoch": 16,
+      "selection_score": 0.3071056775818988,
+      "updates": 4512,
+      "examples": 142800,
+      "actual_adam_steps": [
+        4512
+      ],
+      "epochs": 24,
+      "initial_hash": "293c72ddfb578eb05cc727e1fd6d3271f7b054cba466c4a756feaf051d5d1d79",
+      "selected_reload_exact": true,
+      "elapsed_seconds": 257.78916812500006,
+      "parameters": 16273,
+      "directory": "MP033/s12/source_attention"
+    },
+    {
+      "stage": "source",
+      "held": "MP033",
+      "held_index": 2,
+      "family": "mlp",
+      "mode": "source",
+      "seed": 12,
+      "sessions": [
+        0,
+        1,
+        3
+      ],
+      "selected_epoch": 10,
+      "selection_score": 0.32512492533096465,
+      "updates": 4512,
+      "examples": 142800,
+      "actual_adam_steps": [
+        4512
+      ],
+      "epochs": 24,
+      "initial_hash": "d153cf956e2d1a64ecb1a0acac6c1b877aaf49402c019ac560125b95f68c2909",
+      "selected_reload_exact": true,
+      "elapsed_seconds": 100.4339140410001,
+      "parameters": 16263,
+      "directory": "MP033/s12/source_mlp"
+    },
+    {
+      "stage": "target",
+      "held": "MP034",
+      "held_index": 3,
+      "family": "attention",
+      "mode": "scratch",
+      "seed": 10,
+      "sessions": [
+        3
+      ],
+      "selected_epoch": 14,
+      "selection_score": 2.000328760769369,
+      "updates": 120,
+      "examples": 3840,
+      "actual_adam_steps": [
+        120
+      ],
+      "epochs": 24,
+      "initial_hash": "5ce76eeefefbb2d5089dba89aeb119fe46262d636142d87e6e224074b92a4710",
+      "selected_reload_exact": true,
+      "elapsed_seconds": 7.110752042000058,
+      "parameters": 12145,
+      "directory": "MP034/s10/attention_scratch"
+    },
+    {
+      "stage": "target",
+      "held": "MP034",
+      "held_index": 3,
+      "family": "attention",
+      "mode": "transfer",
+      "seed": 10,
+      "sessions": [
+        3
+      ],
+      "selected_epoch": 10,
+      "selection_score": 1.5140161963901402,
+      "updates": 120,
+      "examples": 3840,
+      "actual_adam_steps": [
+        120
+      ],
+      "epochs": 24,
+      "initial_hash": "87d11d3fe8f752d84474361cda50a7de52f3fc8d1d738165a4f0dedcd54109ed",
+      "selected_reload_exact": true,
+      "elapsed_seconds": 7.016770417000089,
+      "parameters": 12145,
+      "directory": "MP034/s10/attention_transfer"
+    },
+    {
+      "stage": "target",
+      "held": "MP034",
+      "held_index": 3,
+      "family": "mlp",
+      "mode": "scratch",
+      "seed": 10,
+      "sessions": [
+        3
+      ],
+      "selected_epoch": 11,
+      "selection_score": 1.7308425763587025,
+      "updates": 120,
+      "examples": 3840,
+      "actual_adam_steps": [
+        120
+      ],
+      "epochs": 24,
+      "initial_hash": "94955eff521c50deff43d6366dac49b0e6c07290303ca948feb80e74b3025d7f",
+      "selected_reload_exact": true,
+      "elapsed_seconds": 2.886977750000142,
+      "parameters": 12135,
+      "directory": "MP034/s10/mlp_scratch"
+    },
+    {
+      "stage": "target",
+      "held": "MP034",
+      "held_index": 3,
+      "family": "mlp",
+      "mode": "transfer",
+      "seed": 10,
+      "sessions": [
+        3
+      ],
+      "selected_epoch": 2,
+      "selection_score": 1.7305504685172224,
+      "updates": 120,
+      "examples": 3840,
+      "actual_adam_steps": [
+        120
+      ],
+      "epochs": 24,
+      "initial_hash": "f2b7a1b42d635eac7596e10fee541c905f7441c0d7f690875a2734021391576d",
+      "selected_reload_exact": true,
+      "elapsed_seconds": 2.8447261250000793,
+      "parameters": 12135,
+      "directory": "MP034/s10/mlp_transfer"
+    },
+    {
+      "stage": "source",
+      "held": "MP034",
+      "held_index": 3,
+      "family": "attention",
+      "mode": "source",
+      "seed": 10,
+      "sessions": [
+        0,
+        1,
+        2
+      ],
+      "selected_epoch": 14,
+      "selection_score": 0.40959615715166403,
+      "updates": 4512,
+      "examples": 142752,
+      "actual_adam_steps": [
+        4512
+      ],
+      "epochs": 24,
+      "initial_hash": "f5edbcbb7ec3552da26ca581b5e0e1b4e2acde88ae918401493bbec3409bd93c",
+      "selected_reload_exact": true,
+      "elapsed_seconds": 252.86277404200018,
+      "parameters": 16273,
+      "directory": "MP034/s10/source_attention"
+    },
+    {
+      "stage": "source",
+      "held": "MP034",
+      "held_index": 3,
+      "family": "mlp",
+      "mode": "source",
+      "seed": 10,
+      "sessions": [
+        0,
+        1,
+        2
+      ],
+      "selected_epoch": 8,
+      "selection_score": 0.3938135261842448,
+      "updates": 4512,
+      "examples": 142752,
+      "actual_adam_steps": [
+        4512
+      ],
+      "epochs": 24,
+      "initial_hash": "42e27aa5c0157ed508e65438486ab0938c091625db999372c560eaee3aae76d8",
+      "selected_reload_exact": true,
+      "elapsed_seconds": 101.74247633300001,
+      "parameters": 16263,
+      "directory": "MP034/s10/source_mlp"
+    },
+    {
+      "stage": "target",
+      "held": "MP034",
+      "held_index": 3,
+      "family": "attention",
+      "mode": "scratch",
+      "seed": 11,
+      "sessions": [
+        3
+      ],
+      "selected_epoch": 15,
+      "selection_score": 1.8498168048378991,
+      "updates": 120,
+      "examples": 3840,
+      "actual_adam_steps": [
+        120
+      ],
+      "epochs": 24,
+      "initial_hash": "5e97d8bc677b7dd33cc6e61aa7a1fdacebe1c6250d01c1d62e12779a61ae0c01",
+      "selected_reload_exact": true,
+      "elapsed_seconds": 7.304686875000016,
+      "parameters": 12145,
+      "directory": "MP034/s11/attention_scratch"
+    },
+    {
+      "stage": "target",
+      "held": "MP034",
+      "held_index": 3,
+      "family": "attention",
+      "mode": "transfer",
+      "seed": 11,
+      "sessions": [
+        3
+      ],
+      "selected_epoch": 3,
+      "selection_score": 2.0102885531429795,
+      "updates": 120,
+      "examples": 3840,
+      "actual_adam_steps": [
+        120
+      ],
+      "epochs": 24,
+      "initial_hash": "9f4322260c1b51154f0c2bfd40411dda87c6a690d9eaa8f91dedf888ff924403",
+      "selected_reload_exact": true,
+      "elapsed_seconds": 7.02665812500004,
+      "parameters": 12145,
+      "directory": "MP034/s11/attention_transfer"
+    },
+    {
+      "stage": "target",
+      "held": "MP034",
+      "held_index": 3,
+      "family": "mlp",
+      "mode": "scratch",
+      "seed": 11,
+      "sessions": [
+        3
+      ],
+      "selected_epoch": 20,
+      "selection_score": 1.7596236927764468,
+      "updates": 120,
+      "examples": 3840,
+      "actual_adam_steps": [
+        120
+      ],
+      "epochs": 24,
+      "initial_hash": "a4e22ff773dbfedf1a97cd654f3db6797c9e0c93084a3c62fb014b4f704d6c0c",
+      "selected_reload_exact": true,
+      "elapsed_seconds": 2.70681479100017,
+      "parameters": 12135,
+      "directory": "MP034/s11/mlp_scratch"
+    },
+    {
+      "stage": "target",
+      "held": "MP034",
+      "held_index": 3,
+      "family": "mlp",
+      "mode": "transfer",
+      "seed": 11,
+      "sessions": [
+        3
+      ],
+      "selected_epoch": 4,
+      "selection_score": 1.0712347282903298,
+      "updates": 120,
+      "examples": 3840,
+      "actual_adam_steps": [
+        120
+      ],
+      "epochs": 24,
+      "initial_hash": "51abd04fd326fb39beed82f4adf4be214c92d8a56a3323a6767a7b826b145f75",
+      "selected_reload_exact": true,
+      "elapsed_seconds": 2.893872250000186,
+      "parameters": 12135,
+      "directory": "MP034/s11/mlp_transfer"
+    },
+    {
+      "stage": "source",
+      "held": "MP034",
+      "held_index": 3,
+      "family": "attention",
+      "mode": "source",
+      "seed": 11,
+      "sessions": [
+        0,
+        1,
+        2
+      ],
+      "selected_epoch": 14,
+      "selection_score": 0.40192468783263813,
+      "updates": 4512,
+      "examples": 142752,
+      "actual_adam_steps": [
+        4512
+      ],
+      "epochs": 24,
+      "initial_hash": "74117d1855a440f06b8d3e132da361e5a03e3b522b01a16f2192d251fea9aea2",
+      "selected_reload_exact": true,
+      "elapsed_seconds": 253.24863679199984,
+      "parameters": 16273,
+      "directory": "MP034/s11/source_attention"
+    },
+    {
+      "stage": "source",
+      "held": "MP034",
+      "held_index": 3,
+      "family": "mlp",
+      "mode": "source",
+      "seed": 11,
+      "sessions": [
+        0,
+        1,
+        2
+      ],
+      "selected_epoch": 16,
+      "selection_score": 0.38078593536013,
+      "updates": 4512,
+      "examples": 142752,
+      "actual_adam_steps": [
+        4512
+      ],
+      "epochs": 24,
+      "initial_hash": "fcc00bf8d7a4b572b3f7c1b0ab0aa3c91c7f47a818cf422e4a00b55fe16995af",
+      "selected_reload_exact": true,
+      "elapsed_seconds": 101.78079583299996,
+      "parameters": 16263,
+      "directory": "MP034/s11/source_mlp"
+    },
+    {
+      "stage": "target",
+      "held": "MP034",
+      "held_index": 3,
+      "family": "attention",
+      "mode": "scratch",
+      "seed": 12,
+      "sessions": [
+        3
+      ],
+      "selected_epoch": 9,
+      "selection_score": 1.8234682097049841,
+      "updates": 120,
+      "examples": 3840,
+      "actual_adam_steps": [
+        120
+      ],
+      "epochs": 24,
+      "initial_hash": "93216808b9736183c2229c73357505a8d4631259a6b862e704e564229ad2304d",
+      "selected_reload_exact": true,
+      "elapsed_seconds": 8.03031216599993,
+      "parameters": 12145,
+      "directory": "MP034/s12/attention_scratch"
+    },
+    {
+      "stage": "target",
+      "held": "MP034",
+      "held_index": 3,
+      "family": "attention",
+      "mode": "transfer",
+      "seed": 12,
+      "sessions": [
+        3
+      ],
+      "selected_epoch": 5,
+      "selection_score": 1.6380676963161174,
+      "updates": 120,
+      "examples": 3840,
+      "actual_adam_steps": [
+        120
+      ],
+      "epochs": 24,
+      "initial_hash": "313a565fde48a5092a59ee282e478e5400c1d39e0561dc6d665471c99470d2e8",
+      "selected_reload_exact": true,
+      "elapsed_seconds": 7.961861792000036,
+      "parameters": 12145,
+      "directory": "MP034/s12/attention_transfer"
+    },
+    {
+      "stage": "target",
+      "held": "MP034",
+      "held_index": 3,
+      "family": "mlp",
+      "mode": "scratch",
+      "seed": 12,
+      "sessions": [
+        3
+      ],
+      "selected_epoch": 11,
+      "selection_score": 1.6806322892784435,
+      "updates": 120,
+      "examples": 3840,
+      "actual_adam_steps": [
+        120
+      ],
+      "epochs": 24,
+      "initial_hash": "c0964e87681258cf4fcab768bc745694726d0704b27e64f42ff603019ebe218d",
+      "selected_reload_exact": true,
+      "elapsed_seconds": 2.461654832999784,
+      "parameters": 12135,
+      "directory": "MP034/s12/mlp_scratch"
+    },
+    {
+      "stage": "target",
+      "held": "MP034",
+      "held_index": 3,
+      "family": "mlp",
+      "mode": "transfer",
+      "seed": 12,
+      "sessions": [
+        3
+      ],
+      "selected_epoch": 3,
+      "selection_score": 1.5896536336952751,
+      "updates": 120,
+      "examples": 3840,
+      "actual_adam_steps": [
+        120
+      ],
+      "epochs": 24,
+      "initial_hash": "da802a567e77d15458f1753af8661d6a5810ee7e7206b21373b2e076fce94977",
+      "selected_reload_exact": true,
+      "elapsed_seconds": 2.4774554999999054,
+      "parameters": 12135,
+      "directory": "MP034/s12/mlp_transfer"
+    },
+    {
+      "stage": "source",
+      "held": "MP034",
+      "held_index": 3,
+      "family": "attention",
+      "mode": "source",
+      "seed": 12,
+      "sessions": [
+        0,
+        1,
+        2
+      ],
+      "selected_epoch": 9,
+      "selection_score": 0.3730899629981012,
+      "updates": 4512,
+      "examples": 142752,
+      "actual_adam_steps": [
+        4512
+      ],
+      "epochs": 24,
+      "initial_hash": "a0e3b5aa7da88372041eca9f4e4390df77c839660b9477049c26132bbdee0698",
+      "selected_reload_exact": true,
+      "elapsed_seconds": 259.677097,
+      "parameters": 16273,
+      "directory": "MP034/s12/source_attention"
+    },
+    {
+      "stage": "source",
+      "held": "MP034",
+      "held_index": 3,
+      "family": "mlp",
+      "mode": "source",
+      "seed": 12,
+      "sessions": [
+        0,
+        1,
+        2
+      ],
+      "selected_epoch": 10,
+      "selection_score": 0.37018331745211003,
+      "updates": 4512,
+      "examples": 142752,
+      "actual_adam_steps": [
+        4512
+      ],
+      "epochs": 24,
+      "initial_hash": "fdad46a1427c6da427ff7bb50c7cf82bde13d12abb76208a6cd5dad1327df343",
+      "selected_reload_exact": true,
+      "elapsed_seconds": 99.55573804099981,
+      "parameters": 16263,
+      "directory": "MP034/s12/source_mlp"
+    }
+  ],
+  "hashes": {
+    "MP030/s10/attention_scratch/selected.pt": "93282d1b8645a00bbd70346d767aa92cf97b824c3a8de8c387356e90c93b7788",
+    "MP030/s10/attention_scratch/result.json": "3c8a9f7ace424422da3f00053afc9b1c0b88ae7c3009d9e0454ede314cc7e39d",
+    "MP030/s10/attention_scratch/selection_predictions.npz": "7d9d9b5c26e409c89d06e64b9cb53aa38d6d80cf66f05aad497a49739c28226c",
+    "MP030/s10/attention_scratch/history.json": "3dee12db85675d11350cff160954a56191e45880ec92c980d554d119c060265f",
+    "MP030/s10/attention_transfer/selected.pt": "48967f4dd405a8e344ea14e6b75eb3b4863105dec52fd96d3bf71ea6f277619b",
+    "MP030/s10/attention_transfer/result.json": "75d59b4728f5c8f1408bcf212ba025a330886609e471f4afec96ea93bd250555",
+    "MP030/s10/attention_transfer/selection_predictions.npz": "1e336d9acb6dcefb572ed499726a5156f2135d20bb8931639578cd16a2ebddba",
+    "MP030/s10/attention_transfer/history.json": "7b816f6e962893f739b2b288bdf475d83086cad1e5dfeab464015279b7c17443",
+    "MP030/s10/mlp_scratch/selected.pt": "3fe51015cb2f406aa7f0b5a149b6e78037e3b7d1bafd61b1b883df6630197d8c",
+    "MP030/s10/mlp_scratch/result.json": "dcd8d24bb232b49e7425920fa26254c5bb02c3e0334a78c94cd6857d88b9d3ee",
+    "MP030/s10/mlp_scratch/selection_predictions.npz": "cb50b306491408d319b2e7114c11107801fe3476d901638169ac56e5f3dc6e1e",
+    "MP030/s10/mlp_scratch/history.json": "50f870214f15945ff27e5d065496b2529b2a4271c09efb1f5369a1ae1ec54640",
+    "MP030/s10/mlp_transfer/selected.pt": "632bfcb89627f4f746ae27a4c019a35b9b171e765ea115c2b414eba984554c48",
+    "MP030/s10/mlp_transfer/result.json": "edb4775fe39ecb2bf3f8cd4b43ff9200601ff37db4abed2a09b8707644260958",
+    "MP030/s10/mlp_transfer/selection_predictions.npz": "f35d7ebe8d61cb0d05a6cfce405d288c2816f469a2b6c506740c180d18eddcbb",
+    "MP030/s10/mlp_transfer/history.json": "e8c711f30a24ef4b983b59d0e3bc81cd5ebe3016a5584d7eb11fb64899ac06be",
+    "MP030/s10/source_attention/selected.pt": "8df4151adb3e4b73be429e5231665036974cf5baf2de76443dbc4b2ce3c072cc",
+    "MP030/s10/source_attention/result.json": "5cb914414d280dcb665ad82363f1e680169727b7d73c751da5ba4b15150987bf",
+    "MP030/s10/source_attention/selection_predictions.npz": "68a6a3e29b10b54b285f1338da7008d6f24f0a437971f60bb5b968788da44739",
+    "MP030/s10/source_attention/history.json": "9a8fd7a89bcf1cf82d92c06db51c721c93bc025f8eeff5fce6fdb830d74a1de6",
+    "MP030/s10/source_mlp/selected.pt": "6813beb5878ac5d33a8a946db472824f3b9c164c5768409662f08971d77bae55",
+    "MP030/s10/source_mlp/result.json": "ecd05da2581fa558293b9db5b283c2f943dfd4e0c17eeb3fac675453969c66aa",
+    "MP030/s10/source_mlp/selection_predictions.npz": "9856fa374ed34feda605039f96ffcc14b206d7be9d3df113a44e9a10bc6ceee4",
+    "MP030/s10/source_mlp/history.json": "081589731cc82c05c46609a7cc28922550bcf51f3471738731e2b66263201590",
+    "MP030/s11/attention_scratch/selected.pt": "86a2e4d8d3133e4d388e1b45234ea38b6b8f64d333f4b0c0092d209078c8bc23",
+    "MP030/s11/attention_scratch/result.json": "6dac485d2d75ba429db88cf31b87ccecf906e899064136cab7e85851a5ee6867",
+    "MP030/s11/attention_scratch/selection_predictions.npz": "cbfcb858f912ba790047973e6bddc62144d876a5c098e60d6d2db7cff0e01175",
+    "MP030/s11/attention_scratch/history.json": "0844461e89d2a4ed8fcf748dd7cd0d4fa8ea637304c8c4419d65bf7bb600d8bf",
+    "MP030/s11/attention_transfer/selected.pt": "1057f6e346dcf4d6d8599cd282045e0b54d7817ebf541497bcc854bb96b70175",
+    "MP030/s11/attention_transfer/result.json": "319b9483e0fa3604d4bcebec09fcfe25c1e47eb2344115457da02f8e455d29ec",
+    "MP030/s11/attention_transfer/selection_predictions.npz": "440ace51e8c559641d2cfaa613185a4703365575b155b5f7edd8d5d2f0a99536",
+    "MP030/s11/attention_transfer/history.json": "d5a7123ea27862a04e6077fa53ec2e6a2fb8e6ebcbf870db6eed22de35fa6216",
+    "MP030/s11/mlp_scratch/selected.pt": "06685045a8b6d3331c857368f944b86b121852f045e402a60e92774752204d79",
+    "MP030/s11/mlp_scratch/result.json": "f741d624a6033b655172de51bc999a4e8d140d56431681c0ff71c62f4eb5071f",
+    "MP030/s11/mlp_scratch/selection_predictions.npz": "c8ab4f45111dcec532ba5d2b7d1057bd4098d6d674dedbe8d2eee2b352d9583a",
+    "MP030/s11/mlp_scratch/history.json": "89e0e2995f0e0729b7b30b066a81dc1b2f3f65871ea9e2e837719ef834d2cdfb",
+    "MP030/s11/mlp_transfer/selected.pt": "24529ae74ff9451245febba36a44beb29f2e75035d45468871b24464bc95dee1",
+    "MP030/s11/mlp_transfer/result.json": "f01af3f3fb31253561a9fced9b70eb6e553b11ed13069aea2075155212f0fe95",
+    "MP030/s11/mlp_transfer/selection_predictions.npz": "6c6851a33b12bcdea19f2d5e3f6f7139b2bfa389d430a12eb6f1f6cc6322b32a",
+    "MP030/s11/mlp_transfer/history.json": "50d4377295f66f8d54d3e38a40a219a27f1cb44cd7e4c53dea764e25377cf94c",
+    "MP030/s11/source_attention/selected.pt": "b6ba2a6c9e4f681d07e3c672e675bd53a970a91bd4ffb8e6857cfe1b4c7c3d72",
+    "MP030/s11/source_attention/result.json": "c286bbe395327ce8f7abae0ac2273564fb1dfeeb98fa83bcef576f8ab11565bb",
+    "MP030/s11/source_attention/selection_predictions.npz": "342f210660f93b5662ae4a71df4b2e10f1ead7f5938adfd74949d95a9137b892",
+    "MP030/s11/source_attention/history.json": "a194e755d483ea61bb58debe22277835d72840f7febd625140b793324c0dd67f",
+    "MP030/s11/source_mlp/selected.pt": "2ef08b088a2ed0f25b353c40dbb9f1586d440aa4135fdaa8df619b5d760182b2",
+    "MP030/s11/source_mlp/result.json": "0760777391a3d08dbf23d5384393482d256a15c7fa0e7b155a09d2aa67e8db6b",
+    "MP030/s11/source_mlp/selection_predictions.npz": "83304e23d3575735d63ff4b2795d8673220947599a4ae96e7959da2eef71b5dc",
+    "MP030/s11/source_mlp/history.json": "24cad4650a865fd543c8a850fcad9db479203f733a99bdd02f47a30e39fa5e1b",
+    "MP030/s12/attention_scratch/selected.pt": "ddf06f31e2d8172e77bd0c49834e7b022ef368cd8c325defb4b83eeb160881be",
+    "MP030/s12/attention_scratch/result.json": "b804054b29aea1ff472511b39fa168712309fdb66012b8894c89fb87ac76fad1",
+    "MP030/s12/attention_scratch/selection_predictions.npz": "5d71c192dd0165e1f728cb38afec03ce697a90c57225d32cc3af969135fb5372",
+    "MP030/s12/attention_scratch/history.json": "2b7cef8a6121b221bc8f20a6a59a413acacf820f437476db6f06529e5f98f328",
+    "MP030/s12/attention_transfer/selected.pt": "cfb309ad80930ff4a8735b2cba02463d91539899ad8d5a837740211216c6a5a8",
+    "MP030/s12/attention_transfer/result.json": "f31e4c5f950b286210eea9f35b08964c5c5dcccb060fef367e7453dbe3a9f133",
+    "MP030/s12/attention_transfer/selection_predictions.npz": "8f03f2169fe1915f742184a867cb8bc035783ef3dda51e2397692da65ce9902b",
+    "MP030/s12/attention_transfer/history.json": "9035787f89346d272c359193b0f0220041cb9c987bd499d3b43e7de57d626038",
+    "MP030/s12/mlp_scratch/selected.pt": "ca50abb5017154d07f50b391f5ba7a4a3fb1c6b382d5b6cd2f7ca1d072d6ff85",
+    "MP030/s12/mlp_scratch/result.json": "0fe7c6db3d6745747d1bb45c86d829a50f16b886eb17adbd30fe8831cd39a887",
+    "MP030/s12/mlp_scratch/selection_predictions.npz": "cc144bc010683d3442e44ee0c3f12e83a43454fb74ea2232a52bf393413af01c",
+    "MP030/s12/mlp_scratch/history.json": "2b7765137fcecce9c11b3f2d738cbe8b53b278be24f01fd8c485868244f81761",
+    "MP030/s12/mlp_transfer/selected.pt": "e277b1c93df2a44b3d50559abc848d2d21d714f596df884230a7a385aafa9d42",
+    "MP030/s12/mlp_transfer/result.json": "4a760d409e5797127fb977720385c17f3d8eea91c896af1082b14a5402c1e94d",
+    "MP030/s12/mlp_transfer/selection_predictions.npz": "1eba7dac3fd1cacaaeb2a343b4b22cfcf1b0b2f26f2b9c9892d6fb57f69a1491",
+    "MP030/s12/mlp_transfer/history.json": "a9fcca7c86e3f016786907d7b65531b12c8fb16bcd871f7af26a82aa4dc9d7ec",
+    "MP030/s12/source_attention/selected.pt": "29300ad7cc64239f65e1192f0d1541b4c76559132004ac16e44b3ff7f89e1212",
+    "MP030/s12/source_attention/result.json": "d53043121edb57645bb1eaea2d3bb467e27462c066da2f848e4853ed5cada864",
+    "MP030/s12/source_attention/selection_predictions.npz": "2cad22d35ef62ae192aa1104932f0c32f53c3d837c7b4273323b69e81f8931cb",
+    "MP030/s12/source_attention/history.json": "bb89b212a21135144f1fe2cedd094e1ccd746ddaca5ae60dd6c465f0fca76d25",
+    "MP030/s12/source_mlp/selected.pt": "01972a373f707cf7627aff12c1c3d7ad03c20086a9b6ddd5100943a566af4d0b",
+    "MP030/s12/source_mlp/result.json": "38c6c2c57bb9ffd9b34107c4ad9a863c383367aeba3147ab595b41e493768bb9",
+    "MP030/s12/source_mlp/selection_predictions.npz": "a05a403c6b87aa4d7773f5835c724b34338ee70dbce1e86a0c8e6f1bed3e520f",
+    "MP030/s12/source_mlp/history.json": "be06af5305c19a9c1cdbd39a41601c5b7e5ca7802124fcfcb8ce0a72ff8ed311",
+    "MP032/s10/attention_scratch/selected.pt": "c8aaf3b39f727e425b0af6878fd1a4d2c6931be069b055054971e3960f941fb2",
+    "MP032/s10/attention_scratch/result.json": "1b4ddfbee7722f8b0d156c5f6682435ab77937168fec94ab8a861e4f9ea27761",
+    "MP032/s10/attention_scratch/selection_predictions.npz": "5f07112289e532c2ad44224b7e15c32d1d270ec131420fd93a756dd85e984b22",
+    "MP032/s10/attention_scratch/history.json": "a601c32958e0f86c2d49a75ae0e2c7393622eada96313a370b71b05894f58681",
+    "MP032/s10/attention_transfer/selected.pt": "436007e51def8556517f3014e07e27a1b8eb50f450b771a98838537332217a6f",
+    "MP032/s10/attention_transfer/result.json": "9e3557850f81fa5ecc48135ee8e9779877e5eb46b00633819b31f85aabe70a0d",
+    "MP032/s10/attention_transfer/selection_predictions.npz": "065a394948b42287f85afc1a8c833b2b346839db34453793dbaac8013fc5b49b",
+    "MP032/s10/attention_transfer/history.json": "bdceea1149c6962e91294c24c20dba697e93ff7f8e645c61c1fcdefd2111f5d6",
+    "MP032/s10/mlp_scratch/selected.pt": "fb6b07bfdd3bba34942c024d3452b511d1ac3d733dd5ccf6a787d30db495768c",
+    "MP032/s10/mlp_scratch/result.json": "94e0d353d5da84be5916c737a3b5ff6afafa38fc8afef1cc2889d00075b6935d",
+    "MP032/s10/mlp_scratch/selection_predictions.npz": "fcbc9fd18d46e4065eae892fbfa6d48d7ed2566dcb69e940b1deca170bf4218d",
+    "MP032/s10/mlp_scratch/history.json": "56bc5de1d3099f3ff2b3db02bf5b8b4321c080dbc81e9598baa94b4a23bf3b52",
+    "MP032/s10/mlp_transfer/selected.pt": "ec30323c444fdfbc31e75018a2f38d996b121a7762f0e4565f3bef4cb318843c",
+    "MP032/s10/mlp_transfer/result.json": "cd8342ed9bf29be10b4aab63b6d9c16937fbbe37111b7589c049a4d75e2422fa",
+    "MP032/s10/mlp_transfer/selection_predictions.npz": "3e583032f8d0eac4e4594e86792039e207811035fc15053bd4ce4097d7eb033f",
+    "MP032/s10/mlp_transfer/history.json": "130abe1ab9a9cb0fcbf346992fda23b9fcca9650f5324ed67e7b4db03fb74ccb",
+    "MP032/s10/source_attention/selected.pt": "462151433feab86413bf14c850d5ac966b7bbda07b68c86b5f0cf112bef52f0d",
+    "MP032/s10/source_attention/result.json": "1e17e29b1ef7df53863a4764c780e3b7b0163a0bce07701acba9a54eb9f4b81a",
+    "MP032/s10/source_attention/selection_predictions.npz": "363ee8cb0ff746df428becf53fba417b1ae32c2bb55ab573ef51dab187762595",
+    "MP032/s10/source_attention/history.json": "065360cf33410d232c6301e1cdd3298ab3f004b2cef306ebddfd8cd3c07790f4",
+    "MP032/s10/source_mlp/selected.pt": "20e9ea740bcac04dd951f0ed05cdecbdd8a709610f9e6c141585483fed5d94bf",
+    "MP032/s10/source_mlp/result.json": "2dc143e0128606493c843d757c78af28b875fd64620a264ecec0559edd7ef820",
+    "MP032/s10/source_mlp/selection_predictions.npz": "be8cf525f5c470622f3e417adfdf4c5ba8607f90ff245f7196ac48d03b9568ed",
+    "MP032/s10/source_mlp/history.json": "1da34bcb2535e49e8d0a47fc6636685ae9c5b5ef5cdcd8fd7e4c7737a7364012",
+    "MP032/s11/attention_scratch/selected.pt": "45bfcc4822d6f85c67e6300495d2b8b5ef5c9d8e19ff184245399c1f887f89a8",
+    "MP032/s11/attention_scratch/result.json": "e0ef32008f95ebad0ad595b8206ce2e2ed3a33275ccfbe5b401af8067a847394",
+    "MP032/s11/attention_scratch/selection_predictions.npz": "6334443093886208567844d260f1f1cfcbf7043505ab9f3ca5f5566474aa38cb",
+    "MP032/s11/attention_scratch/history.json": "b1d1ac05fa79e14ba275a64168cc8ae5f77a2340ce5c62a0ed8df1ffcbee4765",
+    "MP032/s11/attention_transfer/selected.pt": "a5ae5f6836c81aaed67da6e2783d846204fa956fdf4de7d202ec49d9196f6be4",
+    "MP032/s11/attention_transfer/result.json": "16267aa234e36d5b80207877f82350af9ad9eb4f59481dceb0ef558512e4d917",
+    "MP032/s11/attention_transfer/selection_predictions.npz": "6fe017dc929d06447f1dd2b05f7d2fa0fa5c9428e62e419e4a09cc0424c67d2a",
+    "MP032/s11/attention_transfer/history.json": "c7f203a619f321cffcfb48177c34cc42aafb2bf1a21cc2e1b257c014d907d871",
+    "MP032/s11/mlp_scratch/selected.pt": "f3e11485083d09034be7bc11c51baf6a8a7df0528a97d78183bc3f002e8b0d11",
+    "MP032/s11/mlp_scratch/result.json": "b18c98495280b7b41f9a8b46aadec7367abefd755e368ec4c88f59f53585bd54",
+    "MP032/s11/mlp_scratch/selection_predictions.npz": "8a6c96b789e2937d2fa6ea5897ecb1a49157b557530219e21d089538fdd3d0e3",
+    "MP032/s11/mlp_scratch/history.json": "37da18b39e5d6ab1e04ddc8f8dd79f48967a5bfa22b0bc998e22e92afd555349",
+    "MP032/s11/mlp_transfer/selected.pt": "9724c074ac8771650cdd1aebdc014d9ea8c0d37e027f1108f9ad1f09331a1034",
+    "MP032/s11/mlp_transfer/result.json": "85664f19a0f8fd13fdabab30d2a6f65748b8a21506160ce417b655713c263266",
+    "MP032/s11/mlp_transfer/selection_predictions.npz": "6796fe2effa6188fdff7ba39d0bf450a0a80884d08ece40b012b074b0829d998",
+    "MP032/s11/mlp_transfer/history.json": "c8e775c030d29b2acae2b16942da67faa0b3d94c568b578754401acb725d822c",
+    "MP032/s11/source_attention/selected.pt": "f068ad5916f80399f2ddd3fa19c62d82580fbb6f474a5805a393f3d614a554be",
+    "MP032/s11/source_attention/result.json": "4273a81e487053036efe5f40bf311dd3f806209cb4d09caad943c5e29505fe1e",
+    "MP032/s11/source_attention/selection_predictions.npz": "5f9db877203ffe4a0834e2e876423b49706288b84936d389a2ec74d9e25b5916",
+    "MP032/s11/source_attention/history.json": "64b8747bf85e928dc68d336c34cd23eff15ae5e4d84d7a9192bad2133a161b0c",
+    "MP032/s11/source_mlp/selected.pt": "d9fc4baffa63f6cdfef9eeccbf1171abc0c7f48d254810e195be068423125026",
+    "MP032/s11/source_mlp/result.json": "502db5e175991090b891fa1efcfb7ecbd0aea41c13b40053ea9dfae6869280b6",
+    "MP032/s11/source_mlp/selection_predictions.npz": "e8b1a6d1538d799279bf5142cb8263fd868c24d2509cec1f121ef069a0297e28",
+    "MP032/s11/source_mlp/history.json": "d4b6afb68cbfef1267d486cc7aa3757411ed6babf5dee985a80fd10f2d64da74",
+    "MP032/s12/attention_scratch/selected.pt": "580ac72766d4dc845f795495a36444cde3338c81db7920ac7b539dc2ed882af4",
+    "MP032/s12/attention_scratch/result.json": "e725938d61b107e3b9c53cc0d84249afd1c96e2ddb81ef1daaabe80b4ff939b9",
+    "MP032/s12/attention_scratch/selection_predictions.npz": "beea532a30ff47d268627105635b2cde240149545335edd27609e565002b16fe",
+    "MP032/s12/attention_scratch/history.json": "97658cc79340c9aad0fb5a2c96787c20b2b439bd5cac27ca1696771ea9a3e780",
+    "MP032/s12/attention_transfer/selected.pt": "56343fa4981fe9e4e27d1392f10d5c60d1763745d36adfb38f4cba9e7ed867be",
+    "MP032/s12/attention_transfer/result.json": "9dd683fd77acc17f7555e70f2bd3f767330b506e9e0e61f92c6328ab60e91864",
+    "MP032/s12/attention_transfer/selection_predictions.npz": "969b4d5ff0d23fb2fe0a26a7955e64c2d12ee1b99eb68c93a1cf54e3e6fdc443",
+    "MP032/s12/attention_transfer/history.json": "f9c63d46b576d745df24f4213dcb548fd43a1977fad610f7b03ab9a4263c513e",
+    "MP032/s12/mlp_scratch/selected.pt": "11406559ef1af606fd0647df1d9f708059e21d9071dc001b6b4042e0e0494d9c",
+    "MP032/s12/mlp_scratch/result.json": "470c54ca260aba74b5872ddc3e7c92f6aa81a8b42a244b5ff0cc0108db0c5ba8",
+    "MP032/s12/mlp_scratch/selection_predictions.npz": "de7ded358f157f581fc3ccad7ecc5d0c10005de1d0dc6fca76e966d972082f2d",
+    "MP032/s12/mlp_scratch/history.json": "bffe2c638776ff6b99b08ce1b6948252b029183251ec659cb4928335c6c5a1b8",
+    "MP032/s12/mlp_transfer/selected.pt": "2ceea64acfa3dea4e590b8f55440e91f96d412d3be57bd8b38c2d6c37f029c50",
+    "MP032/s12/mlp_transfer/result.json": "1954e71a934789e91aa61a1fd67b24cb0deaa8ffd5cd9c1eef6e7f80566e4131",
+    "MP032/s12/mlp_transfer/selection_predictions.npz": "2eb9ed897e3e1b91e49bb5893a888eb8b6577feb2b5e4b6ef4bcf49f6a81748f",
+    "MP032/s12/mlp_transfer/history.json": "2c8a948b4a083e79deddaec130437a32e953188936ffa8ef94fb0746af46b28d",
+    "MP032/s12/source_attention/selected.pt": "f839c2f87e4c6144becd9c1fbc0a93d662e040c513e833fe3cc34ed906262468",
+    "MP032/s12/source_attention/result.json": "47fd13255c468f65d3b45db5395260ea006e9583947782af8f921ec65fbbe3a9",
+    "MP032/s12/source_attention/selection_predictions.npz": "a7cb471d00aed39db38d2ee23fb42cbaf76ccfc698e25345b069e5daa5b47d38",
+    "MP032/s12/source_attention/history.json": "d4060cb95ee56c6371e1dc22d53428641626a2914ae0b579911e478771954640",
+    "MP032/s12/source_mlp/selected.pt": "257636de30c5097af5f3fe264f22fc55f51108302d85705634f233051c1bff9e",
+    "MP032/s12/source_mlp/result.json": "19e65440931d93ee5731a0b4e0218218c57765ca5e9036feba9f9dd969e80857",
+    "MP032/s12/source_mlp/selection_predictions.npz": "f9644638d26875367f38f4cf29538cb8a1cefc47bc5f41c21697a98487b8e75a",
+    "MP032/s12/source_mlp/history.json": "7d831bd7a8fe107d521e6c28aa7b9c441d04b9b8786be2899959549e9106df69",
+    "MP033/s10/attention_scratch/selected.pt": "abea7529fbc0d802b1b91d5ba64e92f99f1685fb0d72ade1f706cc4bb8570719",
+    "MP033/s10/attention_scratch/result.json": "b8a6922afb48b66bc0d8de65a1b34b2edda2c96e0772d8852cc38cd03126ef97",
+    "MP033/s10/attention_scratch/selection_predictions.npz": "a2c1a3208ead8dc2c905bd56344f53f632c82303e3ca3869cb6799a5e466c0d0",
+    "MP033/s10/attention_scratch/history.json": "17a31b58d1c432d30e7615068621c6052db9edfa47a47ceaeb6343b8167d4790",
+    "MP033/s10/attention_transfer/selected.pt": "bf9cd39e498c257bdd71fcc32abce27769b4f9320d15164037ca3fec16279f91",
+    "MP033/s10/attention_transfer/result.json": "877a5c6f6b1b061fc11656c4bdfd80d00753e5df92e6099292a1922aa6d60a6b",
+    "MP033/s10/attention_transfer/selection_predictions.npz": "1028b5f22b5e31f0282062e40f2d4f3267ea1c3986f5d42012cdfc60464deae2",
+    "MP033/s10/attention_transfer/history.json": "977aeb62716fa09205451da4eb13d11c7e13a2aff8eb258b741b92f81c2b9498",
+    "MP033/s10/mlp_scratch/selected.pt": "184baca4010a4c317d5fcaa7f54865ab27514641f1d1a8a5d064fd1185c85df6",
+    "MP033/s10/mlp_scratch/result.json": "ec6a68db74178f0767883b1ca100296cc63e31d1e07c1892eff42f846f1c9fb4",
+    "MP033/s10/mlp_scratch/selection_predictions.npz": "324dfbb3eadffd17a52a4d0ef096742f7f9e58bf84f024281aad770ef4111202",
+    "MP033/s10/mlp_scratch/history.json": "f6e7d5e5758832133be2e5e37b9c2572449710888625da2a4cf510bb1b4c4b50",
+    "MP033/s10/mlp_transfer/selected.pt": "62233ae71e67371d4281f2ed1571b93a40e0601da73567b588a16122bab96e08",
+    "MP033/s10/mlp_transfer/result.json": "de4e2e3dfa3306fb286ac73dca6b0ba4c93c3a76cef8bb21cf1fa5e6691921b9",
+    "MP033/s10/mlp_transfer/selection_predictions.npz": "4d3b229af5de94189cceabaec254b378f17afaec15bad89e179a4ed677ecf712",
+    "MP033/s10/mlp_transfer/history.json": "443ea768e4fd0052d0d20c4b57fb6b56633a9ea6b7ac7f7242c9662790cf4544",
+    "MP033/s10/source_attention/selected.pt": "3363e024180922109c22f670d7a34162b2cb2e709f11ad32c22df122db92c735",
+    "MP033/s10/source_attention/result.json": "da4901eddf88c52d3dcfd0c6c6f0daa4e2c9605878a24c72acfba2f47f097273",
+    "MP033/s10/source_attention/selection_predictions.npz": "404cc2ed12d815f09c02cd6e57336107c6c77caab96acb281e2cc7a56a4c4a81",
+    "MP033/s10/source_attention/history.json": "0b0773910e81e08326d86da28a446991ef9511b21d93f3b8c1fb3e4b82640e5f",
+    "MP033/s10/source_mlp/selected.pt": "d21898af6593b705006689f575de7f5f9506d319e52caf4b6a59f532e4374237",
+    "MP033/s10/source_mlp/result.json": "c0cdad9834fe9829700cf472aed6b43e6280899fa7c2d644ed59e640e7cb38b5",
+    "MP033/s10/source_mlp/selection_predictions.npz": "036547bd04c8d22020ccfa4ea04afdde58e8749e0cf1a0b7832cc77b3cd4a710",
+    "MP033/s10/source_mlp/history.json": "f0e8477b79e7dfc0b35517980e52db55f80933addf72876cebe2b711a5018680",
+    "MP033/s11/attention_scratch/selected.pt": "f783a3031ba55f7afd2c38deef7af39126096eff58fd3993d04d8635fd778338",
+    "MP033/s11/attention_scratch/result.json": "25529e22a0dd965eb4a5d136b47b23f93377d16705d958e8af804e8219a6c529",
+    "MP033/s11/attention_scratch/selection_predictions.npz": "2b7058980e2aee785e5b8bed53cf47fea2fe8d32dd4149f2b91c2f5a9297d4e1",
+    "MP033/s11/attention_scratch/history.json": "a225947c4ae56d0561a72977033f57a3a66d2041d2988674f28b74f8fd73b0ed",
+    "MP033/s11/attention_transfer/selected.pt": "5223d89666d5faf94be338c8ed09448cc982af9246acc16c9862ca9e42fd8d7c",
+    "MP033/s11/attention_transfer/result.json": "c0645224ae1efd0312442709c15c2d01d2790b472dfc62d22272e12b7a95fb74",
+    "MP033/s11/attention_transfer/selection_predictions.npz": "8f0ccf24e9c898edee2ac1fbfc9caa98d83b777e077ada22bf274a4b50527a73",
+    "MP033/s11/attention_transfer/history.json": "9584e9127c5c10cce9b5b084b6a81d1965ee572ee7dcbcd9a4eb6460d8d036b4",
+    "MP033/s11/mlp_scratch/selected.pt": "6d96992e67ecc81189c439971ddea97e2848e71b08ee20f5a8cdedd0fae3cb69",
+    "MP033/s11/mlp_scratch/result.json": "c11b9cccbc4ecd35ad50e0163309f485bb410923a0c55ba6d785d243847f26f9",
+    "MP033/s11/mlp_scratch/selection_predictions.npz": "b7e59692c9a6bad480d4ec95661c8b95abae56dfa1764e1d77acbdeac429d591",
+    "MP033/s11/mlp_scratch/history.json": "56cd1dc8dc119c071c6bcdf22193e0a501b3f3e9723a66aace472f2fa54ecc61",
+    "MP033/s11/mlp_transfer/selected.pt": "b2ccf428fb30441251b229b7c6cd038a199902b2dca099f4391e29e662215676",
+    "MP033/s11/mlp_transfer/result.json": "8f0435a5de3e9b619855f6c2943876d835fb7a5d2226fbe092c2ae0359b328a2",
+    "MP033/s11/mlp_transfer/selection_predictions.npz": "2d8410a6b32cfe99c1fbf2bd40565f573efc203f4dcf1fed470e1569a65db076",
+    "MP033/s11/mlp_transfer/history.json": "0c1622bb64042a08e26119af3f9b04e1a6731fb211ed9ae61b02534dff7c9a18",
+    "MP033/s11/source_attention/selected.pt": "c0b5050eb49a38a858849b3a1f946ad042e3592f8e5e45b0fd81eeb0e2086ac3",
+    "MP033/s11/source_attention/result.json": "ee0b4c1c3d1073ee73ff9e9da552e80e2714327a742fe768c3aae7e78cec9636",
+    "MP033/s11/source_attention/selection_predictions.npz": "27f1b579642d4f3d11ccdcf47111cf12d4cf077d6fde409cb11ce695cad02c6a",
+    "MP033/s11/source_attention/history.json": "40531c79c3a19ca94cd6ad0e75b9526e9615dc693a6923c0dd57eed51220d067",
+    "MP033/s11/source_mlp/selected.pt": "5f398823b6ac9a2de93cae50d7bc8beba61a102d2cb2a1f16ab587a8fd43f0d1",
+    "MP033/s11/source_mlp/result.json": "b10947105ff56a1734be755dd40c701120c9f5b641f07206c17eeb78063189d6",
+    "MP033/s11/source_mlp/selection_predictions.npz": "eb9de862e7a30ee707046c805706a6428b3875a9e487e1f973ad7fb4a83170c7",
+    "MP033/s11/source_mlp/history.json": "6735f0b287c2b76a4036275f102a87ae5cb68f8f3c8fa6bb3d8222f780d5675c",
+    "MP033/s12/attention_scratch/selected.pt": "ad64ece4e2c0fbde58fe0ab0143c3f061ac1a6f76263b5db8c7a4bf675a73196",
+    "MP033/s12/attention_scratch/result.json": "3dcc99675ee4de295fd342ffaaa3f322200206c41ae5b726a3aba9be95bcf86a",
+    "MP033/s12/attention_scratch/selection_predictions.npz": "f639b1b504131a139183e79deecda9aff20b955261881eaa49871e826b8d44f4",
+    "MP033/s12/attention_scratch/history.json": "971e5a8efc96e34837b9aa46f2f024aa900284175c66548af2c039bb5dfb331c",
+    "MP033/s12/attention_transfer/selected.pt": "8ef6a0b815583110522dede4549279ca95da23d50c8ad4f496e9ff04b8a9068d",
+    "MP033/s12/attention_transfer/result.json": "725fde2ff61bf2759a3786a77fa6224dfb5f60c65c5063e0c7c789e7e43d8a1e",
+    "MP033/s12/attention_transfer/selection_predictions.npz": "8090e9dd82b79fa48260901ad2865f7f07e89fa4f8f6cd4dfc3d3ca30a52f2c2",
+    "MP033/s12/attention_transfer/history.json": "cf03afe43aa862b5c20812d3a386d0288401f0f6deb590dac3d14d180d9688b2",
+    "MP033/s12/mlp_scratch/selected.pt": "0066ce221f6a3bc1435bfd483dab6a443283930407702394fe7ca44e4c817c99",
+    "MP033/s12/mlp_scratch/result.json": "28037335aa1692219c9a162983598cb6d3a9d37bdd062c464409af5465b1c910",
+    "MP033/s12/mlp_scratch/selection_predictions.npz": "0a8b7f36a4d6a283bc79d72c9599357e7288b3494738f2831328cb5710db3afc",
+    "MP033/s12/mlp_scratch/history.json": "909fa48fa02145737e8717ad4f5623730c754d606b2395f9e756a033689b8218",
+    "MP033/s12/mlp_transfer/selected.pt": "664c4b5b7cf9710c44c5305026a475681360fe535e1963cbd0685817d74ca183",
+    "MP033/s12/mlp_transfer/result.json": "8d3b496b989711b4f3d1d405d9dab1415c2fec6fa1c35eb70331f0b5c05e039b",
+    "MP033/s12/mlp_transfer/selection_predictions.npz": "49f384c56747977618fb59ad57a5654030e10634a41e89b681c64457b3724552",
+    "MP033/s12/mlp_transfer/history.json": "a006d6d5bfc5825a20a0f10f963d1678b07e4b90f7bca1534d7e2b593ef72002",
+    "MP033/s12/source_attention/selected.pt": "de2da143287ffbf4bd2072d54c25f7e9523c604815dc077e9cff45cdc049bb74",
+    "MP033/s12/source_attention/result.json": "876698ec66ec1ef16cfefd4059974cc5f85eeb8fe2a5b29d6eacbca136a9310f",
+    "MP033/s12/source_attention/selection_predictions.npz": "2ba932288e2a53a83d5bb195e12e932417977c7d0baed7e96a9738fc8cd498fe",
+    "MP033/s12/source_attention/history.json": "8b66ba650fbb793254c4d467957ef2eb8ed2a8426f9cff1da614128b3b699b44",
+    "MP033/s12/source_mlp/selected.pt": "bf8dcdd20e94445d7ce29a797e55dea78ca5097cf499dfa018dcbb977e29cdc1",
+    "MP033/s12/source_mlp/result.json": "713b850323dfa461b9ea5ca31507a3b773bb24fdd4603c50e58baf0a8b4ebda9",
+    "MP033/s12/source_mlp/selection_predictions.npz": "8a31e4058cc75bbc224aff1bb2e9bd801e5ef7eb07a94ee56bc6fce41dcfe501",
+    "MP033/s12/source_mlp/history.json": "edf637dd3c0f2874b17512cb630e93c62331425f174212056f47b261c359b99c",
+    "MP034/s10/attention_scratch/selected.pt": "632fee68c21bd4a2467107d2b62c3f9e221307a8e4abe5c08de36205259a2bcb",
+    "MP034/s10/attention_scratch/result.json": "a365ca67bca80385be03a0dc8b8dcbad8dac138510962d67be9939c2c7d202cf",
+    "MP034/s10/attention_scratch/selection_predictions.npz": "0ce554a4ee91143e02ddfec627fce16c4e0e659a49018f2bd72d9641ee9eecc0",
+    "MP034/s10/attention_scratch/history.json": "6165d97aeea087df2a7fb2110ce10feb13946e6469b2a4e5fe65396f9556580e",
+    "MP034/s10/attention_transfer/selected.pt": "6c905f596140727fdf9bba3c2e10778695217a0da5f5d5fed1aaed9d379850ee",
+    "MP034/s10/attention_transfer/result.json": "a7483c88aefe65dfcbd98f867c28d37247d57d2be1a22b4859e1f4900cf2f421",
+    "MP034/s10/attention_transfer/selection_predictions.npz": "4b30b7798566746cb068613a26bbdc7b5e675cf2352f439ed0e3cfb85c68cde8",
+    "MP034/s10/attention_transfer/history.json": "724f70011c63de5f81896a1d9e4b7e2323d56412da2424a204fe0ea42b3ddde1",
+    "MP034/s10/mlp_scratch/selected.pt": "5344a2bebee2d81f38bf583a4a143640260477d5f7cde287e3929e59177172eb",
+    "MP034/s10/mlp_scratch/result.json": "0ece99e7544d1471953816457d386f8403a13989391cb807999bbccfbac7ceb0",
+    "MP034/s10/mlp_scratch/selection_predictions.npz": "22d8bde78c8ecda42757cb382dc51c0a336d28b68d1a2e08a5bb7142ef166304",
+    "MP034/s10/mlp_scratch/history.json": "3217e591e3465137939d690b8043526b6d2ac33435ba02085528fc69b6d77dd1",
+    "MP034/s10/mlp_transfer/selected.pt": "a05c07a2efc91b533ceaa776182f67806b5c513b12ea7f10a21f6e82547a7850",
+    "MP034/s10/mlp_transfer/result.json": "d063a96772300d3ad70b8263f756973594fb1809327ecfe48c18458faeab6cc0",
+    "MP034/s10/mlp_transfer/selection_predictions.npz": "6efb543413b522883c12d43b5c93e135dd59571e3bb478b7d3a2801edd21560d",
+    "MP034/s10/mlp_transfer/history.json": "2028dc1130b3f94e007a685971b01d50964fab145e99d45e803eed2bfe58cd0b",
+    "MP034/s10/source_attention/selected.pt": "8391e3f2c23cb43f10bae9544523b82b8790e4432a49968b058b7cc5d5b80a5e",
+    "MP034/s10/source_attention/result.json": "9289553b379f848e9d6492efc83ee2dde3f57e84b8a6dca10e33b883b0e2a334",
+    "MP034/s10/source_attention/selection_predictions.npz": "81d5c98ed3aa53b8034e8db7e308ba3883836106ba386a805c55a670bc795049",
+    "MP034/s10/source_attention/history.json": "ceaa497943eb8f52a8e6c2fe02177817f2a719ab46528d8ec9115fab5a914b55",
+    "MP034/s10/source_mlp/selected.pt": "18f86b6c1bd07e9a3520cbdeb670a3eb7f911b856824d4a6f77a372f6c7e0c1b",
+    "MP034/s10/source_mlp/result.json": "6c3490e18147be9bef7ce63d5b95536f343f91dc403c67528a9088ba78d34770",
+    "MP034/s10/source_mlp/selection_predictions.npz": "d6aae7bc845a6ed2683cd0edbe8614037a22546e362cc9072af0eda6f381fab8",
+    "MP034/s10/source_mlp/history.json": "7856bde9ad82bb97c1be5898cb4b5d66e6107c8a73026dd046afdd2badf67a20",
+    "MP034/s11/attention_scratch/selected.pt": "3124cd2d6f365a5409a08666de9fc02a6c8c127f15f8302a41bdc41f5cc5be27",
+    "MP034/s11/attention_scratch/result.json": "227b3b03eb65f8cac01ccf8b1ce02fe4741a326a86c53497cd900bbe5d9a75a6",
+    "MP034/s11/attention_scratch/selection_predictions.npz": "24ebf991722035c2f11b167b6ad3ee5bb470bb6bc2e3a132bba31c324f96ebeb",
+    "MP034/s11/attention_scratch/history.json": "07e5843c733d1d33de5134b2caed026d7dbd5d1a64bb58000ce435144cd89017",
+    "MP034/s11/attention_transfer/selected.pt": "12a76b25a7ebe925a815281a592a40b417c2fdaf3e0f46f70988a3b18bb85328",
+    "MP034/s11/attention_transfer/result.json": "06181108ba63c5388dadb1b54c3f8f665458ebb70a1b5c2149b3707a0c39a3b0",
+    "MP034/s11/attention_transfer/selection_predictions.npz": "60a1131ee2b85ca46af99ad99481e65b805ef866b955125488a16bfed59c39a0",
+    "MP034/s11/attention_transfer/history.json": "4263485a193c4eb8903d602b77faa0fe94ba91b2f17276071829fa672f09bd2f",
+    "MP034/s11/mlp_scratch/selected.pt": "160a2399cd0100b708dab682bc31c3cb4545fc2eca2517ab0834b4b049f76e2a",
+    "MP034/s11/mlp_scratch/result.json": "a0905920412b9c747af3cffbed2b2304a07da5457e6c136e9044c51d45daef96",
+    "MP034/s11/mlp_scratch/selection_predictions.npz": "d975b71965bb7c2dc7a7a582f6084b274868a78ea5b34e62aa8de4d385afc517",
+    "MP034/s11/mlp_scratch/history.json": "526533663c4353532049e5096ec252ff46850119c2e85e8916b832562261bbc7",
+    "MP034/s11/mlp_transfer/selected.pt": "85e4b5e46808cc50888b5c9ee08fe0abaceecbaacca44bf34c3da6aed41f1297",
+    "MP034/s11/mlp_transfer/result.json": "179311d697a8939d6c47fe7b96732d2735fa3489999898717f7d3e3f0dce334c",
+    "MP034/s11/mlp_transfer/selection_predictions.npz": "28a63efd290126a25fbd07022384bff7753490869dab2507b1ad7e70a344a3e2",
+    "MP034/s11/mlp_transfer/history.json": "c38194d59042370542469abbc17923d94409869df153a51a4ea0fd69772ff363",
+    "MP034/s11/source_attention/selected.pt": "c20e2e517152479a00688d4517f92956e710c7805f3206694bccd2815948e5ea",
+    "MP034/s11/source_attention/result.json": "07fad78dd32579b01ea5546718653c53f18c242b42b1e95a919c5244e9a03816",
+    "MP034/s11/source_attention/selection_predictions.npz": "f7420051065477706404b7c17c0b829469eacf48a8f6e0aab2d024a6fce5d32e",
+    "MP034/s11/source_attention/history.json": "fe54543302e99c8d3bc7c7fe4de8c480b2fbc14ef94a6890854afd8a69ab9d10",
+    "MP034/s11/source_mlp/selected.pt": "84d2c0faecf9bbc4fe9ff380c478b07a8911e9d3d3970796ba291cc0d92578c9",
+    "MP034/s11/source_mlp/result.json": "be725e6cb4b73800deb3ce2ee4b2eebbe224f9ef05020767c054d3e74eb68b1d",
+    "MP034/s11/source_mlp/selection_predictions.npz": "fa4790a6f10c9a1a01ff9248a4e9ad9778f172d28a78b66eef1a466c1a9c2674",
+    "MP034/s11/source_mlp/history.json": "d0980870a2f5ac4d5695906ec47bf77dc5a369057af9a1970cccac4389a63754",
+    "MP034/s12/attention_scratch/selected.pt": "febdc576dd504795f00acbdb43ed91ec0e34827ea3f0c5ba66cd955002f93aff",
+    "MP034/s12/attention_scratch/result.json": "0620d624ddb6978b36b232669117452f174fc0c1223f876817a802766ca38e71",
+    "MP034/s12/attention_scratch/selection_predictions.npz": "ad1e3237933f7ffe4acda7572694add49fa8ec77568306f0ca115cdd0f41e752",
+    "MP034/s12/attention_scratch/history.json": "13e6c69cb11043e720a0796f0bfaf30a830eb8f68b66a65ccedcf1b3e1e6186b",
+    "MP034/s12/attention_transfer/selected.pt": "f3afa5a3a4ce182029e5e13fa99c4d965234b31543fa082e0efb21d6421dccd8",
+    "MP034/s12/attention_transfer/result.json": "763f919cde06cc9ea11c2c721cdd9377fb51bc1ed8943adca9e8d1a82b93cda8",
+    "MP034/s12/attention_transfer/selection_predictions.npz": "849c3bb587ba879df31f7348a7973f2a65480800c2393877a4c0c0f0fb9b0885",
+    "MP034/s12/attention_transfer/history.json": "d566b7df3cca39978f99b736c00438d9a039f610ae251753369e263632bf0a72",
+    "MP034/s12/mlp_scratch/selected.pt": "223475c00bb0596d44c7d326a2d2f4323ad67de8782380de98abd5c4054ab9c0",
+    "MP034/s12/mlp_scratch/result.json": "291c01cc34d6e9c9fe17f80969616f9632a666512c6823ca8a0c8a5a06d3d3dd",
+    "MP034/s12/mlp_scratch/selection_predictions.npz": "42ee85726bc853686aea4cf7a4c829e81ef8588ddf6b24c32723f4ead9f2d001",
+    "MP034/s12/mlp_scratch/history.json": "1753fde82af17c156d3bc0670da47d49c513a7e87c3d8432787063fff3a685d3",
+    "MP034/s12/mlp_transfer/selected.pt": "67c5a5b88cdcbf2b381aff3caa3ee77e6353388a5a990326c050cb5c2f843bbc",
+    "MP034/s12/mlp_transfer/result.json": "d5de8616b330655609f8cc0c891e167e8ed70a6a5705489ffe794dd568eac699",
+    "MP034/s12/mlp_transfer/selection_predictions.npz": "b69ae4690f8460aebc77843ce589af33fafd9b2e1efdfad5d25a2bb4f7869422",
+    "MP034/s12/mlp_transfer/history.json": "4ac67d4c15cafec5c5255597919f5700195b75dad7bca16af68268b9108e6564",
+    "MP034/s12/source_attention/selected.pt": "b45a5cdf7ac5818cfec01f33c0bbc96ad39d3c86b8720df65d506616892af65e",
+    "MP034/s12/source_attention/result.json": "e50dfa12acf689feeb94576cd0c231612a7820270823749ea08411e8dd57d567",
+    "MP034/s12/source_attention/selection_predictions.npz": "c1b9c1499db88e59bad8f274dcb9170598df812154b0ee04bdeb97b02521c152",
+    "MP034/s12/source_attention/history.json": "7d5ff7a65597e56d87c31076329836c2150c6069f6d2edc69fcaf1ccbfe87681",
+    "MP034/s12/source_mlp/selected.pt": "b960396626dbd100823c07aef25f90ac492049849ce662cd8261a4939fb8fcb7",
+    "MP034/s12/source_mlp/result.json": "ff1baf61c9ce7e3067b4b50153fbe1f390f7394c84250d508603e8503d2a1c28",
+    "MP034/s12/source_mlp/selection_predictions.npz": "997390c059b94acd0c020b3f19bb99239358bc3fffebdab4bf56fe7293234e5a",
+    "MP034/s12/source_mlp/history.json": "fadbc0c9ac7a23abbeedf470d6e30cbb5877e724b2cbdf29bce6a99efe324c12"
+  },
+  "selection_scores_checked": 3000,
+  "matched_orders": true,
+  "later_scored": false
+}

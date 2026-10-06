@@ -1,0 +1,98 @@
+{
+  "created_utc": "2026-10-04T06:42:48.809265+00:00",
+  "question": "Do the archived shared transformer and matched static-query MLP make complementary errors that simple earlier-fitted blending rules exploit?",
+  "scope": "Exploratory development-only temporal replay. No new base-model training or inference; no archived final later predictions read. These mice and development intervals have been historically inspected. Not independent confirmation or a pristine test.",
+  "experts": "Original shared AA transformer and shared MS static-query MLP, fixed seeds10/11/12. Do not choose alternate attention variants using outcomes.",
+  "split": {
+    "MP030": {
+      "checkpoint": [
+        0,
+        225
+      ],
+      "calibration": [
+        257,
+        450
+      ],
+      "score": [
+        482,
+        675
+      ]
+    },
+    "MP032": {
+      "checkpoint": [
+        0,
+        185
+      ],
+      "calibration": [
+        217,
+        370
+      ],
+      "score": [
+        402,
+        555
+      ]
+    },
+    "MP033": {
+      "checkpoint": [
+        0,
+        131
+      ],
+      "calibration": [
+        163,
+        262
+      ],
+      "score": [
+        294,
+        393
+      ]
+    },
+    "MP034": {
+      "checkpoint": [
+        0,
+        131
+      ],
+      "calibration": [
+        163,
+        262
+      ],
+      "score": [
+        294,
+        393
+      ]
+    }
+  },
+  "checkpoints": "Reselect one epoch0..24 per family/seed using only the first third of development predictions; minimize equal-mouse mean bounded normalized MSE. Ignore original checkpoint choices and full-selection ridge denominators. All expert updates used earlier training data and a fixed nonadaptive schedule.",
+  "fit": "Middle third after32-window gap fits all blending rules. Last third after32-window gap scores once after all choices locked. Previous-window context length32; no crossing contexts. Three seed comparisons per mouse, no averaging seed predictions.",
+  "methods": "Left MLP, right transformer, per-mouse earlier-chosen parent, fixed50:50, global convex scalar, per-session convex scalar, input-dependent sigmoid gate. Scalars use exact weighted least squares then clip0..1; ties choose0.5. No alpha grid.",
+  "gate": "10coefficients:intercept; six calibration-standardized features [left prediction,right prediction,absolute disagreement,mean activity,mean across-neuron std,mean absolute consecutive activity difference]; three session indicators. Continuous z scores clip+-5. Minimize equal-mouse MSE divided by left-expert calibration MSE +.01 sum(nonintercept coefficients squared). L-BFGS-B300iterations,one start from scalar blend,ftol1e-12,gtol1e-8. No label available at prediction time. Fixed recipe,no hyperparameter selection.",
+  "control": "Two-MLP pairs use seed10+11,11+12,12+10 under identical rules and feature access. Six unique base models reused. Both combined systems have two similarly sized experts; this is similar nominal inference capacity, not a hardware benchmark. Seed pairs overlap and are not independent replicates.",
+  "primary": "Static complementary benefit: global blend beats each parent by>=2%equal-mouse mean relative MSE,>=3/4mouse wins,>=8/12paired seed wins each. Predictable routing benefit: gated hybrid meets same threshold against both parents,50:50,global blend,session blend,and gated two-MLP control. No posthoc replacement of these criteria.",
+  "secondary": "All MSEs,per-mouse/seed changes,calibration versus score weights and scores,error correlation,which expert is better per window,and true-target hard/convex oracles. Oracles are hindsight lower bounds,not deployable models. Compare global hybrid versus global two-MLP blend. Leave-one-mouse-out means are descriptive; no p-values or significance claim.",
+  "budget": "Zero neural fits. Six tiny gate optimizations (two pair types x three seeds),six global scalar fits,24session scalars. No grid extension.",
+  "hashes": {
+    "experiments/2026-10-04_hybrid_complementarity/run.py": "74b2321946691042c1dc497bb37510f6d655a5b961e07821bf7960474d69e099",
+    "experiments/2026-10-03_shared_behavior/run.py": "5ea806f0911fca4eeb890a90dcc055b2042dae37d167c18280cdd72ccce29ec5",
+    "experiments/2026-10-03_shared_behavior/models.py": "568205d0f030bd088bfc2f7f62ab61425e04a8e93b975a9796239e74bccf2c12",
+    "train.py": "0361d216cd75616ed07501a019f4837f7c0acf57f0cd2edecb0fc6728064d7f9",
+    "model.py": "2297af73466e1c85ee5774dc10a44a2a03f7a6f48919a111b43a8cf6d7d86a40",
+    "data.py": "894d5aea4dd0ce6a139178b66b1f8a5538f1c4f015081153d4c11fa55d78b7bf",
+    "experiments/2026-10-03_shared_behavior/shared/attention_s10/selection_predictions.npz": "1574e64a88023f925fd3b030536820b0974005015b237a5a1b2b06b3a79678fc",
+    "experiments/2026-10-03_shared_behavior/shared/attention_s11/selection_predictions.npz": "126f2d9b8e12a8f2f6f753ee77060d3920a8a574328a6a1567cbb13b9120e301",
+    "experiments/2026-10-03_shared_behavior/shared/attention_s12/selection_predictions.npz": "2eed5585ea5fda7444d7daebc2d3a1266075ff89a74013325ea115eaac5aab57",
+    "experiments/2026-10-03_shared_behavior/shared/mlp_s10/selection_predictions.npz": "35bb911bf671d263f20b3c139e9ae4ef453142db481836fae53ed07927aca737",
+    "experiments/2026-10-03_shared_behavior/shared/mlp_s11/selection_predictions.npz": "3ffc08cb1a163f5e7d5172b52b32b1904b35288efc2b9e0ad8a4529a86f71540",
+    "experiments/2026-10-03_shared_behavior/shared/mlp_s12/selection_predictions.npz": "5211ce29327804f6101c861c5d29c86a7d668e858fc129842fa03fc572364e5d",
+    "experiments/2026-10-03_dynamics_baseline/MP030/selection_x.npy": "c39113dc5cbe9749acc55d5a12bb4e8ea2f73d474fb691c0e38b493c961292ef",
+    "experiments/2026-10-03_dynamics_baseline/MP030/selection_y.npy": "80b26de2780aaf5484431383bbae200146113bea9c0e31fc45b67df9f2ea6c91",
+    "experiments/2026-10-03_dynamics_baseline/MP032/selection_x.npy": "6a74a6a51441486496b028eaf1548ba57c9ed9a5f54a39f06e23e224f23e11ba",
+    "experiments/2026-10-03_dynamics_baseline/MP032/selection_y.npy": "9e71c50a3f4df98ae7bba1a9bba553526e42bf7aed404a44dc0891fe2042fea5",
+    "experiments/2026-10-03_dynamics_baseline/MP033/selection_x.npy": "d185cc0c39b4496a2d3101a8c22337476c88d1f05ffb42b44c59031a665c1acc",
+    "experiments/2026-10-03_dynamics_baseline/MP033/selection_y.npy": "81a66b745ecf99d549d3bb8ee867678c4d25292179869e4a03742028b09c360c",
+    "experiments/2026-10-03_dynamics_baseline/MP034/selection_x.npy": "4c8f2438afe43698795f7699d68e867afe26ddfac2c254eecace0a0ca129d20e",
+    "experiments/2026-10-03_dynamics_baseline/MP034/selection_y.npy": "33306d2af1f937ec3e0996d4cb6897981e345070c747a453f706b40e3457ccfc",
+    "experiments/2026-10-03_fair_comparison/MP030/metadata.json": "152fca303e022803e92c127c36c10983f459d562cb700bfd9bf8a73b94888121",
+    "experiments/2026-10-03_fair_comparison/MP032/metadata.json": "5f9f1394dab67398548bd1c2f19b4af918d02c1713fb0bec79baae6c0f94ea6e",
+    "experiments/2026-10-03_fair_comparison/MP033/metadata.json": "68d39cfbffde3cdfde0b255ae7fc6092e97254c86890b52fca856fafdb98722c",
+    "experiments/2026-10-03_fair_comparison/MP034/metadata.json": "c29d80d72630b4e6abc58e77914cf58ba0da3940213c3925d0c09d8f01381afe"
+  }
+}

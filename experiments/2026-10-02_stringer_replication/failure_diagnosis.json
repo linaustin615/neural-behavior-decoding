@@ -1,0 +1,29 @@
+{
+  "scope": "Posthoc diagnosis from saved preparation caches, histories and evaluation predictions only; no raw-data validation repeated, no models refitted, no checkpoints reselected, no change to frozen outcomes",
+  "publication": "User explicitly requires significance before publication; release preparation/publication is paused pending sufficient evidence",
+  "speed_summary": {
+    "units": "supplied dataset speed units; no new physical calibration claim",
+    "target_samples": "each frozen split starts at its inherited target offset31",
+    "MP030": {"train_mean": 1.301051551535437, "selection_mean": 0.21698563965481382, "evaluation_mean": 1.8591607017246945},
+    "MP032": {"train_mean": 0.7136536153471753, "selection_mean": 0.08590946515683057, "evaluation_mean": 0.046951535664525486, "train_std": 2.2589611860135497, "selection_std": 0.21096826553078876, "evaluation_std": 0.17047323426655722},
+    "MP033": {"train_mean": 10.706409389341779, "selection_mean": 9.965174373575076, "evaluation_mean": 5.564051690679875},
+    "MP034": {"train_mean": 10.733891218862171, "selection_mean": 2.592288190044021, "evaluation_mean": 12.092935187459432}
+  },
+  "verified_findings": [
+    "MP032 seed10: all three untrained models predict below the zero-speed boundary for100% of evaluation examples; clipping makes their bounded predictions exactly zero speed",
+    "MP032 seed10: all three untrained selection MSEs=0.010252593365796592; best trained selection MSEs functional0.23905760943959212, random0.06458862262101153, global0.0511344545193562",
+    "MP032 seed10 functional training loss falls from0.7818991686206814 to0.15951628832187792, yet no trained selection checkpoint beats epoch0",
+    "MP032 seed11: untrained evaluation predictions are clipped for83.03%/84.98%/84.86% of examples in functional/random/global respectively; all select epoch0",
+    "MP030 seed10 random/global: selected epoch0 models are clipped to zero on100% of evaluation examples; functional selects epoch15",
+    "MP033 functional final training loss is approximately0.197/0.181 across seeds, versus0.111/0.100 for global; functional held-out mean error is55.29% higher than global",
+    "All four recordings show changes in speed distribution between chronological intervals; MP032 selection/evaluation have substantially less speed variation than training"
+  ],
+  "interpretation": [
+    "Quiet selection intervals can favor zero-speed prediction and reject models that fit running episodes in training; a reduction in training loss is insufficient evidence of generalization",
+    "Nonnegative clipping is physically reasonable but can make poor untrained raw predictions competitive; explicitly showing a zero-speed heuristic exposes this effect",
+    "Epoch0 selections partly drive the large MP030 functional advantage; the current comparison combines representation, optimization and checkpoint-selection behavior",
+    "The frozen grouping method is unsupervised static correlation clustering, not a direct objective for speed-relevant, lagged or state-dependent relationships; restriction may discard useful combinations, but that causal explanation is unverified",
+    "Four independent mice cannot attain two-sided p<0.05 under the frozen exact sign test even with four consistent wins; current2/4 wins also fail practical consistency, so sample size is not the only issue"
+  ],
+  "next_direction": "Clarify the claim requiring significance, then design a development-only baseline/selection study and a prospectively specified confirmation with adequate independent recordings. Do not repeatedly tune on these now-inspected evaluation intervals or relax criteria until significance appears. No new experiments authorized by this diagnosis-only question."
+}

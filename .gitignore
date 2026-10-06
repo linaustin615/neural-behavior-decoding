@@ -1,0 +1,34 @@
+#publish only explicitly listed root entries
+/*
+!/.gitignore
+!/.gitattributes
+!/README.md
+!/LICENSE
+!/NOTICE.md
+!/requirements.txt
+!/decoding/
+!/docs/
+!/tests/
+!/research/
+!/portfolio/
+!/experiments/
+
+#exclude raw recordings, prepared arrays, checkpoints and local caches
+*.npy
+*.npz
+*.pt
+*.pth
+*.mat
+*.zip
+*.nwb
+*.h5
+*.pkl
+*.pickle
+*.DS_Store
+__pycache__/
+*.py[cod]
+.venv/
+.runner.lock
+
+#retain the compact public prediction bundle
+!/portfolio/data/predictions/*.npz

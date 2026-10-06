@@ -1,0 +1,882 @@
+{
+  "passed": true,
+  "utc": "2026-10-06T16:52:25.902660+00:00",
+  "neural_fits": 72,
+  "ridge_solutions": 168,
+  "independently_recomputed_scalar_errors": 693,
+  "checkpoint_predictions_checked": 17024,
+  "raw_input_alignment_samples": 2688,
+  "paired_batch_order_hashes_checked": 4032,
+  "optimizer_updates": 322560,
+  "training_presentations": 20643840,
+  "selected_epoch_zero": 0,
+  "original_raw_download_integrity_checks_reused": true,
+  "all_choices_locked_before_test": true,
+  "source_prepared_checkpoint_hashes_verified": true,
+  "parameter_changes": [
+    {
+      "job": {
+        "regime": "independent",
+        "mouse": "TX103",
+        "role": "optimized_attention",
+        "seed": 401
+      },
+      "selected_epoch": 2,
+      "readin_change": 2.623234510421753,
+      "temporal_change": 11.478171773254871,
+      "head_change": 2.1085317824035883
+    },
+    {
+      "job": {
+        "regime": "independent",
+        "mouse": "TX103",
+        "role": "optimized_population_mlp",
+        "seed": 401
+      },
+      "selected_epoch": 1,
+      "readin_change": 2.0703136920928955,
+      "temporal_change": 10.616191511973739,
+      "head_change": 2.0228078374639153
+    },
+    {
+      "job": {
+        "regime": "independent",
+        "mouse": "TX103",
+        "role": "default_attention",
+        "seed": 401
+      },
+      "selected_epoch": 3,
+      "readin_change": 2.065230131149292,
+      "temporal_change": 4.047961488366127,
+      "head_change": 2.3625944945961237
+    },
+    {
+      "job": {
+        "regime": "independent",
+        "mouse": "TX104",
+        "role": "optimized_attention",
+        "seed": 401
+      },
+      "selected_epoch": 2,
+      "readin_change": 2.866671323776245,
+      "temporal_change": 11.18575082719326,
+      "head_change": 1.92797193210572
+    },
+    {
+      "job": {
+        "regime": "independent",
+        "mouse": "TX104",
+        "role": "optimized_population_mlp",
+        "seed": 401
+      },
+      "selected_epoch": 5,
+      "readin_change": 4.152798175811768,
+      "temporal_change": 16.54664082452655,
+      "head_change": 2.544833393767476
+    },
+    {
+      "job": {
+        "regime": "independent",
+        "mouse": "TX104",
+        "role": "default_attention",
+        "seed": 401
+      },
+      "selected_epoch": 4,
+      "readin_change": 2.4365384578704834,
+      "temporal_change": 3.3383063226938248,
+      "head_change": 2.290423580445349
+    },
+    {
+      "job": {
+        "regime": "independent",
+        "mouse": "TX56",
+        "role": "optimized_attention",
+        "seed": 401
+      },
+      "selected_epoch": 1,
+      "readin_change": 1.9912002086639404,
+      "temporal_change": 7.718612488359213,
+      "head_change": 1.299161498900503
+    },
+    {
+      "job": {
+        "regime": "independent",
+        "mouse": "TX56",
+        "role": "optimized_population_mlp",
+        "seed": 401
+      },
+      "selected_epoch": 1,
+      "readin_change": 2.0910699367523193,
+      "temporal_change": 8.418880338780582,
+      "head_change": 1.2053891572868451
+    },
+    {
+      "job": {
+        "regime": "independent",
+        "mouse": "TX56",
+        "role": "default_attention",
+        "seed": 401
+      },
+      "selected_epoch": 1,
+      "readin_change": 1.3261889219284058,
+      "temporal_change": 1.708908062428236,
+      "head_change": 1.1490393597632647
+    },
+    {
+      "job": {
+        "regime": "independent",
+        "mouse": "TX57",
+        "role": "optimized_attention",
+        "seed": 401
+      },
+      "selected_epoch": 1,
+      "readin_change": 1.9611998796463013,
+      "temporal_change": 7.9068655371665955,
+      "head_change": 1.1169940814143047
+    },
+    {
+      "job": {
+        "regime": "independent",
+        "mouse": "TX57",
+        "role": "optimized_population_mlp",
+        "seed": 401
+      },
+      "selected_epoch": 1,
+      "readin_change": 2.0145890712738037,
+      "temporal_change": 8.110113597474992,
+      "head_change": 1.2178195929154754
+    },
+    {
+      "job": {
+        "regime": "independent",
+        "mouse": "TX57",
+        "role": "default_attention",
+        "seed": 401
+      },
+      "selected_epoch": 1,
+      "readin_change": 1.276382565498352,
+      "temporal_change": 1.411006424576044,
+      "head_change": 1.1301880690734833
+    },
+    {
+      "job": {
+        "regime": "independent",
+        "mouse": "TX60",
+        "role": "optimized_attention",
+        "seed": 401
+      },
+      "selected_epoch": 1,
+      "readin_change": 1.9176311492919922,
+      "temporal_change": 7.191728413105011,
+      "head_change": 1.2141719404608011
+    },
+    {
+      "job": {
+        "regime": "independent",
+        "mouse": "TX60",
+        "role": "optimized_population_mlp",
+        "seed": 401
+      },
+      "selected_epoch": 1,
+      "readin_change": 1.9800788164138794,
+      "temporal_change": 8.478912554681301,
+      "head_change": 1.2911363479215652
+    },
+    {
+      "job": {
+        "regime": "independent",
+        "mouse": "TX60",
+        "role": "default_attention",
+        "seed": 401
+      },
+      "selected_epoch": 1,
+      "readin_change": 1.2526646852493286,
+      "temporal_change": 1.4966505877673626,
+      "head_change": 1.291763692162931
+    },
+    {
+      "job": {
+        "regime": "independent",
+        "mouse": "TX61",
+        "role": "optimized_attention",
+        "seed": 401
+      },
+      "selected_epoch": 1,
+      "readin_change": 1.9267786741256714,
+      "temporal_change": 9.19317065179348,
+      "head_change": 1.5242561106570065
+    },
+    {
+      "job": {
+        "regime": "independent",
+        "mouse": "TX61",
+        "role": "optimized_population_mlp",
+        "seed": 401
+      },
+      "selected_epoch": 2,
+      "readin_change": 2.7102816104888916,
+      "temporal_change": 11.74162399675697,
+      "head_change": 1.8210743721574545
+    },
+    {
+      "job": {
+        "regime": "independent",
+        "mouse": "TX61",
+        "role": "default_attention",
+        "seed": 401
+      },
+      "selected_epoch": 1,
+      "readin_change": 1.3650425672531128,
+      "temporal_change": 2.599229648709297,
+      "head_change": 1.5926582282409072
+    },
+    {
+      "job": {
+        "regime": "independent",
+        "mouse": "VR2",
+        "role": "optimized_attention",
+        "seed": 401
+      },
+      "selected_epoch": 1,
+      "readin_change": 1.9810731410980225,
+      "temporal_change": 9.330931223928928,
+      "head_change": 1.6199130737222731
+    },
+    {
+      "job": {
+        "regime": "independent",
+        "mouse": "VR2",
+        "role": "optimized_population_mlp",
+        "seed": 401
+      },
+      "selected_epoch": 1,
+      "readin_change": 2.0636229515075684,
+      "temporal_change": 9.563583550974727,
+      "head_change": 1.4122020495124161
+    },
+    {
+      "job": {
+        "regime": "independent",
+        "mouse": "VR2",
+        "role": "default_attention",
+        "seed": 401
+      },
+      "selected_epoch": 2,
+      "readin_change": 1.7194408178329468,
+      "temporal_change": 3.3068692684173584,
+      "head_change": 1.6632364909164608
+    },
+    {
+      "job": {
+        "regime": "shared",
+        "mouse": "all",
+        "role": "optimized_attention",
+        "seed": 401
+      },
+      "selected_epoch": 2,
+      "readin_change": 15.524019241333008,
+      "temporal_change": 20.571753576397896,
+      "head_change": 3.232477493584156
+    },
+    {
+      "job": {
+        "regime": "shared",
+        "mouse": "all",
+        "role": "optimized_population_mlp",
+        "seed": 401
+      },
+      "selected_epoch": 1,
+      "readin_change": 11.012660026550293,
+      "temporal_change": 17.39930902607739,
+      "head_change": 2.7391791455447674
+    },
+    {
+      "job": {
+        "regime": "shared",
+        "mouse": "all",
+        "role": "default_attention",
+        "seed": 401
+      },
+      "selected_epoch": 1,
+      "readin_change": 6.263838291168213,
+      "temporal_change": 3.322530671954155,
+      "head_change": 2.5522712487727404
+    },
+    {
+      "job": {
+        "regime": "independent",
+        "mouse": "TX103",
+        "role": "optimized_attention",
+        "seed": 402
+      },
+      "selected_epoch": 2,
+      "readin_change": 2.8189163208007812,
+      "temporal_change": 11.918191127479076,
+      "head_change": 2.3772322200238705
+    },
+    {
+      "job": {
+        "regime": "independent",
+        "mouse": "TX103",
+        "role": "optimized_population_mlp",
+        "seed": 402
+      },
+      "selected_epoch": 5,
+      "readin_change": 3.770190954208374,
+      "temporal_change": 16.029507817700505,
+      "head_change": 2.8048997931182384
+    },
+    {
+      "job": {
+        "regime": "independent",
+        "mouse": "TX103",
+        "role": "default_attention",
+        "seed": 402
+      },
+      "selected_epoch": 3,
+      "readin_change": 2.0409953594207764,
+      "temporal_change": 3.7729693204164505,
+      "head_change": 2.4372221380472183
+    },
+    {
+      "job": {
+        "regime": "independent",
+        "mouse": "TX104",
+        "role": "optimized_attention",
+        "seed": 402
+      },
+      "selected_epoch": 3,
+      "readin_change": 3.226896047592163,
+      "temporal_change": 12.762610875070095,
+      "head_change": 1.982127932133153
+    },
+    {
+      "job": {
+        "regime": "independent",
+        "mouse": "TX104",
+        "role": "optimized_population_mlp",
+        "seed": 402
+      },
+      "selected_epoch": 3,
+      "readin_change": 3.3259832859039307,
+      "temporal_change": 13.86854811385274,
+      "head_change": 2.103618102381006
+    },
+    {
+      "job": {
+        "regime": "independent",
+        "mouse": "TX104",
+        "role": "default_attention",
+        "seed": 402
+      },
+      "selected_epoch": 3,
+      "readin_change": 2.204253911972046,
+      "temporal_change": 2.919786587357521,
+      "head_change": 2.1049946900457144
+    },
+    {
+      "job": {
+        "regime": "independent",
+        "mouse": "TX56",
+        "role": "optimized_attention",
+        "seed": 402
+      },
+      "selected_epoch": 1,
+      "readin_change": 2.0291237831115723,
+      "temporal_change": 8.067794613540173,
+      "head_change": 1.285137459053658
+    },
+    {
+      "job": {
+        "regime": "independent",
+        "mouse": "TX56",
+        "role": "optimized_population_mlp",
+        "seed": 402
+      },
+      "selected_epoch": 1,
+      "readin_change": 2.1700849533081055,
+      "temporal_change": 8.496468710247427,
+      "head_change": 1.3155553290853277
+    },
+    {
+      "job": {
+        "regime": "independent",
+        "mouse": "TX56",
+        "role": "default_attention",
+        "seed": 402
+      },
+      "selected_epoch": 1,
+      "readin_change": 1.2764674425125122,
+      "temporal_change": 1.884400773793459,
+      "head_change": 1.307662789709866
+    },
+    {
+      "job": {
+        "regime": "independent",
+        "mouse": "TX57",
+        "role": "optimized_attention",
+        "seed": 402
+      },
+      "selected_epoch": 1,
+      "readin_change": 1.8872491121292114,
+      "temporal_change": 7.72140022739768,
+      "head_change": 1.1389972945908085
+    },
+    {
+      "job": {
+        "regime": "independent",
+        "mouse": "TX57",
+        "role": "optimized_population_mlp",
+        "seed": 402
+      },
+      "selected_epoch": 1,
+      "readin_change": 2.0576553344726562,
+      "temporal_change": 8.12319529231172,
+      "head_change": 1.123334877192974
+    },
+    {
+      "job": {
+        "regime": "independent",
+        "mouse": "TX57",
+        "role": "default_attention",
+        "seed": 402
+      },
+      "selected_epoch": 1,
+      "readin_change": 1.200278639793396,
+      "temporal_change": 1.5049236603081226,
+      "head_change": 1.152868671430042
+    },
+    {
+      "job": {
+        "regime": "independent",
+        "mouse": "TX60",
+        "role": "optimized_attention",
+        "seed": 402
+      },
+      "selected_epoch": 3,
+      "readin_change": 3.1845428943634033,
+      "temporal_change": 12.78596606850624,
+      "head_change": 2.0702220741659403
+    },
+    {
+      "job": {
+        "regime": "independent",
+        "mouse": "TX60",
+        "role": "optimized_population_mlp",
+        "seed": 402
+      },
+      "selected_epoch": 1,
+      "readin_change": 2.037231206893921,
+      "temporal_change": 8.209623294882476,
+      "head_change": 1.4125110441818833
+    },
+    {
+      "job": {
+        "regime": "independent",
+        "mouse": "TX60",
+        "role": "default_attention",
+        "seed": 402
+      },
+      "selected_epoch": 3,
+      "readin_change": 2.196523427963257,
+      "temporal_change": 2.615033008158207,
+      "head_change": 1.754029041621834
+    },
+    {
+      "job": {
+        "regime": "independent",
+        "mouse": "TX61",
+        "role": "optimized_attention",
+        "seed": 402
+      },
+      "selected_epoch": 3,
+      "readin_change": 3.1273739337921143,
+      "temporal_change": 13.085189878940582,
+      "head_change": 2.0613193744793534
+    },
+    {
+      "job": {
+        "regime": "independent",
+        "mouse": "TX61",
+        "role": "optimized_population_mlp",
+        "seed": 402
+      },
+      "selected_epoch": 2,
+      "readin_change": 2.8171768188476562,
+      "temporal_change": 11.94452042505145,
+      "head_change": 1.738901223987341
+    },
+    {
+      "job": {
+        "regime": "independent",
+        "mouse": "TX61",
+        "role": "default_attention",
+        "seed": 402
+      },
+      "selected_epoch": 1,
+      "readin_change": 1.2903813123703003,
+      "temporal_change": 2.6099991351366043,
+      "head_change": 1.629368506371975
+    },
+    {
+      "job": {
+        "regime": "independent",
+        "mouse": "VR2",
+        "role": "optimized_attention",
+        "seed": 402
+      },
+      "selected_epoch": 1,
+      "readin_change": 1.975317120552063,
+      "temporal_change": 10.005622372031212,
+      "head_change": 1.5255131451413035
+    },
+    {
+      "job": {
+        "regime": "independent",
+        "mouse": "VR2",
+        "role": "optimized_population_mlp",
+        "seed": 402
+      },
+      "selected_epoch": 1,
+      "readin_change": 2.0744736194610596,
+      "temporal_change": 9.84670915082097,
+      "head_change": 1.4867534446530044
+    },
+    {
+      "job": {
+        "regime": "independent",
+        "mouse": "VR2",
+        "role": "default_attention",
+        "seed": 402
+      },
+      "selected_epoch": 1,
+      "readin_change": 1.3973510265350342,
+      "temporal_change": 2.223201759159565,
+      "head_change": 1.5122883208096027
+    },
+    {
+      "job": {
+        "regime": "shared",
+        "mouse": "all",
+        "role": "optimized_attention",
+        "seed": 402
+      },
+      "selected_epoch": 2,
+      "readin_change": 16.000404357910156,
+      "temporal_change": 21.963251546025276,
+      "head_change": 3.527729426510632
+    },
+    {
+      "job": {
+        "regime": "shared",
+        "mouse": "all",
+        "role": "optimized_population_mlp",
+        "seed": 402
+      },
+      "selected_epoch": 2,
+      "readin_change": 15.775959014892578,
+      "temporal_change": 22.831809105351567,
+      "head_change": 3.4861149359494448
+    },
+    {
+      "job": {
+        "regime": "shared",
+        "mouse": "all",
+        "role": "default_attention",
+        "seed": 402
+      },
+      "selected_epoch": 2,
+      "readin_change": 8.939894676208496,
+      "temporal_change": 4.505482867360115,
+      "head_change": 3.152697764337063
+    },
+    {
+      "job": {
+        "regime": "independent",
+        "mouse": "TX103",
+        "role": "optimized_attention",
+        "seed": 403
+      },
+      "selected_epoch": 4,
+      "readin_change": 3.5685462951660156,
+      "temporal_change": 13.97412335127592,
+      "head_change": 2.5753051480278373
+    },
+    {
+      "job": {
+        "regime": "independent",
+        "mouse": "TX103",
+        "role": "optimized_population_mlp",
+        "seed": 403
+      },
+      "selected_epoch": 10,
+      "readin_change": 4.405731678009033,
+      "temporal_change": 18.547369806095958,
+      "head_change": 2.9101082012057304
+    },
+    {
+      "job": {
+        "regime": "independent",
+        "mouse": "TX103",
+        "role": "default_attention",
+        "seed": 403
+      },
+      "selected_epoch": 3,
+      "readin_change": 2.0148305892944336,
+      "temporal_change": 3.5954120829701424,
+      "head_change": 2.237266980111599
+    },
+    {
+      "job": {
+        "regime": "independent",
+        "mouse": "TX104",
+        "role": "optimized_attention",
+        "seed": 403
+      },
+      "selected_epoch": 3,
+      "readin_change": 3.255016803741455,
+      "temporal_change": 12.185517489910126,
+      "head_change": 2.1801441998395603
+    },
+    {
+      "job": {
+        "regime": "independent",
+        "mouse": "TX104",
+        "role": "optimized_population_mlp",
+        "seed": 403
+      },
+      "selected_epoch": 3,
+      "readin_change": 3.368762254714966,
+      "temporal_change": 14.39586082479218,
+      "head_change": 2.151269702007994
+    },
+    {
+      "job": {
+        "regime": "independent",
+        "mouse": "TX104",
+        "role": "default_attention",
+        "seed": 403
+      },
+      "selected_epoch": 4,
+      "readin_change": 2.4334046840667725,
+      "temporal_change": 3.393605500459671,
+      "head_change": 2.196247238665819
+    },
+    {
+      "job": {
+        "regime": "independent",
+        "mouse": "TX56",
+        "role": "optimized_attention",
+        "seed": 403
+      },
+      "selected_epoch": 1,
+      "readin_change": 1.9356145858764648,
+      "temporal_change": 7.803526151925325,
+      "head_change": 1.3270030301355291
+    },
+    {
+      "job": {
+        "regime": "independent",
+        "mouse": "TX56",
+        "role": "optimized_population_mlp",
+        "seed": 403
+      },
+      "selected_epoch": 1,
+      "readin_change": 2.0183000564575195,
+      "temporal_change": 8.938806361984462,
+      "head_change": 1.4711288562975824
+    },
+    {
+      "job": {
+        "regime": "independent",
+        "mouse": "TX56",
+        "role": "default_attention",
+        "seed": 403
+      },
+      "selected_epoch": 1,
+      "readin_change": 1.3690788745880127,
+      "temporal_change": 2.029335541650653,
+      "head_change": 1.252356474287808
+    },
+    {
+      "job": {
+        "regime": "independent",
+        "mouse": "TX57",
+        "role": "optimized_attention",
+        "seed": 403
+      },
+      "selected_epoch": 2,
+      "readin_change": 2.764739751815796,
+      "temporal_change": 10.677046917378902,
+      "head_change": 1.5111817754805088
+    },
+    {
+      "job": {
+        "regime": "independent",
+        "mouse": "TX57",
+        "role": "optimized_population_mlp",
+        "seed": 403
+      },
+      "selected_epoch": 2,
+      "readin_change": 2.629399299621582,
+      "temporal_change": 10.959549664985389,
+      "head_change": 1.4676021533086896
+    },
+    {
+      "job": {
+        "regime": "independent",
+        "mouse": "TX57",
+        "role": "default_attention",
+        "seed": 403
+      },
+      "selected_epoch": 2,
+      "readin_change": 1.5983517169952393,
+      "temporal_change": 1.8516214303672314,
+      "head_change": 1.2889097575098276
+    },
+    {
+      "job": {
+        "regime": "independent",
+        "mouse": "TX60",
+        "role": "optimized_attention",
+        "seed": 403
+      },
+      "selected_epoch": 1,
+      "readin_change": 1.9924964904785156,
+      "temporal_change": 7.7391398176550865,
+      "head_change": 1.350349378946703
+    },
+    {
+      "job": {
+        "regime": "independent",
+        "mouse": "TX60",
+        "role": "optimized_population_mlp",
+        "seed": 403
+      },
+      "selected_epoch": 1,
+      "readin_change": 1.9623693227767944,
+      "temporal_change": 7.998964001424611,
+      "head_change": 1.3937895901617594
+    },
+    {
+      "job": {
+        "regime": "independent",
+        "mouse": "TX60",
+        "role": "default_attention",
+        "seed": 403
+      },
+      "selected_epoch": 2,
+      "readin_change": 1.7112168073654175,
+      "temporal_change": 1.8985911458730698,
+      "head_change": 1.5348801142536104
+    },
+    {
+      "job": {
+        "regime": "independent",
+        "mouse": "TX61",
+        "role": "optimized_attention",
+        "seed": 403
+      },
+      "selected_epoch": 1,
+      "readin_change": 1.9452693462371826,
+      "temporal_change": 8.920780465006828,
+      "head_change": 1.5621387958526611
+    },
+    {
+      "job": {
+        "regime": "independent",
+        "mouse": "TX61",
+        "role": "optimized_population_mlp",
+        "seed": 403
+      },
+      "selected_epoch": 1,
+      "readin_change": 2.0303423404693604,
+      "temporal_change": 9.679091058671474,
+      "head_change": 1.39648356474936
+    },
+    {
+      "job": {
+        "regime": "independent",
+        "mouse": "TX61",
+        "role": "default_attention",
+        "seed": 403
+      },
+      "selected_epoch": 1,
+      "readin_change": 1.2636321783065796,
+      "temporal_change": 2.549426145851612,
+      "head_change": 1.4102223282679915
+    },
+    {
+      "job": {
+        "regime": "independent",
+        "mouse": "VR2",
+        "role": "optimized_attention",
+        "seed": 403
+      },
+      "selected_epoch": 1,
+      "readin_change": 2.0122663974761963,
+      "temporal_change": 9.311871618032455,
+      "head_change": 1.6310193061362952
+    },
+    {
+      "job": {
+        "regime": "independent",
+        "mouse": "VR2",
+        "role": "optimized_population_mlp",
+        "seed": 403
+      },
+      "selected_epoch": 1,
+      "readin_change": 2.0337727069854736,
+      "temporal_change": 9.478766408050433,
+      "head_change": 1.5818813317455351
+    },
+    {
+      "job": {
+        "regime": "independent",
+        "mouse": "VR2",
+        "role": "default_attention",
+        "seed": 403
+      },
+      "selected_epoch": 1,
+      "readin_change": 1.334816813468933,
+      "temporal_change": 2.301380068063736,
+      "head_change": 1.5458113551139832
+    },
+    {
+      "job": {
+        "regime": "shared",
+        "mouse": "all",
+        "role": "optimized_attention",
+        "seed": 403
+      },
+      "selected_epoch": 2,
+      "readin_change": 15.907015800476074,
+      "temporal_change": 21.165701508522034,
+      "head_change": 3.3825156781822443
+    },
+    {
+      "job": {
+        "regime": "shared",
+        "mouse": "all",
+        "role": "optimized_population_mlp",
+        "seed": 403
+      },
+      "selected_epoch": 2,
+      "readin_change": 15.39063835144043,
+      "temporal_change": 22.657300943508744,
+      "head_change": 3.169539585709572
+    },
+    {
+      "job": {
+        "regime": "shared",
+        "mouse": "all",
+        "role": "default_attention",
+        "seed": 403
+      },
+      "selected_epoch": 2,
+      "readin_change": 8.865884780883789,
+      "temporal_change": 3.9379802122712135,
+      "head_change": 3.1063967258669436
+    }
+  ]
+}

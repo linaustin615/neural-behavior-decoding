@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "parameter_counts": {
+    "time_dynamic": 21553,
+    "time_static": 21553,
+    "interleaved_dynamic": 21553
+  },
+  "mask_disabled_trained_parent_equivalences": 72,
+  "all_parent_initial_tensors_exact": true,
+  "all_new_variant_parameter_initializations_exact": true,
+  "mask_neuron_major_mapping_exact": true,
+  "each_query_256_tokens_each_token_once": true,
+  "forbidden_weights_exact_zero": true,
+  "uniform_weights_respect_mask": true,
+  "no_cross_example_mixing": true,
+  "later_input_does_not_change_earlier_query_features": true,
+  "dynamic_static_routing_behaviors_correct": true,
+  "gradients_to_all_four_queries_and_temporal": true,
+  "reload_exact": true,
+  "input_preserved": true,
+  "zero_initial_predictions": true
+}

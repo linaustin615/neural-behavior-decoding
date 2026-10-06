@@ -1,0 +1,9 @@
+{
+  "created_utc": "2026-10-03T06:43:43.989448+00:00",
+  "scope": "Supplement declared after neural fitting began but before any current later scoring; original frozen gates unchanged",
+  "reason": "Check whether gains can be explained by a constant or affine calibration instead of attention",
+  "conditions": "constant delta=b and affine delta=a*ridge+b; coefficients fit ONLY on same OOF predictions/residuals. Unbounded least squares coefficients divided by1+beta for beta0.1/1; clip final correction to[-1,1]. Include delta0.",
+  "selection": "Choose candidate by earlier-selection bounded MSE, ties choose delta0. Lock before later scoring. Never fit to selection/later targets.",
+  "limitation": "Affine coefficients minimize unbounded penalized residual loss, with clipping applied afterward. This is a cheap calibration comparator, not an optimal constrained fit.",
+  "source_sha256": "0b411e76d9e06f73f3c57e00ae04ae8db09e6dc122a64cd39f6645a670b48b4e"
+}

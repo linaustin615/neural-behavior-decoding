@@ -1,0 +1,48 @@
+{
+  "fits": 195,
+  "schedule_exactly_matched": true,
+  "all_metrics_and_histories_finite": true,
+  "validation_minimum_checkpoint_confirmed_for_every_fit": true,
+  "all_runs_have_1600_updates_and_eight_validation_checks": true,
+  "no_partial_or_error_files": true,
+  "config_counts": {
+    "config": 147,
+    "config_v1": 23,
+    "followup_config": 25
+  },
+  "per_mouse_counts": {
+    "MP019": 95,
+    "MP028": 50,
+    "MP027": 50
+  },
+  "config_hashes": {
+    "652883abd21d4ea52e09cb4d51bf5f7942ddf57acf25880cb4f8c92c933dbeab": "config_v1",
+    "e67d06f9ccb17e4fca618f07cce0cb6400d1d89483a4ca0f2da423af94c53423": "config",
+    "efa5261e782f7a104110c200b59b9eefa43c702db3f4386e420fff8fb9f3f264": "followup_config"
+  },
+  "temporary_source_sha256": {
+    "baselines.py": "fa32f4712522cf736547ca259062f0503c519167f79d0172bcad04418a11adc9",
+    "device.py": "f3099731f3c3e64014f8db94ba3749da43ca369d48d1af4c9c7db043d5debfac",
+    "run_sweep.py": "0d90386d858ce1e69b15e95d7974c0679acc328e9603b7ced8471a7e5978f845",
+    "final_audit.py": "9ab1b3c6be7be87c19b468e69c8df621c76fce2ae7d74d79bbf18583d9007436",
+    "core_v2.py": "de0b78fd35ae8b6b370e6560f1d24c797178d5c01176b36983cde6c20ad2f4de",
+    "core.py": "235d0b309fa52d26ed0e24b7ce83c1a32904d0c74bfa45e5f9805b868f8f9f40",
+    "gates.py": "133e2ec8069127df6f09bdaed3f34f4188b3117b8236c90414ff64b2aa93c3e4",
+    "summarize.py": "002de2c16b10922360cc95140e8e1368333affdfdda4e48a10852f2292f4a5fd",
+    "depth_baseline.py": "00c5d57525e9e21e23a4b6d006a2d9d7572eb76371ef42bc8a93ac67b82eb5b8",
+    "bench.py": "b27e53112f3c67184be74630529988efdb2b81155258a0a7c1d8d3d8ba594258",
+    "followup.py": "75213a6d9f5e68846575e46ac5de5c511b2e0be6e7460e258cdb4a99097fa146",
+    "positive_control.py": "bd9b1509cce401b3ece1984fb6be7468e62ed8e3f279ee2aaa86caf8f4a1592c",
+    "plot_results.py": "eb73e0a70356e9a1ec7c37124c56f14c4dfa49eab0db55d0b998d3acda7d0b08",
+    "audit_baselines.py": "5bbdf9ef5359278338c5f2d86596bc19ed6b62ee490acbe6367139fe90d40ad5",
+    "prepare.py": "045fc01282430ab1ba96c3a55ef7392859ee4679776173f67ca168649ba1cb71",
+    "status.py": "a39a4c57e991ca8be933feddd09aeb98aab4afb1111b3891c1df097f2009d9e7",
+    "write_report.py": "7339d8965aede390a3dfb80d89052a538cc7ad6110c4b8919fc1b65242dfbde6"
+  },
+  "data_sha256": {
+    "MP028.npz": "a8f3e01db6d0b0e4fa1ff70a776a4d4be4bc924f997ae5223f102ecb6c64d41f",
+    "MP027.npz": "5d70f948ff14ab93b4eb3fc20b9948d4b0de4045292082ef672cd419c47090ea",
+    "MP019.npz": "5cc66e7eb6e64ef0d232a9e9cb4bfb7a27ac4596b3e98f8eefe0fbe0c074389c"
+  },
+  "note": "audit verifies saved run records; it does not establish absence of every possible implementation error"
+}

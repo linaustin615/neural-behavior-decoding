@@ -1,0 +1,54 @@
+{
+  "passed": true,
+  "issue": "NumPy matmul emitted floating-point warnings during fitting despite finite inputs and outputs. Independently recomputed all saved gate outputs and calibration objectives/gradients without BLAS; original locked results retained.",
+  "checks": [
+    {
+      "rule": "attention_mlp_s10",
+      "max_absolute_coefficient": 0.8477303078695198,
+      "independent_objective": 0.8962524270322119,
+      "objective_difference": 0.0,
+      "max_absolute_gradient": 6.8329521272884886e-09,
+      "prediction_max_difference": 2.220446049250313e-16
+    },
+    {
+      "rule": "attention_mlp_s11",
+      "max_absolute_coefficient": 1.677991000102385,
+      "independent_objective": 0.9692982647170176,
+      "objective_difference": 2.220446049250313e-16,
+      "max_absolute_gradient": 1.3216649472763686e-08,
+      "prediction_max_difference": 4.440892098500626e-16
+    },
+    {
+      "rule": "attention_mlp_s12",
+      "max_absolute_coefficient": 2.395937342454561,
+      "independent_objective": 0.9849313578753768,
+      "objective_difference": 0.0,
+      "max_absolute_gradient": 2.6008176500901675e-08,
+      "prediction_max_difference": 2.220446049250313e-16
+    },
+    {
+      "rule": "mlp_mlp_s10",
+      "max_absolute_coefficient": 0.5739410476329282,
+      "independent_objective": 0.8275513249893295,
+      "objective_difference": 0.0,
+      "max_absolute_gradient": 8.468213520424622e-08,
+      "prediction_max_difference": 2.220446049250313e-16
+    },
+    {
+      "rule": "mlp_mlp_s11",
+      "max_absolute_coefficient": 0.6501707738579554,
+      "independent_objective": 0.8513336862582802,
+      "objective_difference": 0.0,
+      "max_absolute_gradient": 8.161580266436916e-08,
+      "prediction_max_difference": 4.440892098500626e-16
+    },
+    {
+      "rule": "mlp_mlp_s12",
+      "max_absolute_coefficient": 2.226856001033403,
+      "independent_objective": 0.9438634022752959,
+      "objective_difference": 0.0,
+      "max_absolute_gradient": 8.925742494073075e-09,
+      "prediction_max_difference": 2.220446049250313e-16
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "task": "latent32,pool606,seed11; first validation example,first head",
+  "attention_shape": [
+    1,
+    4,
+    32,
+    2048
+  ],
+  "softmax_max_row_sum_error": 4.50724030542915e-07,
+  "softmax_sum_tolerance": 1e-06,
+  "numpy_pairwise_cosine": 0.9999285026671463,
+  "numpy_svd_participation_rank": 1.0001388592578742,
+  "gram_and_svd_agree": true,
+  "tolerance_note": "Initial row-sum check used total tolerance3e-7; observed4.51e-7 error in float32 softmax. Use1e-6 for this numerical check; no model, metric, or experimental settings changed."
+}

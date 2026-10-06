@@ -1,0 +1,29 @@
+MP030 checksum passed; loading full file
+{"mouse": "MP030", "neurons": 10164, "time_bins": 15761, "nplanes": 12, "passed": false, "blockers": ["activity_nonnegative"], "training_constant_cells": 849}
+MP032 checksum passed; loading full file
+Traceback (most recent call last):
+  File "/Users/austinlin/neuron_transformer/experiments/2026-10-02_stringer_validation/validate.py", line 141, in <module>
+    main()
+  File "/Users/austinlin/neuron_transformer/experiments/2026-10-02_stringer_validation/validate.py", line 125, in main
+    (ROOT/f'{mouse}.json').write_text(json.dumps(row,indent=2)+'\n')
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/json/__init__.py", line 234, in dumps
+    return cls(
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 201, in encode
+    chunks = list(chunks)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 431, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 405, in _iterencode_dict
+    yield from chunks
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 438, in _iterencode
+    o = _default(o)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type ndarray is not JSON serializable
+MP030 reuse completed validation
+MP032 checksum passed; loading full file
+{"mouse": "MP032", "neurons": 10523, "time_bins": 13498, "nplanes": 12, "passed": false, "blockers": ["activity_nonnegative"], "training_constant_cells": 3}
+MP033 checksum passed; loading full file
+{"mouse": "MP033", "neurons": 10640, "time_bins": 10463, "nplanes": 12, "passed": true, "blockers": [], "training_constant_cells": 4}
+MP034 checksum passed; loading full file
+{"mouse": "MP034", "neurons": 11267, "time_bins": 10473, "nplanes": 12, "passed": false, "blockers": ["activity_nonnegative"], "training_constant_cells": 5}
+VALIDATION_COMPLETE

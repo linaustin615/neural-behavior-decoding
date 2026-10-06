@@ -1,0 +1,21 @@
+[
+  {
+    "name": "latent_n512_no_positions",
+    "seed": 3,
+    "phase": "ablation",
+    "config": {
+      "n": 512,
+      "window": 8,
+      "width": 32,
+      "lr": 0.001,
+      "epochs": 24,
+      "schedule": "cosine",
+      "temporal": "mlp",
+      "readout": "mean",
+      "clip": 1.0,
+      "family": "latent",
+      "latents": 8,
+      "no_positions": true
+    }
+  }
+]

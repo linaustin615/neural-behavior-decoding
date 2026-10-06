@@ -1,0 +1,98 @@
+{
+  "status": "complete",
+  "phase": "complete",
+  "started_utc": "2026-10-05T17:08:02.978009+00:00",
+  "fixed_new_fit_budget": 9,
+  "baseline_fits_repeated": 0,
+  "primary_seeds": [
+    13,
+    14,
+    15
+  ],
+  "all_seeds": [
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "worker_assignments": [
+    [
+      13,
+      10
+    ],
+    [
+      14,
+      11
+    ],
+    [
+      15,
+      12
+    ]
+  ],
+  "main_application_unchanged": true,
+  "next": [],
+  "training_fits_complete": 9,
+  "completed_fits": [
+    {
+      "variant": "dynamic",
+      "seed": 13
+    },
+    {
+      "variant": "dynamic",
+      "seed": 14
+    },
+    {
+      "variant": "dynamic",
+      "seed": 15
+    },
+    {
+      "variant": "static",
+      "seed": 10
+    },
+    {
+      "variant": "static",
+      "seed": 11
+    },
+    {
+      "variant": "static",
+      "seed": 12
+    },
+    {
+      "variant": "static",
+      "seed": 13
+    },
+    {
+      "variant": "static",
+      "seed": 14
+    },
+    {
+      "variant": "static",
+      "seed": 15
+    }
+  ],
+  "selection_lock_exit_code": 0,
+  "later_evaluation_exit_code": 0,
+  "analysis_exit_code": 0,
+  "review_exit_code": 0,
+  "report_exit_code": 0,
+  "automated_stages_complete": true,
+  "completed_utc": "2026-10-05T17:28:47.275825+00:00",
+  "training_worker_exit_codes": [
+    0,
+    0,
+    0
+  ],
+  "pipeline_exit_code": 0,
+  "reused_interleaved_fits": 3,
+  "new_later_predictions": 19962,
+  "baseline": "original shared transformer retained",
+  "candidate": "interleaved dynamic and static failed fixed replication",
+  "decisions": {
+    "dynamic_utility": false,
+    "static_utility": false,
+    "dynamic_routing": false
+  },
+  "queued_work": []
+}

@@ -1,0 +1,13 @@
+{
+  "val": {
+    "max_prediction_difference": 9.5367431640625e-07,
+    "original_mse": 0.29214013134003963,
+    "absorbed_mse": 0.2921401249279766
+  },
+  "test": {
+    "max_prediction_difference": 9.5367431640625e-07,
+    "original_mse": 0.33459119135691046,
+    "absorbed_mse": 0.3345911949565786
+  },
+  "interpretation": "For fixed known cells, additive position embeddings can be absorbed into identity embeddings without changing predictions. This verifies representational redundancy, not that training automatically discovers equivalent weights or that coordinates cannot improve sample efficiency."
+}

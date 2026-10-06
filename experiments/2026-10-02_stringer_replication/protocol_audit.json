@@ -1,0 +1,55 @@
+{
+  "checked_utc": "2026-10-03T00:38:22.629258+00:00",
+  "passed": true,
+  "scope": "Protocol task/split/window arithmetic and source provenance only; no new loader/model implementation, no real-data diagnostics or training.",
+  "checks": {
+    "exact24_tasks": true,
+    "synthetic_triple_binning_and_window_alignment": true,
+    "training_prefix_matches_prior_validation": true,
+    "split_gaps100_bins": true,
+    "equal_mouse_weighting_example": true,
+    "exact_sign_test_lower_bound": true,
+    "reference_and_validation_hashes_match": true,
+    "application_sources_unchanged": true,
+    "authors_pdf_hash_matches": true
+  },
+  "mice": [
+    {
+      "mouse": "MP030",
+      "passed": true,
+      "examples": {
+        "train": 3070,
+        "selection": 920,
+        "evaluation": 970
+      }
+    },
+    {
+      "mouse": "MP032",
+      "passed": true,
+      "examples": {
+        "train": 2618,
+        "selection": 769,
+        "evaluation": 819
+      }
+    },
+    {
+      "mouse": "MP033",
+      "passed": true,
+      "examples": {
+        "train": 2011,
+        "selection": 566,
+        "evaluation": 617
+      }
+    },
+    {
+      "mouse": "MP034",
+      "passed": true,
+      "examples": {
+        "train": 2013,
+        "selection": 567,
+        "evaluation": 618
+      }
+    }
+  ],
+  "protocol_sha256": "86db89d1a727e3b227ac4931fa7c27dbbc157fd629491005e30c114755719fd5"
+}

@@ -1,0 +1,156 @@
+{
+  "per_mouse": [
+    {
+      "mouse": "MP030",
+      "zero": 0.12127334782536804,
+      "mean": 0.2289108674984712,
+      "ridge": 0.037868561171099935,
+      "ridge_guard": 0.038183685405765506,
+      "ridge_lambda": 10.0,
+      "transformer_tuned": 0.1458036166217307,
+      "transformer_default": 0.1458036166217307,
+      "transformer_untrained": 0.12129056742611893,
+      "transformer_guard": 0.058326472294844486,
+      "transformer_recipe": 0,
+      "transformer_epochs": [
+        17,
+        19
+      ],
+      "transformer_gain_vs_ridge": -2.8502549902266505,
+      "transformer_gain_vs_default": 0.0,
+      "transformer_beats_both_constants": false,
+      "pooled_mlp_tuned": 0.023488320080516618,
+      "pooled_mlp_default": 0.022502176417549005,
+      "pooled_mlp_untrained": 0.2373899100336654,
+      "pooled_mlp_guard": 0.024301214190652985,
+      "pooled_mlp_recipe": 1,
+      "pooled_mlp_epochs": [
+        19,
+        24
+      ],
+      "pooled_mlp_gain_vs_ridge": 0.3797408891668652,
+      "pooled_mlp_gain_vs_default": -0.04382436812638879,
+      "pooled_mlp_beats_both_constants": true,
+      "transformer_gain_vs_pooled_mlp": -5.207494453495364
+    },
+    {
+      "mouse": "MP032",
+      "zero": 0.0081798642192977,
+      "mean": 0.10712912624590479,
+      "ridge": 0.01285225160782412,
+      "ridge_guard": 0.012502323065307634,
+      "ridge_lambda": 10.0,
+      "transformer_tuned": 0.028279483156115927,
+      "transformer_default": 0.008452711943451596,
+      "transformer_untrained": 0.008452711943451596,
+      "transformer_guard": 0.04000383659029178,
+      "transformer_recipe": 1,
+      "transformer_epochs": [
+        0,
+        24
+      ],
+      "transformer_gain_vs_ridge": -1.200352437770523,
+      "transformer_gain_vs_default": -2.3456106567105173,
+      "transformer_beats_both_constants": false,
+      "pooled_mlp_tuned": 0.03262483465707332,
+      "pooled_mlp_default": 0.029917077935331514,
+      "pooled_mlp_untrained": 0.11183285369727196,
+      "pooled_mlp_guard": 0.02466410678108851,
+      "pooled_mlp_recipe": 1,
+      "pooled_mlp_epochs": [
+        6,
+        7
+      ],
+      "pooled_mlp_gain_vs_ridge": -1.5384528448861179,
+      "pooled_mlp_gain_vs_default": -0.09050872974943824,
+      "pooled_mlp_beats_both_constants": false,
+      "transformer_gain_vs_pooled_mlp": 0.13319152561636927
+    },
+    {
+      "mouse": "MP033",
+      "zero": 2.107169789503231,
+      "mean": 1.2377282010224087,
+      "ridge": 0.4093000508272053,
+      "ridge_guard": 0.41000244107350287,
+      "ridge_lambda": 0.01,
+      "transformer_tuned": 0.3756198054767571,
+      "transformer_default": 0.3756198054767571,
+      "transformer_untrained": 1.453487239501906,
+      "transformer_guard": 0.3748753693753544,
+      "transformer_recipe": 0,
+      "transformer_epochs": [
+        21,
+        20
+      ],
+      "transformer_gain_vs_ridge": 0.0822874203958186,
+      "transformer_gain_vs_default": 0.0,
+      "transformer_beats_both_constants": true,
+      "pooled_mlp_tuned": 0.6669066059275433,
+      "pooled_mlp_default": 0.4418670412266659,
+      "pooled_mlp_untrained": 1.2413791750566627,
+      "pooled_mlp_guard": 0.6672007138631628,
+      "pooled_mlp_recipe": 1,
+      "pooled_mlp_epochs": [
+        9,
+        9
+      ],
+      "pooled_mlp_gain_vs_ridge": -0.629383149549356,
+      "pooled_mlp_gain_vs_default": -0.5092924877948479,
+      "pooled_mlp_beats_both_constants": true,
+      "transformer_gain_vs_pooled_mlp": 0.436773002189205
+    },
+    {
+      "mouse": "MP034",
+      "zero": 0.7696878996378249,
+      "mean": 1.2514108070330612,
+      "ridge": 0.2947355967724037,
+      "ridge_guard": 0.29778206145823855,
+      "ridge_lambda": 0.01,
+      "transformer_tuned": 0.13813115846307972,
+      "transformer_default": 0.13813115846307972,
+      "transformer_untrained": 0.727681201743222,
+      "transformer_guard": 0.13829962243645216,
+      "transformer_recipe": 0,
+      "transformer_epochs": [
+        24,
+        17
+      ],
+      "transformer_gain_vs_ridge": 0.531338732152719,
+      "transformer_gain_vs_default": 0.0,
+      "transformer_beats_both_constants": true,
+      "pooled_mlp_tuned": 0.20655107045867369,
+      "pooled_mlp_default": 0.20655107045867369,
+      "pooled_mlp_untrained": 1.262796807030231,
+      "pooled_mlp_guard": 0.20579753221578756,
+      "pooled_mlp_recipe": 0,
+      "pooled_mlp_epochs": [
+        20,
+        13
+      ],
+      "pooled_mlp_gain_vs_ridge": 0.29919876417854796,
+      "pooled_mlp_gain_vs_default": 0.0,
+      "pooled_mlp_beats_both_constants": true,
+      "transformer_gain_vs_pooled_mlp": 0.33124937016137757
+    }
+  ],
+  "aggregate": {
+    "transformer": {
+      "mean_relative_gain_vs_ridge": -0.8592453188621589,
+      "mice_beating_ridge": 2,
+      "mice_beating_both_constants": 2,
+      "mean_relative_gain_vs_default": -0.5864026641776293,
+      "epoch0_selected": 1
+    },
+    "pooled_mlp": {
+      "mean_relative_gain_vs_ridge": -0.37222408527251516,
+      "mice_beating_ridge": 2,
+      "mice_beating_both_constants": 3,
+      "mean_relative_gain_vs_default": -0.16090639641766874,
+      "epoch0_selected": 0
+    },
+    "transformer_vs_pooled_mlp": {
+      "mice_won": 3,
+      "mean_relative_gain": -1.0765701388821032
+    }
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "created_utc": "2026-10-06T14:52:49.130586+00:00",
+  "stage": "acquisition_and_schema",
+  "dataset_doi": "10.25378/janelia.23712957.v2",
+  "archive": {
+    "id": 52543310,
+    "name": "neural_data_visual.zip",
+    "size": 31773571030,
+    "is_link_only": false,
+    "download_url": "https://ndownloader.figshare.com/files/52543310",
+    "supplied_md5": "2ae0287ee34267aa7e2dd198a839f215",
+    "computed_md5": "2ae0287ee34267aa7e2dd198a839f215",
+    "mimetype": "undefined"
+  },
+  "selection_rule": "Earliest dated visual recording per published mouse ID; same-day block order is numeric",
+  "recordings": [
+    {
+      "name": "spont_TX103_2022_10_05_2_spks.npz",
+      "compressed_bytes": 5755834910,
+      "uncompressed_bytes": 8633268694,
+      "compression": 8,
+      "header_offset": 15408382392,
+      "crc32": 1345841563,
+      "mouse": "TX103"
+    },
+    {
+      "name": "spont_TX104_2022_10_05_2_spks.npz",
+      "compressed_bytes": 3908392244,
+      "uncompressed_bytes": 6116756258,
+      "compression": 8,
+      "header_offset": 21164217441,
+      "crc32": 4036896821,
+      "mouse": "TX104"
+    },
+    {
+      "name": "spont_TX56_2020_10_22_1_spks.npz",
+      "compressed_bytes": 2841141959,
+      "uncompressed_bytes": 5192792870,
+      "compression": 8,
+      "header_offset": 0,
+      "crc32": 1367429969,
+      "mouse": "TX56"
+    },
+    {
+      "name": "spont_TX57_2020_10_21_1_spks.npz",
+      "compressed_bytes": 1959515544,
+      "uncompressed_bytes": 3569113102,
+      "compression": 8,
+      "header_offset": 2841142097,
+      "crc32": 1784905194,
+      "mouse": "TX57"
+    },
+    {
+      "name": "spont_TX60_2020_10_20_2_spks.npz",
+      "compressed_bytes": 2685805004,
+      "uncompressed_bytes": 4606801374,
+      "compression": 8,
+      "header_offset": 4800657751,
+      "crc32": 2845150753,
+      "mouse": "TX60"
+    },
+    {
+      "name": "spont_TX61_2020_10_21_1_spks.npz",
+      "compressed_bytes": 2745691570,
+      "uncompressed_bytes": 4969275270,
+      "compression": 8,
+      "header_offset": 10051609655,
+      "crc32": 1728588895,
+      "mouse": "TX61"
+    },
+    {
+      "name": "spont_VR2_2020_10_22_1_spks.npz",
+      "compressed_bytes": 3445143730,
+      "uncompressed_bytes": 5844866790,
+      "compression": 8,
+      "header_offset": 25072609824,
+      "crc32": 378541773,
+      "mouse": "VR2"
+    }
+  ],
+  "scratch": "/var/folders/nk/b0zhc0jd2gs79ppv1wkyqfwr0000gn/T/neuron_facemap_raw_2ozl4nnt",
+  "selected_compressed_bytes": 23341524961,
+  "numeric_response_or_target_statistics_inspected": false,
+  "models_fitted": 0,
+  "scope": "Separate Stringer validation explicitly selected by user; inspect timing/schema before freezing fitting/evaluation protocol",
+  "source_commit": "f8b5b518efcde8b4aae7727283bf017b23641c7f",
+  "original_mouse_ids": [
+    "MP030",
+    "MP032",
+    "MP033",
+    "MP034"
+  ],
+  "source_notes": [
+    "Author paper reports seven visual mice in ten recordings; five reused in the 2021 High-precision coding study, not the 2019 spontaneous study",
+    "Visual file IDs/dates are TX56,TX57,TX60,TX61,VR2 in2020 andTX103,TX104 in2022; distinct from the examined MP2016/2017 cohort",
+    "Version2 updates deconvolution and positions; preserve version-specific provenance",
+    "Author fig4 indexes run with neural test indices and plots its absolute value; verify shapes and neural timestamps in files"
+  ],
+  "oriented_probe": {
+    "file_id": 15479342,
+    "sresp_shape": [
+      23589,
+      4598
+    ],
+    "dtype": "float64",
+    "complete_schema": false,
+    "termination": "20,000-opcode diagnostic cap reached inside ROI stat metadata; not a failed model or dataset",
+    "numeric_arrays_materialized": false,
+    "whole_file_downloaded": false,
+    "decision": "Prefer continuous Facemap release for this validation"
+  },
+  "source_links": [
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC10774130/",
+    "https://janelia.figshare.com/articles/dataset/Facemap_a_framework_for_modeling_neural_activity_based_on_orofacial_tracking/23712957/2",
+    "https://github.com/MouseLand/facemap/blob/f8b5b518efcde8b4aae7727283bf017b23641c7f/paper/fig4.py"
+  ]
+}

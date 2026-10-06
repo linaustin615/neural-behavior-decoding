@@ -1,0 +1,20 @@
+Traceback (most recent call last):
+  File "/Users/austinlin/neuron_transformer/experiments/2026-10-06_population_tokens/run.py", line 166, in <module>
+    if sys.argv[1]=='train':train(int(sys.argv[2]))
+  File "/Users/austinlin/neuron_transformer/experiments/2026-10-06_population_tokens/run.py", line 108, in train
+    runner.train(seed)
+  File "/Users/austinlin/neuron_transformer/experiments/2026-10-04_ensemble_seed_replication/run.py", line 122, in train
+    first,scores,best=selection();predictions={s:[first[s]] for s in sessions}
+  File "/Users/austinlin/neuron_transformer/experiments/2026-10-04_ensemble_seed_replication/run.py", line 119, in selection
+    p={s:reference.predict(net,data[s]['xv'],s) for s in sessions}
+  File "/Users/austinlin/neuron_transformer/experiments/2026-10-04_ensemble_seed_replication/run.py", line 119, in <dictcomp>
+    p={s:reference.predict(net,data[s]['xv'],s) for s in sessions}
+  File "/Users/austinlin/neuron_transformer/experiments/2026-10-03_shared_behavior/run.py", line 36, in predict
+    with torch.no_grad():p=torch.cat([net(x[i:i+64],session,uniform) for i in range(0,len(x),64)]).numpy()
+  File "/Users/austinlin/neuron_transformer/experiments/2026-10-03_shared_behavior/run.py", line 36, in <listcomp>
+    with torch.no_grad():p=torch.cat([net(x[i:i+64],session,uniform) for i in range(0,len(x),64)]).numpy()
+  File "/Users/austinlin/Library/Python/3.9/lib/python/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/Users/austinlin/Library/Python/3.9/lib/python/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+TypeError: forward() takes 3 positional arguments but 4 were given

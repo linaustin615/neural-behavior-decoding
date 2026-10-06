@@ -1,0 +1,131 @@
+{
+  "project_source_unchanged": {
+    "data.py": true,
+    "model.py": true,
+    "train.py": true
+  },
+  "splits": {
+    "train": [
+      0,
+      4160
+    ],
+    "val": [
+      4260,
+      5564
+    ],
+    "test": [
+      5664,
+      7018
+    ]
+  },
+  "no_split_overlap": true,
+  "target_alignment": {
+    "128_8_train": {
+      "examples": 4129,
+      "first_target_time": 31,
+      "last_target_time": 4159,
+      "passed": true
+    },
+    "128_8_val": {
+      "examples": 1273,
+      "first_target_time": 4291,
+      "last_target_time": 5563,
+      "passed": true
+    },
+    "128_16_train": {
+      "examples": 4129,
+      "first_target_time": 31,
+      "last_target_time": 4159,
+      "passed": true
+    },
+    "128_16_val": {
+      "examples": 1273,
+      "first_target_time": 4291,
+      "last_target_time": 5563,
+      "passed": true
+    },
+    "128_32_train": {
+      "examples": 4129,
+      "first_target_time": 31,
+      "last_target_time": 4159,
+      "passed": true
+    },
+    "128_32_val": {
+      "examples": 1273,
+      "first_target_time": 4291,
+      "last_target_time": 5563,
+      "passed": true
+    },
+    "256_8_train": {
+      "examples": 4129,
+      "first_target_time": 31,
+      "last_target_time": 4159,
+      "passed": true
+    },
+    "256_8_val": {
+      "examples": 1273,
+      "first_target_time": 4291,
+      "last_target_time": 5563,
+      "passed": true
+    },
+    "512_8_train": {
+      "examples": 4129,
+      "first_target_time": 31,
+      "last_target_time": 4159,
+      "passed": true
+    },
+    "512_8_val": {
+      "examples": 1273,
+      "first_target_time": 4291,
+      "last_target_time": 5563,
+      "passed": true
+    }
+  },
+  "architecture": {
+    "original_constant": {
+      "output_and_batch_shapes": true,
+      "joint_neuron_permutation_max_error": 2.9802322387695312e-08,
+      "all_parameter_gradients_finite": true,
+      "parameters": 14145
+    },
+    "combo_cosine": {
+      "output_and_batch_shapes": true,
+      "joint_neuron_permutation_max_error": 5.960464477539063e-08,
+      "all_parameter_gradients_finite": true,
+      "parameters": 19457
+    },
+    "latent_n256": {
+      "output_and_batch_shapes": true,
+      "joint_neuron_permutation_max_error": 5.960464477539063e-08,
+      "all_parameter_gradients_finite": true,
+      "parameters": 23777
+    },
+    "latent_n512": {
+      "output_and_batch_shapes": true,
+      "joint_neuron_permutation_max_error": 5.960464477539063e-08,
+      "all_parameter_gradients_finite": true,
+      "parameters": 31969
+    },
+    "latent_n512_no_positions": {
+      "output_and_batch_shapes": true,
+      "joint_neuron_permutation_max_error": 1.1920928955078125e-07,
+      "all_parameter_gradients_finite": true,
+      "parameters": 31969
+    }
+  },
+  "environment": {
+    "python": "3.9.6",
+    "torch": "2.8.0",
+    "numpy": "2.0.2",
+    "sklearn": "1.6.1",
+    "platform": "macOS-26.0.1-arm64-arm-64bit",
+    "threads": 2,
+    "mps_available": false
+  },
+  "training_speed_scaler": {
+    "mean": 2.927973651537748,
+    "std": 7.422715803805266,
+    "units": "arbitrary dataset speed units"
+  },
+  "test_predictions_made": false
+}

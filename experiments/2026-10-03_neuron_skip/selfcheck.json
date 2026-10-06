@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "models": [
+    {
+      "kind": "attention",
+      "parameters": 14230,
+      "extra_readout_parameters": 2049
+    },
+    {
+      "kind": "mixer",
+      "parameters": 14288,
+      "extra_readout_parameters": 2049
+    }
+  ],
+  "initial_output_equals_old_head_exactly": true,
+  "new_head_and_encoder_gradients_finite_nonzero": true,
+  "head_updates": true,
+  "reload_exact": true
+}

@@ -1,0 +1,159 @@
+{
+  "locked_utc": "2026-10-06T01:44:43.905956+00:00",
+  "hashes": {
+    "attention_s10/initial.pt": "0c14a48d38362f645d6e01948a9597cc8060a930a4c528cfc9ea8df997c51f7e",
+    "attention_s10/selected.pt": "264c16e9c4789b9e81167817c48cca39a52853e7ea4c75a1cba797ec183805df",
+    "attention_s10/history.json": "a5ffd5b169220ffcb7bf33316270d966ad9dca15d928a44aa24f7f89048a9889",
+    "attention_s10/result.json": "d77d67f2110dd8d0669bce8581ee1af40a61d284904416fec7c95b5c846ba1a4",
+    "attention_s10/selection_predictions.npz": "7df238a50ccfb85de594a4e2b243177c4ec697d42a28dea8dc18de41d9e1935d",
+    "mlp_s10/initial.pt": "b25d1a8be69cd449b8ccfc2b51e312908c0a66f50b743381847045b2695e4911",
+    "mlp_s10/selected.pt": "4453be133eb89b027293b4b69dc79770586af73232ba1a597078dd9798fd0bac",
+    "mlp_s10/history.json": "5e8d40191f0d7791394f29a1e1548ed9e06867b747282a5e1e36e4354be8675c",
+    "mlp_s10/result.json": "c30209d3bb29c7af26f87cc64c6dc5bff83937ed18e901caa89275191715acd9",
+    "mlp_s10/selection_predictions.npz": "9e7d1f79509fdb5a3797d1acefa78da4d710ee08bb8e75f86b8cb9e2a0b23bff",
+    "attention_s11/initial.pt": "84da4559fee50ce2591dda17cac1fcdcf61e270384cd5aadb7bd1b84abbffd44",
+    "attention_s11/selected.pt": "311bc5d6c41f70b38cd9b87fdf17fc066fa981b812204331cb74dc7fd322b0d3",
+    "attention_s11/history.json": "dbed2b0d9ae6ec2d3e0f075146d3725626cb26a71575c9597322f101a7b563fc",
+    "attention_s11/result.json": "6b32372f5cbb5fbab0829206323c98ac974702b296f0b787dcdb8613ae8220de",
+    "attention_s11/selection_predictions.npz": "a9a7a1dbd930875a95890e05b754a06560e6626fdf25c98b0d7065788cb22670",
+    "mlp_s11/initial.pt": "70479c23799d1f2d7bf1d3c9dc6b5da1181bfaad600c268edc4517c37fd7e46f",
+    "mlp_s11/selected.pt": "c0ffea87231d667ea94d89b5b857fe4ca2eda4cd0337a6e4ab48fb9f354d7860",
+    "mlp_s11/history.json": "8abeb76d9256a3061b006ec3b8fc0ab2a855b4fb53ed70576140a66a6c4995ab",
+    "mlp_s11/result.json": "c9cfdb5bb6bf5e8cc15fbc3f30f0b146e9835c1e823255113c7773dc276b5380",
+    "mlp_s11/selection_predictions.npz": "8643cbedc053a090f7be8f8021bbb081642e09c15dbf9d5fa9a0f9e6bffe7232",
+    "attention_s12/initial.pt": "8e135d29f0999badc7a907f0d659e038e083057e8c67463414559cd9d6d9ba6c",
+    "attention_s12/selected.pt": "12597c10c4ac087b715ab1b8dd7cfaa878a68c826a7fa7e54d6b104ff9e3b746",
+    "attention_s12/history.json": "c3c08a9d1f08f30709ef572658f02ba3e440b2f096d857b16986fd576217d116",
+    "attention_s12/result.json": "88e14802791c974c1c85ce937ee4f9d0b2f6979b106e4d771352f8a8ab423b42",
+    "attention_s12/selection_predictions.npz": "117444cb4326653c265b9dbe67d6e119e59c630d8b3eac1ca5636b0d6bc7e1d1",
+    "mlp_s12/initial.pt": "09dcaa8cefe87eda8ac048cd05166221520ac3161cd82f38b116468ec5335e1c",
+    "mlp_s12/selected.pt": "ee618cd365cff1a4a06da6750fe2c356c569709522697809d7cdd231ddf6403f",
+    "mlp_s12/history.json": "985f349c6dd1d84918e0921759d29613fe54cbac7fbae7a4a337603d7a40cea8",
+    "mlp_s12/result.json": "66ff46a1370356da38f2672fad4d2dfa04aa418aaedbd2a4c387545b0ea7e9c7",
+    "mlp_s12/selection_predictions.npz": "11482b6974cc96976b85103dc3edc5942c1d62722b0f6266a9c47465942d2a8a"
+  },
+  "records": [
+    {
+      "seed": 10,
+      "family": "attention",
+      "record": {
+        "family": "attention",
+        "seed": 10,
+        "selected_epoch": 7,
+        "selection_score": 0.5333454170332219,
+        "epochs": 24,
+        "updates": 5688,
+        "examples": 179712,
+        "actual_adam_steps": [
+          5688
+        ],
+        "selected_reload_exact": true,
+        "initial_predictions_zero": true,
+        "max_gradient": 10.833128929138184,
+        "elapsed_seconds": 555.164078541
+      }
+    },
+    {
+      "seed": 10,
+      "family": "mlp",
+      "record": {
+        "family": "mlp",
+        "seed": 10,
+        "selected_epoch": 10,
+        "selection_score": 0.5410231613071466,
+        "epochs": 24,
+        "updates": 5688,
+        "examples": 179712,
+        "actual_adam_steps": [
+          5688
+        ],
+        "selected_reload_exact": true,
+        "initial_predictions_zero": true,
+        "max_gradient": 9.000584602355957,
+        "elapsed_seconds": 540.846146625
+      }
+    },
+    {
+      "seed": 11,
+      "family": "attention",
+      "record": {
+        "family": "attention",
+        "seed": 11,
+        "selected_epoch": 12,
+        "selection_score": 0.49778095846870585,
+        "epochs": 24,
+        "updates": 5688,
+        "examples": 179712,
+        "actual_adam_steps": [
+          5688
+        ],
+        "selected_reload_exact": true,
+        "initial_predictions_zero": true,
+        "max_gradient": 7.909004211425781,
+        "elapsed_seconds": 561.750418667
+      }
+    },
+    {
+      "seed": 11,
+      "family": "mlp",
+      "record": {
+        "family": "mlp",
+        "seed": 11,
+        "selected_epoch": 8,
+        "selection_score": 0.5367328516722573,
+        "epochs": 24,
+        "updates": 5688,
+        "examples": 179712,
+        "actual_adam_steps": [
+          5688
+        ],
+        "selected_reload_exact": true,
+        "initial_predictions_zero": true,
+        "max_gradient": 7.744223594665527,
+        "elapsed_seconds": 543.855716334
+      }
+    },
+    {
+      "seed": 12,
+      "family": "attention",
+      "record": {
+        "family": "attention",
+        "seed": 12,
+        "selected_epoch": 13,
+        "selection_score": 0.551242113825751,
+        "epochs": 24,
+        "updates": 5688,
+        "examples": 179712,
+        "actual_adam_steps": [
+          5688
+        ],
+        "selected_reload_exact": true,
+        "initial_predictions_zero": true,
+        "max_gradient": 9.928744316101074,
+        "elapsed_seconds": 553.681295375
+      }
+    },
+    {
+      "seed": 12,
+      "family": "mlp",
+      "record": {
+        "family": "mlp",
+        "seed": 12,
+        "selected_epoch": 7,
+        "selection_score": 0.5820430043930932,
+        "epochs": 24,
+        "updates": 5688,
+        "examples": 179712,
+        "actual_adam_steps": [
+          5688
+        ],
+        "selected_reload_exact": true,
+        "initial_predictions_zero": true,
+        "max_gradient": 7.834967613220215,
+        "elapsed_seconds": 540.2889557919999
+      }
+    }
+  ],
+  "selection_scores_checked": 600,
+  "later_scored": false
+}

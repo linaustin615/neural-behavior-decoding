@@ -1,0 +1,21 @@
+{
+  "question": "Do anatomically nearby source cells add held-out-time target-cell prediction beyond a global population mean, compared with a within-depth coordinate shuffle?",
+  "status": "separate exploratory endpoint added while density trials run; does not replace or rescue the prespecified speed-decoding gate",
+  "targets": "128 fixed target neurons excluded from the union of all three 2048-cell source pools, selected by seed404",
+  "source_counts": [
+    128,
+    512,
+    2048
+  ],
+  "conditions": [
+    "global_only",
+    "real_neighbors",
+    "shuffled_neighbors"
+  ],
+  "neighbors": "up to8 closest source cells within the target depth plane, using x/y standardized by the same full-population axis scales; shuffled control reassigns x/y within each depth plane",
+  "features": "current-bin standardized source-population mean, plus current-bin mean of selected neighbors when applicable, plus intercept",
+  "fitting": "independent ordinary least squares per target using training times only, no hyperparameter search",
+  "evaluation": "same chronological validation/test times; source and target normalization fitted on training period",
+  "interpretation": "target cells have training labels; this is held-out-time reconstruction, not zero-shot unseen-cell transfer, not future prediction, and not a causal connectivity test",
+  "caveats": "shared optical contamination, cell-type/depth structure and other spatial confounds remain possible; three overlapping source samples from one recording, not biological replicates"
+}

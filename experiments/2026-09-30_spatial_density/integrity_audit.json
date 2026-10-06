@@ -1,0 +1,84 @@
+{
+  "eligible_cells": 11983,
+  "spatial_data": "recorded visual cortex, not whole brain",
+  "same_initialization_across_conditions": {
+    "real": "baa968a531311b663f2ad99b1ad322394765e4741ddbb35a711dec3ef9b9cf0e",
+    "shuffled": "baa968a531311b663f2ad99b1ad322394765e4741ddbb35a711dec3ef9b9cf0e",
+    "none": "baa968a531311b663f2ad99b1ad322394765e4741ddbb35a711dec3ef9b9cf0e",
+    "depth": "baa968a531311b663f2ad99b1ad322394765e4741ddbb35a711dec3ef9b9cf0e",
+    "within_depth_shuffled": "baa968a531311b663f2ad99b1ad322394765e4741ddbb35a711dec3ef9b9cf0e"
+  },
+  "coordinate_controls": {
+    "101_128": {
+      "full_shuffle_moved_fraction": 0.9921875,
+      "within_depth_shuffle_moved_fraction": 0.9140625,
+      "multiset_and_depth_preservation": true
+    },
+    "101_512": {
+      "full_shuffle_moved_fraction": 0.998046875,
+      "within_depth_shuffle_moved_fraction": 0.974609375,
+      "multiset_and_depth_preservation": true
+    },
+    "101_2048": {
+      "full_shuffle_moved_fraction": 0.99853515625,
+      "within_depth_shuffle_moved_fraction": 0.99169921875,
+      "multiset_and_depth_preservation": true
+    },
+    "202_128": {
+      "full_shuffle_moved_fraction": 0.9921875,
+      "within_depth_shuffle_moved_fraction": 0.90625,
+      "multiset_and_depth_preservation": true
+    },
+    "202_512": {
+      "full_shuffle_moved_fraction": 0.99609375,
+      "within_depth_shuffle_moved_fraction": 0.982421875,
+      "multiset_and_depth_preservation": true
+    },
+    "202_2048": {
+      "full_shuffle_moved_fraction": 0.99853515625,
+      "within_depth_shuffle_moved_fraction": 0.99658203125,
+      "multiset_and_depth_preservation": true
+    },
+    "303_128": {
+      "full_shuffle_moved_fraction": 1.0,
+      "within_depth_shuffle_moved_fraction": 0.9453125,
+      "multiset_and_depth_preservation": true
+    },
+    "303_512": {
+      "full_shuffle_moved_fraction": 0.998046875,
+      "within_depth_shuffle_moved_fraction": 0.984375,
+      "multiset_and_depth_preservation": true
+    },
+    "303_2048": {
+      "full_shuffle_moved_fraction": 0.9990234375,
+      "within_depth_shuffle_moved_fraction": 0.99462890625,
+      "multiset_and_depth_preservation": true
+    }
+  },
+  "data_checks": {
+    "train": {
+      "examples": 4129,
+      "target_and_window_alignment": true
+    },
+    "val": {
+      "examples": 1273,
+      "target_and_window_alignment": true
+    },
+    "test": {
+      "examples": 1323,
+      "target_and_window_alignment": true
+    }
+  },
+  "gradients_and_shapes": {
+    "real": true,
+    "shuffled": true,
+    "none": true,
+    "depth": true,
+    "within_depth_shuffled": true
+  },
+  "source_hashes_unchanged": {
+    "model.py": true,
+    "data.py": true,
+    "train.py": true
+  }
+}

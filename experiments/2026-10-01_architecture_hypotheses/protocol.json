@@ -1,0 +1,58 @@
+{
+  "created_utc": "2026-09-30T16:34:31.971970+00:00",
+  "question": "Do neuron IDs, latent compression, or absent local geometry explain weak spatial value?",
+  "dataset": "Stringer MP019; one repeatedly examined recording; exploratory",
+  "dataset_sha256": "b92f153a965a6a25153c125ac88245f887f310b50285dc5af11f0b544ac3ba32",
+  "n": 2048,
+  "pool_seeds": [
+    101,
+    202,
+    303,
+    404,
+    505,
+    606
+  ],
+  "optimizer_seeds": [
+    10,
+    11
+  ],
+  "conditions": [
+    "real",
+    "none",
+    "shuffled"
+  ],
+  "variants": [
+    "baseline",
+    "no_id",
+    "latent32",
+    "local"
+  ],
+  "budget": {
+    "new_fits": 108,
+    "reused_baseline_fits": 36,
+    "total_fits": 144,
+    "matched_repeats": 12
+  },
+  "training": "Same chronological splits, training-only activity/speed scaling, fixed eligible-population coordinate scaling, 8-bin window, width32, batch32, AdamW .001, cosine24 epochs, min12 and patience7, bounded validation checkpoint selection including untrained epoch0",
+  "architecture_changes": {
+    "no_id": "Disable and freeze per-cell identity embeddings; retain nonlinear activity and position embedding",
+    "latent32": "Expand 8 queries to32, preserve first8 and all shared initial weights; width remains32",
+    "local": "Add residual MLP of own activity and weighted neighbor-minus-own history before latent read-in; 8 nearest cells in standardized xyz; relative-distance Gaussian weights, global off-diagonal mean when no coordinates; original global path retained"
+  },
+  "local_details": "Coordinates are separately standardized axes, not calibrated physical distances; graph is directed, excludes self, row normalized; bandwidth is median 8th-neighbor distance for that coordinate set; MLP16->32 GELU->32 scaled .1; each coordinate control determines both its coordinate embeddings and its graph",
+  "primary_contrasts": [
+    "MSE(none)-MSE(real) within each architecture",
+    "MSE(shuffled)-MSE(real) within each architecture"
+  ],
+  "hypothesis_test": "For each variant, interaction = its spatial advantage minus baseline spatial advantage. Report both controls, absolute error, validation and test, raw and bounded metrics, paired wins and each pool. Larger spatial advantage alone can reflect damage to controls; also require real variant improve absolute MSE versus real baseline for useful spatial improvement.",
+  "interpretation": "Support is exploratory: positive spatial advantage against both controls and positive architecture interactions; robust support additionally requires intervals exclude zero and all six pool means positive. Practical support also requires real variant lower absolute error. Failure does not rule out all architectures. No threshold/seed/budget changes after outcomes.",
+  "uncertainty": "2000 crossed pool/seed bootstraps with paired circular time blocks100; report conditional95% intervals. Six overlapping pools and two training seeds from one animal are not biological replicates; no multiplicity-adjusted confirmatory claims.",
+  "controls": "All shared initial parameters exactly match baseline and coordinate conditions; same batch orders; no graph uses activity, labels, or unobserved coordinate mappings; no-ID shuffle may act as arbitrary cell identifier.",
+  "baseline_source": "/Users/austinlin/neuron_transformer/experiments/2026-09-30_position_replication",
+  "source_hashes": {
+    "model.py": "2297af73466e1c85ee5774dc10a44a2a03f7a6f48919a111b43a8cf6d7d86a40",
+    "data.py": "894d5aea4dd0ce6a139178b66b1f8a5538f1c4f015081153d4c11fa55d78b7bf",
+    "train.py": "0361d216cd75616ed07501a019f4837f7c0acf57f0cd2edecb0fc6728064d7f9"
+  },
+  "no_application_code_changes": true
+}

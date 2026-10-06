@@ -1,0 +1,152 @@
+{
+  "created_utc": "2026-10-06T02:48:12.274250+00:00",
+  "question": "Find a carefully optimized population transformer and compare it with independently tuned population MLP, strong local MLP and ridge; transformer superiority is an outcome, not an entry requirement.",
+  "authorization": "User explicitly requested more exhaustive optimization and use of available budget after accepting a three-family comparative project. This is a new optimization study, not an extension or reinterpretation of previous failed gates.",
+  "scope": "Local CPU, three workers with two threads each. No external paid compute. Application code remains unchanged. All four mice and earlier/later periods have historical reuse; no independent animal significance.",
+  "structural_grid": {
+    "width": [
+      16,
+      32,
+      64
+    ],
+    "depth": [
+      1,
+      2,
+      3
+    ],
+    "history": [
+      16,
+      32,
+      64
+    ],
+    "patch": [
+      2,
+      4
+    ],
+    "families": [
+      "attention",
+      "mlp"
+    ],
+    "neurons": 512,
+    "attention_heads": "2 atwidth16;4 otherwise",
+    "feedforward": "2xwidth",
+    "output": "last token plus2xhistory population mean/std features"
+  },
+  "screening": "108 configurations x2 chronological folds xseed101 =216 fits. Each12epochs of a24epoch cosine schedule; select epoch0..12. All grid combinations tested. Screening is limited-budget selection, not proof eliminated models cannot win after more training.",
+  "refinement": "For each population family promote its top2 structural configurations by mean fold score, tie by config hash. Evaluate all9 predeclared recipes on each. Also include its historical baseline configuration if absent. LocalMLP independently receives the same9 recipes. Each configuration uses2folds xseeds102,103. Maximum188 additional fits. No recipe grid changed after screening.",
+  "recipes": [
+    {
+      "lr": 0.0003,
+      "weight_decay": 0.001,
+      "dropout": 0.0,
+      "epochs": 48
+    },
+    {
+      "lr": 0.0003,
+      "weight_decay": 0.001,
+      "dropout": 0.1,
+      "epochs": 48
+    },
+    {
+      "lr": 0.0003,
+      "weight_decay": 0.01,
+      "dropout": 0.0,
+      "epochs": 48
+    },
+    {
+      "lr": 0.0003,
+      "weight_decay": 0.01,
+      "dropout": 0.1,
+      "epochs": 48
+    },
+    {
+      "lr": 0.001,
+      "weight_decay": 0.001,
+      "dropout": 0.0,
+      "epochs": 48
+    },
+    {
+      "lr": 0.001,
+      "weight_decay": 0.001,
+      "dropout": 0.1,
+      "epochs": 48
+    },
+    {
+      "lr": 0.001,
+      "weight_decay": 0.01,
+      "dropout": 0.0,
+      "epochs": 48
+    },
+    {
+      "lr": 0.001,
+      "weight_decay": 0.01,
+      "dropout": 0.1,
+      "epochs": 48
+    },
+    {
+      "lr": 0.001,
+      "weight_decay": 0.01,
+      "dropout": 0.05,
+      "epochs": 24
+    }
+  ],
+  "final": "Select lowest mean score over2folds x2seeds independently for populationT,populationMLP,localMLP. Freeze choices before opening original selection outcomes for these fits. Train each winner plus fixed original populationT and localMLP recipes and the MLP matched to the winning transformer configuration, deduplicating identical configs. Seeds201..206; maximum36final fits. Original selection segment chooses epoch only; no architecture selection there. Later scoring only after all selections are locked. Six seeds are not six animals.",
+  "maximum_new_neural_fits": 440,
+  "ridge": "Search histories16/32/64 and8regularizers10^-4..10^3 on both chronological folds, using exact train-only feature standardization and an unpenalized intercept. Choose history/penalty per mouse by mean fold score; fit4final regressions.192development solutions plus4final; no later tuning.",
+  "data": "Recover fixed512cell sequences from existing cached windows. Fold0 train first55%, validate after64bin gap until75%;fold1 train first75%, validate after64bin gap toend. Each segment requires64bins before first target, so every history uses identical endpoints. Fit-only neuron and target scaling recomputed independently per fold. Fullfit usesoriginaltraining segment and originalselection segment with the same64bin warmup. Existing neuronpanel and historical full-prefix unlabeled eligibility inherited and disclosed.",
+  "objective": "Equal-mouse training normalizedMSE, batch64, AdamW, clip1, cosine to10%lr. Selection uses mean across mice of physical-zero-boundedMSE divided by max(validationMSE of fitting-label-mean prediction,.05) in fold-normalized units. Hyperparameter rank is mean score overbothfolds(andbothrefinementseeds). These are development metrics, not new holdouts.",
+  "endpoints": "Later common endpoints begin at originalraw index87:24cached-sequence offset+63history warmup. All current models/ridge see the same endpoints. Primary metrics average individual-seed MSE/MAE within mouse, then equal-mouse relative effects; all distinct2seedpair errors secondary. Report raw tables,R2,individualseeds,leave-one-mouse-out and learning versus untrainedmean.",
+  "comparisons": "Primary optimization benefit: selectedT versus fixeddefaultpopulationT. Separately report versus independently optimizedMLPs,matched-configMLP,ridge andfixedlocalMLP. Practical gain criterion remains>=5%meanrelativeMSE,>=3/4mousemeans,>=two-thirds singles,no mouse>10%harm,nonnegativeMAEgain and>=two-thirds winsversusinitial. Check201-203,204-206,all6separately; pooledcannotrescue. If winner equalsbaseline, optimization gainiszero,notapass. Previous study failures stayfailures; projectvaliditydoesnotrequireTtobeoverallwinner.",
+  "stopping": "Complete this finite grid, refinement and fixedfinal comparison regardless of rankings. No appended configurations,seeds,mouse exclusions or threshold changes. This exhausts the listed grid,not all transformer architectures or all hyperparameter combinations.",
+  "source_hashes": {
+    "experiments/2026-10-06_systematic_optimization/common.py": "32fc050ad5fe7bce71cb9bc904c717f4ff6c00c530b85c483ebbe7560e7b779f",
+    "experiments/2026-10-06_systematic_optimization/models.py": "cbbd4fe261c43bd51668ef10774fc6cb85647bb31971488bb89af93efc97cfd2",
+    "experiments/2026-10-06_systematic_optimization/data.py": "0be6e5c28209e11475f76a53e21794ea45f9cf2bc7ff1e58bb1e6a467e8ed551",
+    "experiments/2026-10-06_systematic_optimization/fit.py": "6bbb1430a93bd08c559f44b99bbd458178acbd3ad13382c5c9e5249a09b72f4f",
+    "experiments/2026-10-06_systematic_optimization/plan.py": "34a87c190cd3de6726014cb2da81b82a90feb33308c4a43ad6d8115560f14b83",
+    "experiments/2026-10-06_systematic_optimization/pipeline.py": "5438b70d8d4754c3d571472930c3e7bd0de320f99d6f3f24c8bbf5410cd21f43",
+    "experiments/2026-10-06_systematic_optimization/evaluate.py": "f9564694132f10169047c7af8db859f9712581144f9e7aa7010fb5ff05441d33",
+    "experiments/2026-10-06_systematic_optimization/ridge.py": "9b89a5748cfae38d69d66f70f23610089040de07f3934344ff76115d6a7a972b",
+    "experiments/2026-10-06_systematic_optimization/check.py": "bd2ae676d3ab999bd50772f2bc36bd71aa4e10407894db072a5b1ef2c2085105",
+    "experiments/2026-10-06_systematic_optimization/extra_checks.py": "93b323bce3b3b1e0210d40e14b0b76a9814f14003d22e9cb9eb5f157d4d2af84",
+    "experiments/2026-10-06_systematic_optimization/selfcheck.json": "b7bec7d57e04ca59ccd564d76744c68782a0a9166becd232e6e2ea54fa4c9d29",
+    "experiments/2026-10-06_systematic_optimization/ridge_selfcheck.json": "4d0f0af13d0f1a27fa2d19b9d2d412d5e2665434addbc8b16ca52844e574c82a",
+    "experiments/2026-10-06_systematic_optimization/prepared.json": "afe6b8d1ccfd17bfe8de59ed4720743e75c2594c9228619845d7c65eed9ec954",
+    "train.py": "0361d216cd75616ed07501a019f4837f7c0acf57f0cd2edecb0fc6728064d7f9",
+    "model.py": "2297af73466e1c85ee5774dc10a44a2a03f7a6f48919a111b43a8cf6d7d86a40",
+    "data.py": "894d5aea4dd0ce6a139178b66b1f8a5538f1c4f015081153d4c11fa55d78b7bf",
+    "experiments/2026-10-05_neuron_panel_pilot/columns.npy": "2df7a0023b3066f03285ba7edddd46bc0bb5633426813cadd34ba0598bd84234",
+    "experiments/2026-10-05_larger_panel/models.py": "b7d2a42beee6cf847fafee785357faffc4b86d07867ca04a28b781f3036535d1",
+    "experiments/2026-10-03_shared_behavior/models.py": "568205d0f030bd088bfc2f7f62ab61425e04a8e93b975a9796239e74bccf2c12",
+    "experiments/2026-10-03_dynamics_baseline/models.py": "f68f5e6fd8aebbdba08525eb3d063ee1e3139a3f0a55b3e7ac6e8aa5a6693aac",
+    "experiments/2026-10-03_fair_comparison/MP030/train_x.npy": "d2ba2137a6b045e848d11b0c2725b9145401018bfb63d9142afc4b7e3ac44004",
+    "experiments/2026-10-03_fair_comparison/MP030/train_y.npy": "8919c96993afba4c59dabb8e205254fe7377bcd7d1a7b23025b270cae3c79636",
+    "experiments/2026-10-03_fair_comparison/MP030/selection_x.npy": "271187aca32eb2cc82dfcb5eb9c7b3cf89ec64059efc06d019b9589b7988b92a",
+    "experiments/2026-10-03_fair_comparison/MP030/selection_y.npy": "257e83052d4a472c5e9ec34d13662736909a3c511e8dd031cd0281915b9f5f36",
+    "experiments/2026-10-03_fair_comparison/MP030/statistics.npz": "dde426f33493b02efc35bab5b32c4cc6c1c8a9c7db17d64d8ebc2ad90008ca19",
+    "experiments/2026-10-03_fair_comparison/MP030/metadata.json": "152fca303e022803e92c127c36c10983f459d562cb700bfd9bf8a73b94888121",
+    "experiments/2026-10-03_fair_comparison/MP030/later_raw.npz": "8a9a79bd9da7681ea4cc3ad92b2f99ec4ce6326b9d4460275835eea1b94b76c7",
+    "experiments/2026-10-03_fair_comparison/MP032/train_x.npy": "ad78c18410a978cb8fc9c77f203495e7fad8652b4ce354b2e88cfb519193e2fd",
+    "experiments/2026-10-03_fair_comparison/MP032/train_y.npy": "8adee2afb4033dfef3a2ae4fd3ad2861498ac79d18a408241304d8a5252767c6",
+    "experiments/2026-10-03_fair_comparison/MP032/selection_x.npy": "6c5ab2801ccdef6d56bfa08eb7012484d8d1d6e39c5af4234d2c5fa4cd9659fa",
+    "experiments/2026-10-03_fair_comparison/MP032/selection_y.npy": "9f79d73e996d985308e38c4b0b915cbbeb72a77568c7d2db17c1b7770c170a92",
+    "experiments/2026-10-03_fair_comparison/MP032/statistics.npz": "fa7bbc7af120ffd33f18b27547ef868036de9eb627321bd4139e1ef7bf5c5954",
+    "experiments/2026-10-03_fair_comparison/MP032/metadata.json": "5f9f1394dab67398548bd1c2f19b4af918d02c1713fb0bec79baae6c0f94ea6e",
+    "experiments/2026-10-03_fair_comparison/MP032/later_raw.npz": "31fb276252fe99f572d38e94cbc962edc3305d4bc552407e3c22b77a2ca12205",
+    "experiments/2026-10-03_fair_comparison/MP033/train_x.npy": "e33d4d9f9b84e391e4f639afda7ad305e3ac704dc288675b17bf5a14f5f7755c",
+    "experiments/2026-10-03_fair_comparison/MP033/train_y.npy": "b2f65388a14f33d903bf9731266ec55541f5d526557baf23e03e9609ac8aae7e",
+    "experiments/2026-10-03_fair_comparison/MP033/selection_x.npy": "17435c6bf02bb8eba0883937fbf9063b18a3e1de65ecb233c2354967e57c59c8",
+    "experiments/2026-10-03_fair_comparison/MP033/selection_y.npy": "3ef53c795208a7e72a96d008a6ab45cfc6d68b77a5532c337b78923c2d7ca405",
+    "experiments/2026-10-03_fair_comparison/MP033/statistics.npz": "3618dafbb7acd40d1c14d6d40935799dcaa2c551941c5f6af36b5b392fa7e8cc",
+    "experiments/2026-10-03_fair_comparison/MP033/metadata.json": "68d39cfbffde3cdfde0b255ae7fc6092e97254c86890b52fca856fafdb98722c",
+    "experiments/2026-10-03_fair_comparison/MP033/later_raw.npz": "ae659b194d6dec1036ee4c14446f6cf2da770ce2b14950b488cc65fac721a395",
+    "experiments/2026-10-03_fair_comparison/MP034/train_x.npy": "36fe7fbc2928ca3881bcefba3f0fab5c06824dc4318d42b0551edfdb96e33074",
+    "experiments/2026-10-03_fair_comparison/MP034/train_y.npy": "b3fd29a2ca6d5d20a5af0aa3ffe0896f03c3a0e9b71960e70e3b6a530db20269",
+    "experiments/2026-10-03_fair_comparison/MP034/selection_x.npy": "2688b1af16f33f70b215b40ee459cb13dd4ab042788dfb9ae6d56f1dbe150f9d",
+    "experiments/2026-10-03_fair_comparison/MP034/selection_y.npy": "29324622bd1c22e1cf030db65641bbfe6266f43408ec850d68efcc9c381260e1",
+    "experiments/2026-10-03_fair_comparison/MP034/statistics.npz": "8783775612a7d09f73ec918f74cd1f6f187ceacfceb6d61c2fba704d6b5317a4",
+    "experiments/2026-10-03_fair_comparison/MP034/metadata.json": "c29d80d72630b4e6abc58e77914cf58ba0da3940213c3925d0c09d8f01381afe",
+    "experiments/2026-10-03_fair_comparison/MP034/later_raw.npz": "04edd4b945f186f582e50ec123a6425abe11e7be7d4646dc5ee764e618bf97b3",
+    "experiments/2026-10-06_systematic_optimization/screen_jobs.json": "783cf57dbb0748215bf7e756474fa1364e7efa88185d4bf9bbb94e3a5dc89593"
+  }
+}

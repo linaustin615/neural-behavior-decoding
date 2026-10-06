@@ -1,0 +1,195 @@
+{
+  "mouse": "MP033",
+  "file": "spont_M170717_MP033_20170818.mat",
+  "publisher_filename": "spont_M170717_MP033_2017-08-18.mat",
+  "bytes": 683982833,
+  "publisher_md5": "844d2b0753b9e7761b1fe5d61f3b81a4",
+  "computed_md5": "844d2b0753b9e7761b1fe5d61f3b81a4",
+  "sha256": "46e8e3dbb9f048e42595859a301f4856f196d7570ddb943d1c3c303668ffbd68",
+  "neurons": 10640,
+  "time_bins": 10463,
+  "activity_dtype": "float32",
+  "coordinates_shape": [
+    10640,
+    3
+  ],
+  "run_speed_shape": [
+    10463
+  ],
+  "db_mouse": "M170717_MP033",
+  "db_date": "2017-08-18",
+  "nplanes": 12,
+  "experiment_name": [
+    "spont_black",
+    "spont_black"
+  ],
+  "plane_depth_mapping": {
+    "2": [
+      70
+    ],
+    "3": [
+      105
+    ],
+    "4": [
+      140
+    ],
+    "5": [
+      175
+    ],
+    "6": [
+      210
+    ],
+    "7": [
+      245
+    ],
+    "8": [
+      280
+    ],
+    "9": [
+      315
+    ],
+    "10": [
+      350
+    ],
+    "11": [
+      385
+    ],
+    "12": [
+      420
+    ]
+  },
+  "duplicate_xyz_rows": 0,
+  "training_constant_cells": 4,
+  "training_eligible_cells": 10636,
+  "behavior_fields": {
+    "face": {
+      "motionSVD": {
+        "shape": [
+          10463,
+          1000
+        ],
+        "dtype": "float64",
+        "nonfinite": 0
+      },
+      "motionMask": {
+        "shape": [
+          240,
+          320,
+          1000
+        ],
+        "dtype": "float32",
+        "nonfinite": 0
+      },
+      "avgframe": {
+        "shape": [
+          240,
+          320
+        ],
+        "dtype": "float32",
+        "nonfinite": 0
+      }
+    },
+    "whisker": {
+      "motionSVD": {
+        "shape": [
+          10463,
+          1000
+        ],
+        "dtype": "float64",
+        "nonfinite": 0
+      },
+      "motionMask": {
+        "shape": [
+          51,
+          66,
+          1000
+        ],
+        "dtype": "float32",
+        "nonfinite": 0
+      }
+    },
+    "eye": {
+      "motionSVD": {
+        "shape": [
+          10463,
+          1000
+        ],
+        "dtype": "float64",
+        "nonfinite": 0
+      }
+    },
+    "pupil": {
+      "area": {
+        "shape": [
+          10463
+        ],
+        "dtype": "float64",
+        "nonfinite": 0
+      },
+      "com": {
+        "shape": [
+          10463,
+          2
+        ],
+        "dtype": "float64",
+        "nonfinite": 220
+      }
+    },
+    "runSpeed": {
+      "shape": [
+        10463
+      ],
+      "dtype": "float64",
+      "nonfinite": 0
+    },
+    "runAngle": {
+      "shape": [
+        0
+      ],
+      "dtype": "uint8",
+      "nonfinite": 0
+    }
+  },
+  "timing_fields": [],
+  "candidate_triple_binning": {
+    "averaging_factor": 3,
+    "complete_bins": 3487,
+    "trailing_frames_to_drop": 2,
+    "training_end": 2042,
+    "training_constant_cells": 4,
+    "training_eligible_cells": 10636,
+    "training_speed_varies": true,
+    "status": "feasibility check only; sample timing and final preprocessing require a frozen protocol"
+  },
+  "checks": {
+    "size_matches_publisher": true,
+    "md5_matches_publisher": true,
+    "full_matlab_decode": true,
+    "coordinates_match_neuron_count": true,
+    "running_matches_time_count": true,
+    "identity_matches_filename": true,
+    "finite_activity": true,
+    "finite_coordinates": true,
+    "finite_speed": true,
+    "speed_nonnegative": true,
+    "stat_rows_match": true,
+    "xy_matches_twice_roi_medians": true,
+    "one_depth_per_plane": true,
+    "at_least_2048_training_variable_cells": true,
+    "training_speed_varies": true,
+    "triple_binning_has_2048_eligible_cells": true,
+    "triple_binning_training_speed_varies": true
+  },
+  "blockers": [],
+  "passed": true,
+  "seconds": 3.2456345829999993,
+  "alignment_status": "matching supplied array lengths; absolute time synchronization not independently reconstructible without acquisition timestamps",
+  "coordinate_status": "ROI-median and imaging-plane consistency checked; common atlas/physical calibration not established",
+  "activity_sign": {
+    "negative_count": 0,
+    "minimum": 0.0,
+    "maximum": 6696.56982421875,
+    "strictly_nonnegative": true,
+    "interpretation": "tiny signed residuals in checksum-verified published files; preserved unchanged; not a corruption blocker"
+  }
+}

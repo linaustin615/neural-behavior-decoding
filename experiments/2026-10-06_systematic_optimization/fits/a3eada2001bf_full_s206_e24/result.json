@@ -1,0 +1,38 @@
+{
+  "job": {
+    "config": {
+      "family": "attention",
+      "width": 16,
+      "depth": 1,
+      "history": 32,
+      "patch": 4,
+      "dropout": 0.05,
+      "lr": 0.001,
+      "weight_decay": 0.01,
+      "epochs": 24
+    },
+    "split": "full",
+    "seed": 206,
+    "epochs": 24
+  },
+  "config_id": "a3eada2001bf",
+  "selected_epoch": 2,
+  "score": 0.25092432652370805,
+  "mouse_mse": [
+    0.22447997669730096,
+    0.010559186935284536,
+    0.5228993852555246,
+    0.26687523196757257
+  ],
+  "updates": 2808,
+  "examples": 176640,
+  "adam_steps": [
+    2808
+  ],
+  "parameters": 41633,
+  "seconds": 32.248178542000005,
+  "independent_selection_errors": 100,
+  "selected_reload_exact": true,
+  "selected_sha256": "ba85d0bc5b8d8e7d7e93409452755567fcdfd4a919eb9d0dfc8051d3ed18ab0c",
+  "initial_sha256": "dd45428a1a714476d623af7a4ece4fbb47d66f1d313c67e7ee5619a8c311f24c"
+}

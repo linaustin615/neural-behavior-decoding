@@ -1,0 +1,112 @@
+{
+  "locked_utc": "2026-10-04T19:51:10.553903+00:00",
+  "records": [
+    {
+      "family": "attention",
+      "seed": 13,
+      "selected_epoch": 16,
+      "selection_score": 0.7953832438387513,
+      "epochs": 24,
+      "updates": 5688,
+      "examples": 179712,
+      "actual_adam_steps": [
+        5688
+      ],
+      "selected_reload_exact": true,
+      "initial_predictions_zero": true,
+      "max_gradient": 24.936491012573242,
+      "elapsed_seconds": 317.529377375
+    },
+    {
+      "family": "attention",
+      "seed": 14,
+      "selected_epoch": 13,
+      "selection_score": 0.8941477729276055,
+      "epochs": 24,
+      "updates": 5688,
+      "examples": 179712,
+      "actual_adam_steps": [
+        5688
+      ],
+      "selected_reload_exact": true,
+      "initial_predictions_zero": true,
+      "max_gradient": 24.991100311279297,
+      "elapsed_seconds": 317.32638625
+    },
+    {
+      "family": "attention",
+      "seed": 15,
+      "selected_epoch": 16,
+      "selection_score": 0.8364402655187937,
+      "epochs": 24,
+      "updates": 5688,
+      "examples": 179712,
+      "actual_adam_steps": [
+        5688
+      ],
+      "selected_reload_exact": true,
+      "initial_predictions_zero": true,
+      "max_gradient": 20.872507095336914,
+      "elapsed_seconds": 316.045336334
+    },
+    {
+      "family": "mlp",
+      "seed": 13,
+      "selected_epoch": 9,
+      "selection_score": 0.8376228481936403,
+      "epochs": 24,
+      "updates": 5688,
+      "examples": 179712,
+      "actual_adam_steps": [
+        5688
+      ],
+      "selected_reload_exact": true,
+      "initial_predictions_zero": true,
+      "max_gradient": 24.14791488647461,
+      "elapsed_seconds": 124.33098999999999
+    },
+    {
+      "family": "mlp",
+      "seed": 14,
+      "selected_epoch": 15,
+      "selection_score": 0.9301392368898864,
+      "epochs": 24,
+      "updates": 5688,
+      "examples": 179712,
+      "actual_adam_steps": [
+        5688
+      ],
+      "selected_reload_exact": true,
+      "initial_predictions_zero": true,
+      "max_gradient": 13.623797416687012,
+      "elapsed_seconds": 124.29239674999997
+    },
+    {
+      "family": "mlp",
+      "seed": 15,
+      "selected_epoch": 11,
+      "selection_score": 0.851083738247574,
+      "epochs": 24,
+      "updates": 5688,
+      "examples": 179712,
+      "actual_adam_steps": [
+        5688
+      ],
+      "selected_reload_exact": true,
+      "initial_predictions_zero": true,
+      "max_gradient": 17.272998809814453,
+      "elapsed_seconds": 124.289290666
+    }
+  ],
+  "hashes": {
+    "attention_s13/selected.pt": "f34db675841a4e395d2ee019d95432c474c906b3507fc5bae91a27ad735beb5c",
+    "attention_s14/selected.pt": "4b6180ed169e49b7ea904a8a89f0f84de479e7d3ddb8447e2d25b1ad71309518",
+    "attention_s15/selected.pt": "add990def313677d6f5e6eb52f034770c11085908a8eede38b66eef286dcb2f1",
+    "mlp_s13/selected.pt": "4acb744444a5f8e9e9c21ede313f8908c910c29e65780dcd718314406b954b86",
+    "mlp_s14/selected.pt": "c388cc391647f7e027888cfe086d1b0772b650db4ac9bbce1d187d36e0dfbc35",
+    "mlp_s15/selected.pt": "5c6fc916606493ff6ec70c08220274bf95185b8d52f9ca1fa5eafc755a281364"
+  },
+  "selection_scores_checked": 600,
+  "matched_batches": true,
+  "new_later_scored": false
+}

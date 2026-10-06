@@ -1,0 +1,253 @@
+{
+  "name": "latent_n512_no_positions",
+  "seed": 0,
+  "phase": "ablation",
+  "kind": "neural",
+  "config": {
+    "n": 512,
+    "window": 8,
+    "width": 32,
+    "lr": 0.001,
+    "epochs": 24,
+    "schedule": "cosine",
+    "temporal": "mlp",
+    "readout": "mean",
+    "clip": 1.0,
+    "family": "latent",
+    "latents": 8,
+    "no_positions": true
+  },
+  "parameters": 31969,
+  "validation": {
+    "mse": 0.37757287375317106,
+    "raw_mse": 0.37763815960303965,
+    "rmse_speed_units": 4.561033116830101,
+    "mae_speed_units": 2.483534267872028,
+    "r2": 0.7863933260258658,
+    "negative_prediction_fraction": 0.06598586017282011
+  },
+  "untrained": {
+    "mse": 2.205180072857247,
+    "raw_mse": 2.205180072857247,
+    "rmse_speed_units": 11.022620684775042,
+    "mae_speed_units": 9.960744752715886,
+    "r2": -0.24755037668571278,
+    "negative_prediction_fraction": 0.0
+  },
+  "best_epoch": 11,
+  "epochs_run": 18,
+  "history": [
+    {
+      "epoch": 0,
+      "mse": 2.205180072857247,
+      "raw_mse": 2.205180072857247,
+      "rmse_speed_units": 11.022620684775042,
+      "mae_speed_units": 9.960744752715886,
+      "r2": -0.24755037668571278,
+      "negative_prediction_fraction": 0.0
+    },
+    {
+      "epoch": 1,
+      "training_loss_during_epoch": 1.0409772054613229,
+      "lr": 0.001,
+      "mse": 1.8124878055877263,
+      "raw_mse": 1.8124878055877263,
+      "rmse_speed_units": 9.993103363275798,
+      "mae_speed_units": 6.384884893171391,
+      "r2": -0.025390113229817324,
+      "negative_prediction_fraction": 0.0
+    },
+    {
+      "epoch": 2,
+      "training_loss_during_epoch": 1.0313123790910397,
+      "lr": 0.0009961501876182147,
+      "mse": 2.02029621352446,
+      "raw_mse": 2.02029621352446,
+      "rmse_speed_units": 10.550434796577294,
+      "mae_speed_units": 5.417871831726516,
+      "r2": -0.1429548694104854,
+      "negative_prediction_fraction": 0.0
+    },
+    {
+      "epoch": 3,
+      "training_loss_during_epoch": 0.9789609984628049,
+      "lr": 0.0009846666218300806,
+      "mse": 1.8131923760651296,
+      "raw_mse": 1.8131923760651296,
+      "rmse_speed_units": 9.995045489857189,
+      "mae_speed_units": 6.022948827014134,
+      "r2": -0.02578871431247043,
+      "negative_prediction_fraction": 0.0
+    },
+    {
+      "epoch": 4,
+      "training_loss_during_epoch": 0.7322062073723402,
+      "lr": 0.0009657457896300789,
+      "mse": 0.6467360985824994,
+      "raw_mse": 0.6467360985824994,
+      "rmse_speed_units": 5.969340935822297,
+      "mae_speed_units": 4.223850532792661,
+      "r2": 0.6341179238222346,
+      "negative_prediction_fraction": 0.0
+    },
+    {
+      "epoch": 5,
+      "training_loss_during_epoch": 0.3541835326887261,
+      "lr": 0.0009397114317029974,
+      "mse": 0.45036230029957885,
+      "raw_mse": 0.45036392792373237,
+      "rmse_speed_units": 4.98131318141424,
+      "mae_speed_units": 3.0930649679821114,
+      "r2": 0.7452137064453896,
+      "negative_prediction_fraction": 0.002356637863315004
+    },
+    {
+      "epoch": 6,
+      "training_loss_during_epoch": 0.26816636598205473,
+      "lr": 0.0009070090031310558,
+      "mse": 0.4424792349013745,
+      "raw_mse": 0.4473430678716217,
+      "rmse_speed_units": 4.937524687931358,
+      "mae_speed_units": 2.365938992990516,
+      "r2": 0.7496734425585612,
+      "negative_prediction_fraction": 0.4870384917517675
+    },
+    {
+      "epoch": 7,
+      "training_loss_during_epoch": 0.2632092939973731,
+      "lr": 0.0008681980515339464,
+      "mse": 0.4942386770213422,
+      "raw_mse": 0.494238683666559,
+      "rmse_speed_units": 5.218325882044118,
+      "mae_speed_units": 2.992592823122981,
+      "r2": 0.7203912481887647,
+      "negative_prediction_fraction": 0.0007855459544383347
+    },
+    {
+      "epoch": 8,
+      "training_loss_during_epoch": 0.2376477726859005,
+      "lr": 0.0008239426430539244,
+      "mse": 0.4091777285991327,
+      "raw_mse": 0.4091777285991327,
+      "rmse_speed_units": 4.748088732514252,
+      "mae_speed_units": 2.971368724749244,
+      "r2": 0.7685133129360099,
+      "negative_prediction_fraction": 0.0
+    },
+    {
+      "epoch": 9,
+      "training_loss_during_epoch": 0.2135177971765879,
+      "lr": 0.0007750000000000001,
+      "mse": 0.4278729581843357,
+      "raw_mse": 0.4278729581843357,
+      "rmse_speed_units": 4.85534676958037,
+      "mae_speed_units": 3.207999446089785,
+      "r2": 0.7579367432497865,
+      "negative_prediction_fraction": 0.0
+    },
+    {
+      "epoch": 10,
+      "training_loss_during_epoch": 0.20857179368428613,
+      "lr": 0.0007222075445642905,
+      "mse": 0.6341513621782827,
+      "raw_mse": 0.63416842179452,
+      "rmse_speed_units": 5.91097738425733,
+      "mae_speed_units": 2.7867440099598393,
+      "r2": 0.6412375658119377,
+      "negative_prediction_fraction": 0.03220738413197172
+    },
+    {
+      "epoch": 11,
+      "training_loss_during_epoch": 0.20612712308460407,
+      "lr": 0.0006664685702961343,
+      "mse": 0.37757287375317106,
+      "raw_mse": 0.37763815960303965,
+      "rmse_speed_units": 4.561033116830101,
+      "mae_speed_units": 2.483534267872028,
+      "r2": 0.7863933260258658,
+      "negative_prediction_fraction": 0.06598586017282011
+    },
+    {
+      "epoch": 12,
+      "training_loss_during_epoch": 0.19893749080960146,
+      "lr": 0.0006087367864990234,
+      "mse": 0.6021306703954192,
+      "raw_mse": 0.6031446742824781,
+      "rmse_speed_units": 5.759810662783444,
+      "mae_speed_units": 2.5647443431688917,
+      "r2": 0.6593528329446071,
+      "negative_prediction_fraction": 0.4595443833464258
+    },
+    {
+      "epoch": 13,
+      "training_loss_during_epoch": 0.19705534826167476,
+      "lr": 0.00055,
+      "mse": 0.49890042040194904,
+      "raw_mse": 0.49890042040194904,
+      "rmse_speed_units": 5.2428781917855,
+      "mae_speed_units": 2.638937871748235,
+      "r2": 0.7177539308185996,
+      "negative_prediction_fraction": 0.0
+    },
+    {
+      "epoch": 14,
+      "training_loss_during_epoch": 0.18456144026778576,
+      "lr": 0.0004912632135009768,
+      "mse": 0.4553844207249154,
+      "raw_mse": 0.4554563437326052,
+      "rmse_speed_units": 5.009010213955376,
+      "mae_speed_units": 2.3510671612448593,
+      "r2": 0.7423725107056368,
+      "negative_prediction_fraction": 0.15082482325216026
+    },
+    {
+      "epoch": 15,
+      "training_loss_during_epoch": 0.17799192607821435,
+      "lr": 0.0004335314297038657,
+      "mse": 0.4481072155200844,
+      "raw_mse": 0.44810849240525763,
+      "rmse_speed_units": 4.968826145019202,
+      "mae_speed_units": 2.5357656332611764,
+      "r2": 0.7464894897252881,
+      "negative_prediction_fraction": 0.007069913589945012
+    },
+    {
+      "epoch": 16,
+      "training_loss_during_epoch": 0.1741426710673642,
+      "lr": 0.0003777924554357097,
+      "mse": 0.4128129017031355,
+      "raw_mse": 0.41281548747788427,
+      "rmse_speed_units": 4.769133326904489,
+      "mae_speed_units": 2.8994972160421733,
+      "r2": 0.7664567636178672,
+      "negative_prediction_fraction": 0.012568735271013355
+    },
+    {
+      "epoch": 17,
+      "training_loss_during_epoch": 0.16509973991289645,
+      "lr": 0.0003250000000000001,
+      "mse": 0.40093102212941634,
+      "raw_mse": 0.4009464740427123,
+      "rmse_speed_units": 4.699997895510475,
+      "mae_speed_units": 2.5563032960866328,
+      "r2": 0.7731787739971471,
+      "negative_prediction_fraction": 0.04556166535742341
+    },
+    {
+      "epoch": 18,
+      "training_loss_during_epoch": 0.1581769254456481,
+      "lr": 0.00027605735694607574,
+      "mse": 0.4878467665334986,
+      "raw_mse": 0.48784974727845554,
+      "rmse_speed_units": 5.184472178855827,
+      "mae_speed_units": 2.413258879223319,
+      "r2": 0.7240073838663007,
+      "negative_prediction_fraction": 0.0204241948153967
+    }
+  ],
+  "seconds": 24.865368874999987,
+  "train_examples": 4129,
+  "val_examples": 1273,
+  "checkpoint": "ablation_latent_n512_no_positions_s0.pt",
+  "predictions": "ablation_latent_n512_no_positions_s0.npz"
+}

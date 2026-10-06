@@ -1,0 +1,113 @@
+{
+  "frozen_utc": "2026-10-04T20:46:39.125763+00:00",
+  "mice": [
+    "MP030",
+    "MP032",
+    "MP033",
+    "MP034"
+  ],
+  "question": "Does a simple neural-only decoder predict concurrent one-bin speed change well enough to justify a speed-change supervision experiment?",
+  "data": "unchanged128 neurons x32 neural bins; full raw flattened4096 features; original training-only normalization; no behavioral input or coordinates",
+  "target": "signed difference speed[t]-speed[t-1] in training-standardized speed units; current neural history through t is available; concurrent decoding, not forecasting or physical acceleration",
+  "bounds": {
+    "MP030": {
+      "train": [
+        1,
+        2386
+      ],
+      "tune": [
+        1,
+        337
+      ],
+      "score": [
+        369,
+        675
+      ]
+    },
+    "MP032": {
+      "train": [
+        1,
+        2024
+      ],
+      "tune": [
+        1,
+        277
+      ],
+      "score": [
+        309,
+        555
+      ]
+    },
+    "MP033": {
+      "train": [
+        1,
+        1538
+      ],
+      "tune": [
+        1,
+        196
+      ],
+      "score": [
+        228,
+        393
+      ]
+    },
+    "MP034": {
+      "train": [
+        1,
+        1540
+      ],
+      "tune": [
+        1,
+        196
+      ],
+      "score": [
+        228,
+        393
+      ]
+    }
+  },
+  "first_sample": "omit first target in each independently stored segment; never difference across segment gaps",
+  "fit": "per-mouse ridge on complete original training prefix, training-only feature and target centering, objective mean squared error +lambda*weight norm squared; unpenalized intercept",
+  "lambdas": [
+    0.001,
+    0.01,
+    0.1,
+    1.0,
+    10.0
+  ],
+  "selection": "choose each arm lambda by first development half MSE; ties use first grid entry; no refit; lock choices before scoring second half after32-window gap",
+  "control": "fit identical ridge candidates with training change targets circularly shifted by floor(train_count/2); select its lambda separately against true tune labels; one fixed control, not a permutation significance test",
+  "references": [
+    "zero predicted change",
+    "training mean change"
+  ],
+  "budget": "4 shared eigendecompositions; 4mice x2target alignments x5regularizers =40 candidate ridge solutions; zero neural fits and zero neural inference",
+  "practical_gate": "aligned ridge >=5% equal-mouse mean relative MSE gain vszero and >=3/4 mouse wins, no mouse >10% harm; positive mean gain vs misaligned control with >=3/4 mouse wins",
+  "secondary": "report MAE, all per-mouse errors, selected penalties, prediction-target correlation, raw denominators, leave-one-mouse-out means; MAE is not a gate",
+  "stopping": "if gate fails, do not launch the neural auxiliary-loss experiment or expand features/lags/regularizers to rescue it; if gate passes, use it only as exploratory feasibility, not transformer superiority",
+  "limitations": "historically reused cohort and earlier model-development data; current new ridge weights never fit score labels, but this is not independent confirmation; four mice, not windows, are replication units",
+  "final_evaluation": "do not open later predictions or raw final evaluation recordings in this study",
+  "input_hashes": {
+    "experiments/2026-10-04_speed_change_feasibility/run.py": "f6b838624d747fb2d075b4524b96cba257e01e5f6a8a93db88a6657d546e930c",
+    "model.py": "2297af73466e1c85ee5774dc10a44a2a03f7a6f48919a111b43a8cf6d7d86a40",
+    "train.py": "0361d216cd75616ed07501a019f4837f7c0acf57f0cd2edecb0fc6728064d7f9",
+    "data.py": "894d5aea4dd0ce6a139178b66b1f8a5538f1c4f015081153d4c11fa55d78b7bf",
+    "experiments/2026-10-03_dynamics_baseline/MP030/train_x.npy": "162f592e1e65c731e7aa7461e1512ac161b5f8abfd53d13f6c6a6e2355583aeb",
+    "experiments/2026-10-03_dynamics_baseline/MP030/train_y.npy": "6b3bed5964d3cee92be4d37e6e585f1096fb33e5ec6401d753b72d9a0e8a8d19",
+    "experiments/2026-10-03_dynamics_baseline/MP030/selection_x.npy": "c39113dc5cbe9749acc55d5a12bb4e8ea2f73d474fb691c0e38b493c961292ef",
+    "experiments/2026-10-03_dynamics_baseline/MP030/selection_y.npy": "80b26de2780aaf5484431383bbae200146113bea9c0e31fc45b67df9f2ea6c91",
+    "experiments/2026-10-03_dynamics_baseline/MP032/train_x.npy": "3343b84c8ccfe775edfea64937dd309f17d0e659ffe87ed7f4f434a6e630f907",
+    "experiments/2026-10-03_dynamics_baseline/MP032/train_y.npy": "62e691c8fefbfcdf51d52f129475786e6143abbe83848560177f1a27d08e33c9",
+    "experiments/2026-10-03_dynamics_baseline/MP032/selection_x.npy": "6a74a6a51441486496b028eaf1548ba57c9ed9a5f54a39f06e23e224f23e11ba",
+    "experiments/2026-10-03_dynamics_baseline/MP032/selection_y.npy": "9e71c50a3f4df98ae7bba1a9bba553526e42bf7aed404a44dc0891fe2042fea5",
+    "experiments/2026-10-03_dynamics_baseline/MP033/train_x.npy": "7addec2cb2da5126af0106f9834eeb5d25cf4b6065b6ac15165c4746fc7009d1",
+    "experiments/2026-10-03_dynamics_baseline/MP033/train_y.npy": "2d76a262b41e675b949c39a0145b73f15d07ecf4d260fca92ae19009e8e13899",
+    "experiments/2026-10-03_dynamics_baseline/MP033/selection_x.npy": "d185cc0c39b4496a2d3101a8c22337476c88d1f05ffb42b44c59031a665c1acc",
+    "experiments/2026-10-03_dynamics_baseline/MP033/selection_y.npy": "81a66b745ecf99d549d3bb8ee867678c4d25292179869e4a03742028b09c360c",
+    "experiments/2026-10-03_dynamics_baseline/MP034/train_x.npy": "78a8624143594722ffd7fcf060ea36fd248517921dca54d65d1c3a4363b669ca",
+    "experiments/2026-10-03_dynamics_baseline/MP034/train_y.npy": "25b6a05b9237407f7634df73fed17435a4867ac3468144af567530fed84e1862",
+    "experiments/2026-10-03_dynamics_baseline/MP034/selection_x.npy": "4c8f2438afe43698795f7699d68e867afe26ddfac2c254eecace0a0ca129d20e",
+    "experiments/2026-10-03_dynamics_baseline/MP034/selection_y.npy": "33306d2af1f937ec3e0996d4cb6897981e345070c747a453f706b40e3457ccfc"
+  }
+}

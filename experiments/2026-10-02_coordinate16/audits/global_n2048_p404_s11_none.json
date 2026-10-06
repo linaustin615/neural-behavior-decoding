@@ -1,0 +1,21 @@
+{
+  "task": {
+    "n": 2048,
+    "pool": 404,
+    "seed": 11,
+    "variant": "global",
+    "condition": "none"
+  },
+  "finite_state": true,
+  "initial_state_and_coordinates_match": true,
+  "reload": {
+    "validation": {
+      "examples": 64,
+      "max_prediction_error": 4.76837158203125e-07
+    },
+    "test": {
+      "examples": 64,
+      "max_prediction_error": 2.384185791015625e-07
+    }
+  }
+}

@@ -1,0 +1,174 @@
+{
+  "completed_utc": "2026-10-04T19:36:13.032903+00:00",
+  "stages": [
+    "diagnosis",
+    "fixed_factorial_screen",
+    "locked_later_replay",
+    "posthoc_fixed_ensemble_context"
+  ],
+  "new_screen_gates": 18,
+  "new_final_gates": 6,
+  "training_only_pca_fits": 4,
+  "base_model_fits": 0,
+  "base_model_inferences": 0,
+  "overall_gate": false,
+  "independent_confirmation": false,
+  "verified_frozen_hashes": 53,
+  "verified_links": [
+    [
+      "report.md",
+      "ASSESSMENT.md"
+    ],
+    [
+      "report.md",
+      "protocol.json"
+    ],
+    [
+      "report.md",
+      "screen_selection.json"
+    ],
+    [
+      "report.md",
+      "final_lock.json"
+    ],
+    [
+      "report.md",
+      "summary.json"
+    ],
+    [
+      "report.md",
+      "ensemble_context.json"
+    ],
+    [
+      "report.md",
+      "audit.json"
+    ],
+    [
+      "report.md",
+      "integration_audit.json"
+    ],
+    [
+      "report.md",
+      "run.py"
+    ],
+    [
+      "ASSESSMENT.md",
+      "report.md"
+    ],
+    [
+      "ASSESSMENT.md",
+      "summary.json"
+    ],
+    [
+      "ASSESSMENT.md",
+      "protocol.json"
+    ],
+    [
+      "ASSESSMENT.md",
+      "ensemble_context.json"
+    ],
+    [
+      "ASSESSMENT.md",
+      "audit.json"
+    ]
+  ],
+  "handoff_sha256": "da48bad2de6ae384ba98847fea78922e50539fb9a77ad4dd7835068b2dc28970",
+  "files": {
+    "ASSESSMENT.md": {
+      "bytes": 2938,
+      "sha256": "7a5bf48dfbc75d9f10cb0fad3184fe863c02efed1c2ff2f338625f74c29c6a65"
+    },
+    "MP030_pca.npz": {
+      "bytes": 24387,
+      "sha256": "22d6c09e0a332fa5bd5208cd07305bb3bd688664636eda7cbc5b558325e08a05"
+    },
+    "MP032_pca.npz": {
+      "bytes": 24382,
+      "sha256": "cc69841fa5b169ebe337fb77d303c4b0473a1d697a04ea8bfc243a300b9a5829"
+    },
+    "MP033_pca.npz": {
+      "bytes": 24418,
+      "sha256": "d0817002ca5843222bd592626c200e8c37b0490fc19361170ea56207e536dc9d"
+    },
+    "MP034_pca.npz": {
+      "bytes": 24385,
+      "sha256": "cb8c31ac64bba76202fd7402ae11a1963c814675185e99b2a1d622392b4c57ee"
+    },
+    "audit.json": {
+      "bytes": 464,
+      "sha256": "b8a1032a9e42f6e37a39bbe034aef08e3d3d0e12d42302acf0900137e574e3cf"
+    },
+    "diagnosis.json": {
+      "bytes": 938,
+      "sha256": "be2ddabb0b80cb118209463b1afa8967de19287b3b86c6713fb42b95290aee58"
+    },
+    "ensemble_context.json": {
+      "bytes": 13781,
+      "sha256": "8e6c11fb75205361168863e5d0fafc614f8b5d95457d41437649fdc2164f2cbe"
+    },
+    "ensemble_context.py": {
+      "bytes": 4716,
+      "sha256": "7c97425ed7f38593a26cc66a03e1b2bad8619ec2f8489b31cbe3eebebee9e524"
+    },
+    "environment.json": {
+      "bytes": 272,
+      "sha256": "f9d3a1b3b2c7fdeecccf2e447f43efea143e54876a49f7954ca24ac83e0015ab"
+    },
+    "features.npz": {
+      "bytes": 62643,
+      "sha256": "ccbca121f18a5933410f5f9ff82e0d311f38699cfd3a6dfe45594ba1e14539db"
+    },
+    "final_lock.json": {
+      "bytes": 10312,
+      "sha256": "7a3ec7efe7d3903880d68ac8f1210dd5192e93042329fcadc8e20736ba5c77c5"
+    },
+    "integration_audit.json": {
+      "bytes": 722,
+      "sha256": "c4b367777552124790243386df53ba18396f509c84c0f2892eb8e4cbe351f3c9"
+    },
+    "later_predictions.npz": {
+      "bytes": 538951,
+      "sha256": "59455384db52d7fb0b6527cff81c19057126196c1124264e4153b353affcc010"
+    },
+    "preparation.json": {
+      "bytes": 1364,
+      "sha256": "d1640b50ba9622f76e13f12312d41a7951ff1a794560650dc8d1e66d6c6b3546"
+    },
+    "protocol.json": {
+      "bytes": 11702,
+      "sha256": "c5f0d46710dafe134754f9984cab2c3e95f03dde30ef4446439606538da01d49"
+    },
+    "report.md": {
+      "bytes": 11539,
+      "sha256": "9e55711752568a144239feaaf5962512abc53ac64d0cba37c49fef9111182a1d"
+    },
+    "report.py": {
+      "bytes": 15907,
+      "sha256": "ba88bcfb6c432789be999902456a52d99409affd66bbf4775921f25f4bc92d65"
+    },
+    "run.py": {
+      "bytes": 24619,
+      "sha256": "0fdfebbde4b4ebdd459a5cd55fb4ebe9f15d7f9cfeead294d2ff612942ab2001"
+    },
+    "screen_lock.json": {
+      "bytes": 48179,
+      "sha256": "9d0b985d653ea1be76a5f9b77259e903487bcc81bc6b63d1eee1d63e99e4c7bb"
+    },
+    "screen_predictions.npz": {
+      "bytes": 380434,
+      "sha256": "1a726c21c80ce0b47698f8728573cc26b9dd4623c115f9f267d92ed91fc5cd01"
+    },
+    "screen_selection.json": {
+      "bytes": 10836,
+      "sha256": "d7946262d8afaf7ef73e145cdb1a6f50796d7981be195cb694f554f627585165"
+    },
+    "selfcheck.json": {
+      "bytes": 237,
+      "sha256": "0709a3f9a097b5a2719d569d47436470b72bfef31124fe950974bd4f2c688863"
+    },
+    "summary.json": {
+      "bytes": 10468,
+      "sha256": "cf2338555805f73d4aacc01c36aee81a1c151d64b6329f31b4526b3310e3e724"
+    }
+  }
+}

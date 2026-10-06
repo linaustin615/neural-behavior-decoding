@@ -1,0 +1,824 @@
+{
+  "created_utc": "2026-10-02T23:12:03.853435+00:00",
+  "all_passed": true,
+  "recordings": [
+    {
+      "mouse": "MP030",
+      "file": "spont_M161025_MP030_20161120.mat",
+      "publisher_filename": "spont_M161025_MP030_2016-11-20.mat",
+      "bytes": 656809821,
+      "publisher_md5": "54ffdc817e82710952dbee2655d4d1d2",
+      "computed_md5": "54ffdc817e82710952dbee2655d4d1d2",
+      "sha256": "e30c76bbb2a5b0a767043d7ea8e81285d14223d4f8b35e548a2c1349e87fbbf7",
+      "neurons": 10164,
+      "time_bins": 15761,
+      "activity_dtype": "float32",
+      "coordinates_shape": [
+        10164,
+        3
+      ],
+      "run_speed_shape": [
+        15761
+      ],
+      "db_mouse": "M161025_MP030",
+      "db_date": "2016-11-20",
+      "nplanes": 12,
+      "experiment_name": "spont_black",
+      "plane_depth_mapping": {
+        "2": [
+          70
+        ],
+        "3": [
+          105
+        ],
+        "4": [
+          140
+        ],
+        "5": [
+          175
+        ],
+        "6": [
+          210
+        ],
+        "7": [
+          245
+        ],
+        "8": [
+          280
+        ],
+        "9": [
+          315
+        ],
+        "10": [
+          350
+        ],
+        "11": [
+          385
+        ],
+        "12": [
+          420
+        ]
+      },
+      "duplicate_xyz_rows": 0,
+      "training_constant_cells": 849,
+      "training_eligible_cells": 9315,
+      "behavior_fields": {
+        "face": {
+          "motionSVD": {
+            "shape": [
+              15761,
+              1000
+            ],
+            "dtype": "float64",
+            "nonfinite": 0
+          },
+          "motionMask": {
+            "shape": [
+              160,
+              213,
+              1000
+            ],
+            "dtype": "float32",
+            "nonfinite": 0
+          },
+          "avgframe": {
+            "shape": [
+              160,
+              213
+            ],
+            "dtype": "float32",
+            "nonfinite": 0
+          }
+        },
+        "whisker": {
+          "motionSVD": {
+            "shape": [
+              15761,
+              1000
+            ],
+            "dtype": "float64",
+            "nonfinite": 0
+          },
+          "motionMask": {
+            "shape": [
+              51,
+              66,
+              1000
+            ],
+            "dtype": "float32",
+            "nonfinite": 0
+          }
+        },
+        "eye": {
+          "motionSVD": {
+            "shape": [
+              15761,
+              1000
+            ],
+            "dtype": "float64",
+            "nonfinite": 0
+          }
+        },
+        "pupil": {
+          "area": {
+            "shape": [
+              15761
+            ],
+            "dtype": "float64",
+            "nonfinite": 0
+          },
+          "com": {
+            "shape": [
+              15761,
+              2
+            ],
+            "dtype": "float64",
+            "nonfinite": 0
+          }
+        },
+        "runSpeed": {
+          "shape": [
+            15761
+          ],
+          "dtype": "float64",
+          "nonfinite": 0
+        },
+        "runAngle": {
+          "shape": [
+            0
+          ],
+          "dtype": "uint8",
+          "nonfinite": 0
+        }
+      },
+      "timing_fields": [],
+      "candidate_triple_binning": {
+        "averaging_factor": 3,
+        "complete_bins": 5253,
+        "trailing_frames_to_drop": 2,
+        "training_end": 3101,
+        "training_constant_cells": 849,
+        "training_eligible_cells": 9315,
+        "training_speed_varies": true,
+        "status": "feasibility check only; sample timing and final preprocessing require a frozen protocol"
+      },
+      "checks": {
+        "size_matches_publisher": true,
+        "md5_matches_publisher": true,
+        "full_matlab_decode": true,
+        "coordinates_match_neuron_count": true,
+        "running_matches_time_count": true,
+        "identity_matches_filename": true,
+        "finite_activity": true,
+        "finite_coordinates": true,
+        "finite_speed": true,
+        "speed_nonnegative": true,
+        "stat_rows_match": true,
+        "xy_matches_twice_roi_medians": true,
+        "one_depth_per_plane": true,
+        "at_least_2048_training_variable_cells": true,
+        "training_speed_varies": true,
+        "triple_binning_has_2048_eligible_cells": true,
+        "triple_binning_training_speed_varies": true
+      },
+      "blockers": [],
+      "passed": true,
+      "seconds": 3.697222792,
+      "alignment_status": "matching supplied array lengths; absolute time synchronization not independently reconstructible without acquisition timestamps",
+      "coordinate_status": "ROI-median and imaging-plane consistency checked; common atlas/physical calibration not established",
+      "activity_sign": {
+        "negative_count": 3,
+        "minimum": -5.634433819068363e-06,
+        "maximum": 5464.7958984375,
+        "strictly_nonnegative": false,
+        "interpretation": "tiny signed residuals in checksum-verified published files; preserved unchanged; not a corruption blocker"
+      }
+    },
+    {
+      "mouse": "MP032",
+      "file": "spont_M170714_MP032_20170804.mat",
+      "publisher_filename": "spont_M170714_MP032_2017-08-04.mat",
+      "bytes": 790279473,
+      "publisher_md5": "bd591562c68599907e1a966ea1c1bda5",
+      "computed_md5": "bd591562c68599907e1a966ea1c1bda5",
+      "sha256": "a239882b470fd276a2ed959c24841c444e1ec1261c85b1e3cbbce3ffbcbb7fa6",
+      "neurons": 10523,
+      "time_bins": 13498,
+      "activity_dtype": "float32",
+      "coordinates_shape": [
+        10523,
+        3
+      ],
+      "run_speed_shape": [
+        13498
+      ],
+      "db_mouse": "M170714_MP032",
+      "db_date": "2017-08-04",
+      "nplanes": 12,
+      "experiment_name": [
+        "spont_black",
+        "spont_black"
+      ],
+      "plane_depth_mapping": {
+        "2": [
+          70
+        ],
+        "3": [
+          105
+        ],
+        "4": [
+          140
+        ],
+        "5": [
+          175
+        ],
+        "6": [
+          210
+        ],
+        "7": [
+          245
+        ],
+        "8": [
+          280
+        ],
+        "9": [
+          315
+        ],
+        "10": [
+          350
+        ],
+        "11": [
+          385
+        ],
+        "12": [
+          420
+        ]
+      },
+      "duplicate_xyz_rows": 0,
+      "training_constant_cells": 3,
+      "training_eligible_cells": 10520,
+      "behavior_fields": {
+        "face": {
+          "motionSVD": {
+            "shape": [
+              13498,
+              1000
+            ],
+            "dtype": "float64",
+            "nonfinite": 0
+          },
+          "motionMask": {
+            "shape": [
+              240,
+              320,
+              1000
+            ],
+            "dtype": "float32",
+            "nonfinite": 0
+          },
+          "avgframe": {
+            "shape": [
+              240,
+              320
+            ],
+            "dtype": "float32",
+            "nonfinite": 0
+          }
+        },
+        "whisker": {
+          "motionSVD": {
+            "shape": [
+              13498,
+              1000
+            ],
+            "dtype": "float64",
+            "nonfinite": 0
+          },
+          "motionMask": {
+            "shape": [
+              51,
+              66,
+              1000
+            ],
+            "dtype": "float32",
+            "nonfinite": 0
+          }
+        },
+        "eye": {
+          "motionSVD": {
+            "shape": [
+              13498,
+              1000
+            ],
+            "dtype": "float64",
+            "nonfinite": 0
+          }
+        },
+        "pupil": {
+          "area": {
+            "shape": [
+              13498
+            ],
+            "dtype": "float64",
+            "nonfinite": 0
+          },
+          "com": {
+            "shape": [
+              13498,
+              2
+            ],
+            "dtype": "float64",
+            "nonfinite": 0
+          }
+        },
+        "runSpeed": {
+          "shape": [
+            13498
+          ],
+          "dtype": "float64",
+          "nonfinite": 0
+        },
+        "runAngle": {
+          "shape": [
+            0
+          ],
+          "dtype": "uint8",
+          "nonfinite": 0
+        }
+      },
+      "timing_fields": [],
+      "candidate_triple_binning": {
+        "averaging_factor": 3,
+        "complete_bins": 4499,
+        "trailing_frames_to_drop": 1,
+        "training_end": 2649,
+        "training_constant_cells": 3,
+        "training_eligible_cells": 10520,
+        "training_speed_varies": true,
+        "status": "feasibility check only; sample timing and final preprocessing require a frozen protocol"
+      },
+      "checks": {
+        "size_matches_publisher": true,
+        "md5_matches_publisher": true,
+        "full_matlab_decode": true,
+        "coordinates_match_neuron_count": true,
+        "running_matches_time_count": true,
+        "identity_matches_filename": true,
+        "finite_activity": true,
+        "finite_coordinates": true,
+        "finite_speed": true,
+        "speed_nonnegative": true,
+        "stat_rows_match": true,
+        "xy_matches_twice_roi_medians": true,
+        "one_depth_per_plane": true,
+        "at_least_2048_training_variable_cells": true,
+        "training_speed_varies": true,
+        "triple_binning_has_2048_eligible_cells": true,
+        "triple_binning_training_speed_varies": true
+      },
+      "blockers": [],
+      "passed": true,
+      "seconds": 3.8702132080000005,
+      "alignment_status": "matching supplied array lengths; absolute time synchronization not independently reconstructible without acquisition timestamps",
+      "coordinate_status": "ROI-median and imaging-plane consistency checked; common atlas/physical calibration not established",
+      "activity_sign": {
+        "negative_count": 5,
+        "minimum": -1.4368927168106893e-06,
+        "maximum": 4739.07861328125,
+        "strictly_nonnegative": false,
+        "interpretation": "tiny signed residuals in checksum-verified published files; preserved unchanged; not a corruption blocker"
+      }
+    },
+    {
+      "mouse": "MP033",
+      "file": "spont_M170717_MP033_20170818.mat",
+      "publisher_filename": "spont_M170717_MP033_2017-08-18.mat",
+      "bytes": 683982833,
+      "publisher_md5": "844d2b0753b9e7761b1fe5d61f3b81a4",
+      "computed_md5": "844d2b0753b9e7761b1fe5d61f3b81a4",
+      "sha256": "46e8e3dbb9f048e42595859a301f4856f196d7570ddb943d1c3c303668ffbd68",
+      "neurons": 10640,
+      "time_bins": 10463,
+      "activity_dtype": "float32",
+      "coordinates_shape": [
+        10640,
+        3
+      ],
+      "run_speed_shape": [
+        10463
+      ],
+      "db_mouse": "M170717_MP033",
+      "db_date": "2017-08-18",
+      "nplanes": 12,
+      "experiment_name": [
+        "spont_black",
+        "spont_black"
+      ],
+      "plane_depth_mapping": {
+        "2": [
+          70
+        ],
+        "3": [
+          105
+        ],
+        "4": [
+          140
+        ],
+        "5": [
+          175
+        ],
+        "6": [
+          210
+        ],
+        "7": [
+          245
+        ],
+        "8": [
+          280
+        ],
+        "9": [
+          315
+        ],
+        "10": [
+          350
+        ],
+        "11": [
+          385
+        ],
+        "12": [
+          420
+        ]
+      },
+      "duplicate_xyz_rows": 0,
+      "training_constant_cells": 4,
+      "training_eligible_cells": 10636,
+      "behavior_fields": {
+        "face": {
+          "motionSVD": {
+            "shape": [
+              10463,
+              1000
+            ],
+            "dtype": "float64",
+            "nonfinite": 0
+          },
+          "motionMask": {
+            "shape": [
+              240,
+              320,
+              1000
+            ],
+            "dtype": "float32",
+            "nonfinite": 0
+          },
+          "avgframe": {
+            "shape": [
+              240,
+              320
+            ],
+            "dtype": "float32",
+            "nonfinite": 0
+          }
+        },
+        "whisker": {
+          "motionSVD": {
+            "shape": [
+              10463,
+              1000
+            ],
+            "dtype": "float64",
+            "nonfinite": 0
+          },
+          "motionMask": {
+            "shape": [
+              51,
+              66,
+              1000
+            ],
+            "dtype": "float32",
+            "nonfinite": 0
+          }
+        },
+        "eye": {
+          "motionSVD": {
+            "shape": [
+              10463,
+              1000
+            ],
+            "dtype": "float64",
+            "nonfinite": 0
+          }
+        },
+        "pupil": {
+          "area": {
+            "shape": [
+              10463
+            ],
+            "dtype": "float64",
+            "nonfinite": 0
+          },
+          "com": {
+            "shape": [
+              10463,
+              2
+            ],
+            "dtype": "float64",
+            "nonfinite": 220
+          }
+        },
+        "runSpeed": {
+          "shape": [
+            10463
+          ],
+          "dtype": "float64",
+          "nonfinite": 0
+        },
+        "runAngle": {
+          "shape": [
+            0
+          ],
+          "dtype": "uint8",
+          "nonfinite": 0
+        }
+      },
+      "timing_fields": [],
+      "candidate_triple_binning": {
+        "averaging_factor": 3,
+        "complete_bins": 3487,
+        "trailing_frames_to_drop": 2,
+        "training_end": 2042,
+        "training_constant_cells": 4,
+        "training_eligible_cells": 10636,
+        "training_speed_varies": true,
+        "status": "feasibility check only; sample timing and final preprocessing require a frozen protocol"
+      },
+      "checks": {
+        "size_matches_publisher": true,
+        "md5_matches_publisher": true,
+        "full_matlab_decode": true,
+        "coordinates_match_neuron_count": true,
+        "running_matches_time_count": true,
+        "identity_matches_filename": true,
+        "finite_activity": true,
+        "finite_coordinates": true,
+        "finite_speed": true,
+        "speed_nonnegative": true,
+        "stat_rows_match": true,
+        "xy_matches_twice_roi_medians": true,
+        "one_depth_per_plane": true,
+        "at_least_2048_training_variable_cells": true,
+        "training_speed_varies": true,
+        "triple_binning_has_2048_eligible_cells": true,
+        "triple_binning_training_speed_varies": true
+      },
+      "blockers": [],
+      "passed": true,
+      "seconds": 3.2456345829999993,
+      "alignment_status": "matching supplied array lengths; absolute time synchronization not independently reconstructible without acquisition timestamps",
+      "coordinate_status": "ROI-median and imaging-plane consistency checked; common atlas/physical calibration not established",
+      "activity_sign": {
+        "negative_count": 0,
+        "minimum": 0.0,
+        "maximum": 6696.56982421875,
+        "strictly_nonnegative": true,
+        "interpretation": "tiny signed residuals in checksum-verified published files; preserved unchanged; not a corruption blocker"
+      }
+    },
+    {
+      "mouse": "MP034",
+      "file": "spont_M170717_MP034_20170825.mat",
+      "publisher_filename": "spont_M170717_MP034_2017-08-25.mat",
+      "bytes": 705099311,
+      "publisher_md5": "0cf474c27a3cd8b7c6e9e95df8ea1248",
+      "computed_md5": "0cf474c27a3cd8b7c6e9e95df8ea1248",
+      "sha256": "1ef684d3b2d25ae7680ba74344a8237684e033a5974e6e321b549ac650900a65",
+      "neurons": 11267,
+      "time_bins": 10473,
+      "activity_dtype": "float32",
+      "coordinates_shape": [
+        11267,
+        3
+      ],
+      "run_speed_shape": [
+        10473
+      ],
+      "db_mouse": "M170717_MP034",
+      "db_date": "2017-08-25",
+      "nplanes": 12,
+      "experiment_name": [
+        "spont_black",
+        "spont_black"
+      ],
+      "plane_depth_mapping": {
+        "2": [
+          70
+        ],
+        "3": [
+          105
+        ],
+        "4": [
+          140
+        ],
+        "5": [
+          175
+        ],
+        "6": [
+          210
+        ],
+        "7": [
+          245
+        ],
+        "8": [
+          280
+        ],
+        "9": [
+          315
+        ],
+        "10": [
+          350
+        ],
+        "11": [
+          385
+        ],
+        "12": [
+          420
+        ]
+      },
+      "duplicate_xyz_rows": 0,
+      "training_constant_cells": 5,
+      "training_eligible_cells": 11262,
+      "behavior_fields": {
+        "face": {
+          "motionSVD": {
+            "shape": [
+              10473,
+              1000
+            ],
+            "dtype": "float64",
+            "nonfinite": 0
+          },
+          "motionMask": {
+            "shape": [
+              240,
+              320,
+              1000
+            ],
+            "dtype": "float32",
+            "nonfinite": 0
+          },
+          "avgframe": {
+            "shape": [
+              240,
+              320
+            ],
+            "dtype": "float32",
+            "nonfinite": 0
+          }
+        },
+        "whisker": {
+          "motionSVD": {
+            "shape": [
+              10473,
+              1000
+            ],
+            "dtype": "float64",
+            "nonfinite": 0
+          },
+          "motionMask": {
+            "shape": [
+              51,
+              66,
+              1000
+            ],
+            "dtype": "float32",
+            "nonfinite": 0
+          }
+        },
+        "eye": {
+          "motionSVD": {
+            "shape": [
+              10473,
+              1000
+            ],
+            "dtype": "float64",
+            "nonfinite": 0
+          }
+        },
+        "pupil": {
+          "area": {
+            "shape": [
+              10473
+            ],
+            "dtype": "float64",
+            "nonfinite": 0
+          },
+          "com": {
+            "shape": [
+              10473,
+              2
+            ],
+            "dtype": "float64",
+            "nonfinite": 2786
+          }
+        },
+        "runSpeed": {
+          "shape": [
+            10473
+          ],
+          "dtype": "float64",
+          "nonfinite": 0
+        },
+        "runAngle": {
+          "shape": [
+            0
+          ],
+          "dtype": "uint8",
+          "nonfinite": 0
+        }
+      },
+      "timing_fields": [],
+      "candidate_triple_binning": {
+        "averaging_factor": 3,
+        "complete_bins": 3491,
+        "trailing_frames_to_drop": 0,
+        "training_end": 2044,
+        "training_constant_cells": 5,
+        "training_eligible_cells": 11262,
+        "training_speed_varies": true,
+        "status": "feasibility check only; sample timing and final preprocessing require a frozen protocol"
+      },
+      "checks": {
+        "size_matches_publisher": true,
+        "md5_matches_publisher": true,
+        "full_matlab_decode": true,
+        "coordinates_match_neuron_count": true,
+        "running_matches_time_count": true,
+        "identity_matches_filename": true,
+        "finite_activity": true,
+        "finite_coordinates": true,
+        "finite_speed": true,
+        "speed_nonnegative": true,
+        "stat_rows_match": true,
+        "xy_matches_twice_roi_medians": true,
+        "one_depth_per_plane": true,
+        "at_least_2048_training_variable_cells": true,
+        "training_speed_varies": true,
+        "triple_binning_has_2048_eligible_cells": true,
+        "triple_binning_training_speed_varies": true
+      },
+      "blockers": [],
+      "passed": true,
+      "seconds": 3.441403416,
+      "alignment_status": "matching supplied array lengths; absolute time synchronization not independently reconstructible without acquisition timestamps",
+      "coordinate_status": "ROI-median and imaging-plane consistency checked; common atlas/physical calibration not established",
+      "activity_sign": {
+        "negative_count": 2,
+        "minimum": -9.421630238648504e-06,
+        "maximum": 5575.1845703125,
+        "strictly_nonnegative": false,
+        "interpretation": "tiny signed residuals in checksum-verified published files; preserved unchanged; not a corruption blocker"
+      }
+    }
+  ],
+  "publisher_catalog": "https://api.figshare.com/v2/articles/6163622",
+  "scope": "data integrity/structural quality checks only; no model training, held-out predictive results, coactivity analysis or behavioral performance selection",
+  "application_hashes": {
+    "model.py": "2297af73466e1c85ee5774dc10a44a2a03f7a6f48919a111b43a8cf6d7d86a40",
+    "data.py": "894d5aea4dd0ce6a139178b66b1f8a5538f1c4f015081153d4c11fa55d78b7bf",
+    "train.py": "0361d216cd75616ed07501a019f4837f7c0acf57f0cd2edecb0fc6728064d7f9"
+  },
+  "application_unchanged": true,
+  "limitations": [
+    "matching array lengths do not independently prove physical synchronization",
+    "sampling rate and timestamp calibration not established from array lengths",
+    "original files are preserved; no binning or normalization is written back",
+    "optional behavior channels may have missing values; only neural activity, coordinates and running are required here"
+  ],
+  "sign_followup": {
+    "reason": "strict activity nonnegativity initially flagged MP030/MP032/MP034; targeted magnitude check found only10 tiny negatives, all greater than -1e-5, in byte-identical publisher files",
+    "resolution": "classify as quality note; inputs not changed; complete validation not rerun",
+    "measurements": {
+      "MP030": {
+        "negative_count": 3,
+        "minimum": -5.634433819068363e-06,
+        "maximum": 5464.7958984375
+      },
+      "MP032": {
+        "negative_count": 5,
+        "minimum": -1.4368927168106893e-06,
+        "maximum": 4739.07861328125
+      },
+      "MP033": {
+        "negative_count": 0,
+        "minimum": 0.0,
+        "maximum": 6696.56982421875
+      },
+      "MP034": {
+        "negative_count": 2,
+        "minimum": -9.421630238648504e-06,
+        "maximum": 5575.1845703125
+      }
+    }
+  },
+  "summary": "All four downloads pass integrity and required-field checks; exclude training-constant cells, retain tiny signed residuals, do not use incomplete pupil-position channels without a missing-data plan; physical timing calibration remains unverified"
+}

@@ -1,0 +1,47 @@
+{
+  "created_utc": "2026-10-02T15:54:06.861988+00:00",
+  "question": "Does correct coordinate input help the exact unrestricted16-summary decoder beyond neuron activity and IDs?",
+  "dataset": "Stringer MP019; single repeatedly examined recording; exploratory",
+  "dataset_sha256": "b92f153a965a6a25153c125ac88245f887f310b50285dc5af11f0b544ac3ba32",
+  "n": 2048,
+  "pool_seeds": [
+    101,
+    202,
+    303,
+    404,
+    505,
+    606
+  ],
+  "optimizer_seeds": [
+    10,
+    11
+  ],
+  "conditions": [
+    "real",
+    "none",
+    "shuffled"
+  ],
+  "new_fits": 24,
+  "reused_real_fits": 12,
+  "matched_comparisons": 12,
+  "architecture": "Exact global GroupCandidate from spatial_grouping study:16 unrestricted read-in queries,width32,4heads,one postLN transformer,mean pooling,nonlinear activity embedding,positionMLP,neuronID embedding;81377 parameters",
+  "coordinate_controls": "real:fixed standardized true coordinates;none:all standardized coordinate inputs zero with same positionMLP;shuffled:fixed neuron-to-coordinate permutation,identical coordinate multiset;activity and IDs remain in their original alignment",
+  "training": "Identical prior split,normalization,window8,target offset31,batch32,AdamWlr.001wd.01,cosine24eta_min.0001,clip1,min12patience7,validation boundedMSE checkpoint selection including epoch0",
+  "budget": "All24 new fits fixed before outcomes;reuse12 compatible true-coordinate fits;no adaptive expansion",
+  "primary_contrasts": [
+    "MSE(none)-MSE(real)",
+    "MSE(shuffled)-MSE(real)"
+  ],
+  "analysis": "Raw and boundedMSE,R2,paired wins,per-pool effects,2000 crossed pool/seed circular-time-block100 bootstrap conditional95% intervals;not biological replication",
+  "candidate_gate": "Both primary mean advantages positive and >=8/12 pair wins each",
+  "stronger_gate": "Both conditional intervals above0 and >=5/6 positive pool means each;exploratory,not multiplicity-adjusted",
+  "secondary_checks": "Direct evaluation perturbations on all12 real checkpoints for reliance;exact ID reparameterization compensating changed fixed coordinates for redundancy;batch/order/state/coordinate compatibility and checkpoint reloads",
+  "limitations": "Changing coordinates only at evaluation is a distribution shift,not a substitute for retrained controls;ID compensation establishes representational redundancy,not training equivalence;zero coordinates retain a learned common positionMLP offset;test period previously examined",
+  "reuse_source": "/Users/austinlin/neuron_transformer/experiments/2026-10-02_spatial_grouping",
+  "source_hashes": {
+    "model.py": "2297af73466e1c85ee5774dc10a44a2a03f7a6f48919a111b43a8cf6d7d86a40",
+    "data.py": "894d5aea4dd0ce6a139178b66b1f8a5538f1c4f015081153d4c11fa55d78b7bf",
+    "train.py": "0361d216cd75616ed07501a019f4837f7c0acf57f0cd2edecb0fc6728064d7f9"
+  },
+  "no_application_code_changes": true
+}

@@ -1,0 +1,17 @@
+# Population-context query: complete
+
+**The hybrid did not pass the full first-stage gate.** Six fits completed and all workers, evaluation stages and the pipeline exited successfully. No conditional replication fits were launched, and no threshold or seed set was changed after the results.
+
+The transformer context improved mean relative pair-MSE by **8.36%** against the otherwise matched context-MLP model, with all four mouse averages improving and mean MAE improving 5.06%. However, only **6/12** individual mouse-seed comparisons favored it; the frozen requirement was 8/12. Seed 10 was 18.80% worse on average against this control, while seeds 11 and 12 were about 18% better. Every seed remains included.
+
+The hybrid also failed to improve either stronger parent: it was **6.36% worse** than the 512-neuron local MLP and **6.15% worse** than the standalone population transformer. It won only one and two mouse averages respectively. Against the local MLP, MP030 MSE increased 42.07%; against the population transformer, MP034 MSE increased 29.32%. These are failed harm safeguards, not merely a marginal miss on the average threshold.
+
+Relative to ridge, mean MSE improved 28.61% and all four mouse averages improved, but only 7/12 individual comparisons won, so this contrast also failed its consistency requirement. The secondary original-transformer comparison passed: 21.49% lower mean MSE, four mouse wins and 9/12 individual wins. All 12 candidate mouse-seed evaluations beat their initial training-mean predictor. Learning occurred, but the full comparative claim did not survive.
+
+The model combines the unchanged 512-neuron local MLP with a population encoder that changes its readout query. Its matched control uses the same activity-dependent query mechanism and replaces only population temporal self-attention with an MLP. Both train from scratch, with 79,383 versus 79,373 parameters and identical common initial tensors. This controls the hybrid's increased capacity when asking whether temporal attention helps; it does not establish a novel architecture or causal neuron relationships.
+
+Each fit completed 24 epochs, 5,688 optimizer updates and 179,712 presentations. Checks passed for parent equivalence at zero context, branch learning, input-dependent readout, gradients, reloads and unchanged inputs; 600 earlier selection scores, 13,308 new later predictions, 288 independent scalar errors, 105 aggregate/gate/parameter checks, 190 frozen source hashes, 30 selected artifacts and eight prepared arrays. The context projection and temporal parameters changed in all selected models. Both plots were generated and the PNG was visually inspected. Successful computation does not override failed scientific gates.
+
+This fixed study is closed. The population-transformer parent remains a promising experimental design because it improved the original transformer and ridge, but neither it nor this hybrid has passed the complete stronger-control comparison. All results reuse four historically searched mice; further architecture selection on these periods cannot supply independent animal confirmation. The next defensible confirmation requires an untouched cohort and a frozen protocol. Main application code remains unchanged.
+
+See [full report](report.md), [protocol](protocol.json), [results](stage1_results.json), [review](review.json), and [figure](context_query.png).

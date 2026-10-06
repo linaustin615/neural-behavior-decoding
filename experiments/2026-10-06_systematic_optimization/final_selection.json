@@ -1,0 +1,1857 @@
+{
+  "locked_utc": "2026-10-06T05:55:35.841805+00:00",
+  "ranks": [
+    {
+      "config_id": "cf58a2426d68",
+      "config": {
+        "family": "mlp",
+        "width": 64,
+        "depth": 2,
+        "history": 32,
+        "patch": 2,
+        "dropout": 0.1,
+        "lr": 0.001,
+        "weight_decay": 0.001,
+        "epochs": 48
+      },
+      "score": 0.23502919316694387,
+      "folds_seeds": [
+        {
+          "split": "fold0",
+          "seed": 102,
+          "score": 0.22478978067909752
+        },
+        {
+          "split": "fold0",
+          "seed": 103,
+          "score": 0.20544243672626178
+        },
+        {
+          "split": "fold1",
+          "seed": 102,
+          "score": 0.23551574492012367
+        },
+        {
+          "split": "fold1",
+          "seed": 103,
+          "score": 0.2743688103422925
+        }
+      ]
+    },
+    {
+      "config_id": "3e2a5e6a43aa",
+      "config": {
+        "family": "mlp",
+        "width": 64,
+        "depth": 2,
+        "history": 32,
+        "patch": 2,
+        "dropout": 0.1,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 48
+      },
+      "score": 0.2358320677455799,
+      "folds_seeds": [
+        {
+          "split": "fold0",
+          "seed": 102,
+          "score": 0.2265007145004202
+        },
+        {
+          "split": "fold0",
+          "seed": 103,
+          "score": 0.20577084822871805
+        },
+        {
+          "split": "fold1",
+          "seed": 102,
+          "score": 0.23687301939639732
+        },
+        {
+          "split": "fold1",
+          "seed": 103,
+          "score": 0.27418368885678407
+        }
+      ]
+    },
+    {
+      "config_id": "f98af2dda6e3",
+      "config": {
+        "family": "attention",
+        "width": 64,
+        "depth": 2,
+        "history": 32,
+        "patch": 4,
+        "dropout": 0.0,
+        "lr": 0.001,
+        "weight_decay": 0.001,
+        "epochs": 48
+      },
+      "score": 0.24136175151363665,
+      "folds_seeds": [
+        {
+          "split": "fold0",
+          "seed": 102,
+          "score": 0.21999658078342632
+        },
+        {
+          "split": "fold0",
+          "seed": 103,
+          "score": 0.21902483726901614
+        },
+        {
+          "split": "fold1",
+          "seed": 102,
+          "score": 0.26195666302355947
+        },
+        {
+          "split": "fold1",
+          "seed": 103,
+          "score": 0.26446892497854474
+        }
+      ]
+    },
+    {
+      "config_id": "7568b09a1e0d",
+      "config": {
+        "family": "attention",
+        "width": 64,
+        "depth": 2,
+        "history": 32,
+        "patch": 4,
+        "dropout": 0.0,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 48
+      },
+      "score": 0.24208485246250694,
+      "folds_seeds": [
+        {
+          "split": "fold0",
+          "seed": 102,
+          "score": 0.22013319665357997
+        },
+        {
+          "split": "fold0",
+          "seed": 103,
+          "score": 0.21934808350297008
+        },
+        {
+          "split": "fold1",
+          "seed": 102,
+          "score": 0.2646291365822157
+        },
+        {
+          "split": "fold1",
+          "seed": 103,
+          "score": 0.26422899311126197
+        }
+      ]
+    },
+    {
+      "config_id": "e290429b3178",
+      "config": {
+        "family": "mlp",
+        "width": 64,
+        "depth": 2,
+        "history": 32,
+        "patch": 2,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "score": 0.2421268642739271,
+      "folds_seeds": [
+        {
+          "split": "fold0",
+          "seed": 102,
+          "score": 0.23018340192765874
+        },
+        {
+          "split": "fold0",
+          "seed": 103,
+          "score": 0.2218594717194872
+        },
+        {
+          "split": "fold1",
+          "seed": 102,
+          "score": 0.24612957698365287
+        },
+        {
+          "split": "fold1",
+          "seed": 103,
+          "score": 0.2703350064649096
+        }
+      ]
+    },
+    {
+      "config_id": "cc82add68d8c",
+      "config": {
+        "family": "attention",
+        "width": 64,
+        "depth": 1,
+        "history": 32,
+        "patch": 4,
+        "dropout": 0.1,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 48
+      },
+      "score": 0.24218306606798531,
+      "folds_seeds": [
+        {
+          "split": "fold0",
+          "seed": 102,
+          "score": 0.22181106358887054
+        },
+        {
+          "split": "fold0",
+          "seed": 103,
+          "score": 0.20891711206431868
+        },
+        {
+          "split": "fold1",
+          "seed": 102,
+          "score": 0.2517718867025543
+        },
+        {
+          "split": "fold1",
+          "seed": 103,
+          "score": 0.2862322019161977
+        }
+      ]
+    },
+    {
+      "config_id": "21643a712016",
+      "config": {
+        "family": "attention",
+        "width": 64,
+        "depth": 1,
+        "history": 32,
+        "patch": 4,
+        "dropout": 0.1,
+        "lr": 0.001,
+        "weight_decay": 0.001,
+        "epochs": 48
+      },
+      "score": 0.24269970699250568,
+      "folds_seeds": [
+        {
+          "split": "fold0",
+          "seed": 102,
+          "score": 0.22234997586166697
+        },
+        {
+          "split": "fold0",
+          "seed": 103,
+          "score": 0.20959717058316604
+        },
+        {
+          "split": "fold1",
+          "seed": 102,
+          "score": 0.252364333965715
+        },
+        {
+          "split": "fold1",
+          "seed": 103,
+          "score": 0.2864873475594747
+        }
+      ]
+    },
+    {
+      "config_id": "cf73fa305e1b",
+      "config": {
+        "family": "attention",
+        "width": 64,
+        "depth": 1,
+        "history": 32,
+        "patch": 4,
+        "dropout": 0.0,
+        "lr": 0.001,
+        "weight_decay": 0.001,
+        "epochs": 48
+      },
+      "score": 0.2427001180899594,
+      "folds_seeds": [
+        {
+          "split": "fold0",
+          "seed": 102,
+          "score": 0.2217612165099455
+        },
+        {
+          "split": "fold0",
+          "seed": 103,
+          "score": 0.2311599133122221
+        },
+        {
+          "split": "fold1",
+          "seed": 102,
+          "score": 0.24460850463695957
+        },
+        {
+          "split": "fold1",
+          "seed": 103,
+          "score": 0.2732708379007104
+        }
+      ]
+    },
+    {
+      "config_id": "7510c010a88c",
+      "config": {
+        "family": "attention",
+        "width": 64,
+        "depth": 1,
+        "history": 32,
+        "patch": 4,
+        "dropout": 0.0,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 48
+      },
+      "score": 0.24289436442858675,
+      "folds_seeds": [
+        {
+          "split": "fold0",
+          "seed": 102,
+          "score": 0.22186936712667066
+        },
+        {
+          "split": "fold0",
+          "seed": 103,
+          "score": 0.23109448198845292
+        },
+        {
+          "split": "fold1",
+          "seed": 102,
+          "score": 0.24414253708672914
+        },
+        {
+          "split": "fold1",
+          "seed": 103,
+          "score": 0.2744710715124943
+        }
+      ]
+    },
+    {
+      "config_id": "62729ac51649",
+      "config": {
+        "family": "attention",
+        "width": 64,
+        "depth": 2,
+        "history": 32,
+        "patch": 4,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "score": 0.24291354156741662,
+      "folds_seeds": [
+        {
+          "split": "fold0",
+          "seed": 102,
+          "score": 0.2242392873370227
+        },
+        {
+          "split": "fold0",
+          "seed": 103,
+          "score": 0.22150747438635757
+        },
+        {
+          "split": "fold1",
+          "seed": 102,
+          "score": 0.26161766698039035
+        },
+        {
+          "split": "fold1",
+          "seed": 103,
+          "score": 0.26428973756589585
+        }
+      ]
+    },
+    {
+      "config_id": "7dee67c63efd",
+      "config": {
+        "family": "attention",
+        "width": 64,
+        "depth": 2,
+        "history": 32,
+        "patch": 4,
+        "dropout": 0.1,
+        "lr": 0.001,
+        "weight_decay": 0.001,
+        "epochs": 48
+      },
+      "score": 0.24313769591736553,
+      "folds_seeds": [
+        {
+          "split": "fold0",
+          "seed": 102,
+          "score": 0.23711077895523516
+        },
+        {
+          "split": "fold0",
+          "seed": 103,
+          "score": 0.21695962514021613
+        },
+        {
+          "split": "fold1",
+          "seed": 102,
+          "score": 0.2551564903099179
+        },
+        {
+          "split": "fold1",
+          "seed": 103,
+          "score": 0.2633238892640929
+        }
+      ]
+    },
+    {
+      "config_id": "9d3686f5a626",
+      "config": {
+        "family": "attention",
+        "width": 64,
+        "depth": 2,
+        "history": 32,
+        "patch": 4,
+        "dropout": 0.1,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 48
+      },
+      "score": 0.243410167560631,
+      "folds_seeds": [
+        {
+          "split": "fold0",
+          "seed": 102,
+          "score": 0.2365002842308467
+        },
+        {
+          "split": "fold0",
+          "seed": 103,
+          "score": 0.21857834092445116
+        },
+        {
+          "split": "fold1",
+          "seed": 102,
+          "score": 0.2551235778881726
+        },
+        {
+          "split": "fold1",
+          "seed": 103,
+          "score": 0.2634384671990535
+        }
+      ]
+    },
+    {
+      "config_id": "637d2163eceb",
+      "config": {
+        "family": "mlp",
+        "width": 32,
+        "depth": 3,
+        "history": 32,
+        "patch": 4,
+        "dropout": 0.1,
+        "lr": 0.001,
+        "weight_decay": 0.001,
+        "epochs": 48
+      },
+      "score": 0.24373116910901613,
+      "folds_seeds": [
+        {
+          "split": "fold0",
+          "seed": 102,
+          "score": 0.22226591300930404
+        },
+        {
+          "split": "fold0",
+          "seed": 103,
+          "score": 0.22845998897981434
+        },
+        {
+          "split": "fold1",
+          "seed": 102,
+          "score": 0.2619399045458641
+        },
+        {
+          "split": "fold1",
+          "seed": 103,
+          "score": 0.26225886990108205
+        }
+      ]
+    },
+    {
+      "config_id": "896b6cf6dc37",
+      "config": {
+        "family": "mlp",
+        "width": 32,
+        "depth": 3,
+        "history": 32,
+        "patch": 4,
+        "dropout": 0.1,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 48
+      },
+      "score": 0.24387603021991436,
+      "folds_seeds": [
+        {
+          "split": "fold0",
+          "seed": 102,
+          "score": 0.22283539918337153
+        },
+        {
+          "split": "fold0",
+          "seed": 103,
+          "score": 0.22879141843756176
+        },
+        {
+          "split": "fold1",
+          "seed": 102,
+          "score": 0.2617348032358837
+        },
+        {
+          "split": "fold1",
+          "seed": 103,
+          "score": 0.26214250002284045
+        }
+      ]
+    },
+    {
+      "config_id": "290a59886ff7",
+      "config": {
+        "family": "attention",
+        "width": 64,
+        "depth": 1,
+        "history": 32,
+        "patch": 4,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "score": 0.2459823318296673,
+      "folds_seeds": [
+        {
+          "split": "fold0",
+          "seed": 102,
+          "score": 0.2234258203513977
+        },
+        {
+          "split": "fold0",
+          "seed": 103,
+          "score": 0.2259743903688529
+        },
+        {
+          "split": "fold1",
+          "seed": 102,
+          "score": 0.25481609542053607
+        },
+        {
+          "split": "fold1",
+          "seed": 103,
+          "score": 0.27971302117788255
+        }
+      ]
+    },
+    {
+      "config_id": "1d3fa124a84b",
+      "config": {
+        "family": "mlp",
+        "width": 64,
+        "depth": 2,
+        "history": 32,
+        "patch": 2,
+        "dropout": 0.0,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 48
+      },
+      "score": 0.24828645276100864,
+      "folds_seeds": [
+        {
+          "split": "fold0",
+          "seed": 102,
+          "score": 0.2286356010576783
+        },
+        {
+          "split": "fold0",
+          "seed": 103,
+          "score": 0.23611943895687043
+        },
+        {
+          "split": "fold1",
+          "seed": 102,
+          "score": 0.25584364353183386
+        },
+        {
+          "split": "fold1",
+          "seed": 103,
+          "score": 0.27254712749765203
+        }
+      ]
+    },
+    {
+      "config_id": "6f5aa314022b",
+      "config": {
+        "family": "mlp",
+        "width": 64,
+        "depth": 2,
+        "history": 32,
+        "patch": 2,
+        "dropout": 0.0,
+        "lr": 0.001,
+        "weight_decay": 0.001,
+        "epochs": 48
+      },
+      "score": 0.2496551547503267,
+      "folds_seeds": [
+        {
+          "split": "fold0",
+          "seed": 102,
+          "score": 0.2333421711575543
+        },
+        {
+          "split": "fold0",
+          "seed": 103,
+          "score": 0.23645446348524948
+        },
+        {
+          "split": "fold1",
+          "seed": 102,
+          "score": 0.25574778929411546
+        },
+        {
+          "split": "fold1",
+          "seed": 103,
+          "score": 0.27307619506438763
+        }
+      ]
+    },
+    {
+      "config_id": "f970e0f85b74",
+      "config": {
+        "family": "mlp",
+        "width": 32,
+        "depth": 3,
+        "history": 32,
+        "patch": 4,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "score": 0.2519021545309761,
+      "folds_seeds": [
+        {
+          "split": "fold0",
+          "seed": 102,
+          "score": 0.23745263465569436
+        },
+        {
+          "split": "fold0",
+          "seed": 103,
+          "score": 0.2369812835854042
+        },
+        {
+          "split": "fold1",
+          "seed": 102,
+          "score": 0.2641793102345609
+        },
+        {
+          "split": "fold1",
+          "seed": 103,
+          "score": 0.26899538964824493
+        }
+      ]
+    },
+    {
+      "config_id": "5e25bbeebe7d",
+      "config": {
+        "family": "mlp",
+        "width": 32,
+        "depth": 3,
+        "history": 32,
+        "patch": 4,
+        "dropout": 0.0,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 48
+      },
+      "score": 0.25317845714945886,
+      "folds_seeds": [
+        {
+          "split": "fold0",
+          "seed": 102,
+          "score": 0.23501635928358316
+        },
+        {
+          "split": "fold0",
+          "seed": 103,
+          "score": 0.2436138495752322
+        },
+        {
+          "split": "fold1",
+          "seed": 102,
+          "score": 0.26764552565245725
+        },
+        {
+          "split": "fold1",
+          "seed": 103,
+          "score": 0.2664380940865628
+        }
+      ]
+    },
+    {
+      "config_id": "dac5256c7bde",
+      "config": {
+        "family": "mlp",
+        "width": 32,
+        "depth": 3,
+        "history": 32,
+        "patch": 4,
+        "dropout": 0.0,
+        "lr": 0.001,
+        "weight_decay": 0.001,
+        "epochs": 48
+      },
+      "score": 0.25479809422955846,
+      "folds_seeds": [
+        {
+          "split": "fold0",
+          "seed": 102,
+          "score": 0.23537165330157633
+        },
+        {
+          "split": "fold0",
+          "seed": 103,
+          "score": 0.24342806190752486
+        },
+        {
+          "split": "fold1",
+          "seed": 102,
+          "score": 0.27324476582009405
+        },
+        {
+          "split": "fold1",
+          "seed": 103,
+          "score": 0.2671478958890385
+        }
+      ]
+    },
+    {
+      "config_id": "a92ba273cde3",
+      "config": {
+        "family": "attention",
+        "width": 64,
+        "depth": 2,
+        "history": 32,
+        "patch": 4,
+        "dropout": 0.1,
+        "lr": 0.0003,
+        "weight_decay": 0.01,
+        "epochs": 48
+      },
+      "score": 0.2680930799485376,
+      "folds_seeds": [
+        {
+          "split": "fold0",
+          "seed": 102,
+          "score": 0.2590470392674974
+        },
+        {
+          "split": "fold0",
+          "seed": 103,
+          "score": 0.24511241017369523
+        },
+        {
+          "split": "fold1",
+          "seed": 102,
+          "score": 0.28280388093246034
+        },
+        {
+          "split": "fold1",
+          "seed": 103,
+          "score": 0.28540898942049747
+        }
+      ]
+    },
+    {
+      "config_id": "fd361067037b",
+      "config": {
+        "family": "attention",
+        "width": 64,
+        "depth": 2,
+        "history": 32,
+        "patch": 4,
+        "dropout": 0.1,
+        "lr": 0.0003,
+        "weight_decay": 0.001,
+        "epochs": 48
+      },
+      "score": 0.268148275476638,
+      "folds_seeds": [
+        {
+          "split": "fold0",
+          "seed": 102,
+          "score": 0.2590842049364094
+        },
+        {
+          "split": "fold0",
+          "seed": 103,
+          "score": 0.24509106213959236
+        },
+        {
+          "split": "fold1",
+          "seed": 102,
+          "score": 0.28285066095459677
+        },
+        {
+          "split": "fold1",
+          "seed": 103,
+          "score": 0.2855671738759535
+        }
+      ]
+    },
+    {
+      "config_id": "fd48f45e2413",
+      "config": {
+        "family": "attention",
+        "width": 64,
+        "depth": 2,
+        "history": 32,
+        "patch": 4,
+        "dropout": 0.0,
+        "lr": 0.0003,
+        "weight_decay": 0.01,
+        "epochs": 48
+      },
+      "score": 0.27686641998855255,
+      "folds_seeds": [
+        {
+          "split": "fold0",
+          "seed": 102,
+          "score": 0.2791237999725271
+        },
+        {
+          "split": "fold0",
+          "seed": 103,
+          "score": 0.2547933350536157
+        },
+        {
+          "split": "fold1",
+          "seed": 102,
+          "score": 0.28510593595107525
+        },
+        {
+          "split": "fold1",
+          "seed": 103,
+          "score": 0.2884426089769921
+        }
+      ]
+    },
+    {
+      "config_id": "e0be9cf9e3d8",
+      "config": {
+        "family": "attention",
+        "width": 64,
+        "depth": 2,
+        "history": 32,
+        "patch": 4,
+        "dropout": 0.0,
+        "lr": 0.0003,
+        "weight_decay": 0.001,
+        "epochs": 48
+      },
+      "score": 0.2770802758437626,
+      "folds_seeds": [
+        {
+          "split": "fold0",
+          "seed": 102,
+          "score": 0.27891248051750406
+        },
+        {
+          "split": "fold0",
+          "seed": 103,
+          "score": 0.25500299877218724
+        },
+        {
+          "split": "fold1",
+          "seed": 102,
+          "score": 0.2853415605001056
+        },
+        {
+          "split": "fold1",
+          "seed": 103,
+          "score": 0.2890640635852535
+        }
+      ]
+    },
+    {
+      "config_id": "a60d479e355b",
+      "config": {
+        "family": "attention",
+        "width": 64,
+        "depth": 1,
+        "history": 32,
+        "patch": 4,
+        "dropout": 0.1,
+        "lr": 0.0003,
+        "weight_decay": 0.01,
+        "epochs": 48
+      },
+      "score": 0.2775613265615146,
+      "folds_seeds": [
+        {
+          "split": "fold0",
+          "seed": 102,
+          "score": 0.26675674061003285
+        },
+        {
+          "split": "fold0",
+          "seed": 103,
+          "score": 0.26002811854034136
+        },
+        {
+          "split": "fold1",
+          "seed": 102,
+          "score": 0.28245012379287376
+        },
+        {
+          "split": "fold1",
+          "seed": 103,
+          "score": 0.3010103233028106
+        }
+      ]
+    },
+    {
+      "config_id": "42250182a52f",
+      "config": {
+        "family": "attention",
+        "width": 64,
+        "depth": 1,
+        "history": 32,
+        "patch": 4,
+        "dropout": 0.1,
+        "lr": 0.0003,
+        "weight_decay": 0.001,
+        "epochs": 48
+      },
+      "score": 0.2775739344973188,
+      "folds_seeds": [
+        {
+          "split": "fold0",
+          "seed": 102,
+          "score": 0.2667772289094543
+        },
+        {
+          "split": "fold0",
+          "seed": 103,
+          "score": 0.26001506943964814
+        },
+        {
+          "split": "fold1",
+          "seed": 102,
+          "score": 0.2824462456913934
+        },
+        {
+          "split": "fold1",
+          "seed": 103,
+          "score": 0.30105719394877944
+        }
+      ]
+    },
+    {
+      "config_id": "ce6317ab6d4f",
+      "config": {
+        "family": "mlp",
+        "width": 64,
+        "depth": 2,
+        "history": 32,
+        "patch": 2,
+        "dropout": 0.1,
+        "lr": 0.0003,
+        "weight_decay": 0.01,
+        "epochs": 48
+      },
+      "score": 0.2784280724459509,
+      "folds_seeds": [
+        {
+          "split": "fold0",
+          "seed": 102,
+          "score": 0.2799217185005907
+        },
+        {
+          "split": "fold0",
+          "seed": 103,
+          "score": 0.28370289779037916
+        },
+        {
+          "split": "fold1",
+          "seed": 102,
+          "score": 0.2599055988183901
+        },
+        {
+          "split": "fold1",
+          "seed": 103,
+          "score": 0.2901820746744438
+        }
+      ]
+    },
+    {
+      "config_id": "0a61514ab4ec",
+      "config": {
+        "family": "mlp",
+        "width": 64,
+        "depth": 2,
+        "history": 32,
+        "patch": 2,
+        "dropout": 0.1,
+        "lr": 0.0003,
+        "weight_decay": 0.001,
+        "epochs": 48
+      },
+      "score": 0.2785143330210902,
+      "folds_seeds": [
+        {
+          "split": "fold0",
+          "seed": 102,
+          "score": 0.2799466428164928
+        },
+        {
+          "split": "fold0",
+          "seed": 103,
+          "score": 0.28375487598131177
+        },
+        {
+          "split": "fold1",
+          "seed": 102,
+          "score": 0.25998612649933167
+        },
+        {
+          "split": "fold1",
+          "seed": 103,
+          "score": 0.2903696867872245
+        }
+      ]
+    },
+    {
+      "config_id": "a3eada2001bf",
+      "config": {
+        "family": "attention",
+        "width": 16,
+        "depth": 1,
+        "history": 32,
+        "patch": 4,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "score": 0.28109516780420607,
+      "folds_seeds": [
+        {
+          "split": "fold0",
+          "seed": 102,
+          "score": 0.27493666946867457
+        },
+        {
+          "split": "fold0",
+          "seed": 103,
+          "score": 0.2584172576434976
+        },
+        {
+          "split": "fold1",
+          "seed": 102,
+          "score": 0.2891519492022991
+        },
+        {
+          "split": "fold1",
+          "seed": 103,
+          "score": 0.30187479490235297
+        }
+      ]
+    },
+    {
+      "config_id": "1e9601604c03",
+      "config": {
+        "family": "attention",
+        "width": 64,
+        "depth": 1,
+        "history": 32,
+        "patch": 4,
+        "dropout": 0.0,
+        "lr": 0.0003,
+        "weight_decay": 0.01,
+        "epochs": 48
+      },
+      "score": 0.2821970163689997,
+      "folds_seeds": [
+        {
+          "split": "fold0",
+          "seed": 102,
+          "score": 0.2733594593525536
+        },
+        {
+          "split": "fold0",
+          "seed": 103,
+          "score": 0.26690399692733635
+        },
+        {
+          "split": "fold1",
+          "seed": 102,
+          "score": 0.2781901789937653
+        },
+        {
+          "split": "fold1",
+          "seed": 103,
+          "score": 0.3103344302023434
+        }
+      ]
+    },
+    {
+      "config_id": "af4f0d794691",
+      "config": {
+        "family": "attention",
+        "width": 64,
+        "depth": 1,
+        "history": 32,
+        "patch": 4,
+        "dropout": 0.0,
+        "lr": 0.0003,
+        "weight_decay": 0.001,
+        "epochs": 48
+      },
+      "score": 0.2822910584422339,
+      "folds_seeds": [
+        {
+          "split": "fold0",
+          "seed": 102,
+          "score": 0.2734875520266632
+        },
+        {
+          "split": "fold0",
+          "seed": 103,
+          "score": 0.26707362541524177
+        },
+        {
+          "split": "fold1",
+          "seed": 102,
+          "score": 0.27819194757994087
+        },
+        {
+          "split": "fold1",
+          "seed": 103,
+          "score": 0.31041110874708977
+        }
+      ]
+    },
+    {
+      "config_id": "3f04d10815af",
+      "config": {
+        "family": "mlp",
+        "width": 64,
+        "depth": 2,
+        "history": 32,
+        "patch": 2,
+        "dropout": 0.0,
+        "lr": 0.0003,
+        "weight_decay": 0.01,
+        "epochs": 48
+      },
+      "score": 0.2932475560286556,
+      "folds_seeds": [
+        {
+          "split": "fold0",
+          "seed": 102,
+          "score": 0.29934737598961964
+        },
+        {
+          "split": "fold0",
+          "seed": 103,
+          "score": 0.29790732351429233
+        },
+        {
+          "split": "fold1",
+          "seed": 102,
+          "score": 0.2749074616843946
+        },
+        {
+          "split": "fold1",
+          "seed": 103,
+          "score": 0.3008280629263157
+        }
+      ]
+    },
+    {
+      "config_id": "53ab0433e184",
+      "config": {
+        "family": "mlp",
+        "width": 64,
+        "depth": 2,
+        "history": 32,
+        "patch": 2,
+        "dropout": 0.0,
+        "lr": 0.0003,
+        "weight_decay": 0.001,
+        "epochs": 48
+      },
+      "score": 0.29370499337610756,
+      "folds_seeds": [
+        {
+          "split": "fold0",
+          "seed": 102,
+          "score": 0.3006111387779635
+        },
+        {
+          "split": "fold0",
+          "seed": 103,
+          "score": 0.2979678325996033
+        },
+        {
+          "split": "fold1",
+          "seed": 102,
+          "score": 0.2750845164540727
+        },
+        {
+          "split": "fold1",
+          "seed": 103,
+          "score": 0.30115648567279074
+        }
+      ]
+    },
+    {
+      "config_id": "a910cdca3329",
+      "config": {
+        "family": "mlp",
+        "width": 32,
+        "depth": 3,
+        "history": 32,
+        "patch": 4,
+        "dropout": 0.1,
+        "lr": 0.0003,
+        "weight_decay": 0.01,
+        "epochs": 48
+      },
+      "score": 0.29807278582288554,
+      "folds_seeds": [
+        {
+          "split": "fold0",
+          "seed": 102,
+          "score": 0.28797059142844694
+        },
+        {
+          "split": "fold0",
+          "seed": 103,
+          "score": 0.2852939736572943
+        },
+        {
+          "split": "fold1",
+          "seed": 102,
+          "score": 0.3078675981587226
+        },
+        {
+          "split": "fold1",
+          "seed": 103,
+          "score": 0.3111589800470781
+        }
+      ]
+    },
+    {
+      "config_id": "91442bd4090a",
+      "config": {
+        "family": "mlp",
+        "width": 32,
+        "depth": 3,
+        "history": 32,
+        "patch": 4,
+        "dropout": 0.1,
+        "lr": 0.0003,
+        "weight_decay": 0.001,
+        "epochs": 48
+      },
+      "score": 0.2981292679759019,
+      "folds_seeds": [
+        {
+          "split": "fold0",
+          "seed": 102,
+          "score": 0.28795113124098654
+        },
+        {
+          "split": "fold0",
+          "seed": 103,
+          "score": 0.28527246093582576
+        },
+        {
+          "split": "fold1",
+          "seed": 102,
+          "score": 0.3080163388365005
+        },
+        {
+          "split": "fold1",
+          "seed": 103,
+          "score": 0.31127714089029485
+        }
+      ]
+    },
+    {
+      "config_id": "d79620fe0d39",
+      "config": {
+        "family": "mlp",
+        "width": 32,
+        "depth": 3,
+        "history": 32,
+        "patch": 4,
+        "dropout": 0.0,
+        "lr": 0.0003,
+        "weight_decay": 0.01,
+        "epochs": 48
+      },
+      "score": 0.3127020865007393,
+      "folds_seeds": [
+        {
+          "split": "fold0",
+          "seed": 102,
+          "score": 0.3104577588478975
+        },
+        {
+          "split": "fold0",
+          "seed": 103,
+          "score": 0.3125809405320675
+        },
+        {
+          "split": "fold1",
+          "seed": 102,
+          "score": 0.30978681082607096
+        },
+        {
+          "split": "fold1",
+          "seed": 103,
+          "score": 0.3179828357969211
+        }
+      ]
+    },
+    {
+      "config_id": "b1e0a1b0b285",
+      "config": {
+        "family": "mlp",
+        "width": 32,
+        "depth": 3,
+        "history": 32,
+        "patch": 4,
+        "dropout": 0.0,
+        "lr": 0.0003,
+        "weight_decay": 0.001,
+        "epochs": 48
+      },
+      "score": 0.3127408664679895,
+      "folds_seeds": [
+        {
+          "split": "fold0",
+          "seed": 102,
+          "score": 0.31044980003996425
+        },
+        {
+          "split": "fold0",
+          "seed": 103,
+          "score": 0.3126287891677136
+        },
+        {
+          "split": "fold1",
+          "seed": 102,
+          "score": 0.3097997296814666
+        },
+        {
+          "split": "fold1",
+          "seed": 103,
+          "score": 0.3180851469828136
+        }
+      ]
+    },
+    {
+      "config_id": "32d5fa0f5e66",
+      "config": {
+        "family": "mlp",
+        "width": 16,
+        "depth": 1,
+        "history": 32,
+        "patch": 4,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "score": 0.31394046101328654,
+      "folds_seeds": [
+        {
+          "split": "fold0",
+          "seed": 102,
+          "score": 0.28551089048970535
+        },
+        {
+          "split": "fold0",
+          "seed": 103,
+          "score": 0.3319148757156492
+        },
+        {
+          "split": "fold1",
+          "seed": 102,
+          "score": 0.30328185102106914
+        },
+        {
+          "split": "fold1",
+          "seed": 103,
+          "score": 0.33505422682672237
+        }
+      ]
+    },
+    {
+      "config_id": "112ac5023634",
+      "config": {
+        "family": "local_mlp",
+        "width": 16,
+        "depth": 1,
+        "history": 32,
+        "patch": 4,
+        "dropout": 0.1,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 48
+      },
+      "score": 0.37450302424913545,
+      "folds_seeds": [
+        {
+          "split": "fold0",
+          "seed": 102,
+          "score": 0.2721655327314951
+        },
+        {
+          "split": "fold0",
+          "seed": 103,
+          "score": 0.39815279827636174
+        },
+        {
+          "split": "fold1",
+          "seed": 102,
+          "score": 0.49169329350300334
+        },
+        {
+          "split": "fold1",
+          "seed": 103,
+          "score": 0.3360004724856816
+        }
+      ]
+    },
+    {
+      "config_id": "5c88c66c8908",
+      "config": {
+        "family": "local_mlp",
+        "width": 16,
+        "depth": 1,
+        "history": 32,
+        "patch": 4,
+        "dropout": 0.1,
+        "lr": 0.001,
+        "weight_decay": 0.001,
+        "epochs": 48
+      },
+      "score": 0.37599473966609437,
+      "folds_seeds": [
+        {
+          "split": "fold0",
+          "seed": 102,
+          "score": 0.27488430203529296
+        },
+        {
+          "split": "fold0",
+          "seed": 103,
+          "score": 0.40002214309598727
+        },
+        {
+          "split": "fold1",
+          "seed": 102,
+          "score": 0.4846913230212499
+        },
+        {
+          "split": "fold1",
+          "seed": 103,
+          "score": 0.34438119051184723
+        }
+      ]
+    },
+    {
+      "config_id": "146bcf513d5e",
+      "config": {
+        "family": "local_mlp",
+        "width": 16,
+        "depth": 1,
+        "history": 32,
+        "patch": 4,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "score": 0.41602779636109205,
+      "folds_seeds": [
+        {
+          "split": "fold0",
+          "seed": 102,
+          "score": 0.3845607725571921
+        },
+        {
+          "split": "fold0",
+          "seed": 103,
+          "score": 0.42975677509695687
+        },
+        {
+          "split": "fold1",
+          "seed": 102,
+          "score": 0.5117947143195007
+        },
+        {
+          "split": "fold1",
+          "seed": 103,
+          "score": 0.3379989234707185
+        }
+      ]
+    },
+    {
+      "config_id": "870ed66d2b4d",
+      "config": {
+        "family": "local_mlp",
+        "width": 16,
+        "depth": 1,
+        "history": 32,
+        "patch": 4,
+        "dropout": 0.0,
+        "lr": 0.001,
+        "weight_decay": 0.001,
+        "epochs": 48
+      },
+      "score": 0.4209739758407321,
+      "folds_seeds": [
+        {
+          "split": "fold0",
+          "seed": 102,
+          "score": 0.42548801042883766
+        },
+        {
+          "split": "fold0",
+          "seed": 103,
+          "score": 0.4309950042111015
+        },
+        {
+          "split": "fold1",
+          "seed": 102,
+          "score": 0.49463168613055897
+        },
+        {
+          "split": "fold1",
+          "seed": 103,
+          "score": 0.3327812025924303
+        }
+      ]
+    },
+    {
+      "config_id": "f1b4d5dec1b3",
+      "config": {
+        "family": "local_mlp",
+        "width": 16,
+        "depth": 1,
+        "history": 32,
+        "patch": 4,
+        "dropout": 0.0,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 48
+      },
+      "score": 0.43033022806591326,
+      "folds_seeds": [
+        {
+          "split": "fold0",
+          "seed": 102,
+          "score": 0.44218645630956077
+        },
+        {
+          "split": "fold0",
+          "seed": 103,
+          "score": 0.43185071863796376
+        },
+        {
+          "split": "fold1",
+          "seed": 102,
+          "score": 0.5102799652226524
+        },
+        {
+          "split": "fold1",
+          "seed": 103,
+          "score": 0.3370037720934761
+        }
+      ]
+    },
+    {
+      "config_id": "c86c0086e94d",
+      "config": {
+        "family": "local_mlp",
+        "width": 16,
+        "depth": 1,
+        "history": 32,
+        "patch": 4,
+        "dropout": 0.1,
+        "lr": 0.0003,
+        "weight_decay": 0.001,
+        "epochs": 48
+      },
+      "score": 0.4883037083257285,
+      "folds_seeds": [
+        {
+          "split": "fold0",
+          "seed": 102,
+          "score": 0.40725182531743087
+        },
+        {
+          "split": "fold0",
+          "seed": 103,
+          "score": 0.47351634288294214
+        },
+        {
+          "split": "fold1",
+          "seed": 102,
+          "score": 0.6058765111973542
+        },
+        {
+          "split": "fold1",
+          "seed": 103,
+          "score": 0.466570153905187
+        }
+      ]
+    },
+    {
+      "config_id": "67873b0008b7",
+      "config": {
+        "family": "local_mlp",
+        "width": 16,
+        "depth": 1,
+        "history": 32,
+        "patch": 4,
+        "dropout": 0.1,
+        "lr": 0.0003,
+        "weight_decay": 0.01,
+        "epochs": 48
+      },
+      "score": 0.4884726561181402,
+      "folds_seeds": [
+        {
+          "split": "fold0",
+          "seed": 102,
+          "score": 0.4075414279547459
+        },
+        {
+          "split": "fold0",
+          "seed": 103,
+          "score": 0.47354462693363847
+        },
+        {
+          "split": "fold1",
+          "seed": 102,
+          "score": 0.6067363967102747
+        },
+        {
+          "split": "fold1",
+          "seed": 103,
+          "score": 0.466068172873902
+        }
+      ]
+    },
+    {
+      "config_id": "d42c2271a6d9",
+      "config": {
+        "family": "local_mlp",
+        "width": 16,
+        "depth": 1,
+        "history": 32,
+        "patch": 4,
+        "dropout": 0.0,
+        "lr": 0.0003,
+        "weight_decay": 0.001,
+        "epochs": 48
+      },
+      "score": 0.49239009698629677,
+      "folds_seeds": [
+        {
+          "split": "fold0",
+          "seed": 102,
+          "score": 0.44840909672480783
+        },
+        {
+          "split": "fold0",
+          "seed": 103,
+          "score": 0.4599830721944014
+        },
+        {
+          "split": "fold1",
+          "seed": 102,
+          "score": 0.6011073763437481
+        },
+        {
+          "split": "fold1",
+          "seed": 103,
+          "score": 0.46006084268222963
+        }
+      ]
+    },
+    {
+      "config_id": "5fcebcc1d07e",
+      "config": {
+        "family": "local_mlp",
+        "width": 16,
+        "depth": 1,
+        "history": 32,
+        "patch": 4,
+        "dropout": 0.0,
+        "lr": 0.0003,
+        "weight_decay": 0.01,
+        "epochs": 48
+      },
+      "score": 0.4929509395965154,
+      "folds_seeds": [
+        {
+          "split": "fold0",
+          "seed": 102,
+          "score": 0.4483993556138236
+        },
+        {
+          "split": "fold0",
+          "seed": 103,
+          "score": 0.46045545610168404
+        },
+        {
+          "split": "fold1",
+          "seed": 102,
+          "score": 0.6024176239968677
+        },
+        {
+          "split": "fold1",
+          "seed": 103,
+          "score": 0.46053132267368624
+        }
+      ]
+    }
+  ],
+  "winners": {
+    "attention": {
+      "family": "attention",
+      "width": 64,
+      "depth": 2,
+      "history": 32,
+      "patch": 4,
+      "dropout": 0.0,
+      "lr": 0.001,
+      "weight_decay": 0.001,
+      "epochs": 48
+    },
+    "mlp": {
+      "family": "mlp",
+      "width": 64,
+      "depth": 2,
+      "history": 32,
+      "patch": 2,
+      "dropout": 0.1,
+      "lr": 0.001,
+      "weight_decay": 0.001,
+      "epochs": 48
+    },
+    "local_mlp": {
+      "family": "local_mlp",
+      "width": 16,
+      "depth": 1,
+      "history": 32,
+      "patch": 4,
+      "dropout": 0.1,
+      "lr": 0.001,
+      "weight_decay": 0.01,
+      "epochs": 48
+    }
+  },
+  "roles": {
+    "optimized_attention": {
+      "family": "attention",
+      "width": 64,
+      "depth": 2,
+      "history": 32,
+      "patch": 4,
+      "dropout": 0.0,
+      "lr": 0.001,
+      "weight_decay": 0.001,
+      "epochs": 48
+    },
+    "optimized_population_mlp": {
+      "family": "mlp",
+      "width": 64,
+      "depth": 2,
+      "history": 32,
+      "patch": 2,
+      "dropout": 0.1,
+      "lr": 0.001,
+      "weight_decay": 0.001,
+      "epochs": 48
+    },
+    "optimized_local_mlp": {
+      "family": "local_mlp",
+      "width": 16,
+      "depth": 1,
+      "history": 32,
+      "patch": 4,
+      "dropout": 0.1,
+      "lr": 0.001,
+      "weight_decay": 0.01,
+      "epochs": 48
+    },
+    "default_attention": {
+      "family": "attention",
+      "width": 16,
+      "depth": 1,
+      "history": 32,
+      "patch": 4,
+      "dropout": 0.05,
+      "lr": 0.001,
+      "weight_decay": 0.01,
+      "epochs": 24
+    },
+    "default_local_mlp": {
+      "family": "local_mlp",
+      "width": 16,
+      "depth": 1,
+      "history": 32,
+      "patch": 4,
+      "dropout": 0.05,
+      "lr": 0.001,
+      "weight_decay": 0.01,
+      "epochs": 24
+    },
+    "matched_population_mlp": {
+      "family": "mlp",
+      "width": 64,
+      "depth": 2,
+      "history": 32,
+      "patch": 4,
+      "dropout": 0.0,
+      "lr": 0.001,
+      "weight_decay": 0.001,
+      "epochs": 48
+    }
+  },
+  "role_config_ids": {
+    "optimized_attention": "f98af2dda6e3",
+    "optimized_population_mlp": "cf58a2426d68",
+    "optimized_local_mlp": "112ac5023634",
+    "default_attention": "a3eada2001bf",
+    "default_local_mlp": "146bcf513d5e",
+    "matched_population_mlp": "f17d19e09641"
+  },
+  "later_opened": false,
+  "original_selection_used_for_config_choice": false
+}

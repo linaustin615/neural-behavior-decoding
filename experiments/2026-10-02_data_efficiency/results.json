@@ -1,0 +1,91 @@
+{
+  "decision": "inconclusive",
+  "promising_gate": false,
+  "low_data_interaction": true,
+  "negative_gate": false,
+  "mean_relative_advantage_vs_none": 0.0198715738276715,
+  "mean_relative_advantage_vs_shuffle": 0.021430906454623533,
+  "conditional_intervals": {
+    "vs_none": [
+      -0.030027240520692545,
+      0.08038414441677663
+    ],
+    "vs_shuffle": [
+      -0.009733070549869214,
+      0.062046609610165185
+    ]
+  },
+  "per_seed_curve_advantage": {
+    "vs_none": [
+      -0.021951588924764787,
+      -0.002885016034706145,
+      0.08604173951386833
+    ],
+    "vs_shuffle": [
+      0.004602685710072903,
+      -0.0019027845938842287,
+      0.06796100089395347
+    ]
+  },
+  "rows": [
+    {
+      "fraction": 10,
+      "examples": 385,
+      "real": 101.20588056957587,
+      "none": 98.97270453440967,
+      "shuffle1": 101.21293900157644,
+      "shuffle2": 101.20199812907639,
+      "advantage_vs_none": -0.02256355472624061,
+      "advantage_vs_shuffle": 1.569049965444158e-05
+    },
+    {
+      "fraction": 30,
+      "examples": 1217,
+      "real": 92.21765945949696,
+      "none": 101.4078133485909,
+      "shuffle1": 102.92025963121952,
+      "shuffle2": 90.49829575085818,
+      "advantage_vs_none": 0.09062569821422595,
+      "advantage_vs_shuffle": 0.04644454326183112
+    },
+    {
+      "fraction": 100,
+      "examples": 4129,
+      "real": 16.42389227471862,
+      "none": 16.286314899853714,
+      "shuffle1": 16.566241359098324,
+      "shuffle2": 16.877936001607313,
+      "advantage_vs_none": -0.00844742200497084,
+      "advantage_vs_shuffle": 0.01783248560238504
+    }
+  ],
+  "raw_mse_means": [
+    [
+      101.20588056957587,
+      98.97270453440967,
+      101.21293900157644,
+      101.20199812907639
+    ],
+    [
+      92.21766165229486,
+      101.4078133485909,
+      102.92025963121952,
+      90.49832486325323
+    ],
+    [
+      16.44076076832188,
+      16.33251128276719,
+      16.566397180256246,
+      16.892289097682735
+    ]
+  ],
+  "fits": 36,
+  "new_fits": 30,
+  "reused_fits": 6,
+  "beat_untrained": 34,
+  "beat_constant": 31,
+  "selected_budget_limit": 0,
+  "new_fit_seconds": 1004.7431269189998,
+  "maximum_reload_difference": 4.76837158203125e-07,
+  "test_evaluations": 0
+}

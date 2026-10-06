@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "models": [
+    {
+      "kind": "attention",
+      "parameters": 12181
+    },
+    {
+      "kind": "mixer",
+      "parameters": 12239
+    },
+    {
+      "kind": "pooled_mlp",
+      "parameters": 19297
+    }
+  ],
+  "patch_causality_exact": true,
+  "shape_gradients_updates_reload": true,
+  "shared_input_output_initialization_exact": true,
+  "forecast_window_boundaries": true
+}

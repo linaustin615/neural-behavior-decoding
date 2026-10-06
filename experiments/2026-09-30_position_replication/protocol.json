@@ -1,0 +1,44 @@
+{
+  "created_utc": "2026-09-30T15:04:45.530373+00:00",
+  "question": "Do correct positions produce a repeatable positive contribution compared with no positions at 2048 neurons?",
+  "dataset": "Same Stringer MP019 recording; reused chronological validation/test segments, explicitly exploratory",
+  "population_size": 2048,
+  "pool_seeds": [
+    101,
+    202,
+    303,
+    404,
+    505,
+    606
+  ],
+  "optimizer_seeds": [
+    10,
+    11,
+    12
+  ],
+  "conditions": [
+    "real",
+    "none",
+    "shuffled"
+  ],
+  "budget": "Exactly36 new fits plus18 reused matching fits:54 fits,18 matched triples; do not extend contingent on outcome",
+  "primary_contrast": "MSE(no positions)-MSE(real positions); positive means real positions help",
+  "secondary_contrast": "MSE(shuffled positions)-MSE(real positions); positive favors the true cell-position mapping over arbitrary fixed identifiers",
+  "reporting": "report old18,new36,combined54 and old/new neuron pools separately; count paired wins and pool-level means; show validation and test and raw/bounded MSE; do not choose individual favorable seeds",
+  "design": "unchanged architecture, neuron selection algorithm, normalization, coordinate shuffle rule, training budget and split from density study; six pools of2048 cells with three optimizer seeds each",
+  "earlier_consistency_gate": "retain all-pool consistency rule: real coordinates must beat each control in every pool mean as well as overall; evaluate none-only contribution and geometry contribution separately",
+  "uncertainty": "exploratory crossed resampling of neuron pools, training-seed blocks, and contiguous test-time blocks;2000 resamples,100-bin circular blocks; same sampled units across conditions; conditional on this single recording, not animal-level significance",
+  "no_pristine_test_claim": true,
+  "previous_study": "experiments/2026-09-30_spatial_density",
+  "source_hashes": {
+    "model.py": "2297af73466e1c85ee5774dc10a44a2a03f7a6f48919a111b43a8cf6d7d86a40",
+    "data.py": "894d5aea4dd0ce6a139178b66b1f8a5538f1c4f015081153d4c11fa55d78b7bf",
+    "train.py": "0361d216cd75616ed07501a019f4837f7c0acf57f0cd2edecb0fc6728064d7f9"
+  },
+  "copied_implementation_hashes": {
+    "base_search.py": "1d09337789fa6a3876495a013f13843dcb01406fa2d5d859d898264ec1e9a510",
+    "model_snapshot.py": "2297af73466e1c85ee5774dc10a44a2a03f7a6f48919a111b43a8cf6d7d86a40",
+    "spatial_search.py": "54b911452a6250aafde101d51e380fdf6a8dfdeb1c2b99fc3221cf39ebe6b8fa"
+  },
+  "no_application_code_changes": true
+}

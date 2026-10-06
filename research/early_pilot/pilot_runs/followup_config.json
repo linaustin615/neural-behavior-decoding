@@ -1,0 +1,29 @@
+{
+  "neurons_per_step": 128,
+  "train_neuron_pool": 512,
+  "unseen_neuron_pool": 512,
+  "window": 8,
+  "width": 32,
+  "layers": 2,
+  "heads": 4,
+  "ff_width": 64,
+  "batch": 32,
+  "dropout": 0.05,
+  "lr": 0.001,
+  "weight_decay": 0.01,
+  "steps": 1600,
+  "validation_every": 200,
+  "eval_subsets": 4,
+  "validation_subsets": 2,
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "gap_bins_each_side": 50,
+  "core_sha256": "235d0b309fa52d26ed0e24b7ce83c1a32904d0c74bfa45e5f9805b868f8f9f40",
+  "device": "mps",
+  "revision": "v3: add ID-plus-depth condition; existing model computations unchanged"
+}

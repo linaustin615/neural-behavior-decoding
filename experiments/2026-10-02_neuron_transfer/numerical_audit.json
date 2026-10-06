@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "warnings": "NumPy/BLAS emitted divide/overflow/invalid matmul warnings despite finite outputs; independent Torch arithmetic verified saved projections, donor fit and final predictions",
+  "precision": "original activity normalization and PCA are float32; audit uses float64 with tolerances for float32 rounding",
+  "pca_orthogonality_error": 9.464164895112148e-07,
+  "randomized_pca_captured_variance_over_exact_rank16": 0.995558380340831,
+  "feature_projection_max_error": 3.3610234204672906e-06,
+  "donor_coefficient_max_error": 1.405855485055521e-07,
+  "prediction_max_errors": {
+    "none": 1.967695332227848e-07,
+    "real": 3.1017022930623916e-07,
+    "shuffle1": 2.1558008028721432e-07,
+    "shuffle2": 2.5255269331392327e-07,
+    "independent": 1.3305095852844673e-07,
+    "speed_only": 0.0
+  },
+  "mse_errors": {
+    "none": 5.883784570670514e-10,
+    "real": 7.114926425799695e-10,
+    "shuffle1": 5.130076363712988e-10,
+    "shuffle2": 4.969620270856012e-10,
+    "independent": 8.426792597049371e-11,
+    "speed_only": 6.661338147750939e-16
+  }
+}

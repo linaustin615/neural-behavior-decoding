@@ -1,0 +1,10 @@
+{
+  "utc": "2026-10-06T15:03:18.947728+00:00",
+  "failure": "Initial schema assumed tneural length equals activity frames",
+  "observed": "TX57 spks (37937,23492), run (23492,), tneural (23491,); timestamp units not seconds",
+  "resolution": "Activity and run share frame indices in author fig4.py. Use their identical native frame index; retain all activity/run frames. Do not crop, shift, interpolate or infer physical timing from tneural. Record timestamp mismatch.",
+  "author_source": "https://github.com/MouseLand/facemap/blob/f8b5b518efcde8b4aae7727283bf017b23641c7f/paper/fig4.py",
+  "scientific_choices_or_fits_before_correction": 0,
+  "download_repeated": false,
+  "raw_ball_alignment_independently_reconstructed": false
+}

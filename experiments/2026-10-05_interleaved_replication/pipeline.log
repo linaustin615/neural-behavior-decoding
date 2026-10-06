@@ -1,0 +1,22 @@
+Starting selection_lock 2026-10-05T17:24:40.190424+00:00
+Starting later_evaluation 2026-10-05T17:24:41.135515+00:00
+MP030 scored
+MP032 scored
+MP033 scored
+MP034 scored
+Starting analysis 2026-10-05T17:24:51.413209+00:00
+{'dynamic_vs_baseline': {'mean_mse_gain': -0.48512771867923404, 'mouse_mse_gains': [-0.28782819474325905, 0.07960965806963172, -0.1632770382315225, -1.5690152998117863], 'mouse_wins': 1, 'mean_mae_gain': -0.2762714304321304, 'mouse_mae_gains': [0.27312140568166077, -0.06627645281842498, -0.2008418848252349, -1.1110887897665225], 'seed_wins': 2, 'pair_wins': 2, 'single_mean_mse_gain': -0.6434409556591504, 'leave_one_mouse_out': [-0.5508942266578923, -0.673373510928856, -0.5924112788284712, -0.12383185830171661], 'individual_seeds': [{'seed': 13, 'mean_mse_gain': -0.17443334185389053, 'mouse_wins': 1}, {'seed': 14, 'mean_mse_gain': -0.5549606434150995, 'mouse_wins': 0}, {'seed': 15, 'mean_mse_gain': -1.2700083243893434, 'mouse_wins': 1}], 'contrast_passed': False}, 'dynamic_vs_static': {'mean_mse_gain': -0.09171716956897213, 'mouse_mse_gains': [0.001122684706135857, 0.09766554173888786, -0.10849447965653325, -0.357162425064379], 'mouse_wins': 2, 'mean_mae_gain': 0.07124997793092167, 'mouse_mae_gains': [0.1219054289791397, 0.26767209284635596, -0.05780846260856998, -0.046769147493239016], 'seed_wins': 6, 'pair_wins': 4, 'single_mean_mse_gain': -0.15741737030408529, 'leave_one_mouse_out': [-0.1226637876606748, -0.15484474000492546, -0.08612473287311843, -0.0032354177371698434], 'individual_seeds': [{'seed': 13, 'mean_mse_gain': 0.12083647215372129, 'mouse_wins': 3}, {'seed': 14, 'mean_mse_gain': -0.33296288040749406, 'mouse_wins': 1}, {'seed': 15, 'mean_mse_gain': -0.41294983062566115, 'mouse_wins': 2}], 'contrast_passed': False}, 'static_vs_baseline': {'mean_mse_gain': -0.31290946753531745, 'mouse_mse_gains': [-0.28927564479166, -0.020010189685154778, -0.04942068686888135, -0.8929313487955737], 'mouse_wins': 0, 'mean_mae_gain': -0.35894586694182085, 'mouse_mae_gains': [0.17220921492171348, -0.45600958587355556, -0.1352167497922474, -1.0167663470231938], 'seed_wins': 3, 'pair_wins': 1, 'single_mean_mse_gain': -0.3397774473438505, 'leave_one_mouse_out': [-0.3207874084498699, -0.4105425601520383, -0.40073906109079616, -0.11956884044856537], 'individual_seeds': [{'seed': 13, 'mean_mse_gain': -0.465653619243077, 'mouse_wins': 0}, {'seed': 14, 'mean_mse_gain': -0.1432192192365825, 'mouse_wins': 1}, {'seed': 15, 'mean_mse_gain': -0.3914353615140551, 'mouse_wins': 2}], 'contrast_passed': False}}
+Final decisions: {'dynamic_utility': False, 'static_utility': False, 'dynamic_routing': False}
+Starting review 2026-10-05T17:24:52.585127+00:00
+Review passed: 1154 aggregate/gate/accounting checks
+Starting report 2026-10-05T17:24:53.329020+00:00
+/Users/austinlin/.matplotlib is not a writable directory
+Matplotlib created a temporary cache directory at /var/folders/nk/b0zhc0jd2gs79ppv1wkyqfwr0000gn/T/matplotlib-b4gg8vbq because there was an issue with the default path (/Users/austinlin/.matplotlib); it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+
+Fontconfig error: No writable cache directories
+	/opt/homebrew/var/cache/fontconfig
+	/Users/austinlin/.cache/fontconfig
+	/Users/austinlin/.fontconfig
+Matplotlib is building the font cache; this may take a moment.
+Report and figures saved
+Automated stages complete; assessment and handoff pending

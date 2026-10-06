@@ -1,0 +1,53 @@
+{
+  "task": {
+    "n": 2048,
+    "pool": 303,
+    "seed": 11,
+    "variant": "depth_random"
+  },
+  "finite_state": true,
+  "positions_and_groups_match": true,
+  "reload_64_validation_max_error": 1.1920928955078125e-07,
+  "attention_all": {
+    "participation_rank": 6.079450473445889,
+    "pairwise_cosine": 0.4059112727453625
+  },
+  "attention_first8": {
+    "participation_rank": 6.186465829971749,
+    "pairwise_cosine": 0.0
+  },
+  "attention_global8": {
+    "participation_rank": 1.000568704364062,
+    "pairwise_cosine": 0.9996676967290552
+  },
+  "readin_features": {
+    "participation_rank": 1.7541374545651982,
+    "pairwise_cosine": 0.6944543859529605
+  },
+  "encoded_features": {
+    "participation_rank": 1.1214649832267218,
+    "pairwise_cosine": 0.9358523558298582
+  },
+  "validation_local_ablation": {
+    "metrics": {
+      "mse": 0.42170348359088866,
+      "raw_mse": 0.42205953209850444,
+      "rmse_speed_units": 4.820215192389123,
+      "mae_speed_units": 2.173549963328001,
+      "r2": 0.7614270388713296,
+      "negative_prediction_fraction": 0.4312647289866457
+    },
+    "mse_increase": 0.032233506231545306
+  },
+  "test_local_ablation": {
+    "metrics": {
+      "mse": 0.40929806605187913,
+      "raw_mse": 0.40970539299912573,
+      "rmse_speed_units": 4.7487868776723765,
+      "mae_speed_units": 2.188565438043629,
+      "r2": 0.8202783989989408,
+      "negative_prediction_fraction": 0.43008314436885864
+    },
+    "mse_increase": 0.012990041995756152
+  }
+}

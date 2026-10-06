@@ -1,0 +1,70 @@
+[
+  {
+    "name": "combo_w16",
+    "seed": 0,
+    "phase": "inputs",
+    "config": {
+      "n": 128,
+      "window": 16,
+      "width": 32,
+      "lr": 0.001,
+      "epochs": 24,
+      "schedule": "cosine",
+      "temporal": "mlp",
+      "readout": "attention",
+      "clip": 1.0
+    }
+  },
+  {
+    "name": "combo_w32",
+    "seed": 1,
+    "phase": "inputs",
+    "config": {
+      "n": 128,
+      "window": 32,
+      "width": 32,
+      "lr": 0.001,
+      "epochs": 24,
+      "schedule": "cosine",
+      "temporal": "mlp",
+      "readout": "attention",
+      "clip": 1.0
+    }
+  },
+  {
+    "name": "latent_n128",
+    "seed": 0,
+    "phase": "inputs",
+    "config": {
+      "n": 128,
+      "window": 8,
+      "width": 32,
+      "lr": 0.001,
+      "epochs": 24,
+      "schedule": "cosine",
+      "temporal": "mlp",
+      "readout": "mean",
+      "clip": 1.0,
+      "family": "latent",
+      "latents": 8
+    }
+  },
+  {
+    "name": "latent_n256",
+    "seed": 1,
+    "phase": "inputs",
+    "config": {
+      "n": 256,
+      "window": 8,
+      "width": 32,
+      "lr": 0.001,
+      "epochs": 24,
+      "schedule": "cosine",
+      "temporal": "mlp",
+      "readout": "mean",
+      "clip": 1.0,
+      "family": "latent",
+      "latents": 8
+    }
+  }
+]

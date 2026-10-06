@@ -1,0 +1,24 @@
+{
+  "scope": "Source-only follow-up on trial timing and preprocessing; no response file, label values or performance inspected",
+  "publisher": "https://figshare.com/articles/dataset/Recordings_of_20_000_neurons_from_V1_in_response_to_oriented_stimuli/8279387",
+  "processing_source": "https://raw.githubusercontent.com/MouseLand/stringer-et-al-2019/master/utils.py",
+  "running_source": "https://raw.githubusercontent.com/MouseLand/stringer-et-al-2019/master/decoders.py",
+  "verified_from_sources": [
+    "Publisher describes ordinary stimulus presentations of750ms followed by approximately1000ms; the fixed interval depends on recording rate. Stimuli are triggered on microscope frames.",
+    "compile_resp aligns sresp columns with istim length; runspeed_discrimination indexes the corresponding all_running vector using those trial indices.",
+    "The public compile_resp helper standardizes neural responses across all stimulus trials after spontaneous normalization and defaults to every-fourth-trial evaluation. It cannot be reused unchanged for our train-only normalization and chronological split requirements."
+  ],
+  "inferences": [
+    "A32trial history spans roughly56seconds, so treating32trial responses as32bins of the previous spontaneous time series would silently change the temporal task.",
+    "This release may support a separate trial-level running decoder, but it is not yet verified as an exact continuous-history replication."
+  ],
+  "unresolved": [
+    "Raw response fields and timing arrays",
+    "How the published running value is aggregated within each trial",
+    "Whether files contain usable continuous activity and continuous running rather than trial summaries",
+    "Animal provenance beyond distinct published identifiers"
+  ],
+  "new_fits": 0,
+  "new_predictions": 0,
+  "new_response_downloads": 0
+}

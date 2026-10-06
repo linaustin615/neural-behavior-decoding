@@ -1,0 +1,13 @@
+# Original transformer confirmation — complete
+
+The original transformer retained positive average advantages, but **failed the previously unused-seed consistency gate**. On seeds16–18 it reduced mean relative MSE by10.18% versus both native and equally fine-tuned MLPs, winning3/4mouse averages but only7/12individual seed comparisons (eight required). Against ridge it improved23.17%, winning4/4mouse averages but6/12individual comparisons. MAE and mouse-harm guards passed. No threshold was relaxed.
+
+All-nine pooled comparisons pass their preset criteria:18.28%lower MSE versus nativeMLP,17.31%versus fine-tunedMLP,and40.00%versus ridge,with3/3/4mouse wins and25/25/29of36individual wins. The pooled results cannot rescue the failed new-seed test. Every new and pooled model beats its initial training-mean predictor (12/12and36/36). This is useful but still seed-sensitive evidence; no model has passed the whole frozen confirmation gate.
+
+Twelve new fits completed:original transformer/MLP on seeds16–18 for24epochs each,then both families received the fixed1e-4/plain eight-epoch continuation. All new continuations selected epoch zero. Neither native architecture nor training recipe changed; earlier labels selected checkpoints, and all choices locked before later scoring. Old seeds10–15 and ridge predictions were reused. No old fit was repeated and no additional seed was appended after outcomes.
+
+On the new seeds, transformer-versus-MLP MSE gains byMP030/032/033/034 were+5.96%/+24.10%/−8.58%/+19.24%;versus ridge,+2.32%/+16.52%/+14.03%/+59.82%. New mean MAE gains were5.87%versusMLP and28.53%versusridge. All raw errors, individual seeds, all pairs and leave-one-mouse-out values are preserved in results.json. Four historically reused mice and additional seeds do not provide independent animal significance.
+
+Training/evaluation verified actual update counts, matched batches, exact continuation starts and selected reloads,1032selection scores,26616new later predictions,2040independently recomputed scalar errors and exact archived targets. Independent review passed222aggregate/gate/training checks,109frozen hashes and48selected artifacts. Three workers and every pipeline stage exited0. Main application and old studies are unchanged.
+
+This study is closed with a failed combined gate. The broader authorized search proceeds separately to replication of the existing single-query temporal transformer with learned static readout, reusing its original three fits. That next study must keep its own fixed gates; it cannot change this result. [Report](report.md), [protocol](protocol.json), [results](results.json), [review](review.json), [figure](confirmation.png).

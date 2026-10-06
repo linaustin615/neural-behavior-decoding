@@ -1,0 +1,377 @@
+{
+  "version": 1,
+  "frozen_utc": "2026-10-03T00:36:28.349219+00:00",
+  "status_at_freeze": "No new-cohort models fitted, correlations inspected, or predictive outcomes scored. Completed integrity/feasibility validation reused.",
+  "question": "Do training-activity-defined groups improve concurrent running-speed decoding beyond same-size randomized groups and unrestricted activity+ID attention?",
+  "scope": "Prospectively specified replication on four new mice of a previously exploratory method; separate within-session fits, not cross-animal model transfer. Local freeze, not external preregistration.",
+  "cohort": [
+    {
+      "mouse": "MP030",
+      "file": "data/spont_M161025_MP030_20161120.mat",
+      "sha256": "e30c76bbb2a5b0a767043d7ea8e81285d14223d4f8b35e548a2c1349e87fbbf7",
+      "native_samples": 15761,
+      "binned_samples": 5253,
+      "trailing_samples_dropped": 2,
+      "db_expts": [
+        2
+      ],
+      "splits": {
+        "train": [
+          0,
+          3101
+        ],
+        "selection": [
+          3201,
+          4152
+        ],
+        "evaluation": [
+          4252,
+          5253
+        ]
+      },
+      "examples": {
+        "train": 3070,
+        "selection": 920,
+        "evaluation": 970
+      },
+      "eligible_cells_from_completed_validation": 9315
+    },
+    {
+      "mouse": "MP032",
+      "file": "data/spont_M170714_MP032_20170804.mat",
+      "sha256": "a239882b470fd276a2ed959c24841c444e1ec1261c85b1e3cbbce3ffbcbb7fa6",
+      "native_samples": 13498,
+      "binned_samples": 4499,
+      "trailing_samples_dropped": 1,
+      "db_expts": [
+        1,
+        2
+      ],
+      "splits": {
+        "train": [
+          0,
+          2649
+        ],
+        "selection": [
+          2749,
+          3549
+        ],
+        "evaluation": [
+          3649,
+          4499
+        ]
+      },
+      "examples": {
+        "train": 2618,
+        "selection": 769,
+        "evaluation": 819
+      },
+      "eligible_cells_from_completed_validation": 10520
+    },
+    {
+      "mouse": "MP033",
+      "file": "data/spont_M170717_MP033_20170818.mat",
+      "sha256": "46e8e3dbb9f048e42595859a301f4856f196d7570ddb943d1c3c303668ffbd68",
+      "native_samples": 10463,
+      "binned_samples": 3487,
+      "trailing_samples_dropped": 2,
+      "db_expts": [
+        1,
+        2
+      ],
+      "splits": {
+        "train": [
+          0,
+          2042
+        ],
+        "selection": [
+          2142,
+          2739
+        ],
+        "evaluation": [
+          2839,
+          3487
+        ]
+      },
+      "examples": {
+        "train": 2011,
+        "selection": 566,
+        "evaluation": 617
+      },
+      "eligible_cells_from_completed_validation": 10636
+    },
+    {
+      "mouse": "MP034",
+      "file": "data/spont_M170717_MP034_20170825.mat",
+      "sha256": "1ef684d3b2d25ae7680ba74344a8237684e033a5974e6e321b549ac650900a65",
+      "native_samples": 10473,
+      "binned_samples": 3491,
+      "trailing_samples_dropped": 0,
+      "db_expts": [
+        3,
+        4
+      ],
+      "splits": {
+        "train": [
+          0,
+          2044
+        ],
+        "selection": [
+          2144,
+          2742
+        ],
+        "evaluation": [
+          2842,
+          3491
+        ]
+      },
+      "examples": {
+        "train": 2013,
+        "selection": 567,
+        "evaluation": 618
+      },
+      "eligible_cells_from_completed_validation": 11262
+    }
+  ],
+  "budget": {
+    "new_neural_fits": 24,
+    "reused_fits": 0,
+    "seeds": [
+      10,
+      11
+    ],
+    "conditions": [
+      "functional",
+      "random",
+      "global"
+    ],
+    "pool_seed": 101,
+    "cells_per_mouse": 2048
+  },
+  "preprocessing": {
+    "fields": {
+      "activity": "Fsp: cells x samples",
+      "speed": "beh.runSpeed: matching samples",
+      "coordinates": "med: aligned rows; illustration only"
+    },
+    "binning": "Keep first3*floor(T/3) samples; mean contiguous triples independently for every neuron and speed. Activity means float32, speed float64. No interpolation, extra smoothing or clipping of tiny negative activity.",
+    "timing_evidence": "timing_evidence.json",
+    "splits": "Half-open binned indices: a=floor(3*T/5), b=floor(4*T/5); train[0,a-50), selection[a+50,b-50), evaluation[b+50,T). Exclude100 bins at each internal split boundary.",
+    "eligibility": "Training binned activity population std>1e-6, ddof=0 with float64 accumulation. No speed association or held-out values used.",
+    "pool": "np.random.default_rng(101).choice(ascending eligible original row indices,2048,replace=False), reset for each mouse. Preserve sampled order and original row IDs across all arms.",
+    "normalization": "Per-cell mean/std on full training interval; speed mean/std on binned speed[7:train_end]. ddof=0, float64 accumulation, std floor1e-6. Apply same statistics to all splits/arms, then cast model tensors to float32.",
+    "windows": "8 bins; targets t=start+31 through stop-1; input bins[t-7,t+1). Keep inherited target offset31. No window crosses a split. Nominal9.6 seconds per input; concurrent decoding, not forecasting.",
+    "preflight_failure": "Stop/report fewer than2048 eligible cells, invalid split sizes, nonfinite required values or speed[7:train_end] std<=1e-6; do not substitute mice based on outcomes."
+  },
+  "groups": {
+    "functional": "standardize each training time course to unit L2 norm; eigendecompose cell correlation matrix; top32 scaled eigenvectors; KMeans8 n_init10 seed500000+pool; training activity only, no speed or coordinates",
+    "details": "Use hashed reference functional_groups(training_activity,pool=101): float64 Torch correlation/eigendecomposition, top32 scaled eigenvectors, KMeans8 n_init10 max_iter300 seed500101. Check nearest-center labels independently and require >=2 cells/group.",
+    "random": "Permute functional label vector with np.random.default_rng(420101).permutation(2048), separately for each mouse. Preserve exact group sizes; same assignment for both seeds.",
+    "freeze": "Save original IDs and groups from training activity before fits; no outcome-based reclustering."
+  },
+  "architecture": "same 81377 parameters,16 summaries,width32,4heads,nonlinear activity embedding,ID vectors,mean readout; first8 summaries masked by groups,last8 unrestricted; global arm all16 unrestricted",
+  "coordinates": "all-zero coordinate inputs in every model; true xyz used only for final visualization",
+  "training": {
+    "batch": 32,
+    "epochs": 24,
+    "min_epochs": 12,
+    "patience": 7,
+    "lr": 0.001,
+    "weight_decay": 0.01,
+    "cosine_min_lr": 0.0001,
+    "gradient_clip": 1,
+    "checkpoint": "minimum selection bounded MSE including epoch0",
+    "optimizer": "AdamW",
+    "loss": "unbounded normalized-speed MSE",
+    "paired_randomness": "Same initial parameters and batch order per mouse/seed across arms; torch.manual_seed(seed), DataLoader generator seed=seed.",
+    "early_stopping": "Strict selection improvement resets stale; stop at epoch>=12 and stale>=7, otherwise epoch24. Ties keep earlier checkpoint.",
+    "reference": "Hashed reference run.py fit() and GroupCandidate; adapt data loading, split metadata and per-mouse orchestration."
+  },
+  "evaluation": {
+    "lock": "Freeze all24 checkpoint hashes before scoring any later split. Never pass evaluation examples to training/checkpoint selection.",
+    "primary_metric": "MSE after clamping normalized prediction below at -speed_mean/speed_std (zero physical speed).",
+    "within_mouse": "Average MSE over two seeds within each condition. D_mouse(control)=1-mean_seed_MSE(functional)/mean_seed_MSE(control).",
+    "across_mice": "Equal-weight arithmetic mean of four D_mouse values, separately for random and global; never pool frames, neurons or seeds as independent mice.",
+    "practical_replication_gate": "Against BOTH controls: mean mouse benefit>=2%, all4 mouse benefits>0, >=6/8 paired mouse-seed wins. Also all8 functional fits must beat their own untrained versions and training-mean constant on evaluation.",
+    "interpretation": "Provisional practical consistency gate; passing is replication support for this recipe, not statistical significance or general utility.",
+    "report": "All24 bounded/unbounded normalized MSEs, bounded R2 (null for zero target variance), physical-unit RMSE, selected epochs, constant/own-untrained errors; all4 mouse effects and8 paired effects per contrast, equal-weight mean and leave-one-mouse-out means. Flag epoch0/24 and incomplete fits.",
+    "statistics": "Descriptive effects primary. Two-sided exact sign test across nonzero mouse effects: min(1,2*Binomial(n,0.5).CDF(min(positive,negative))), ties omitted. Report raw and Holm-adjusted p for both contrasts. At n=4 minimum two-sided p=0.125, one-sided p=0.0625. Do not use overlapping windows or technical seeds to claim animal-level significance.",
+    "secondary": "No extra fitted models, posthoc subgroup tests, correlation permutation sweeps or coordinate ablations in this batch. Training-group spatial plots may illustrate results."
+  },
+  "checks": [
+    "Before scoring record adapter source hash/package versions and verify protocol/reference hashes; verify paired IDs, labels, normalization, initialization, parameter counts and batch order.",
+    "Test new loader on synthetic arrays: triple means/tail removal, window alignment, split separation, training-only normalization. Do not rerun completed publisher/raw-data diagnostics.",
+    "During fitting check masks/group sizes and finite loss/gradients/parameters; reload every checkpoint on full selection interval.",
+    "After all checkpoints lock, score evaluation once; independently recompute saved metrics and aggregation. Archive24 histories/checkpoints, predictions, IDs/groups/statistics and hashes."
+  ],
+  "stop_rule": "Exactly24 planned neural fits. No adaptive extra seeds/pools/epochs/thresholds/methods/mouse replacements. Technical retries retain planned task. Systematic bugs require documented amendment and rerunning affected matched conditions; disclose prior evaluation exposure.",
+  "limitations": [
+    "Four mice, one session and one2048-cell pool each; two technical seeds.",
+    "Separate within-session fits test replication, not transfer to unseen mice/IDs.",
+    "Activity associations can reflect shared state/artifacts; no causal connectivity, realistic generation or coordinate-benefit claim.",
+    "Resampling documented by authors; exact per-session timestamps/internal acquisition boundaries not independently verified.",
+    "Fixed inherited training budget; failure does not rule out every functional model.",
+    "No ID/activity removal arms: grouping added to activity+ID is tested, not separate necessity of either input."
+  ],
+  "reference_sources": {
+    "experiments/2026-10-02_functional_groups/run.py": "27b3b838be8478fefd27a38a83aadce001f08452c2f39442480e39bc72c07e2e",
+    "experiments/2026-10-02_functional_groups/model_snapshot.py": "2297af73466e1c85ee5774dc10a44a2a03f7a6f48919a111b43a8cf6d7d86a40",
+    "experiments/2026-10-02_functional_groups/base_search.py": "5ecb8ef2e5f292953b28d6712d4a75a99ac07a543830fb21989a5840046e27b7",
+    "experiments/2026-10-02_functional_groups/group_model.py": "7f2876708a57f0f94e89e8aa95d1547268cf4c37cb962ebe22805688a0c3a687"
+  },
+  "application_hashes": {
+    "model.py": "2297af73466e1c85ee5774dc10a44a2a03f7a6f48919a111b43a8cf6d7d86a40",
+    "data.py": "894d5aea4dd0ce6a139178b66b1f8a5538f1c4f015081153d4c11fa55d78b7bf",
+    "train.py": "0361d216cd75616ed07501a019f4837f7c0acf57f0cd2edecb0fc6728064d7f9"
+  },
+  "validation_evidence_hashes": {
+    "experiments/2026-10-02_stringer_validation/results.json": "9c9df540eaa1d2e1c18577334f56f5dd967d9dd77addf2c919b6a5063a58d2b1",
+    "experiments/2026-10-02_stringer_validation/manifest.json": "9cbe0e01ed6d0a1a3600b5f1552cbaf15ea0d09180beae0dd4d990c059f8ffe4"
+  },
+  "tasks": [
+    {
+      "mouse": "MP030",
+      "pool": 101,
+      "seed": 10,
+      "condition": "functional"
+    },
+    {
+      "mouse": "MP030",
+      "pool": 101,
+      "seed": 10,
+      "condition": "random"
+    },
+    {
+      "mouse": "MP030",
+      "pool": 101,
+      "seed": 10,
+      "condition": "global"
+    },
+    {
+      "mouse": "MP030",
+      "pool": 101,
+      "seed": 11,
+      "condition": "functional"
+    },
+    {
+      "mouse": "MP030",
+      "pool": 101,
+      "seed": 11,
+      "condition": "random"
+    },
+    {
+      "mouse": "MP030",
+      "pool": 101,
+      "seed": 11,
+      "condition": "global"
+    },
+    {
+      "mouse": "MP032",
+      "pool": 101,
+      "seed": 10,
+      "condition": "functional"
+    },
+    {
+      "mouse": "MP032",
+      "pool": 101,
+      "seed": 10,
+      "condition": "random"
+    },
+    {
+      "mouse": "MP032",
+      "pool": 101,
+      "seed": 10,
+      "condition": "global"
+    },
+    {
+      "mouse": "MP032",
+      "pool": 101,
+      "seed": 11,
+      "condition": "functional"
+    },
+    {
+      "mouse": "MP032",
+      "pool": 101,
+      "seed": 11,
+      "condition": "random"
+    },
+    {
+      "mouse": "MP032",
+      "pool": 101,
+      "seed": 11,
+      "condition": "global"
+    },
+    {
+      "mouse": "MP033",
+      "pool": 101,
+      "seed": 10,
+      "condition": "functional"
+    },
+    {
+      "mouse": "MP033",
+      "pool": 101,
+      "seed": 10,
+      "condition": "random"
+    },
+    {
+      "mouse": "MP033",
+      "pool": 101,
+      "seed": 10,
+      "condition": "global"
+    },
+    {
+      "mouse": "MP033",
+      "pool": 101,
+      "seed": 11,
+      "condition": "functional"
+    },
+    {
+      "mouse": "MP033",
+      "pool": 101,
+      "seed": 11,
+      "condition": "random"
+    },
+    {
+      "mouse": "MP033",
+      "pool": 101,
+      "seed": 11,
+      "condition": "global"
+    },
+    {
+      "mouse": "MP034",
+      "pool": 101,
+      "seed": 10,
+      "condition": "functional"
+    },
+    {
+      "mouse": "MP034",
+      "pool": 101,
+      "seed": 10,
+      "condition": "random"
+    },
+    {
+      "mouse": "MP034",
+      "pool": 101,
+      "seed": 10,
+      "condition": "global"
+    },
+    {
+      "mouse": "MP034",
+      "pool": 101,
+      "seed": 11,
+      "condition": "functional"
+    },
+    {
+      "mouse": "MP034",
+      "pool": 101,
+      "seed": 11,
+      "condition": "random"
+    },
+    {
+      "mouse": "MP034",
+      "pool": 101,
+      "seed": 11,
+      "condition": "global"
+    }
+  ]
+}

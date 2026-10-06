@@ -1,0 +1,296 @@
+{
+  "schema_version": 1,
+  "cases": [
+    {
+      "cohort": "development",
+      "mouse": "MP030",
+      "file": "predictions/development_MP030.npz",
+      "lower": -0.4147056015419435,
+      "regimes": [
+        "shared"
+      ],
+      "seeds": [
+        201,
+        202,
+        203,
+        204,
+        205,
+        206
+      ],
+      "roles": [
+        "optimized_attention",
+        "optimized_population_mlp",
+        "optimized_local_mlp",
+        "default_attention",
+        "default_local_mlp",
+        "matched_population_mlp"
+      ],
+      "n": 694,
+      "target_units": "training-standardized running speed",
+      "index_units": "consecutive evaluation bins; nominal 1.2 seconds per bin"
+    },
+    {
+      "cohort": "development",
+      "mouse": "MP032",
+      "file": "predictions/development_MP032.npz",
+      "lower": -0.35645133881375385,
+      "regimes": [
+        "shared"
+      ],
+      "seeds": [
+        201,
+        202,
+        203,
+        204,
+        205,
+        206
+      ],
+      "roles": [
+        "optimized_attention",
+        "optimized_population_mlp",
+        "optimized_local_mlp",
+        "default_attention",
+        "default_local_mlp",
+        "matched_population_mlp"
+      ],
+      "n": 573,
+      "target_units": "training-standardized running speed",
+      "index_units": "consecutive evaluation bins; nominal 1.2 seconds per bin"
+    },
+    {
+      "cohort": "development",
+      "mouse": "MP033",
+      "file": "predictions/development_MP033.npz",
+      "lower": -1.128557750341056,
+      "regimes": [
+        "shared"
+      ],
+      "seeds": [
+        201,
+        202,
+        203,
+        204,
+        205,
+        206
+      ],
+      "roles": [
+        "optimized_attention",
+        "optimized_population_mlp",
+        "optimized_local_mlp",
+        "default_attention",
+        "default_local_mlp",
+        "matched_population_mlp"
+      ],
+      "n": 411,
+      "target_units": "training-standardized running speed",
+      "index_units": "consecutive evaluation bins; nominal 1.2 seconds per bin"
+    },
+    {
+      "cohort": "development",
+      "mouse": "MP034",
+      "file": "predictions/development_MP034.npz",
+      "lower": -1.1741164324747078,
+      "regimes": [
+        "shared"
+      ],
+      "seeds": [
+        201,
+        202,
+        203,
+        204,
+        205,
+        206
+      ],
+      "roles": [
+        "optimized_attention",
+        "optimized_population_mlp",
+        "optimized_local_mlp",
+        "default_attention",
+        "default_local_mlp",
+        "matched_population_mlp"
+      ],
+      "n": 412,
+      "target_units": "training-standardized running speed",
+      "index_units": "consecutive evaluation bins; nominal 1.2 seconds per bin"
+    },
+    {
+      "cohort": "separate",
+      "mouse": "TX103",
+      "file": "predictions/separate_TX103.npz",
+      "lower": -0.46496120980142513,
+      "regimes": [
+        "independent",
+        "shared"
+      ],
+      "seeds": [
+        401,
+        402,
+        403
+      ],
+      "roles": [
+        "optimized_attention",
+        "optimized_population_mlp",
+        "default_attention"
+      ],
+      "n": 4990,
+      "target_units": "training-standardized absolute published run",
+      "index_units": "consecutive native frames; seconds conversion not verified",
+      "first_scored_native_frame": 20593
+    },
+    {
+      "cohort": "separate",
+      "mouse": "TX104",
+      "file": "predictions/separate_TX104.npz",
+      "lower": -0.9228027456310909,
+      "regimes": [
+        "independent",
+        "shared"
+      ],
+      "seeds": [
+        401,
+        402,
+        403
+      ],
+      "roles": [
+        "optimized_attention",
+        "optimized_population_mlp",
+        "default_attention"
+      ],
+      "n": 4912,
+      "target_units": "training-standardized absolute published run",
+      "index_units": "consecutive native frames; seconds conversion not verified",
+      "first_scored_native_frame": 20281
+    },
+    {
+      "cohort": "separate",
+      "mouse": "TX56",
+      "file": "predictions/separate_TX56.npz",
+      "lower": -0.5355522180190424,
+      "regimes": [
+        "independent",
+        "shared"
+      ],
+      "seeds": [
+        401,
+        402,
+        403
+      ],
+      "roles": [
+        "optimized_attention",
+        "optimized_population_mlp",
+        "default_attention"
+      ],
+      "n": 5797,
+      "target_units": "training-standardized absolute published run",
+      "index_units": "consecutive native frames; seconds conversion not verified",
+      "first_scored_native_frame": 23820
+    },
+    {
+      "cohort": "separate",
+      "mouse": "TX57",
+      "file": "predictions/separate_TX57.npz",
+      "lower": -0.5887771108607369,
+      "regimes": [
+        "independent",
+        "shared"
+      ],
+      "seeds": [
+        401,
+        402,
+        403
+      ],
+      "roles": [
+        "optimized_attention",
+        "optimized_population_mlp",
+        "default_attention"
+      ],
+      "n": 4572,
+      "target_units": "training-standardized absolute published run",
+      "index_units": "consecutive native frames; seconds conversion not verified",
+      "first_scored_native_frame": 18920
+    },
+    {
+      "cohort": "separate",
+      "mouse": "TX60",
+      "file": "predictions/separate_TX60.npz",
+      "lower": -0.5559714438727985,
+      "regimes": [
+        "independent",
+        "shared"
+      ],
+      "seeds": [
+        401,
+        402,
+        403
+      ],
+      "roles": [
+        "optimized_attention",
+        "optimized_population_mlp",
+        "default_attention"
+      ],
+      "n": 4510,
+      "target_units": "training-standardized absolute published run",
+      "index_units": "consecutive native frames; seconds conversion not verified",
+      "first_scored_native_frame": 18675
+    },
+    {
+      "cohort": "separate",
+      "mouse": "TX61",
+      "file": "predictions/separate_TX61.npz",
+      "lower": -0.5365710681655327,
+      "regimes": [
+        "independent",
+        "shared"
+      ],
+      "seeds": [
+        401,
+        402,
+        403
+      ],
+      "roles": [
+        "optimized_attention",
+        "optimized_population_mlp",
+        "default_attention"
+      ],
+      "n": 4832,
+      "target_units": "training-standardized absolute published run",
+      "index_units": "consecutive native frames; seconds conversion not verified",
+      "first_scored_native_frame": 19960
+    },
+    {
+      "cohort": "separate",
+      "mouse": "VR2",
+      "file": "predictions/separate_VR2.npz",
+      "lower": -0.4528600398548627,
+      "regimes": [
+        "independent",
+        "shared"
+      ],
+      "seeds": [
+        401,
+        402,
+        403
+      ],
+      "roles": [
+        "optimized_attention",
+        "optimized_population_mlp",
+        "default_attention"
+      ],
+      "n": 4798,
+      "target_units": "training-standardized absolute published run",
+      "index_units": "consecutive native frames; seconds conversion not verified",
+      "first_scored_native_frame": 19823
+    }
+  ],
+  "purpose": "Portable saved-prediction reproduction; no raw neural data, training or model inference",
+  "prediction_dtype": "Original float32 neural outputs and float64 targets; no rounding or subsampling",
+  "prediction_rule": "Convert predictions to float64, then clamp at case.lower (physical zero)",
+  "primary_aggregation": "Mean individual-seed errors within mouse, then equal-mouse relative MSE gains",
+  "not_ensemble_metrics": true,
+  "source_folders": {
+    "development": "2026-10-06_systematic_optimization",
+    "separate": "2026-10-06_facemap_validation",
+    "context": "2026-10-06_search_synthesis",
+    "coordinates": "2026-10-02_coordinate16"
+  }
+}

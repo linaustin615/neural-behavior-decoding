@@ -1,0 +1,85 @@
+{
+  "mouse": "MP027",
+  "condition": "distance_shuffled",
+  "seed": 3,
+  "fraction": 1.0,
+  "null": false,
+  "steps": 1600,
+  "training_examples": 4594,
+  "label_normalization_mean": 1.98257577419281,
+  "label_normalization_std": 3.3967342376708984,
+  "best_step": 1000,
+  "untrained_seen": {
+    "r2": -0.03521919798271589,
+    "pearson": -0.054543114901530534,
+    "mse": 2.2008558370972473
+  },
+  "seen": {
+    "r2": 0.1827519626367805,
+    "pearson": 0.5353868463585527,
+    "mse": 1.7374533981711777
+  },
+  "unseen": {
+    "r2": 0.07988304423227455,
+    "pearson": 0.4057551812192041,
+    "mse": 1.956150713645632
+  },
+  "history": [
+    {
+      "step": 200,
+      "train_batch_mse": 1.4222261905670166,
+      "validation_mse": 0.896436870098114
+    },
+    {
+      "step": 400,
+      "train_batch_mse": 1.702593445777893,
+      "validation_mse": 0.867895245552063
+    },
+    {
+      "step": 600,
+      "train_batch_mse": 0.7073496580123901,
+      "validation_mse": 0.848511278629303
+    },
+    {
+      "step": 800,
+      "train_batch_mse": 0.972139835357666,
+      "validation_mse": 0.8490222096443176
+    },
+    {
+      "step": 1000,
+      "train_batch_mse": 1.1477677822113037,
+      "validation_mse": 0.8073544502258301
+    },
+    {
+      "step": 1200,
+      "train_batch_mse": 0.507752537727356,
+      "validation_mse": 0.8537543416023254
+    },
+    {
+      "step": 1400,
+      "train_batch_mse": 0.38463646173477173,
+      "validation_mse": 0.8188228011131287
+    },
+    {
+      "step": 1600,
+      "train_batch_mse": 0.7020200490951538,
+      "validation_mse": 0.8271294832229614
+    }
+  ],
+  "seconds": 13.944569499999943,
+  "alpha": [
+    [
+      0.6849784851074219,
+      0.6436607241630554,
+      0.8139926791191101,
+      0.8326644897460938
+    ],
+    [
+      0.6931471824645996,
+      0.6931471824645996,
+      0.6931471824645996,
+      0.6931471824645996
+    ]
+  ],
+  "config_sha256": "e67d06f9ccb17e4fca618f07cce0cb6400d1d89483a4ca0f2da423af94c53423"
+}

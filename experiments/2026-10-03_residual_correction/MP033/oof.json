@@ -1,0 +1,56 @@
+{
+  "blocks": [
+    {
+      "fold": 1,
+      "train": [
+        0,
+        1045
+      ],
+      "validation": [
+        1077,
+        1227
+      ],
+      "n": 119,
+      "optimality_relative_error": 1.6284341052641972e-15,
+      "independent_prediction_max_error": 3.774758283725532e-15
+    },
+    {
+      "fold": 2,
+      "train": [
+        0,
+        1227
+      ],
+      "validation": [
+        1259,
+        1410
+      ],
+      "n": 120,
+      "optimality_relative_error": 1.4532198739126755e-15,
+      "independent_prediction_max_error": 3.3306690738754696e-15
+    },
+    {
+      "fold": 3,
+      "train": [
+        0,
+        1410
+      ],
+      "validation": [
+        1442,
+        1593
+      ],
+      "n": 120,
+      "optimality_relative_error": 1.529928126811696e-15,
+      "independent_prediction_max_error": 7.549516567451064e-15
+    }
+  ],
+  "n": 359,
+  "full_train_n": 1562,
+  "score": {
+    "mse": 0.3440357046344708,
+    "raw_mse": 0.34447191329933674,
+    "r2": 0.6727400862335975,
+    "predicted_speed_std": 5.093365667896761,
+    "rmse_speed_units": 4.793490646262725
+  },
+  "mean_residual": 0.17341891478498098
+}

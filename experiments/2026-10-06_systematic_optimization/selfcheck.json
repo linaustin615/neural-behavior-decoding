@@ -1,0 +1,1922 @@
+{
+  "passed": true,
+  "structural_configurations_checked": 108,
+  "checks": [
+    {
+      "config": {
+        "family": "attention",
+        "width": 16,
+        "depth": 1,
+        "history": 16,
+        "patch": 2,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 39009,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "attention",
+        "width": 16,
+        "depth": 1,
+        "history": 16,
+        "patch": 4,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 39457,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "attention",
+        "width": 16,
+        "depth": 1,
+        "history": 32,
+        "patch": 2,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 41249,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "attention",
+        "width": 16,
+        "depth": 1,
+        "history": 32,
+        "patch": 4,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 41633,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "attention",
+        "width": 16,
+        "depth": 1,
+        "history": 64,
+        "patch": 2,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 45729,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "attention",
+        "width": 16,
+        "depth": 1,
+        "history": 64,
+        "patch": 4,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 45985,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "attention",
+        "width": 16,
+        "depth": 2,
+        "history": 16,
+        "patch": 2,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 41233,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "attention",
+        "width": 16,
+        "depth": 2,
+        "history": 16,
+        "patch": 4,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 41681,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "attention",
+        "width": 16,
+        "depth": 2,
+        "history": 32,
+        "patch": 2,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 43473,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "attention",
+        "width": 16,
+        "depth": 2,
+        "history": 32,
+        "patch": 4,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 43857,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "attention",
+        "width": 16,
+        "depth": 2,
+        "history": 64,
+        "patch": 2,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 47953,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "attention",
+        "width": 16,
+        "depth": 2,
+        "history": 64,
+        "patch": 4,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 48209,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "attention",
+        "width": 16,
+        "depth": 3,
+        "history": 16,
+        "patch": 2,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 43457,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "attention",
+        "width": 16,
+        "depth": 3,
+        "history": 16,
+        "patch": 4,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 43905,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "attention",
+        "width": 16,
+        "depth": 3,
+        "history": 32,
+        "patch": 2,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 45697,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "attention",
+        "width": 16,
+        "depth": 3,
+        "history": 32,
+        "patch": 4,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 46081,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "attention",
+        "width": 16,
+        "depth": 3,
+        "history": 64,
+        "patch": 2,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 50177,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "attention",
+        "width": 16,
+        "depth": 3,
+        "history": 64,
+        "patch": 4,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 50433,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "attention",
+        "width": 32,
+        "depth": 1,
+        "history": 16,
+        "patch": 2,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 80897,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "attention",
+        "width": 32,
+        "depth": 1,
+        "history": 16,
+        "patch": 4,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 82817,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "attention",
+        "width": 32,
+        "depth": 1,
+        "history": 32,
+        "patch": 2,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 83265,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "attention",
+        "width": 32,
+        "depth": 1,
+        "history": 32,
+        "patch": 4,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 85057,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "attention",
+        "width": 32,
+        "depth": 1,
+        "history": 64,
+        "patch": 2,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 88001,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "attention",
+        "width": 32,
+        "depth": 1,
+        "history": 64,
+        "patch": 4,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 89537,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "attention",
+        "width": 32,
+        "depth": 2,
+        "history": 16,
+        "patch": 2,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 89441,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "attention",
+        "width": 32,
+        "depth": 2,
+        "history": 16,
+        "patch": 4,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 91361,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "attention",
+        "width": 32,
+        "depth": 2,
+        "history": 32,
+        "patch": 2,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 91809,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "attention",
+        "width": 32,
+        "depth": 2,
+        "history": 32,
+        "patch": 4,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 93601,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "attention",
+        "width": 32,
+        "depth": 2,
+        "history": 64,
+        "patch": 2,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 96545,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "attention",
+        "width": 32,
+        "depth": 2,
+        "history": 64,
+        "patch": 4,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 98081,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "attention",
+        "width": 32,
+        "depth": 3,
+        "history": 16,
+        "patch": 2,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 97985,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "attention",
+        "width": 32,
+        "depth": 3,
+        "history": 16,
+        "patch": 4,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 99905,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "attention",
+        "width": 32,
+        "depth": 3,
+        "history": 32,
+        "patch": 2,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 100353,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "attention",
+        "width": 32,
+        "depth": 3,
+        "history": 32,
+        "patch": 4,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 102145,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "attention",
+        "width": 32,
+        "depth": 3,
+        "history": 64,
+        "patch": 2,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 105089,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "attention",
+        "width": 32,
+        "depth": 3,
+        "history": 64,
+        "patch": 4,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 106625,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "attention",
+        "width": 64,
+        "depth": 1,
+        "history": 16,
+        "patch": 2,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 180033,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "attention",
+        "width": 64,
+        "depth": 1,
+        "history": 16,
+        "patch": 4,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 187969,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "attention",
+        "width": 64,
+        "depth": 1,
+        "history": 32,
+        "patch": 2,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 182657,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "attention",
+        "width": 64,
+        "depth": 1,
+        "history": 32,
+        "patch": 4,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 190337,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "attention",
+        "width": 64,
+        "depth": 1,
+        "history": 64,
+        "patch": 2,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 187905,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "attention",
+        "width": 64,
+        "depth": 1,
+        "history": 64,
+        "patch": 4,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 195073,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "attention",
+        "width": 64,
+        "depth": 2,
+        "history": 16,
+        "patch": 2,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 213505,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "attention",
+        "width": 64,
+        "depth": 2,
+        "history": 16,
+        "patch": 4,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 221441,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "attention",
+        "width": 64,
+        "depth": 2,
+        "history": 32,
+        "patch": 2,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 216129,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "attention",
+        "width": 64,
+        "depth": 2,
+        "history": 32,
+        "patch": 4,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 223809,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "attention",
+        "width": 64,
+        "depth": 2,
+        "history": 64,
+        "patch": 2,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 221377,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "attention",
+        "width": 64,
+        "depth": 2,
+        "history": 64,
+        "patch": 4,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 228545,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "attention",
+        "width": 64,
+        "depth": 3,
+        "history": 16,
+        "patch": 2,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 246977,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "attention",
+        "width": 64,
+        "depth": 3,
+        "history": 16,
+        "patch": 4,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 254913,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "attention",
+        "width": 64,
+        "depth": 3,
+        "history": 32,
+        "patch": 2,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 249601,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "attention",
+        "width": 64,
+        "depth": 3,
+        "history": 32,
+        "patch": 4,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 257281,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "attention",
+        "width": 64,
+        "depth": 3,
+        "history": 64,
+        "patch": 2,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 254849,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "attention",
+        "width": 64,
+        "depth": 3,
+        "history": 64,
+        "patch": 4,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 262017,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "mlp",
+        "width": 16,
+        "depth": 1,
+        "history": 16,
+        "patch": 2,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 38999,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "mlp",
+        "width": 16,
+        "depth": 1,
+        "history": 16,
+        "patch": 4,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 39395,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "mlp",
+        "width": 16,
+        "depth": 1,
+        "history": 32,
+        "patch": 2,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 41439,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "mlp",
+        "width": 16,
+        "depth": 1,
+        "history": 32,
+        "patch": 4,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 41623,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "mlp",
+        "width": 16,
+        "depth": 1,
+        "history": 64,
+        "patch": 2,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 46703,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "mlp",
+        "width": 16,
+        "depth": 1,
+        "history": 64,
+        "patch": 4,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 46175,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "mlp",
+        "width": 16,
+        "depth": 2,
+        "history": 16,
+        "patch": 2,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 41213,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "mlp",
+        "width": 16,
+        "depth": 2,
+        "history": 16,
+        "patch": 4,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 41557,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "mlp",
+        "width": 16,
+        "depth": 2,
+        "history": 32,
+        "patch": 2,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 43853,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "mlp",
+        "width": 16,
+        "depth": 2,
+        "history": 32,
+        "patch": 4,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 43837,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "mlp",
+        "width": 16,
+        "depth": 2,
+        "history": 64,
+        "patch": 2,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 49901,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "mlp",
+        "width": 16,
+        "depth": 2,
+        "history": 64,
+        "patch": 4,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 48589,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "mlp",
+        "width": 16,
+        "depth": 3,
+        "history": 16,
+        "patch": 2,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 43427,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "mlp",
+        "width": 16,
+        "depth": 3,
+        "history": 16,
+        "patch": 4,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 43719,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "mlp",
+        "width": 16,
+        "depth": 3,
+        "history": 32,
+        "patch": 2,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 46267,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "mlp",
+        "width": 16,
+        "depth": 3,
+        "history": 32,
+        "patch": 4,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 46051,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "mlp",
+        "width": 16,
+        "depth": 3,
+        "history": 64,
+        "patch": 2,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 53099,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "mlp",
+        "width": 16,
+        "depth": 3,
+        "history": 64,
+        "patch": 4,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 51003,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "mlp",
+        "width": 32,
+        "depth": 1,
+        "history": 16,
+        "patch": 2,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 80807,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "mlp",
+        "width": 32,
+        "depth": 1,
+        "history": 16,
+        "patch": 4,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 82675,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "mlp",
+        "width": 32,
+        "depth": 1,
+        "history": 32,
+        "patch": 2,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 83375,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "mlp",
+        "width": 32,
+        "depth": 1,
+        "history": 32,
+        "patch": 4,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 84967,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "mlp",
+        "width": 32,
+        "depth": 1,
+        "history": 64,
+        "patch": 2,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 88895,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "mlp",
+        "width": 32,
+        "depth": 1,
+        "history": 64,
+        "patch": 4,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 89647,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "mlp",
+        "width": 32,
+        "depth": 2,
+        "history": 16,
+        "patch": 2,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 89261,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "mlp",
+        "width": 32,
+        "depth": 2,
+        "history": 16,
+        "patch": 4,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 91077,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "mlp",
+        "width": 32,
+        "depth": 2,
+        "history": 32,
+        "patch": 2,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 92029,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "mlp",
+        "width": 32,
+        "depth": 2,
+        "history": 32,
+        "patch": 4,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 93421,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "mlp",
+        "width": 32,
+        "depth": 2,
+        "history": 64,
+        "patch": 2,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 98333,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "mlp",
+        "width": 32,
+        "depth": 2,
+        "history": 64,
+        "patch": 4,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 98301,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "mlp",
+        "width": 32,
+        "depth": 3,
+        "history": 16,
+        "patch": 2,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 97715,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "mlp",
+        "width": 32,
+        "depth": 3,
+        "history": 16,
+        "patch": 4,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 99479,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "mlp",
+        "width": 32,
+        "depth": 3,
+        "history": 32,
+        "patch": 2,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 100683,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "mlp",
+        "width": 32,
+        "depth": 3,
+        "history": 32,
+        "patch": 4,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 101875,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "mlp",
+        "width": 32,
+        "depth": 3,
+        "history": 64,
+        "patch": 2,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 107771,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "mlp",
+        "width": 32,
+        "depth": 3,
+        "history": 64,
+        "patch": 4,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 106955,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "mlp",
+        "width": 64,
+        "depth": 1,
+        "history": 16,
+        "patch": 2,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 179783,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "mlp",
+        "width": 64,
+        "depth": 1,
+        "history": 16,
+        "patch": 4,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 187667,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "mlp",
+        "width": 64,
+        "depth": 1,
+        "history": 32,
+        "patch": 2,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 182607,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "mlp",
+        "width": 64,
+        "depth": 1,
+        "history": 32,
+        "patch": 4,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 190087,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "mlp",
+        "width": 64,
+        "depth": 1,
+        "history": 64,
+        "patch": 2,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 188639,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "mlp",
+        "width": 64,
+        "depth": 1,
+        "history": 64,
+        "patch": 4,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 195023,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "mlp",
+        "width": 64,
+        "depth": 2,
+        "history": 16,
+        "patch": 2,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 213005,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "mlp",
+        "width": 64,
+        "depth": 2,
+        "history": 16,
+        "patch": 4,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 220837,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "mlp",
+        "width": 64,
+        "depth": 2,
+        "history": 32,
+        "patch": 2,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 216029,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "mlp",
+        "width": 64,
+        "depth": 2,
+        "history": 32,
+        "patch": 4,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 223309,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "mlp",
+        "width": 64,
+        "depth": 2,
+        "history": 64,
+        "patch": 2,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 222845,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "mlp",
+        "width": 64,
+        "depth": 2,
+        "history": 64,
+        "patch": 4,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 228445,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "mlp",
+        "width": 64,
+        "depth": 3,
+        "history": 16,
+        "patch": 2,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 246227,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "mlp",
+        "width": 64,
+        "depth": 3,
+        "history": 16,
+        "patch": 4,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 254007,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "mlp",
+        "width": 64,
+        "depth": 3,
+        "history": 32,
+        "patch": 2,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 249451,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "mlp",
+        "width": 64,
+        "depth": 3,
+        "history": 32,
+        "patch": 4,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 256531,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "mlp",
+        "width": 64,
+        "depth": 3,
+        "history": 64,
+        "patch": 2,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 257051,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    },
+    {
+      "config": {
+        "family": "mlp",
+        "width": 64,
+        "depth": 3,
+        "history": 64,
+        "patch": 4,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "parameters": 261867,
+      "causal_prefix": true,
+      "gradients": true,
+      "reload_exact": true
+    }
+  ],
+  "trained_parent_equivalence": [
+    {
+      "family": "attention",
+      "seed": 10,
+      "trained_parent_exact": true
+    },
+    {
+      "family": "attention",
+      "seed": 11,
+      "trained_parent_exact": true
+    },
+    {
+      "family": "attention",
+      "seed": 12,
+      "trained_parent_exact": true
+    },
+    {
+      "family": "mlp",
+      "seed": 10,
+      "trained_parent_exact": true
+    },
+    {
+      "family": "mlp",
+      "seed": 11,
+      "trained_parent_exact": true
+    },
+    {
+      "family": "mlp",
+      "seed": 12,
+      "trained_parent_exact": true
+    }
+  ],
+  "common_initial_tensors": 11,
+  "input_preservation": true,
+  "diagnostic_training_steps": "Synthetic2epoch engine check and7step timing probes; discarded,not candidate fits",
+  "complete_training_engine_smoke_passed": true,
+  "timings": [
+    {
+      "config": {
+        "family": "attention",
+        "width": 16,
+        "depth": 1,
+        "history": 32,
+        "patch": 4,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "median_step_seconds": 0.006734875000000251
+    },
+    {
+      "config": {
+        "family": "attention",
+        "width": 64,
+        "depth": 3,
+        "history": 64,
+        "patch": 2,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "median_step_seconds": 0.027731750000000055
+    },
+    {
+      "config": {
+        "family": "local_mlp",
+        "width": 16,
+        "depth": 1,
+        "history": 32,
+        "patch": 4,
+        "dropout": 0.05,
+        "lr": 0.001,
+        "weight_decay": 0.01,
+        "epochs": 24
+      },
+      "median_step_seconds": 0.1193355829999998
+    }
+  ]
+}

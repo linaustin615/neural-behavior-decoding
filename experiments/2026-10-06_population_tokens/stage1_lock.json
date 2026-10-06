@@ -1,0 +1,159 @@
+{
+  "locked_utc": "2026-10-06T01:11:18.191214+00:00",
+  "hashes": {
+    "attention_s10/initial.pt": "f4085a959aca9687b729a692541bf9bb5013d6d9887a1138a067904728ce22c7",
+    "attention_s10/selected.pt": "e891ef3bf8688901d7fb7f04a957233b335e88403351c1778913e7f833c8e676",
+    "attention_s10/history.json": "6ab1156a8ee6c263e980f4cad44c51ce1cf24c3300447e8bbc790c46a4b9849e",
+    "attention_s10/result.json": "d9bbf80f208a1cef716a3272ada5104467ac968f24690291a4c2368ee2fc6ca6",
+    "attention_s10/selection_predictions.npz": "0a8eaadcb3a9cd21328479801dca779bcf166a4bfda0dfa7a6d8061ee8cf3789",
+    "mlp_s10/initial.pt": "4bf02aaf3f74d10de2384a6f63fa17802cacbef07ea8f6ab1572d8f9e9f6348a",
+    "mlp_s10/selected.pt": "dbf1e5aa88bb29c863fc16a690b011329dc6544f677db397d62fd62e30654105",
+    "mlp_s10/history.json": "34d73d131ec0d06ef52809d85f9f5fe139948e66f3e8b8ad5cd064031ca6f01c",
+    "mlp_s10/result.json": "b28e3325cf7de4b62ca2aa6b2e2a24a0e2fbe8c7d8df8c48f34e0e3c7c345d49",
+    "mlp_s10/selection_predictions.npz": "13859dbf275ac51280d9588ca345a4d0bd083cd0cee3034a4348925e0e793d3c",
+    "attention_s11/initial.pt": "450f5f1559250dca89daa52a2b606b82b0fc647bf6e8c4bd906840ed19fad2d3",
+    "attention_s11/selected.pt": "4860f9adc3a666aa0d889753cf4c81def42ca0005631344a3445425b3c211726",
+    "attention_s11/history.json": "9492a88c5956489d0af12d0029fa2843c56902a566fc3c2e1ec8fbb3b384ae93",
+    "attention_s11/result.json": "1e3ac70f94a27d2a96edab21677718da15d7d3dc1f98dc72f8cec337eec5622d",
+    "attention_s11/selection_predictions.npz": "edf37d3ffe9ddcb9a3dffff8057a75b9ac46449cb493a6a63da45ee2976e9086",
+    "mlp_s11/initial.pt": "3ab73cabf27f424a375bef1b930a439b4485f10677d2f91ac1f37ae1df73553b",
+    "mlp_s11/selected.pt": "5c665611d7e6f4df42a502eb301cd6c293ca9ae265b07c770944a6c83c0cdd2e",
+    "mlp_s11/history.json": "daf7f88bbeed7e56cec5cc9f408d2872b2fb2b19fbe1fd8dff7a18f310926c82",
+    "mlp_s11/result.json": "0c849328b4533b46ef8224513dc4a727a71e3e7f7f29237986ed3649e394950a",
+    "mlp_s11/selection_predictions.npz": "7bf256c2b2362329d70af411a020bdff41d929d299c9407ae757d268ff90f59b",
+    "attention_s12/initial.pt": "e8453e188d6e64926057433b35ce30825864ca268bddb8b1409c710dfe39d1ac",
+    "attention_s12/selected.pt": "eea6779e7bd62456445e3d0aad9061e7219b5965f466562c78c66f02f798030d",
+    "attention_s12/history.json": "b32122154aad91bf071af93958dcb22b9b70733255d7937d4b2ea110072208c4",
+    "attention_s12/result.json": "55286a7c698785f3a97f01759a80fc0b35ece801594da0934905d010930706aa",
+    "attention_s12/selection_predictions.npz": "e04b109ba8d927b4a182340c7778869f527144bc5528ed76ca3a818c1597fe96",
+    "mlp_s12/initial.pt": "0bedc00874339d6d75287cf6e3587d6bc4c2d19134e7bebd20484322dcfc31ca",
+    "mlp_s12/selected.pt": "77e72e6988e0d858598d0d64a3ead5b32af80eacee02d09d08824f3662290d09",
+    "mlp_s12/history.json": "23c4e9ec4670c327926946299e2a924db39a8c26c01e03e7640bcc808559b28a",
+    "mlp_s12/result.json": "daba2515f5eaf43c4feeb4885d824be3145a385e5c55389437c4cf25df7971f4",
+    "mlp_s12/selection_predictions.npz": "8e6f7585f42f15e69e4e59de2070dea492d0f618b80f5b4e72b3e3c45891dfc6"
+  },
+  "records": [
+    {
+      "seed": 10,
+      "family": "attention",
+      "record": {
+        "family": "attention",
+        "seed": 10,
+        "selected_epoch": 7,
+        "selection_score": 0.5602354992692844,
+        "epochs": 24,
+        "updates": 5688,
+        "examples": 179712,
+        "actual_adam_steps": [
+          5688
+        ],
+        "selected_reload_exact": true,
+        "initial_predictions_zero": true,
+        "max_gradient": 9.238859176635742,
+        "elapsed_seconds": 28.849468584
+      }
+    },
+    {
+      "seed": 10,
+      "family": "mlp",
+      "record": {
+        "family": "mlp",
+        "seed": 10,
+        "selected_epoch": 10,
+        "selection_score": 0.5203096317447924,
+        "epochs": 24,
+        "updates": 5688,
+        "examples": 179712,
+        "actual_adam_steps": [
+          5688
+        ],
+        "selected_reload_exact": true,
+        "initial_predictions_zero": true,
+        "max_gradient": 9.206783294677734,
+        "elapsed_seconds": 26.395931709000003
+      }
+    },
+    {
+      "seed": 11,
+      "family": "attention",
+      "record": {
+        "family": "attention",
+        "seed": 11,
+        "selected_epoch": 9,
+        "selection_score": 0.5362136850186429,
+        "epochs": 24,
+        "updates": 5688,
+        "examples": 179712,
+        "actual_adam_steps": [
+          5688
+        ],
+        "selected_reload_exact": true,
+        "initial_predictions_zero": true,
+        "max_gradient": 8.489784240722656,
+        "elapsed_seconds": 28.847924208
+      }
+    },
+    {
+      "seed": 11,
+      "family": "mlp",
+      "record": {
+        "family": "mlp",
+        "seed": 11,
+        "selected_epoch": 4,
+        "selection_score": 0.5150316115501552,
+        "epochs": 24,
+        "updates": 5688,
+        "examples": 179712,
+        "actual_adam_steps": [
+          5688
+        ],
+        "selected_reload_exact": true,
+        "initial_predictions_zero": true,
+        "max_gradient": 7.5166192054748535,
+        "elapsed_seconds": 26.364685208000004
+      }
+    },
+    {
+      "seed": 12,
+      "family": "attention",
+      "record": {
+        "family": "attention",
+        "seed": 12,
+        "selected_epoch": 7,
+        "selection_score": 0.5423672190585894,
+        "epochs": 24,
+        "updates": 5688,
+        "examples": 179712,
+        "actual_adam_steps": [
+          5688
+        ],
+        "selected_reload_exact": true,
+        "initial_predictions_zero": true,
+        "max_gradient": 8.366392135620117,
+        "elapsed_seconds": 28.822485333000003
+      }
+    },
+    {
+      "seed": 12,
+      "family": "mlp",
+      "record": {
+        "family": "mlp",
+        "seed": 12,
+        "selected_epoch": 7,
+        "selection_score": 0.5156187826427409,
+        "epochs": 24,
+        "updates": 5688,
+        "examples": 179712,
+        "actual_adam_steps": [
+          5688
+        ],
+        "selected_reload_exact": true,
+        "initial_predictions_zero": true,
+        "max_gradient": 7.3550825119018555,
+        "elapsed_seconds": 26.367290417000003
+      }
+    }
+  ],
+  "selection_scores_checked": 600,
+  "later_scored": false
+}

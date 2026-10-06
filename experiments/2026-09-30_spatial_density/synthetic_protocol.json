@@ -1,0 +1,20 @@
+{
+  "purpose": "positive control: can this architecture learn a known spatial weighting rule?",
+  "samples": {
+    "train": 4096,
+    "validation": 512,
+    "test": 1024
+  },
+  "neurons": 64,
+  "history": 8,
+  "positions": "new random 3D locations for every example, independent across train/validation/test",
+  "target": "sum of each neurons mean history times exp(2*x_coordinate), normalized by weight L2 norm and scaled by sqrt(8)",
+  "conditions": [
+    "real",
+    "shuffled",
+    "none"
+  ],
+  "model": "same latent architecture as density search, 64 IDs, 8 latents, width32",
+  "budget": "20 epochs, batch64, AdamW lr0.001 weight_decay0.01, gradient clip1, validation checkpointing, one seed29",
+  "positive_gate": "real test R2 exceeds each control by at least0.1; this is a strong synthetic effect, not biological effect power"
+}

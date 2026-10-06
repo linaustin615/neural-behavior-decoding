@@ -1,0 +1,37 @@
+{
+  "checked_utc": "2026-10-03T01:32:20.135578+00:00",
+  "passed": true,
+  "command": "PYTHONDONTWRITEBYTECODE=1 python3 experiments/2026-10-02_stringer_replication/test_runner.py",
+  "tests_run": 5,
+  "failures": 0,
+  "errors": 0,
+  "seconds": 1.939,
+  "checks": [
+    "synthetic MATLAB loader and triples including incomplete tails and preserved tiny negatives",
+    "training-only selection/statistics unaffected by changed held-out samples",
+    "exact first/last lazy window and concurrent target alignment; invalid inputs rejected",
+    "training-only group-construction inputs, cached ID/position alignment and source fingerprint enforcement",
+    "same81377 parameters and initialization, exact group masks and matched group sizes",
+    "six one-epoch synthetic fits across both seeds and all arms; full selection checkpoint reloads",
+    "completed-fit skipping and paired batch-order checks",
+    "evaluation blocked before complete24-checkpoint lock, after artifact tampering and after prior evaluation",
+    "further fitting blocked after evaluation starts",
+    "end-to-end synthetic evaluation using cloned checkpoint fixtures for orchestration",
+    "independent saved metrics and mouse aggregation; intentionally changed aggregate rejected",
+    "practical gate, baseline requirement, exact sign tests, Holm adjustment and equal mouse weighting"
+  ],
+  "scope": "Synthetic software verification only; fixtures in temporary directories removed automatically. No new Stringer preparation, training, correlations or evaluation. No repeated raw-file validation.",
+  "limitations": [
+    "Actual new-mouse load/group preparation remains to run in prepare.",
+    "Synthetic optimizer checks do not show scientific learning or convergence.",
+    "Interrupted evaluation requires documented recovery; automatic repeated evaluation is blocked."
+  ],
+  "source_hashes": {
+    "run.py": "ae2ff25b1b2bea78e6ab67a7a00572bd5f06a6c2a0edda91d465ccb08c9b1c7e",
+    "test_runner.py": "6633d709a38985eb6b977481692d6efe24e65bd5e54f622f361570fe9e981433",
+    "protocol.json": "86db89d1a727e3b227ac4931fa7c27dbbc157fd629491005e30c114755719fd5"
+  },
+  "application_unchanged": true,
+  "protocol_unchanged": true,
+  "real_execution_directory_absent": true
+}

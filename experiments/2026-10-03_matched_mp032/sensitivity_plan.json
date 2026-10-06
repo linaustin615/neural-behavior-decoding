@@ -1,0 +1,14 @@
+{
+  "created_utc": "2026-10-03T05:35:35.840061+00:00",
+  "scope": "Posthoc development diagnosis; no training or confirmation",
+  "models": "Fold3 best trained bounded-MSE checkpoint for each seed; this does not replace official epoch0 selections",
+  "interventions": [
+    "unchanged input",
+    "clip each standardized input feature to its training-example min/max",
+    "replace every input by the training-feature mean"
+  ],
+  "comparator": "Apply the identical feature interventions to the saved ridge(lambda10) coefficients",
+  "hypotheses": "If clipping greatly removes false movement, out-of-training-range inputs may contribute. No change weakens that narrow explanation. Mean input tests output without temporal input variation, not realistic neural silence.",
+  "limits": "Input interventions change the distribution; apparent improvement is diagnostic and cannot be promoted as validated preprocessing. No extra grid,fit or old evaluation-tail use.",
+  "source_sha256": "2fed870d868aa5c90fe352bb105e8540922bcfbf64b1b035bbbd34d15c1e2f87"
+}

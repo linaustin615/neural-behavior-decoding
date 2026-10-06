@@ -1,0 +1,18 @@
+{
+  "question": "Does averaging query outputs discard speed information that a linear head can recover?",
+  "source": "All48 frozen trained encoders from main grouping experiment",
+  "heads": [
+    "mean32_features",
+    "separate512_features"
+  ],
+  "alphas": [
+    0.1,
+    1,
+    10,
+    100,
+    1000
+  ],
+  "fit": "Train-only feature scaling and ridge coefficients; choose alpha by validation boundedMSE; test once per chosen head",
+  "scope": "Posthoc exploratory probe;512-feature head has480 more coefficients; identical comparisons for all4 grouping arms; frozen encoders were already selected using this validation set",
+  "interpretation": "Improvement would identify recoverable information in separate summaries, not prove anatomy helps or guarantee end-to-end training benefits"
+}

@@ -1,0 +1,155 @@
+/Users/austinlin/Library/Python/3.9/lib/python/site-packages/sklearn/utils/extmath.py:335: RuntimeWarning: divide by zero encountered in matmul
+  Q, _ = normalizer(A @ Q)
+/Users/austinlin/Library/Python/3.9/lib/python/site-packages/sklearn/utils/extmath.py:335: RuntimeWarning: overflow encountered in matmul
+  Q, _ = normalizer(A @ Q)
+/Users/austinlin/Library/Python/3.9/lib/python/site-packages/sklearn/utils/extmath.py:335: RuntimeWarning: invalid value encountered in matmul
+  Q, _ = normalizer(A @ Q)
+/Users/austinlin/Library/Python/3.9/lib/python/site-packages/sklearn/utils/extmath.py:336: RuntimeWarning: divide by zero encountered in matmul
+  Q, _ = normalizer(A.T @ Q)
+/Users/austinlin/Library/Python/3.9/lib/python/site-packages/sklearn/utils/extmath.py:336: RuntimeWarning: overflow encountered in matmul
+  Q, _ = normalizer(A.T @ Q)
+/Users/austinlin/Library/Python/3.9/lib/python/site-packages/sklearn/utils/extmath.py:336: RuntimeWarning: invalid value encountered in matmul
+  Q, _ = normalizer(A.T @ Q)
+/Users/austinlin/Library/Python/3.9/lib/python/site-packages/sklearn/utils/extmath.py:340: RuntimeWarning: divide by zero encountered in matmul
+  Q, _ = qr_normalizer(A @ Q)
+/Users/austinlin/Library/Python/3.9/lib/python/site-packages/sklearn/utils/extmath.py:340: RuntimeWarning: overflow encountered in matmul
+  Q, _ = qr_normalizer(A @ Q)
+/Users/austinlin/Library/Python/3.9/lib/python/site-packages/sklearn/utils/extmath.py:340: RuntimeWarning: invalid value encountered in matmul
+  Q, _ = qr_normalizer(A @ Q)
+/Users/austinlin/Library/Python/3.9/lib/python/site-packages/sklearn/utils/extmath.py:533: RuntimeWarning: divide by zero encountered in matmul
+  B = Q.T @ M
+/Users/austinlin/Library/Python/3.9/lib/python/site-packages/sklearn/utils/extmath.py:533: RuntimeWarning: overflow encountered in matmul
+  B = Q.T @ M
+/Users/austinlin/Library/Python/3.9/lib/python/site-packages/sklearn/utils/extmath.py:533: RuntimeWarning: invalid value encountered in matmul
+  B = Q.T @ M
+/Users/austinlin/Library/Python/3.9/lib/python/site-packages/sklearn/utils/extmath.py:547: RuntimeWarning: divide by zero encountered in matmul
+  U = Q @ Uhat
+/Users/austinlin/Library/Python/3.9/lib/python/site-packages/sklearn/utils/extmath.py:547: RuntimeWarning: overflow encountered in matmul
+  U = Q @ Uhat
+/Users/austinlin/Library/Python/3.9/lib/python/site-packages/sklearn/utils/extmath.py:547: RuntimeWarning: invalid value encountered in matmul
+  U = Q @ Uhat
+/Users/austinlin/Library/Python/3.9/lib/python/site-packages/sklearn/decomposition/_base.py:148: RuntimeWarning: divide by zero encountered in matmul
+  X_transformed = X @ self.components_.T
+/Users/austinlin/Library/Python/3.9/lib/python/site-packages/sklearn/decomposition/_base.py:148: RuntimeWarning: overflow encountered in matmul
+  X_transformed = X @ self.components_.T
+/Users/austinlin/Library/Python/3.9/lib/python/site-packages/sklearn/decomposition/_base.py:148: RuntimeWarning: invalid value encountered in matmul
+  X_transformed = X @ self.components_.T
+/Users/austinlin/Library/Python/3.9/lib/python/site-packages/sklearn/decomposition/_base.py:155: RuntimeWarning: divide by zero encountered in matmul
+  X_transformed -= xp.reshape(self.mean_, (1, -1)) @ self.components_.T
+/Users/austinlin/Library/Python/3.9/lib/python/site-packages/sklearn/decomposition/_base.py:155: RuntimeWarning: overflow encountered in matmul
+  X_transformed -= xp.reshape(self.mean_, (1, -1)) @ self.components_.T
+/Users/austinlin/Library/Python/3.9/lib/python/site-packages/sklearn/decomposition/_base.py:155: RuntimeWarning: invalid value encountered in matmul
+  X_transformed -= xp.reshape(self.mean_, (1, -1)) @ self.components_.T
+/Users/austinlin/neuron_transformer/experiments/2026-10-02_neuron_transfer/prototype.py:175: RuntimeWarning: divide by zero encountered in matmul
+  prior[condition] = donor_coefficients@w.T
+/Users/austinlin/neuron_transformer/experiments/2026-10-02_neuron_transfer/prototype.py:175: RuntimeWarning: overflow encountered in matmul
+  prior[condition] = donor_coefficients@w.T
+/Users/austinlin/neuron_transformer/experiments/2026-10-02_neuron_transfer/prototype.py:175: RuntimeWarning: invalid value encountered in matmul
+  prior[condition] = donor_coefficients@w.T
+/Users/austinlin/neuron_transformer/experiments/2026-10-02_neuron_transfer/prototype.py:183: RuntimeWarning: divide by zero encountered in matmul
+  mse = float(np.mean((vv@coefficients-ys['tuning'][4291:5564])**2))
+/Users/austinlin/neuron_transformer/experiments/2026-10-02_neuron_transfer/prototype.py:183: RuntimeWarning: overflow encountered in matmul
+  mse = float(np.mean((vv@coefficients-ys['tuning'][4291:5564])**2))
+/Users/austinlin/neuron_transformer/experiments/2026-10-02_neuron_transfer/prototype.py:183: RuntimeWarning: invalid value encountered in matmul
+  mse = float(np.mean((vv@coefficients-ys['tuning'][4291:5564])**2))
+/Users/austinlin/neuron_transformer/experiments/2026-10-02_neuron_transfer/prototype.py:194: RuntimeWarning: divide by zero encountered in matmul
+  predictions[condition] = vv@coefficients[condition]
+/Users/austinlin/neuron_transformer/experiments/2026-10-02_neuron_transfer/prototype.py:194: RuntimeWarning: overflow encountered in matmul
+  predictions[condition] = vv@coefficients[condition]
+/Users/austinlin/neuron_transformer/experiments/2026-10-02_neuron_transfer/prototype.py:194: RuntimeWarning: invalid value encountered in matmul
+  predictions[condition] = vv@coefficients[condition]
+/Users/austinlin/neuron_transformer/experiments/2026-10-02_neuron_transfer/prototype.py:74: RuntimeWarning: divide by zero encountered in matmul
+  cov_true, cov_pred = tc.T@tc/len(tc), pc.T@pc/len(pc)
+/Users/austinlin/neuron_transformer/experiments/2026-10-02_neuron_transfer/prototype.py:74: RuntimeWarning: overflow encountered in matmul
+  cov_true, cov_pred = tc.T@tc/len(tc), pc.T@pc/len(pc)
+/Users/austinlin/neuron_transformer/experiments/2026-10-02_neuron_transfer/prototype.py:74: RuntimeWarning: invalid value encountered in matmul
+  cov_true, cov_pred = tc.T@tc/len(tc), pc.T@pc/len(pc)
+/Users/austinlin/neuron_transformer/experiments/2026-10-02_neuron_transfer/prototype.py:212: RuntimeWarning: divide by zero encountered in matmul
+  zero_calibration = xv@prior['real'][:,128:]
+/Users/austinlin/neuron_transformer/experiments/2026-10-02_neuron_transfer/prototype.py:212: RuntimeWarning: overflow encountered in matmul
+  zero_calibration = xv@prior['real'][:,128:]
+/Users/austinlin/neuron_transformer/experiments/2026-10-02_neuron_transfer/prototype.py:212: RuntimeWarning: invalid value encountered in matmul
+  zero_calibration = xv@prior['real'][:,128:]
+/Users/austinlin/neuron_transformer/experiments/2026-10-02_neuron_transfer/prototype.py:230: RuntimeWarning: divide by zero encountered in matmul
+  np.testing.assert_allclose(xx@ck['coef_'+c], predictions[c], rtol=1e-12, atol=1e-12)
+/Users/austinlin/neuron_transformer/experiments/2026-10-02_neuron_transfer/prototype.py:230: RuntimeWarning: overflow encountered in matmul
+  np.testing.assert_allclose(xx@ck['coef_'+c], predictions[c], rtol=1e-12, atol=1e-12)
+/Users/austinlin/neuron_transformer/experiments/2026-10-02_neuron_transfer/prototype.py:230: RuntimeWarning: invalid value encountered in matmul
+  np.testing.assert_allclose(xx@ck['coef_'+c], predictions[c], rtol=1e-12, atol=1e-12)
+/Users/austinlin/neuron_transformer/experiments/2026-10-02_neuron_transfer/prototype.py:231: RuntimeWarning: divide by zero encountered in matmul
+  z = ck['validation_design']@(ck['donor_coefficients']@weights(ck['evaluation_positions'],ck['donor_positions']).T)
+/Users/austinlin/neuron_transformer/experiments/2026-10-02_neuron_transfer/prototype.py:231: RuntimeWarning: overflow encountered in matmul
+  z = ck['validation_design']@(ck['donor_coefficients']@weights(ck['evaluation_positions'],ck['donor_positions']).T)
+/Users/austinlin/neuron_transformer/experiments/2026-10-02_neuron_transfer/prototype.py:231: RuntimeWarning: invalid value encountered in matmul
+  z = ck['validation_design']@(ck['donor_coefficients']@weights(ck['evaluation_positions'],ck['donor_positions']).T)
+/Users/austinlin/neuron_transformer/experiments/2026-10-02_neuron_transfer/prototype.py:237: RuntimeWarning: divide by zero encountered in matmul
+  aug_y = np.vstack([ys['evaluation'][31:416]-xc@base,np.zeros((137,128))])
+/Users/austinlin/neuron_transformer/experiments/2026-10-02_neuron_transfer/prototype.py:237: RuntimeWarning: overflow encountered in matmul
+  aug_y = np.vstack([ys['evaluation'][31:416]-xc@base,np.zeros((137,128))])
+/Users/austinlin/neuron_transformer/experiments/2026-10-02_neuron_transfer/prototype.py:237: RuntimeWarning: invalid value encountered in matmul
+  aug_y = np.vstack([ys['evaluation'][31:416]-xc@base,np.zeros((137,128))])
+/Users/austinlin/neuron_transformer/experiments/2026-10-02_neuron_transfer/prototype.py:239: RuntimeWarning: divide by zero encountered in matmul
+  numerical_error = float(np.max(np.abs(xv@independent-predictions['real'])))
+/Users/austinlin/neuron_transformer/experiments/2026-10-02_neuron_transfer/prototype.py:239: RuntimeWarning: overflow encountered in matmul
+  numerical_error = float(np.max(np.abs(xv@independent-predictions['real'])))
+/Users/austinlin/neuron_transformer/experiments/2026-10-02_neuron_transfer/prototype.py:239: RuntimeWarning: invalid value encountered in matmul
+  numerical_error = float(np.max(np.abs(xv@independent-predictions['real'])))
+/Users/austinlin/.matplotlib is not a writable directory
+Matplotlib created a temporary cache directory at /var/folders/nk/b0zhc0jd2gs79ppv1wkyqfwr0000gn/T/matplotlib-i1ups9ai because there was an issue with the default path (/Users/austinlin/.matplotlib); it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+
+Fontconfig error: No writable cache directories
+	/opt/homebrew/var/cache/fontconfig
+	/Users/austinlin/.cache/fontconfig
+	/Users/austinlin/.fontconfig
+Matplotlib is building the font cache; this may take a moment.
+{
+  "promising_gate": false,
+  "decision": "not established",
+  "real_relative_improvement": {
+    "none": 0.0012616287950417693,
+    "shuffle1": 0.0026706091433762458,
+    "shuffle2": 0.0029063305583720833,
+    "independent": 0.004925751835948788,
+    "speed_only": 0.010178911970036175,
+    "constant": 0.011475390384774853
+  },
+  "conditional_intervals": {
+    "none": [
+      0.00041960805939876,
+      0.0020425916928553957
+    ],
+    "shuffle1": [
+      0.001675862327528263,
+      0.003702592960977724
+    ],
+    "shuffle2": [
+      0.0018853222640779544,
+      0.0038677271175382665
+    ],
+    "independent": [
+      0.0037302571344061757,
+      0.006126187329110404
+    ],
+    "speed_only": [
+      0.008536950048211419,
+      0.01185246158694905
+    ],
+    "constant": [
+      0.009793877270543271,
+      0.01325246542498401
+    ]
+  },
+  "real_vs_none_cell_wins": 74,
+  "cells": 128,
+  "selected_regularization": {
+    "none": 10.0,
+    "real": 10.0,
+    "shuffle1": 10.0,
+    "shuffle2": 10.0,
+    "independent": 10.0,
+    "speed_only": 10.0
+  },
+  "seconds": 1.1212659999999999,
+  "test_evaluations": 0,
+  "interpretation": "reconstruction conditional on observed reference activity and speed; coordinate contribution evaluated by retrained controls; no behavioral or causal simulation claim"
+}

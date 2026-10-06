@@ -1,0 +1,71 @@
+{
+  "passed": true,
+  "parent_checks": [
+    {
+      "seed": 10,
+      "family": "attention",
+      "zero_projection_exact_trained_parent": true,
+      "disabled_context_exact_parent": true,
+      "active_query_input_dependent": true,
+      "legacy_predictor_compatible": true
+    },
+    {
+      "seed": 10,
+      "family": "mlp",
+      "zero_projection_exact_trained_parent": true,
+      "disabled_context_exact_parent": true,
+      "active_query_input_dependent": true,
+      "legacy_predictor_compatible": true
+    },
+    {
+      "seed": 11,
+      "family": "attention",
+      "zero_projection_exact_trained_parent": true,
+      "disabled_context_exact_parent": true,
+      "active_query_input_dependent": true,
+      "legacy_predictor_compatible": true
+    },
+    {
+      "seed": 11,
+      "family": "mlp",
+      "zero_projection_exact_trained_parent": true,
+      "disabled_context_exact_parent": true,
+      "active_query_input_dependent": true,
+      "legacy_predictor_compatible": true
+    },
+    {
+      "seed": 12,
+      "family": "attention",
+      "zero_projection_exact_trained_parent": true,
+      "disabled_context_exact_parent": true,
+      "active_query_input_dependent": true,
+      "legacy_predictor_compatible": true
+    },
+    {
+      "seed": 12,
+      "family": "mlp",
+      "zero_projection_exact_trained_parent": true,
+      "disabled_context_exact_parent": true,
+      "active_query_input_dependent": true,
+      "legacy_predictor_compatible": true
+    }
+  ],
+  "records": [
+    {
+      "family": "attention",
+      "parameters": 79383,
+      "zero_branch_learns": true,
+      "context_and_temporal_gradients": true,
+      "reload_exact": true
+    },
+    {
+      "family": "mlp",
+      "parameters": 79373,
+      "zero_branch_learns": true,
+      "context_and_temporal_gradients": true,
+      "reload_exact": true
+    }
+  ],
+  "common_initial_tensors": 49,
+  "input_unchanged": true
+}

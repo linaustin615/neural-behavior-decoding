@@ -1,0 +1,1057 @@
+{
+  "scope": "Reusable small literature-informed baseline on historically inspected Stringer data;not a novel architecture or independent confirmation",
+  "rows": [
+    {
+      "mouse": "MP030",
+      "n": 726,
+      "forecast_n": 722,
+      "speed": [
+        {
+          "label": "ridge",
+          "mse": 0.09297511345826658
+        },
+        {
+          "label": "zero",
+          "mse": 0.1252818115986507
+        },
+        {
+          "label": "mean",
+          "mse": 0.23099021154457564
+        },
+        {
+          "label": "old_regression",
+          "mse": 0.038985125571681926
+        },
+        {
+          "label": "old_mlp_s10",
+          "mse": 0.03590503247278742
+        },
+        {
+          "label": "old_mlp_s11",
+          "mse": 0.030194449404966926
+        },
+        {
+          "label": "old_mlp_s12",
+          "mse": 0.03819650217333812
+        },
+        {
+          "label": "attention_scratch_s10",
+          "mse": 0.049361859822721024,
+          "epoch": 12
+        },
+        {
+          "label": "attention_scratch_initial_s10",
+          "mse": 0.4554769405081805
+        },
+        {
+          "label": "attention_scratch_s11",
+          "mse": 0.07621831019924995,
+          "epoch": 15
+        },
+        {
+          "label": "attention_scratch_initial_s11",
+          "mse": 0.337797507883458
+        },
+        {
+          "label": "attention_scratch_s12",
+          "mse": 0.10320783836568367,
+          "epoch": 6
+        },
+        {
+          "label": "attention_scratch_initial_s12",
+          "mse": 0.2482906726748614
+        },
+        {
+          "label": "attention_scratch_ensemble",
+          "mse": 0.05762114879594332
+        },
+        {
+          "label": "attention_pretrained_s10",
+          "mse": 0.06404946570876735,
+          "epoch": 5
+        },
+        {
+          "label": "attention_pretrained_initial_s10",
+          "mse": 0.3668492663808662
+        },
+        {
+          "label": "attention_pretrained_s11",
+          "mse": 0.06985123528354892,
+          "epoch": 7
+        },
+        {
+          "label": "attention_pretrained_initial_s11",
+          "mse": 0.29833632646065655
+        },
+        {
+          "label": "attention_pretrained_s12",
+          "mse": 0.07914928148004452,
+          "epoch": 8
+        },
+        {
+          "label": "attention_pretrained_initial_s12",
+          "mse": 0.19998905375054757
+        },
+        {
+          "label": "attention_pretrained_ensemble",
+          "mse": 0.06026894533689508
+        },
+        {
+          "label": "mixer_scratch_s10",
+          "mse": 0.04815863915610234,
+          "epoch": 4
+        },
+        {
+          "label": "mixer_scratch_initial_s10",
+          "mse": 0.33391505613148886
+        },
+        {
+          "label": "mixer_scratch_s11",
+          "mse": 0.07389024830994505,
+          "epoch": 7
+        },
+        {
+          "label": "mixer_scratch_initial_s11",
+          "mse": 0.2808087779595334
+        },
+        {
+          "label": "mixer_scratch_s12",
+          "mse": 0.08880827115554978,
+          "epoch": 2
+        },
+        {
+          "label": "mixer_scratch_initial_s12",
+          "mse": 0.17586933714848718
+        },
+        {
+          "label": "mixer_scratch_ensemble",
+          "mse": 0.05268146084140981
+        },
+        {
+          "label": "mixer_pretrained_s10",
+          "mse": 0.061973290247644724,
+          "epoch": 9
+        },
+        {
+          "label": "mixer_pretrained_initial_s10",
+          "mse": 0.3627152049904021
+        },
+        {
+          "label": "mixer_pretrained_s11",
+          "mse": 0.07609910674958786,
+          "epoch": 7
+        },
+        {
+          "label": "mixer_pretrained_initial_s11",
+          "mse": 0.2481338557300748
+        },
+        {
+          "label": "mixer_pretrained_s12",
+          "mse": 0.05103452014566391,
+          "epoch": 1
+        },
+        {
+          "label": "mixer_pretrained_initial_s12",
+          "mse": 0.17658298069865805
+        },
+        {
+          "label": "mixer_pretrained_ensemble",
+          "mse": 0.04918030703327961
+        },
+        {
+          "label": "pooled_mlp_s10",
+          "mse": 0.07815725577406925,
+          "epoch": 13
+        },
+        {
+          "label": "pooled_mlp_initial_s10",
+          "mse": 0.14675696306743388
+        },
+        {
+          "label": "pooled_mlp_s11",
+          "mse": 0.07010882519572473,
+          "epoch": 19
+        },
+        {
+          "label": "pooled_mlp_initial_s11",
+          "mse": 0.437669651001686
+        },
+        {
+          "label": "pooled_mlp_s12",
+          "mse": 0.11091553797074447,
+          "epoch": 12
+        },
+        {
+          "label": "pooled_mlp_initial_s12",
+          "mse": 0.1935695442186581
+        },
+        {
+          "label": "pooled_mlp_ensemble",
+          "mse": 0.07565022226288631
+        }
+      ],
+      "forecast": [
+        {
+          "label": "mean",
+          "mse": 1.542743295104565
+        },
+        {
+          "label": "persistence",
+          "mse": 3.0056810470239763
+        },
+        {
+          "label": "population_ar_0.01",
+          "mse": 1.8675175558780839
+        },
+        {
+          "label": "neuron_ar_0.01",
+          "mse": 1.569346663011456
+        },
+        {
+          "label": "population_ar_0.1",
+          "mse": 1.811554260254313
+        },
+        {
+          "label": "neuron_ar_0.1",
+          "mse": 1.5637371690256008
+        },
+        {
+          "label": "population_ar_1.0",
+          "mse": 1.62865281473316
+        },
+        {
+          "label": "neuron_ar_1.0",
+          "mse": 1.5454676020831455
+        },
+        {
+          "label": "strong_baseline",
+          "mse": 1.5454676020831455
+        },
+        {
+          "label": "attention_s10",
+          "mse": 1.5269140945082726,
+          "epoch": 23
+        },
+        {
+          "label": "attention_s11",
+          "mse": 1.5285615991276946,
+          "epoch": 23
+        },
+        {
+          "label": "attention_s12",
+          "mse": 1.5281837382075059,
+          "epoch": 23
+        },
+        {
+          "label": "mixer_s10",
+          "mse": 1.5284431359249204,
+          "epoch": 23
+        },
+        {
+          "label": "mixer_s11",
+          "mse": 1.5306493786499715,
+          "epoch": 23
+        },
+        {
+          "label": "mixer_s12",
+          "mse": 1.5291155501829818,
+          "epoch": 22
+        }
+      ],
+      "forecast_baseline": {
+        "kind": "neuron_ar",
+        "lam": 1.0,
+        "mse": 1.324789754788403
+      }
+    },
+    {
+      "mouse": "MP032",
+      "n": 605,
+      "forecast_n": 601,
+      "speed": [
+        {
+          "label": "ridge",
+          "mse": 0.027878580083268018
+        },
+        {
+          "label": "zero",
+          "mse": 0.008503931343538733
+        },
+        {
+          "label": "mean",
+          "mse": 0.10650300292333602
+        },
+        {
+          "label": "old_regression",
+          "mse": 0.014983182820932129
+        },
+        {
+          "label": "old_mlp_s10",
+          "mse": 0.0144570919732634
+        },
+        {
+          "label": "old_mlp_s11",
+          "mse": 0.0111438836102707
+        },
+        {
+          "label": "old_mlp_s12",
+          "mse": 0.009792154170983804
+        },
+        {
+          "label": "attention_scratch_s10",
+          "mse": 0.10546678002803296,
+          "epoch": 9
+        },
+        {
+          "label": "attention_scratch_initial_s10",
+          "mse": 0.30773623334246647
+        },
+        {
+          "label": "attention_scratch_s11",
+          "mse": 0.0263997719595265,
+          "epoch": 21
+        },
+        {
+          "label": "attention_scratch_initial_s11",
+          "mse": 0.21743105097520507
+        },
+        {
+          "label": "attention_scratch_s12",
+          "mse": 0.04697159628589335,
+          "epoch": 17
+        },
+        {
+          "label": "attention_scratch_initial_s12",
+          "mse": 0.14105023149649143
+        },
+        {
+          "label": "attention_scratch_ensemble",
+          "mse": 0.05056096685933553
+        },
+        {
+          "label": "attention_pretrained_s10",
+          "mse": 0.045847215364335114,
+          "epoch": 20
+        },
+        {
+          "label": "attention_pretrained_initial_s10",
+          "mse": 0.23498191998182105
+        },
+        {
+          "label": "attention_pretrained_s11",
+          "mse": 0.023364674480672025,
+          "epoch": 15
+        },
+        {
+          "label": "attention_pretrained_initial_s11",
+          "mse": 0.15594327013147083
+        },
+        {
+          "label": "attention_pretrained_s12",
+          "mse": 0.020902558541481063,
+          "epoch": 24
+        },
+        {
+          "label": "attention_pretrained_initial_s12",
+          "mse": 0.0811341159357524
+        },
+        {
+          "label": "attention_pretrained_ensemble",
+          "mse": 0.02699604600923778
+        },
+        {
+          "label": "mixer_scratch_s10",
+          "mse": 0.051095223982314655,
+          "epoch": 1
+        },
+        {
+          "label": "mixer_scratch_initial_s10",
+          "mse": 0.15427276224247496
+        },
+        {
+          "label": "mixer_scratch_s11",
+          "mse": 0.031981933133262565,
+          "epoch": 6
+        },
+        {
+          "label": "mixer_scratch_initial_s11",
+          "mse": 0.1491591820800496
+        },
+        {
+          "label": "mixer_scratch_s12",
+          "mse": 0.03580264979306313,
+          "epoch": 3
+        },
+        {
+          "label": "mixer_scratch_initial_s12",
+          "mse": 0.04384956198323316
+        },
+        {
+          "label": "mixer_scratch_ensemble",
+          "mse": 0.03374445545733515
+        },
+        {
+          "label": "mixer_pretrained_s10",
+          "mse": 0.011253610067768502,
+          "epoch": 19
+        },
+        {
+          "label": "mixer_pretrained_initial_s10",
+          "mse": 0.20147527704517204
+        },
+        {
+          "label": "mixer_pretrained_s11",
+          "mse": 0.025782096607399208,
+          "epoch": 2
+        },
+        {
+          "label": "mixer_pretrained_initial_s11",
+          "mse": 0.10946939871939566
+        },
+        {
+          "label": "mixer_pretrained_s12",
+          "mse": 0.014020865482942306,
+          "epoch": 11
+        },
+        {
+          "label": "mixer_pretrained_initial_s12",
+          "mse": 0.046063941362297176
+        },
+        {
+          "label": "mixer_pretrained_ensemble",
+          "mse": 0.014371143177058746
+        },
+        {
+          "label": "pooled_mlp_s10",
+          "mse": 0.014537940383469481,
+          "epoch": 14
+        },
+        {
+          "label": "pooled_mlp_initial_s10",
+          "mse": 0.016066217625150273
+        },
+        {
+          "label": "pooled_mlp_s11",
+          "mse": 0.017395196294051195,
+          "epoch": 19
+        },
+        {
+          "label": "pooled_mlp_initial_s11",
+          "mse": 0.2826528798713453
+        },
+        {
+          "label": "pooled_mlp_s12",
+          "mse": 0.012392550604013041,
+          "epoch": 20
+        },
+        {
+          "label": "pooled_mlp_initial_s12",
+          "mse": 0.07530624388758243
+        },
+        {
+          "label": "pooled_mlp_ensemble",
+          "mse": 0.013430509723716382
+        }
+      ],
+      "forecast": [
+        {
+          "label": "mean",
+          "mse": 0.8162189574551829
+        },
+        {
+          "label": "persistence",
+          "mse": 1.3094593371381564
+        },
+        {
+          "label": "population_ar_0.01",
+          "mse": 0.9777514517106409
+        },
+        {
+          "label": "neuron_ar_0.01",
+          "mse": 0.75962062236489
+        },
+        {
+          "label": "population_ar_0.1",
+          "mse": 0.938577481556009
+        },
+        {
+          "label": "neuron_ar_0.1",
+          "mse": 0.7591781649080633
+        },
+        {
+          "label": "population_ar_1.0",
+          "mse": 0.8308729315225368
+        },
+        {
+          "label": "neuron_ar_1.0",
+          "mse": 0.7661469965181344
+        },
+        {
+          "label": "strong_baseline",
+          "mse": 0.7661469965181344
+        },
+        {
+          "label": "attention_s10",
+          "mse": 0.7410943112861748,
+          "epoch": 23
+        },
+        {
+          "label": "attention_s11",
+          "mse": 0.7518473004229614,
+          "epoch": 21
+        },
+        {
+          "label": "attention_s12",
+          "mse": 0.7472210586056411,
+          "epoch": 21
+        },
+        {
+          "label": "mixer_s10",
+          "mse": 0.7489541844453317,
+          "epoch": 19
+        },
+        {
+          "label": "mixer_s11",
+          "mse": 0.7560152517063917,
+          "epoch": 24
+        },
+        {
+          "label": "mixer_s12",
+          "mse": 0.7493290953690427,
+          "epoch": 12
+        }
+      ],
+      "forecast_baseline": {
+        "kind": "neuron_ar",
+        "lam": 1.0,
+        "mse": 0.5327470296259609
+      }
+    },
+    {
+      "mouse": "MP033",
+      "n": 443,
+      "forecast_n": 439,
+      "speed": [
+        {
+          "label": "ridge",
+          "mse": 0.5411839348862623
+        },
+        {
+          "label": "zero",
+          "mse": 1.8402761587181986
+        },
+        {
+          "label": "mean",
+          "mse": 1.1648318502256956
+        },
+        {
+          "label": "old_regression",
+          "mse": 0.34736722828521677
+        },
+        {
+          "label": "old_mlp_s10",
+          "mse": 0.384982752208799
+        },
+        {
+          "label": "old_mlp_s11",
+          "mse": 0.5902793695494325
+        },
+        {
+          "label": "old_mlp_s12",
+          "mse": 0.39341732305329086
+        },
+        {
+          "label": "attention_scratch_s10",
+          "mse": 0.45640686118963375,
+          "epoch": 12
+        },
+        {
+          "label": "attention_scratch_initial_s10",
+          "mse": 1.3641192596681428
+        },
+        {
+          "label": "attention_scratch_s11",
+          "mse": 0.6636706423586072,
+          "epoch": 2
+        },
+        {
+          "label": "attention_scratch_initial_s11",
+          "mse": 1.2513617270704214
+        },
+        {
+          "label": "attention_scratch_s12",
+          "mse": 0.4319984609257237,
+          "epoch": 15
+        },
+        {
+          "label": "attention_scratch_initial_s12",
+          "mse": 1.1884654210769183
+        },
+        {
+          "label": "attention_scratch_ensemble",
+          "mse": 0.45135384985598803
+        },
+        {
+          "label": "attention_pretrained_s10",
+          "mse": 0.47828203678005576,
+          "epoch": 12
+        },
+        {
+          "label": "attention_pretrained_initial_s10",
+          "mse": 1.2890116184007803
+        },
+        {
+          "label": "attention_pretrained_s11",
+          "mse": 0.45802937531959265,
+          "epoch": 9
+        },
+        {
+          "label": "attention_pretrained_initial_s11",
+          "mse": 1.2005566067907114
+        },
+        {
+          "label": "attention_pretrained_s12",
+          "mse": 0.49301779983885347,
+          "epoch": 18
+        },
+        {
+          "label": "attention_pretrained_initial_s12",
+          "mse": 1.1212798795191576
+        },
+        {
+          "label": "attention_pretrained_ensemble",
+          "mse": 0.450794537622192
+        },
+        {
+          "label": "mixer_scratch_s10",
+          "mse": 0.45644609260686275,
+          "epoch": 15
+        },
+        {
+          "label": "mixer_scratch_initial_s10",
+          "mse": 1.221971693667021
+        },
+        {
+          "label": "mixer_scratch_s11",
+          "mse": 0.455498241695285,
+          "epoch": 10
+        },
+        {
+          "label": "mixer_scratch_initial_s11",
+          "mse": 1.187059173230329
+        },
+        {
+          "label": "mixer_scratch_s12",
+          "mse": 0.45265301779594647,
+          "epoch": 12
+        },
+        {
+          "label": "mixer_scratch_initial_s12",
+          "mse": 1.1022172314192262
+        },
+        {
+          "label": "mixer_scratch_ensemble",
+          "mse": 0.4252887857479965
+        },
+        {
+          "label": "mixer_pretrained_s10",
+          "mse": 0.39433662292139326,
+          "epoch": 8
+        },
+        {
+          "label": "mixer_pretrained_initial_s10",
+          "mse": 1.2742205549314316
+        },
+        {
+          "label": "mixer_pretrained_s11",
+          "mse": 0.44435576029438917,
+          "epoch": 10
+        },
+        {
+          "label": "mixer_pretrained_initial_s11",
+          "mse": 1.1744349298781875
+        },
+        {
+          "label": "mixer_pretrained_s12",
+          "mse": 0.4283545568134133,
+          "epoch": 3
+        },
+        {
+          "label": "mixer_pretrained_initial_s12",
+          "mse": 1.1055744931409566
+        },
+        {
+          "label": "mixer_pretrained_ensemble",
+          "mse": 0.4023514122369307
+        },
+        {
+          "label": "pooled_mlp_s10",
+          "mse": 0.5360686548516851,
+          "epoch": 18
+        },
+        {
+          "label": "pooled_mlp_initial_s10",
+          "mse": 1.0801886082372034
+        },
+        {
+          "label": "pooled_mlp_s11",
+          "mse": 0.5655974336017333,
+          "epoch": 15
+        },
+        {
+          "label": "pooled_mlp_initial_s11",
+          "mse": 1.332130581841936
+        },
+        {
+          "label": "pooled_mlp_s12",
+          "mse": 0.6691352379260385,
+          "epoch": 11
+        },
+        {
+          "label": "pooled_mlp_initial_s12",
+          "mse": 1.1384337001383251
+        },
+        {
+          "label": "pooled_mlp_ensemble",
+          "mse": 0.5650291443770707
+        }
+      ],
+      "forecast": [
+        {
+          "label": "mean",
+          "mse": 0.9104115310747436
+        },
+        {
+          "label": "persistence",
+          "mse": 1.781769535130053
+        },
+        {
+          "label": "population_ar_0.01",
+          "mse": 1.2374539344989308
+        },
+        {
+          "label": "neuron_ar_0.01",
+          "mse": 0.9125515552251343
+        },
+        {
+          "label": "population_ar_0.1",
+          "mse": 1.1635522651886376
+        },
+        {
+          "label": "neuron_ar_0.1",
+          "mse": 0.9091522685458743
+        },
+        {
+          "label": "population_ar_1.0",
+          "mse": 0.977338774709204
+        },
+        {
+          "label": "neuron_ar_1.0",
+          "mse": 0.9004595302926948
+        },
+        {
+          "label": "strong_baseline",
+          "mse": 0.9004595302926948
+        },
+        {
+          "label": "attention_s10",
+          "mse": 0.8891808873593481,
+          "epoch": 23
+        },
+        {
+          "label": "attention_s11",
+          "mse": 0.8891813579768072,
+          "epoch": 24
+        },
+        {
+          "label": "attention_s12",
+          "mse": 0.889036994025224,
+          "epoch": 22
+        },
+        {
+          "label": "mixer_s10",
+          "mse": 0.8905376085126095,
+          "epoch": 23
+        },
+        {
+          "label": "mixer_s11",
+          "mse": 0.8899256619769782,
+          "epoch": 24
+        },
+        {
+          "label": "mixer_s12",
+          "mse": 0.8904112383131686,
+          "epoch": 22
+        }
+      ],
+      "forecast_baseline": {
+        "kind": "neuron_ar",
+        "lam": 1.0,
+        "mse": 0.993658963828555
+      }
+    },
+    {
+      "mouse": "MP034",
+      "n": 444,
+      "forecast_n": 440,
+      "speed": [
+        {
+          "label": "ridge",
+          "mse": 0.48558503024848637
+        },
+        {
+          "label": "zero",
+          "mse": 0.8112895986959933
+        },
+        {
+          "label": "mean",
+          "mse": 1.2485122181334631
+        },
+        {
+          "label": "old_regression",
+          "mse": 0.30077840515404586
+        },
+        {
+          "label": "old_mlp_s10",
+          "mse": 0.1572483248827075
+        },
+        {
+          "label": "old_mlp_s11",
+          "mse": 0.14412033493251222
+        },
+        {
+          "label": "old_mlp_s12",
+          "mse": 0.12323426487487929
+        },
+        {
+          "label": "attention_scratch_s10",
+          "mse": 0.12717999372299563,
+          "epoch": 23
+        },
+        {
+          "label": "attention_scratch_initial_s10",
+          "mse": 1.6876868064088313
+        },
+        {
+          "label": "attention_scratch_s11",
+          "mse": 0.13782285759501475,
+          "epoch": 22
+        },
+        {
+          "label": "attention_scratch_initial_s11",
+          "mse": 1.4520322205473295
+        },
+        {
+          "label": "attention_scratch_s12",
+          "mse": 0.2850273527734342,
+          "epoch": 16
+        },
+        {
+          "label": "attention_scratch_initial_s12",
+          "mse": 1.3077206424586219
+        },
+        {
+          "label": "attention_scratch_ensemble",
+          "mse": 0.15264044709008495
+        },
+        {
+          "label": "attention_pretrained_s10",
+          "mse": 0.14467184104623115,
+          "epoch": 15
+        },
+        {
+          "label": "attention_pretrained_initial_s10",
+          "mse": 1.5405841969155638
+        },
+        {
+          "label": "attention_pretrained_s11",
+          "mse": 0.20445634874760812,
+          "epoch": 7
+        },
+        {
+          "label": "attention_pretrained_initial_s11",
+          "mse": 1.3116914108931002
+        },
+        {
+          "label": "attention_pretrained_s12",
+          "mse": 0.18534680163910333,
+          "epoch": 14
+        },
+        {
+          "label": "attention_pretrained_initial_s12",
+          "mse": 1.1527786544362368
+        },
+        {
+          "label": "attention_pretrained_ensemble",
+          "mse": 0.16074970825728624
+        },
+        {
+          "label": "mixer_scratch_s10",
+          "mse": 0.22412189109350905,
+          "epoch": 15
+        },
+        {
+          "label": "mixer_scratch_initial_s10",
+          "mse": 1.381966097361876
+        },
+        {
+          "label": "mixer_scratch_s11",
+          "mse": 0.3052728654817471,
+          "epoch": 11
+        },
+        {
+          "label": "mixer_scratch_initial_s11",
+          "mse": 1.2985702668569612
+        },
+        {
+          "label": "mixer_scratch_s12",
+          "mse": 0.3233786859511664,
+          "epoch": 14
+        },
+        {
+          "label": "mixer_scratch_initial_s12",
+          "mse": 1.0400451651745506
+        },
+        {
+          "label": "mixer_scratch_ensemble",
+          "mse": 0.25817591075869983
+        },
+        {
+          "label": "mixer_pretrained_s10",
+          "mse": 0.32181682508657317,
+          "epoch": 11
+        },
+        {
+          "label": "mixer_pretrained_initial_s10",
+          "mse": 1.497494039174647
+        },
+        {
+          "label": "mixer_pretrained_s11",
+          "mse": 0.3219881112005108,
+          "epoch": 14
+        },
+        {
+          "label": "mixer_pretrained_initial_s11",
+          "mse": 1.2325326997210246
+        },
+        {
+          "label": "mixer_pretrained_s12",
+          "mse": 0.2946675015119964,
+          "epoch": 8
+        },
+        {
+          "label": "mixer_pretrained_initial_s12",
+          "mse": 1.057497419152085
+        },
+        {
+          "label": "mixer_pretrained_ensemble",
+          "mse": 0.28840289327066027
+        },
+        {
+          "label": "pooled_mlp_s10",
+          "mse": 0.44172851918125183,
+          "epoch": 10
+        },
+        {
+          "label": "pooled_mlp_initial_s10",
+          "mse": 0.9577230834013992
+        },
+        {
+          "label": "pooled_mlp_s11",
+          "mse": 0.3975092004743416,
+          "epoch": 20
+        },
+        {
+          "label": "pooled_mlp_initial_s11",
+          "mse": 1.6128640175774136
+        },
+        {
+          "label": "pooled_mlp_s12",
+          "mse": 0.6469696089059441,
+          "epoch": 19
+        },
+        {
+          "label": "pooled_mlp_initial_s12",
+          "mse": 1.1709959598244208
+        },
+        {
+          "label": "pooled_mlp_ensemble",
+          "mse": 0.46463463380363085
+        }
+      ],
+      "forecast": [
+        {
+          "label": "mean",
+          "mse": 0.7368783948274522
+        },
+        {
+          "label": "persistence",
+          "mse": 1.3733921725192118
+        },
+        {
+          "label": "population_ar_0.01",
+          "mse": 1.004295437330732
+        },
+        {
+          "label": "neuron_ar_0.01",
+          "mse": 0.7286039214133687
+        },
+        {
+          "label": "population_ar_0.1",
+          "mse": 0.9369870282815922
+        },
+        {
+          "label": "neuron_ar_0.1",
+          "mse": 0.7260106097672088
+        },
+        {
+          "label": "population_ar_1.0",
+          "mse": 0.7825008879968597
+        },
+        {
+          "label": "neuron_ar_1.0",
+          "mse": 0.720655915044843
+        },
+        {
+          "label": "strong_baseline",
+          "mse": 0.720655915044843
+        },
+        {
+          "label": "attention_s10",
+          "mse": 0.705074615575434,
+          "epoch": 23
+        },
+        {
+          "label": "attention_s11",
+          "mse": 0.7067011805380129,
+          "epoch": 21
+        },
+        {
+          "label": "attention_s12",
+          "mse": 0.7054651693415611,
+          "epoch": 22
+        },
+        {
+          "label": "mixer_s10",
+          "mse": 0.708903279759383,
+          "epoch": 23
+        },
+        {
+          "label": "mixer_s11",
+          "mse": 0.7093392564348866,
+          "epoch": 16
+        },
+        {
+          "label": "mixer_s12",
+          "mse": 0.7083996014725603,
+          "epoch": 21
+        }
+      ],
+      "forecast_baseline": {
+        "kind": "neuron_ar",
+        "lam": 1.0,
+        "mse": 0.9237739723596898
+      }
+    }
+  ]
+}

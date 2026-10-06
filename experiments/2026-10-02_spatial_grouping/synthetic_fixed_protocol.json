@@ -1,0 +1,25 @@
+{
+  "purpose": "Can the exact grouped architecture learn a known interaction between regional signals?",
+  "n": 256,
+  "train_examples": 2048,
+  "val_examples": 512,
+  "test_examples": 512,
+  "seeds": [
+    20,
+    21
+  ],
+  "variants": [
+    "global",
+    "spatial",
+    "random"
+  ],
+  "max_epochs": 50,
+  "patience": null,
+  "min_epochs": 50,
+  "data_seed": 721,
+  "followup": "Re-run only the3 early-stopped synthetic fits for all50 epochs after the original gate failed; all original results retained",
+  "target": "(regional_drive0-regional_drive7)*(regional_drive2-regional_drive5)/2; normalize by train mean/std",
+  "activity": "Each neuron shares its region signal with independent Gaussian noise SD.5 at each of8 time bins",
+  "gate": "Both spatial seeds testR2>.75 and beat their untrained predictions; other arms need not fail",
+  "limitation": "Artificial strong group interaction; not evidence of anatomical benefit in real data"
+}

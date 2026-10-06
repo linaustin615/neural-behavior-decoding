@@ -1,0 +1,83 @@
+{
+  "frozen_utc": "2026-10-04T21:32:40.996227+00:00",
+  "mice": [
+    "MP030",
+    "MP032",
+    "MP033",
+    "MP034"
+  ],
+  "seeds": [
+    10,
+    11,
+    12
+  ],
+  "question": "Does source-mouse pretraining improve held-out-mouse speed decoding with224 target labels, and does transformer transfer beat matched MLP transfer and target-only controls?",
+  "design": "4 held-out mice x3 seeds; pretrain each family on the other3 mice only; adapt transferred and freshly initialized versions of both families to the held-out mouse; deterministic target-only ridge plus target mean/median references",
+  "architecture": "exact archived shared BehaviorDecoder,128neurons x32bins; temporal transformer+dynamic behavior query versus temporal MLP+static query; no coordinates or cross-mouse neuron identity matching",
+  "budget": "24 source fits (4folds x3seeds x2families),48 target fits (4folds x3seeds x4arms),20 ridge candidates; source24epochs over all source training windows, target24epochs x5batches=120updates; no seed/architecture/budget expansion",
+  "target_budget": {
+    "fit": [
+      0,
+      160
+    ],
+    "selection": [
+      192,
+      256
+    ],
+    "labeled_windows": 224,
+    "gap": 32
+  },
+  "target_normalization": "undo cached full-training normalization using archived statistics; compute native activity means/SDs on191 unique bins covered by160 fit windows only; SD<1e-6 becomes1; speed mean/SD from160 fit labels only, SD<1e-6 becomes1; apply frozen prefix normalization to target selection and later raw data",
+  "panel_limitation": "retain the fixed128-cell panel inherited from prior unlabeled full-training eligibility preprocessing; no new target neuron selection. This is a limited behavior-label test, not an untouched-target-data or novel-cohort claim; cache inversion has float32 rounding",
+  "source_normalization": "original per-source training-only normalization; original full source training/selection intervals; held-out mouse absent from source data loader, source sessions, source selection scores and source loss",
+  "transfer": "copy all selected source shared parameters except neuron-ID table,session embedding and final scalar output layer; keep these fresh and identical to target-only control. All target parameters fine-tune; zero initial normalized output for every target arm",
+  "optimizer": "AdamW lr.001 wd.01 batch32 clip1 cosine24 eta_min.0001; equal-mouse source training loss weights totalN/(3*mouseN)*batchN/32; target standard MSE; fresh optimizer for adaptation; same target batches and dropout RNG seed across arms",
+  "selection": "source one joint epoch0..24 by equal-mouse normalized source selection MSE only; target epoch0..24 by64 target selection labels only; ridge penalty .001/.01/.1/1/10 by the same64 labels; lock all choices before any new later inference",
+  "primary": "transfer attention versus target-only attention: >=5% mean within-mouse relative MSE gain, >=3/4 mouse wins, >=8/12 paired seed wins",
+  "utility": "add comparisons with transfer MLP,target-only MLP,and target-only ridge: each>=5% mean gain and>=3/4mouse wins; neural controls>=8/12pairedseedwins; no mouse>25%worse thanridge; >=8/12wins versus owninitial",
+  "secondary": "MAE,R2,all per-mouse/seed scores,MLP transfer effect,training-median reference,leave-one-mouse-out means; same target label/update/selection budgets,not equal total source+target compute",
+  "uncertainty": "2000 paired mouse/seed/circular100-bin bootstrap draws,seed81224; shared seed draw acrossfolds; descriptive97.5% intervals for attention transfer versus target-only attention and transfer MLP; conditional on fitted models,source-overlapping folds and historical method selection are not independent",
+  "stopping": "complete fixed experiment and report failures; no additional transfer recipe,adaptation fraction or architecture search; application unchanged and no publication",
+  "hypotheses_scope": "one fixed224-label budget tests relative usefulness at that budget,not a learning curve or quantified number of labels saved; all animals historically inspected,not independent significance",
+  "input_hashes": {
+    "experiments/2026-10-04_mouse_transfer/run.py": "c8a467ebd838fae85635613efc69b4dde781a0b5e4af8d4ea27c37362b2808b0",
+    "experiments/2026-10-04_mouse_transfer/analyse.py": "de5d238b21ada491256b1328be22ce900ebb5aeade0be413f3f02dff1daed1b3",
+    "experiments/2026-10-03_shared_behavior/models.py": "568205d0f030bd088bfc2f7f62ab61425e04a8e93b975a9796239e74bccf2c12",
+    "experiments/2026-10-03_dynamics_baseline/models.py": "f68f5e6fd8aebbdba08525eb3d063ee1e3139a3f0a55b3e7ac6e8aa5a6693aac",
+    "train.py": "0361d216cd75616ed07501a019f4837f7c0acf57f0cd2edecb0fc6728064d7f9",
+    "model.py": "2297af73466e1c85ee5774dc10a44a2a03f7a6f48919a111b43a8cf6d7d86a40",
+    "data.py": "894d5aea4dd0ce6a139178b66b1f8a5538f1c4f015081153d4c11fa55d78b7bf",
+    "experiments/2026-10-03_dynamics_baseline/MP030/train_x.npy": "162f592e1e65c731e7aa7461e1512ac161b5f8abfd53d13f6c6a6e2355583aeb",
+    "experiments/2026-10-03_dynamics_baseline/MP030/train_y.npy": "6b3bed5964d3cee92be4d37e6e585f1096fb33e5ec6401d753b72d9a0e8a8d19",
+    "experiments/2026-10-03_dynamics_baseline/MP030/selection_x.npy": "c39113dc5cbe9749acc55d5a12bb4e8ea2f73d474fb691c0e38b493c961292ef",
+    "experiments/2026-10-03_dynamics_baseline/MP030/selection_y.npy": "80b26de2780aaf5484431383bbae200146113bea9c0e31fc45b67df9f2ea6c91",
+    "experiments/2026-10-03_dynamics_baseline/MP030/columns.npy": "e846418dd7050cfe2a8079e41c29416e7e60627b8b3c4b25759a44b5a7381ecb",
+    "experiments/2026-10-03_fair_comparison/MP030/statistics.npz": "dde426f33493b02efc35bab5b32c4cc6c1c8a9c7db17d64d8ebc2ad90008ca19",
+    "experiments/2026-10-03_fair_comparison/MP030/metadata.json": "152fca303e022803e92c127c36c10983f459d562cb700bfd9bf8a73b94888121",
+    "experiments/2026-10-03_fair_comparison/MP030/later_raw.npz": "8a9a79bd9da7681ea4cc3ad92b2f99ec4ce6326b9d4460275835eea1b94b76c7",
+    "experiments/2026-10-03_dynamics_baseline/MP032/train_x.npy": "3343b84c8ccfe775edfea64937dd309f17d0e659ffe87ed7f4f434a6e630f907",
+    "experiments/2026-10-03_dynamics_baseline/MP032/train_y.npy": "62e691c8fefbfcdf51d52f129475786e6143abbe83848560177f1a27d08e33c9",
+    "experiments/2026-10-03_dynamics_baseline/MP032/selection_x.npy": "6a74a6a51441486496b028eaf1548ba57c9ed9a5f54a39f06e23e224f23e11ba",
+    "experiments/2026-10-03_dynamics_baseline/MP032/selection_y.npy": "9e71c50a3f4df98ae7bba1a9bba553526e42bf7aed404a44dc0891fe2042fea5",
+    "experiments/2026-10-03_dynamics_baseline/MP032/columns.npy": "e846418dd7050cfe2a8079e41c29416e7e60627b8b3c4b25759a44b5a7381ecb",
+    "experiments/2026-10-03_fair_comparison/MP032/statistics.npz": "fa7bbc7af120ffd33f18b27547ef868036de9eb627321bd4139e1ef7bf5c5954",
+    "experiments/2026-10-03_fair_comparison/MP032/metadata.json": "5f9f1394dab67398548bd1c2f19b4af918d02c1713fb0bec79baae6c0f94ea6e",
+    "experiments/2026-10-03_fair_comparison/MP032/later_raw.npz": "31fb276252fe99f572d38e94cbc962edc3305d4bc552407e3c22b77a2ca12205",
+    "experiments/2026-10-03_dynamics_baseline/MP033/train_x.npy": "7addec2cb2da5126af0106f9834eeb5d25cf4b6065b6ac15165c4746fc7009d1",
+    "experiments/2026-10-03_dynamics_baseline/MP033/train_y.npy": "2d76a262b41e675b949c39a0145b73f15d07ecf4d260fca92ae19009e8e13899",
+    "experiments/2026-10-03_dynamics_baseline/MP033/selection_x.npy": "d185cc0c39b4496a2d3101a8c22337476c88d1f05ffb42b44c59031a665c1acc",
+    "experiments/2026-10-03_dynamics_baseline/MP033/selection_y.npy": "81a66b745ecf99d549d3bb8ee867678c4d25292179869e4a03742028b09c360c",
+    "experiments/2026-10-03_dynamics_baseline/MP033/columns.npy": "e846418dd7050cfe2a8079e41c29416e7e60627b8b3c4b25759a44b5a7381ecb",
+    "experiments/2026-10-03_fair_comparison/MP033/statistics.npz": "3618dafbb7acd40d1c14d6d40935799dcaa2c551941c5f6af36b5b392fa7e8cc",
+    "experiments/2026-10-03_fair_comparison/MP033/metadata.json": "68d39cfbffde3cdfde0b255ae7fc6092e97254c86890b52fca856fafdb98722c",
+    "experiments/2026-10-03_fair_comparison/MP033/later_raw.npz": "ae659b194d6dec1036ee4c14446f6cf2da770ce2b14950b488cc65fac721a395",
+    "experiments/2026-10-03_dynamics_baseline/MP034/train_x.npy": "78a8624143594722ffd7fcf060ea36fd248517921dca54d65d1c3a4363b669ca",
+    "experiments/2026-10-03_dynamics_baseline/MP034/train_y.npy": "25b6a05b9237407f7634df73fed17435a4867ac3468144af567530fed84e1862",
+    "experiments/2026-10-03_dynamics_baseline/MP034/selection_x.npy": "4c8f2438afe43698795f7699d68e867afe26ddfac2c254eecace0a0ca129d20e",
+    "experiments/2026-10-03_dynamics_baseline/MP034/selection_y.npy": "33306d2af1f937ec3e0996d4cb6897981e345070c747a453f706b40e3457ccfc",
+    "experiments/2026-10-03_dynamics_baseline/MP034/columns.npy": "e846418dd7050cfe2a8079e41c29416e7e60627b8b3c4b25759a44b5a7381ecb",
+    "experiments/2026-10-03_fair_comparison/MP034/statistics.npz": "8783775612a7d09f73ec918f74cd1f6f187ceacfceb6d61c2fba704d6b5317a4",
+    "experiments/2026-10-03_fair_comparison/MP034/metadata.json": "c29d80d72630b4e6abc58e77914cf58ba0da3940213c3925d0c09d8f01381afe",
+    "experiments/2026-10-03_fair_comparison/MP034/later_raw.npz": "04edd4b945f186f582e50ec123a6425abe11e7be7d4646dc5ee764e618bf97b3"
+  }
+}

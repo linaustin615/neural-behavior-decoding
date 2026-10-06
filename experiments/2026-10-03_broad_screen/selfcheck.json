@@ -1,0 +1,107 @@
+{
+  "passed": true,
+  "models": [
+    {
+      "kind": "block_robust",
+      "parameters": 81377,
+      "seconds": 0.589541375
+    },
+    {
+      "kind": "functional_graph",
+      "parameters": 82994,
+      "seconds": 0.012886457999999656
+    },
+    {
+      "kind": "graph_random",
+      "parameters": 82994,
+      "seconds": 0.010795917000000266
+    },
+    {
+      "kind": "lowrank_id",
+      "parameters": 32481,
+      "seconds": 0.008765250000000169
+    },
+    {
+      "kind": "lowrank_mlp",
+      "parameters": 32129,
+      "seconds": 0.0076225000000000875
+    },
+    {
+      "kind": "masked_mlp",
+      "parameters": 83401,
+      "seconds": 0.015071999999999974
+    },
+    {
+      "kind": "masked_pretrain",
+      "parameters": 83753,
+      "seconds": 0.01218291700000007
+    },
+    {
+      "kind": "multiscale",
+      "parameters": 37377,
+      "seconds": 0.011723667000000049
+    },
+    {
+      "kind": "norm_mlp",
+      "parameters": 81105,
+      "seconds": 0.009253667000000299
+    },
+    {
+      "kind": "plain",
+      "parameters": 81377,
+      "seconds": 0.009745917000000048
+    },
+    {
+      "kind": "pooled_mlp",
+      "parameters": 81025,
+      "seconds": 0.008443874999999768
+    },
+    {
+      "kind": "population_conv",
+      "parameters": 37217,
+      "seconds": 0.0133015000000003
+    },
+    {
+      "kind": "population_gru",
+      "parameters": 35729,
+      "seconds": 0.012469541000000195
+    },
+    {
+      "kind": "shared",
+      "parameters": 81761,
+      "seconds": 0.010208875000000006
+    },
+    {
+      "kind": "state_head",
+      "parameters": 81476,
+      "seconds": 0.01017854199999979
+    },
+    {
+      "kind": "state_mlp",
+      "parameters": 81124,
+      "seconds": 0.007798667000000314
+    },
+    {
+      "kind": "time_attn",
+      "parameters": 37377,
+      "seconds": 0.010546916000000017
+    },
+    {
+      "kind": "time_linear",
+      "parameters": 34209,
+      "seconds": 0.008761250000000054
+    },
+    {
+      "kind": "time_mean",
+      "parameters": 36225,
+      "seconds": 0.008799208000000114
+    },
+    {
+      "kind": "token_norm",
+      "parameters": 81457,
+      "seconds": 0.009012041000000082
+    }
+  ],
+  "shapes_finite_gradients_updates_reload": true,
+  "exact_optimizer_scheduler_rng_resume": true
+}

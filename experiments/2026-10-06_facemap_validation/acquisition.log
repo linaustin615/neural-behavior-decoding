@@ -1,0 +1,796 @@
+TX57 download 6.8 %
+TX57 download 13.7 %
+TX57 download 20.5 %
+TX57 download 27.4 %
+TX57 download 34.2 %
+TX57 download 41.1 %
+TX57 download 47.9 %
+TX57 download 54.8 %
+TX57 download 61.6 %
+TX57 download 68.5 %
+TX57 download 75.3 %
+TX57 download 82.2 %
+TX57 download 89.0 %
+TX57 download 95.9 %
+TX57 download 100.0 %
+TX57 member CRC and size verified
+Traceback (most recent call last):
+  File "/Users/austinlin/neuron_transformer/experiments/2026-10-06_facemap_validation/acquire.py", line 162, in <module>
+    schema(fetch(mouse),mouse)
+  File "/Users/austinlin/neuron_transformer/experiments/2026-10-06_facemap_validation/acquire.py", line 150, in schema
+    assert arrays['spks']['shape'][1]==len(tn)
+AssertionError
+TX56 download 4.7 %
+TX56 download 9.4 %
+TX56 download 14.2 %
+TX56 download 18.9 %
+TX56 download 23.6 %
+TX56 download 28.3 %
+TX56 download 33.1 %
+TX56 download 37.8 %
+TX56 download 42.5 %
+TX56 download 47.2 %
+TX56 download 52.0 %
+TX56 download 56.7 %
+TX56 download 61.4 %
+TX56 download 66.1 %
+TX56 download 70.9 %
+TX56 download 75.6 %
+TX56 download 80.3 %
+TX56 download 85.0 %
+TX56 download 89.8 %
+TX56 download 94.5 %
+TX56 download 99.2 %
+TX56 download 100.0 %
+TX56 member CRC and size verified
+Traceback (most recent call last):
+  File "/Users/austinlin/neuron_transformer/experiments/2026-10-06_facemap_validation/acquire.py", line 167, in <module>
+    schema(fetch(mouse),mouse)
+  File "/Users/austinlin/neuron_transformer/experiments/2026-10-06_facemap_validation/acquire.py", line 151, in schema
+    assert arrays['run']['shape']==[frames]
+AssertionError
+TX60 download 5.0 %
+TX60 download 10.0 %
+TX60 download 15.0 %
+TX60 download 20.0 %
+TX60 download 25.0 %
+TX60 download 30.0 %
+TX60 download 35.0 %
+TX60 download 40.0 %
+TX60 download 45.0 %
+TX60 download 50.0 %
+TX60 download 55.0 %
+TX60 download 60.0 %
+TX60 download 65.0 %
+TX60 download 70.0 %
+TX60 download 75.0 %
+TX60 download 80.0 %
+TX60 download 85.0 %
+TX60 download 90.0 %
+TX60 download 94.9 %
+TX60 download 99.9 %
+TX60 download 100.0 %
+TX60 member CRC and size verified
+{
+  "mouse": "TX60",
+  "arrays": {
+    "spks": {
+      "shape": [
+        49626,
+        23185
+      ],
+      "dtype": "float32",
+      "object_dtype": false,
+      "fortran_order": false,
+      "inner_compression": 0,
+      "header_offset": 0,
+      "header_bytes": 128,
+      "member_bytes": 4602315368
+    },
+    "ypos": {
+      "shape": [
+        49626
+      ],
+      "dtype": "float64",
+      "object_dtype": false,
+      "fortran_order": false,
+      "inner_compression": 0,
+      "header_offset": 4602315426,
+      "header_bytes": 128,
+      "member_bytes": 397136
+    },
+    "xpos": {
+      "shape": [
+        49626
+      ],
+      "dtype": "float64",
+      "object_dtype": false,
+      "fortran_order": false,
+      "inner_compression": 0,
+      "header_offset": 4602712620,
+      "header_bytes": 128,
+      "member_bytes": 397136
+    },
+    "iplane": {
+      "shape": [
+        49626
+      ],
+      "dtype": "float64",
+      "object_dtype": false,
+      "fortran_order": false,
+      "inner_compression": 0,
+      "header_offset": 4603109814,
+      "header_bytes": 128,
+      "member_bytes": 397136
+    },
+    "run": {
+      "shape": [
+        23185
+      ],
+      "dtype": "float64",
+      "object_dtype": false,
+      "fortran_order": false,
+      "inner_compression": 0,
+      "header_offset": 4603507010,
+      "header_bytes": 128,
+      "member_bytes": 185608
+    },
+    "tcam": {
+      "shape": [
+        365285
+      ],
+      "dtype": "float64",
+      "object_dtype": false,
+      "fortran_order": false,
+      "inner_compression": 0,
+      "header_offset": 4603692675,
+      "header_bytes": 128,
+      "member_bytes": 2922408
+    },
+    "tneural": {
+      "shape": [
+        23184
+      ],
+      "dtype": "int64",
+      "object_dtype": false,
+      "fortran_order": false,
+      "inner_compression": 0,
+      "header_offset": 4606615141,
+      "header_bytes": 128,
+      "member_bytes": 185600
+    }
+  },
+  "timing": {
+    "activity_frames": 23185,
+    "neural_timestamp_n": 23184,
+    "camera_n": 365285,
+    "timestamp_minus_activity_frames": -1,
+    "timestamp_units": "publisher acquisition units; seconds conversion not verified",
+    "timestamp_span": 36496292.0,
+    "neural_dt_min": 1572.0,
+    "neural_dt_median": 1574.0,
+    "neural_dt_max": 1575.0,
+    "neural_monotonic": true,
+    "camera_monotonic": true,
+    "running_length_matches_activity": true,
+    "running_frames": 23185,
+    "paired_frames": 23185,
+    "discarded_terminal_activity_frames": 0,
+    "discarded_terminal_running_frames": 0,
+    "alignment": "published same-index activity/run common prefix; no shifts or camera resampling",
+    "limitation": "raw ball-to-neural alignment not independently reconstructed"
+  },
+  "numeric_activity_or_running_values_inspected": false
+}
+TX61 download 4.9 %
+TX61 download 9.8 %
+TX61 download 14.7 %
+TX61 download 19.6 %
+TX61 download 24.4 %
+TX61 download 29.3 %
+TX61 download 34.2 %
+TX61 download 39.1 %
+TX61 download 44.0 %
+TX61 download 48.9 %
+TX61 download 53.8 %
+TX61 download 58.7 %
+TX61 download 63.5 %
+TX61 download 68.4 %
+TX61 download 73.3 %
+TX61 download 78.2 %
+TX61 download 83.1 %
+TX61 download 88.0 %
+TX61 download 92.9 %
+TX61 download 97.8 %
+TX61 download 100.0 %
+TX61 member CRC and size verified
+{
+  "mouse": "TX61",
+  "arrays": {
+    "spks": {
+      "shape": [
+        50060,
+        24793
+      ],
+      "dtype": "float32",
+      "object_dtype": false,
+      "fortran_order": false,
+      "inner_compression": 0,
+      "header_offset": 0,
+      "header_bytes": 128,
+      "member_bytes": 4964550448
+    },
+    "ypos": {
+      "shape": [
+        50060
+      ],
+      "dtype": "float64",
+      "object_dtype": false,
+      "fortran_order": false,
+      "inner_compression": 0,
+      "header_offset": 4964550506,
+      "header_bytes": 128,
+      "member_bytes": 400608
+    },
+    "xpos": {
+      "shape": [
+        50060
+      ],
+      "dtype": "float64",
+      "object_dtype": false,
+      "fortran_order": false,
+      "inner_compression": 0,
+      "header_offset": 4964951172,
+      "header_bytes": 128,
+      "member_bytes": 400608
+    },
+    "iplane": {
+      "shape": [
+        50060
+      ],
+      "dtype": "float64",
+      "object_dtype": false,
+      "fortran_order": false,
+      "inner_compression": 0,
+      "header_offset": 4965351838,
+      "header_bytes": 128,
+      "member_bytes": 400608
+    },
+    "run": {
+      "shape": [
+        24792
+      ],
+      "dtype": "float64",
+      "object_dtype": false,
+      "fortran_order": false,
+      "inner_compression": 0,
+      "header_offset": 4965752506,
+      "header_bytes": 128,
+      "member_bytes": 198464
+    },
+    "tcam": {
+      "shape": [
+        390621
+      ],
+      "dtype": "float64",
+      "object_dtype": false,
+      "fortran_order": false,
+      "inner_compression": 0,
+      "header_offset": 4965951027,
+      "header_bytes": 128,
+      "member_bytes": 3125096
+    },
+    "tneural": {
+      "shape": [
+        24791
+      ],
+      "dtype": "int64",
+      "object_dtype": false,
+      "fortran_order": false,
+      "inner_compression": 0,
+      "header_offset": 4969076181,
+      "header_bytes": 128,
+      "member_bytes": 198456
+    }
+  },
+  "timing": {
+    "activity_frames": 24793,
+    "neural_timestamp_n": 24791,
+    "camera_n": 390621,
+    "timestamp_minus_activity_frames": -2,
+    "timestamp_units": "publisher acquisition units; seconds conversion not verified",
+    "timestamp_span": 39026988.0,
+    "neural_dt_min": 1573.0,
+    "neural_dt_median": 1574.0,
+    "neural_dt_max": 1575.0,
+    "neural_monotonic": true,
+    "camera_monotonic": true,
+    "running_length_matches_activity": false,
+    "running_frames": 24792,
+    "paired_frames": 24792,
+    "discarded_terminal_activity_frames": 1,
+    "discarded_terminal_running_frames": 0,
+    "alignment": "published same-index activity/run common prefix; no shifts or camera resampling",
+    "limitation": "raw ball-to-neural alignment not independently reconstructed"
+  },
+  "numeric_activity_or_running_values_inspected": false
+}
+VR2 download 3.9 %
+VR2 download 7.8 %
+VR2 download 11.7 %
+VR2 download 15.6 %
+VR2 download 19.5 %
+VR2 download 23.4 %
+VR2 download 27.3 %
+VR2 download 31.2 %
+VR2 download 35.1 %
+VR2 download 39.0 %
+VR2 download 42.9 %
+VR2 download 46.8 %
+VR2 download 50.6 %
+VR2 download 54.5 %
+VR2 download 58.4 %
+VR2 download 62.3 %
+VR2 download 66.2 %
+VR2 download 70.1 %
+VR2 download 74.0 %
+VR2 download 77.9 %
+VR2 download 81.8 %
+VR2 download 88.5 %
+Traceback (most recent call last):
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 1346, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/client.py", line 1257, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/client.py", line 1303, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/client.py", line 1252, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/client.py", line 1012, in _send_output
+    self.send(msg)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/client.py", line 952, in send
+    self.connect()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/client.py", line 1419, in connect
+    super().connect()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/client.py", line 923, in connect
+    self.sock = self._create_connection(
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/socket.py", line 822, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 8] nodename nor servname provided, or not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/austinlin/neuron_transformer/experiments/2026-10-06_facemap_validation/acquire.py", line 172, in <module>
+    schema(fetch(mouse),mouse)
+  File "/Users/austinlin/neuron_transformer/experiments/2026-10-06_facemap_validation/acquire.py", line 71, in fetch
+    with request_range(archive['download_url'],start+present,start+count-1,archive['size']) as response, packed.open('ab') as file:
+  File "/Users/austinlin/neuron_transformer/experiments/2026-10-06_facemap_validation/acquire.py", line 26, in request_range
+    response=urllib.request.urlopen(request,timeout=45)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 214, in urlopen
+    return opener.open(url, data, timeout)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 517, in open
+    response = self._open(req, data)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 534, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 494, in _call_chain
+    result = func(*args)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 1389, in https_open
+    return self.do_open(http.client.HTTPSConnection, req,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py", line 1349, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+VR2 download 94.1 %
+VR2 download 98.0 %
+VR2 download 100.0 %
+VR2 member CRC and size verified
+{
+  "mouse": "VR2",
+  "arrays": {
+    "spks": {
+      "shape": [
+        59296,
+        24622
+      ],
+      "dtype": "float32",
+      "object_dtype": false,
+      "fortran_order": false,
+      "inner_compression": 0,
+      "header_offset": 0,
+      "header_bytes": 128,
+      "member_bytes": 5839944576
+    },
+    "ypos": {
+      "shape": [
+        59296
+      ],
+      "dtype": "float64",
+      "object_dtype": false,
+      "fortran_order": false,
+      "inner_compression": 0,
+      "header_offset": 5839944634,
+      "header_bytes": 128,
+      "member_bytes": 474496
+    },
+    "xpos": {
+      "shape": [
+        59296
+      ],
+      "dtype": "float64",
+      "object_dtype": false,
+      "fortran_order": false,
+      "inner_compression": 0,
+      "header_offset": 5840419188,
+      "header_bytes": 128,
+      "member_bytes": 474496
+    },
+    "iplane": {
+      "shape": [
+        59296
+      ],
+      "dtype": "float64",
+      "object_dtype": false,
+      "fortran_order": false,
+      "inner_compression": 0,
+      "header_offset": 5840893742,
+      "header_bytes": 128,
+      "member_bytes": 474496
+    },
+    "run": {
+      "shape": [
+        24621
+      ],
+      "dtype": "float64",
+      "object_dtype": false,
+      "fortran_order": false,
+      "inner_compression": 0,
+      "header_offset": 5841368298,
+      "header_bytes": 128,
+      "member_bytes": 197096
+    },
+    "tcam": {
+      "shape": [
+        387929
+      ],
+      "dtype": "float64",
+      "object_dtype": false,
+      "fortran_order": false,
+      "inner_compression": 0,
+      "header_offset": 5841565451,
+      "header_bytes": 128,
+      "member_bytes": 3103560
+    },
+    "tneural": {
+      "shape": [
+        24620
+      ],
+      "dtype": "int64",
+      "object_dtype": false,
+      "fortran_order": false,
+      "inner_compression": 0,
+      "header_offset": 5844669069,
+      "header_bytes": 128,
+      "member_bytes": 197088
+    }
+  },
+  "timing": {
+    "activity_frames": 24622,
+    "neural_timestamp_n": 24620,
+    "camera_n": 387929,
+    "timestamp_minus_activity_frames": -2,
+    "timestamp_units": "publisher acquisition units; seconds conversion not verified",
+    "timestamp_span": 38758923.0,
+    "neural_dt_min": 1573.0,
+    "neural_dt_median": 1574.0,
+    "neural_dt_max": 1575.0,
+    "neural_monotonic": true,
+    "camera_monotonic": true,
+    "running_length_matches_activity": false,
+    "running_frames": 24621,
+    "paired_frames": 24621,
+    "discarded_terminal_activity_frames": 1,
+    "discarded_terminal_running_frames": 0,
+    "alignment": "published same-index activity/run common prefix; no shifts or camera resampling",
+    "limitation": "raw ball-to-neural alignment not independently reconstructed"
+  },
+  "numeric_activity_or_running_values_inspected": false
+}
+TX104 download 3.4 %
+TX104 download 6.9 %
+TX104 download 10.3 %
+TX104 download 13.7 %
+TX104 download 17.2 %
+TX104 download 20.6 %
+TX104 download 24.0 %
+TX104 download 27.5 %
+TX104 download 30.9 %
+TX104 download 34.3 %
+TX104 download 37.8 %
+TX104 download 41.2 %
+TX104 download 44.6 %
+TX104 download 48.1 %
+TX104 download 51.5 %
+TX104 download 54.9 %
+TX104 download 58.4 %
+TX104 download 61.8 %
+TX104 download 65.2 %
+TX104 download 68.7 %
+TX104 download 72.1 %
+TX104 download 75.5 %
+TX104 download 79.0 %
+TX104 download 82.4 %
+TX104 download 85.9 %
+TX104 download 89.3 %
+TX104 download 92.7 %
+TX104 download 96.2 %
+TX104 download 99.6 %
+TX104 download 100.0 %
+TX104 member CRC and size verified
+{
+  "mouse": "TX104",
+  "arrays": {
+    "spks": {
+      "shape": [
+        60649,
+        25193
+      ],
+      "dtype": "float32",
+      "object_dtype": false,
+      "fortran_order": false,
+      "inner_compression": 0,
+      "header_offset": 0,
+      "header_bytes": 128,
+      "member_bytes": 6111721156
+    },
+    "ypos": {
+      "shape": [
+        60649
+      ],
+      "dtype": "float64",
+      "object_dtype": false,
+      "fortran_order": false,
+      "inner_compression": 0,
+      "header_offset": 6111721214,
+      "header_bytes": 128,
+      "member_bytes": 485320
+    },
+    "xpos": {
+      "shape": [
+        60649
+      ],
+      "dtype": "float64",
+      "object_dtype": false,
+      "fortran_order": false,
+      "inner_compression": 0,
+      "header_offset": 6112206592,
+      "header_bytes": 128,
+      "member_bytes": 485320
+    },
+    "iplane": {
+      "shape": [
+        60649
+      ],
+      "dtype": "float64",
+      "object_dtype": false,
+      "fortran_order": false,
+      "inner_compression": 0,
+      "header_offset": 6112691970,
+      "header_bytes": 128,
+      "member_bytes": 485320
+    },
+    "run": {
+      "shape": [
+        25193
+      ],
+      "dtype": "float64",
+      "object_dtype": false,
+      "fortran_order": false,
+      "inner_compression": 0,
+      "header_offset": 6113177350,
+      "header_bytes": 128,
+      "member_bytes": 201672
+    },
+    "tcam": {
+      "shape": [
+        396836
+      ],
+      "dtype": "float64",
+      "object_dtype": false,
+      "fortran_order": false,
+      "inner_compression": 0,
+      "header_offset": 6113379079,
+      "header_bytes": 128,
+      "member_bytes": 3174816
+    },
+    "tneural": {
+      "shape": [
+        25193
+      ],
+      "dtype": "float64",
+      "object_dtype": false,
+      "fortran_order": false,
+      "inner_compression": 0,
+      "header_offset": 6116553953,
+      "header_bytes": 128,
+      "member_bytes": 201672
+    }
+  },
+  "timing": {
+    "activity_frames": 25193,
+    "neural_timestamp_n": 25193,
+    "camera_n": 396836,
+    "timestamp_minus_activity_frames": 0,
+    "timestamp_units": "publisher acquisition units; seconds conversion not verified",
+    "timestamp_span": 0.09178013144992292,
+    "neural_dt_min": 6.002373993396759e-07,
+    "neural_dt_median": 3.498513251543045e-06,
+    "neural_dt_max": 5.31831756234169e-06,
+    "neural_monotonic": true,
+    "camera_monotonic": true,
+    "running_length_matches_activity": true,
+    "running_frames": 25193,
+    "paired_frames": 25193,
+    "discarded_terminal_activity_frames": 0,
+    "discarded_terminal_running_frames": 0,
+    "alignment": "published same-index activity/run common prefix; no shifts or camera resampling",
+    "limitation": "raw ball-to-neural alignment not independently reconstructed"
+  },
+  "numeric_activity_or_running_values_inspected": false
+}
+TX103 download 2.3 %
+TX103 download 4.7 %
+TX103 download 7.0 %
+TX103 download 9.3 %
+TX103 download 11.7 %
+TX103 download 14.0 %
+TX103 download 16.3 %
+TX103 download 18.7 %
+TX103 download 21.0 %
+TX103 download 23.3 %
+TX103 download 25.7 %
+TX103 download 28.0 %
+TX103 download 30.3 %
+TX103 download 32.6 %
+TX103 download 35.0 %
+TX103 download 37.3 %
+TX103 download 39.6 %
+TX103 download 42.0 %
+TX103 download 44.3 %
+TX103 download 46.6 %
+TX103 download 49.0 %
+TX103 download 51.3 %
+TX103 download 53.6 %
+TX103 download 56.0 %
+TX103 download 58.3 %
+TX103 download 60.6 %
+TX103 download 63.0 %
+TX103 download 65.3 %
+TX103 download 67.6 %
+TX103 download 70.0 %
+TX103 download 72.3 %
+TX103 download 74.6 %
+TX103 download 77.0 %
+TX103 download 79.3 %
+TX103 download 81.6 %
+TX103 download 83.9 %
+TX103 download 86.3 %
+TX103 download 88.6 %
+TX103 download 90.9 %
+TX103 download 93.3 %
+TX103 download 95.6 %
+TX103 download 97.9 %
+TX103 download 100.0 %
+TX103 member CRC and size verified
+{
+  "mouse": "TX103",
+  "arrays": {
+    "spks": {
+      "shape": [
+        84310,
+        25583
+      ],
+      "dtype": "float32",
+      "object_dtype": false,
+      "fortran_order": false,
+      "inner_compression": 0,
+      "header_offset": 0,
+      "header_bytes": 128,
+      "member_bytes": 8627611048
+    },
+    "ypos": {
+      "shape": [
+        84310
+      ],
+      "dtype": "float64",
+      "object_dtype": false,
+      "fortran_order": false,
+      "inner_compression": 0,
+      "header_offset": 8627611106,
+      "header_bytes": 128,
+      "member_bytes": 674608
+    },
+    "xpos": {
+      "shape": [
+        84310
+      ],
+      "dtype": "float64",
+      "object_dtype": false,
+      "fortran_order": false,
+      "inner_compression": 0,
+      "header_offset": 8628285772,
+      "header_bytes": 128,
+      "member_bytes": 674608
+    },
+    "iplane": {
+      "shape": [
+        84310
+      ],
+      "dtype": "float64",
+      "object_dtype": false,
+      "fortran_order": false,
+      "inner_compression": 0,
+      "header_offset": 8628960438,
+      "header_bytes": 128,
+      "member_bytes": 674608
+    },
+    "run": {
+      "shape": [
+        25583
+      ],
+      "dtype": "float64",
+      "object_dtype": false,
+      "fortran_order": false,
+      "inner_compression": 0,
+      "header_offset": 8629635106,
+      "header_bytes": 128,
+      "member_bytes": 204792
+    },
+    "tcam": {
+      "shape": [
+        402891
+      ],
+      "dtype": "float64",
+      "object_dtype": false,
+      "fortran_order": false,
+      "inner_compression": 0,
+      "header_offset": 8629839955,
+      "header_bytes": 128,
+      "member_bytes": 3223256
+    },
+    "tneural": {
+      "shape": [
+        25583
+      ],
+      "dtype": "float64",
+      "object_dtype": false,
+      "fortran_order": false,
+      "inner_compression": 0,
+      "header_offset": 8633063269,
+      "header_bytes": 128,
+      "member_bytes": 204792
+    }
+  },
+  "timing": {
+    "activity_frames": 25583,
+    "neural_timestamp_n": 25583,
+    "camera_n": 402891,
+    "timestamp_minus_activity_frames": 0,
+    "timestamp_units": "publisher acquisition units; seconds conversion not verified",
+    "timestamp_span": 0.09319605585187674,
+    "neural_dt_min": 6.017507985234261e-07,
+    "neural_dt_median": 3.496999852359295e-06,
+    "neural_dt_max": 6.243237294256687e-06,
+    "neural_monotonic": true,
+    "camera_monotonic": true,
+    "running_length_matches_activity": true,
+    "running_frames": 25583,
+    "paired_frames": 25583,
+    "discarded_terminal_activity_frames": 0,
+    "discarded_terminal_running_frames": 0,
+    "alignment": "published same-index activity/run common prefix; no shifts or camera resampling",
+    "limitation": "raw ball-to-neural alignment not independently reconstructed"
+  },
+  "numeric_activity_or_running_values_inspected": false
+}

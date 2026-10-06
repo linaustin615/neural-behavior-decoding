@@ -1,0 +1,56 @@
+{
+  "status": "complete",
+  "phase": "complete",
+  "started_utc": "2026-10-05T14:30:53.247093+00:00",
+  "initial_seeds": [
+    10,
+    11,
+    12
+  ],
+  "variants": [
+    "dynamic",
+    "static"
+  ],
+  "initial_new_fit_budget": 6,
+  "max_new_fit_budget": 12,
+  "conditional_replication": "Both variants on13-15 only if either passes frozen earlier screen",
+  "baseline": "original shared transformer retained",
+  "baseline_fits_repeated": 0,
+  "next": [],
+  "stage1_training_exit_codes": [
+    0,
+    0,
+    0
+  ],
+  "screen_exit_code": 0,
+  "screen_pass": {
+    "dynamic": false,
+    "static": true
+  },
+  "screen_mean_mse_gain": {
+    "dynamic": 0.03919776064819297,
+    "static": 0.10031513698352093
+  },
+  "extra_seeds": [
+    13,
+    14,
+    15
+  ],
+  "training_fits_complete": 12,
+  "stage2_training_exit_codes": [
+    0,
+    0,
+    0
+  ],
+  "selection_lock_exit_code": 0,
+  "completed_utc": "2026-10-05T14:59:41.616276+00:00",
+  "new_later_predictions": 26616,
+  "evaluation_exit_code": 0,
+  "analysis_exit_code": 0,
+  "diagnostic_exit_code": 0,
+  "supplementary_context_exit_code": 0,
+  "report_exit_code": 0,
+  "candidate": "both four-query readouts failed final practical gates",
+  "main_application_unchanged": true,
+  "queued_work": []
+}

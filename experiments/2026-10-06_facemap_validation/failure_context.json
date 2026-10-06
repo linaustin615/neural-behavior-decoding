@@ -1,0 +1,352 @@
+{
+  "created_utc": "2026-10-06T16:55:40.829422+00:00",
+  "kind": "posthoc descriptive context from already saved predictions; no refits, new predictions, exclusions or changed primary gates",
+  "zero_and_training_mean_controls_were_prespecified": true,
+  "bias_decomposition_and_target_distribution_summary_are_posthoc": true,
+  "causal_explanation_established": false,
+  "rows": [
+    {
+      "mouse": "TX103",
+      "test_mean_minus_training_mean_in_training_sd": 1.662151169852905,
+      "test_sd_in_training_sd": 1.7377946039746421,
+      "models": [
+        {
+          "regime": "independent",
+          "role": "optimized_attention",
+          "mse_over_zero_speed": 0.21188104054097845,
+          "mse_over_training_mean": 0.27643676026235187,
+          "mean_bias_squared_share_of_mse": 0.2783161024977192
+        },
+        {
+          "regime": "independent",
+          "role": "optimized_population_mlp",
+          "mse_over_zero_speed": 0.22649213235765087,
+          "mse_over_training_mean": 0.29549954603772904,
+          "mean_bias_squared_share_of_mse": 0.24706544615528353
+        },
+        {
+          "regime": "independent",
+          "role": "default_attention",
+          "mse_over_zero_speed": 0.2210377116089562,
+          "mse_over_training_mean": 0.28838327741347103,
+          "mean_bias_squared_share_of_mse": 0.30391328290581987
+        },
+        {
+          "regime": "shared",
+          "role": "optimized_attention",
+          "mse_over_zero_speed": 0.2467841368785585,
+          "mse_over_training_mean": 0.3219740997527124,
+          "mean_bias_squared_share_of_mse": 0.3788812639043508
+        },
+        {
+          "regime": "shared",
+          "role": "optimized_population_mlp",
+          "mse_over_zero_speed": 0.23809012135295513,
+          "mse_over_training_mean": 0.31063119960727176,
+          "mean_bias_squared_share_of_mse": 0.33277735289262583
+        },
+        {
+          "regime": "shared",
+          "role": "default_attention",
+          "mse_over_zero_speed": 0.2715312122721996,
+          "mse_over_training_mean": 0.354261091218866,
+          "mean_bias_squared_share_of_mse": 0.38192260948485224
+        }
+      ]
+    },
+    {
+      "mouse": "TX104",
+      "test_mean_minus_training_mean_in_training_sd": -0.8943460847147199,
+      "test_sd_in_training_sd": 0.12477201499593618,
+      "models": [
+        {
+          "regime": "independent",
+          "role": "optimized_attention",
+          "mse_over_zero_speed": 20.00683444988163,
+          "mse_over_training_mean": 0.4018389094971498,
+          "mean_bias_squared_share_of_mse": 0.3793717637581159
+        },
+        {
+          "regime": "independent",
+          "role": "optimized_population_mlp",
+          "mse_over_zero_speed": 23.70929816297624,
+          "mse_over_training_mean": 0.47620319659362786,
+          "mean_bias_squared_share_of_mse": 0.34220355090600646
+        },
+        {
+          "regime": "independent",
+          "role": "default_attention",
+          "mse_over_zero_speed": 22.46349831549663,
+          "mse_over_training_mean": 0.45118120456300537,
+          "mean_bias_squared_share_of_mse": 0.48173429622458636
+        },
+        {
+          "regime": "shared",
+          "role": "optimized_attention",
+          "mse_over_zero_speed": 30.135575005370303,
+          "mse_over_training_mean": 0.6052754936100955,
+          "mean_bias_squared_share_of_mse": 0.6646938864157825
+        },
+        {
+          "regime": "shared",
+          "role": "optimized_population_mlp",
+          "mse_over_zero_speed": 29.836653125375967,
+          "mse_over_training_mean": 0.599271623153594,
+          "mean_bias_squared_share_of_mse": 0.6593666924948478
+        },
+        {
+          "regime": "shared",
+          "role": "default_attention",
+          "mse_over_zero_speed": 32.64631051003159,
+          "mse_over_training_mean": 0.6557038219773969,
+          "mean_bias_squared_share_of_mse": 0.7247316295060302
+        }
+      ]
+    },
+    {
+      "mouse": "TX56",
+      "test_mean_minus_training_mean_in_training_sd": 0.18497310946200923,
+      "test_sd_in_training_sd": 1.0777093095787418,
+      "models": [
+        {
+          "regime": "independent",
+          "role": "optimized_attention",
+          "mse_over_zero_speed": 0.6855738475335305,
+          "mse_over_training_mean": 0.9636293940012632,
+          "mean_bias_squared_share_of_mse": 0.005399603092894735
+        },
+        {
+          "regime": "independent",
+          "role": "optimized_population_mlp",
+          "mse_over_zero_speed": 0.6929619937687022,
+          "mse_over_training_mean": 0.9740140300328223,
+          "mean_bias_squared_share_of_mse": 0.00628103123501239
+        },
+        {
+          "regime": "independent",
+          "role": "default_attention",
+          "mse_over_zero_speed": 0.6931178452681127,
+          "mse_over_training_mean": 0.9742330918982529,
+          "mean_bias_squared_share_of_mse": 0.007677290943412272
+        },
+        {
+          "regime": "shared",
+          "role": "optimized_attention",
+          "mse_over_zero_speed": 0.7126039122668825,
+          "mse_over_training_mean": 1.0016223323149451,
+          "mean_bias_squared_share_of_mse": 0.01721400566948162
+        },
+        {
+          "regime": "shared",
+          "role": "optimized_population_mlp",
+          "mse_over_zero_speed": 0.723641112295908,
+          "mse_over_training_mean": 1.0171360080680454,
+          "mean_bias_squared_share_of_mse": 0.0130617445492806
+        },
+        {
+          "regime": "shared",
+          "role": "default_attention",
+          "mse_over_zero_speed": 0.7168284228527948,
+          "mse_over_training_mean": 1.007560223018478,
+          "mean_bias_squared_share_of_mse": 0.02423446797249123
+        }
+      ]
+    },
+    {
+      "mouse": "TX57",
+      "test_mean_minus_training_mean_in_training_sd": 0.013715913978688729,
+      "test_sd_in_training_sd": 1.0132067701096885,
+      "models": [
+        {
+          "regime": "independent",
+          "role": "optimized_attention",
+          "mse_over_zero_speed": 0.6477267726039286,
+          "mse_over_training_mean": 0.876600011393414,
+          "mean_bias_squared_share_of_mse": 0.0050233357709794264
+        },
+        {
+          "regime": "independent",
+          "role": "optimized_population_mlp",
+          "mse_over_zero_speed": 0.6451277121994977,
+          "mse_over_training_mean": 0.8730825770731108,
+          "mean_bias_squared_share_of_mse": 0.00417151590781143
+        },
+        {
+          "regime": "independent",
+          "role": "default_attention",
+          "mse_over_zero_speed": 0.6574994624904027,
+          "mse_over_training_mean": 0.8898258659175188,
+          "mean_bias_squared_share_of_mse": 0.00666358064858658
+        },
+        {
+          "regime": "shared",
+          "role": "optimized_attention",
+          "mse_over_zero_speed": 0.6700597716060824,
+          "mse_over_training_mean": 0.9068243405515792,
+          "mean_bias_squared_share_of_mse": 0.0024373579929419602
+        },
+        {
+          "regime": "shared",
+          "role": "optimized_population_mlp",
+          "mse_over_zero_speed": 0.6659828236214596,
+          "mse_over_training_mean": 0.90130680939349,
+          "mean_bias_squared_share_of_mse": 0.0036514937563315577
+        },
+        {
+          "regime": "shared",
+          "role": "default_attention",
+          "mse_over_zero_speed": 0.6807424700403865,
+          "mse_over_training_mean": 0.9212817537160486,
+          "mean_bias_squared_share_of_mse": 0.006700937151468477
+        }
+      ]
+    },
+    {
+      "mouse": "TX60",
+      "test_mean_minus_training_mean_in_training_sd": -0.1583247610424574,
+      "test_sd_in_training_sd": 0.8062591227413892,
+      "models": [
+        {
+          "regime": "independent",
+          "role": "optimized_attention",
+          "mse_over_zero_speed": 0.8008306134632099,
+          "mse_over_training_mean": 0.9586623505990799,
+          "mean_bias_squared_share_of_mse": 0.00993900963292434
+        },
+        {
+          "regime": "independent",
+          "role": "optimized_population_mlp",
+          "mse_over_zero_speed": 0.7857270210003057,
+          "mse_over_training_mean": 0.9405820659426748,
+          "mean_bias_squared_share_of_mse": 0.018090826335108758
+        },
+        {
+          "regime": "independent",
+          "role": "default_attention",
+          "mse_over_zero_speed": 0.7803573493380765,
+          "mse_over_training_mean": 0.9341541123016465,
+          "mean_bias_squared_share_of_mse": 0.004888132761021877
+        },
+        {
+          "regime": "shared",
+          "role": "optimized_attention",
+          "mse_over_zero_speed": 0.8232313219083311,
+          "mse_over_training_mean": 0.9854779036661845,
+          "mean_bias_squared_share_of_mse": 0.015834182073551726
+        },
+        {
+          "regime": "shared",
+          "role": "optimized_population_mlp",
+          "mse_over_zero_speed": 0.8019523533056696,
+          "mse_over_training_mean": 0.9600051685883706,
+          "mean_bias_squared_share_of_mse": 0.005467368917185102
+        },
+        {
+          "regime": "shared",
+          "role": "default_attention",
+          "mse_over_zero_speed": 0.7963537804276914,
+          "mse_over_training_mean": 0.9533032007252884,
+          "mean_bias_squared_share_of_mse": 0.014827605953732677
+        }
+      ]
+    },
+    {
+      "mouse": "TX61",
+      "test_mean_minus_training_mean_in_training_sd": -0.4484453859931801,
+      "test_sd_in_training_sd": 0.27020814316251923,
+      "models": [
+        {
+          "regime": "independent",
+          "role": "optimized_attention",
+          "mse_over_zero_speed": 3.9914959040493634,
+          "mse_over_training_mean": 1.1762454740418322,
+          "mean_bias_squared_share_of_mse": 0.3395821149017594
+        },
+        {
+          "regime": "independent",
+          "role": "optimized_population_mlp",
+          "mse_over_zero_speed": 3.8721039822902688,
+          "mse_over_training_mean": 1.1410621214887653,
+          "mean_bias_squared_share_of_mse": 0.30908198917095314
+        },
+        {
+          "regime": "independent",
+          "role": "default_attention",
+          "mse_over_zero_speed": 3.5102003462767586,
+          "mse_over_training_mean": 1.0344135054978745,
+          "mean_bias_squared_share_of_mse": 0.3585373657456002
+        },
+        {
+          "regime": "shared",
+          "role": "optimized_attention",
+          "mse_over_zero_speed": 3.155503676255679,
+          "mse_over_training_mean": 0.9298886950510581,
+          "mean_bias_squared_share_of_mse": 0.3978412650055767
+        },
+        {
+          "regime": "shared",
+          "role": "optimized_population_mlp",
+          "mse_over_zero_speed": 2.99651326605604,
+          "mse_over_training_mean": 0.8830361478083922,
+          "mean_bias_squared_share_of_mse": 0.29054211285050185
+        },
+        {
+          "regime": "shared",
+          "role": "default_attention",
+          "mse_over_zero_speed": 3.4307801337735464,
+          "mse_over_training_mean": 1.0110093312860027,
+          "mean_bias_squared_share_of_mse": 0.38681972504995266
+        }
+      ]
+    },
+    {
+      "mouse": "VR2",
+      "test_mean_minus_training_mean_in_training_sd": 0.34324662620188345,
+      "test_sd_in_training_sd": 1.3342075854362483,
+      "models": [
+        {
+          "regime": "independent",
+          "role": "optimized_attention",
+          "mse_over_zero_speed": 0.7551666229692647,
+          "mse_over_training_mean": 0.960464962411084,
+          "mean_bias_squared_share_of_mse": 0.0035476979569058513
+        },
+        {
+          "regime": "independent",
+          "role": "optimized_population_mlp",
+          "mse_over_zero_speed": 0.7446749942384088,
+          "mse_over_training_mean": 0.9471210969804442,
+          "mean_bias_squared_share_of_mse": 6.55052734171285e-05
+        },
+        {
+          "regime": "independent",
+          "role": "default_attention",
+          "mse_over_zero_speed": 0.7343522263973228,
+          "mse_over_training_mean": 0.9339919986796172,
+          "mean_bias_squared_share_of_mse": 0.0018991353603952734
+        },
+        {
+          "regime": "shared",
+          "role": "optimized_attention",
+          "mse_over_zero_speed": 0.7993990162437906,
+          "mse_over_training_mean": 1.0167223003966095,
+          "mean_bias_squared_share_of_mse": 0.0060655399242252215
+        },
+        {
+          "regime": "shared",
+          "role": "optimized_population_mlp",
+          "mse_over_zero_speed": 0.8090924786837936,
+          "mse_over_training_mean": 1.0290510113789137,
+          "mean_bias_squared_share_of_mse": 0.011841432099846942
+        },
+        {
+          "regime": "shared",
+          "role": "default_attention",
+          "mse_over_zero_speed": 0.7768908057882524,
+          "mse_over_training_mean": 0.9880950453623267,
+          "mean_bias_squared_share_of_mse": 0.024413460075321265
+        }
+      ]
+    }
+  ]
+}

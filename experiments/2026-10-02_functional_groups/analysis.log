@@ -1,0 +1,52 @@
+{
+  "mean_evaluation_mse": {
+    "functional": 0.5580917603467407,
+    "random": 0.6064237978429582,
+    "global": 0.572875825900013
+  },
+  "mean_raw_mse": {
+    "functional": 0.5593221536288306,
+    "random": 0.6069352314687368,
+    "global": 0.5738853680711663
+  },
+  "contrasts": {
+    "random": {
+      "relative_improvement": 0.07970010027333019,
+      "mse_difference": 0.048332037496217506,
+      "pair_wins": 2,
+      "pool_mean_differences": [
+        0.18559337470746154,
+        -0.022151892895630243,
+        -0.01844536932317903
+      ],
+      "positive_pools": 1,
+      "conditional_97_5_interval": [
+        -0.227524621191551,
+        0.29887172256453026
+      ]
+    },
+    "global": {
+      "relative_improvement": 0.025806754072832172,
+      "mse_difference": 0.014784065553272274,
+      "pair_wins": 4,
+      "pool_mean_differences": [
+        0.016784496258844234,
+        0.01104893095772097,
+        0.016518769443251646
+      ],
+      "positive_pools": 3,
+      "conditional_97_5_interval": [
+        -0.17614419936291859,
+        0.16761727126576084
+      ]
+    }
+  },
+  "promising_gate": false,
+  "stronger_exploratory_gate": false,
+  "decision": "added predictive benefit not established",
+  "beat_untrained": 18,
+  "beat_constant": 18,
+  "selected_budget_limit": 1,
+  "selection_reload_max_error": 0.0,
+  "test_evaluations": 0
+}

@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "source_target_disjoint": true,
+  "target_perturbation_leaves_input_exactly_unchanged": true,
+  "initial_output_exact_mean": true,
+  "nonzero_body_gradients_after_head_opens": true,
+  "common_initialization_exact": true,
+  "reload_exact": true,
+  "models": [
+    {
+      "kind": "attention",
+      "parameters": 5873
+    },
+    {
+      "kind": "static",
+      "parameters": 5841
+    },
+    {
+      "kind": "mlp",
+      "parameters": 135296
+    }
+  ],
+  "mlp_width64_checks_passed": true
+}

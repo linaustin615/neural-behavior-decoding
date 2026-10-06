@@ -1,0 +1,159 @@
+{
+  "locked_utc": "2026-10-06T01:04:56.582698+00:00",
+  "hashes": {
+    "as_s10/initial.pt": "fa605d23b2340cf7bf11f472ced17811f5213dae90e317e1511b7dbcb3ed0ba3",
+    "as_s10/selected.pt": "f48ff64e0075c2024dcfef627f95e42f38df816b8fbb1844a1db3cd74404c6f1",
+    "as_s10/history.json": "180319960b5c464820827afa1d66e258a5dd996502b326ed83276be046b943e9",
+    "as_s10/result.json": "e05f41df58f04d0102cd6cb8ab67f7992c9f27dc65d1863dc998d1ac6650bfff",
+    "as_s10/selection_predictions.npz": "2aefcd2b5c3b3701c4660556f6c843d4d643b98ce07d63b821b9770da6c773e7",
+    "ma_s10/initial.pt": "9e3fab729d339a5be17ecc4ed8580fb6e59bbdf97995f22621f5c193f7ca9009",
+    "ma_s10/selected.pt": "e912550a783842fc901216b3dbc9d8cb4c5d976e8a39c053f1cf719c25111898",
+    "ma_s10/history.json": "ef147299287f768926a64b147b2d4b237c4c1d9a6d66c398e20db2792de6c13f",
+    "ma_s10/result.json": "81c92aca8b4f49387df17d87eecf4a8d50f28bf37f86d0cf68d8327c2b808fa4",
+    "ma_s10/selection_predictions.npz": "e0e2d158e89621a24a0cec751376ca3f02436ada9aeaade963a741851c53e928",
+    "as_s11/initial.pt": "8048fee5567622282b03f279aa36ebab9be51ed9afbac31896377ee758c6f84e",
+    "as_s11/selected.pt": "c25845bdc1cad148a2bcccb0909f059205ed9fcafbd1206edb5e30ee19c822d5",
+    "as_s11/history.json": "0d9ebc16732c7953ad619d22edc5260c10fd4668f4fee2ed83e3db6c4c1d789c",
+    "as_s11/result.json": "ce8b2d20df7faf62781f44820f83ffd55ce80d39255a36393f65b21f2c7d788a",
+    "as_s11/selection_predictions.npz": "f1aa5cf6a845d237bbb9292cb3b6901657f98dad0e785e829489324c27c18c59",
+    "ma_s11/initial.pt": "1c917ab71e5c2ff743ecc51ae0a454a45f5463de30a071925b8ac836f53f2ead",
+    "ma_s11/selected.pt": "2c06383f6ba7cb847cd00f627933e87c7be3b601b4dc4d0c19379a1a38265424",
+    "ma_s11/history.json": "526c17b7f548a7a77daec9d73ad28da05de351eaf583fd4f024de9b7a40d2b6c",
+    "ma_s11/result.json": "2e4be07c3ac3c42fb00953a9ac5cfaccfe05656c378590cc59a9d8fc7ffac025",
+    "ma_s11/selection_predictions.npz": "98afb4b5533c8113a4c2e9aad722a3fa306468b4987c7a721e1ae0785586238c",
+    "as_s12/initial.pt": "ba728aa63fbc69c4115034c65119ebae040993fc26d42a902c98431318c4fc67",
+    "as_s12/selected.pt": "c1553e7edc8aa785905867b05ceca921879e8c6c7d0a412c6e5277c1bb1c0e2d",
+    "as_s12/history.json": "7d9fa1b4c8605322ab28bae7a862a97d604718df306ecd4435a5fe7b31217e7b",
+    "as_s12/result.json": "a3b3c764d308b57a36153a05eb422471ba66675ea4bf1aae37bee645c8506a3a",
+    "as_s12/selection_predictions.npz": "24bd52f2c590d0bd7df536e71e4902afb9cfa7cff03265f23f21acc90509388f",
+    "ma_s12/initial.pt": "0ec3e80e6ae9853494732dedb0baf3b2eed7a7e5e39ebf54c43461f2618ce87a",
+    "ma_s12/selected.pt": "97acf723778bbc377133171484ba91b5b54854a7585f44c8aea1a722c422dad6",
+    "ma_s12/history.json": "c41b28e035036845d364124f49e00515513066b218d66f80f240163d154bd7d1",
+    "ma_s12/result.json": "33a361147b457a874015e6f702252fb57ce5bd76e366d7b0d4913053a8ef962d",
+    "ma_s12/selection_predictions.npz": "81f04d8af87de198c139f4e89496368bbff0bf6b19e60280a3597e2530e7e699"
+  },
+  "records": [
+    {
+      "seed": 10,
+      "family": "as",
+      "record": {
+        "family": "as",
+        "seed": 10,
+        "selected_epoch": 10,
+        "selection_score": 0.6265223908474922,
+        "epochs": 24,
+        "updates": 5688,
+        "examples": 179712,
+        "actual_adam_steps": [
+          5688
+        ],
+        "selected_reload_exact": true,
+        "initial_predictions_zero": true,
+        "max_gradient": 20.496471405029297,
+        "elapsed_seconds": 1295.171225958
+      }
+    },
+    {
+      "seed": 10,
+      "family": "ma",
+      "record": {
+        "family": "ma",
+        "seed": 10,
+        "selected_epoch": 12,
+        "selection_score": 0.7423714112026072,
+        "epochs": 24,
+        "updates": 5688,
+        "examples": 179712,
+        "actual_adam_steps": [
+          5688
+        ],
+        "selected_reload_exact": true,
+        "initial_predictions_zero": true,
+        "max_gradient": 59.36363220214844,
+        "elapsed_seconds": 528.226684083
+      }
+    },
+    {
+      "seed": 11,
+      "family": "as",
+      "record": {
+        "family": "as",
+        "seed": 11,
+        "selected_epoch": 6,
+        "selection_score": 0.4588530835028751,
+        "epochs": 24,
+        "updates": 5688,
+        "examples": 179712,
+        "actual_adam_steps": [
+          5688
+        ],
+        "selected_reload_exact": true,
+        "initial_predictions_zero": true,
+        "max_gradient": 14.659984588623047,
+        "elapsed_seconds": 1254.8286605
+      }
+    },
+    {
+      "seed": 11,
+      "family": "ma",
+      "record": {
+        "family": "ma",
+        "seed": 11,
+        "selected_epoch": 8,
+        "selection_score": 0.7384853619896069,
+        "epochs": 24,
+        "updates": 5688,
+        "examples": 179712,
+        "actual_adam_steps": [
+          5688
+        ],
+        "selected_reload_exact": true,
+        "initial_predictions_zero": true,
+        "max_gradient": 45.42052459716797,
+        "elapsed_seconds": 534.737787041
+      }
+    },
+    {
+      "seed": 12,
+      "family": "as",
+      "record": {
+        "family": "as",
+        "seed": 12,
+        "selected_epoch": 7,
+        "selection_score": 0.6434753717720783,
+        "epochs": 24,
+        "updates": 5688,
+        "examples": 179712,
+        "actual_adam_steps": [
+          5688
+        ],
+        "selected_reload_exact": true,
+        "initial_predictions_zero": true,
+        "max_gradient": 20.31814193725586,
+        "elapsed_seconds": 1264.796812958
+      }
+    },
+    {
+      "seed": 12,
+      "family": "ma",
+      "record": {
+        "family": "ma",
+        "seed": 12,
+        "selected_epoch": 19,
+        "selection_score": 0.7179304153762722,
+        "epochs": 24,
+        "updates": 5688,
+        "examples": 179712,
+        "actual_adam_steps": [
+          5688
+        ],
+        "selected_reload_exact": true,
+        "initial_predictions_zero": true,
+        "max_gradient": 69.89007568359375,
+        "elapsed_seconds": 534.507849583
+      }
+    }
+  ],
+  "selection_scores_checked": 600,
+  "later_scored": false
+}

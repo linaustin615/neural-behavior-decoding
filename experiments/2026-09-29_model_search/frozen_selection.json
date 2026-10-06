@@ -1,0 +1,72 @@
+{
+  "frozen_at_utc": "2026-09-30T03:48:34.674350+00:00",
+  "test_evaluated_before_freeze": false,
+  "selection_rule": "lowest mean bounded validation MSE across five seeds among confirmed neural configurations",
+  "validation_scores": {
+    "original_constant": 0.5079011576203407,
+    "combo_cosine": 0.5016164648683012,
+    "latent_n256": 0.41488302446404285,
+    "latent_n512": 0.39367363547436107,
+    "latent_n512_no_positions": 0.3848725299308896
+  },
+  "selected_neural": "latent_n512_no_positions",
+  "selected_single_seed": 2,
+  "selected_checkpoint": "ablation_latent_n512_no_positions_s2.pt",
+  "evaluate_names": [
+    "original_constant",
+    "combo_cosine",
+    "latent_n256",
+    "latent_n512",
+    "latent_n512_no_positions",
+    "ridge_128_w8",
+    "ridge_256_w8",
+    "ridge_512_w8"
+  ],
+  "expected_runs": {
+    "original_constant": 5,
+    "combo_cosine": 5,
+    "latent_n256": 5,
+    "latent_n512": 5,
+    "latent_n512_no_positions": 5,
+    "ridge_128_w8": 1,
+    "ridge_256_w8": 1,
+    "ridge_512_w8": 1
+  },
+  "ensemble_rule": "equal mean of raw predictions from seeds 0..4, then floor at physical speed zero; compare ensembles only as ensembles",
+  "bootstrap_baselines": [
+    "original_constant",
+    "ridge_512_w8"
+  ],
+  "conditional_interval_rule": "2000 circular moving-block resamples, 100 bins each; ensemble comparisons only",
+  "checkpoint_sha256": {
+    "ablation_latent_n512_no_positions_s1.pt": "a25166093add7e2dff3a99d78df322eae45fc4a22bfb097918adfaddf2892c7d",
+    "screen_original_constant_s0.pt": "ef2cb5c8d497e52efde5a217022a90acc8dd6b8f2862a1cd77f4c4efae97a286",
+    "confirm_latent_n512_s2.pt": "e93364650f35418ade16cba967a9ec360a1437979fcff08b7c0cf9e960d72dee",
+    "confirm_combo_cosine_s2.pt": "2053fd46a3169c8ab8cd26e25ab438be45eafc3a2923bf0f60a961e705581c03",
+    "confirm_original_constant_s2.pt": "c77458b30dd0eeed8966b6001c3d7b154090c73fea981f7b8325a3545cd1a5c4",
+    "confirm_original_constant_s3.pt": "9ac0a279a83e2d27dbae36904a8bb34b0fbf7d2c487849ef61298f86743bd5c3",
+    "confirm_latent_n256_s4.pt": "36011e67629676facc55d33f5f7f384d645f8e01fa8dcc1af8e47274a959a923",
+    "confirm_latent_n512_s3.pt": "df60b3823e4a7e3c081733e3203eab8d99b5af652510ca0e9fa26915c730818f",
+    "confirm_combo_cosine_s3.pt": "24d419bee3a6f5d195c5b81cafe9b08eca325c30275bd99ce3829c2fc3f1b39d",
+    "screen_original_constant_s1.pt": "b00b2be70a30f189887fdefe7a8a8ab5badb89f74e786608f4e6b0bc2ee5285c",
+    "ablation_latent_n512_no_positions_s0.pt": "8bba7675b52c6bb5c1fff8842dd94ec56be71ed95ddcd58d68b827929c4ce0f9",
+    "confirm_latent_n256_s3.pt": "7d8dff86c26c9f1a375e9757f4c8abdcccb092c43030e70aec23925f0795f44f",
+    "confirm_original_constant_s4.pt": "1f6797bb25db35429c5dd779dfafe9714a74f87b06ee564b0eab7693585882f0",
+    "confirm_latent_n512_s4.pt": "43aea5efe61f259092c3b5fe60d897595038b4678b179247b3d7bffdeeabb4ad",
+    "confirm_combo_cosine_s4.pt": "17919a9e60945f7b1ce9acfa021aafb0ac580cbdd4c156879ab50e68263cf0ee",
+    "confirm_latent_n256_s2.pt": "ee3f008ac8213ffceb08a97ce2c6dc27d653c055829c7e9c825a84daf55b73e0",
+    "inputs_latent_n256_s1.pt": "0c681dfdbfe25cc6e629f6364e60dfd24433acc6bb20441173aabe15d3386a0f",
+    "screen_combo_cosine_s1.pt": "f0f9b7b8a711bbafc04d782ac9cd4f3b5f0ecd2824fb38b2277618a94dd51f7f",
+    "ablation_latent_n512_no_positions_s4.pt": "ca4ede8745e9dbabbaf982d28d4ec360120a7edb28c3581795258f002d69f934",
+    "screen_combo_cosine_s0.pt": "b738bb4878b7f47867f5f95e523d18bb0924cc09847a4b83db50d53a6ed7dd8c",
+    "inputs_latent_n256_s0.pt": "d4207126c0a37580c6463eb25412bd31de492398f3ef7d9234ee02fb1c76f4f7",
+    "inputs_ridge_256_w8_ridge.npz": "a4d63a69f4e350cf21369f8f9af0c6e35791ba8a0e05dab12f3c107c7ffdd41e",
+    "inputs_ridge_512_w8_ridge.npz": "9136041eac734f523232cc6cb0d5b1f420db05e524f09516dbba6958aaf1afed",
+    "ablation_latent_n512_no_positions_s3.pt": "170cd6c737f38faaea24e045ba3a847008fd543de566821fe9267461a58367c3",
+    "inputs_latent_n512_s0.pt": "785c3ce4bdb35142d97362837b8dcb629d79ec39567c236e9026a8bae1779137",
+    "screen_ridge_128_w8_ridge.npz": "ab9f0f0e8c4faa39c8d752ac4a2cd642fcb6dd32ab30d60a816c441c22437a42",
+    "inputs_latent_n512_s1.pt": "fbbf63a4176b272361e51951fa4454a1382dd43369dae419c4aa2b8c003047f9",
+    "ablation_latent_n512_no_positions_s2.pt": "af3753e78d8206177f6d034faae0461cd932dc9aa2c7bcb6189adb3f232804ae"
+  },
+  "caveat": "Prior pilot work examined this recording; the test tail is reserved within this search but is not a pristine external benchmark"
+}

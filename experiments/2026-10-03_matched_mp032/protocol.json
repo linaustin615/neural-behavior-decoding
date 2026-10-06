@@ -1,0 +1,109 @@
+{
+  "created_utc": "2026-10-03T05:24:38.408752+00:00",
+  "scope": "Exploratory matched development diagnosis; no confirmatory p-values",
+  "cohort": {
+    "mouse": "MP032",
+    "file": "data/spont_M170714_MP032_20170804.mat",
+    "source_sha256_from_validation": "a239882b470fd276a2ed959c24841c444e1ec1261c85b1e3cbbce3ffbcbb7fa6",
+    "development_stop": 3549,
+    "folds": [
+      {
+        "fold": 1,
+        "train": [
+          0,
+          1369
+        ],
+        "validation": [
+          1469,
+          2079
+        ]
+      },
+      {
+        "fold": 2,
+        "train": [
+          0,
+          2079
+        ],
+        "validation": [
+          2179,
+          2789
+        ]
+      },
+      {
+        "fold": 3,
+        "train": [
+          0,
+          2789
+        ],
+        "validation": [
+          2889,
+          3549
+        ]
+      }
+    ]
+  },
+  "seeds": [
+    10,
+    11
+  ],
+  "new_fits": 6,
+  "epochs": 24,
+  "architecture": "Archived unrestricted GroupCandidate:2048 cells,8-bin history,16 global summaries,32 width,4 heads,MLP activity+ID,zero positions;81377 parameters",
+  "matching": "Reuse exact baseline cell IDs, splits and normalization. Baseline targets retained in float64 for scoring; float32 network inputs/training targets. Verify exact normalized values before conversion and archived validation labels.",
+  "training": {
+    "batch": 32,
+    "lr": 0.001,
+    "weight_decay": 0.01,
+    "cosine_min_lr": 0.0001,
+    "gradient_clip": 1.0,
+    "loss": "Unbounded normalized-speed MSE",
+    "optimizer": "AdamW"
+  },
+  "stopping": "All6 fits run exactly24 epochs. Also record shadow stop from inherited minimum12/patience7 rule using bounded validation MSE including epoch0. No adaptive extensions.",
+  "selections": [
+    "minimum bounded validation MSE including epoch0",
+    "minimum raw validation MSE including epoch0",
+    "inherited early-stopping selection",
+    "final epoch24"
+  ],
+  "selection_limit": "All displayed validation-selected minima are optimistically development-tuned; no untouched outcome scoring. Train loss uses full eval-mode predictions as well as stochastic batch loss.",
+  "diagnostics": [
+    "Per-epoch train/validation raw and bounded MSE,R2,mean bias,error variance,prediction mean/std,correlation,clipping fraction",
+    "Zero speed,training mean and all4 archived ridge strengths on identical targets",
+    "Attention gradients finite/nonzero and final parameter changes",
+    "Fixed100-bin circular shift of selected validation predictions as a descriptive alignment control only; not a null significance test",
+    "Training90th-percentile speed coverage and training-standardized per-cell mean shifts; descriptive only"
+  ],
+  "archive": "All25 epoch checkpoints and train/validation predictions per fit; reload each unique selected/final checkpoint on full validation and audit saved metrics independently",
+  "stop_rule": "Six fixed fits only; no grouping sweep,hyperparameter expansion,other mice,old evaluation-tail scoring or publication",
+  "application_hashes": {
+    "model.py": "2297af73466e1c85ee5774dc10a44a2a03f7a6f48919a111b43a8cf6d7d86a40",
+    "data.py": "894d5aea4dd0ce6a139178b66b1f8a5538f1c4f015081153d4c11fa55d78b7bf",
+    "train.py": "0361d216cd75616ed07501a019f4837f7c0acf57f0cd2edecb0fc6728064d7f9"
+  },
+  "reference_hashes": {
+    "experiments/2026-10-02_functional_groups/run.py": "27b3b838be8478fefd27a38a83aadce001f08452c2f39442480e39bc72c07e2e",
+    "experiments/2026-10-02_functional_groups/model_snapshot.py": "2297af73466e1c85ee5774dc10a44a2a03f7a6f48919a111b43a8cf6d7d86a40",
+    "experiments/2026-10-02_functional_groups/base_search.py": "5ecb8ef2e5f292953b28d6712d4a75a99ac07a543830fb21989a5840046e27b7",
+    "experiments/2026-10-02_functional_groups/group_model.py": "7f2876708a57f0f94e89e8aa95d1547268cf4c37cb962ebe22805688a0c3a687"
+  },
+  "inherited_hashes": {
+    "experiments/2026-10-03_development_baselines/run.py": "3848c910eed79668b8ff84695efc6a97f75b193a9e5f41ac5d7f53919a72c07f",
+    "experiments/2026-10-03_development_baselines/protocol.json": "aaf80c059f31328ef0d969b0bf2affcb79fdedcfe9492cb4e8fc19a44e909d8c",
+    "experiments/2026-10-03_development_baselines/results.json": "ec43e4e20a05bf2117bdee88da6fdbf3d2c979d180761381e98118479f7d5f7d",
+    "experiments/2026-10-03_development_baselines/MP032_ids.npy": "4d31ce19eb927f43083070d35a91efb2d887831ac0d70dff7b3f85d3e02ee542",
+    "experiments/2026-10-02_stringer_replication/run.py": "ae2ff25b1b2bea78e6ab67a7a00572bd5f06a6c2a0edda91d465ccb08c9b1c7e",
+    "experiments/2026-10-02_stringer_replication/protocol.json": "86db89d1a727e3b227ac4931fa7c27dbbc157fd629491005e30c114755719fd5",
+    "experiments/2026-10-03_development_baselines/MP032_f1.npz": "098bb956bde6c37d4e5151a8fdfd20631a9a3dabd570384c1ff1afd8cc0fee3d",
+    "experiments/2026-10-03_development_baselines/MP032_f2.npz": "92542e60399780bf7029aa673a5ec28975e453e7ee4718400b3ae8e2f80e8e9c",
+    "experiments/2026-10-03_development_baselines/MP032_f3.npz": "f4237ff6499d713586ef6629becd928fc635d12a657875698f045816e2bddc9c"
+  },
+  "source_sha256": "772a1995d89f4605dea30e1408b8f42b3656bac4a7f0160a9cc0f36b841c88ea",
+  "packages": {
+    "numpy": "2.0.2",
+    "scipy": "1.13.1",
+    "torch": "2.8.0",
+    "scikit-learn": "1.6.1",
+    "threadpoolctl": "3.6.0"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "created_utc": "2026-10-02T02:42:41.830268+00:00",
+  "question": "Does spatially anchored read-in improve speed decoding beyond equally diverse arbitrary and depth-matched groups?",
+  "dataset": "Stringer MP019, same repeatedly examined recording; exploratory only",
+  "dataset_sha256": "b92f153a965a6a25153c125ac88245f887f310b50285dc5af11f0b544ac3ba32",
+  "n": 2048,
+  "pool_seeds": [
+    101,
+    202,
+    303,
+    404,
+    505,
+    606
+  ],
+  "optimizer_seeds": [
+    10,
+    11
+  ],
+  "variants": [
+    "global",
+    "spatial",
+    "random",
+    "depth_random"
+  ],
+  "fits": 48,
+  "architecture": "16 read-in queries: first8 restricted to8 groups except global control, last8 unrestricted; same16-query transformer, mean pooling, width32, head4, IDs and real xyz embedding in ALL arms",
+  "patches": "Recursive coordinate threshold splits depth then x then y; threshold between distinct values closest to balanced cell counts; no physical distance assumptions",
+  "controls": "random permutes spatial group labels across cells preserving exact group sizes; depth_random permutes labels within each imaging plane preserving exact group-by-plane counts; group assignment independent of labels and activity",
+  "causal_scope": "Effect of spatial grouping conditional on true-coordinate token embeddings; not an ablation of all geometry",
+  "training": "Same chronological splits, train-only activity/speed normalization, window8, width32, AdamW .001 weight_decay.01, batch32, cosine24 eta_min.0001, clip1, min12/patience7, select best validation boundedMSE including epoch0",
+  "initialization": "Construct existing8-query Candidate then append8 queries using independent seeded generator; shared parameters equal existing baseline; exact initial state and batch order across4arms",
+  "primary_contrasts": [
+    "random MSE minus spatial MSE",
+    "depth_random MSE minus spatial MSE",
+    "global MSE minus spatial MSE"
+  ],
+  "budget": "All48 planned before observing new outcomes; no seed, architecture, or epoch changes based on outcomes",
+  "analysis": "Raw and bounded MSE, R2, per-repeat/pool wins; paired crossed pool/seed circular-time-block100 bootstrap2000 for conditional95% intervals; exploratory and not biological replication",
+  "success": "Candidate evidence: spatial mean MSE lower than both random controls and global, with >=8/12 pair wins against each. Stronger within-recording evidence: all3 paired intervals above0 and >=5/6 positive pool means. No cross-animal claim. No multiple-testing corrected claims.",
+  "mechanism": "Audit group attention supports, query diversity, gradients, joint neuron-permutation invariance, attention mask perturbations, and trained dependence on local read-in using ablation. Artificial data positive control for known regional interactions.",
+  "source_hashes": {
+    "model.py": "2297af73466e1c85ee5774dc10a44a2a03f7a6f48919a111b43a8cf6d7d86a40",
+    "data.py": "894d5aea4dd0ce6a139178b66b1f8a5538f1c4f015081153d4c11fa55d78b7bf",
+    "train.py": "0361d216cd75616ed07501a019f4837f7c0acf57f0cd2edecb0fc6728064d7f9"
+  },
+  "no_application_code_changes": true
+}

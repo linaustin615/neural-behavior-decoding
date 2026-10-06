@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "models": [
+    {
+      "kind": "attention",
+      "total_parameters": 94418,
+      "branch_parameters": 13313,
+      "branch_gradient": 0.006239690352231264
+    },
+    {
+      "kind": "extra_mlp",
+      "total_parameters": 94406,
+      "branch_parameters": 13301,
+      "branch_gradient": 0.0025366877671331167
+    }
+  ],
+  "zero_branch_exact_base": true,
+  "branch_and_base_gradients_updates": true,
+  "cell_id_permutation": true,
+  "reload_exact": true
+}

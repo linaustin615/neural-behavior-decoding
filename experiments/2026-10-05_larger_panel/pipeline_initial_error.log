@@ -1,0 +1,19 @@
+Traceback (most recent call last):
+  File "/Users/austinlin/neuron_transformer/experiments/2026-10-05_larger_panel/pipeline.py", line 26, in <module>
+    status['phase']=f'stage{stage}_training';save()
+  File "/Users/austinlin/neuron_transformer/experiments/2026-10-05_larger_panel/pipeline.py", line 13, in save
+    def save():run.write(ROOT/'STATUS.json',status)
+  File "/Users/austinlin/neuron_transformer/experiments/2026-10-05_shared_finetuning/run.py", line 41, in write
+    assert replace or not path.exists(), f'refuse to replace {path}'
+AssertionError: refuse to replace /Users/austinlin/neuron_transformer/experiments/2026-10-05_larger_panel/STATUS.json
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/austinlin/neuron_transformer/experiments/2026-10-05_larger_panel/pipeline.py", line 48, in <module>
+    status.update(status='failed',error=repr(error));save();raise
+  File "/Users/austinlin/neuron_transformer/experiments/2026-10-05_larger_panel/pipeline.py", line 13, in save
+    def save():run.write(ROOT/'STATUS.json',status)
+  File "/Users/austinlin/neuron_transformer/experiments/2026-10-05_shared_finetuning/run.py", line 41, in write
+    assert replace or not path.exists(), f'refuse to replace {path}'
+AssertionError: refuse to replace /Users/austinlin/neuron_transformer/experiments/2026-10-05_larger_panel/STATUS.json

@@ -1,0 +1,111 @@
+{
+  "mouse": "VR2",
+  "arrays": {
+    "spks": {
+      "shape": [
+        59296,
+        24622
+      ],
+      "dtype": "float32",
+      "object_dtype": false,
+      "fortran_order": false,
+      "inner_compression": 0,
+      "header_offset": 0,
+      "header_bytes": 128,
+      "member_bytes": 5839944576
+    },
+    "ypos": {
+      "shape": [
+        59296
+      ],
+      "dtype": "float64",
+      "object_dtype": false,
+      "fortran_order": false,
+      "inner_compression": 0,
+      "header_offset": 5839944634,
+      "header_bytes": 128,
+      "member_bytes": 474496
+    },
+    "xpos": {
+      "shape": [
+        59296
+      ],
+      "dtype": "float64",
+      "object_dtype": false,
+      "fortran_order": false,
+      "inner_compression": 0,
+      "header_offset": 5840419188,
+      "header_bytes": 128,
+      "member_bytes": 474496
+    },
+    "iplane": {
+      "shape": [
+        59296
+      ],
+      "dtype": "float64",
+      "object_dtype": false,
+      "fortran_order": false,
+      "inner_compression": 0,
+      "header_offset": 5840893742,
+      "header_bytes": 128,
+      "member_bytes": 474496
+    },
+    "run": {
+      "shape": [
+        24621
+      ],
+      "dtype": "float64",
+      "object_dtype": false,
+      "fortran_order": false,
+      "inner_compression": 0,
+      "header_offset": 5841368298,
+      "header_bytes": 128,
+      "member_bytes": 197096
+    },
+    "tcam": {
+      "shape": [
+        387929
+      ],
+      "dtype": "float64",
+      "object_dtype": false,
+      "fortran_order": false,
+      "inner_compression": 0,
+      "header_offset": 5841565451,
+      "header_bytes": 128,
+      "member_bytes": 3103560
+    },
+    "tneural": {
+      "shape": [
+        24620
+      ],
+      "dtype": "int64",
+      "object_dtype": false,
+      "fortran_order": false,
+      "inner_compression": 0,
+      "header_offset": 5844669069,
+      "header_bytes": 128,
+      "member_bytes": 197088
+    }
+  },
+  "timing": {
+    "activity_frames": 24622,
+    "neural_timestamp_n": 24620,
+    "camera_n": 387929,
+    "timestamp_minus_activity_frames": -2,
+    "timestamp_units": "publisher acquisition units; seconds conversion not verified",
+    "timestamp_span": 38758923.0,
+    "neural_dt_min": 1573.0,
+    "neural_dt_median": 1574.0,
+    "neural_dt_max": 1575.0,
+    "neural_monotonic": true,
+    "camera_monotonic": true,
+    "running_length_matches_activity": false,
+    "running_frames": 24621,
+    "paired_frames": 24621,
+    "discarded_terminal_activity_frames": 1,
+    "discarded_terminal_running_frames": 0,
+    "alignment": "published same-index activity/run common prefix; no shifts or camera resampling",
+    "limitation": "raw ball-to-neural alignment not independently reconstructed"
+  },
+  "numeric_activity_or_running_values_inspected": false
+}

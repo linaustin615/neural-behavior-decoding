@@ -1,0 +1,135 @@
+{
+  "created_utc": "2026-10-03T05:56:35.859803+00:00",
+  "cohort": [
+    {
+      "mouse": "MP030",
+      "file": "data/spont_M161025_MP030_20161120.mat",
+      "development_stop": 4152,
+      "train": [
+        0,
+        2441
+      ],
+      "selection": [
+        2541,
+        3271
+      ],
+      "evaluation": [
+        3371,
+        4152
+      ]
+    },
+    {
+      "mouse": "MP032",
+      "file": "data/spont_M170714_MP032_20170804.mat",
+      "development_stop": 3549,
+      "train": [
+        0,
+        2079
+      ],
+      "selection": [
+        2179,
+        2789
+      ],
+      "evaluation": [
+        2889,
+        3549
+      ]
+    },
+    {
+      "mouse": "MP033",
+      "file": "data/spont_M170717_MP033_20170818.mat",
+      "development_stop": 2739,
+      "train": [
+        0,
+        1593
+      ],
+      "selection": [
+        1693,
+        2141
+      ],
+      "evaluation": [
+        2241,
+        2739
+      ]
+    },
+    {
+      "mouse": "MP034",
+      "file": "data/spont_M170717_MP034_20170825.mat",
+      "development_stop": 2742,
+      "train": [
+        0,
+        1595
+      ],
+      "selection": [
+        1695,
+        2143
+      ],
+      "evaluation": [
+        2243,
+        2742
+      ]
+    }
+  ],
+  "scope": "Exploratory development, historically inspected recordings; no confirmatory p-values",
+  "question": "Does modest tuning enable transformer superiority over a similarly sized nonattention network and ridge across four mice?",
+  "seeds": [
+    10,
+    11
+  ],
+  "recipes": [
+    {
+      "lr": 0.001,
+      "weight_decay": 0.01
+    },
+    {
+      "lr": 0.001,
+      "weight_decay": 0.1
+    },
+    {
+      "lr": 0.0003,
+      "weight_decay": 0.01
+    },
+    {
+      "lr": 0.0003,
+      "weight_decay": 0.1
+    }
+  ],
+  "families": [
+    "transformer",
+    "pooled_mlp"
+  ],
+  "fits": 64,
+  "epochs": 24,
+  "parameters": {
+    "transformer": 81377,
+    "pooled_mlp": 81025
+  },
+  "representation": "Identical2048 IDs, eight activity bins, training-only normalization, additive nonlinear activity+ID tokenizer initialized identically per seed; zero positions. Transformer inherited16 summaries; control shared residual token MLP then uniform mean pooling and nonlinear head. Counts within1%; not an isolated attention-only ablation.",
+  "training": "AdamW,batch32,gradient norm clip1,unbounded normalized MSE,cosine schedule ending at10% initial lr,24 epochs,no early stop; same batch orders per seed",
+  "selection": "For each seed/recipe choose minimum bounded selection MSE including epoch0. For each mouse/family choose one recipe by mean selection MSE across BOTH seeds. Ties choose first epoch/recipe. Lock all choices before any later scoring.",
+  "ridge": "Reuse4 archived fold2 ridge solutions .01,.1,1,10 with exactly same training IDs/normalization. Select lambda by selection interval only; no new ridge fits.",
+  "primary": "Per-mouse mean of two selected-seed bounded later MSE divided by selected-ridge later MSE; also pooledMLP contrast and zero/training-mean baselines. Mouse is biological unit, not seeds or blocks.",
+  "secondary": "Fixed default recipe0 vs tuned; selected-family epoch0; raw MSE; quiet/moving errors using training speed75th percentile as a threshold; apply training-feature min/max guard to selected checkpoints and ridge as a fixed inference-only robustness probe. No choice based on these outcomes.",
+  "exclusions": "No old evaluation-tail examples, coordinate/grouping sweep, data/seed replacement, extra epochs, grid expansion or publication.",
+  "limits": "One new split arrangement per mouse; all previously inspected; two technical seeds; finite tuning grid, approximate parameter matching, architecture differences beyond attention; no universal model-family verdict.",
+  "application_hashes": {
+    "model.py": "2297af73466e1c85ee5774dc10a44a2a03f7a6f48919a111b43a8cf6d7d86a40",
+    "data.py": "894d5aea4dd0ce6a139178b66b1f8a5538f1c4f015081153d4c11fa55d78b7bf",
+    "train.py": "0361d216cd75616ed07501a019f4837f7c0acf57f0cd2edecb0fc6728064d7f9"
+  },
+  "reference_hashes": {
+    "experiments/2026-10-03_development_baselines/run.py": "3848c910eed79668b8ff84695efc6a97f75b193a9e5f41ac5d7f53919a72c07f",
+    "experiments/2026-10-03_development_baselines/protocol.json": "aaf80c059f31328ef0d969b0bf2affcb79fdedcfe9492cb4e8fc19a44e909d8c",
+    "experiments/2026-10-02_stringer_replication/run.py": "ae2ff25b1b2bea78e6ab67a7a00572bd5f06a6c2a0edda91d465ccb08c9b1c7e",
+    "experiments/2026-10-02_stringer_replication/protocol.json": "86db89d1a727e3b227ac4931fa7c27dbbc157fd629491005e30c114755719fd5",
+    "experiments/2026-10-03_development_baselines/MP030_ids.npy": "856a0bd283a7b0ddad2de23bcfb86ffa4cecf4b968ea30e4cce529147a11014c",
+    "experiments/2026-10-03_development_baselines/MP030_f2.npz": "1e63297e075543b7b0238efabde08709fb17fd281fec26d9e30aa68926370f5f",
+    "experiments/2026-10-03_development_baselines/MP032_ids.npy": "4d31ce19eb927f43083070d35a91efb2d887831ac0d70dff7b3f85d3e02ee542",
+    "experiments/2026-10-03_development_baselines/MP032_f2.npz": "92542e60399780bf7029aa673a5ec28975e453e7ee4718400b3ae8e2f80e8e9c",
+    "experiments/2026-10-03_development_baselines/MP033_ids.npy": "c7b9606ae8828ecacb5c2c8b01c631028ee7d1838b8c69c20951bfc9357dc45f",
+    "experiments/2026-10-03_development_baselines/MP033_f2.npz": "724447472007b8620050553a58394d4c8bc4e7fa941cb09b0e500907d3ca629d",
+    "experiments/2026-10-03_development_baselines/MP034_ids.npy": "5a2465311406ce3f972f138034129b8688bc3699dbdbaa2ef51446eab53e7eb9",
+    "experiments/2026-10-03_development_baselines/MP034_f2.npz": "4b9db4aaf398be4659deadaa88be9befdb2ba4094340162c5b5c64e054fc53c2"
+  },
+  "source_sha256": "e65cac1afe346b96172da0e99fcf8cd1f79197260a10c5f6e85092a85adee519"
+}

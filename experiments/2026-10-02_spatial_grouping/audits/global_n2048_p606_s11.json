@@ -1,0 +1,77 @@
+{
+  "task": {
+    "n": 2048,
+    "pool": 606,
+    "seed": 11,
+    "variant": "global"
+  },
+  "finite_state": true,
+  "positions_and_groups_match": true,
+  "reload_64_validation_max_error": 2.384185791015625e-07,
+  "full_reload": {
+    "validation": {
+      "max_prediction_error": 4.76837158203125e-07,
+      "metrics": {
+        "mse": 0.2886317996799137,
+        "raw_mse": 0.29019147952592805,
+        "rmse_speed_units": 3.9878142554601377,
+        "mae_speed_units": 1.8950347140467856,
+        "r2": 0.8367105186346105,
+        "negative_prediction_fraction": 0.3629222309505106
+      }
+    },
+    "test": {
+      "max_prediction_error": 9.5367431640625e-07,
+      "metrics": {
+        "mse": 0.3929746302294036,
+        "raw_mse": 0.39452656412483317,
+        "rmse_speed_units": 4.653128968920255,
+        "mae_speed_units": 2.2315538018188468,
+        "r2": 0.8274459726162604,
+        "negative_prediction_fraction": 0.36205593348450493
+      }
+    }
+  },
+  "attention_all": {
+    "participation_rank": 1.0003609205241282,
+    "pairwise_cosine": 0.999806491971141
+  },
+  "attention_first8": {
+    "participation_rank": 1.0003671402977359,
+    "pairwise_cosine": 0.999783610601453
+  },
+  "attention_global8": {
+    "participation_rank": 1.0003353432762234,
+    "pairwise_cosine": 0.9998123309436769
+  },
+  "readin_features": {
+    "participation_rank": 1.02869423333666,
+    "pairwise_cosine": 0.9850493314213797
+  },
+  "encoded_features": {
+    "participation_rank": 1.006966962467193,
+    "pairwise_cosine": 0.9963190334894276
+  },
+  "validation_local_ablation": {
+    "metrics": {
+      "mse": 0.2881702755036448,
+      "raw_mse": 0.28972993464351476,
+      "rmse_speed_units": 3.9846247091034175,
+      "mae_speed_units": 1.8931687539342816,
+      "r2": 0.8369716196063819,
+      "negative_prediction_fraction": 0.3629222309505106
+    },
+    "mse_increase": -0.00046152293580398185
+  },
+  "test_local_ablation": {
+    "metrics": {
+      "mse": 0.3921611377129069,
+      "raw_mse": 0.3937150924613922,
+      "rmse_speed_units": 4.648310277962771,
+      "mae_speed_units": 2.2293863773237255,
+      "r2": 0.8278031748353606,
+      "negative_prediction_fraction": 0.36205593348450493
+    },
+    "mse_increase": -0.0008134973638115328
+  }
+}

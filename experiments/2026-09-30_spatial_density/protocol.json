@@ -1,0 +1,45 @@
+{
+  "created_utc": "2026-09-30T04:01:43.547387+00:00",
+  "question": "Does correct spatial information provide a larger benefit as the number of sampled neurons increases?",
+  "dataset": "Stringer MP019, visual cortex; one recording, not whole brain",
+  "counts": [
+    128,
+    512,
+    2048
+  ],
+  "pool_seeds": [
+    101,
+    202,
+    303
+  ],
+  "training_seeds": [
+    10,
+    11
+  ],
+  "primary_conditions": [
+    "real",
+    "shuffled",
+    "none"
+  ],
+  "largest_population_secondary_conditions": [
+    "depth",
+    "within_depth_shuffled"
+  ],
+  "coordinate_assignment": "all coordinate assignments fixed for the full run; shuffle moves coordinates only, keeping neural activity, IDs and speed unchanged",
+  "nested_pools": "each pool sampled without replacement once at 2048 cells; prefixes define smaller populations; independent pools can overlap",
+  "coordinate_normalization": "fixed mean/std across all eligible cells, shared across population sizes and conditions; no behavioral targets used",
+  "architecture": "MLP activity encoder, ID embedding, coordinate MLP, 8 learned latents, one width-32 transformer layer, 4 heads, dropout 0.05, mean pooling and linear speed head",
+  "training": "24 epochs maximum; AdamW lr0.001, weight_decay0.01, cosine minlr0.0001, batch32, gradient norm clip1; early stop after >=12 epochs and 7 stale epochs",
+  "splits": "same chronological train/validation/test and common target index31 as previous search; test already examined historically, exploratory replication only",
+  "primary_contrasts": "paired test MSE(shuffled)-MSE(real) and MSE(none)-MSE(real), positive favors correct coordinates; also report validation and raw MSE",
+  "density_interaction": "contrast at 2048 minus contrast at128 for the same pool and optimizer seed; positive favors an increasing spatial benefit",
+  "evidence_gate": "real must beat both shuffled and none on mean test MSE at2048, with a positive mean advantage in each of the three pools; growing-benefit claim additionally needs positive density interaction in each pool; no generalization beyond this recording regardless of gate",
+  "secondary_controls": "depth-only and within-depth shuffled x/y at2048; these are predeclared descriptive controls",
+  "budget": "66 neural fits:54 primary and12 depth controls; all configurations frozen before any new result; one short synthetic positive control for the exercised architecture",
+  "source_hashes": {
+    "model.py": "2297af73466e1c85ee5774dc10a44a2a03f7a6f48919a111b43a8cf6d7d86a40",
+    "data.py": "894d5aea4dd0ce6a139178b66b1f8a5538f1c4f015081153d4c11fa55d78b7bf",
+    "train.py": "0361d216cd75616ed07501a019f4837f7c0acf57f0cd2edecb0fc6728064d7f9"
+  },
+  "no_application_code_changes": true
+}

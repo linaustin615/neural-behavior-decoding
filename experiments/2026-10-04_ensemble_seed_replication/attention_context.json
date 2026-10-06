@@ -1,0 +1,155 @@
+{
+  "scope": "Secondary attention-versus-MLP comparisons of predefined models using frozen predictions. These do not replace the failed primary mixed-ensemble gate; no fitting,selection or added seeds.",
+  "new_fits": 0,
+  "primary_gate_changed": false,
+  "results": {
+    "old": {
+      "attention_pair": {
+        "control": "mlp_pair",
+        "mean_relative_gain": 0.043707161270125666,
+        "mouse_gains": [
+          0.2271443433687016,
+          0.4219068590527959,
+          -0.13183503732297752,
+          -0.3423875200180173
+        ],
+        "mouse_wins": 2,
+        "paired_comparison_wins": 7,
+        "paired_comparison_count": 12,
+        "leave_one_mouse_out": [
+          -0.01743856609606631,
+          -0.08235940465743108,
+          0.10222122746782673,
+          0.17240538836617333
+        ],
+        "descriptive_97_5_interval": [
+          -0.7253927532180903,
+          0.38060201988428133
+        ]
+      },
+      "attention_single": {
+        "control": "mlp_single",
+        "mean_relative_gain": 0.060441426005048426,
+        "mouse_gains": [
+          0.12783886466636374,
+          0.4564503543572638,
+          -0.07034588128355179,
+          -0.272177633719882
+        ],
+        "mouse_wins": 2,
+        "paired_comparison_wins": 7,
+        "paired_comparison_count": 12,
+        "leave_one_mouse_out": [
+          0.03797561311794332,
+          -0.0715615501123567,
+          0.1040371951012485,
+          0.17131444591335857
+        ]
+      }
+    },
+    "new": {
+      "attention_pair": {
+        "control": "mlp_pair",
+        "mean_relative_gain": 0.28749229951377764,
+        "mouse_gains": [
+          0.42602791775774274,
+          0.34948536475200476,
+          0.027089849997347093,
+          0.34736606554801586
+        ],
+        "mouse_wins": 4,
+        "paired_comparison_wins": 11,
+        "paired_comparison_count": 12,
+        "leave_one_mouse_out": [
+          0.24131376009912256,
+          0.2668279444343686,
+          0.3742931160192544,
+          0.26753437750236486
+        ],
+        "descriptive_97_5_interval": [
+          -0.2519098211093024,
+          0.5266704319949532
+        ]
+      },
+      "attention_single": {
+        "control": "mlp_single",
+        "mean_relative_gain": 0.28497196604625796,
+        "mouse_gains": [
+          0.3685536732036184,
+          0.3619046611513922,
+          0.03206876101834222,
+          0.3773607688116791
+        ],
+        "mouse_wins": 4,
+        "paired_comparison_wins": 11,
+        "paired_comparison_count": 12,
+        "leave_one_mouse_out": [
+          0.25711139699380453,
+          0.2593277343445466,
+          0.3692730343888966,
+          0.25417569845778426
+        ]
+      }
+    },
+    "combined": {
+      "attention_pair": {
+        "control": "mlp_pair",
+        "mean_relative_gain": 0.19299143134184246,
+        "mouse_gains": [
+          0.3443443166639214,
+          0.3891805441023928,
+          -0.044438136253788674,
+          0.08287900085484434
+        ],
+        "mouse_wins": 3,
+        "paired_comparison_wins": 43,
+        "paired_comparison_count": 60,
+        "leave_one_mouse_out": [
+          0.14254046956781616,
+          0.12759506042165902,
+          0.2721346205403862,
+          0.2296955748375085
+        ],
+        "descriptive_97_5_interval": [
+          -0.3897046158432696,
+          0.45685388922459125
+        ]
+      },
+      "attention_single": {
+        "control": "mlp_single",
+        "mean_relative_gain": 0.18298295187092814,
+        "mouse_gains": [
+          0.25995614736520123,
+          0.4143732307905672,
+          -0.01934340225393405,
+          0.07694583158187818
+        ],
+        "mouse_wins": 3,
+        "paired_comparison_wins": 18,
+        "paired_comparison_count": 24,
+        "leave_one_mouse_out": [
+          0.15732522003950378,
+          0.10585285889771512,
+          0.25042506991254887,
+          0.2183286586339448
+        ]
+      }
+    }
+  },
+  "source_hashes": {
+    "experiments/2026-10-04_ensemble_seed_replication/attention_context.py": "a548f071ff6efb17b315bca0b3ec853abb9978c3f0db376932340cad594c8473",
+    "experiments/2026-10-04_ensemble_seed_replication/analyse.py": "725282210aa0c3b35a8546ef47003d807d59eb363be68cc28a5d5c07465ea9af",
+    "experiments/2026-10-04_ensemble_seed_replication/protocol.json": "ac5ec6eea2f811fd5b273f054df320c1fa9220aaa2661491c5338c67de3996c1",
+    "experiments/2026-10-04_ensemble_seed_replication/old_pairing_context.json": "f16984de563abd4ae45e5971ed42526c1238cb082961555e8a95e47c6ffb740a",
+    "experiments/2026-10-03_shared_behavior/MP030/later_predictions.npz": "8c24a112fbfe942360e85aa988a5fcddf2aae05bd17ba9bfe71a9720fdee5758",
+    "experiments/2026-10-03_shared_behavior/MP032/later_predictions.npz": "e277d5bc8318e56ec9e83e1fce07ce8990b805e8b3fd552539f07f36bb307d21",
+    "experiments/2026-10-03_shared_behavior/MP033/later_predictions.npz": "46716f39456eebc2b651b17ac9f4d19207810ae1433740ea1d5a27145dba0ee7",
+    "experiments/2026-10-03_shared_behavior/MP034/later_predictions.npz": "63c7ea577c9b2336d430aa720c5f48385a00399f3c36856836ed986d883ab6a3",
+    "experiments/2026-10-04_ensemble_seed_replication/summary.json": "cf623ac761238baad1d24f9f91cf625e9a03627ad44fd9ef32226e06118cd81a",
+    "experiments/2026-10-04_ensemble_seed_replication/MP030/later_predictions.npz": "9b76f60bc8fdb31bc3037d6f5797d47f20f2523a47d588cf68502a4ad7ae5add",
+    "experiments/2026-10-04_ensemble_seed_replication/MP032/later_predictions.npz": "6a38c24e98ea007dacb6586bfa859ea516a6b45ad37fa1f0eebbacbb56f98600",
+    "experiments/2026-10-04_ensemble_seed_replication/MP033/later_predictions.npz": "99aa1e50d19e9c34c1cdfcf5c458485ee8e2d4d1d966d68b24f86255dc967272",
+    "experiments/2026-10-04_ensemble_seed_replication/MP034/later_predictions.npz": "bc993c0925c1d550e426676facb764c19e18b1e8d3b5db79f8df43db49a8085d",
+    "experiments/2026-10-04_ensemble_seed_replication/combined_context.json": "0208c183cc6e4ea01d7afd04d1417dddcee9b799e351a0f564dd712ac00a8a09"
+  }
+}

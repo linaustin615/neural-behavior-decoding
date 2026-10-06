@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "legacy_gate_values_checked": 12096,
+  "legacy_gate_max_difference": 4.440892098500626e-16,
+  "optimizers": {
+    "screen_lock.json": {
+      "new_gates": 18,
+      "max_gradient": 5.833483268848777e-07,
+      "max_iterations": 46,
+      "all_converged": true
+    },
+    "final_lock.json": {
+      "new_gates": 6,
+      "max_gradient": 2.9169769010743e-07,
+      "max_iterations": 20,
+      "all_converged": true
+    }
+  },
+  "real_pca_vectors_orthonormal": true,
+  "matched_and_tuned_controls_identical_as_selected": true,
+  "verification_script_repair": "Initial audit selected old records lacking max_gradient; restricted optimizer summary to new records. No experimental code or fits changed."
+}

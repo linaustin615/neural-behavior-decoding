@@ -1,0 +1,14 @@
+{
+  "created_utc": "2026-10-05T14:34:35.731644+00:00",
+  "question": "Do the four trained queries use distinct weights and retain distinct varying features?",
+  "timing": "Declared while firststage training is incomplete,before screen or later outcomes",
+  "sample": "First64earlier-selection windows per mouse,all selected active-seed checkpoints plus matched one-query baseline",
+  "metrics": [
+    "query-pair weight total variation averaged across windows and heads",
+    "cosine between query-feature vectors after centering each feature over64windows",
+    "participation-ratio effective rank of centered neural-only head features"
+  ],
+  "interpretation": "Descriptive finite-sample redundancy measures,not causal mechanisms,scientific gates or newmodel selection;high similarity can still retain useful small differences",
+  "frozen_protocol_unchanged": true,
+  "source_sha256": "7fa3d1d2689a62a104cbc1ec78a2910a22fe04b1f08fb0333165a2d84ea727bb"
+}

@@ -1,0 +1,259 @@
+{
+  "primary": {
+    "stable_assignment": {
+      "main": "native_attention",
+      "control": "anonymous_attention",
+      "mean_relative_gain": 0.6912162977845887,
+      "gains": [
+        0.7936765875775909,
+        0.9609081678402431,
+        0.29854031376660917,
+        0.7117401219539117
+      ],
+      "mouse_wins": 4,
+      "leave_one_mouse_out": [
+        0.657062867853588,
+        0.6013190077660372,
+        0.8221082924572486,
+        0.684375023061481
+      ],
+      "paired_seed_wins": 12,
+      "threshold_pass": true
+    },
+    "beyond_population_summaries": {
+      "main": "native_attention",
+      "control": "statistics_mlp",
+      "mean_relative_gain": 0.7589783259586482,
+      "gains": [
+        0.8354762824544867,
+        0.9156242548165161,
+        0.5044040409564552,
+        0.7804087256071346
+      ],
+      "mouse_wins": 4,
+      "leave_one_mouse_out": [
+        0.7334790071267019,
+        0.7067630163393588,
+        0.8438364209593793,
+        0.7518348594091527
+      ],
+      "paired_seed_wins": 12,
+      "threshold_pass": true
+    }
+  },
+  "combined_neuron_information_gate": true,
+  "secondary": {
+    "mlp_stable_assignment": {
+      "main": "native_mlp",
+      "control": "anonymous_mlp",
+      "mean_relative_gain": 0.49607052288314213,
+      "gains": [
+        0.6686928481570611,
+        0.9504149218755409,
+        0.2244187187664769,
+        0.14075560273348986
+      ],
+      "mouse_wins": 4,
+      "leave_one_mouse_out": [
+        0.4385297477918358,
+        0.34462238988567595,
+        0.586621124255364,
+        0.6145088295996929
+      ],
+      "paired_seed_wins": 11,
+      "threshold_pass": true
+    },
+    "mlp_beyond_summaries": {
+      "main": "native_mlp",
+      "control": "statistics_mlp",
+      "mean_relative_gain": 0.6778236612305418,
+      "gains": [
+        0.8254133880548118,
+        0.8704572560636837,
+        0.45480367320870374,
+        0.5606203275949676
+      ],
+      "mouse_wins": 4,
+      "leave_one_mouse_out": [
+        0.6286270856224517,
+        0.6136124629528278,
+        0.7521636572378211,
+        0.7168914391090665
+      ],
+      "paired_seed_wins": 12,
+      "threshold_pass": true
+    },
+    "attention_with_unstable_assignment": {
+      "main": "anonymous_attention",
+      "control": "anonymous_mlp",
+      "mean_relative_gain": -0.2085474924459065,
+      "gains": [
+        -0.5132123462430607,
+        0.17382983809061703,
+        -0.005077237900560139,
+        -0.48973022373062225
+      ],
+      "mouse_wins": 1,
+      "leave_one_mouse_out": [
+        -0.10699254118018846,
+        -0.3360066026247477,
+        -0.27637091062768865,
+        -0.11481991535100126
+      ],
+      "paired_seed_wins": 6,
+      "threshold_pass": false
+    },
+    "anonymous_attention_beyond_summaries": {
+      "main": "anonymous_attention",
+      "control": "statistics_mlp",
+      "mean_relative_gain": -0.10602712501374009,
+      "gains": [
+        0.20259307650126823,
+        -1.1583983282918262,
+        0.2934790569295106,
+        0.238217694806087
+      ],
+      "mouse_wins": 3,
+      "leave_one_mouse_out": [
+        -0.20890052551874286,
+        0.2447632760789553,
+        -0.239195852328157,
+        -0.22077539828701578
+      ],
+      "paired_seed_wins": 7,
+      "threshold_pass": false
+    },
+    "anonymous_mlp_beyond_summaries": {
+      "main": "anonymous_mlp",
+      "control": "statistics_mlp",
+      "mean_relative_gain": -0.08845140147238073,
+      "gains": [
+        0.4730369961106252,
+        -1.612534835806097,
+        0.2970481109031037,
+        0.4886441229028452
+      ],
+      "mouse_wins": 3,
+      "leave_one_mouse_out": [
+        -0.275614200666716,
+        0.4195764099721913,
+        -0.21695123893087553,
+        -0.2808165762641227
+      ],
+      "paired_seed_wins": 9,
+      "threshold_pass": false
+    },
+    "statistics_vs_ridge": {
+      "main": "statistics_mlp",
+      "control": "raw_ridge",
+      "mean_relative_gain": -2.5791883687475314,
+      "gains": [
+        -3.6792613661771165,
+        -5.178854368521484,
+        -0.770373285045215,
+        -0.6882644552463102
+      ],
+      "mouse_wins": 0,
+      "leave_one_mouse_out": [
+        -2.2124973696043364,
+        -1.7126330354895474,
+        -3.1821267299816367,
+        -3.209496339914605
+      ],
+      "threshold_pass": false
+    },
+    "statistics_vs_static_mlp": {
+      "main": "statistics_mlp",
+      "control": "static_mlp",
+      "mean_relative_gain": -3.924060897658133,
+      "gains": [
+        -4.301127085779376,
+        -5.442012979686642,
+        -1.1597147066114544,
+        -4.793388818555059
+      ],
+      "mouse_wins": 0,
+      "leave_one_mouse_out": [
+        -3.7983721682843847,
+        -3.4180768703152964,
+        -4.845509628007026,
+        -3.6342849240258244
+      ],
+      "paired_seed_wins": 0,
+      "threshold_pass": false
+    }
+  },
+  "learning_vs_initial": {
+    "anonymous_attention": {
+      "main": "anonymous_attention",
+      "control": "initial",
+      "mean_relative_gain": -0.19865584964650745,
+      "gains": [
+        -0.501716172516699,
+        -1.2094765543064803,
+        0.41859450461707215,
+        0.4979748236200774
+      ],
+      "mouse_wins": 2,
+      "leave_one_mouse_out": [
+        -0.09763574202311025,
+        0.1382843852401502,
+        -0.40440596773436727,
+        -0.4308660740687024
+      ],
+      "paired_seed_wins": 7,
+      "threshold_pass": false
+    },
+    "anonymous_mlp": {
+      "main": "anonymous_mlp",
+      "control": "initial",
+      "mean_relative_gain": -0.14555552103816113,
+      "gains": [
+        0.00759719794442848,
+        -1.6743601453725976,
+        0.4215315266741214,
+        0.663009336601403
+      ],
+      "mouse_wins": 3,
+      "leave_one_mouse_out": [
+        -0.196606427365691,
+        0.36404602040665096,
+        -0.3345845369422554,
+        -0.4150771402513492
+      ],
+      "paired_seed_wins": 7,
+      "threshold_pass": false
+    },
+    "statistics_mlp": {
+      "main": "statistics_mlp",
+      "control": "initial",
+      "mean_relative_gain": -0.09721040928185751,
+      "gains": [
+        -0.8832494781055,
+        -0.023664874710627393,
+        0.1770866793329845,
+        0.3409860363557129
+      ],
+      "mouse_wins": 2,
+      "leave_one_mouse_out": [
+        0.16480261365935667,
+        -0.12172558747226754,
+        -0.1886427721534715,
+        -0.24327589116104764
+      ],
+      "paired_seed_wins": 8,
+      "threshold_pass": false
+    }
+  },
+  "descriptive_intervals_97_5": {
+    "stable_assignment": [
+      0.2527579001924,
+      0.9272144042870936
+    ],
+    "beyond_population_summaries": [
+      0.4783179574509509,
+      0.9209966893673716
+    ]
+  },
+  "view_aggregation": "Average individual squared errors,not predictions;four fixed banks,not extra replications"
+}

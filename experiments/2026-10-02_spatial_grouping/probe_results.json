@@ -1,0 +1,173 @@
+{
+  "groups": {
+    "global": {
+      "mean": {
+        "test_mse": 0.36690127352962004,
+        "validation_mse": 0.3077639413535322,
+        "test_r2": 0.8388947083866435
+      },
+      "separate": {
+        "test_mse": 0.36106143998061224,
+        "validation_mse": 0.3089283028763218,
+        "test_r2": 0.8414589624646833
+      }
+    },
+    "spatial": {
+      "mean": {
+        "test_mse": 0.3971678895941755,
+        "validation_mse": 0.3209973297613437,
+        "test_r2": 0.8256047245162658
+      },
+      "separate": {
+        "test_mse": 0.3998288904057389,
+        "validation_mse": 0.32026129958193655,
+        "test_r2": 0.8244362867302474
+      }
+    },
+    "random": {
+      "mean": {
+        "test_mse": 0.39473986321422105,
+        "validation_mse": 0.3326396212097245,
+        "test_r2": 0.8266708639009139
+      },
+      "separate": {
+        "test_mse": 0.4008741772116867,
+        "validation_mse": 0.3341347454138983,
+        "test_r2": 0.8239773043067964
+      }
+    },
+    "depth_random": {
+      "mean": {
+        "test_mse": 0.39226001091171914,
+        "validation_mse": 0.33543809017938037,
+        "test_r2": 0.8277597598987642
+      },
+      "separate": {
+        "test_mse": 0.3925675537850505,
+        "validation_mse": 0.33377712709428214,
+        "test_r2": 0.8276247187095773
+      }
+    }
+  },
+  "separate_minus_mean_probe": {
+    "global": {
+      "mse_improvement": 0.005839833549007799,
+      "positive_pairs": 10,
+      "interval95": [
+        -0.0008564031068763168,
+        0.019179629776195868
+      ]
+    },
+    "spatial": {
+      "mse_improvement": -0.0026610008115633354,
+      "positive_pairs": 5,
+      "interval95": [
+        -0.012922858314308849,
+        0.006783677860709858
+      ]
+    },
+    "random": {
+      "mse_improvement": -0.006134313997465702,
+      "positive_pairs": 5,
+      "interval95": [
+        -0.033942510684890785,
+        0.013216591646622406
+      ]
+    },
+    "depth_random": {
+      "mse_improvement": -0.0003075428733313532,
+      "positive_pairs": 7,
+      "interval95": [
+        -0.01694451452832954,
+        0.017460027665095558
+      ]
+    }
+  },
+  "spatial_contrasts": {
+    "mean": {
+      "random": {
+        "mse_improvement": -0.002428026379954462,
+        "positive_pairs": 6,
+        "interval95": [
+          -0.052006946882687796,
+          0.04522706098423746
+        ]
+      },
+      "depth_random": {
+        "mse_improvement": -0.0049078786824563675,
+        "positive_pairs": 5,
+        "interval95": [
+          -0.045266279262684284,
+          0.03720723850767396
+        ]
+      },
+      "global": {
+        "mse_improvement": -0.030266616064555493,
+        "positive_pairs": 1,
+        "interval95": [
+          -0.06712451693509788,
+          0.002118291007211345
+        ]
+      }
+    },
+    "separate": {
+      "random": {
+        "mse_improvement": 0.0010452868059479031,
+        "positive_pairs": 7,
+        "interval95": [
+          -0.05240016954343432,
+          0.050294931681317386
+        ]
+      },
+      "depth_random": {
+        "mse_improvement": -0.007261336620688347,
+        "positive_pairs": 3,
+        "interval95": [
+          -0.052690733873818764,
+          0.038823517074456
+        ]
+      },
+      "global": {
+        "mse_improvement": -0.03876745042512663,
+        "positive_pairs": 1,
+        "interval95": [
+          -0.0874916202582815,
+          -0.002413318700792245
+        ]
+      }
+    }
+  },
+  "audit_summary": {
+    "global": {
+      "attention_rank": 1.000413524278127,
+      "attention_cosine": 0.9997835255702019,
+      "encoded_rank": 1.010806791310516,
+      "local_ablation_test_mse_increase": -0.0009539638019262081
+    },
+    "spatial": {
+      "attention_rank": 5.754251128997716,
+      "attention_cosine": 0.4000052180603702,
+      "encoded_rank": 1.289652322963522,
+      "local_ablation_test_mse_increase": 0.8345898910752166
+    },
+    "random": {
+      "attention_rank": 5.574418748941834,
+      "attention_cosine": 0.3995859824442121,
+      "encoded_rank": 1.171522443009272,
+      "local_ablation_test_mse_increase": 0.5999701280094755
+    },
+    "depth_random": {
+      "attention_rank": 6.03804985266643,
+      "attention_cosine": 0.3991853100601295,
+      "encoded_rank": 1.2006526914062252,
+      "local_ablation_test_mse_increase": 0.5002051527085414
+    }
+  },
+  "validation_selected_probe_arm": [
+    "global",
+    "mean"
+  ],
+  "saved_prediction_and_alpha_checks": true,
+  "full_checkpoint_reloads": 8,
+  "max_reload_64_validation_error": 9.5367431640625e-07
+}

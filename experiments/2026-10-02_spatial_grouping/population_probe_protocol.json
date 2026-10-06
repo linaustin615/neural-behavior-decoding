@@ -1,0 +1,25 @@
+{
+  "question": "How well do a few population-wide activity modes predict speed?",
+  "pool_seeds": [
+    101,
+    202,
+    303,
+    404,
+    505,
+    606
+  ],
+  "components": [
+    1,
+    4,
+    16
+  ],
+  "alphas": [
+    0.1,
+    1,
+    10,
+    100,
+    1000
+  ],
+  "fit": "PCA16 fitted only on training activity; ridge on8-bin histories; alpha chosen by validation; common target start31",
+  "interpretation": "Low-dimensional predictability is not proof spatial information is absent; descriptive secondary probe"
+}

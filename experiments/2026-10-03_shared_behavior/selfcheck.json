@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "models": [
+    {
+      "kind": "attention",
+      "sessions": 1,
+      "parameters": 12145
+    },
+    {
+      "kind": "attention",
+      "sessions": 4,
+      "parameters": 18337
+    },
+    {
+      "kind": "mlp",
+      "sessions": 1,
+      "parameters": 12135
+    },
+    {
+      "kind": "mlp",
+      "sessions": 4,
+      "parameters": 18327
+    }
+  ],
+  "shared_separate_initial_predictions_exact": true,
+  "common_non_temporal_initialization_exact": true,
+  "static_weights_input_invariant": true,
+  "attention_weights_input_dependent": true,
+  "body_and_routing_gradients": true,
+  "reload_exact": true,
+  "per_mouse_batch_order_shared_separate_exact": true,
+  "each_training_example_once_per_epoch": true
+}

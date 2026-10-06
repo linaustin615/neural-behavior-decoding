@@ -1,0 +1,89 @@
+[
+  {
+    "name": "original_constant",
+    "seed": 2,
+    "phase": "confirm",
+    "config": {
+      "n": 128,
+      "window": 8,
+      "width": 32,
+      "lr": 0.001,
+      "epochs": 24,
+      "schedule": "constant",
+      "temporal": "linear",
+      "readout": "mean",
+      "clip": null
+    }
+  },
+  {
+    "name": "combo_cosine",
+    "seed": 2,
+    "phase": "confirm",
+    "config": {
+      "n": 128,
+      "window": 8,
+      "width": 32,
+      "lr": 0.001,
+      "epochs": 24,
+      "schedule": "cosine",
+      "temporal": "mlp",
+      "readout": "attention",
+      "clip": 1.0
+    }
+  },
+  {
+    "name": "latent_n256",
+    "seed": 2,
+    "phase": "confirm",
+    "config": {
+      "n": 256,
+      "window": 8,
+      "width": 32,
+      "lr": 0.001,
+      "epochs": 24,
+      "schedule": "cosine",
+      "temporal": "mlp",
+      "readout": "mean",
+      "clip": 1.0,
+      "family": "latent",
+      "latents": 8
+    }
+  },
+  {
+    "name": "latent_n512",
+    "seed": 2,
+    "phase": "confirm",
+    "config": {
+      "n": 512,
+      "window": 8,
+      "width": 32,
+      "lr": 0.001,
+      "epochs": 24,
+      "schedule": "cosine",
+      "temporal": "mlp",
+      "readout": "mean",
+      "clip": 1.0,
+      "family": "latent",
+      "latents": 8
+    }
+  },
+  {
+    "name": "latent_n512_no_positions",
+    "seed": 0,
+    "phase": "ablation",
+    "config": {
+      "n": 512,
+      "window": 8,
+      "width": 32,
+      "lr": 0.001,
+      "epochs": 24,
+      "schedule": "cosine",
+      "temporal": "mlp",
+      "readout": "mean",
+      "clip": 1.0,
+      "family": "latent",
+      "latents": 8,
+      "no_positions": true
+    }
+  }
+]

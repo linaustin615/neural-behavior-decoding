@@ -1,0 +1,87 @@
+{
+  "name": "ridge_512_w8",
+  "seed": null,
+  "phase": "inputs",
+  "kind": "ridge",
+  "config": {
+    "n": 512,
+    "window": 8
+  },
+  "alpha": 1000.0,
+  "validation": {
+    "mse": 0.44129409862006047,
+    "raw_mse": 0.5197952329036166,
+    "rmse_speed_units": 4.930907921878416,
+    "mae_speed_units": 3.033682514605139,
+    "r2": 0.7503439171526207,
+    "negative_prediction_fraction": 0.3283582089552239
+  },
+  "fits": [
+    {
+      "alpha": 0.1,
+      "iterations": 2352,
+      "mse": 9.727979817704503,
+      "raw_mse": 19.660130826294374,
+      "rmse_speed_units": 23.151234998777493,
+      "mae_speed_units": 14.18944671310053,
+      "r2": -4.503471138410701,
+      "negative_prediction_fraction": 0.47682639434406915
+    },
+    {
+      "alpha": 1.0,
+      "iterations": 1029,
+      "mse": 4.530731858822981,
+      "raw_mse": 8.328804102762968,
+      "rmse_speed_units": 15.79963350456758,
+      "mae_speed_units": 10.064499339518974,
+      "r2": -1.5631993988649082,
+      "negative_prediction_fraction": 0.43597800471327575
+    },
+    {
+      "alpha": 10.0,
+      "iterations": 380,
+      "mse": 1.652668589915191,
+      "raw_mse": 2.633200740933909,
+      "rmse_speed_units": 9.542358296883949,
+      "mae_speed_units": 6.089087451817042,
+      "r2": 0.06502541571859521,
+      "negative_prediction_fraction": 0.3927729772191673
+    },
+    {
+      "alpha": 100.0,
+      "iterations": 136,
+      "mse": 0.7135513622367805,
+      "raw_mse": 0.9807132341722559,
+      "rmse_speed_units": 6.270114225977631,
+      "mae_speed_units": 3.9739782212647743,
+      "r2": 0.5963181049474657,
+      "negative_prediction_fraction": 0.3723487824037706
+    },
+    {
+      "alpha": 1000.0,
+      "iterations": 49,
+      "mse": 0.44129409862006047,
+      "raw_mse": 0.5197952329036166,
+      "rmse_speed_units": 4.930907921878416,
+      "mae_speed_units": 3.033682514605139,
+      "r2": 0.7503439171526207,
+      "negative_prediction_fraction": 0.3283582089552239
+    },
+    {
+      "alpha": 10000.0,
+      "iterations": 19,
+      "mse": 0.4909120895035044,
+      "raw_mse": 0.5020280819409604,
+      "rmse_speed_units": 5.200734658081562,
+      "mae_speed_units": 3.139551160169098,
+      "r2": 0.7222732194445538,
+      "negative_prediction_fraction": 0.21052631578947367
+    }
+  ],
+  "seconds": 10.718469542,
+  "train_examples": 4129,
+  "val_examples": 1273,
+  "parameters": 4097,
+  "checkpoint": "inputs_ridge_512_w8_ridge.npz",
+  "predictions": "inputs_ridge_512_w8_ridge_predictions.npz"
+}

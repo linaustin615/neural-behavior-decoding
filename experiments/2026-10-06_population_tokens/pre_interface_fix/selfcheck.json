@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "rows": [
+    {
+      "family": "attention",
+      "parameters": 41633,
+      "causal_patch_prefix_exact": true,
+      "readin_gradient": true,
+      "other_session_gradients_zero": true,
+      "reload_exact": true
+    },
+    {
+      "family": "mlp",
+      "parameters": 41623,
+      "causal_patch_prefix_exact": true,
+      "readin_gradient": true,
+      "other_session_gradients_zero": true,
+      "reload_exact": true
+    }
+  ],
+  "common_initial_tensors": 11,
+  "population_projection_independently_checked": true,
+  "inputs_unchanged": true
+}

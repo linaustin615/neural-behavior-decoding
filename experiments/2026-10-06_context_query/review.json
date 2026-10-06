@@ -1,0 +1,182 @@
+{
+  "passed": true,
+  "aggregate_and_parameter_checks": 105,
+  "new_neural_fits": 6,
+  "full_replication_passed": false,
+  "selection_scores_checked": 600,
+  "scalar_errors_checked": 288,
+  "new_predictions": 13308,
+  "frozen_source_hashes": 190,
+  "selected_artifact_hashes": 30,
+  "main_application_unchanged": true,
+  "parameter_changes": [
+    {
+      "family": "attention",
+      "seed": 10,
+      "parameter": "head.3.weight",
+      "final_change": 0.4506092071533203,
+      "selected_change": 0.39056646823883057
+    },
+    {
+      "family": "attention",
+      "seed": 10,
+      "parameter": "context_projection.weight",
+      "final_change": 0.7927066683769226,
+      "selected_change": 0.7244001030921936
+    },
+    {
+      "family": "attention",
+      "seed": 10,
+      "parameter": "context.readin",
+      "final_change": 8.6004638671875,
+      "selected_change": 7.684169292449951
+    },
+    {
+      "family": "attention",
+      "seed": 10,
+      "parameter": "context.temporal.mix.in_proj_weight",
+      "final_change": 1.2817145586013794,
+      "selected_change": 1.0536754131317139
+    },
+    {
+      "family": "attention",
+      "seed": 11,
+      "parameter": "head.3.weight",
+      "final_change": 0.4432936906814575,
+      "selected_change": 0.41774216294288635
+    },
+    {
+      "family": "attention",
+      "seed": 11,
+      "parameter": "context_projection.weight",
+      "final_change": 0.718441367149353,
+      "selected_change": 0.7023263573646545
+    },
+    {
+      "family": "attention",
+      "seed": 11,
+      "parameter": "context.readin",
+      "final_change": 8.407346725463867,
+      "selected_change": 8.205084800720215
+    },
+    {
+      "family": "attention",
+      "seed": 11,
+      "parameter": "context.temporal.mix.in_proj_weight",
+      "final_change": 1.0227116346359253,
+      "selected_change": 0.9730256795883179
+    },
+    {
+      "family": "attention",
+      "seed": 12,
+      "parameter": "head.3.weight",
+      "final_change": 0.4448595643043518,
+      "selected_change": 0.42743629217147827
+    },
+    {
+      "family": "attention",
+      "seed": 12,
+      "parameter": "context_projection.weight",
+      "final_change": 0.8300657868385315,
+      "selected_change": 0.8143351674079895
+    },
+    {
+      "family": "attention",
+      "seed": 12,
+      "parameter": "context.readin",
+      "final_change": 8.54354476928711,
+      "selected_change": 8.371493339538574
+    },
+    {
+      "family": "attention",
+      "seed": 12,
+      "parameter": "context.temporal.mix.in_proj_weight",
+      "final_change": 1.1512830257415771,
+      "selected_change": 1.0911178588867188
+    },
+    {
+      "family": "mlp",
+      "seed": 10,
+      "parameter": "head.3.weight",
+      "final_change": 0.48776695132255554,
+      "selected_change": 0.4568628966808319
+    },
+    {
+      "family": "mlp",
+      "seed": 10,
+      "parameter": "context_projection.weight",
+      "final_change": 0.709657609462738,
+      "selected_change": 0.673297643661499
+    },
+    {
+      "family": "mlp",
+      "seed": 10,
+      "parameter": "context.readin",
+      "final_change": 8.647377967834473,
+      "selected_change": 8.28918170928955
+    },
+    {
+      "family": "mlp",
+      "seed": 10,
+      "parameter": "context.temporal.weight",
+      "final_change": 0.39099690318107605,
+      "selected_change": 0.38125336170196533
+    },
+    {
+      "family": "mlp",
+      "seed": 11,
+      "parameter": "head.3.weight",
+      "final_change": 0.45724010467529297,
+      "selected_change": 0.4059847295284271
+    },
+    {
+      "family": "mlp",
+      "seed": 11,
+      "parameter": "context_projection.weight",
+      "final_change": 0.69643235206604,
+      "selected_change": 0.661797285079956
+    },
+    {
+      "family": "mlp",
+      "seed": 11,
+      "parameter": "context.readin",
+      "final_change": 8.295509338378906,
+      "selected_change": 7.65017032623291
+    },
+    {
+      "family": "mlp",
+      "seed": 11,
+      "parameter": "context.temporal.weight",
+      "final_change": 0.3723551034927368,
+      "selected_change": 0.36031168699264526
+    },
+    {
+      "family": "mlp",
+      "seed": 12,
+      "parameter": "head.3.weight",
+      "final_change": 0.4382469654083252,
+      "selected_change": 0.3898729085922241
+    },
+    {
+      "family": "mlp",
+      "seed": 12,
+      "parameter": "context_projection.weight",
+      "final_change": 0.670551598072052,
+      "selected_change": 0.6225404739379883
+    },
+    {
+      "family": "mlp",
+      "seed": 12,
+      "parameter": "context.readin",
+      "final_change": 8.422333717346191,
+      "selected_change": 7.533748149871826
+    },
+    {
+      "family": "mlp",
+      "seed": 12,
+      "parameter": "context.temporal.weight",
+      "final_change": 0.5234302878379822,
+      "selected_change": 0.507932722568512
+    }
+  ]
+}

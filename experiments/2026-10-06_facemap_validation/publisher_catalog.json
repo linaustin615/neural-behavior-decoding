@@ -1,0 +1,222 @@
+{
+  "files": [
+    {
+      "id": 52543184,
+      "name": "neural_data_sensorimotor.zip",
+      "size": 12190379852,
+      "is_link_only": false,
+      "download_url": "https://ndownloader.figshare.com/files/52543184",
+      "supplied_md5": "e00e27ee51ddab472df49a1a6d33ded7",
+      "computed_md5": "e00e27ee51ddab472df49a1a6d33ded7",
+      "mimetype": "undefined"
+    },
+    {
+      "id": 41616717,
+      "name": "filtered_keypoints.zip",
+      "size": 553142540,
+      "is_link_only": false,
+      "download_url": "https://ndownloader.figshare.com/files/41616717",
+      "supplied_md5": "5c73064dd73dec358876cd1307567c8c",
+      "computed_md5": "5c73064dd73dec358876cd1307567c8c",
+      "mimetype": "application/zip"
+    },
+    {
+      "id": 41617308,
+      "name": "svds.zip",
+      "size": 38505989555,
+      "is_link_only": false,
+      "download_url": "https://ndownloader.figshare.com/files/41617308",
+      "supplied_md5": "10e264b34a24c19014120a06f08f3b1e",
+      "computed_md5": "",
+      "mimetype": "undefined"
+    },
+    {
+      "id": 41617413,
+      "name": "cam.zip",
+      "size": 105753223147,
+      "is_link_only": false,
+      "download_url": "https://ndownloader.figshare.com/files/41617413",
+      "supplied_md5": "601398be3a5e91adfbceb3dfb2f545b3",
+      "computed_md5": "601398be3a5e91adfbceb3dfb2f545b3",
+      "mimetype": "undefined"
+    },
+    {
+      "id": 43006402,
+      "name": "pose_estimation.zip",
+      "size": 384171446,
+      "is_link_only": false,
+      "download_url": "https://ndownloader.figshare.com/files/43006402",
+      "supplied_md5": "f2e5c3b138c7f4192502ac97055e3bdc",
+      "computed_md5": "f2e5c3b138c7f4192502ac97055e3bdc",
+      "mimetype": "application/zip"
+    },
+    {
+      "id": 52543310,
+      "name": "neural_data_visual.zip",
+      "size": 31773571030,
+      "is_link_only": false,
+      "download_url": "https://ndownloader.figshare.com/files/52543310",
+      "supplied_md5": "2ae0287ee34267aa7e2dd198a839f215",
+      "computed_md5": "2ae0287ee34267aa7e2dd198a839f215",
+      "mimetype": "undefined"
+    }
+  ],
+  "folder_structure": {},
+  "authors": [
+    {
+      "id": 16618364,
+      "full_name": "Atika Syeda",
+      "first_name": "Atika",
+      "last_name": "Syeda",
+      "is_active": false,
+      "url_name": "_",
+      "orcid_id": "0000-0002-3097-4071"
+    },
+    {
+      "id": 16553298,
+      "full_name": "Lin Zhong",
+      "first_name": "Lin",
+      "last_name": "Zhong",
+      "is_active": false,
+      "url_name": "_",
+      "orcid_id": "0000-0002-9740-628X"
+    },
+    {
+      "id": 16553991,
+      "full_name": "Renee Tung",
+      "first_name": "Renee",
+      "last_name": "Tung",
+      "is_active": false,
+      "url_name": "_",
+      "orcid_id": "0000-0003-4603-8170"
+    },
+    {
+      "id": 16553301,
+      "full_name": "Will Long",
+      "first_name": "Will",
+      "last_name": "Long",
+      "is_active": false,
+      "url_name": "_",
+      "orcid_id": "0000-0001-9683-5915"
+    },
+    {
+      "id": 4494118,
+      "full_name": "Marius Pachitariu",
+      "first_name": "Marius",
+      "last_name": "Pachitariu",
+      "is_active": true,
+      "url_name": "Marius_Pachitariu",
+      "orcid_id": ""
+    },
+    {
+      "id": 16558623,
+      "full_name": "Carsen Stringer",
+      "first_name": "Carsen",
+      "last_name": "Stringer",
+      "is_active": true,
+      "url_name": "Carsen_Stringer",
+      "orcid_id": ""
+    }
+  ],
+  "custom_fields": [],
+  "figshare_url": "https://janelia.figshare.com/articles/dataset/Facemap_a_framework_for_modeling_neural_activity_based_on_orofacial_tracking/23712957",
+  "download_disabled": false,
+  "description": "<p dir=\"ltr\">Neural activity, face camera data, and behavioral tracking from 16 large-scale recordings from visual cortex, and the train/test data for the Facemap keypoint tracker. Please see the paper and code repository for more details about the data acquisition and analysis.</p><p dir=\"ltr\">Version 2 updates the neural activity with new deconvolution method described in <a href=\"https://www.biorxiv.org/content/10.1101/2025.01.10.632397v1\" rel=\"noreferrer\" target=\"_blank\">https://www.biorxiv.org/content/10.1101/2025.01.10.632397v1</a>; also two of the recordings are reprocessed with suite2p with larger motion correction offsets enabled; xpos for neurons corrected (!=ypos).</p><p dir=\"ltr\"><br>Data files:</p><ul><li>neural_activity_*.zip: contains npz files with deconvolved neural traces \"spks\" (neurons by times), neuron positions \"xpos\" and \"ypos\", camera timestamps \"tcam\", neural timestamps \"tneural\", and running speed \"run\"</li><li>filtered_keypoints.zip: contains npy files with a dictionary with filtered keypoint traces \"xy\" and keypoint labels \"keypoint_labels\", which can be used to predict neural activity</li><li>svds.zip: contains npy files which are dictionaries in Facemap output format for the motion and movie SVD of the camera recording</li><li>cam.zip: contains camera recordings in mp4 and avi format, and the raw keypoint tracking h5 files</li><li>pose_estimation.zip: dataset used for training and testing the Facemap keypoint tracking network. The zipped file contains train and test files: mouse face images in PNG format and h5 annotations with \"x\" coordinates and \"y\" coordinates for the 15 labeled keypoints. Each subfolder in train and test is formatted as either \u2018mousename_date_cameraview' or \u2018cameraview_mousename_date'.</li></ul><p dir=\"ltr\">If you use this data please cite this data repository and the original paper:<br>Syeda, A., Zhong, L., Tung, R., Long, W., Pachitariu, M., & Stringer, C. (2023). Facemap: a framework for modeling neural activity based on orofacial tracking. <i>Nature Neuroscience</i>. <a href=\"https://doi.org/10.1038/s41593-023-01490-6\" rel=\"noreferrer\" target=\"_blank\">https://doi.org/10.1038/s41593-023-01490-6</a></p><p><br></p>",
+  "funding": "HHMI Janelia Research Campus",
+  "funding_list": [
+    {
+      "id": 14917631,
+      "title": "HHMI Janelia Research Campus",
+      "grant_code": "",
+      "funder_name": null,
+      "is_user_defined": 1
+    }
+  ],
+  "version": 2,
+  "status": "public",
+  "size": 189160477570,
+  "created_date": "2025-02-24T18:30:07Z",
+  "modified_date": "2025-02-24T18:30:08Z",
+  "is_public": true,
+  "is_confidential": false,
+  "is_metadata_record": false,
+  "confidential_reason": "",
+  "metadata_reason": "",
+  "license": {
+    "value": 10,
+    "name": "CC BY-NC 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  },
+  "tags": [
+    "two-photon calcium imaging",
+    "behavioral analysis",
+    "large-scale neural activity",
+    "Neural networks (Computer science) -- Design and construction"
+  ],
+  "keywords": [
+    "two-photon calcium imaging",
+    "behavioral analysis",
+    "large-scale neural activity",
+    "Neural networks (Computer science) -- Design and construction"
+  ],
+  "categories": [
+    {
+      "id": 24736,
+      "title": "Computational neuroscience (incl. mathematical neuroscience and theoretical neuroscience)",
+      "parent_id": 24724,
+      "path": "/24457/24724/24736",
+      "source_id": "320904",
+      "taxonomy_id": 100
+    },
+    {
+      "id": 30331,
+      "title": "Behavioural neuroscience",
+      "parent_id": 30325,
+      "path": "/30292/30325/30331",
+      "source_id": "520202",
+      "taxonomy_id": 100
+    }
+  ],
+  "references": [
+    "https://doi.org/10.1038/s41593-023-01490-6"
+  ],
+  "has_linked_file": false,
+  "citation": "Syeda, Atika; Zhong, Lin; Tung, Renee; Long, Will; Pachitariu, Marius; Stringer, Carsen (2023). Facemap: a framework for modeling neural activity based on orofacial tracking. Janelia Research Campus. Dataset. https://doi.org/10.25378/janelia.23712957.v2",
+  "related_materials": [
+    {
+      "id": 214203944,
+      "identifier": "10.1038/s41593-023-01490-6",
+      "title": "Facemap: a framework for modeling neural activity based on orofacial tracking",
+      "relation": "IsSupplementTo",
+      "identifier_type": "DOI",
+      "is_linkout": true,
+      "link": "https://doi.org/10.1038/s41593-023-01490-6"
+    }
+  ],
+  "is_embargoed": false,
+  "embargo_date": null,
+  "embargo_type": null,
+  "embargo_title": "",
+  "embargo_reason": "",
+  "embargo_options": [],
+  "id": 23712957,
+  "title": "Facemap: a framework for modeling neural activity based on orofacial tracking",
+  "doi": "10.25378/janelia.23712957.v2",
+  "handle": "",
+  "url": "https://api.figshare.com/v2/articles/23712957",
+  "published_date": "2025-02-24T18:30:07Z",
+  "thumb": "",
+  "defined_type": 3,
+  "defined_type_name": "dataset",
+  "group_id": 11380,
+  "url_private_api": "https://api.figshare.com/v2/account/articles/23712957",
+  "url_public_api": "https://api.figshare.com/v2/articles/23712957",
+  "url_private_html": "https://figshare.com/account/articles/23712957",
+  "url_public_html": "https://janelia.figshare.com/articles/dataset/Facemap_a_framework_for_modeling_neural_activity_based_on_orofacial_tracking/23712957",
+  "timeline": {
+    "posted": "2025-02-24T18:30:07",
+    "firstOnline": "2023-11-02"
+  },
+  "resource_title": "Facemap: a framework for modeling neural activity based on orofacial tracking",
+  "resource_doi": "10.1038/s41593-023-01490-6"
+}

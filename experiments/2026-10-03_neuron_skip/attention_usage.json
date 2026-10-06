@@ -1,0 +1,818 @@
+{
+  "scope": "Post-hoc training-only audit; no causal or significance claim",
+  "contexts_per_mouse": 32,
+  "checkpoint_states_checked": 48,
+  "encoder_state_unchanged": true,
+  "summary": {
+    "random": {
+      "temporal": {
+        "normalized_entropy": 0.969993993639946,
+        "total_variation_from_uniform": 0.09893576304117839
+      },
+      "population": {
+        "normalized_entropy": 0.9862874746322632,
+        "total_variation_from_uniform": 0.1356182862073183
+      }
+    },
+    "pretrained": {
+      "temporal": {
+        "normalized_entropy": 0.9473820279041926,
+        "total_variation_from_uniform": 0.1258842876801888
+      },
+      "population": {
+        "normalized_entropy": 0.9774387379487356,
+        "total_variation_from_uniform": 0.16770204529166222
+      }
+    },
+    "prior_finetuned": {
+      "temporal": {
+        "normalized_entropy": 0.9260097940762838,
+        "total_variation_from_uniform": 0.15046969366570315
+      },
+      "population": {
+        "normalized_entropy": 0.8467667947212855,
+        "total_variation_from_uniform": 0.4333399136861165
+      }
+    },
+    "neuron_readout_finetuned": {
+      "temporal": {
+        "normalized_entropy": 0.9323734591404597,
+        "total_variation_from_uniform": 0.1431728315850099
+      },
+      "population": {
+        "normalized_entropy": 0.9660849124193192,
+        "total_variation_from_uniform": 0.20270681008696556
+      }
+    }
+  },
+  "rows": [
+    {
+      "mouse": "MP030",
+      "seed": 10,
+      "state": "random",
+      "checkpoint_sha256": "d0866809fa2fa9eb88ac2f497aec2441b77833c8149459095e9a65d162a866fc",
+      "metrics": {
+        "temporal": {
+          "normalized_entropy": 0.9672264456748962,
+          "total_variation_from_uniform": 0.10273777693510056
+        },
+        "population": {
+          "normalized_entropy": 0.9857273697853088,
+          "total_variation_from_uniform": 0.14044390618801117
+        }
+      }
+    },
+    {
+      "mouse": "MP030",
+      "seed": 10,
+      "state": "pretrained",
+      "checkpoint_sha256": "53095c1f69103dc074fcfc2f01e62d763b7a3409115bcb9cb38b872bf59c2d4e",
+      "metrics": {
+        "temporal": {
+          "normalized_entropy": 0.9657019376754761,
+          "total_variation_from_uniform": 0.10392316430807114
+        },
+        "population": {
+          "normalized_entropy": 0.9798603653907776,
+          "total_variation_from_uniform": 0.16871044039726257
+        }
+      }
+    },
+    {
+      "mouse": "MP030",
+      "seed": 10,
+      "state": "prior_finetuned",
+      "checkpoint_sha256": "6132efa9911cb8a5c16eea85a223f6098ee4d73d5a2aeb04998c3f81cb354840",
+      "metrics": {
+        "temporal": {
+          "normalized_entropy": 0.9407464265823364,
+          "total_variation_from_uniform": 0.1351991593837738
+        },
+        "population": {
+          "normalized_entropy": 0.8935802578926086,
+          "total_variation_from_uniform": 0.36031201481819153
+        }
+      }
+    },
+    {
+      "mouse": "MP030",
+      "seed": 10,
+      "state": "neuron_readout_finetuned",
+      "checkpoint_sha256": "397b6789c0aa14edadebeef91839f51e4aef70778e0fc425027a253ffbd6dde8",
+      "metrics": {
+        "temporal": {
+          "normalized_entropy": 0.9476079940795898,
+          "total_variation_from_uniform": 0.1283905804157257
+        },
+        "population": {
+          "normalized_entropy": 0.9802412986755371,
+          "total_variation_from_uniform": 0.16737475991249084
+        }
+      }
+    },
+    {
+      "mouse": "MP030",
+      "seed": 11,
+      "state": "random",
+      "checkpoint_sha256": "9980eeeda6a4d09266fb7e2be4b6bad443304a091c44539fbd749e4485ac0477",
+      "metrics": {
+        "temporal": {
+          "normalized_entropy": 0.9773006439208984,
+          "total_variation_from_uniform": 0.0885976180434227
+        },
+        "population": {
+          "normalized_entropy": 0.9857673645019531,
+          "total_variation_from_uniform": 0.13097240030765533
+        }
+      }
+    },
+    {
+      "mouse": "MP030",
+      "seed": 11,
+      "state": "pretrained",
+      "checkpoint_sha256": "5d95f3e2eb22e4c2d06bef6d314b5859e7c9cc9582ac8a6d91819a933d7f9310",
+      "metrics": {
+        "temporal": {
+          "normalized_entropy": 0.964665949344635,
+          "total_variation_from_uniform": 0.10648238658905029
+        },
+        "population": {
+          "normalized_entropy": 0.9857984781265259,
+          "total_variation_from_uniform": 0.13901075720787048
+        }
+      }
+    },
+    {
+      "mouse": "MP030",
+      "seed": 11,
+      "state": "prior_finetuned",
+      "checkpoint_sha256": "281542e104bc69ef2894333f62f4a9e6dd37220303365d4e8bef12a8cfc4e566",
+      "metrics": {
+        "temporal": {
+          "normalized_entropy": 0.9530609846115112,
+          "total_variation_from_uniform": 0.12437067180871964
+        },
+        "population": {
+          "normalized_entropy": 0.5635584592819214,
+          "total_variation_from_uniform": 0.727462112903595
+        }
+      }
+    },
+    {
+      "mouse": "MP030",
+      "seed": 11,
+      "state": "neuron_readout_finetuned",
+      "checkpoint_sha256": "91a6f03161fd5c0db248516029477736b15ada1f812d07112e2b6ce9db643059",
+      "metrics": {
+        "temporal": {
+          "normalized_entropy": 0.9352787733078003,
+          "total_variation_from_uniform": 0.15171366930007935
+        },
+        "population": {
+          "normalized_entropy": 0.9775275588035583,
+          "total_variation_from_uniform": 0.177359938621521
+        }
+      }
+    },
+    {
+      "mouse": "MP030",
+      "seed": 12,
+      "state": "random",
+      "checkpoint_sha256": "bd4306ca1f2dee16eac48997b3292268e785e9d56db2d8f90c0d58385e8a3de6",
+      "metrics": {
+        "temporal": {
+          "normalized_entropy": 0.9646140336990356,
+          "total_variation_from_uniform": 0.10774116218090057
+        },
+        "population": {
+          "normalized_entropy": 0.9874531030654907,
+          "total_variation_from_uniform": 0.13498073816299438
+        }
+      }
+    },
+    {
+      "mouse": "MP030",
+      "seed": 12,
+      "state": "pretrained",
+      "checkpoint_sha256": "4db74fbb0186c2ed4056ccba4679ebee19f62f66ff8ecf2e366816d0f60e30d7",
+      "metrics": {
+        "temporal": {
+          "normalized_entropy": 0.9419156312942505,
+          "total_variation_from_uniform": 0.13740292191505432
+        },
+        "population": {
+          "normalized_entropy": 0.979182779788971,
+          "total_variation_from_uniform": 0.16796539723873138
+        }
+      }
+    },
+    {
+      "mouse": "MP030",
+      "seed": 12,
+      "state": "prior_finetuned",
+      "checkpoint_sha256": "d565dea5aca367c149784acd31e711dfd4c8ba63208cefb79f0f14b5f6ebc386",
+      "metrics": {
+        "temporal": {
+          "normalized_entropy": 0.9338783621788025,
+          "total_variation_from_uniform": 0.14512822031974792
+        },
+        "population": {
+          "normalized_entropy": 0.9028701782226562,
+          "total_variation_from_uniform": 0.3459339141845703
+        }
+      }
+    },
+    {
+      "mouse": "MP030",
+      "seed": 12,
+      "state": "neuron_readout_finetuned",
+      "checkpoint_sha256": "d768be2e3aa12e2a6c3d50ef2822996bbb7d42dad7de307d66e8ecee5010c530",
+      "metrics": {
+        "temporal": {
+          "normalized_entropy": 0.9357377290725708,
+          "total_variation_from_uniform": 0.14511536061763763
+        },
+        "population": {
+          "normalized_entropy": 0.9681676626205444,
+          "total_variation_from_uniform": 0.2011028528213501
+        }
+      }
+    },
+    {
+      "mouse": "MP032",
+      "seed": 10,
+      "state": "random",
+      "checkpoint_sha256": "d0866809fa2fa9eb88ac2f497aec2441b77833c8149459095e9a65d162a866fc",
+      "metrics": {
+        "temporal": {
+          "normalized_entropy": 0.9692326784133911,
+          "total_variation_from_uniform": 0.09863723814487457
+        },
+        "population": {
+          "normalized_entropy": 0.9865583181381226,
+          "total_variation_from_uniform": 0.1358112394809723
+        }
+      }
+    },
+    {
+      "mouse": "MP032",
+      "seed": 10,
+      "state": "pretrained",
+      "checkpoint_sha256": "f7ff2d448fce4932fb13379e86d80cea285acc7684ed7092d317d236013f03b5",
+      "metrics": {
+        "temporal": {
+          "normalized_entropy": 0.9396882653236389,
+          "total_variation_from_uniform": 0.13269920647144318
+        },
+        "population": {
+          "normalized_entropy": 0.9741581082344055,
+          "total_variation_from_uniform": 0.1830189973115921
+        }
+      }
+    },
+    {
+      "mouse": "MP032",
+      "seed": 10,
+      "state": "prior_finetuned",
+      "checkpoint_sha256": "03de19b5680beff75e36e2d06d6f5aeeb9af5314ce3f23fee6b4a7a417e4e599",
+      "metrics": {
+        "temporal": {
+          "normalized_entropy": 0.894903302192688,
+          "total_variation_from_uniform": 0.18502703309059143
+        },
+        "population": {
+          "normalized_entropy": 0.8689932823181152,
+          "total_variation_from_uniform": 0.40284812450408936
+        }
+      }
+    },
+    {
+      "mouse": "MP032",
+      "seed": 10,
+      "state": "neuron_readout_finetuned",
+      "checkpoint_sha256": "abbc3cd12239a933cbfdb1bc079ee38b33a1294bc7c7c067056946a01c5608a0",
+      "metrics": {
+        "temporal": {
+          "normalized_entropy": 0.9483917951583862,
+          "total_variation_from_uniform": 0.12240362167358398
+        },
+        "population": {
+          "normalized_entropy": 0.9705052375793457,
+          "total_variation_from_uniform": 0.1855083554983139
+        }
+      }
+    },
+    {
+      "mouse": "MP032",
+      "seed": 11,
+      "state": "random",
+      "checkpoint_sha256": "9980eeeda6a4d09266fb7e2be4b6bad443304a091c44539fbd749e4485ac0477",
+      "metrics": {
+        "temporal": {
+          "normalized_entropy": 0.97898930311203,
+          "total_variation_from_uniform": 0.08440443128347397
+        },
+        "population": {
+          "normalized_entropy": 0.9871130585670471,
+          "total_variation_from_uniform": 0.12465059012174606
+        }
+      }
+    },
+    {
+      "mouse": "MP032",
+      "seed": 11,
+      "state": "pretrained",
+      "checkpoint_sha256": "075ae424505b408a788cbf79236e0ea4bb7da4e15b4f3d48fdbe5cfe422efccd",
+      "metrics": {
+        "temporal": {
+          "normalized_entropy": 0.9635930061340332,
+          "total_variation_from_uniform": 0.09626401960849762
+        },
+        "population": {
+          "normalized_entropy": 0.9633088111877441,
+          "total_variation_from_uniform": 0.20672504603862762
+        }
+      }
+    },
+    {
+      "mouse": "MP032",
+      "seed": 11,
+      "state": "prior_finetuned",
+      "checkpoint_sha256": "167632b7909b0664376fd5490bc0dbf6322e8e061f0753ba94a176c2f181bb57",
+      "metrics": {
+        "temporal": {
+          "normalized_entropy": 0.9442829489707947,
+          "total_variation_from_uniform": 0.12810814380645752
+        },
+        "population": {
+          "normalized_entropy": 0.8271926641464233,
+          "total_variation_from_uniform": 0.482326865196228
+        }
+      }
+    },
+    {
+      "mouse": "MP032",
+      "seed": 11,
+      "state": "neuron_readout_finetuned",
+      "checkpoint_sha256": "ac696dced76f8015aa39e33316b9e7b8a01c30fda5805e4c2606560f14452479",
+      "metrics": {
+        "temporal": {
+          "normalized_entropy": 0.9607664346694946,
+          "total_variation_from_uniform": 0.10150186717510223
+        },
+        "population": {
+          "normalized_entropy": 0.9413707256317139,
+          "total_variation_from_uniform": 0.26856479048728943
+        }
+      }
+    },
+    {
+      "mouse": "MP032",
+      "seed": 12,
+      "state": "random",
+      "checkpoint_sha256": "bd4306ca1f2dee16eac48997b3292268e785e9d56db2d8f90c0d58385e8a3de6",
+      "metrics": {
+        "temporal": {
+          "normalized_entropy": 0.9659672975540161,
+          "total_variation_from_uniform": 0.10535192489624023
+        },
+        "population": {
+          "normalized_entropy": 0.9880977869033813,
+          "total_variation_from_uniform": 0.1303132176399231
+        }
+      }
+    },
+    {
+      "mouse": "MP032",
+      "seed": 12,
+      "state": "pretrained",
+      "checkpoint_sha256": "f756dab029b602e23b19a1ddc7db4b4bc23f42b7524234618288dc58a731686f",
+      "metrics": {
+        "temporal": {
+          "normalized_entropy": 0.9034455418586731,
+          "total_variation_from_uniform": 0.16771608591079712
+        },
+        "population": {
+          "normalized_entropy": 0.9506416320800781,
+          "total_variation_from_uniform": 0.2390725463628769
+        }
+      }
+    },
+    {
+      "mouse": "MP032",
+      "seed": 12,
+      "state": "prior_finetuned",
+      "checkpoint_sha256": "8b0f2ac8de6f5955952d0778a6b9f1e319f9352933671c3bd09069ae6e63556b",
+      "metrics": {
+        "temporal": {
+          "normalized_entropy": 0.8842559456825256,
+          "total_variation_from_uniform": 0.18671225011348724
+        },
+        "population": {
+          "normalized_entropy": 0.8794195055961609,
+          "total_variation_from_uniform": 0.38971197605133057
+        }
+      }
+    },
+    {
+      "mouse": "MP032",
+      "seed": 12,
+      "state": "neuron_readout_finetuned",
+      "checkpoint_sha256": "2366d19195a4cd4d5c56c1e7ca1d361986ad09d4297c5b34195f4381de7acd0b",
+      "metrics": {
+        "temporal": {
+          "normalized_entropy": 0.8953393697738647,
+          "total_variation_from_uniform": 0.17663665115833282
+        },
+        "population": {
+          "normalized_entropy": 0.9168883562088013,
+          "total_variation_from_uniform": 0.3123302459716797
+        }
+      }
+    },
+    {
+      "mouse": "MP033",
+      "seed": 10,
+      "state": "random",
+      "checkpoint_sha256": "d0866809fa2fa9eb88ac2f497aec2441b77833c8149459095e9a65d162a866fc",
+      "metrics": {
+        "temporal": {
+          "normalized_entropy": 0.9666628241539001,
+          "total_variation_from_uniform": 0.10350137203931808
+        },
+        "population": {
+          "normalized_entropy": 0.9852088689804077,
+          "total_variation_from_uniform": 0.14343658089637756
+        }
+      }
+    },
+    {
+      "mouse": "MP033",
+      "seed": 10,
+      "state": "pretrained",
+      "checkpoint_sha256": "1b871d3ee6c8a7a517cfc2055c54f0d94b0bf57e108a6974e1813f746e73f527",
+      "metrics": {
+        "temporal": {
+          "normalized_entropy": 0.9620414972305298,
+          "total_variation_from_uniform": 0.11204361915588379
+        },
+        "population": {
+          "normalized_entropy": 0.9756391048431396,
+          "total_variation_from_uniform": 0.18520565330982208
+        }
+      }
+    },
+    {
+      "mouse": "MP033",
+      "seed": 10,
+      "state": "prior_finetuned",
+      "checkpoint_sha256": "a4633a215e9e600952583ece40ff872b33105a7528f72ee22cc442ed6af58ee1",
+      "metrics": {
+        "temporal": {
+          "normalized_entropy": 0.9260684251785278,
+          "total_variation_from_uniform": 0.14898160099983215
+        },
+        "population": {
+          "normalized_entropy": 0.8117231130599976,
+          "total_variation_from_uniform": 0.503778338432312
+        }
+      }
+    },
+    {
+      "mouse": "MP033",
+      "seed": 10,
+      "state": "neuron_readout_finetuned",
+      "checkpoint_sha256": "f0f19f722255559a3fed893fae1466de9246ae7c4ffc2e6a361fd4a958127645",
+      "metrics": {
+        "temporal": {
+          "normalized_entropy": 0.9533219933509827,
+          "total_variation_from_uniform": 0.12163679301738739
+        },
+        "population": {
+          "normalized_entropy": 0.96311354637146,
+          "total_variation_from_uniform": 0.22557197511196136
+        }
+      }
+    },
+    {
+      "mouse": "MP033",
+      "seed": 11,
+      "state": "random",
+      "checkpoint_sha256": "9980eeeda6a4d09266fb7e2be4b6bad443304a091c44539fbd749e4485ac0477",
+      "metrics": {
+        "temporal": {
+          "normalized_entropy": 0.9774684906005859,
+          "total_variation_from_uniform": 0.08788183331489563
+        },
+        "population": {
+          "normalized_entropy": 0.9853777885437012,
+          "total_variation_from_uniform": 0.13344427943229675
+        }
+      }
+    },
+    {
+      "mouse": "MP033",
+      "seed": 11,
+      "state": "pretrained",
+      "checkpoint_sha256": "3ff08f45ed74dc11c1cb14249cc260c11ecb61a21e34a1a542770aa860f41c95",
+      "metrics": {
+        "temporal": {
+          "normalized_entropy": 0.9508875012397766,
+          "total_variation_from_uniform": 0.12706279754638672
+        },
+        "population": {
+          "normalized_entropy": 0.9909051656723022,
+          "total_variation_from_uniform": 0.11063706874847412
+        }
+      }
+    },
+    {
+      "mouse": "MP033",
+      "seed": 11,
+      "state": "prior_finetuned",
+      "checkpoint_sha256": "278dbdaeabaad46ddd8ef2577b5e9b08010d7d30bd7211b2da03e226f7ce39a3",
+      "metrics": {
+        "temporal": {
+          "normalized_entropy": 0.9440177083015442,
+          "total_variation_from_uniform": 0.13535284996032715
+        },
+        "population": {
+          "normalized_entropy": 0.8624832034111023,
+          "total_variation_from_uniform": 0.43085789680480957
+        }
+      }
+    },
+    {
+      "mouse": "MP033",
+      "seed": 11,
+      "state": "neuron_readout_finetuned",
+      "checkpoint_sha256": "d1c5705a5c7ebd1e86dbb317bdee906a7f9954025b69afaa752d9baa8105834d",
+      "metrics": {
+        "temporal": {
+          "normalized_entropy": 0.8803126215934753,
+          "total_variation_from_uniform": 0.1978861391544342
+        },
+        "population": {
+          "normalized_entropy": 0.981539249420166,
+          "total_variation_from_uniform": 0.16212885081768036
+        }
+      }
+    },
+    {
+      "mouse": "MP033",
+      "seed": 12,
+      "state": "random",
+      "checkpoint_sha256": "bd4306ca1f2dee16eac48997b3292268e785e9d56db2d8f90c0d58385e8a3de6",
+      "metrics": {
+        "temporal": {
+          "normalized_entropy": 0.9650622606277466,
+          "total_variation_from_uniform": 0.10707022994756699
+        },
+        "population": {
+          "normalized_entropy": 0.9872035980224609,
+          "total_variation_from_uniform": 0.13602450489997864
+        }
+      }
+    },
+    {
+      "mouse": "MP033",
+      "seed": 12,
+      "state": "pretrained",
+      "checkpoint_sha256": "cea7911832f84b998971e9a3ca491d5a374fe6d99b1da163d52ab869223017df",
+      "metrics": {
+        "temporal": {
+          "normalized_entropy": 0.9405237436294556,
+          "total_variation_from_uniform": 0.13682879507541656
+        },
+        "population": {
+          "normalized_entropy": 0.979414165019989,
+          "total_variation_from_uniform": 0.16560153663158417
+        }
+      }
+    },
+    {
+      "mouse": "MP033",
+      "seed": 12,
+      "state": "prior_finetuned",
+      "checkpoint_sha256": "7fea716ea542e5de2e5b4aefa7f82ec47eec9c26de4051d38ac77e309858d287",
+      "metrics": {
+        "temporal": {
+          "normalized_entropy": 0.9008260369300842,
+          "total_variation_from_uniform": 0.1721736043691635
+        },
+        "population": {
+          "normalized_entropy": 0.9557532072067261,
+          "total_variation_from_uniform": 0.25528156757354736
+        }
+      }
+    },
+    {
+      "mouse": "MP033",
+      "seed": 12,
+      "state": "neuron_readout_finetuned",
+      "checkpoint_sha256": "d8bc45a4f012deeaf6bdf480bec308344ce4beebe83fc1ef235516a9af7b17bf",
+      "metrics": {
+        "temporal": {
+          "normalized_entropy": 0.9256337285041809,
+          "total_variation_from_uniform": 0.15100044012069702
+        },
+        "population": {
+          "normalized_entropy": 0.9647413492202759,
+          "total_variation_from_uniform": 0.20083802938461304
+        }
+      }
+    },
+    {
+      "mouse": "MP034",
+      "seed": 10,
+      "state": "random",
+      "checkpoint_sha256": "d0866809fa2fa9eb88ac2f497aec2441b77833c8149459095e9a65d162a866fc",
+      "metrics": {
+        "temporal": {
+          "normalized_entropy": 0.9658542275428772,
+          "total_variation_from_uniform": 0.10476352274417877
+        },
+        "population": {
+          "normalized_entropy": 0.9852454662322998,
+          "total_variation_from_uniform": 0.1435178816318512
+        }
+      }
+    },
+    {
+      "mouse": "MP034",
+      "seed": 10,
+      "state": "pretrained",
+      "checkpoint_sha256": "6f9ae54650d5f2917d4b53c37bcfdffdd0286d1d820d8006f39998b0867694e2",
+      "metrics": {
+        "temporal": {
+          "normalized_entropy": 0.9533210396766663,
+          "total_variation_from_uniform": 0.12101352214813232
+        },
+        "population": {
+          "normalized_entropy": 0.9789835810661316,
+          "total_variation_from_uniform": 0.16913869976997375
+        }
+      }
+    },
+    {
+      "mouse": "MP034",
+      "seed": 10,
+      "state": "prior_finetuned",
+      "checkpoint_sha256": "2dca4b0d25fe46887be871a02ad95b9e1522b65c271092ed7a95d6f0bce12099",
+      "metrics": {
+        "temporal": {
+          "normalized_entropy": 0.9482144117355347,
+          "total_variation_from_uniform": 0.12928491830825806
+        },
+        "population": {
+          "normalized_entropy": 0.8189710378646851,
+          "total_variation_from_uniform": 0.5248567461967468
+        }
+      }
+    },
+    {
+      "mouse": "MP034",
+      "seed": 10,
+      "state": "neuron_readout_finetuned",
+      "checkpoint_sha256": "5778ced7a8f22603fbf7791ce04c88bd817dd37ef3dda23617320cfd294a9ebb",
+      "metrics": {
+        "temporal": {
+          "normalized_entropy": 0.9444417953491211,
+          "total_variation_from_uniform": 0.131545290350914
+        },
+        "population": {
+          "normalized_entropy": 0.9745681285858154,
+          "total_variation_from_uniform": 0.18102729320526123
+        }
+      }
+    },
+    {
+      "mouse": "MP034",
+      "seed": 11,
+      "state": "random",
+      "checkpoint_sha256": "9980eeeda6a4d09266fb7e2be4b6bad443304a091c44539fbd749e4485ac0477",
+      "metrics": {
+        "temporal": {
+          "normalized_entropy": 0.9774502515792847,
+          "total_variation_from_uniform": 0.08780563622713089
+        },
+        "population": {
+          "normalized_entropy": 0.9849686026573181,
+          "total_variation_from_uniform": 0.1350967139005661
+        }
+      }
+    },
+    {
+      "mouse": "MP034",
+      "seed": 11,
+      "state": "pretrained",
+      "checkpoint_sha256": "f69c132f8aa5b4884ec24cf28f4719bb911bb38573271e9bd0911f9b53f62f9a",
+      "metrics": {
+        "temporal": {
+          "normalized_entropy": 0.9594741463661194,
+          "total_variation_from_uniform": 0.1159590631723404
+        },
+        "population": {
+          "normalized_entropy": 0.9856424331665039,
+          "total_variation_from_uniform": 0.13904662430286407
+        }
+      }
+    },
+    {
+      "mouse": "MP034",
+      "seed": 11,
+      "state": "prior_finetuned",
+      "checkpoint_sha256": "e0310349b0596188a16be69e84fd88c93055d1237852fa74c7349b7a86bb4480",
+      "metrics": {
+        "temporal": {
+          "normalized_entropy": 0.924902081489563,
+          "total_variation_from_uniform": 0.15711940824985504
+        },
+        "population": {
+          "normalized_entropy": 0.8531948328018188,
+          "total_variation_from_uniform": 0.4487742483615875
+        }
+      }
+    },
+    {
+      "mouse": "MP034",
+      "seed": 11,
+      "state": "neuron_readout_finetuned",
+      "checkpoint_sha256": "e536f8299868eac1bd22acb1629aeeb79ebbc7d227a150fa327bf444c3c6c7c3",
+      "metrics": {
+        "temporal": {
+          "normalized_entropy": 0.9452639222145081,
+          "total_variation_from_uniform": 0.1328752040863037
+        },
+        "population": {
+          "normalized_entropy": 0.9746012687683105,
+          "total_variation_from_uniform": 0.18699941039085388
+        }
+      }
+    },
+    {
+      "mouse": "MP034",
+      "seed": 12,
+      "state": "random",
+      "checkpoint_sha256": "bd4306ca1f2dee16eac48997b3292268e785e9d56db2d8f90c0d58385e8a3de6",
+      "metrics": {
+        "temporal": {
+          "normalized_entropy": 0.9640994668006897,
+          "total_variation_from_uniform": 0.10873641073703766
+        },
+        "population": {
+          "normalized_entropy": 0.9867283701896667,
+          "total_variation_from_uniform": 0.13872738182544708
+        }
+      }
+    },
+    {
+      "mouse": "MP034",
+      "seed": 12,
+      "state": "pretrained",
+      "checkpoint_sha256": "630334200865c3b8d7122dd4cc724cbd558d431b1a71c7ba7912114787885e6e",
+      "metrics": {
+        "temporal": {
+          "normalized_entropy": 0.9233260750770569,
+          "total_variation_from_uniform": 0.15321587026119232
+        },
+        "population": {
+          "normalized_entropy": 0.9857302308082581,
+          "total_variation_from_uniform": 0.13829177618026733
+        }
+      }
+    },
+    {
+      "mouse": "MP034",
+      "seed": 12,
+      "state": "prior_finetuned",
+      "checkpoint_sha256": "4ac586f91b52d9b9e75fb18608d3a4f94ef8d663c1f2e3d320acf6ed724deba8",
+      "metrics": {
+        "temporal": {
+          "normalized_entropy": 0.9169608950614929,
+          "total_variation_from_uniform": 0.15817846357822418
+        },
+        "population": {
+          "normalized_entropy": 0.9234617948532104,
+          "total_variation_from_uniform": 0.3279351592063904
+        }
+      }
+    },
+    {
+      "mouse": "MP034",
+      "seed": 12,
+      "state": "neuron_readout_finetuned",
+      "checkpoint_sha256": "fdc66bf599cc0e718da8cef8c2f436996ecf193ceebd498ba5169a9581616549",
+      "metrics": {
+        "temporal": {
+          "normalized_entropy": 0.9163853526115417,
+          "total_variation_from_uniform": 0.15736836194992065
+        },
+        "population": {
+          "normalized_entropy": 0.9797545671463013,
+          "total_variation_from_uniform": 0.1636752188205719
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "locked_utc": "2026-10-04T05:52:46.327401+00:00",
+  "records": [
+    {
+      "variant": "as",
+      "seed": 10,
+      "selected_epoch": 8,
+      "selection_score": 0.843295050630799,
+      "allocated_updates": 5688,
+      "examples": 179712,
+      "adam_steps": [
+        5688
+      ],
+      "initial_tensors_and_predictions_exact": true,
+      "selected_reload_exact": true,
+      "routing_grad_max": 0.9115328192710876,
+      "temporal_grad_max": 4.155251979827881,
+      "elapsed_seconds": 319.544371792
+    },
+    {
+      "variant": "as",
+      "seed": 11,
+      "selected_epoch": 17,
+      "selection_score": 0.8843060459557539,
+      "allocated_updates": 5688,
+      "examples": 179712,
+      "adam_steps": [
+        5688
+      ],
+      "initial_tensors_and_predictions_exact": true,
+      "selected_reload_exact": true,
+      "routing_grad_max": 0.8740271925926208,
+      "temporal_grad_max": 3.6557388305664062,
+      "elapsed_seconds": 319.182898875
+    },
+    {
+      "variant": "as",
+      "seed": 12,
+      "selected_epoch": 10,
+      "selection_score": 0.7726324922067562,
+      "allocated_updates": 5688,
+      "examples": 179712,
+      "adam_steps": [
+        5688
+      ],
+      "initial_tensors_and_predictions_exact": true,
+      "selected_reload_exact": true,
+      "routing_grad_max": 0.9350561499595642,
+      "temporal_grad_max": 5.125567436218262,
+      "elapsed_seconds": 317.716258
+    },
+    {
+      "variant": "ma",
+      "seed": 10,
+      "selected_epoch": 8,
+      "selection_score": 0.9250653676165712,
+      "allocated_updates": 5688,
+      "examples": 179712,
+      "adam_steps": [
+        5688
+      ],
+      "initial_tensors_and_predictions_exact": true,
+      "selected_reload_exact": true,
+      "routing_grad_max": 7.611936569213867,
+      "temporal_grad_max": 2.315732002258301,
+      "elapsed_seconds": 129.0313855
+    },
+    {
+      "variant": "ma",
+      "seed": 11,
+      "selected_epoch": 17,
+      "selection_score": 0.8933290603253969,
+      "allocated_updates": 5688,
+      "examples": 179712,
+      "adam_steps": [
+        5688
+      ],
+      "initial_tensors_and_predictions_exact": true,
+      "selected_reload_exact": true,
+      "routing_grad_max": 12.43468952178955,
+      "temporal_grad_max": 4.795285701751709,
+      "elapsed_seconds": 129.106806458
+    },
+    {
+      "variant": "ma",
+      "seed": 12,
+      "selected_epoch": 10,
+      "selection_score": 0.9817790071470214,
+      "allocated_updates": 5688,
+      "examples": 179712,
+      "adam_steps": [
+        5688
+      ],
+      "initial_tensors_and_predictions_exact": true,
+      "selected_reload_exact": true,
+      "routing_grad_max": 11.944289207458496,
+      "temporal_grad_max": 3.3716423511505127,
+      "elapsed_seconds": 128.931965542
+    }
+  ],
+  "hashes": {
+    "as_s10/selected.pt": "d6ba709f70dcda049824f32f87e5af5bf44666db8b0d07cda0f4b08eda9cfb85",
+    "as_s11/selected.pt": "07650f85234697fc1824f16c1bdb3d3cccbdb458a6d67daeaa95da99aea9f94b",
+    "as_s12/selected.pt": "914cdb97b95146aef7f376cb15064a76214764766a19802552233bce212ed4fe",
+    "ma_s10/selected.pt": "dd53b7802237c0ea191c235c8057b4b920407f4db5049c8bafc90c92f23e82fd",
+    "ma_s11/selected.pt": "37d97d5ed9de6fb0ed70f504a93a34c808abd705dff0b589ebb050a17dff6c54",
+    "ma_s12/selected.pt": "f0d6e08b1d6502c0bedb0ee80b500cb0ec32eed249a81a816c2c45c14ae40386"
+  },
+  "selection_mouse_epoch_scores_checked": 600,
+  "batch_orders_match_both_archived_corners": true,
+  "equal_allocated_updates_and_examples": true,
+  "new_later_scored": false
+}

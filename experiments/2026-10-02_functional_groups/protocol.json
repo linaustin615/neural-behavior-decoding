@@ -1,0 +1,182 @@
+{
+  "created_utc": "2026-10-02T17:48:04.634602+00:00",
+  "question": "Do training-activity-defined groups improve concurrent running-speed decoding beyond same-size randomized groups and unrestricted activity+ID attention?",
+  "scope": "exploratory final bounded batch; no guarantee of significance; no anatomical or causal-connectivity claim",
+  "pools": [
+    101,
+    202,
+    303
+  ],
+  "seeds": [
+    10,
+    11
+  ],
+  "conditions": [
+    "functional",
+    "random",
+    "global"
+  ],
+  "new_fits": 18,
+  "reused_fits": 0,
+  "reuse_reason": "checkpoint selection now uses only early validation; previous whole-validation checkpoints are incompatible",
+  "splits": {
+    "train": [
+      0,
+      4160
+    ],
+    "selection": [
+      4260,
+      4860
+    ],
+    "evaluation": [
+      4960,
+      5564
+    ]
+  },
+  "window": 8,
+  "target_offset": 31,
+  "examples": {
+    "train": 4129,
+    "selection": 569,
+    "evaluation": 573
+  },
+  "test_tail": "not constructed or evaluated",
+  "grouping": "standardize each training time course to unit L2 norm; eigendecompose cell correlation matrix; top32 scaled eigenvectors; KMeans8 n_init10 seed500000+pool; training activity only, no speed or coordinates",
+  "random_control": "permute functional labels with seed420000+pool; exactly preserve group sizes; one independent assignment per pool",
+  "architecture": "same 81377 parameters,16 summaries,width32,4heads,nonlinear activity embedding,ID vectors,mean readout; first8 summaries masked by groups,last8 unrestricted; global arm all16 unrestricted",
+  "coordinates": "all-zero coordinate inputs in every model; true xyz used only for final visualization",
+  "normalization": "activity and speed training-only; all arms share normalization within pool",
+  "training": {
+    "batch": 32,
+    "epochs": 24,
+    "min_epochs": 12,
+    "patience": 7,
+    "lr": 0.001,
+    "weight_decay": 0.01,
+    "cosine_min_lr": 0.0001,
+    "gradient_clip": 1,
+    "checkpoint": "minimum selection bounded MSE including epoch0"
+  },
+  "selection_rule": "no evaluation examples passed to the training function; after all18 checkpoints are fixed, evaluate once on later interval",
+  "primary_contrasts": [
+    "relative MSE reduction functional vs random",
+    "relative MSE reduction functional vs global"
+  ],
+  "promising_gate": ">=2% mean relative error reduction against BOTH controls; >=5/6 paired wins each; all3 pool means positive each",
+  "stronger_exploratory_gate": "promising gate plus both conditional97.5% interval lower bounds above0; these are NOT confirmatory significance tests on this repeatedly examined recording",
+  "bootstrap": "4000 paired resamples of3 pool indices,2 seed indices and circular evaluation blocks100; same indices for all arms; 1.25/98.75 percentiles for each of2 contrasts",
+  "group_stability": "secondary: average of1024 sampled distinct-cell pairs per group on later evaluation activity vs999 neuron-label permutations; fixed edges from training groups; descriptive null rank only, no biological independence claim",
+  "graph_limitations": "static simultaneous correlations; no lagged/dynamic or causal model; common running state, population signals and imaging artifacts can explain associations",
+  "stop_rule": "finish exactly18 planned fits and audits; no adaptive extra seeds,pools,hyperparameters or test-tail inspection",
+  "limitations": [
+    "single repeatedly examined recording",
+    "overlapping pools and only2 technical seeds",
+    "573 evaluation examples overlap in time windows",
+    "new selection/evaluation split does not reset historical data reuse",
+    "fixed architecture and inherited training recipe; not a fully tuned model-family comparison"
+  ],
+  "tasks": [
+    {
+      "pool": 101,
+      "seed": 10,
+      "condition": "functional"
+    },
+    {
+      "pool": 101,
+      "seed": 10,
+      "condition": "random"
+    },
+    {
+      "pool": 101,
+      "seed": 10,
+      "condition": "global"
+    },
+    {
+      "pool": 101,
+      "seed": 11,
+      "condition": "functional"
+    },
+    {
+      "pool": 101,
+      "seed": 11,
+      "condition": "random"
+    },
+    {
+      "pool": 101,
+      "seed": 11,
+      "condition": "global"
+    },
+    {
+      "pool": 202,
+      "seed": 10,
+      "condition": "functional"
+    },
+    {
+      "pool": 202,
+      "seed": 10,
+      "condition": "random"
+    },
+    {
+      "pool": 202,
+      "seed": 10,
+      "condition": "global"
+    },
+    {
+      "pool": 202,
+      "seed": 11,
+      "condition": "functional"
+    },
+    {
+      "pool": 202,
+      "seed": 11,
+      "condition": "random"
+    },
+    {
+      "pool": 202,
+      "seed": 11,
+      "condition": "global"
+    },
+    {
+      "pool": 303,
+      "seed": 10,
+      "condition": "functional"
+    },
+    {
+      "pool": 303,
+      "seed": 10,
+      "condition": "random"
+    },
+    {
+      "pool": 303,
+      "seed": 10,
+      "condition": "global"
+    },
+    {
+      "pool": 303,
+      "seed": 11,
+      "condition": "functional"
+    },
+    {
+      "pool": 303,
+      "seed": 11,
+      "condition": "random"
+    },
+    {
+      "pool": 303,
+      "seed": 11,
+      "condition": "global"
+    }
+  ],
+  "source_hashes": {
+    "run.py": "27b3b838be8478fefd27a38a83aadce001f08452c2f39442480e39bc72c07e2e",
+    "model_snapshot.py": "2297af73466e1c85ee5774dc10a44a2a03f7a6f48919a111b43a8cf6d7d86a40",
+    "base_search.py": "5ecb8ef2e5f292953b28d6712d4a75a99ac07a543830fb21989a5840046e27b7",
+    "group_model.py": "7f2876708a57f0f94e89e8aa95d1547268cf4c37cb962ebe22805688a0c3a687"
+  },
+  "application_hashes": {
+    "model.py": "2297af73466e1c85ee5774dc10a44a2a03f7a6f48919a111b43a8cf6d7d86a40",
+    "data.py": "894d5aea4dd0ce6a139178b66b1f8a5538f1c4f015081153d4c11fa55d78b7bf",
+    "train.py": "0361d216cd75616ed07501a019f4837f7c0acf57f0cd2edecb0fc6728064d7f9"
+  },
+  "dataset_sha256": "b92f153a965a6a25153c125ac88245f887f310b50285dc5af11f0b544ac3ba32"
+}

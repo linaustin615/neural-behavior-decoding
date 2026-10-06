@@ -1,0 +1,1210 @@
+{
+  "locked_utc": "2026-10-03T20:48:23.298163+00:00",
+  "records": [
+    {
+      "directory": "MP030/attention_pretrained_s10",
+      "mouse": "MP030",
+      "kind": "attention",
+      "seed": 10,
+      "stage": "speed",
+      "pretrained": true,
+      "epochs": 24,
+      "selected_epoch": 5,
+      "selection_mse": 0.3608806866211715,
+      "initial_mse": 0.6995439465873147,
+      "grad_max": 38.180362701416016,
+      "gradients": {
+        "temporal.mix.in_proj_weight": 16.935264587402344,
+        "population.mix.in_proj_weight": 9.145963668823242
+      },
+      "selected_reload_exact": true,
+      "elapsed_seconds": 228.30762337500002
+    },
+    {
+      "directory": "MP030/attention_pretrained_s11",
+      "mouse": "MP030",
+      "kind": "attention",
+      "seed": 11,
+      "stage": "speed",
+      "pretrained": true,
+      "epochs": 24,
+      "selected_epoch": 7,
+      "selection_mse": 0.4086017663147545,
+      "initial_mse": 0.6591989801238572,
+      "grad_max": 10.065567970275879,
+      "gradients": {
+        "temporal.mix.in_proj_weight": 3.648054838180542,
+        "population.mix.in_proj_weight": 3.9796342849731445
+      },
+      "selected_reload_exact": true,
+      "elapsed_seconds": 225.76066620799998
+    },
+    {
+      "directory": "MP030/attention_pretrained_s12",
+      "mouse": "MP030",
+      "kind": "attention",
+      "seed": 12,
+      "stage": "speed",
+      "pretrained": true,
+      "epochs": 24,
+      "selected_epoch": 8,
+      "selection_mse": 0.44402626736979933,
+      "initial_mse": 0.6370880168091866,
+      "grad_max": 28.36960220336914,
+      "gradients": {
+        "temporal.mix.in_proj_weight": 9.247182846069336,
+        "population.mix.in_proj_weight": 10.071208000183105
+      },
+      "selected_reload_exact": true,
+      "elapsed_seconds": 186.04627479099986
+    },
+    {
+      "directory": "MP030/attention_scratch_s10",
+      "mouse": "MP030",
+      "kind": "attention",
+      "seed": 10,
+      "stage": "speed",
+      "pretrained": false,
+      "epochs": 24,
+      "selected_epoch": 12,
+      "selection_mse": 0.4001804633884197,
+      "initial_mse": 0.7388576519299036,
+      "grad_max": 18.162364959716797,
+      "gradients": {
+        "temporal.mix.in_proj_weight": 5.814016342163086,
+        "population.mix.in_proj_weight": 8.958353042602539
+      },
+      "selected_reload_exact": true,
+      "elapsed_seconds": 227.625775417
+    },
+    {
+      "directory": "MP030/attention_scratch_s11",
+      "mouse": "MP030",
+      "kind": "attention",
+      "seed": 11,
+      "stage": "speed",
+      "pretrained": false,
+      "epochs": 24,
+      "selected_epoch": 15,
+      "selection_mse": 0.4354638546859348,
+      "initial_mse": 0.67524955881646,
+      "grad_max": 45.1892204284668,
+      "gradients": {
+        "temporal.mix.in_proj_weight": 20.21009635925293,
+        "population.mix.in_proj_weight": 10.932093620300293
+      },
+      "selected_reload_exact": true,
+      "elapsed_seconds": 217.93205179200004
+    },
+    {
+      "directory": "MP030/attention_scratch_s12",
+      "mouse": "MP030",
+      "kind": "attention",
+      "seed": 12,
+      "stage": "speed",
+      "pretrained": false,
+      "epochs": 24,
+      "selected_epoch": 6,
+      "selection_mse": 0.49790812327138384,
+      "initial_mse": 0.6475058712776245,
+      "grad_max": 28.00957489013672,
+      "gradients": {
+        "temporal.mix.in_proj_weight": 9.61948013305664,
+        "population.mix.in_proj_weight": 9.762009620666504
+      },
+      "selected_reload_exact": true,
+      "elapsed_seconds": 199.0493186660001
+    },
+    {
+      "directory": "MP030/mixer_pretrained_s10",
+      "mouse": "MP030",
+      "kind": "mixer",
+      "seed": 10,
+      "stage": "speed",
+      "pretrained": true,
+      "epochs": 24,
+      "selected_epoch": 9,
+      "selection_mse": 0.3407341560089081,
+      "initial_mse": 0.6981541749888182,
+      "grad_max": 11.80653190612793,
+      "gradients": {
+        "temporal.weight": 0.8602787256240845,
+        "population.mix.0.weight": 6.266432285308838
+      },
+      "selected_reload_exact": true,
+      "elapsed_seconds": 53.882273292000036
+    },
+    {
+      "directory": "MP030/mixer_pretrained_s11",
+      "mouse": "MP030",
+      "kind": "mixer",
+      "seed": 11,
+      "stage": "speed",
+      "pretrained": true,
+      "epochs": 24,
+      "selected_epoch": 7,
+      "selection_mse": 0.32126848294931226,
+      "initial_mse": 0.645502622304677,
+      "grad_max": 11.760387420654297,
+      "gradients": {
+        "temporal.weight": 1.5094455480575562,
+        "population.mix.0.weight": 5.21408224105835
+      },
+      "selected_reload_exact": true,
+      "elapsed_seconds": 54.37888191700017
+    },
+    {
+      "directory": "MP030/mixer_pretrained_s12",
+      "mouse": "MP030",
+      "kind": "mixer",
+      "seed": 12,
+      "stage": "speed",
+      "pretrained": true,
+      "epochs": 24,
+      "selected_epoch": 1,
+      "selection_mse": 0.3537540581822236,
+      "initial_mse": 0.6394130493158595,
+      "grad_max": 9.431925773620605,
+      "gradients": {
+        "temporal.weight": 1.0040292739868164,
+        "population.mix.0.weight": 3.9273812770843506
+      },
+      "selected_reload_exact": true,
+      "elapsed_seconds": 46.956491125000184
+    },
+    {
+      "directory": "MP030/mixer_scratch_s10",
+      "mouse": "MP030",
+      "kind": "mixer",
+      "seed": 10,
+      "stage": "speed",
+      "pretrained": false,
+      "epochs": 24,
+      "selected_epoch": 4,
+      "selection_mse": 0.3633044114911317,
+      "initial_mse": 0.6782576147241302,
+      "grad_max": 8.167614936828613,
+      "gradients": {
+        "temporal.weight": 0.7204256057739258,
+        "population.mix.0.weight": 5.18894624710083
+      },
+      "selected_reload_exact": true,
+      "elapsed_seconds": 55.62277545799998
+    },
+    {
+      "directory": "MP030/mixer_scratch_s11",
+      "mouse": "MP030",
+      "kind": "mixer",
+      "seed": 11,
+      "stage": "speed",
+      "pretrained": false,
+      "epochs": 24,
+      "selected_epoch": 7,
+      "selection_mse": 0.39550889511334203,
+      "initial_mse": 0.6546041089110776,
+      "grad_max": 8.462862968444824,
+      "gradients": {
+        "temporal.weight": 0.8599321246147156,
+        "population.mix.0.weight": 4.554721355438232
+      },
+      "selected_reload_exact": true,
+      "elapsed_seconds": 55.20764479200011
+    },
+    {
+      "directory": "MP030/mixer_scratch_s12",
+      "mouse": "MP030",
+      "kind": "mixer",
+      "seed": 12,
+      "stage": "speed",
+      "pretrained": false,
+      "epochs": 24,
+      "selected_epoch": 2,
+      "selection_mse": 0.3625831048348978,
+      "initial_mse": 0.6417999491008972,
+      "grad_max": 7.229339599609375,
+      "gradients": {
+        "temporal.weight": 1.2954145669937134,
+        "population.mix.0.weight": 5.552075386047363
+      },
+      "selected_reload_exact": true,
+      "elapsed_seconds": 46.97125783399997
+    },
+    {
+      "directory": "MP030/pooled_mlp_s10",
+      "mouse": "MP030",
+      "kind": "pooled_mlp",
+      "seed": 10,
+      "stage": "speed",
+      "pretrained": false,
+      "epochs": 24,
+      "selected_epoch": 13,
+      "selection_mse": 0.4004302830211255,
+      "initial_mse": 0.6487793105421384,
+      "grad_max": 54.560115814208984,
+      "gradients": {
+        "activity.0.weight": 9.018198013305664,
+        "head.2.weight": 4.425214767456055
+      },
+      "selected_reload_exact": true,
+      "elapsed_seconds": 7.665691457999969
+    },
+    {
+      "directory": "MP030/pooled_mlp_s11",
+      "mouse": "MP030",
+      "kind": "pooled_mlp",
+      "seed": 11,
+      "stage": "speed",
+      "pretrained": false,
+      "epochs": 24,
+      "selected_epoch": 19,
+      "selection_mse": 0.3807621535775174,
+      "initial_mse": 0.7226018824590976,
+      "grad_max": 60.01798629760742,
+      "gradients": {
+        "activity.0.weight": 8.57249641418457,
+        "head.2.weight": 5.385159492492676
+      },
+      "selected_reload_exact": true,
+      "elapsed_seconds": 7.217348833000187
+    },
+    {
+      "directory": "MP030/pooled_mlp_s12",
+      "mouse": "MP030",
+      "kind": "pooled_mlp",
+      "seed": 12,
+      "stage": "speed",
+      "pretrained": false,
+      "epochs": 24,
+      "selected_epoch": 12,
+      "selection_mse": 0.4369244086379419,
+      "initial_mse": 0.6438861309396874,
+      "grad_max": 49.32363510131836,
+      "gradients": {
+        "activity.0.weight": 10.06942081451416,
+        "head.2.weight": 6.00921106338501
+      },
+      "selected_reload_exact": true,
+      "elapsed_seconds": 6.662739667000096
+    },
+    {
+      "directory": "MP032/attention_pretrained_s10",
+      "mouse": "MP032",
+      "kind": "attention",
+      "seed": 10,
+      "stage": "speed",
+      "pretrained": true,
+      "epochs": 24,
+      "selected_epoch": 20,
+      "selection_mse": 0.006150088572371149,
+      "initial_mse": 0.2465295398297317,
+      "grad_max": 23.749591827392578,
+      "gradients": {
+        "temporal.mix.in_proj_weight": 7.796055793762207,
+        "population.mix.in_proj_weight": 8.701064109802246
+      },
+      "selected_reload_exact": true,
+      "elapsed_seconds": 195.812707875
+    },
+    {
+      "directory": "MP032/attention_pretrained_s11",
+      "mouse": "MP032",
+      "kind": "attention",
+      "seed": 11,
+      "stage": "speed",
+      "pretrained": true,
+      "epochs": 24,
+      "selected_epoch": 15,
+      "selection_mse": 0.005639098966519626,
+      "initial_mse": 0.1544339397908064,
+      "grad_max": 16.886993408203125,
+      "gradients": {
+        "temporal.mix.in_proj_weight": 6.606783390045166,
+        "population.mix.in_proj_weight": 6.334350109100342
+      },
+      "selected_reload_exact": true,
+      "elapsed_seconds": 187.80303566599991
+    },
+    {
+      "directory": "MP032/attention_pretrained_s12",
+      "mouse": "MP032",
+      "kind": "attention",
+      "seed": 12,
+      "stage": "speed",
+      "pretrained": true,
+      "epochs": 24,
+      "selected_epoch": 24,
+      "selection_mse": 0.005165624402866676,
+      "initial_mse": 0.08299798533602057,
+      "grad_max": 17.661697387695312,
+      "gradients": {
+        "temporal.mix.in_proj_weight": 6.87063455581665,
+        "population.mix.in_proj_weight": 7.402054786682129
+      },
+      "selected_reload_exact": true,
+      "elapsed_seconds": 172.07278958300003
+    },
+    {
+      "directory": "MP032/attention_scratch_s10",
+      "mouse": "MP032",
+      "kind": "attention",
+      "seed": 10,
+      "stage": "speed",
+      "pretrained": false,
+      "epochs": 24,
+      "selected_epoch": 9,
+      "selection_mse": 0.007345575163357157,
+      "initial_mse": 0.32004141713397427,
+      "grad_max": 36.9276008605957,
+      "gradients": {
+        "temporal.mix.in_proj_weight": 12.139181137084961,
+        "population.mix.in_proj_weight": 21.038938522338867
+      },
+      "selected_reload_exact": true,
+      "elapsed_seconds": 197.646300167
+    },
+    {
+      "directory": "MP032/attention_scratch_s11",
+      "mouse": "MP032",
+      "kind": "attention",
+      "seed": 11,
+      "stage": "speed",
+      "pretrained": false,
+      "epochs": 24,
+      "selected_epoch": 21,
+      "selection_mse": 0.0071255504684894526,
+      "initial_mse": 0.21885828827118955,
+      "grad_max": 26.18030548095703,
+      "gradients": {
+        "temporal.mix.in_proj_weight": 8.321151733398438,
+        "population.mix.in_proj_weight": 11.054235458374023
+      },
+      "selected_reload_exact": true,
+      "elapsed_seconds": 193.84532333299995
+    },
+    {
+      "directory": "MP032/attention_scratch_s12",
+      "mouse": "MP032",
+      "kind": "attention",
+      "seed": 12,
+      "stage": "speed",
+      "pretrained": false,
+      "epochs": 24,
+      "selected_epoch": 17,
+      "selection_mse": 0.005178060384813121,
+      "initial_mse": 0.14930537876527714,
+      "grad_max": 19.95790672302246,
+      "gradients": {
+        "temporal.mix.in_proj_weight": 4.80226469039917,
+        "population.mix.in_proj_weight": 9.772201538085938
+      },
+      "selected_reload_exact": true,
+      "elapsed_seconds": 184.04796924999994
+    },
+    {
+      "directory": "MP032/mixer_pretrained_s10",
+      "mouse": "MP032",
+      "kind": "mixer",
+      "seed": 10,
+      "stage": "speed",
+      "pretrained": true,
+      "epochs": 24,
+      "selected_epoch": 19,
+      "selection_mse": 0.0075358825085500136,
+      "initial_mse": 0.2094881536347569,
+      "grad_max": 9.114080429077148,
+      "gradients": {
+        "temporal.weight": 1.1909769773483276,
+        "population.mix.0.weight": 4.357290267944336
+      },
+      "selected_reload_exact": true,
+      "elapsed_seconds": 47.875164208
+    },
+    {
+      "directory": "MP032/mixer_pretrained_s11",
+      "mouse": "MP032",
+      "kind": "mixer",
+      "seed": 11,
+      "stage": "speed",
+      "pretrained": true,
+      "epochs": 24,
+      "selected_epoch": 2,
+      "selection_mse": 0.006326644644273279,
+      "initial_mse": 0.10540367494643646,
+      "grad_max": 11.195137977600098,
+      "gradients": {
+        "temporal.weight": 2.0448763370513916,
+        "population.mix.0.weight": 5.590896129608154
+      },
+      "selected_reload_exact": true,
+      "elapsed_seconds": 45.26450816599993
+    },
+    {
+      "directory": "MP032/mixer_pretrained_s12",
+      "mouse": "MP032",
+      "kind": "mixer",
+      "seed": 12,
+      "stage": "speed",
+      "pretrained": true,
+      "epochs": 24,
+      "selected_epoch": 11,
+      "selection_mse": 0.004846864753018904,
+      "initial_mse": 0.04398891366529778,
+      "grad_max": 6.197245121002197,
+      "gradients": {
+        "temporal.weight": 1.0331896543502808,
+        "population.mix.0.weight": 2.7594149112701416
+      },
+      "selected_reload_exact": true,
+      "elapsed_seconds": 43.11025033300007
+    },
+    {
+      "directory": "MP032/mixer_scratch_s10",
+      "mouse": "MP032",
+      "kind": "mixer",
+      "seed": 10,
+      "stage": "speed",
+      "pretrained": false,
+      "epochs": 24,
+      "selected_epoch": 1,
+      "selection_mse": 0.00782214653049775,
+      "initial_mse": 0.15436753771383985,
+      "grad_max": 6.857881546020508,
+      "gradients": {
+        "temporal.weight": 1.3223586082458496,
+        "population.mix.0.weight": 4.187213897705078
+      },
+      "selected_reload_exact": true,
+      "elapsed_seconds": 46.62206170800005
+    },
+    {
+      "directory": "MP032/mixer_scratch_s11",
+      "mouse": "MP032",
+      "kind": "mixer",
+      "seed": 11,
+      "stage": "speed",
+      "pretrained": false,
+      "epochs": 24,
+      "selected_epoch": 6,
+      "selection_mse": 0.006329014581981346,
+      "initial_mse": 0.1464341601659587,
+      "grad_max": 9.820587158203125,
+      "gradients": {
+        "temporal.weight": 1.130462408065796,
+        "population.mix.0.weight": 6.177707672119141
+      },
+      "selected_reload_exact": true,
+      "elapsed_seconds": 45.50286366600005
+    },
+    {
+      "directory": "MP032/mixer_scratch_s12",
+      "mouse": "MP032",
+      "kind": "mixer",
+      "seed": 12,
+      "stage": "speed",
+      "pretrained": false,
+      "epochs": 24,
+      "selected_epoch": 3,
+      "selection_mse": 0.004066113400807715,
+      "initial_mse": 0.04283671788857258,
+      "grad_max": 7.349397659301758,
+      "gradients": {
+        "temporal.weight": 0.5668210387229919,
+        "population.mix.0.weight": 3.561894416809082
+      },
+      "selected_reload_exact": true,
+      "elapsed_seconds": 43.5845512909998
+    },
+    {
+      "directory": "MP032/pooled_mlp_s10",
+      "mouse": "MP032",
+      "kind": "pooled_mlp",
+      "seed": 10,
+      "stage": "speed",
+      "pretrained": false,
+      "epochs": 24,
+      "selected_epoch": 14,
+      "selection_mse": 0.005673641084705729,
+      "initial_mse": 0.01743547246043401,
+      "grad_max": 24.793428421020508,
+      "gradients": {
+        "activity.0.weight": 7.918475151062012,
+        "head.2.weight": 4.082616329193115
+      },
+      "selected_reload_exact": true,
+      "elapsed_seconds": 6.984755624999991
+    },
+    {
+      "directory": "MP032/pooled_mlp_s11",
+      "mouse": "MP032",
+      "kind": "pooled_mlp",
+      "seed": 11,
+      "stage": "speed",
+      "pretrained": false,
+      "epochs": 24,
+      "selected_epoch": 19,
+      "selection_mse": 0.006404231479773538,
+      "initial_mse": 0.28937079852552444,
+      "grad_max": 36.369285583496094,
+      "gradients": {
+        "activity.0.weight": 10.873475074768066,
+        "head.2.weight": 5.385488510131836
+      },
+      "selected_reload_exact": true,
+      "elapsed_seconds": 6.428654000000051
+    },
+    {
+      "directory": "MP032/pooled_mlp_s12",
+      "mouse": "MP032",
+      "kind": "pooled_mlp",
+      "seed": 12,
+      "stage": "speed",
+      "pretrained": false,
+      "epochs": 24,
+      "selected_epoch": 20,
+      "selection_mse": 0.006075760682846558,
+      "initial_mse": 0.08122150982845676,
+      "grad_max": 32.21048355102539,
+      "gradients": {
+        "activity.0.weight": 14.429433822631836,
+        "head.2.weight": 3.438105344772339
+      },
+      "selected_reload_exact": true,
+      "elapsed_seconds": 6.112335750000057
+    },
+    {
+      "directory": "MP033/attention_pretrained_s10",
+      "mouse": "MP033",
+      "kind": "attention",
+      "seed": 10,
+      "stage": "speed",
+      "pretrained": true,
+      "epochs": 24,
+      "selected_epoch": 12,
+      "selection_mse": 0.5911253554491676,
+      "initial_mse": 1.19496835033949,
+      "grad_max": 42.23586654663086,
+      "gradients": {
+        "temporal.mix.in_proj_weight": 16.50835418701172,
+        "population.mix.in_proj_weight": 13.935498237609863
+      },
+      "selected_reload_exact": true,
+      "elapsed_seconds": 146.38860358300002
+    },
+    {
+      "directory": "MP033/attention_pretrained_s11",
+      "mouse": "MP033",
+      "kind": "attention",
+      "seed": 11,
+      "stage": "speed",
+      "pretrained": true,
+      "epochs": 24,
+      "selected_epoch": 9,
+      "selection_mse": 0.6988152453020035,
+      "initial_mse": 1.3207277659607701,
+      "grad_max": 28.81145668029785,
+      "gradients": {
+        "temporal.mix.in_proj_weight": 9.043218612670898,
+        "population.mix.in_proj_weight": 10.657062530517578
+      },
+      "selected_reload_exact": true,
+      "elapsed_seconds": 146.70858829100007
+    },
+    {
+      "directory": "MP033/attention_pretrained_s12",
+      "mouse": "MP033",
+      "kind": "attention",
+      "seed": 12,
+      "stage": "speed",
+      "pretrained": true,
+      "epochs": 24,
+      "selected_epoch": 18,
+      "selection_mse": 0.7029985092297827,
+      "initial_mse": 1.5494070321600946,
+      "grad_max": 53.32698440551758,
+      "gradients": {
+        "temporal.mix.in_proj_weight": 19.27879524230957,
+        "population.mix.in_proj_weight": 15.149250030517578
+      },
+      "selected_reload_exact": true,
+      "elapsed_seconds": 145.1630268749999
+    },
+    {
+      "directory": "MP033/attention_scratch_s10",
+      "mouse": "MP033",
+      "kind": "attention",
+      "seed": 10,
+      "stage": "speed",
+      "pretrained": false,
+      "epochs": 24,
+      "selected_epoch": 12,
+      "selection_mse": 0.6422123003517821,
+      "initial_mse": 1.0749220273581748,
+      "grad_max": 38.571712493896484,
+      "gradients": {
+        "temporal.mix.in_proj_weight": 14.460672378540039,
+        "population.mix.in_proj_weight": 18.826885223388672
+      },
+      "selected_reload_exact": true,
+      "elapsed_seconds": 146.50429983400002
+    },
+    {
+      "directory": "MP033/attention_scratch_s11",
+      "mouse": "MP033",
+      "kind": "attention",
+      "seed": 11,
+      "stage": "speed",
+      "pretrained": false,
+      "epochs": 24,
+      "selected_epoch": 2,
+      "selection_mse": 0.8842784335331065,
+      "initial_mse": 1.216260255528945,
+      "grad_max": 54.33143615722656,
+      "gradients": {
+        "temporal.mix.in_proj_weight": 20.121742248535156,
+        "population.mix.in_proj_weight": 20.50965690612793
+      },
+      "selected_reload_exact": true,
+      "elapsed_seconds": 146.67217741699994
+    },
+    {
+      "directory": "MP033/attention_scratch_s12",
+      "mouse": "MP033",
+      "kind": "attention",
+      "seed": 12,
+      "stage": "speed",
+      "pretrained": false,
+      "epochs": 24,
+      "selected_epoch": 15,
+      "selection_mse": 0.7391057331145804,
+      "initial_mse": 1.3929258267818694,
+      "grad_max": 48.34314727783203,
+      "gradients": {
+        "temporal.mix.in_proj_weight": 18.528039932250977,
+        "population.mix.in_proj_weight": 16.72148323059082
+      },
+      "selected_reload_exact": true,
+      "elapsed_seconds": 144.25398120800003
+    },
+    {
+      "directory": "MP033/mixer_pretrained_s10",
+      "mouse": "MP033",
+      "kind": "mixer",
+      "seed": 10,
+      "stage": "speed",
+      "pretrained": true,
+      "epochs": 24,
+      "selected_epoch": 8,
+      "selection_mse": 0.6736619808054753,
+      "initial_mse": 1.220314829404679,
+      "grad_max": 12.450307846069336,
+      "gradients": {
+        "temporal.weight": 1.576934576034546,
+        "population.mix.0.weight": 8.412693977355957
+      },
+      "selected_reload_exact": true,
+      "elapsed_seconds": 38.050702040999965
+    },
+    {
+      "directory": "MP033/mixer_pretrained_s11",
+      "mouse": "MP033",
+      "kind": "mixer",
+      "seed": 11,
+      "stage": "speed",
+      "pretrained": true,
+      "epochs": 24,
+      "selected_epoch": 10,
+      "selection_mse": 0.6243032546746728,
+      "initial_mse": 1.3845570092765411,
+      "grad_max": 14.628510475158691,
+      "gradients": {
+        "temporal.weight": 1.8476454019546509,
+        "population.mix.0.weight": 8.230352401733398
+      },
+      "selected_reload_exact": true,
+      "elapsed_seconds": 36.50066545799996
+    },
+    {
+      "directory": "MP033/mixer_pretrained_s12",
+      "mouse": "MP033",
+      "kind": "mixer",
+      "seed": 12,
+      "stage": "speed",
+      "pretrained": true,
+      "epochs": 24,
+      "selected_epoch": 3,
+      "selection_mse": 0.6899822561219697,
+      "initial_mse": 1.6367011245251497,
+      "grad_max": 12.420866012573242,
+      "gradients": {
+        "temporal.weight": 1.1493752002716064,
+        "population.mix.0.weight": 6.322248458862305
+      },
+      "selected_reload_exact": true,
+      "elapsed_seconds": 36.297627707999936
+    },
+    {
+      "directory": "MP033/mixer_scratch_s10",
+      "mouse": "MP033",
+      "kind": "mixer",
+      "seed": 10,
+      "stage": "speed",
+      "pretrained": false,
+      "epochs": 24,
+      "selected_epoch": 15,
+      "selection_mse": 0.6221003694355914,
+      "initial_mse": 1.279072446658571,
+      "grad_max": 13.80420970916748,
+      "gradients": {
+        "temporal.weight": 2.501502752304077,
+        "population.mix.0.weight": 9.286248207092285
+      },
+      "selected_reload_exact": true,
+      "elapsed_seconds": 36.65523816699999
+    },
+    {
+      "directory": "MP033/mixer_scratch_s11",
+      "mouse": "MP033",
+      "kind": "mixer",
+      "seed": 11,
+      "stage": "speed",
+      "pretrained": false,
+      "epochs": 24,
+      "selected_epoch": 10,
+      "selection_mse": 0.5826531791705344,
+      "initial_mse": 1.3449047303407722,
+      "grad_max": 22.357358932495117,
+      "gradients": {
+        "temporal.weight": 2.2191779613494873,
+        "population.mix.0.weight": 13.39606761932373
+      },
+      "selected_reload_exact": true,
+      "elapsed_seconds": 35.494670333000045
+    },
+    {
+      "directory": "MP033/mixer_scratch_s12",
+      "mouse": "MP033",
+      "kind": "mixer",
+      "seed": 12,
+      "stage": "speed",
+      "pretrained": false,
+      "epochs": 24,
+      "selected_epoch": 12,
+      "selection_mse": 0.7380689552583717,
+      "initial_mse": 1.685131493796263,
+      "grad_max": 11.462725639343262,
+      "gradients": {
+        "temporal.weight": 1.1767421960830688,
+        "population.mix.0.weight": 8.588114738464355
+      },
+      "selected_reload_exact": true,
+      "elapsed_seconds": 36.194364292000046
+    },
+    {
+      "directory": "MP033/pooled_mlp_s10",
+      "mouse": "MP033",
+      "kind": "pooled_mlp",
+      "seed": 10,
+      "stage": "speed",
+      "pretrained": false,
+      "epochs": 24,
+      "selected_epoch": 18,
+      "selection_mse": 0.7858754189268943,
+      "initial_mse": 1.8076273189136935,
+      "grad_max": 46.539485931396484,
+      "gradients": {
+        "activity.0.weight": 7.904062271118164,
+        "head.2.weight": 7.062523365020752
+      },
+      "selected_reload_exact": true,
+      "elapsed_seconds": 5.298781583999983
+    },
+    {
+      "directory": "MP033/pooled_mlp_s11",
+      "mouse": "MP033",
+      "kind": "pooled_mlp",
+      "seed": 11,
+      "stage": "speed",
+      "pretrained": false,
+      "epochs": 24,
+      "selected_epoch": 15,
+      "selection_mse": 0.8043000402330196,
+      "initial_mse": 1.1063090243117613,
+      "grad_max": 30.537729263305664,
+      "gradients": {
+        "activity.0.weight": 8.992533683776855,
+        "head.2.weight": 4.812631130218506
+      },
+      "selected_reload_exact": true,
+      "elapsed_seconds": 5.302075333000062
+    },
+    {
+      "directory": "MP033/pooled_mlp_s12",
+      "mouse": "MP033",
+      "kind": "pooled_mlp",
+      "seed": 12,
+      "stage": "speed",
+      "pretrained": false,
+      "epochs": 24,
+      "selected_epoch": 11,
+      "selection_mse": 0.7504379511958412,
+      "initial_mse": 1.5561723636549019,
+      "grad_max": 27.255542755126953,
+      "gradients": {
+        "activity.0.weight": 6.415707588195801,
+        "head.2.weight": 3.940984010696411
+      },
+      "selected_reload_exact": true,
+      "elapsed_seconds": 5.4347301660000085
+    },
+    {
+      "directory": "MP034/attention_pretrained_s10",
+      "mouse": "MP034",
+      "kind": "attention",
+      "seed": 10,
+      "stage": "speed",
+      "pretrained": true,
+      "epochs": 24,
+      "selected_epoch": 15,
+      "selection_mse": 0.3298772138946493,
+      "initial_mse": 1.2138162678340003,
+      "grad_max": 15.794572830200195,
+      "gradients": {
+        "temporal.mix.in_proj_weight": 5.3072381019592285,
+        "population.mix.in_proj_weight": 6.499512672424316
+      },
+      "selected_reload_exact": true,
+      "elapsed_seconds": 147.07337775000002
+    },
+    {
+      "directory": "MP034/attention_pretrained_s11",
+      "mouse": "MP034",
+      "kind": "attention",
+      "seed": 11,
+      "stage": "speed",
+      "pretrained": true,
+      "epochs": 24,
+      "selected_epoch": 7,
+      "selection_mse": 0.37053233878646485,
+      "initial_mse": 1.2071821933593452,
+      "grad_max": 21.227563858032227,
+      "gradients": {
+        "temporal.mix.in_proj_weight": 8.179084777832031,
+        "population.mix.in_proj_weight": 7.332415580749512
+      },
+      "selected_reload_exact": true,
+      "elapsed_seconds": 145.84999708300006
+    },
+    {
+      "directory": "MP034/attention_pretrained_s12",
+      "mouse": "MP034",
+      "kind": "attention",
+      "seed": 12,
+      "stage": "speed",
+      "pretrained": true,
+      "epochs": 24,
+      "selected_epoch": 14,
+      "selection_mse": 0.3482917581848901,
+      "initial_mse": 1.2388315958717715,
+      "grad_max": 35.380252838134766,
+      "gradients": {
+        "temporal.mix.in_proj_weight": 15.23090934753418,
+        "population.mix.in_proj_weight": 8.072120666503906
+      },
+      "selected_reload_exact": true,
+      "elapsed_seconds": 145.18379654199998
+    },
+    {
+      "directory": "MP034/attention_scratch_s10",
+      "mouse": "MP034",
+      "kind": "attention",
+      "seed": 10,
+      "stage": "speed",
+      "pretrained": false,
+      "epochs": 24,
+      "selected_epoch": 23,
+      "selection_mse": 0.4095773709251843,
+      "initial_mse": 1.213977574384279,
+      "grad_max": 17.985942840576172,
+      "gradients": {
+        "temporal.mix.in_proj_weight": 8.051578521728516,
+        "population.mix.in_proj_weight": 6.148160934448242
+      },
+      "selected_reload_exact": true,
+      "elapsed_seconds": 146.03390712499998
+    },
+    {
+      "directory": "MP034/attention_scratch_s11",
+      "mouse": "MP034",
+      "kind": "attention",
+      "seed": 11,
+      "stage": "speed",
+      "pretrained": false,
+      "epochs": 24,
+      "selected_epoch": 22,
+      "selection_mse": 0.4269034260626281,
+      "initial_mse": 1.1925542287950124,
+      "grad_max": 32.25693130493164,
+      "gradients": {
+        "temporal.mix.in_proj_weight": 13.502786636352539,
+        "population.mix.in_proj_weight": 7.899199485778809
+      },
+      "selected_reload_exact": true,
+      "elapsed_seconds": 146.749820875
+    },
+    {
+      "directory": "MP034/attention_scratch_s12",
+      "mouse": "MP034",
+      "kind": "attention",
+      "seed": 12,
+      "stage": "speed",
+      "pretrained": false,
+      "epochs": 24,
+      "selected_epoch": 16,
+      "selection_mse": 0.3595617780980139,
+      "initial_mse": 1.2144724023451385,
+      "grad_max": 32.05135726928711,
+      "gradients": {
+        "temporal.mix.in_proj_weight": 13.038469314575195,
+        "population.mix.in_proj_weight": 8.76640796661377
+      },
+      "selected_reload_exact": true,
+      "elapsed_seconds": 144.25070066699993
+    },
+    {
+      "directory": "MP034/mixer_pretrained_s10",
+      "mouse": "MP034",
+      "kind": "mixer",
+      "seed": 10,
+      "stage": "speed",
+      "pretrained": true,
+      "epochs": 24,
+      "selected_epoch": 11,
+      "selection_mse": 0.300609948224925,
+      "initial_mse": 1.2186439521419992,
+      "grad_max": 9.15690803527832,
+      "gradients": {
+        "temporal.weight": 0.6236411333084106,
+        "population.mix.0.weight": 3.989626884460449
+      },
+      "selected_reload_exact": true,
+      "elapsed_seconds": 38.12958183300003
+    },
+    {
+      "directory": "MP034/mixer_pretrained_s11",
+      "mouse": "MP034",
+      "kind": "mixer",
+      "seed": 11,
+      "stage": "speed",
+      "pretrained": true,
+      "epochs": 24,
+      "selected_epoch": 14,
+      "selection_mse": 0.2903619242159998,
+      "initial_mse": 1.2239771486488566,
+      "grad_max": 9.855622291564941,
+      "gradients": {
+        "temporal.weight": 0.7650153040885925,
+        "population.mix.0.weight": 3.365420341491699
+      },
+      "selected_reload_exact": true,
+      "elapsed_seconds": 36.47195637499999
+    },
+    {
+      "directory": "MP034/mixer_pretrained_s12",
+      "mouse": "MP034",
+      "kind": "mixer",
+      "seed": 12,
+      "stage": "speed",
+      "pretrained": true,
+      "epochs": 24,
+      "selected_epoch": 8,
+      "selection_mse": 0.30253110439383596,
+      "initial_mse": 1.2838341300252256,
+      "grad_max": 9.521347045898438,
+      "gradients": {
+        "temporal.weight": 1.1502139568328857,
+        "population.mix.0.weight": 4.6278862953186035
+      },
+      "selected_reload_exact": true,
+      "elapsed_seconds": 36.36050012499982
+    },
+    {
+      "directory": "MP034/mixer_scratch_s10",
+      "mouse": "MP034",
+      "kind": "mixer",
+      "seed": 10,
+      "stage": "speed",
+      "pretrained": false,
+      "epochs": 24,
+      "selected_epoch": 15,
+      "selection_mse": 0.302043098506024,
+      "initial_mse": 1.210792368478476,
+      "grad_max": 6.921762943267822,
+      "gradients": {
+        "temporal.weight": 1.0084080696105957,
+        "population.mix.0.weight": 3.8017537593841553
+      },
+      "selected_reload_exact": true,
+      "elapsed_seconds": 36.79485733299998
+    },
+    {
+      "directory": "MP034/mixer_scratch_s11",
+      "mouse": "MP034",
+      "kind": "mixer",
+      "seed": 11,
+      "stage": "speed",
+      "pretrained": false,
+      "epochs": 24,
+      "selected_epoch": 11,
+      "selection_mse": 0.3386685359011896,
+      "initial_mse": 1.2080008386666963,
+      "grad_max": 10.20765209197998,
+      "gradients": {
+        "temporal.weight": 1.0698201656341553,
+        "population.mix.0.weight": 3.9473156929016113
+      },
+      "selected_reload_exact": true,
+      "elapsed_seconds": 35.82681504200002
+    },
+    {
+      "directory": "MP034/mixer_scratch_s12",
+      "mouse": "MP034",
+      "kind": "mixer",
+      "seed": 12,
+      "stage": "speed",
+      "pretrained": false,
+      "epochs": 24,
+      "selected_epoch": 14,
+      "selection_mse": 0.3300202242407129,
+      "initial_mse": 1.279820343372979,
+      "grad_max": 5.886014461517334,
+      "gradients": {
+        "temporal.weight": 0.6359267830848694,
+        "population.mix.0.weight": 4.16599702835083
+      },
+      "selected_reload_exact": true,
+      "elapsed_seconds": 36.251685583999915
+    },
+    {
+      "directory": "MP034/pooled_mlp_s10",
+      "mouse": "MP034",
+      "kind": "pooled_mlp",
+      "seed": 10,
+      "stage": "speed",
+      "pretrained": false,
+      "epochs": 24,
+      "selected_epoch": 10,
+      "selection_mse": 0.5072615153612714,
+      "initial_mse": 1.3163252503435217,
+      "grad_max": 22.254884719848633,
+      "gradients": {
+        "activity.0.weight": 4.760228633880615,
+        "head.2.weight": 6.406024932861328
+      },
+      "selected_reload_exact": true,
+      "elapsed_seconds": 5.280276291999996
+    },
+    {
+      "directory": "MP034/pooled_mlp_s11",
+      "mouse": "MP034",
+      "kind": "pooled_mlp",
+      "seed": 11,
+      "stage": "speed",
+      "pretrained": false,
+      "epochs": 24,
+      "selected_epoch": 20,
+      "selection_mse": 0.5275971085563634,
+      "initial_mse": 1.1993500197280311,
+      "grad_max": 28.82219696044922,
+      "gradients": {
+        "activity.0.weight": 5.674391269683838,
+        "head.2.weight": 5.405496120452881
+      },
+      "selected_reload_exact": true,
+      "elapsed_seconds": 5.307769499999949
+    },
+    {
+      "directory": "MP034/pooled_mlp_s12",
+      "mouse": "MP034",
+      "kind": "pooled_mlp",
+      "seed": 12,
+      "stage": "speed",
+      "pretrained": false,
+      "epochs": 24,
+      "selected_epoch": 19,
+      "selection_mse": 0.5228344880913214,
+      "initial_mse": 1.2608771819816298,
+      "grad_max": 27.699243545532227,
+      "gradients": {
+        "activity.0.weight": 4.901870250701904,
+        "head.2.weight": 5.15592098236084
+      },
+      "selected_reload_exact": true,
+      "elapsed_seconds": 5.415433082999925
+    }
+  ],
+  "files": {
+    "MP030/attention_pretrained_s10/selected.pt": "6132efa9911cb8a5c16eea85a223f6098ee4d73d5a2aeb04998c3f81cb354840",
+    "MP030/attention_pretrained_s11/selected.pt": "281542e104bc69ef2894333f62f4a9e6dd37220303365d4e8bef12a8cfc4e566",
+    "MP030/attention_pretrained_s12/selected.pt": "d565dea5aca367c149784acd31e711dfd4c8ba63208cefb79f0f14b5f6ebc386",
+    "MP030/attention_scratch_s10/selected.pt": "a56e2dedc83c7b948261b81c8bb2a540c0927d7c4c841a63e23191fb08814c53",
+    "MP030/attention_scratch_s11/selected.pt": "44b22a384867e052351ab66abbff4865717fe6275a0ac92f2ef8ebb5d985201d",
+    "MP030/attention_scratch_s12/selected.pt": "1be3f6739b8770dc19c5384ee372dd5c26609f8ca51acc7750b8de1b37fa7a2b",
+    "MP030/mixer_pretrained_s10/selected.pt": "e369d125f87e7f394f20b1ff6499c4e1a803186d1ff65d97a66e9637ed72dcb3",
+    "MP030/mixer_pretrained_s11/selected.pt": "92e603137f15f5d9a6c3326af057d530fd77225b0740d461f11a67a49e02ba92",
+    "MP030/mixer_pretrained_s12/selected.pt": "738c3a46c274797e10a9b2e9e387ec79d65cecb0e6bf2f3f29f447bf4d54ae2d",
+    "MP030/mixer_scratch_s10/selected.pt": "079b9cf9628e463784adbd84f4260bee731ea5908f96f07c1049cb030c4ebab7",
+    "MP030/mixer_scratch_s11/selected.pt": "669eb93f86cb6c5cc4e8cb1be1db7f06b23fe7d2e282d7a659d17c32afe87724",
+    "MP030/mixer_scratch_s12/selected.pt": "66bd11d14c7afc99025759f90fc37933d2eaab1fdb4a8add2e258622e8c35037",
+    "MP030/pooled_mlp_s10/selected.pt": "48095561ae9fc915d389cb4f7672fe56969c81081cf2ff90615b44ffce0f060f",
+    "MP030/pooled_mlp_s11/selected.pt": "c30bede247ec8ce3bd52be290b043d1b1e756a0ae77efed5ef4bed2a77c159e4",
+    "MP030/pooled_mlp_s12/selected.pt": "0daf3bdf794011ff38ea6c08528b765767f1eeb115ec3dbb8a9ce1337947d730",
+    "MP032/attention_pretrained_s10/selected.pt": "03de19b5680beff75e36e2d06d6f5aeeb9af5314ce3f23fee6b4a7a417e4e599",
+    "MP032/attention_pretrained_s11/selected.pt": "167632b7909b0664376fd5490bc0dbf6322e8e061f0753ba94a176c2f181bb57",
+    "MP032/attention_pretrained_s12/selected.pt": "8b0f2ac8de6f5955952d0778a6b9f1e319f9352933671c3bd09069ae6e63556b",
+    "MP032/attention_scratch_s10/selected.pt": "b939af745810778c1580b86b427c1bcbdd28886ea67053745887eb1b29a6aa53",
+    "MP032/attention_scratch_s11/selected.pt": "cec8b66cc688b1c285ca060eb5d87b5cf119c81fee6a59d901b13f35f90c2a4e",
+    "MP032/attention_scratch_s12/selected.pt": "724ffa2332a4994c43fc4dc82ff48cd7e1dd1b85b8fa403340d57198d878aa20",
+    "MP032/mixer_pretrained_s10/selected.pt": "631f899c3e76356526c1443f19cef2fffc6b25388261be8d7f9138ad23da5234",
+    "MP032/mixer_pretrained_s11/selected.pt": "ac9985b9c5fbdec2881854209761409f9a175cf4ffc0eb76d913fe59b8d32c89",
+    "MP032/mixer_pretrained_s12/selected.pt": "95b57ab6fe2979cae2621ab0415858739b6bb71d0c41ac0d3c53b2030dc479c1",
+    "MP032/mixer_scratch_s10/selected.pt": "d2bf5ea85d225ce0b3f27d88b76de36d84d95d2b045ad95ad40082ee98e683ca",
+    "MP032/mixer_scratch_s11/selected.pt": "e3f057fcaf9dc929a8dfc5cac49f1f24335b24687053b419ceeb38acaa58d641",
+    "MP032/mixer_scratch_s12/selected.pt": "9c245a9d8f492abd27b323e415ead4614ab67b1482744655a58a72edae6df99f",
+    "MP032/pooled_mlp_s10/selected.pt": "93c4668809cffde81f28df6a239926e3f4959b23c94feb5ad415dfc349235420",
+    "MP032/pooled_mlp_s11/selected.pt": "6ab67653b1101117cff5472080e88c3d19e4da30fffc3f66f8d6f1cd9ba3ad5e",
+    "MP032/pooled_mlp_s12/selected.pt": "33a8b53069fc4c00cd260725e2e0eeab956508e1e1573e83a75938e85ac4c4c6",
+    "MP033/attention_pretrained_s10/selected.pt": "a4633a215e9e600952583ece40ff872b33105a7528f72ee22cc442ed6af58ee1",
+    "MP033/attention_pretrained_s11/selected.pt": "278dbdaeabaad46ddd8ef2577b5e9b08010d7d30bd7211b2da03e226f7ce39a3",
+    "MP033/attention_pretrained_s12/selected.pt": "7fea716ea542e5de2e5b4aefa7f82ec47eec9c26de4051d38ac77e309858d287",
+    "MP033/attention_scratch_s10/selected.pt": "20ce103bbd82c0dd1d7884090bc5b37cfd795859d8b40ad403c62d3458581bf2",
+    "MP033/attention_scratch_s11/selected.pt": "7d0b9f4b7f0fcc55ca1294390395609b81241377985d7b9919fed37588e27bc8",
+    "MP033/attention_scratch_s12/selected.pt": "e88fe99df8fc2d4ecbeea95d53e624c0b36ec59313c970ec12bc034a2c2cea62",
+    "MP033/mixer_pretrained_s10/selected.pt": "6252a6d6f9bb087776b464ad990b93d5893bf5edd5bba62ae3aadfacf8b45afc",
+    "MP033/mixer_pretrained_s11/selected.pt": "8f8950cc0f53b211ef8c3b750012a6d14a7822fac6ae63f5cecb08b29698fc3f",
+    "MP033/mixer_pretrained_s12/selected.pt": "070f1bb3eb3dabb875366612ecf175f083babfc9b147eb4fd76ff1293ade651b",
+    "MP033/mixer_scratch_s10/selected.pt": "f89a54ad9f2a1c15913654848344893ee153e13a18d120f9fe990b2a0f179266",
+    "MP033/mixer_scratch_s11/selected.pt": "11a2e4b936a6a0a4b4c4e960242eb0059b827bb9040556dd81e9c72570a74a93",
+    "MP033/mixer_scratch_s12/selected.pt": "b26f597ebf1895d84b18bdb43820d5b147deecb1b1862239a91dde45fcc74bd3",
+    "MP033/pooled_mlp_s10/selected.pt": "ca0607fdc8f32820df8ce5c95e7ee6ca1fa1a7e79af26c5efea0ea83d8c6fdcb",
+    "MP033/pooled_mlp_s11/selected.pt": "8fb3e84987641bbcb3c907cc367e79debaf04f3f63bddf20e132dd6179dcbdcf",
+    "MP033/pooled_mlp_s12/selected.pt": "a28813cd2ca3941a5fdbc3d52523e6b324d27b0c76c921a0f6b69692872196a7",
+    "MP034/attention_pretrained_s10/selected.pt": "2dca4b0d25fe46887be871a02ad95b9e1522b65c271092ed7a95d6f0bce12099",
+    "MP034/attention_pretrained_s11/selected.pt": "e0310349b0596188a16be69e84fd88c93055d1237852fa74c7349b7a86bb4480",
+    "MP034/attention_pretrained_s12/selected.pt": "4ac586f91b52d9b9e75fb18608d3a4f94ef8d663c1f2e3d320acf6ed724deba8",
+    "MP034/attention_scratch_s10/selected.pt": "8edecd3a583f001b4481a543cd1d7dc435e364d19219c0ff95fac3828dc4d71e",
+    "MP034/attention_scratch_s11/selected.pt": "4564d3f0c404e3970599a9831aa9f9215c74c9ccbd38c37f249d71e539fbd3d2",
+    "MP034/attention_scratch_s12/selected.pt": "cd5fe1c568ca409c6a8bafc194703aa49f11836b8f34e024dc79b23bba46b673",
+    "MP034/mixer_pretrained_s10/selected.pt": "6fc5867c486ef2dfc7590f4331429ffedd3baa3a9fcb1ceb880d4b586f1c0dd8",
+    "MP034/mixer_pretrained_s11/selected.pt": "34d1787b133c19e14eae169d07605b4344f5838403644acd248a3034927add4f",
+    "MP034/mixer_pretrained_s12/selected.pt": "984759c4cdd1f07403458628a7dcb899a6478eca23e52c8ad14d1ba44a2cd573",
+    "MP034/mixer_scratch_s10/selected.pt": "3630f97f128024319bff5f5175005134097e5f7711c50b3d48f1fca6a550b7b7",
+    "MP034/mixer_scratch_s11/selected.pt": "b8b448b3d16273a780f0a39ace4f4ce0d2323ef9a8928eed8963c7c8947fd249",
+    "MP034/mixer_scratch_s12/selected.pt": "52b9b2e1ec56f9338f9f6490ac840c4d24de7acfa5be87632a366b4146d4ae4e",
+    "MP034/pooled_mlp_s10/selected.pt": "a8b5740190378e88fab077464276b13edc4e0f081e056f84c7583ceece15db2b",
+    "MP034/pooled_mlp_s11/selected.pt": "5198f34790b960eea0ee0a68bf8b8500bbcccdf1335d799427795d7bade7487c",
+    "MP034/pooled_mlp_s12/selected.pt": "713705b7686640a160bfe4e0fb88dd12b4f9ef1b88de9a1037576867ebc8a17a"
+  },
+  "predictions_checked": 1500,
+  "matched_batch_orders": true,
+  "later_scored": false
+}

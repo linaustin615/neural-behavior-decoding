@@ -1,0 +1,54 @@
+{
+  "passed": true,
+  "reason": "NumPy matmul emitted divide/overflow/invalid warnings despite finite outputs; independently checked every new ridge prediction with Torch float64 and non-BLAS einsum",
+  "checks": [
+    {
+      "mouse": "MP030",
+      "condition": "ridge",
+      "maximum_prediction_difference": 0.0,
+      "maximum_nonblas_difference": 6.661338147750939e-15
+    },
+    {
+      "mouse": "MP030",
+      "condition": "ridge_guard",
+      "maximum_prediction_difference": 0.0,
+      "maximum_nonblas_difference": 5.329070518200751e-15
+    },
+    {
+      "mouse": "MP032",
+      "condition": "ridge",
+      "maximum_prediction_difference": 0.0,
+      "maximum_nonblas_difference": 2.3314683517128287e-15
+    },
+    {
+      "mouse": "MP032",
+      "condition": "ridge_guard",
+      "maximum_prediction_difference": 0.0,
+      "maximum_nonblas_difference": 2.609024107869118e-15
+    },
+    {
+      "mouse": "MP033",
+      "condition": "ridge",
+      "maximum_prediction_difference": 0.0,
+      "maximum_nonblas_difference": 5.995204332975845e-15
+    },
+    {
+      "mouse": "MP033",
+      "condition": "ridge_guard",
+      "maximum_prediction_difference": 0.0,
+      "maximum_nonblas_difference": 5.329070518200751e-15
+    },
+    {
+      "mouse": "MP034",
+      "condition": "ridge",
+      "maximum_prediction_difference": 0.0,
+      "maximum_nonblas_difference": 4.218847493575595e-15
+    },
+    {
+      "mouse": "MP034",
+      "condition": "ridge_guard",
+      "maximum_prediction_difference": 0.0,
+      "maximum_nonblas_difference": 4.218847493575595e-15
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "mouse": "MP034",
+  "family": "transformer",
+  "recipe_id": 1,
+  "seed": 11,
+  "selected_epoch": 22,
+  "selection_mse": 0.1870025713500158,
+  "training": {
+    "mse": 0.08542148468070584,
+    "raw_mse": 0.08543231162748917,
+    "r2": 0.9145785153192941,
+    "predicted_speed_std": 8.365585615043004,
+    "rmse_speed_units": 2.5211828883183864
+  },
+  "max_gradient": {
+    "base.encoder.tokenizer.identity_embedding.weight": 0.06569503247737885,
+    "base.encoder.transformer.self_attn.in_proj_weight": 0.1326039880514145,
+    "readin.in_proj_weight": 0.3640992045402527
+  },
+  "parameter_changes": {
+    "base.encoder.tokenizer.identity_embedding.weight": 20.11590576171875,
+    "base.encoder.transformer.self_attn.in_proj_weight": 1.26376473903656,
+    "readin.in_proj_weight": 6.925112724304199
+  },
+  "batch_order_hashes": [
+    "cbae2ab08a1b618a5c3b3aa27a5f59dda256d0ce299f28265d1c1bb5f4403a07",
+    "05cac1b7eeab99ca453f6cbfafc8817ca7f3d6a739a911ceab5364ccbc65ac54",
+    "22094265d23b60f0bf1cd838549b61e34d2ee06c8960a4e12bfcb164a1ab43c7",
+    "de926ccb754e79c58bc21d690ffe2a538d1eb963c7b254689d56779b704f1b3d",
+    "9a41cf24499dfe9b6ca382c787d2d17366d89baf5d12ef8ee192274d79660bbd",
+    "60bc6e27962ef1f36dd9b038988c9bb1ec7191838c7d4b9b749c4a72df54e654",
+    "e72cad488cfb861535a6d40a489797ce652fc96ee9bc707fe721c82b0841961d",
+    "0da98bae1606e05c6cccee41a05cc837d4eed258554998e468470896b0605ff1",
+    "b0ee5d604ff391c60762f6180c8cd6607357a7f605d78da6ffb8ba62d010e7de",
+    "c597f1948cc88cb13eb1849806c021ea5e8c67d80c5fbf7ea54a65aeee9b65e9",
+    "720fa0df97684b9c69edfab04633dac8f5f4a1133281b895cb09c10b7d69fb88",
+    "a6a52099e7576aba3d8499a965091bca1eaba9fcafbb2f1f6f7b72f9a0f6ad85",
+    "eca60878676dde3e61e27ab27c00d624cd14b60d357d9b44ef1f38f44df93200",
+    "e60fc786d7b3aa1fea82d4153893822be387106014b50ecbbeb97301997bf343",
+    "3a674dc4b43717dbd5ce1403f66fd65ef3ee1635640677c6a6799868bba37465",
+    "8f7574fa09b9f2580748a310a39fa315834a2110ec09c69ab84baa0e0894753c",
+    "c79fd85a10d3edabe1dece5e835f8889b92ccb94b7d2880c395713f49332947b",
+    "569bcbd7430f7a4dbbd3ffff4ea36352cb055b4d8178404ea82a7d2a72f1412e",
+    "b0f021cb29713776067ac1676fbc4c07cd212629c6d1008ce19e002a58b8ac33",
+    "dd0cbb114b758e3952b38b487c9893835a42e507931cf14ec6c2e63e64c73e3f",
+    "9b9a249a4d11e73a4de6377f93ab49d3b3238ff4378bcfb12b3ff9ede7e11bc1",
+    "071e0716e6a4c7b9374335d3396870e6b41674adda59cc4aa289a38e9d63fe69",
+    "97ec30c117d93e8186f0ca8b1444317f8bee69970ff419d1f2d127cd70a8b5ab",
+    "754ebf15f4ecbe6512c90b8518f8b338037e9436a73fd21f56c7fe6484fd03a0"
+  ],
+  "selected_reload_exact": true,
+  "elapsed_seconds": 48.774334834
+}

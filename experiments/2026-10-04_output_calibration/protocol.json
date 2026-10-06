@@ -1,0 +1,216 @@
+{
+  "frozen_utc": "2026-10-04T20:29:06.488712+00:00",
+  "mice": [
+    "MP030",
+    "MP032",
+    "MP033",
+    "MP034"
+  ],
+  "seeds": [
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "question": "Can earlier-fitted output scale and offset reduce the shared transformer ensemble errors without changing its neural representation?",
+  "hypotheses": [
+    "stable amplitude/offset error is repairable by two scalar coefficients",
+    "signed errors during fast increases/decreases can describe smoothing, but cannot establish physical latency"
+  ],
+  "families": [
+    "attention",
+    "mlp"
+  ],
+  "seed_pairs": [
+    [
+      10,
+      11
+    ],
+    [
+      10,
+      12
+    ],
+    [
+      10,
+      13
+    ],
+    [
+      10,
+      14
+    ],
+    [
+      10,
+      15
+    ],
+    [
+      11,
+      12
+    ],
+    [
+      11,
+      13
+    ],
+    [
+      11,
+      14
+    ],
+    [
+      11,
+      15
+    ],
+    [
+      12,
+      13
+    ],
+    [
+      12,
+      14
+    ],
+    [
+      12,
+      15
+    ],
+    [
+      13,
+      14
+    ],
+    [
+      13,
+      15
+    ],
+    [
+      14,
+      15
+    ]
+  ],
+  "bounds": {
+    "MP030": {
+      "calibration": [
+        0,
+        337
+      ],
+      "development_check": [
+        369,
+        675
+      ]
+    },
+    "MP032": {
+      "calibration": [
+        0,
+        277
+      ],
+      "development_check": [
+        309,
+        555
+      ]
+    },
+    "MP033": {
+      "calibration": [
+        0,
+        196
+      ],
+      "development_check": [
+        228,
+        393
+      ]
+    },
+    "MP034": {
+      "calibration": [
+        0,
+        196
+      ],
+      "development_check": [
+        228,
+        393
+      ]
+    }
+  },
+  "thresholds": {
+    "MP030": {
+      "median": -0.40574187708984544,
+      "q90": 1.4830151168984456,
+      "change_q90": 0.6288018201662198,
+      "train_n": 2386,
+      "lower": -0.40999348214676085,
+      "speed_mean": 1.4261251626295979,
+      "speed_std": 3.4784093521738075
+    },
+    "MP032": {
+      "median": -0.3472433405313672,
+      "q90": 1.2450060743065705,
+      "change_q90": 0.3181758794484042,
+      "train_n": 2024,
+      "lower": -0.35184981621183603,
+      "speed_mean": 0.8876701935618763,
+      "speed_std": 2.522866725124114
+    },
+    "MP033": {
+      "median": 0.07542221413165873,
+      "q90": 1.3045712535347953,
+      "change_q90": 1.122197837704994,
+      "train_n": 1538,
+      "lower": -1.153273324045419,
+      "speed_mean": 9.425021997607804,
+      "speed_std": 8.172409611059921
+    },
+    "MP034": {
+      "median": -0.014501549216441985,
+      "q90": 1.409293973205985,
+      "change_q90": 1.1219714142405834,
+      "train_n": 1540,
+      "lower": -1.145837166957976,
+      "speed_mean": 9.884249473356054,
+      "speed_std": 8.626225225000544
+    }
+  },
+  "base_checkpoints": "use the original full-development selected epoch in each result.json; no checkpoint reselection",
+  "calibration": "one nonnegative-slope least-squares affine map per mouse/family/pair, fitted on first half of development targets only; zero predictor variance uses slope1 and mean residual offset; clip output at physical zero",
+  "evaluation": "lock all120 coefficient pairs before scoring later-development remainder or archived later intervals; no refit or calibrate/identity selection",
+  "primary": "calibrated transformer versus its unchanged pair: >=5% equal-mouse relative MSE gain, >=3/4 mouse wins, >=40/60 matched pair wins, no mouse >10% MSE harm, nonnegative mean relative MAE gain",
+  "secondary": "apply identical correction to MLP; report same gate for MLP and calibrated-transformer versus calibrated-MLP comparison without reusing gate as an attention-utility claim",
+  "diagnostics": "signed and squared errors at frozen relative-speed cutoffs and rapid rises/falls; first target omitted only for consecutive-change calculations; report each pair prediction-change error versus zero predicted change",
+  "independence": "historically reused animals, architecture and later labels; base epochs saw the full development interval, so its remainder is NOT a pristine holdout even though calibrators did not fit its labels; pairs/windows are dependent",
+  "stopping": "one120-fit analytic calibration experiment; no model fits/inference, search, timing shift, new seeds, application edit or publication",
+  "input_hashes": {
+    "experiments/2026-10-04_output_calibration/run.py": "ae230773910f37ad066ccf2f3b996d547d0b880cdebe7e38036fc784c236c5ad",
+    "experiments/2026-10-04_behavior_robustness/protocol.json": "3529b0e5b75a515c810ee0534af56b91a329fd1ecbfd0e2a28227eccc5ad480e",
+    "experiments/2026-10-04_behavior_robustness/results.json": "7b6e09648759f8da133fa919afc437014c0e2dc9e82c7b52f2920fb276e83f9c",
+    "model.py": "2297af73466e1c85ee5774dc10a44a2a03f7a6f48919a111b43a8cf6d7d86a40",
+    "train.py": "0361d216cd75616ed07501a019f4837f7c0acf57f0cd2edecb0fc6728064d7f9",
+    "data.py": "894d5aea4dd0ce6a139178b66b1f8a5538f1c4f015081153d4c11fa55d78b7bf",
+    "experiments/2026-10-03_dynamics_baseline/MP030/selection_y.npy": "80b26de2780aaf5484431383bbae200146113bea9c0e31fc45b67df9f2ea6c91",
+    "experiments/2026-10-04_ensemble_seed_replication/MP030/later_predictions.npz": "9b76f60bc8fdb31bc3037d6f5797d47f20f2523a47d588cf68502a4ad7ae5add",
+    "experiments/2026-10-03_dynamics_baseline/MP032/selection_y.npy": "9e71c50a3f4df98ae7bba1a9bba553526e42bf7aed404a44dc0891fe2042fea5",
+    "experiments/2026-10-04_ensemble_seed_replication/MP032/later_predictions.npz": "6a38c24e98ea007dacb6586bfa859ea516a6b45ad37fa1f0eebbacbb56f98600",
+    "experiments/2026-10-03_dynamics_baseline/MP033/selection_y.npy": "81a66b745ecf99d549d3bb8ee867678c4d25292179869e4a03742028b09c360c",
+    "experiments/2026-10-04_ensemble_seed_replication/MP033/later_predictions.npz": "99aa1e50d19e9c34c1cdfcf5c458485ee8e2d4d1d966d68b24f86255dc967272",
+    "experiments/2026-10-03_dynamics_baseline/MP034/selection_y.npy": "33306d2af1f937ec3e0996d4cb6897981e345070c747a453f706b40e3457ccfc",
+    "experiments/2026-10-04_ensemble_seed_replication/MP034/later_predictions.npz": "bc993c0925c1d550e426676facb764c19e18b1e8d3b5db79f8df43db49a8085d",
+    "experiments/2026-10-03_shared_behavior/shared/attention_s10/result.json": "50d6a73fede410a0a3a3902b094ccbbf71545dc872de684b33082c6194b83f34",
+    "experiments/2026-10-03_shared_behavior/shared/attention_s10/selection_predictions.npz": "1574e64a88023f925fd3b030536820b0974005015b237a5a1b2b06b3a79678fc",
+    "experiments/2026-10-03_shared_behavior/shared/attention_s11/result.json": "45304ea5ec301f514ebbd4feab1d015db081a29ee6ec6a6fd270d8bb914d4914",
+    "experiments/2026-10-03_shared_behavior/shared/attention_s11/selection_predictions.npz": "126f2d9b8e12a8f2f6f753ee77060d3920a8a574328a6a1567cbb13b9120e301",
+    "experiments/2026-10-03_shared_behavior/shared/attention_s12/result.json": "731b107dd0b85c301ace971a15a9e909cb3e388d53f4a579cd98145d2eb0c206",
+    "experiments/2026-10-03_shared_behavior/shared/attention_s12/selection_predictions.npz": "2eed5585ea5fda7444d7daebc2d3a1266075ff89a74013325ea115eaac5aab57",
+    "experiments/2026-10-04_ensemble_seed_replication/attention_s13/result.json": "045b51d56dcee452628b09940f06feb869221c0e9d8e40e3b79a1af477bd2e30",
+    "experiments/2026-10-04_ensemble_seed_replication/attention_s13/selection_predictions.npz": "d7ebfe2389a3f1dc4303baa912b4596cd0f3d7d5a27b4a4d1ab637e906aed29e",
+    "experiments/2026-10-04_ensemble_seed_replication/attention_s14/result.json": "e94ec3d691a05113124aace9c10fbb46d37d51012a4db87604d11443de58f863",
+    "experiments/2026-10-04_ensemble_seed_replication/attention_s14/selection_predictions.npz": "5b1dd9075efbf4b27785621f4137b55ed6462376324bb36c61e373372ca910c8",
+    "experiments/2026-10-04_ensemble_seed_replication/attention_s15/result.json": "ff5adf183e1163ade3b5c89dac6590fc33c40677785d25efb182471d72c6eaa1",
+    "experiments/2026-10-04_ensemble_seed_replication/attention_s15/selection_predictions.npz": "09c5ffe773582bb6dd8b5be3b93bace18774e729177bcad149fb58c6ec90b4b8",
+    "experiments/2026-10-03_shared_behavior/shared/mlp_s10/result.json": "de07d37ac3de8ebaef266f928e0125f4de9bc76e02a6d4916ac0552591e978b5",
+    "experiments/2026-10-03_shared_behavior/shared/mlp_s10/selection_predictions.npz": "35bb911bf671d263f20b3c139e9ae4ef453142db481836fae53ed07927aca737",
+    "experiments/2026-10-03_shared_behavior/shared/mlp_s11/result.json": "0e321ad2c4ede2e6d2c07f968a9fd94ba1a122063f80f0c56e5daf3f4293768a",
+    "experiments/2026-10-03_shared_behavior/shared/mlp_s11/selection_predictions.npz": "3ffc08cb1a163f5e7d5172b52b32b1904b35288efc2b9e0ad8a4529a86f71540",
+    "experiments/2026-10-03_shared_behavior/shared/mlp_s12/result.json": "0be718dd4c5e7754a0cf35d931729e25de981f4e4bb2f6f49b9597473f3bace2",
+    "experiments/2026-10-03_shared_behavior/shared/mlp_s12/selection_predictions.npz": "5211ce29327804f6101c861c5d29c86a7d668e858fc129842fa03fc572364e5d",
+    "experiments/2026-10-04_ensemble_seed_replication/mlp_s13/result.json": "9c22291da3ed336f2e0a61d2c287896c793b5e3bffc83ffa4636fe157f929f77",
+    "experiments/2026-10-04_ensemble_seed_replication/mlp_s13/selection_predictions.npz": "f60062aaee047c525a34a97ae240c7509fff1a0739041f7bd159a507ea4c6bfa",
+    "experiments/2026-10-04_ensemble_seed_replication/mlp_s14/result.json": "a2601e142f5d4e1aed8b48891f1ffc0db4a8ce3f4c88da30f07703b84c2a075b",
+    "experiments/2026-10-04_ensemble_seed_replication/mlp_s14/selection_predictions.npz": "09687eb8273a43161b71da39c2e5db99e18b9349679d023a952de42eea2a7d72",
+    "experiments/2026-10-04_ensemble_seed_replication/mlp_s15/result.json": "4d8c7a544e6299b978447bc1230e1562947c233534d0947b8394c0c0fc121ad4",
+    "experiments/2026-10-04_ensemble_seed_replication/mlp_s15/selection_predictions.npz": "d99dd0cdd8baf1488dd24b598a78d409eaf6c4d6f4785176ddf9258917d98e4a"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "status": "complete",
+  "phase": "complete",
+  "started_utc": "2026-10-05T15:12:45.941108+00:00",
+  "initial_seeds": [
+    10,
+    11,
+    12
+  ],
+  "variants": [
+    "time_dynamic",
+    "time_static",
+    "interleaved_dynamic"
+  ],
+  "initial_new_fit_budget": 9,
+  "max_new_fit_budget": 18,
+  "conditional_replication": "Allthreevariants on13-15 iff eithercontiguouscandidate passes fixedutilityscreen vsoriginalANDunrestrictedparent",
+  "baseline": "original shared transformer retained",
+  "baseline_fits_repeated": 0,
+  "next": [],
+  "training_fits_complete": 9,
+  "stage1_training_exit_codes": [
+    0,
+    0,
+    0
+  ],
+  "screen_exit_code": 0,
+  "selection_lock_exit_code": 0,
+  "screen_pass": {
+    "time_dynamic": false,
+    "time_static": false
+  },
+  "extra_seeds_run": false,
+  "completed_utc": "2026-10-05T15:35:21.100874+00:00",
+  "new_later_predictions": 19962,
+  "evaluation_exit_code": 0,
+  "analysis_exit_code": 0,
+  "diagnostic_exit_code": 0,
+  "report_exit_code": 0,
+  "candidate": "consecutive-time candidates failed; interleaved control retained as exploratory lead with failed seed consistency",
+  "main_application_unchanged": true,
+  "queued_work": []
+}

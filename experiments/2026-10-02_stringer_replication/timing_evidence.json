@@ -1,0 +1,27 @@
+{
+  "checked_utc": "2026-10-03T00:36:28.349118+00:00",
+  "sources": [
+    {
+      "url": "https://ndownloader.figshare.com/files/11492270",
+      "local_copy": "authors_dataSharing.pdf",
+      "sha256": "c90b68f1150e8a4ff869974c3ee9c17d3ce24f2f1864ca8db17b064b6011f834",
+      "finding": "Temporal variables, including neural traces from different planes, were resampled to center-plane acquisition times. Actual running field is beh.runSpeed."
+    },
+    {
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6525101/",
+      "finding": "The paper describes 400 ms cortical scans and 1.2 second analysis bins (Figure1 and accompanying text)."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/MouseLand/stringer-pachitariu-et-al-2018a/master/multiDactivity/smooth1Dclusters.m",
+      "lines": [
+        72,
+        76
+      ],
+      "finding": "Code uses bin2d(Ff,4,2) for db.nplanes==10, otherwise bin2d(Ff,3,2). All four files declare nplanes=12."
+    }
+  ],
+  "decision": "Mean matching nonoverlapping triples from sample zero for activity and speed; nominal1.2 seconds per bin.",
+  "verified": "Author-documented resampling and factor-three analysis precedent; supplied lengths verified in completed validation.",
+  "unverified": "No per-session acquisition timestamps or within-file acquisition-run boundaries found in inspected metadata/documentation.",
+  "continuity_policy": "Use released within-file sample order, never join files. Unknown internal acquisition boundaries cannot be excluded from bins/windows; no inferred gaps from activity or fine-timescale causality claims."
+}

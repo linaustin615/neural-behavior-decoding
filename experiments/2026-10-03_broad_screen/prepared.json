@@ -1,0 +1,59 @@
+{
+  "passed": true,
+  "rows": [
+    {
+      "mouse": "MP030",
+      "kernel_selected": {
+        "bandwidth": 1.0,
+        "regularization": 0.01,
+        "mse": 0.36614353609188394
+      },
+      "strong_kind": "ridge",
+      "graph_degree": 8
+    },
+    {
+      "mouse": "MP032",
+      "kernel_selected": {
+        "bandwidth": 1.0,
+        "regularization": 0.01,
+        "mse": 0.0049206475524445166
+      },
+      "strong_kind": "kernel",
+      "graph_degree": 8
+    },
+    {
+      "mouse": "MP033",
+      "kernel_selected": {
+        "bandwidth": 0.25,
+        "regularization": 0.01,
+        "mse": 1.009206929592604
+      },
+      "strong_kind": "ridge",
+      "graph_degree": 8
+    },
+    {
+      "mouse": "MP034",
+      "kernel_selected": {
+        "bandwidth": 0.25,
+        "regularization": 0.01,
+        "mse": 0.7209969069975237
+      },
+      "strong_kind": "ridge",
+      "graph_degree": 8
+    }
+  ],
+  "files": {
+    "MP030/graph.npy": "9978f08e10d1b6660d87c0b510b4b62cab2ab2cf7df3b39d5d6f2a37182139ca",
+    "MP030/baselines.json": "83929e7ea6f85f56c23fb6accf5380c9c02f15b7efa8eca2883cc3070bea5fb2",
+    "MP030/kernel.npz": "caf95556663edea4dbb4f0f7c2e47adf17586c2c467059b42209c0ca644ff344",
+    "MP032/graph.npy": "4b3807dccc7acbe2f2b84019d3516018d98dca5216fc5984ce448992ccaaa508",
+    "MP032/baselines.json": "f6bc2f5fcae526951acfca2ceb1d13d8931c9c2236a24ca12448ea6b691a071c",
+    "MP032/kernel.npz": "3626e1d874221c41665e9ecb7b6d7149f06e32c4a85b7964576a11d12e08a0d9",
+    "MP033/graph.npy": "121357631ccebf37f4115b682f5b467c45c3d16cb82fe34d74ce71173fe804c6",
+    "MP033/baselines.json": "98d47e5eba36f80613e2b70acfa9d315ad5f3691651f01c5f208d7cf84cf8e3c",
+    "MP033/kernel.npz": "30058f243986430e9806bf4699199e69ae0d0c01ee1a267c28ca4c245a37a31e",
+    "MP034/graph.npy": "92bdbdabf06a447ccff1b001d90266656e3ec098d94c03e013f508e7b042908c",
+    "MP034/baselines.json": "6c7b5ea3fdd9e3e87fbd9e3fe9ddd3a6edae5b46eac38858fc6e573a187ab9a3",
+    "MP034/kernel.npz": "d6d7dce00a29de4e88969edea1f94c63aba26e19c4a27f27849e8e6f69633d10"
+  }
+}

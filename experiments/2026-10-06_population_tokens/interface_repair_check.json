@@ -1,0 +1,43 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "seed": 10,
+      "family": "attention",
+      "nonzero_head_forward_exact": true,
+      "legacy_predictor_compatible": true
+    },
+    {
+      "seed": 10,
+      "family": "mlp",
+      "nonzero_head_forward_exact": true,
+      "legacy_predictor_compatible": true
+    },
+    {
+      "seed": 11,
+      "family": "attention",
+      "nonzero_head_forward_exact": true,
+      "legacy_predictor_compatible": true
+    },
+    {
+      "seed": 11,
+      "family": "mlp",
+      "nonzero_head_forward_exact": true,
+      "legacy_predictor_compatible": true
+    },
+    {
+      "seed": 12,
+      "family": "attention",
+      "nonzero_head_forward_exact": true,
+      "legacy_predictor_compatible": true
+    },
+    {
+      "seed": 12,
+      "family": "mlp",
+      "nonzero_head_forward_exact": true,
+      "legacy_predictor_compatible": true
+    }
+  ],
+  "architecture_and_default_calculation_unchanged": true,
+  "failed_attempt_had_no_gradient_updates": true
+}

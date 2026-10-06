@@ -1,0 +1,296 @@
+{
+  "created_utc": "2026-10-03T06:36:22.816206+00:00",
+  "scope": "Exploratory historically inspected development data; no confirmatory significance",
+  "question": "Can a bounded transformer correction improve frozen ridge without the prior large generalization failures, and outperform a matched nonattention correction?",
+  "cohort": [
+    {
+      "mouse": "MP030",
+      "file": "data/spont_M161025_MP030_20161120.mat",
+      "development_stop": 4152,
+      "train": [
+        0,
+        2441
+      ],
+      "selection": [
+        2541,
+        3271
+      ],
+      "evaluation": [
+        3371,
+        4152
+      ],
+      "oof": [
+        {
+          "fold": 1,
+          "train": [
+            0,
+            1610
+          ],
+          "validation": [
+            1642,
+            1887
+          ]
+        },
+        {
+          "fold": 2,
+          "train": [
+            0,
+            1887
+          ],
+          "validation": [
+            1919,
+            2164
+          ]
+        },
+        {
+          "fold": 3,
+          "train": [
+            0,
+            2164
+          ],
+          "validation": [
+            2196,
+            2441
+          ]
+        }
+      ]
+    },
+    {
+      "mouse": "MP032",
+      "file": "data/spont_M170714_MP032_20170804.mat",
+      "development_stop": 3549,
+      "train": [
+        0,
+        2079
+      ],
+      "selection": [
+        2179,
+        2789
+      ],
+      "evaluation": [
+        2889,
+        3549
+      ],
+      "oof": [
+        {
+          "fold": 1,
+          "train": [
+            0,
+            1369
+          ],
+          "validation": [
+            1401,
+            1605
+          ]
+        },
+        {
+          "fold": 2,
+          "train": [
+            0,
+            1605
+          ],
+          "validation": [
+            1637,
+            1842
+          ]
+        },
+        {
+          "fold": 3,
+          "train": [
+            0,
+            1842
+          ],
+          "validation": [
+            1874,
+            2079
+          ]
+        }
+      ]
+    },
+    {
+      "mouse": "MP033",
+      "file": "data/spont_M170717_MP033_20170818.mat",
+      "development_stop": 2739,
+      "train": [
+        0,
+        1593
+      ],
+      "selection": [
+        1693,
+        2141
+      ],
+      "evaluation": [
+        2241,
+        2739
+      ],
+      "oof": [
+        {
+          "fold": 1,
+          "train": [
+            0,
+            1045
+          ],
+          "validation": [
+            1077,
+            1227
+          ]
+        },
+        {
+          "fold": 2,
+          "train": [
+            0,
+            1227
+          ],
+          "validation": [
+            1259,
+            1410
+          ]
+        },
+        {
+          "fold": 3,
+          "train": [
+            0,
+            1410
+          ],
+          "validation": [
+            1442,
+            1593
+          ]
+        }
+      ]
+    },
+    {
+      "mouse": "MP034",
+      "file": "data/spont_M170717_MP034_20170825.mat",
+      "development_stop": 2742,
+      "train": [
+        0,
+        1595
+      ],
+      "selection": [
+        1695,
+        2143
+      ],
+      "evaluation": [
+        2243,
+        2742
+      ],
+      "oof": [
+        {
+          "fold": 1,
+          "train": [
+            0,
+            1046
+          ],
+          "validation": [
+            1078,
+            1229
+          ]
+        },
+        {
+          "fold": 2,
+          "train": [
+            0,
+            1229
+          ],
+          "validation": [
+            1261,
+            1412
+          ]
+        },
+        {
+          "fold": 3,
+          "train": [
+            0,
+            1412
+          ],
+          "validation": [
+            1444,
+            1595
+          ]
+        }
+      ]
+    }
+  ],
+  "seeds": [
+    10,
+    11
+  ],
+  "families": [
+    "transformer",
+    "pooled_mlp"
+  ],
+  "penalties": [
+    0.1,
+    1.0
+  ],
+  "new_neural_fits": 32,
+  "new_oof_ridge_fits": 12,
+  "epochs": 24,
+  "baseline": "Fixed lambda10 ridge, original full outer-training fit reused. Fixed lambda avoids selecting the OOF predictor hyperparameter using its future targets. Stronger selection-tuned ridge retained as mandatory additional comparison.",
+  "oof": "Three expanding chronological prefix ridge fits per mouse. Earliest prefix is the archived cell-eligibility prefix. Each held-out block starts32 bins after its training end; windows use bins24..31, targets31 onward. Each prefix fits its own activity/target normalization; predictions converted to common outer-training target units. Fixed2048-cell pool eligible using earliest prefix only. No selection/later targets used to fit any OOF ridge.",
+  "correction": "Same transformer/pooledMLP as previous comparison, zero final linear layer, delta=tanh(network_output) bounded to1 outer-training speed SD. No input clipping, temporal attention, new tokenizer or dynamic confidence gate.",
+  "objective": "mean((OOF_ridge_prediction+delta-target)^2)+beta*mean(delta^2), beta0.1/1.0. Network sees only OOF training windows, normalized by outer-training statistics; their target labels are valid correction-training data.",
+  "training": "AdamW lr0.001,weight_decay0.01,batch32,24epochs,cosine eta_min0.0001,gradient clip1; paired seed/batch orders across families/penalties",
+  "selection": "For each seed/penalty choose minimum bounded earlier-selection MSE including epoch0 (exact ridge). Select one penalty per mouse/family by mean selected error across both seeds. Lock all32 fits before later scoring. Ties choose first epoch/penalty.",
+  "primary": "Equal-weight mean per-mouse relative MSE reduction against fixed ridge10; contrast transformer-correction versus pooledMLP-correction. Average individual-seed errors, not ensemble predictions.",
+  "practical_gate": "Transformer mean relative gain>=5% versus ridge10, positive in>=3/4 mice and>=6/8 seeds, no mouse mean more than10% worse than ridge10, and positive mean relative gain versus previously selected ridge. Exploratory gate, not significance.",
+  "attention_gate": "Only call transformer correction specifically promising if practical gate passes and it has positive mean relative gain over pooledMLP correction with>=3/4 positive mouse means.",
+  "secondary": "Per-seed errors, raw errors, zero/training-mean controls, selected-ridge comparison, trained epoch versus exact-ridge epoch0, correction magnitude, same relative-quiet/moving threshold as previous study, prior direct-network scores reused as descriptive context.",
+  "limitations": "OOF correction data are fewer than full training data; OOF base models have shorter histories than the full refitted baseline, creating a residual-distribution mismatch. Historical outcome inspection,4mice,2seeds,one fixed split per mouse. No universal architecture claim.",
+  "stop": "Exactly32 neural fits and12 prefix ridge fits; no outcome-driven extension, temporal-attention addition, old evaluation-tail access or application edits.",
+  "application_hashes": {
+    "model.py": "2297af73466e1c85ee5774dc10a44a2a03f7a6f48919a111b43a8cf6d7d86a40",
+    "data.py": "894d5aea4dd0ce6a139178b66b1f8a5538f1c4f015081153d4c11fa55d78b7bf",
+    "train.py": "0361d216cd75616ed07501a019f4837f7c0acf57f0cd2edecb0fc6728064d7f9"
+  },
+  "reference_hashes": {
+    "experiments/2026-10-03_fair_comparison/run.py": "e65cac1afe346b96172da0e99fcf8cd1f79197260a10c5f6e85092a85adee519",
+    "experiments/2026-10-03_fair_comparison/protocol.json": "0b63984e34ca433fab4c8c3a493194276c2cbc319b2ec53cb09436f4cef3350d",
+    "experiments/2026-10-03_fair_comparison/selection_lock.json": "aaf32e03a4e07a8bc2d33b9df27c45f78d0bea07bc5b5249d43a2ae4731e655a",
+    "experiments/2026-10-03_fair_comparison/results.json": "c82640789b8c65b358ad6438062e165442a3926436eb9dfae6e497b1da6efc76",
+    "experiments/2026-10-03_development_baselines/run.py": "3848c910eed79668b8ff84695efc6a97f75b193a9e5f41ac5d7f53919a72c07f",
+    "experiments/2026-10-03_development_baselines/protocol.json": "aaf80c059f31328ef0d969b0bf2affcb79fdedcfe9492cb4e8fc19a44e909d8c",
+    "experiments/2026-10-03_development_baselines/MP030_f2.npz": "1e63297e075543b7b0238efabde08709fb17fd281fec26d9e30aa68926370f5f",
+    "experiments/2026-10-03_development_baselines/MP030_ids.npy": "856a0bd283a7b0ddad2de23bcfb86ffa4cecf4b968ea30e4cce529147a11014c",
+    "experiments/2026-10-03_fair_comparison/MP030/train_x.npy": "d2ba2137a6b045e848d11b0c2725b9145401018bfb63d9142afc4b7e3ac44004",
+    "experiments/2026-10-03_fair_comparison/MP030/train_y.npy": "8919c96993afba4c59dabb8e205254fe7377bcd7d1a7b23025b270cae3c79636",
+    "experiments/2026-10-03_fair_comparison/MP030/selection_x.npy": "271187aca32eb2cc82dfcb5eb9c7b3cf89ec64059efc06d019b9589b7988b92a",
+    "experiments/2026-10-03_fair_comparison/MP030/selection_y.npy": "257e83052d4a472c5e9ec34d13662736909a3c511e8dd031cd0281915b9f5f36",
+    "experiments/2026-10-03_fair_comparison/MP030/statistics.npz": "dde426f33493b02efc35bab5b32c4cc6c1c8a9c7db17d64d8ebc2ad90008ca19",
+    "experiments/2026-10-03_fair_comparison/MP030/metadata.json": "152fca303e022803e92c127c36c10983f459d562cb700bfd9bf8a73b94888121",
+    "experiments/2026-10-03_fair_comparison/MP030/later_raw.npz": "8a9a79bd9da7681ea4cc3ad92b2f99ec4ce6326b9d4460275835eea1b94b76c7",
+    "experiments/2026-10-03_fair_comparison/MP030/later_predictions.npz": "60813bf774ca3e70ad9be563dbe688d66b549ac7e11ea365d96303bf22b77844",
+    "experiments/2026-10-03_development_baselines/MP032_f2.npz": "92542e60399780bf7029aa673a5ec28975e453e7ee4718400b3ae8e2f80e8e9c",
+    "experiments/2026-10-03_development_baselines/MP032_ids.npy": "4d31ce19eb927f43083070d35a91efb2d887831ac0d70dff7b3f85d3e02ee542",
+    "experiments/2026-10-03_fair_comparison/MP032/train_x.npy": "ad78c18410a978cb8fc9c77f203495e7fad8652b4ce354b2e88cfb519193e2fd",
+    "experiments/2026-10-03_fair_comparison/MP032/train_y.npy": "8adee2afb4033dfef3a2ae4fd3ad2861498ac79d18a408241304d8a5252767c6",
+    "experiments/2026-10-03_fair_comparison/MP032/selection_x.npy": "6c5ab2801ccdef6d56bfa08eb7012484d8d1d6e39c5af4234d2c5fa4cd9659fa",
+    "experiments/2026-10-03_fair_comparison/MP032/selection_y.npy": "9f79d73e996d985308e38c4b0b915cbbeb72a77568c7d2db17c1b7770c170a92",
+    "experiments/2026-10-03_fair_comparison/MP032/statistics.npz": "fa7bbc7af120ffd33f18b27547ef868036de9eb627321bd4139e1ef7bf5c5954",
+    "experiments/2026-10-03_fair_comparison/MP032/metadata.json": "5f9f1394dab67398548bd1c2f19b4af918d02c1713fb0bec79baae6c0f94ea6e",
+    "experiments/2026-10-03_fair_comparison/MP032/later_raw.npz": "31fb276252fe99f572d38e94cbc962edc3305d4bc552407e3c22b77a2ca12205",
+    "experiments/2026-10-03_fair_comparison/MP032/later_predictions.npz": "87a713263f67a09a73e83192414f66c85a82791868e5a6160804e473a8047123",
+    "experiments/2026-10-03_development_baselines/MP033_f2.npz": "724447472007b8620050553a58394d4c8bc4e7fa941cb09b0e500907d3ca629d",
+    "experiments/2026-10-03_development_baselines/MP033_ids.npy": "c7b9606ae8828ecacb5c2c8b01c631028ee7d1838b8c69c20951bfc9357dc45f",
+    "experiments/2026-10-03_fair_comparison/MP033/train_x.npy": "e33d4d9f9b84e391e4f639afda7ad305e3ac704dc288675b17bf5a14f5f7755c",
+    "experiments/2026-10-03_fair_comparison/MP033/train_y.npy": "b2f65388a14f33d903bf9731266ec55541f5d526557baf23e03e9609ac8aae7e",
+    "experiments/2026-10-03_fair_comparison/MP033/selection_x.npy": "17435c6bf02bb8eba0883937fbf9063b18a3e1de65ecb233c2354967e57c59c8",
+    "experiments/2026-10-03_fair_comparison/MP033/selection_y.npy": "3ef53c795208a7e72a96d008a6ab45cfc6d68b77a5532c337b78923c2d7ca405",
+    "experiments/2026-10-03_fair_comparison/MP033/statistics.npz": "3618dafbb7acd40d1c14d6d40935799dcaa2c551941c5f6af36b5b392fa7e8cc",
+    "experiments/2026-10-03_fair_comparison/MP033/metadata.json": "68d39cfbffde3cdfde0b255ae7fc6092e97254c86890b52fca856fafdb98722c",
+    "experiments/2026-10-03_fair_comparison/MP033/later_raw.npz": "ae659b194d6dec1036ee4c14446f6cf2da770ce2b14950b488cc65fac721a395",
+    "experiments/2026-10-03_fair_comparison/MP033/later_predictions.npz": "e684064991f6e52758dd91272b1a60c57a11b63680ff23813592f74d04e7ea40",
+    "experiments/2026-10-03_development_baselines/MP034_f2.npz": "4b9db4aaf398be4659deadaa88be9befdb2ba4094340162c5b5c64e054fc53c2",
+    "experiments/2026-10-03_development_baselines/MP034_ids.npy": "5a2465311406ce3f972f138034129b8688bc3699dbdbaa2ef51446eab53e7eb9",
+    "experiments/2026-10-03_fair_comparison/MP034/train_x.npy": "36fe7fbc2928ca3881bcefba3f0fab5c06824dc4318d42b0551edfdb96e33074",
+    "experiments/2026-10-03_fair_comparison/MP034/train_y.npy": "b3fd29a2ca6d5d20a5af0aa3ffe0896f03c3a0e9b71960e70e3b6a530db20269",
+    "experiments/2026-10-03_fair_comparison/MP034/selection_x.npy": "2688b1af16f33f70b215b40ee459cb13dd4ab042788dfb9ae6d56f1dbe150f9d",
+    "experiments/2026-10-03_fair_comparison/MP034/selection_y.npy": "29324622bd1c22e1cf030db65641bbfe6266f43408ec850d68efcc9c381260e1",
+    "experiments/2026-10-03_fair_comparison/MP034/statistics.npz": "8783775612a7d09f73ec918f74cd1f6f187ceacfceb6d61c2fba704d6b5317a4",
+    "experiments/2026-10-03_fair_comparison/MP034/metadata.json": "c29d80d72630b4e6abc58e77914cf58ba0da3940213c3925d0c09d8f01381afe",
+    "experiments/2026-10-03_fair_comparison/MP034/later_raw.npz": "04edd4b945f186f582e50ec123a6425abe11e7be7d4646dc5ee764e618bf97b3",
+    "experiments/2026-10-03_fair_comparison/MP034/later_predictions.npz": "74cf3b20400df85dee63f393d2e0da3d67607640751fed91660c343c9e70ad84"
+  },
+  "source_sha256": "602a30405f94050fb71d7157e8503c74b3eae971a39149aae89091be7b049b0f"
+}

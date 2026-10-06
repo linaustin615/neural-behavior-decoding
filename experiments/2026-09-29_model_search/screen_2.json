@@ -1,0 +1,185 @@
+[
+  {
+    "name": "original_constant",
+    "seed": 1,
+    "phase": "screen",
+    "config": {
+      "n": 128,
+      "window": 8,
+      "width": 32,
+      "lr": 0.001,
+      "epochs": 24,
+      "schedule": "constant",
+      "temporal": "linear",
+      "readout": "mean",
+      "clip": null
+    }
+  },
+  {
+    "name": "temporal_mean",
+    "seed": 0,
+    "phase": "screen",
+    "config": {
+      "n": 128,
+      "window": 8,
+      "width": 32,
+      "lr": 0.001,
+      "epochs": 24,
+      "schedule": "cosine",
+      "temporal": "mlp",
+      "readout": "mean",
+      "clip": 1.0
+    }
+  },
+  {
+    "name": "attention_linear",
+    "seed": 1,
+    "phase": "screen",
+    "config": {
+      "n": 128,
+      "window": 8,
+      "width": 32,
+      "lr": 0.001,
+      "epochs": 24,
+      "schedule": "cosine",
+      "temporal": "linear",
+      "readout": "attention",
+      "clip": 1.0
+    }
+  },
+  {
+    "name": "combo_cosine",
+    "seed": 0,
+    "phase": "screen",
+    "config": {
+      "n": 128,
+      "window": 8,
+      "width": 32,
+      "lr": 0.001,
+      "epochs": 24,
+      "schedule": "cosine",
+      "temporal": "mlp",
+      "readout": "attention",
+      "clip": 1.0
+    }
+  },
+  {
+    "name": "combo_lower_lr",
+    "seed": 1,
+    "phase": "screen",
+    "config": {
+      "n": 128,
+      "window": 8,
+      "width": 32,
+      "lr": 0.0003,
+      "epochs": 24,
+      "schedule": "cosine",
+      "temporal": "mlp",
+      "readout": "attention",
+      "clip": 1.0
+    }
+  },
+  {
+    "name": "combo_two_preln",
+    "seed": 0,
+    "phase": "screen",
+    "config": {
+      "n": 128,
+      "window": 8,
+      "width": 32,
+      "lr": 0.001,
+      "epochs": 24,
+      "schedule": "cosine",
+      "temporal": "mlp",
+      "readout": "attention",
+      "clip": 1.0,
+      "depth": 2,
+      "pre_norm": true
+    }
+  },
+  {
+    "name": "combo_dropout20",
+    "seed": 1,
+    "phase": "screen",
+    "config": {
+      "n": 128,
+      "window": 8,
+      "width": 32,
+      "lr": 0.001,
+      "epochs": 24,
+      "schedule": "cosine",
+      "temporal": "mlp",
+      "readout": "attention",
+      "clip": 1.0,
+      "dropout": 0.2
+    }
+  },
+  {
+    "name": "combo_linear_skip",
+    "seed": 0,
+    "phase": "screen",
+    "config": {
+      "n": 128,
+      "window": 8,
+      "width": 32,
+      "lr": 0.001,
+      "epochs": 24,
+      "schedule": "cosine",
+      "temporal": "mlp",
+      "readout": "attention",
+      "clip": 1.0,
+      "linear_skip": true
+    }
+  },
+  {
+    "name": "gru_mean",
+    "seed": 1,
+    "phase": "screen",
+    "config": {
+      "n": 128,
+      "window": 8,
+      "width": 32,
+      "lr": 0.001,
+      "epochs": 24,
+      "schedule": "cosine",
+      "temporal": "gru",
+      "readout": "mean",
+      "clip": 1.0
+    }
+  },
+  {
+    "name": "flat_mlp",
+    "seed": 0,
+    "phase": "screen",
+    "config": {
+      "n": 128,
+      "window": 8,
+      "width": 32,
+      "lr": 0.001,
+      "epochs": 24,
+      "schedule": "cosine",
+      "temporal": "mlp",
+      "readout": "attention",
+      "clip": 1.0,
+      "family": "flat_mlp"
+    }
+  },
+  {
+    "name": "deepsets",
+    "seed": 1,
+    "phase": "screen",
+    "config": {
+      "n": 128,
+      "window": 8,
+      "width": 32,
+      "lr": 0.001,
+      "epochs": 24,
+      "schedule": "cosine",
+      "temporal": "mlp",
+      "readout": "mean",
+      "clip": 1.0,
+      "family": "deepsets",
+      "head_mlp": true
+    }
+  }
+]

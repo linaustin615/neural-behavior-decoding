@@ -1,0 +1,20 @@
+{
+  "new_pool_checkpoint_reload_checks": [
+    {
+      "condition": "real",
+      "validation_max_abs_difference": 0.0,
+      "test_max_abs_difference": 0.0
+    },
+    {
+      "condition": "none",
+      "validation_max_abs_difference": 0.0,
+      "test_max_abs_difference": 0.0
+    },
+    {
+      "condition": "shuffled",
+      "validation_max_abs_difference": 0.0,
+      "test_max_abs_difference": 0.0
+    }
+  ],
+  "purpose": "independently reload and reproduce the complete predictions for the new matched trio containing the largest observed real-versus-none degradation; no model settings changed"
+}

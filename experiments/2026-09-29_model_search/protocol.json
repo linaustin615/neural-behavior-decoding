@@ -1,0 +1,19 @@
+{
+  "source_hashes": {
+    "data.py": "894d5aea4dd0ce6a139178b66b1f8a5538f1c4f015081153d4c11fa55d78b7bf",
+    "model.py": "2297af73466e1c85ee5774dc10a44a2a03f7a6f48919a111b43a8cf6d7d86a40",
+    "train.py": "0361d216cd75616ed07501a019f4837f7c0acf57f0cd2edecb0fc6728064d7f9"
+  },
+  "data": "Stringer MP019",
+  "primary_metric": "validation normalized MSE after flooring predicted physical speed at zero",
+  "secondary_metric": "raw unbounded normalized MSE",
+  "same_target_times": "all windows predict from split-relative index 31 onward; no cross-split histories",
+  "target_normalization": "same training mean/std as tutorial using training targets starting at index 7",
+  "screen": "16 neural configurations, seeds 0 and 1; ridge alpha grid",
+  "confirmation": "top configurations plus original baseline on fresh seeds 2,3,4",
+  "input_followup": "longer histories and larger nested neuron pools for selected design",
+  "test_policy": "freeze final candidates and ensemble recipe before one final test evaluation; earlier pilot study already examined this recording so this is not a pristine external benchmark",
+  "max_epochs": 24,
+  "early_stopping": "after at least 12 epochs, stop after 7 evaluations without new best",
+  "test_evaluated": false
+}

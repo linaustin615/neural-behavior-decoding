@@ -1,0 +1,196 @@
+{
+  "created_utc": "2026-10-03T04:08:14.524983+00:00",
+  "scope": "Development only; no confirmatory significance claim",
+  "question": "Does matched-history linear decoding beat zero-speed and training-mean baselines across time periods?",
+  "cohort": [
+    {
+      "mouse": "MP030",
+      "file": "data/spont_M161025_MP030_20161120.mat",
+      "source_sha256_from_validation": "e30c76bbb2a5b0a767043d7ea8e81285d14223d4f8b35e548a2c1349e87fbbf7",
+      "development_stop": 4152,
+      "folds": [
+        {
+          "fold": 1,
+          "train": [
+            0,
+            1610
+          ],
+          "validation": [
+            1710,
+            2441
+          ]
+        },
+        {
+          "fold": 2,
+          "train": [
+            0,
+            2441
+          ],
+          "validation": [
+            2541,
+            3271
+          ]
+        },
+        {
+          "fold": 3,
+          "train": [
+            0,
+            3271
+          ],
+          "validation": [
+            3371,
+            4152
+          ]
+        }
+      ]
+    },
+    {
+      "mouse": "MP032",
+      "file": "data/spont_M170714_MP032_20170804.mat",
+      "source_sha256_from_validation": "a239882b470fd276a2ed959c24841c444e1ec1261c85b1e3cbbce3ffbcbb7fa6",
+      "development_stop": 3549,
+      "folds": [
+        {
+          "fold": 1,
+          "train": [
+            0,
+            1369
+          ],
+          "validation": [
+            1469,
+            2079
+          ]
+        },
+        {
+          "fold": 2,
+          "train": [
+            0,
+            2079
+          ],
+          "validation": [
+            2179,
+            2789
+          ]
+        },
+        {
+          "fold": 3,
+          "train": [
+            0,
+            2789
+          ],
+          "validation": [
+            2889,
+            3549
+          ]
+        }
+      ]
+    },
+    {
+      "mouse": "MP033",
+      "file": "data/spont_M170717_MP033_20170818.mat",
+      "source_sha256_from_validation": "46e8e3dbb9f048e42595859a301f4856f196d7570ddb943d1c3c303668ffbd68",
+      "development_stop": 2739,
+      "folds": [
+        {
+          "fold": 1,
+          "train": [
+            0,
+            1045
+          ],
+          "validation": [
+            1145,
+            1593
+          ]
+        },
+        {
+          "fold": 2,
+          "train": [
+            0,
+            1593
+          ],
+          "validation": [
+            1693,
+            2141
+          ]
+        },
+        {
+          "fold": 3,
+          "train": [
+            0,
+            2141
+          ],
+          "validation": [
+            2241,
+            2739
+          ]
+        }
+      ]
+    },
+    {
+      "mouse": "MP034",
+      "file": "data/spont_M170717_MP034_20170825.mat",
+      "source_sha256_from_validation": "1ef684d3b2d25ae7680ba74344a8237684e033a5974e6e321b549ac650900a65",
+      "development_stop": 2742,
+      "folds": [
+        {
+          "fold": 1,
+          "train": [
+            0,
+            1046
+          ],
+          "validation": [
+            1146,
+            1595
+          ]
+        },
+        {
+          "fold": 2,
+          "train": [
+            0,
+            1595
+          ],
+          "validation": [
+            1695,
+            2143
+          ]
+        },
+        {
+          "fold": 3,
+          "train": [
+            0,
+            2143
+          ],
+          "validation": [
+            2243,
+            2742
+          ]
+        }
+      ]
+    }
+  ],
+  "cells": 2048,
+  "pool_seed": 101,
+  "window": 8,
+  "target_offset": 31,
+  "lambdas": [
+    0.01,
+    0.1,
+    1.0,
+    10.0
+  ],
+  "expected_fits": 48,
+  "neural_fits": 0,
+  "preprocessing": "Mean contiguous triples, float32 activity and float64 speed. Discard data from development_stop onward before binning. Choose2048 cells with earliest-training std>1e-6 only; fixed pool per mouse. Per-fold training-only cell normalization,ddof0,float64. Target mean/std use actual training targets[31:train_end].",
+  "objective": "mean((Xw+intercept-y)^2)+lambda*sum(w^2); unpenalized intercept. X=16384 standardized cell/history features. Center features on actual training examples. Dual solve (Xc Xc.T+n*lambda I)alpha=yc, w=Xc.T alpha.",
+  "metrics": "Raw and zero-clipped normalized MSE, R2, physical RMSE, clipping fraction, predicted std, target distribution, train fit and zero/training-mean baselines. Report all4 lambdas for each fold.",
+  "selection": "Display best validation lambda per fold as optimistic development tuning only. No new test predictions or significance from these12 dependent folds; no common recipe selected automatically.",
+  "stop": "Exactly48 fixed linear solutions, no grid extension, no neural fits. Invalid eligibility/variance/numerics stops with explicit failure, no favorable replacements.",
+  "comparison_limit": "New pools and folds differ from earlier transformer comparisons; linear success/failure here is diagnostic, not a matched claim of superiority over those transformers.",
+  "application_hashes": {
+    "model.py": "2297af73466e1c85ee5774dc10a44a2a03f7a6f48919a111b43a8cf6d7d86a40",
+    "data.py": "894d5aea4dd0ce6a139178b66b1f8a5538f1c4f015081153d4c11fa55d78b7bf",
+    "train.py": "0361d216cd75616ed07501a019f4837f7c0acf57f0cd2edecb0fc6728064d7f9"
+  },
+  "previous_protocol_sha256": "86db89d1a727e3b227ac4931fa7c27dbbc157fd629491005e30c114755719fd5",
+  "source_sha256": "3848c910eed79668b8ff84695efc6a97f75b193a9e5f41ac5d7f53919a72c07f"
+}

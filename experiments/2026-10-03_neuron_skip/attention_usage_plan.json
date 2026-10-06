@@ -1,0 +1,27 @@
+{
+  "question": "Are attention weights close to uniform in the trained models?",
+  "scope": "Post-hoc descriptive training-input audit; no fits, new selection or later outcomes",
+  "mice": [
+    "MP030",
+    "MP032",
+    "MP033",
+    "MP034"
+  ],
+  "seeds": [
+    10,
+    11,
+    12
+  ],
+  "states": [
+    "random",
+    "pretrained",
+    "prior_finetuned",
+    "neuron_readout_finetuned"
+  ],
+  "sample": "32 evenly spaced existing training contexts per mouse",
+  "metrics": [
+    "mean row entropy divided by log(number of allowed keys), excluding singleton causal rows",
+    "mean total variation from uniform over allowed keys"
+  ],
+  "limits": "Attention weights are not causal explanations; this describes variation, not usefulness"
+}

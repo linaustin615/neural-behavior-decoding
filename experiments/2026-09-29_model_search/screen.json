@@ -1,0 +1,541 @@
+[
+  {
+    "name": "ridge_128_w8",
+    "kind": "ridge",
+    "phase": "screen",
+    "config": {
+      "n": 128,
+      "window": 8
+    }
+  },
+  {
+    "name": "original_constant",
+    "seed": 0,
+    "phase": "screen",
+    "config": {
+      "n": 128,
+      "window": 8,
+      "width": 32,
+      "lr": 0.001,
+      "epochs": 24,
+      "schedule": "constant",
+      "temporal": "linear",
+      "readout": "mean",
+      "clip": null
+    }
+  },
+  {
+    "name": "original_constant",
+    "seed": 1,
+    "phase": "screen",
+    "config": {
+      "n": 128,
+      "window": 8,
+      "width": 32,
+      "lr": 0.001,
+      "epochs": 24,
+      "schedule": "constant",
+      "temporal": "linear",
+      "readout": "mean",
+      "clip": null
+    }
+  },
+  {
+    "name": "original_cosine",
+    "seed": 0,
+    "phase": "screen",
+    "config": {
+      "n": 128,
+      "window": 8,
+      "width": 32,
+      "lr": 0.001,
+      "epochs": 24,
+      "schedule": "cosine",
+      "temporal": "linear",
+      "readout": "mean",
+      "clip": 1.0
+    }
+  },
+  {
+    "name": "original_cosine",
+    "seed": 1,
+    "phase": "screen",
+    "config": {
+      "n": 128,
+      "window": 8,
+      "width": 32,
+      "lr": 0.001,
+      "epochs": 24,
+      "schedule": "cosine",
+      "temporal": "linear",
+      "readout": "mean",
+      "clip": 1.0
+    }
+  },
+  {
+    "name": "temporal_mean",
+    "seed": 0,
+    "phase": "screen",
+    "config": {
+      "n": 128,
+      "window": 8,
+      "width": 32,
+      "lr": 0.001,
+      "epochs": 24,
+      "schedule": "cosine",
+      "temporal": "mlp",
+      "readout": "mean",
+      "clip": 1.0
+    }
+  },
+  {
+    "name": "temporal_mean",
+    "seed": 1,
+    "phase": "screen",
+    "config": {
+      "n": 128,
+      "window": 8,
+      "width": 32,
+      "lr": 0.001,
+      "epochs": 24,
+      "schedule": "cosine",
+      "temporal": "mlp",
+      "readout": "mean",
+      "clip": 1.0
+    }
+  },
+  {
+    "name": "attention_linear",
+    "seed": 0,
+    "phase": "screen",
+    "config": {
+      "n": 128,
+      "window": 8,
+      "width": 32,
+      "lr": 0.001,
+      "epochs": 24,
+      "schedule": "cosine",
+      "temporal": "linear",
+      "readout": "attention",
+      "clip": 1.0
+    }
+  },
+  {
+    "name": "attention_linear",
+    "seed": 1,
+    "phase": "screen",
+    "config": {
+      "n": 128,
+      "window": 8,
+      "width": 32,
+      "lr": 0.001,
+      "epochs": 24,
+      "schedule": "cosine",
+      "temporal": "linear",
+      "readout": "attention",
+      "clip": 1.0
+    }
+  },
+  {
+    "name": "combo_constant",
+    "seed": 0,
+    "phase": "screen",
+    "config": {
+      "n": 128,
+      "window": 8,
+      "width": 32,
+      "lr": 0.001,
+      "epochs": 24,
+      "schedule": "constant",
+      "temporal": "mlp",
+      "readout": "attention",
+      "clip": 1.0
+    }
+  },
+  {
+    "name": "combo_constant",
+    "seed": 1,
+    "phase": "screen",
+    "config": {
+      "n": 128,
+      "window": 8,
+      "width": 32,
+      "lr": 0.001,
+      "epochs": 24,
+      "schedule": "constant",
+      "temporal": "mlp",
+      "readout": "attention",
+      "clip": 1.0
+    }
+  },
+  {
+    "name": "combo_cosine",
+    "seed": 0,
+    "phase": "screen",
+    "config": {
+      "n": 128,
+      "window": 8,
+      "width": 32,
+      "lr": 0.001,
+      "epochs": 24,
+      "schedule": "cosine",
+      "temporal": "mlp",
+      "readout": "attention",
+      "clip": 1.0
+    }
+  },
+  {
+    "name": "combo_cosine",
+    "seed": 1,
+    "phase": "screen",
+    "config": {
+      "n": 128,
+      "window": 8,
+      "width": 32,
+      "lr": 0.001,
+      "epochs": 24,
+      "schedule": "cosine",
+      "temporal": "mlp",
+      "readout": "attention",
+      "clip": 1.0
+    }
+  },
+  {
+    "name": "combo_lower_lr",
+    "seed": 0,
+    "phase": "screen",
+    "config": {
+      "n": 128,
+      "window": 8,
+      "width": 32,
+      "lr": 0.0003,
+      "epochs": 24,
+      "schedule": "cosine",
+      "temporal": "mlp",
+      "readout": "attention",
+      "clip": 1.0
+    }
+  },
+  {
+    "name": "combo_lower_lr",
+    "seed": 1,
+    "phase": "screen",
+    "config": {
+      "n": 128,
+      "window": 8,
+      "width": 32,
+      "lr": 0.0003,
+      "epochs": 24,
+      "schedule": "cosine",
+      "temporal": "mlp",
+      "readout": "attention",
+      "clip": 1.0
+    }
+  },
+  {
+    "name": "combo_wide",
+    "seed": 0,
+    "phase": "screen",
+    "config": {
+      "n": 128,
+      "window": 8,
+      "width": 64,
+      "lr": 0.001,
+      "epochs": 24,
+      "schedule": "cosine",
+      "temporal": "mlp",
+      "readout": "attention",
+      "clip": 1.0,
+      "head_mlp": true
+    }
+  },
+  {
+    "name": "combo_wide",
+    "seed": 1,
+    "phase": "screen",
+    "config": {
+      "n": 128,
+      "window": 8,
+      "width": 64,
+      "lr": 0.001,
+      "epochs": 24,
+      "schedule": "cosine",
+      "temporal": "mlp",
+      "readout": "attention",
+      "clip": 1.0,
+      "head_mlp": true
+    }
+  },
+  {
+    "name": "combo_two_preln",
+    "seed": 0,
+    "phase": "screen",
+    "config": {
+      "n": 128,
+      "window": 8,
+      "width": 32,
+      "lr": 0.001,
+      "epochs": 24,
+      "schedule": "cosine",
+      "temporal": "mlp",
+      "readout": "attention",
+      "clip": 1.0,
+      "depth": 2,
+      "pre_norm": true
+    }
+  },
+  {
+    "name": "combo_two_preln",
+    "seed": 1,
+    "phase": "screen",
+    "config": {
+      "n": 128,
+      "window": 8,
+      "width": 32,
+      "lr": 0.001,
+      "epochs": 24,
+      "schedule": "cosine",
+      "temporal": "mlp",
+      "readout": "attention",
+      "clip": 1.0,
+      "depth": 2,
+      "pre_norm": true
+    }
+  },
+  {
+    "name": "combo_dropout20",
+    "seed": 0,
+    "phase": "screen",
+    "config": {
+      "n": 128,
+      "window": 8,
+      "width": 32,
+      "lr": 0.001,
+      "epochs": 24,
+      "schedule": "cosine",
+      "temporal": "mlp",
+      "readout": "attention",
+      "clip": 1.0,
+      "dropout": 0.2
+    }
+  },
+  {
+    "name": "combo_dropout20",
+    "seed": 1,
+    "phase": "screen",
+    "config": {
+      "n": 128,
+      "window": 8,
+      "width": 32,
+      "lr": 0.001,
+      "epochs": 24,
+      "schedule": "cosine",
+      "temporal": "mlp",
+      "readout": "attention",
+      "clip": 1.0,
+      "dropout": 0.2
+    }
+  },
+  {
+    "name": "combo_neuron_drop",
+    "seed": 0,
+    "phase": "screen",
+    "config": {
+      "n": 128,
+      "window": 8,
+      "width": 32,
+      "lr": 0.001,
+      "epochs": 24,
+      "schedule": "cosine",
+      "temporal": "mlp",
+      "readout": "attention",
+      "clip": 1.0,
+      "neuron_drop": 0.25
+    }
+  },
+  {
+    "name": "combo_neuron_drop",
+    "seed": 1,
+    "phase": "screen",
+    "config": {
+      "n": 128,
+      "window": 8,
+      "width": 32,
+      "lr": 0.001,
+      "epochs": 24,
+      "schedule": "cosine",
+      "temporal": "mlp",
+      "readout": "attention",
+      "clip": 1.0,
+      "neuron_drop": 0.25
+    }
+  },
+  {
+    "name": "combo_linear_skip",
+    "seed": 0,
+    "phase": "screen",
+    "config": {
+      "n": 128,
+      "window": 8,
+      "width": 32,
+      "lr": 0.001,
+      "epochs": 24,
+      "schedule": "cosine",
+      "temporal": "mlp",
+      "readout": "attention",
+      "clip": 1.0,
+      "linear_skip": true
+    }
+  },
+  {
+    "name": "combo_linear_skip",
+    "seed": 1,
+    "phase": "screen",
+    "config": {
+      "n": 128,
+      "window": 8,
+      "width": 32,
+      "lr": 0.001,
+      "epochs": 24,
+      "schedule": "cosine",
+      "temporal": "mlp",
+      "readout": "attention",
+      "clip": 1.0,
+      "linear_skip": true
+    }
+  },
+  {
+    "name": "gru_mean",
+    "seed": 0,
+    "phase": "screen",
+    "config": {
+      "n": 128,
+      "window": 8,
+      "width": 32,
+      "lr": 0.001,
+      "epochs": 24,
+      "schedule": "cosine",
+      "temporal": "gru",
+      "readout": "mean",
+      "clip": 1.0
+    }
+  },
+  {
+    "name": "gru_mean",
+    "seed": 1,
+    "phase": "screen",
+    "config": {
+      "n": 128,
+      "window": 8,
+      "width": 32,
+      "lr": 0.001,
+      "epochs": 24,
+      "schedule": "cosine",
+      "temporal": "gru",
+      "readout": "mean",
+      "clip": 1.0
+    }
+  },
+  {
+    "name": "conv_mean",
+    "seed": 0,
+    "phase": "screen",
+    "config": {
+      "n": 128,
+      "window": 8,
+      "width": 32,
+      "lr": 0.001,
+      "epochs": 24,
+      "schedule": "cosine",
+      "temporal": "conv",
+      "readout": "mean",
+      "clip": 1.0
+    }
+  },
+  {
+    "name": "conv_mean",
+    "seed": 1,
+    "phase": "screen",
+    "config": {
+      "n": 128,
+      "window": 8,
+      "width": 32,
+      "lr": 0.001,
+      "epochs": 24,
+      "schedule": "cosine",
+      "temporal": "conv",
+      "readout": "mean",
+      "clip": 1.0
+    }
+  },
+  {
+    "name": "flat_mlp",
+    "seed": 0,
+    "phase": "screen",
+    "config": {
+      "n": 128,
+      "window": 8,
+      "width": 32,
+      "lr": 0.001,
+      "epochs": 24,
+      "schedule": "cosine",
+      "temporal": "mlp",
+      "readout": "attention",
+      "clip": 1.0,
+      "family": "flat_mlp"
+    }
+  },
+  {
+    "name": "flat_mlp",
+    "seed": 1,
+    "phase": "screen",
+    "config": {
+      "n": 128,
+      "window": 8,
+      "width": 32,
+      "lr": 0.001,
+      "epochs": 24,
+      "schedule": "cosine",
+      "temporal": "mlp",
+      "readout": "attention",
+      "clip": 1.0,
+      "family": "flat_mlp"
+    }
+  },
+  {
+    "name": "deepsets",
+    "seed": 0,
+    "phase": "screen",
+    "config": {
+      "n": 128,
+      "window": 8,
+      "width": 32,
+      "lr": 0.001,
+      "epochs": 24,
+      "schedule": "cosine",
+      "temporal": "mlp",
+      "readout": "mean",
+      "clip": 1.0,
+      "family": "deepsets",
+      "head_mlp": true
+    }
+  },
+  {
+    "name": "deepsets",
+    "seed": 1,
+    "phase": "screen",
+    "config": {
+      "n": 128,
+      "window": 8,
+      "width": 32,
+      "lr": 0.001,
+      "epochs": 24,
+      "schedule": "cosine",
+      "temporal": "mlp",
+      "readout": "mean",
+      "clip": 1.0,
+      "family": "deepsets",
+      "head_mlp": true
+    }
+  }
+]

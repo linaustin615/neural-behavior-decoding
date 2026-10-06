@@ -1,0 +1,115 @@
+{
+  "checks": [
+    {
+      "pool": 101,
+      "components": 1,
+      "max_prediction_error": 3.885780586188048e-15,
+      "max_coefficient_error": 1.033895191682177e-15
+    },
+    {
+      "pool": 101,
+      "components": 4,
+      "max_prediction_error": 1.3100631690576847e-14,
+      "max_coefficient_error": 4.9404924595819466e-15
+    },
+    {
+      "pool": 101,
+      "components": 16,
+      "max_prediction_error": 1.9539925233402755e-14,
+      "max_coefficient_error": 4.794775687599895e-15
+    },
+    {
+      "pool": 202,
+      "components": 1,
+      "max_prediction_error": 3.9968028886505635e-15,
+      "max_coefficient_error": 8.604228440844963e-16
+    },
+    {
+      "pool": 202,
+      "components": 4,
+      "max_prediction_error": 9.769962616701378e-15,
+      "max_coefficient_error": 3.462508058049707e-15
+    },
+    {
+      "pool": 202,
+      "components": 16,
+      "max_prediction_error": 1.8762769116165146e-14,
+      "max_coefficient_error": 5.474787290182803e-15
+    },
+    {
+      "pool": 303,
+      "components": 1,
+      "max_prediction_error": 1.176836406102666e-14,
+      "max_coefficient_error": 4.6629367034256575e-15
+    },
+    {
+      "pool": 303,
+      "components": 4,
+      "max_prediction_error": 1.509903313490213e-14,
+      "max_coefficient_error": 4.6351811278100286e-15
+    },
+    {
+      "pool": 303,
+      "components": 16,
+      "max_prediction_error": 2.353672812205332e-14,
+      "max_coefficient_error": 7.26415455565288e-15
+    },
+    {
+      "pool": 404,
+      "components": 1,
+      "max_prediction_error": 1.1157741397482823e-14,
+      "max_coefficient_error": 3.587408148320037e-15
+    },
+    {
+      "pool": 404,
+      "components": 4,
+      "max_prediction_error": 1.509903313490213e-14,
+      "max_coefficient_error": 3.566591466608315e-15
+    },
+    {
+      "pool": 404,
+      "components": 16,
+      "max_prediction_error": 1.5987211554602254e-14,
+      "max_coefficient_error": 3.5388358909926865e-15
+    },
+    {
+      "pool": 505,
+      "components": 1,
+      "max_prediction_error": 6.9111383282915995e-15,
+      "max_coefficient_error": 2.373101715136272e-15
+    },
+    {
+      "pool": 505,
+      "components": 4,
+      "max_prediction_error": 9.769962616701378e-15,
+      "max_coefficient_error": 2.9733160378242474e-15
+    },
+    {
+      "pool": 505,
+      "components": 16,
+      "max_prediction_error": 2.3953061756287752e-14,
+      "max_coefficient_error": 6.5780714209040525e-15
+    },
+    {
+      "pool": 606,
+      "components": 1,
+      "max_prediction_error": 4.6629367034256575e-15,
+      "max_coefficient_error": 1.1934897514720433e-15
+    },
+    {
+      "pool": 606,
+      "components": 4,
+      "max_prediction_error": 1.0658141036401503e-14,
+      "max_coefficient_error": 4.427014310692812e-15
+    },
+    {
+      "pool": 606,
+      "components": 16,
+      "max_prediction_error": 1.5987211554602254e-14,
+      "max_coefficient_error": 4.593547764386585e-15
+    }
+  ],
+  "finite_saved_arrays": true,
+  "torch_projection_and_ridge_solve_agree": true,
+  "note": "NumPy/BLAS matmul warnings occurred in sklearn despite finite results; independent Torch projections and regularized normal-equation solutions reproduce all18 saved models"
+}

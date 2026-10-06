@@ -1,0 +1,30 @@
+{
+  "neurons_per_step": 128,
+  "train_neuron_pool": 512,
+  "unseen_neuron_pool": 512,
+  "window": 8,
+  "width": 32,
+  "layers": 2,
+  "heads": 4,
+  "ff_width": 64,
+  "batch": 32,
+  "dropout": 0.05,
+  "lr": 0.001,
+  "weight_decay": 0.01,
+  "steps": 1600,
+  "validation_every": 200,
+  "eval_subsets": 4,
+  "validation_subsets": 2,
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "gap_bins_each_side": 50,
+  "core_sha256": "de0b78fd35ae8b6b370e6560f1d24c797178d5c01176b36983cde6c20ad2f4de",
+  "device": "mps",
+  "revision": "v2: limited-label target scaling uses only selected training labels; full-label computation unchanged",
+  "torch": "2.8.0"
+}

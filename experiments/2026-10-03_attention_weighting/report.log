@@ -1,0 +1,77 @@
+{
+  "contrasts": {
+    "random_vs_uniform_population": {
+      "mean_native_relative_gain": -0.002569747515755255,
+      "mouse_wins": 2,
+      "paired_seed_wins": 6,
+      "gains": [
+        0.002662333451934229,
+        -0.009170321287270022,
+        0.0002894084132135655,
+        -0.004060410640898793
+      ],
+      "gate": false
+    },
+    "random_vs_uniform_both": {
+      "mean_native_relative_gain": -0.017988279905402887,
+      "mouse_wins": 2,
+      "paired_seed_wins": 5,
+      "gains": [
+        0.010153462897640297,
+        -0.07163485582381468,
+        -0.01818066645035632,
+        0.007708939754919153
+      ],
+      "gate": false
+    },
+    "pretrained_vs_uniform_population": {
+      "mean_native_relative_gain": 0.0015978071042987152,
+      "mouse_wins": 3,
+      "paired_seed_wins": 7,
+      "gains": [
+        0.012031174461199057,
+        -0.06900415344076793,
+        0.048480168833171966,
+        0.014884038563591773
+      ],
+      "gate": false
+    },
+    "pretrained_vs_uniform_both": {
+      "mean_native_relative_gain": -0.04738286425767521,
+      "mouse_wins": 2,
+      "paired_seed_wins": 5,
+      "gains": [
+        0.03825124449206141,
+        -0.22535866783083525,
+        0.012113894828267746,
+        -0.014537928520194754
+      ],
+      "gate": false
+    }
+  },
+  "pretraining_effects": {
+    "native": {
+      "mean_relative_gain": -0.002903863029328796,
+      "mouse_wins": 2
+    },
+    "uniform_population": {
+      "mean_relative_gain": -0.008204574649281593,
+      "mouse_wins": 2
+    },
+    "uniform_both": {
+      "mean_relative_gain": 0.021761241039416235,
+      "mouse_wins": 2
+    }
+  },
+  "native_weighting_gate": false,
+  "descriptive_intervals_97_5": {
+    "uniform_population": [
+      -0.12075005213834121,
+      0.06888782949193362
+    ],
+    "uniform_both": [
+      -0.20612450792906903,
+      0.06552691449712802
+    ]
+  }
+}

@@ -1,0 +1,487 @@
+{
+  "implementation_frozen": true,
+  "application_sources_unchanged": true,
+  "data_checksum_unchanged": true,
+  "checkpoints_finite": 144,
+  "reload_checks": [
+    {
+      "task": {
+        "n": 2048,
+        "pool": 202,
+        "seed": 10,
+        "condition": "real",
+        "variant": "no_id"
+      },
+      "max_prediction_difference": {
+        "validation": 0.0,
+        "test": 0.0
+      }
+    },
+    {
+      "task": {
+        "n": 2048,
+        "pool": 202,
+        "seed": 10,
+        "condition": "none",
+        "variant": "no_id"
+      },
+      "max_prediction_difference": {
+        "validation": 0.0,
+        "test": 0.0
+      }
+    },
+    {
+      "task": {
+        "n": 2048,
+        "pool": 202,
+        "seed": 10,
+        "condition": "shuffled",
+        "variant": "no_id"
+      },
+      "max_prediction_difference": {
+        "validation": 0.0,
+        "test": 0.0
+      }
+    },
+    {
+      "task": {
+        "n": 2048,
+        "pool": 202,
+        "seed": 11,
+        "condition": "real",
+        "variant": "latent32"
+      },
+      "max_prediction_difference": {
+        "validation": 0.0,
+        "test": 0.0
+      }
+    },
+    {
+      "task": {
+        "n": 2048,
+        "pool": 202,
+        "seed": 11,
+        "condition": "none",
+        "variant": "latent32"
+      },
+      "max_prediction_difference": {
+        "validation": 0.0,
+        "test": 0.0
+      }
+    },
+    {
+      "task": {
+        "n": 2048,
+        "pool": 202,
+        "seed": 11,
+        "condition": "shuffled",
+        "variant": "latent32"
+      },
+      "max_prediction_difference": {
+        "validation": 0.0,
+        "test": 0.0
+      }
+    },
+    {
+      "task": {
+        "n": 2048,
+        "pool": 505,
+        "seed": 11,
+        "condition": "real",
+        "variant": "local"
+      },
+      "max_prediction_difference": {
+        "validation": 0.0,
+        "test": 0.0
+      }
+    },
+    {
+      "task": {
+        "n": 2048,
+        "pool": 505,
+        "seed": 11,
+        "condition": "none",
+        "variant": "local"
+      },
+      "max_prediction_difference": {
+        "validation": 0.0,
+        "test": 0.0
+      }
+    },
+    {
+      "task": {
+        "n": 2048,
+        "pool": 505,
+        "seed": 11,
+        "condition": "shuffled",
+        "variant": "local"
+      },
+      "max_prediction_difference": {
+        "validation": 0.0,
+        "test": 0.0
+      }
+    }
+  ],
+  "local_layer_learned": [
+    {
+      "task": {
+        "n": 2048,
+        "pool": 404,
+        "seed": 11,
+        "condition": "shuffled",
+        "variant": "local"
+      },
+      "parameter_change_l2": 3.115228132163941
+    },
+    {
+      "task": {
+        "n": 2048,
+        "pool": 505,
+        "seed": 11,
+        "condition": "shuffled",
+        "variant": "local"
+      },
+      "parameter_change_l2": 2.5430185583945573
+    },
+    {
+      "task": {
+        "n": 2048,
+        "pool": 505,
+        "seed": 10,
+        "condition": "none",
+        "variant": "local"
+      },
+      "parameter_change_l2": 1.8572700083157407
+    },
+    {
+      "task": {
+        "n": 2048,
+        "pool": 202,
+        "seed": 10,
+        "condition": "none",
+        "variant": "local"
+      },
+      "parameter_change_l2": 2.667479185313196
+    },
+    {
+      "task": {
+        "n": 2048,
+        "pool": 101,
+        "seed": 11,
+        "condition": "shuffled",
+        "variant": "local"
+      },
+      "parameter_change_l2": 2.5934460198631566
+    },
+    {
+      "task": {
+        "n": 2048,
+        "pool": 202,
+        "seed": 11,
+        "condition": "real",
+        "variant": "local"
+      },
+      "parameter_change_l2": 2.7126261999013686
+    },
+    {
+      "task": {
+        "n": 2048,
+        "pool": 505,
+        "seed": 11,
+        "condition": "real",
+        "variant": "local"
+      },
+      "parameter_change_l2": 2.260769595686539
+    },
+    {
+      "task": {
+        "n": 2048,
+        "pool": 202,
+        "seed": 11,
+        "condition": "shuffled",
+        "variant": "local"
+      },
+      "parameter_change_l2": 2.5634011117639792
+    },
+    {
+      "task": {
+        "n": 2048,
+        "pool": 606,
+        "seed": 11,
+        "condition": "shuffled",
+        "variant": "local"
+      },
+      "parameter_change_l2": 2.7621984673863444
+    },
+    {
+      "task": {
+        "n": 2048,
+        "pool": 303,
+        "seed": 11,
+        "condition": "shuffled",
+        "variant": "local"
+      },
+      "parameter_change_l2": 2.373421224944993
+    },
+    {
+      "task": {
+        "n": 2048,
+        "pool": 202,
+        "seed": 11,
+        "condition": "none",
+        "variant": "local"
+      },
+      "parameter_change_l2": 2.914254953766998
+    },
+    {
+      "task": {
+        "n": 2048,
+        "pool": 505,
+        "seed": 11,
+        "condition": "none",
+        "variant": "local"
+      },
+      "parameter_change_l2": 2.6146793730955866
+    },
+    {
+      "task": {
+        "n": 2048,
+        "pool": 505,
+        "seed": 10,
+        "condition": "real",
+        "variant": "local"
+      },
+      "parameter_change_l2": 2.5355926615248623
+    },
+    {
+      "task": {
+        "n": 2048,
+        "pool": 202,
+        "seed": 10,
+        "condition": "real",
+        "variant": "local"
+      },
+      "parameter_change_l2": 2.4323176029513713
+    },
+    {
+      "task": {
+        "n": 2048,
+        "pool": 303,
+        "seed": 10,
+        "condition": "shuffled",
+        "variant": "local"
+      },
+      "parameter_change_l2": 2.0674781476637034
+    },
+    {
+      "task": {
+        "n": 2048,
+        "pool": 606,
+        "seed": 11,
+        "condition": "real",
+        "variant": "local"
+      },
+      "parameter_change_l2": 2.740670337717936
+    },
+    {
+      "task": {
+        "n": 2048,
+        "pool": 101,
+        "seed": 11,
+        "condition": "real",
+        "variant": "local"
+      },
+      "parameter_change_l2": 2.9008659401992154
+    },
+    {
+      "task": {
+        "n": 2048,
+        "pool": 202,
+        "seed": 10,
+        "condition": "shuffled",
+        "variant": "local"
+      },
+      "parameter_change_l2": 2.5955109129515517
+    },
+    {
+      "task": {
+        "n": 2048,
+        "pool": 101,
+        "seed": 10,
+        "condition": "none",
+        "variant": "local"
+      },
+      "parameter_change_l2": 2.2304412678096077
+    },
+    {
+      "task": {
+        "n": 2048,
+        "pool": 606,
+        "seed": 10,
+        "condition": "none",
+        "variant": "local"
+      },
+      "parameter_change_l2": 2.423012497287675
+    },
+    {
+      "task": {
+        "n": 2048,
+        "pool": 303,
+        "seed": 11,
+        "condition": "real",
+        "variant": "local"
+      },
+      "parameter_change_l2": 2.563921124193269
+    },
+    {
+      "task": {
+        "n": 2048,
+        "pool": 404,
+        "seed": 11,
+        "condition": "real",
+        "variant": "local"
+      },
+      "parameter_change_l2": 3.0876476865156652
+    },
+    {
+      "task": {
+        "n": 2048,
+        "pool": 404,
+        "seed": 10,
+        "condition": "none",
+        "variant": "local"
+      },
+      "parameter_change_l2": 2.184131793698894
+    },
+    {
+      "task": {
+        "n": 2048,
+        "pool": 606,
+        "seed": 10,
+        "condition": "shuffled",
+        "variant": "local"
+      },
+      "parameter_change_l2": 2.3258927273470795
+    },
+    {
+      "task": {
+        "n": 2048,
+        "pool": 303,
+        "seed": 10,
+        "condition": "none",
+        "variant": "local"
+      },
+      "parameter_change_l2": 2.105811148078704
+    },
+    {
+      "task": {
+        "n": 2048,
+        "pool": 505,
+        "seed": 10,
+        "condition": "shuffled",
+        "variant": "local"
+      },
+      "parameter_change_l2": 2.36331905825377
+    },
+    {
+      "task": {
+        "n": 2048,
+        "pool": 101,
+        "seed": 10,
+        "condition": "shuffled",
+        "variant": "local"
+      },
+      "parameter_change_l2": 2.0758136427203593
+    },
+    {
+      "task": {
+        "n": 2048,
+        "pool": 101,
+        "seed": 10,
+        "condition": "real",
+        "variant": "local"
+      },
+      "parameter_change_l2": 2.4959914032753856
+    },
+    {
+      "task": {
+        "n": 2048,
+        "pool": 606,
+        "seed": 10,
+        "condition": "real",
+        "variant": "local"
+      },
+      "parameter_change_l2": 2.3872218642629335
+    },
+    {
+      "task": {
+        "n": 2048,
+        "pool": 606,
+        "seed": 11,
+        "condition": "none",
+        "variant": "local"
+      },
+      "parameter_change_l2": 2.7737242536995943
+    },
+    {
+      "task": {
+        "n": 2048,
+        "pool": 404,
+        "seed": 10,
+        "condition": "shuffled",
+        "variant": "local"
+      },
+      "parameter_change_l2": 2.473469272279634
+    },
+    {
+      "task": {
+        "n": 2048,
+        "pool": 101,
+        "seed": 11,
+        "condition": "none",
+        "variant": "local"
+      },
+      "parameter_change_l2": 2.508494397974891
+    },
+    {
+      "task": {
+        "n": 2048,
+        "pool": 404,
+        "seed": 10,
+        "condition": "real",
+        "variant": "local"
+      },
+      "parameter_change_l2": 2.3885677000872563
+    },
+    {
+      "task": {
+        "n": 2048,
+        "pool": 303,
+        "seed": 10,
+        "condition": "real",
+        "variant": "local"
+      },
+      "parameter_change_l2": 2.5573111017231427
+    },
+    {
+      "task": {
+        "n": 2048,
+        "pool": 303,
+        "seed": 11,
+        "condition": "none",
+        "variant": "local"
+      },
+      "parameter_change_l2": 2.406336071825131
+    },
+    {
+      "task": {
+        "n": 2048,
+        "pool": 404,
+        "seed": 11,
+        "condition": "none",
+        "variant": "local"
+      },
+      "parameter_change_l2": 2.8781461021899304
+    }
+  ]
+}

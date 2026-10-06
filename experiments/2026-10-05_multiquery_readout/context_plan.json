@@ -1,0 +1,17 @@
+{
+  "created_utc": "2026-10-05T14:44:57.446378+00:00",
+  "question": "Does the expanded readout improve on the existing one-query static model,or might the screen advantage just reflect static routing?",
+  "timing": "Supplementary comparison declared after stage1 static validation screen passed,before any current later inference;post-screen context,not prespecified primary",
+  "samples": "Only matching seeds10/11/12,all3two-seedpairs,equal-mouse relative MSE and MAE",
+  "control": "Archived temporal-attention/static-query as model;same shared body/data/training but original one-query smallerhead",
+  "inference": "Widerheadandnormalizationstillbundledwithquerycount;noisolatedquerycountcausality",
+  "budget": "Zero new fits or model inference;reuse saved new/old later predictions after locked evaluation",
+  "adoption_rule_unchanged": true,
+  "source_sha256": "a93291e6510ac5440d62e44133de6e560ab743c5ee6567bda47ad72c5b35ec85",
+  "input_hashes": {
+    "experiments/2026-10-04_attention_components/MP030/later_predictions.npz": "3a5f72290056a1e8c8da84b47a24e89239a9fe61a8992b5dabc880cf5d5f939e",
+    "experiments/2026-10-04_attention_components/MP032/later_predictions.npz": "9f1788156b52a6261ec11612e6ed215158feb4e7aff1ae41ab30b854145e0b8b",
+    "experiments/2026-10-04_attention_components/MP033/later_predictions.npz": "62b70c62c6cc6354de0d9f5ddcf61837595639b023555bb7ab366a0efaa6ecc5",
+    "experiments/2026-10-04_attention_components/MP034/later_predictions.npz": "afbfeeff957283758dae6ea340fb66df770babbf2f40a1bc9ac603e21a985c6f"
+  }
+}
