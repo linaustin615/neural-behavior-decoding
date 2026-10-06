@@ -8,7 +8,7 @@ A research-engineering study of mouse running-speed decoding from population cal
 
 ![Animated replay of recorded neurons and running mice, comparing transformer, MLP and ridge predictions](portfolio/visualization/neural-observatory.gif)
 
-*Recorded activity and saved predictions, replayed together. TX103 · seed 401 · fixed midpoint excerpt. Mouse gait illustrates speed; it is not animal video.* [Static preview](portfolio/visualization/preview.png) · [Interactive viewer guide](portfolio/visualization/README.md)
+*Quiet → active → quiet, with a fixed 3D neuron view and smooth gait animation. TX103 · seed 401 · excerpt chosen from observed running only, not model accuracy. Mouse gait illustrates speed; it is not animal video.* [Static preview](portfolio/visualization/preview.png) · [Interactive viewer guide](portfolio/visualization/README.md)
 
 ## Findings worth keeping
 
