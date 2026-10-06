@@ -6,9 +6,13 @@ A research-engineering study of mouse running-speed decoding from population cal
 
 **Result:** useful decoding in some recordings, cheaper population-based architectures, and no validated transformer advantage over the strongest simpler controls. The contribution is the controlled comparison and reproducible failure analysis—not a claim of a new state-of-the-art decoder.
 
-![Main comparisons and measured CPU cost](portfolio/results/overview.png)
+![Animated replay of recorded neurons and running mice, comparing transformer, MLP and ridge predictions](portfolio/visualization/neural-observatory.gif)
+
+*Recorded activity and saved predictions, replayed together. TX103 · seed 401 · fixed midpoint excerpt. Mouse gait illustrates speed; it is not animal video.* [Static preview](portfolio/visualization/preview.png) · [Interactive viewer guide](portfolio/visualization/README.md)
 
 ## Findings worth keeping
+
+![Main comparisons and measured CPU cost](portfolio/results/overview.png)
 
 | Question | What the evidence supports | Important limit |
 | --- | --- | --- |
@@ -63,6 +67,6 @@ Data come from the [Stringer et al. spontaneous recordings](https://figshare.com
 
 The clean model matches all **72 archived initial states exactly** and **2,016 sampled saved predictions within 4.77e-7**. Seven synthetic tests cover the new pipeline. These checks verify cleanup; they do not change the scientific result. No completed experiment was retrained during packaging. The training CLI supports independent recording fits; the historical archive retains shared training and the full search. Raw recordings, prepared arrays and trained checkpoints are excluded from Git.
 
-To view the running mice and neurons, download or clone this repository and open `portfolio/visualization/index.html` in a browser. GitHub's file page displays source rather than running HTML. The viewer works offline with the adjacent files; [preview](portfolio/visualization/preview.png).
+The animated preview above plays directly in GitHub. To explore the running mice and neurons interactively, download or clone this repository and open `portfolio/visualization/index.html` in a browser. The full viewer works offline with the adjacent files; [static preview](portfolio/visualization/preview.png).
 
 Original code and prose: [MIT](LICENSE). Source datasets and included derivatives: [CC BY-NC 4.0 attribution and terms](NOTICE.md). Neural generation remains future work. Transformer superiority has not met the scientific gate.

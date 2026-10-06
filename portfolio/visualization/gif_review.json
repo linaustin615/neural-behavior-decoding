@@ -1,0 +1,47 @@
+{
+  "recording": "TX103",
+  "seed": 401,
+  "start_frame": 2495,
+  "end_frame": 2638,
+  "frames": 144,
+  "fps": 12,
+  "duration_seconds": 12,
+  "browser": "154.0.8037.98",
+  "runtime_errors": [],
+  "external_requests": [],
+  "selection": "first recording, first seed, fixed test midpoint; no model-error selection",
+  "presentation": "capture-only compact styles; camera rotated by keyboard; source viewer and predictions unchanged",
+  "asset": "neural-observatory.gif",
+  "width": 1120,
+  "height": 1065,
+  "bytes": 3778393,
+  "sha256": "7cf54ce9f410d19bb9ab518aef4ebc9c8b362ea47939971052099793d0d377ed",
+  "encoded_duration_ms": 12000,
+  "infinite_loop": true,
+  "unique_frames": 144,
+  "distinct_region_frames": {
+    "neurons": 144,
+    "observed": 144,
+    "transformer": 144,
+    "mlp": 141,
+    "ridge": 144
+  },
+  "mean_absolute_rgb_quantization_error_first_middle_last": [
+    1.2052191495895386,
+    1.2080938816070557,
+    1.2048002481460571
+  ],
+  "all_144_frame_snapshots_aligned": true,
+  "all_512_cells_visible_every_frame": true,
+  "source_sha256": {
+    "index.html": "f1a18dbaa32680aef4ade1a05a78479a9004616436b81c2cc51d3cb56df8ddac",
+    "app.js": "bff508eca9d5eebfd50ae24e05e80484550d668644a323827957f4aa8f493880",
+    "style.css": "9cc7b12637dfce40b31488ad8dd787ccd044f052350f2218bdae553d64989600",
+    "data.js": "5080c50c16d4a062a76640b63aef9c2be6afcca38756fcfb6f4d6b2282f5fed7"
+  },
+  "model_fits": 0,
+  "model_inferences": 0,
+  "visual_inspection": "source first frame and encoded middle frame checked",
+  "encoding": "Pillow 11.3.0; shared 256-color palette; no dithering; changed-region GIF; 80/80/90ms repeating",
+  "capture_tool": "Playwright 1.56.1; temporary tooling outside repository"
+}

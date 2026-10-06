@@ -2,7 +2,9 @@
 
 Open [index.html](index.html) in a browser. It works directly from a local file, with no server, network connection, package installation or model training. Keep `index.html`, `style.css`, `app.js` and `data.js` together.
 
-![Side-by-side viewer at the fixed midpoint of TX103, seed 401](preview.png)
+![Animated neuron cloud and running mice with transformer, MLP and ridge predictions](neural-observatory.gif)
+
+[Static preview at the fixed midpoint of TX103, seed 401](preview.png).
 
 The shared 3D view shows the exact 512 cells supplied to the independently fitted transformer, population MLP and ridge regression. An observed-speed mouse provides the reference; three model animations sit side by side. All seven separate-cohort recordings, all three fixed seeds and every scored test frame are available.
 
@@ -22,6 +24,10 @@ Colors show positive activity relative to each cell's training mean/SD. Display 
 Speed is nonnegative published running divided by the recording's training-target SD. Physical speed units and a native-frame-to-seconds conversion were not verified, so the interface uses SD and native frames. Playback “frames/s” is a display rate. One shared gait mapping converts the displayed speed to animation; cumulative distance gives deterministic poses when seeking.
 
 ## Rebuild and checks
+
+The README GIF is a 12-second looping capture of 144 consecutive test frames, 2495–2638, from TX103 and seed 401. The first recording, first seed and fixed midpoint determine the excerpt; model error did not determine it. The cloud rotates while recorded activity, observed running and all three saved predictions advance together. All 512 cells remain in view. Compact capture styling removes playback controls; the interactive viewer itself is unchanged. Full-test metrics remain visible and are not calculated from the excerpt.
+
+GIF playback averages 12 frames per display second, not verified acquisition seconds. This is an illustrative replay, not evidence that one model won. A shared 256-color palette and changed-region encoding keep the animated asset compact. [GIF checks and provenance](gif_review.json) record its dimensions, duration, source hashes and captured frame alignment. No training or inference was run to make it.
 
 The maintained viewer has no third-party JavaScript dependencies. The optional data exporter requires NumPy and the existing local study archive:
 
