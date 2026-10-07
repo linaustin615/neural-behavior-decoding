@@ -12,6 +12,20 @@ A research-engineering study of mouse running-speed decoding from population cal
 
 ## Findings worth keeping
 
+**Averaging independently trained decoders was the most consistent improvement.** Across seven development mice and four mice never used in development before the holdout study, two-seed averages reduced mean relative test MSE by **5.4–6.1%**, and three-seed averages by **7.2–8.1%**. Neither family worsened any mouse's mean MSE. Transformer and MLP ensembles performed similarly; mixing architectures showed no measurable benefit over same-family ensembling at the same cost. Training and inference cost increase roughly 2–3×. [Ensembling results](experiments/2026-10-07_ensemble_check/ASSESSMENT.md)
+
+| Cohort | Model | Two-seed MSE gain vs single | Mouse wins | Seed wins | MAE gain | Three-seed MSE gain |
+| --- | --- | ---: | ---: | ---: | ---: | ---: |
+| Development (7 mice) | Transformer | +5.41% | 7/7 | 17/21 | +0.82% | +7.22% |
+| Development (7 mice) | MLP | +5.87% | 7/7 | 15/21 | +0.95% | +7.82% |
+| Holdout (4 new mice) | Transformer | +6.05% | 4/4 | 11/12 | +2.62% | +8.07% |
+| Holdout (4 new mice) | MLP | +6.08% | 4/4 | 11/12 | +2.46% | +8.11% |
+| TX60 later session (descriptive) | Both | +1.8–2.0% | 1/1 | 3/3 | positive | +2.5–2.7% |
+
+**Holdout process:** the protocol was frozen before download and all checkpoints locked before scoring; independent audits passed. Publisher files for later TX61/VR2 sessions contained D7's running trace and were excluded; D8 failed the preset flat-training-target rule. D3/D4/D7/D9 used a start-aligned common prefix for their two-frame activity/running length mismatch, under an amendment approved before numerical values were read; this does not independently verify sensor timing. [Holdout results and data issues](experiments/2026-10-07_holdout_confirmation/ASSESSMENT.md)
+
+**Caveats:** 11 distinct mice from one lab, a known technique, and no statistical-significance or novelty claim. The four-mouse holdout blend comparison was pre-registered, but the same-family ensembling check—including its holdout rows and the combined 11-mouse analysis—was **post hoc**, not a new independent confirmation. The later TX60 session adds no new animal. These results reinforce the absence of a validated transformer advantage over the MLP.
+
 ![Main comparisons and measured CPU cost](portfolio/results/overview.png)
 
 | Question | What the evidence supports | Important limit |
@@ -22,7 +36,7 @@ A research-engineering study of mouse running-speed decoding from population cal
 | Did correct neuron coordinates add dependable value? | In the earlier controlled fixed-cell study, correct coordinates improved MSE by **0.50%** over omitted coordinates. | Uncertainty intervals crossed zero; both gates failed. An exact ID-embedding compensation explains redundancy in that additive tokenizer. |
 | What did separate validation expose? | **Zero speed beat every tested neural recipe and ridge on two mice.** Transformer MSE was **20.01× / 3.99×** the zero-speed error. | Both test periods had less running than training. This identifies a failure condition, not its cause. |
 
-Relative effects average individual-seed errors within each mouse, then weight mice equally. Development and separate-cohort results are not pooled. The separate comparison tests fixed **training recipes fitted anew within each recording**, not transfer of pretrained weights to unseen mice. Physical time scales and publisher preprocessing were not harmonized between releases.
+The earlier single-model comparisons in the table above average individual-seed errors within each mouse, then weight mice equally; their development and separate-cohort results are reported separately. The ensembling table instead evaluates averaged predictions against single-model errors, also weighting mice equally. The separate comparison tests fixed **training recipes fitted anew within each recording**, not transfer of pretrained weights to unseen mice. Physical time scales and publisher preprocessing were not harmonized between releases.
 
 ## Inspect or reproduce
 

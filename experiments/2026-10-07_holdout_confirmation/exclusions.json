@@ -1,0 +1,7 @@
+{
+  "utc": "2026-10-07T17:04:34.751084+00:00",
+  "excluded": "D8 (spont_D8_2021_11_18_3)",
+  "rule": "pre-specified preparation stop: training targets have insufficient variation (training speed SD<=1e-6); same check as decoding/data.py and facemap_validation missing_data",
+  "inspected": "only the assertion outcome on the training prefix; no validation/test values, no models fitted for D8",
+  "consequence": "set B gated on D3,D4,D7,D9 (n=4); protocol gate formulas give recording wins>=4/4, seed wins>=8/12, quiet wins>=3/4"
+}

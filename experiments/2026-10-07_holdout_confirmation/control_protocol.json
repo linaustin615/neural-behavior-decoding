@@ -1,0 +1,17 @@
+{
+  "utc": "2026-10-07T17:16:55.432766+00:00",
+  "question": "Does the transformer/MLP blend beat same-cost two-model averages of a single family?",
+  "disclosure": "post hoc control on already-scored holdout test predictions; blend result known; no model trained or reselected",
+  "controls": {
+    "transformer_pair": "equal average of zero-clipped transformer seeds s and next(s)",
+    "mlp_pair": "same for MLP"
+  },
+  "pairing": "seed slot 401 uses 401+402, 402 uses 402+403, 403 uses 403+401 (cyclic, fixed); blend slot s uses transformer s + MLP s with its locked alpha",
+  "weights": "fixed 0.5 for same-family pairs (symmetric seeds); blend keeps its locked validation alpha",
+  "recordings": "set B D3,D4,D7,D9 for the decision; TX60_s2 descriptive",
+  "decision": "claim that mixing architectures adds beyond same-cost averaging only if the blend beats EACH control with mean relative MSE gain>0, >=3/4 mouse wins and >=8/12 seed-slot wins; otherwise conclude averaging explains the benefit",
+  "inputs_sha256": {
+    "summary.json": "1bde0f4d044fdbd2bd8b87a730b25190f81f61f2b08d0b4ebf14ec38e98194fd",
+    "evaluation_lock.json": "24e09a6dc2b35d985bb60741fab47c907c7817c622b2bf73ed5347e0d1bb6b98"
+  }
+}

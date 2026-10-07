@@ -1,0 +1,113 @@
+{
+  "created_utc": "2026-10-07T14:41:24.378435+00:00",
+  "question": "Does the combined decoder (validation-selected transformer/MLP blend, optionally plus bounded attention+BCE correction) beat BOTH standalone models on recordings never used in development?",
+  "data_state": "frozen BEFORE download; no holdout activity, running or metadata values inspected; only public archive directories and first-array npy headers (TX60_s2, D9) read to confirm format",
+  "sets": {
+    "A_visual_later_sessions": {
+      "archive": {
+        "url": "https://ndownloader.figshare.com/files/52543310",
+        "zip": "neural_data_visual.zip",
+        "bytes": 31773571030,
+        "md5": "2ae0287ee34267aa7e2dd198a839f215"
+      },
+      "recordings": [
+        {
+          "id": "TX60_s2",
+          "mouse": "TX60",
+          "file": "spont_TX60_2020_10_22_1_spks.npz",
+          "uncompressed_bytes": 4626282990,
+          "crc32": 690742574
+        },
+        {
+          "id": "TX61_s2",
+          "mouse": "TX61",
+          "file": "spont_TX61_2020_11_02_2_spks.npz",
+          "uncompressed_bytes": 4695644582,
+          "crc32": 2338462022
+        },
+        {
+          "id": "VR2_s2",
+          "mouse": "VR2",
+          "file": "spont_VR2_2020_10_26_1_spks.npz",
+          "uncompressed_bytes": 5636253062,
+          "crc32": 3903085045
+        }
+      ],
+      "note": "same mice as development (TX60/TX61/VR2), different days and newly drawn neurons; tests across-day generalization, NOT new animals"
+    },
+    "B_sensorimotor_new_mice": {
+      "archive": {
+        "url": "https://ndownloader.figshare.com/files/52543184",
+        "zip": "neural_data_sensorimotor.zip",
+        "bytes": 12190379852,
+        "md5": "e00e27ee51ddab472df49a1a6d33ded7"
+      },
+      "recordings": [
+        {
+          "id": "D3",
+          "mouse": "D3",
+          "file": "spont_D3_2021_11_22_2_spks.npz",
+          "uncompressed_bytes": 4014483558,
+          "crc32": 2318474183
+        },
+        {
+          "id": "D4",
+          "mouse": "D4",
+          "file": "spont_D4_2021_11_23_2_spks.npz",
+          "uncompressed_bytes": 3069068022,
+          "crc32": 1915368695
+        },
+        {
+          "id": "D7",
+          "mouse": "D7",
+          "file": "spont_D7_2021_11_18_2_spks.npz",
+          "uncompressed_bytes": 3265637870,
+          "crc32": 1635179940
+        },
+        {
+          "id": "D8",
+          "mouse": "D8",
+          "file": "spont_D8_2021_11_18_3_spks.npz",
+          "uncompressed_bytes": 2399134630,
+          "crc32": 3938055771
+        },
+        {
+          "id": "D9",
+          "mouse": "D9",
+          "file": "spont_D9_2021_11_22_2_spks.npz",
+          "uncompressed_bytes": 2334856350,
+          "crc32": 2557230926
+        }
+      ],
+      "rule": "earliest recording per mouse; D8_2021_11_29_1 excluded and never scored",
+      "note": "5 never-used mice, sensorimotor rather than visual cortex"
+    }
+  },
+  "preparation": "identical to experiments/2026-10-06_facemap_validation/dataset.py prepare(): keys spks/run, common prefix (length difference<=1), panel_seed7101 512 eligible neurons, 60/20/20 chronological splits with 64-frame gaps, 4096 training cap, training-only scaling, target abs(run) standardized on training",
+  "parents": "train fresh per recording: optimized_attention and optimized_population_mlp configs from facemap_validation protocol, seeds401/402/403, same optimization and earliest-minimum validation checkpoint selection; original development checkpoints cannot be reused because neurons differ",
+  "blend": "alpha in {0,.25,.5,.75,1} (transformer fraction) selected per recording by mean-over-seed validation MSE of float64 zero-clipped predictions; ties to smaller alpha",
+  "correction": "bounded-hybrid attention_bce exactly as experiments/2026-10-07_bounded_hybrid/run.py (width16 depth1 patch4, delta=.5*tanh*(1-sigmoid), BCE weight1, active penalty.1, 24 epochs, seeds601/602/603 paired with401/402/403, epoch selected on validation incl. epoch0); full strength, no post hoc scaling; mlp_bce and mse-only arms not run",
+  "candidates": {
+    "primary": "blend",
+    "secondary": "blend_plus_attention_bce"
+  },
+  "gates": {
+    "per_set_vs_each_parent": "mean relative MSE gain>=5%; recording wins>=ceil(6/7*n) (A 3/3, B 5/5); seed wins>=ceil(2/3*3n) (A 6/9, B 10/15); worst recording harm<=10%; mean MAE gain>=0",
+    "secondary_also_vs_blend": "mean gain>=5%; quiet wins>=ceil(5/7*n) (A 3/3, B 4/5); no recording active MSE >5% worse than blend",
+    "thresholds": "copied unchanged from the development studies; not tuned to holdout",
+    "report_regardless": "zero-speed and training-mean controls, per-recording R2/MSE/MAE, quiet/active slices; sets A and B reported separately, never pooled into one pass"
+  },
+  "barrier": "prepare -> fit all parents -> lock alphas -> fit corrections -> lock every checkpoint hash -> single test scoring -> independent audit. No refits, reselection or threshold changes after scoring. Integrity/format failures stop and are documented, never silently worked around.",
+  "limits": "one lab and dataset; set A reuses mice; set B changes brain area; exploratory, no significance claim from 3 or 5 recordings",
+  "source_sha256": {
+    "experiments/2026-10-06_facemap_validation/protocol.json": "cf57e198b825ecd1d7c8251db0e1234867d4c63917109a8eed9471a945eac382",
+    "experiments/2026-10-06_facemap_validation/dataset.py": "d488fdf2c1e4b2d59e6920d1b25370beba535ab59f87eca1ef348c6c03afcbc8",
+    "experiments/2026-10-06_facemap_validation/models.py": "9ad74e4d379897449d87ea3d161dbc5417c69e8f0805a7e2fb78740728350c3f",
+    "experiments/2026-10-06_facemap_validation/fit.py": "7915471482a6480be0b907979a47aa7e1ce0aa2356de87b47e78fb5586eb0f56",
+    "experiments/2026-10-07_bounded_hybrid/run.py": "364d0938efb48bac64e485a0d55bbc79807777968dac3a587df73cdf6bc31b76",
+    "experiments/2026-10-07_bounded_hybrid/protocol.json": "c866efea8a419d8c712402503ac240ac3acd3643d05c09cbdb707d256c9a15f8",
+    "decoding/model.py": "7e28394a6f12c3d226bf31abaab2cf2b4b9cd703a671c1129ca5444cd85395a2",
+    "decoding/data.py": "194f6e6acb53653c36b8c915f65fd24d7b8aea0993241f623777f8d985b73613",
+    "decoding/config.py": "6e5e55429a238f6d91e354350fc450be4d8cb958ba964c0d26cb35105191b9b4"
+  }
+}

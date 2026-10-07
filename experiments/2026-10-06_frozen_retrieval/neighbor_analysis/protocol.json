@@ -1,0 +1,25 @@
+{
+  "created_utc": "2026-10-06T22:38:53.661846+00:00",
+  "purpose": "descriptive neighbor analysis; no fits, tuning, interventions, or significance gate",
+  "source_sha256": "68a404a27ba0fb55a86ac755e9a4974f8f38a3d6c5f7fc599c9eb291f27e1bad",
+  "parent_selection_sha256": "c668d1060f76c06bde1a75e3b3ab061b32b4af4c9fabbf257bccae9e7c659e7a",
+  "quiet_threshold": 0.05,
+  "active_threshold": 0.5,
+  "k": 16,
+  "splits": [
+    "validation",
+    "test"
+  ],
+  "scope": "all quiet windows of all seven mice; all three seeds for each neural encoder; PCA once",
+  "controls": "compare neighbor quiet fraction and actual attention quiet mass against training-bank quiet prevalence; validation quiet windows provide a descriptive reference",
+  "diagnostics": [
+    "top16 quiet fraction",
+    "quiet attention mass",
+    "top16 total attention mass",
+    "entropy effective neighbors",
+    "nearest cosine",
+    "prediction contribution outside top16",
+    "fraction with majority-quiet top16 but minority-quiet attention mass"
+  ],
+  "interpretation": "PCA is a lossy representation, not raw information; neighbor labels do not identify causal input drift or architecture limits; no automatic hybrid or small-k fit"
+}

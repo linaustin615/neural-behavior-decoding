@@ -1,0 +1,17 @@
+{
+  "utc": "2026-10-07T17:25:04.165696+00:00",
+  "question": "Does plain ensembling (equal average of two seeds of the same model) reliably beat a single model?",
+  "disclosure": "post hoc consistency check on already-scored test predictions; no training or selection; the holdout control already showed pairs about equal to the blend",
+  "cohorts": {
+    "development": "original 7 mice, frozen_retrieval saved test predictions, seeds 401-403",
+    "holdout_set_b": "D3,D4,D7,D9",
+    "holdout_TX60_s2": "descriptive"
+  },
+  "ensembles": {
+    "pair": "slot s = 0.5*clip(seed s)+0.5*clip(seed next(s)), next cyclic 401->402->403->401",
+    "triple": "equal average of all three seeds (one per mouse; descriptive)"
+  },
+  "comparator": "single model of the same family; per-mouse seed-mean MSE for relative gains; seed-slot win = pair slot s beats single seed s",
+  "gate": "per family and cohort: mean relative MSE gain>=5%, mouse wins>=ceil(6/7*n), slot wins>=ceil(2/3*3n), worst mouse harm<=10%, mean MAE gain>=0; also report active and quiet slices",
+  "input_checks": "single-model MSE must match already-audited rows (bounded_hybrid summary.json, holdout summary.json) to 1e-12"
+}

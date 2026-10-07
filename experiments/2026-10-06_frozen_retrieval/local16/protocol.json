@@ -1,0 +1,31 @@
+{
+  "utc": "2026-10-06T22:55:55.671616+00:00",
+  "source_sha256": "6ab4cb41b5c1536275cceb96ef0cd7c74d8a589484c7fe0fbc6c7e6632869299",
+  "parent_selection_sha256": "c668d1060f76c06bde1a75e3b3ab061b32b4af4c9fabbf257bccae9e7c659e7a",
+  "status": "new exploratory follow-up on already examined mice; original FAIL unchanged",
+  "k": 16,
+  "taus": [
+    0.01,
+    0.03,
+    0.1,
+    0.3,
+    1.0
+  ],
+  "alphas": [
+    0.0,
+    0.25,
+    0.5,
+    0.75,
+    1.0
+  ],
+  "neural_fits": 0,
+  "features": "unchanged frozen transformer, MLP and PCA64 bank and scaling from Phase0",
+  "selection": "per mouse/family: select top16 temperature by mean validation clipped MSE across seeds; then select alpha with that temperature by same validation objective; ascending-grid ties; PCA once per mouse",
+  "hybrid": "(1-alpha)*clipped original head + alpha*clipped same-encoder top16 retrieval; alpha0 retains parent; both families tested, no test-based advancement",
+  "barrier": "all local temperatures and hybrid weights locked before any new test scoring",
+  "gates": "each neural local/hybrid: >=5% equal-mouse relative MSE gain vs parent, >=5/7 wins, maxharm<=10%, QFM lower>=5/7, positive mean gain vs PCA top16; MAE and active MSE descriptive",
+  "limits": "no new animals, causal claim, dynamic gate, or validated superiority; no grid extension after results",
+  "numeric_revision": "float64 blend clipping; see precision_resolution.json",
+  "amended_utc": "2026-10-06T22:58:43.206489+00:00",
+  "original_protocol_sha256": "6352a16197ee4721c7d3ae49b80c22c10c40829864a52d0a882340536fd937f6"
+}

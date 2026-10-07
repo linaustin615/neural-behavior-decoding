@@ -1,0 +1,56 @@
+{
+  "utc": "2026-10-06T23:28:06.008477+00:00",
+  "mice": [
+    "TX103",
+    "TX104",
+    "TX56",
+    "TX57",
+    "TX60",
+    "TX61",
+    "VR2"
+  ],
+  "seeds": [
+    501,
+    502,
+    503
+  ],
+  "arms": [
+    "attention_bce",
+    "mlp_bce",
+    "attention_mse",
+    "mlp_mse"
+  ],
+  "fits": 84,
+  "epochs": 24,
+  "updates_per_fit": 1536,
+  "batch_size": 64,
+  "lr": 0.001,
+  "weight_decay": 0.001,
+  "question": "Does a trainable temporal-attention movement gate improve an MLP speed decoder, and does explicit quiet/active supervision matter?",
+  "gate": "512x32 activity; trainable population readin width16, patch4, one causal attention or temporalMLP block; final token plus population mean/std histories; scalar logit",
+  "speed": "frozen selected MLP checkpoint features128, new LayerNorm128/Linear64/GELU/Linear1/softplus head; gradients through new speed head and raw-activity gate only",
+  "seed_mapping": "new seeds501/502/503 use pretrained MLP401/402/403 respectively; cached features from training and validation separately",
+  "target": "nonnegative running in training-SD units; moving iff speed>0.05; unweighted BCE weight1 for *_bce, weight0 for *_mse",
+  "loss": "mean squared speed error of sigmoid(gate)*softplus(speedhead), plus BCE when enabled; no class resampling, label input, or conditional masking",
+  "initialization": "all start near training mean: gate prior=train movement prevalence clipped1e-4; conditional speed=train mean/prior; common tensors paired across arms",
+  "optimizer": "AdamW, cosine to0.1lr over24epochs, clip grad norm1, identical batches/order per seed/mouse; select validation speed MSE including epoch0; no early stop",
+  "primary": "attention_bce vs mlp_bce; same feature backbone, target, updates, losses, initialization of common components; parameter counts recorded",
+  "secondary": [
+    "attention_bce vs attention_mse",
+    "mlp_bce vs mlp_mse",
+    "each arm vs original selected MLP and transformer",
+    "zero-speed and training-mean references"
+  ],
+  "gates": "primary: >=5%mean relative MSE gain,>=6/7mouse wins,>=14/21paired seed wins,maxharm<=10%,nonnegative MAE gain; useful repair additionally beats own pretrained MLP baseline by>=5%,>=5/7wins,maxharm<=10%,QFM improves>=5/7; original failures unchanged",
+  "barrier": "all84 checkpoints locked before new test scoring; no architecture/loss/epoch/grid changes after scoring",
+  "inference": "gate receives only activity, speed head receives only neural features; true movement labels used for training/slice evaluation only",
+  "limitations": "exploratory reused recordings and pretrained validation-selected MLP features; not fresh confirmation, not full end-to-end speed backbone training, no universal architecture conclusion; no automatic extension",
+  "sources": {
+    "experiments/2026-10-06_movement_gate/run.py": "fa18a2f074d786b820a0371bafaaf691e930fb0ce75a67c69f2ef8511dc032d1",
+    "decoding/model.py": "7e28394a6f12c3d226bf31abaab2cf2b4b9cd703a671c1129ca5444cd85395a2",
+    "decoding/config.py": "6e5e55429a238f6d91e354350fc450be4d8cb958ba964c0d26cb35105191b9b4",
+    "decoding/data.py": "194f6e6acb53653c36b8c915f65fd24d7b8aea0993241f623777f8d985b73613",
+    "experiments/2026-10-06_frozen_retrieval/run.py": "b82b5785fd927cf18b2991f6bbf5216c6335c01090435ec49caea3f02d701e27",
+    "experiments/2026-10-06_frozen_retrieval/protocol.json": "c5d5ecfc0bc493501381fab4c29e753581acd09fb8d23748ab6566e7185d3651"
+  }
+}
