@@ -1,0 +1,8 @@
+{
+  "stage": "independent audit",
+  "cause": "Audit clipped archived float32 neural predictions before promoting to float64; evaluator correctly promoted first. NumPy cast the physical-zero bound to float32 in the audit.",
+  "observed_mse_difference": 2.05510053e-11,
+  "resolution": "Separate audit.py promotes neural arrays to float64 before clipping, matching the specified scoring arithmetic. Original frozen run.py, protocol, selections, predictions and summary remain byte-for-byte unchanged. Tolerances unchanged. No refit, reselection or rescoring.",
+  "source": "audit.py derived from locked run.py audit function with only two float64 casts plus import header",
+  "initial_audit_passed": false
+}

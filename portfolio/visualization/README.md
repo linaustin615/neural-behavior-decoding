@@ -1,44 +1,62 @@
 # Neural Observatory
 
-Open [index.html](index.html) in a browser. It works directly from a local file, with no server, network connection, package installation or model training. Keep `index.html`, `style.css`, `app.js` and `data.js` together.
+**One recorded neural population, three prediction paths:** the MLP–transformer mix, the mix with its original learned correction, and validation-tuned ridge regression. A fourth mouse illustrates the observed running speed.
 
-![Animated neuron cloud and running mice with transformer, MLP and ridge predictions](neural-observatory.gif)
+Open [index.html](index.html) in a browser. Keep it beside `style.css`, `app.js` and `data.js`. It works offline without a server or model inference.
 
-[Static preview at the fixed midpoint of TX103, seed 401](preview.png).
+![Observed speed and synchronized mix, correction and ridge predictions](neural-observatory.gif)
 
-The shared 3D view shows the exact 512 cells supplied to the independently fitted transformer, population MLP and ridge regression. An observed-speed mouse provides the reference; three model animations sit side by side. All seven separate-cohort recordings, all three fixed seeds and every scored test frame are available.
+[Static preview](preview.png) · [Five-model results chart](../results/current_models.png) · [Correction trade-off](../results/correction_tradeoff.png)
 
-- Drag the neuron cloud to orbit, scroll to zoom, or focus it and use arrow keys. Hover a cell to inspect its original row index, position and approximate activity above baseline.
-- Play, pause, step a frame, or scrub/click the full-interval timeline. Playback stops at the final frame; pressing Play then restarts.
-- Switch recording or seed. All panels stay synchronized. Ridge is deterministic and stays unchanged when the neural training seed changes.
-- The full-test R² and error relative to zero speed remain visible. They describe the selected individual seed, not the seed-averaged primary comparison in the research report.
+## What you can explore
 
-## What is recorded and what is illustrated?
+- All four sensorimotor mice (D3/D4/D7/D9), three paired parent seeds (401/402/403), and every scored test frame: **18,892 frames** total. The correction seeds are 601/602/603, paired respectively. Ridge is deterministic.
+- Drag or use arrow keys to rotate the neuron cloud; scroll to zoom; reset to the fixed oblique view. Hover to inspect the original cell index and published position.
+- Play, pause, step, scrub or click the timeline. The selected recording, frame and seed drive all panels together. Reduced-motion preferences disable autoplay.
+- Full-test R² and MSE relative to zero speed describe the displayed seed, not a favorable excerpt or the seed-mean chart. A ratio above 1 means the zero-speed constant is better.
 
-**Recorded:** published neuron x/y coordinates and imaging-plane index, the selected neurons' prepared activity, and running speed at the aligned native frame. **Predicted:** existing held-out model outputs. **Illustrated:** mouse gait and the visual spacing between imaging planes. This is not video, a recovered body pose, an atlas reconstruction, a connectivity map or a neural generator.
+The mix is the main model. The correction is the original full-strength attention+BCE branch, **not** the later confidence-gated variant. It is included to expose the trade-off: quiet predictions improve, while active-period error can worsen. See [the assessment](../../experiments/2026-10-07_holdout_confirmation/ASSESSMENT.md).
 
-The input-channel mapping is the essential implementation detail: `panel[i]` identifies the original neuron row, selects its published position, and corresponds to channel `i` of the prepared activity. The first scored test target is 63 frames into the prepared test segment; the exporter applies that same offset to the activity. Each animation and the timeline cursor use that one frame index.
+## Recorded, predicted, illustrated
 
-Colors show positive activity relative to each cell's training mean/SD. Display intensities are clipped at +5 SD and quantized to eight bits; values at or below the mean remain dim. No decoder or metric is computed from those quantized colors. x/y are jointly scaled to preserve their relative aspect ratio; depth is an ordinal plane index with schematic spacing, not verified micrometers. These model recipes do not use coordinates as inputs.
+**Recorded:** published x/y positions and imaging-plane indices, selected neurons’ prepared activity, and aligned running speed. **Predicted:** archived test outputs. **Illustrated:** mouse gait and spacing between imaging planes. This is not animal video, recovered body pose, measured connectivity, calibrated anatomical depth or a neural generator.
 
-Speed is nonnegative published running divided by the recording's training-target SD. Physical speed units and a native-frame-to-seconds conversion were not verified, so the interface uses SD and native frames. Playback “frames/s” is a display rate. One shared gait mapping converts the displayed speed to animation; cumulative distance gives deterministic poses when seeking.
+`panel[i]` maps an input channel to the same original neuron row in the position arrays. Activity begins 63 frames into the prepared test segment, matching the scored targets. All paths use the same 512 neurons and target frames. The neural parents use 32-frame histories; ridge selects 16/32/64 using validation only. Coordinates are visualization inputs, not decoder inputs.
 
-## Rebuild and checks
+Colors show activity relative to each cell’s training mean/SD, clipped to 0–5 SD and quantized to 8 bits. No model or metric uses those display colors. x/y share a scale to preserve aspect ratio; the displayed plane indices come from the selected recording. Plane spacing is schematic.
 
-The README GIF is a 12-second quiet → active → quiet replay of 144 consecutive test frames, 400–543, from TX103 and seed 401. It uses the first recording and first seed, then the earliest interval satisfying an observed-running-only rule: its first and last 12 frames are quiet, at least 36 frames are quiet, at least 36 are active, and an active bout lasts at least 24 frames. Quiet means ≤0.05 training SD above zero speed; active means ≥0.5. These are display-selection thresholds, not validated behavioral categories. The chosen excerpt contains 58 quiet, 75 active and 11 intermediate frames. No prediction or model error determines the selection, and this excerpt is not a representative accuracy estimate.
+Speed is nonnegative published running divided by training-target SD. Physical speed units and acquisition seconds were not independently verified. “Frames/s” controls display playback only. Numeric speeds, errors and activity remain unsmoothed native-frame values; continuous gait phase makes the animation smooth between samples.
 
-The camera stays at a fixed oblique angle showing the imaging planes, with all 512 cells in view. Gait is rendered at **50 animation frames per second**, using the viewer's continuous gait phase between native samples. The source timeline advances at 12 native frames per display second, not verified acquisition seconds. Numeric speeds, instantaneous errors and activity colors retain the original native-frame values; predictions are not smoothed or adjusted. Full-test metrics remain visible and unchanged. Compact capture styling removes playback controls; the interactive viewer itself is unchanged.
+## How the README clip was selected
 
-This is an illustrative replay, not evidence that one model won. A shared 256-color palette and changed-region encoding keep the animated asset compact. [GIF checks and provenance](gif_review.json) record its dimensions, duration, source hashes, fixed camera and captured frame alignment. No training or inference was run to make it. The earlier fixed-midpoint, rotating 12-fps preview remains in Git history.
+D3 is the first recording;401 is the first paired seed. The GIF uses the **earliest 144-frame interval** satisfying a fixed observed-behavior-only rule: first and last 12 frames quiet, at least 36 quiet and 36 active frames, and at least 24 consecutive active frames. Quiet is ≤0.05 training SD above zero; active is ≥0.5. No prediction or model error enters this selection.
 
-The maintained viewer has no third-party JavaScript dependencies. The optional data exporter requires NumPy and the existing local study archive:
+The selected interval is test frames **718–861**: 60 quiet, 76 active and 8 intermediate frames. At 12 native frames per display second, it lasts 12 seconds. Gait is sampled at **50 animation frames/s** with a fixed camera and all 512 cells visible. This is one illustration, not a representative accuracy estimate. In particular, the correction’s full-test MSE is worse than the mix on D3.
+
+## Rebuild the viewer
+
+The exporter requires NumPy plus the existing local holdout, ridge and raw publisher position arrays:
 
 ```bash
 python3 portfolio/visualization/build_data.py
 ```
 
-It reads only the small position arrays from the large source NPZs, prepared test activity, and saved predictions. It copies no raw full-population recording and never imports training code. The generated `data.js` is approximately 25 MB because it includes all 34,411 test frames and 512 activity colors per frame across the seven mice. The file is local; there is no API request or CDN.
+It reads small position arrays, prepared test activity and saved predictions. No new neural fits or inference occur. Generated `data.js` is about 13.8 MB; it includes every test frame and 512 activity colors per frame. Raw full-population recordings and checkpoints are not copied.
 
-[Data checks](data_review.json) record exact target/channel alignment, coordinate provenance, display quantization error and agreement of compact display speeds with archived errors. [Browser checks](browser_review.json) cover 63 first/middle/last-frame cases across all recording/seed pairs, 504 speed/display checks, 567 archived metric checks, playback/seek/boundaries, orbit/zoom/keyboard/reset, reduced-motion preferences, desktop/mobile layouts and absence of runtime errors or external page requests. The desktop preview uses the fixed midpoint of the first recording; it was not chosen for favorable model performance.
+Optional GIF tooling needs Node, Playwright 1.56.1, local Chrome and Python with Pillow/NumPy. Keep capture frames and optional dependencies outside the repository:
 
-Original experimental results are unchanged. No fits or inference were repeated. The browser testing dependency and temporary diagnostic files live outside the repository and are not needed to open the viewer. [Research context](../RESEARCH_REPORT.md) and [all aggregate results](../results/RESULTS.md) remain separate from this illustrative replay.
+```bash
+npm install --prefix /tmp/neural-presentation-tools playwright@1.56.1 --no-audit --no-fund --ignore-scripts
+NODE_PATH=/tmp/neural-presentation-tools/node_modules node portfolio/visualization/capture.js
+python3 portfolio/visualization/encode_gif.py /tmp/neural-presentation-capture
+```
+
+`capture.js --preview` makes a still preview without the full animation. `NEURAL_CAPTURE_DIR` changes the temporary capture directory. Encoding uses one shared palette and changed-region GIF compression. Rebuilding replaces the presentation assets, never experiment records.
+
+## Verification and provenance
+
+[Data checks](data_review.json) record panel/target alignment, source hashes, activity quantization and agreement with archived metrics. [Browser checks](browser_review.json) cover 36 first/middle/last-frame cases, 144 speed checks, 432 metric-value checks, playback and frame controls, camera reset, a 390px mobile layout and no external requests or runtime errors. [GIF checks](gif_review.json) verify 600 capture positions, 2400 displayed speeds, fixed camera, full-test metric consistency and 12-second encoded duration.
+
+The original neural-parent comparison was pre-registered; ridge and the current presentation are post hoc on now-examined mice. Every model was fitted within its own recording. The animation cannot establish transfer or statistical significance. The earlier seven-mouse viewer and its assets remain in Git history; the historical numerical results remain in the research archive.
+
+Dataset-derived assets retain [CC BY-NC 4.0 terms and attribution](../../NOTICE.md). [Research report](../RESEARCH_REPORT.md) · [Current metrics](../results/current_models.csv).

@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="color-scheme" content="dark">
-  <title>Neural Observatory · Three decoders, one recording</title>
+  <title>Neural Observatory · One population, combined predictions</title>
   <link rel="stylesheet" href="style.css">
   <script src="data.js" defer></script>
   <script src="app.js" defer></script>
@@ -13,15 +13,15 @@
   <main>
     <header class="masthead">
       <a class="brand" href="../RESEARCH_REPORT.md" aria-label="Read the research report"><span class="brand-mark" aria-hidden="true">⠿</span> NEURAL OBSERVATORY</a>
-      <span class="archive-status"><i></i> RECORDED DATA · HELD-OUT TEST</span>
+      <span class="archive-status"><i></i> RECORDED DATA · SAVED TEST PREDICTIONS</span>
     </header>
     <section class="intro">
-      <div><p class="eyebrow">POPULATION ACTIVITY → RUNNING SPEED</p><h1>One mouse. Three decoders.</h1><p class="subtitle">Watch the same neural activity through a transformer, an MLP, and linear regression.</p></div>
+      <div><p class="eyebrow">POPULATION ACTIVITY → RUNNING SPEED</p><h1>One population. A combined decoder.</h1><p class="subtitle">Compare the MLP–transformer mix, its experimental correction, and tuned regression.</p></div>
       <div class="intro-note"><span class="large-number">512</span><span>recorded neurons<br>one synchronized timeline</span></div>
     </section>
     <section class="toolbar" aria-label="Recording and playback controls">
       <label class="control">RECORDING<select id="recording" aria-label="Recording"><option>Loading…</option></select></label>
-      <label class="control">TRAINING SEED<select id="seed" aria-label="Training seed"><option value="401">401 · single model</option><option value="402">402 · single model</option><option value="403">403 · single model</option></select></label>
+      <label class="control">TRAINING SEED<select id="seed" aria-label="Training seed"><option value="401">401 · paired models</option><option value="402">402 · paired models</option><option value="403">403 · paired models</option></select></label>
       <div class="toolbar-divider"></div>
       <button id="play" class="play-button" disabled aria-label="Play timeline">▶ <span>Play</span></button>
       <button id="previous" class="icon-button" aria-label="Previous frame" title="Previous frame">‹</button>
@@ -39,7 +39,7 @@
           <div id="neuron-tooltip" class="neuron-tooltip" hidden></div>
           <div class="orbit-hint">DRAG TO ORBIT <span>·</span> SCROLL TO ZOOM</div>
         </div>
-        <div class="neural-footer"><span id="neuron-detail">Same recorded activity supplied to all three models</span><span class="activity-key"><span>baseline</span><i></i><span>+5 SD</span></span></div>
+        <div class="neural-footer"><span id="neuron-detail">Shared neurons · mix + correction + regression</span><span class="activity-key"><span>baseline</span><i></i><span>+5 SD</span></span></div>
       </article>
       <article class="panel reference-panel">
         <div class="panel-heading"><div><p class="eyebrow">THE REFERENCE</p><h2>Observed running</h2></div><span class="live-dot"></span></div>
@@ -49,17 +49,17 @@
       </article>
     </section>
     <section class="model-grid" aria-label="Models compared side by side">
-      <article class="panel model-card transformer" data-model="transformer">
-        <div class="model-heading"><div><p class="eyebrow">ATTENTION</p><h2>Transformer</h2></div><span class="model-swatch"></span></div>
-        <div class="prediction-reading"><strong id="speed-transformer">—</strong><span>predicted speed<br>in training SD</span><div class="instant-error">ABS. ERROR<strong id="error-transformer">—</strong></div></div>
-        <canvas id="mouse-transformer" class="mouse-canvas" role="img" aria-label="Mouse animation driven by transformer prediction"></canvas>
-        <div class="metric-row"><div><span>FULL-TEST R²</span><strong id="r2-transformer">—</strong></div><div><span>MSE / ZERO SPEED</span><strong id="zero-transformer">—</strong></div></div>
+      <article class="panel model-card blend" data-model="blend">
+        <div class="model-heading"><div><p class="eyebrow">MAIN MODEL · ENSEMBLE</p><h2>MLP + transformer</h2></div><span class="model-swatch"></span></div>
+        <div class="prediction-reading"><strong id="speed-blend">—</strong><span>predicted speed<br>in training SD</span><div class="instant-error">ABS. ERROR<strong id="error-blend">—</strong></div></div>
+        <canvas id="mouse-blend" class="mouse-canvas" role="img" aria-label="Mouse animation driven by blend prediction"></canvas>
+        <div class="metric-row"><div><span>FULL-TEST R²</span><strong id="r2-blend">—</strong></div><div><span>MSE / ZERO SPEED</span><strong id="zero-blend">—</strong></div></div>
       </article>
-      <article class="panel model-card mlp" data-model="mlp">
-        <div class="model-heading"><div><p class="eyebrow">NONLINEAR BASELINE</p><h2>MLP</h2></div><span class="model-swatch"></span></div>
-        <div class="prediction-reading"><strong id="speed-mlp">—</strong><span>predicted speed<br>in training SD</span><div class="instant-error">ABS. ERROR<strong id="error-mlp">—</strong></div></div>
-        <canvas id="mouse-mlp" class="mouse-canvas" role="img" aria-label="Mouse animation driven by MLP prediction"></canvas>
-        <div class="metric-row"><div><span>FULL-TEST R²</span><strong id="r2-mlp">—</strong></div><div><span>MSE / ZERO SPEED</span><strong id="zero-mlp">—</strong></div></div>
+      <article class="panel model-card corrected" data-model="corrected">
+        <div class="model-heading"><div><p class="eyebrow">EXPERIMENTAL REFINEMENT</p><h2>Mix + correction</h2></div><span class="model-swatch"></span></div>
+        <div class="prediction-reading"><strong id="speed-corrected">—</strong><span>predicted speed<br>in training SD</span><div class="instant-error">ABS. ERROR<strong id="error-corrected">—</strong></div></div>
+        <canvas id="mouse-corrected" class="mouse-canvas" role="img" aria-label="Mouse animation driven by the corrected mix prediction"></canvas>
+        <div class="metric-row"><div><span>FULL-TEST R²</span><strong id="r2-corrected">—</strong></div><div><span>MSE / ZERO SPEED</span><strong id="zero-corrected">—</strong></div></div>
       </article>
       <article class="panel model-card ridge" data-model="ridge">
         <div class="model-heading"><div><p class="eyebrow">LINEAR BASELINE</p><h2>Ridge regression</h2></div><span class="model-swatch"></span></div>
@@ -69,15 +69,15 @@
       </article>
     </section>
     <section class="panel timeline-panel" aria-label="Full test interval">
-      <div class="timeline-heading"><div><h2>The full test interval, together</h2><p>All test frames · no selected highlight window</p></div><div class="trace-legend"><span class="observed">Observed</span><span class="transformer">Transformer</span><span class="mlp">MLP</span><span class="ridge">Ridge</span></div></div>
+      <div class="timeline-heading"><div><h2>The full test interval, together</h2><p>All test frames · no selected highlight window</p></div><div class="trace-legend"><span class="observed">Observed</span><span class="blend">MLP + transformer</span><span class="corrected">Mix + correction</span><span class="ridge">Ridge</span></div></div>
       <div class="trace-stage"><canvas id="trace" aria-label="Observed and predicted running speed across the full test interval"></canvas><div id="trace-cursor" class="trace-cursor"></div></div>
       <label for="scrubber" class="sr-only">Seek to native test frame</label><input id="scrubber" type="range" min="0" max="1" value="0" step="1">
       <div class="timeline-labels"><span>TEST FRAME 0</span><span id="native-frame">Native frame —</span><span id="last-frame">—</span></div>
     </section>
     <footer>
-      <p><strong>How to read this:</strong> all three models see the same activity. Color shows activity above each cell’s training mean, clipped at +5 SD. Depth is imaging-plane number; plane spacing is schematic. Mouse gait illustrates speed, not recorded pose. Playback uses native frames, not verified seconds.</p>
-      <details><summary>Evidence, source data, and limits</summary><div class="details-content"><p>These are saved predictions from independent fits on seven separate Stringer-coauthored Facemap recordings. Each model was trained within its recording; this is not zero-shot transfer. Coordinates are used for this view only, not by these decoders. The three displayed seeds are all the fixed training seeds; ridge is deterministic and does not change with seed.</p><p>Metrics cover the entire test interval for the selected seed. R² below zero means worse than the test-mean reference. MSE / zero speed above 1 means worse than always predicting no running. The study did not establish reliable transformer superiority. A visual match is not a significance test.</p><p>The 512 original neuron indices and their published x/y/plane positions stay aligned with the model input. Color values are quantized to 8 bits for display; full precision archived predictions determine the metrics. No neurons, seeds, recordings or test frames were selected based on visual appeal.</p><p><a href="../RESEARCH_REPORT.md">Research report</a> · <a href="../results/RESULTS.md">All results</a> · <a href="https://janelia.figshare.com/articles/dataset/Facemap_a_framework_for_modeling_neural_activity_based_on_orofacial_tracking/23712957/2" target="_blank" rel="noreferrer">Original Facemap v2 data</a></p></div></details>
-      <div class="footer-line"><span>NEURAL OBSERVATORY / LOCAL RESEARCH VIEW</span><span>7 MICE · 3 SEEDS · 0 NEW FITS</span></div>
+      <p><strong>How to read this:</strong> all three paths use the same neurons and target frames; ridge selects a 16/32/64-frame history. Color shows activity above each cell’s training mean, clipped at +5 SD. Depth is imaging-plane number; plane spacing is schematic. Mouse gait illustrates speed, not recorded pose. Playback uses native frames, not verified seconds.</p>
+      <details><summary>Evidence, source data, and limits</summary><div class="details-content"><p>These are saved predictions on four sensorimotor mice: D3, D4, D7 and D9. The mix combines a transformer and an MLP; the correction is the original bounded attention+BCE branch. Each model was trained within its recording; this is not zero-shot transfer. Coordinates are used for this view only, not by these decoders. The three displayed seeds are all fixed paired parent seeds (correction seeds are +200); ridge is deterministic and does not change with seed.</p><p>Metrics cover the entire test interval for the selected seed. R² below zero means worse than the test-mean reference. MSE / zero speed above 1 means worse than always predicting no running. The mix beat both standalone models in the original holdout study. The ridge comparison is post hoc. The correction only improved overall MSE by 1.16% and missed its improvement gate. This replay does not establish accuracy.</p><p>The 512 original neuron indices and their published x/y/plane positions stay aligned with the model input. Color values are quantized to 8 bits for display; full precision archived predictions determine the metrics. The viewer includes all four mice and all test frames. The README excerpt uses the first mouse and seed and an observed-behavior-only selection rule.</p><p><a href="../RESEARCH_REPORT.md">Research report</a> · <a href="../results/RESULTS.md">All results</a> · <a href="https://janelia.figshare.com/articles/dataset/Facemap_a_framework_for_modeling_neural_activity_based_on_orofacial_tracking/23712957/2" target="_blank" rel="noreferrer">Original Facemap v2 data</a></p></div></details>
+      <div class="footer-line"><span>NEURAL OBSERVATORY / LOCAL RESEARCH VIEW</span><span>4 MICE · 3 PAIRED SEEDS · SAVED PREDICTIONS</span></div>
     </footer>
   </main>
   <noscript>This visualization needs JavaScript. No network connection is required; open index.html with its adjacent data.js, app.js and style.css files.</noscript>

@@ -1,12 +1,16 @@
 # Evidence and claim boundaries
 
-This is a retrospective presentation of completed work, not a new protocol or a search for a favorable endpoint. The primary results and gate decisions remain unchanged. Exact machine-readable support is bundled in [reference.json](data/reference.json); [source receipts](data/source_provenance.json) identify the original files and hashes.
+This is a retrospective presentation of completed work, not a new protocol or a search for a favorable endpoint. The primary results and gate decisions remain unchanged. Current four-mouse support is in [current_reference.json](data/current_reference.json); earlier evidence is bundled in [reference.json](data/reference.json); [source receipts](data/source_provenance.json) identify the original files and hashes.
 
 | Claim | Verdict | Evidence and scope |
 | --- | --- | --- |
+| “The mix beats tuned ridge on the four sensorimotor mice.” | Supported, post hoc | 25.10% lower mean relative MSE; 4/4 mice and 12/12 seed comparisons. Same panels, targets and splits; ridge settings selected on validation. [Audit and limitations](../experiments/2026-10-07_holdout_ridge/ASSESSMENT.md). This does not supersede mixed results on the earlier seven visual mice. |
+| “The mix beats both standalone parents on those four mice.” | Pre-registered practical result | 5.64% lower MSE versus transformer; 5.34% versus MLP; 4/4 mice against each. [Holdout study](../experiments/2026-10-07_holdout_confirmation/ASSESSMENT.md). Four mice, one lab; no statistical-significance claim. |
+| “Mixing architectures uniquely explains the gain.” | Unsupported | Same-cost two-transformer and two-MLP seed ensembles perform similarly. [Ensembling controls](../experiments/2026-10-07_ensemble_check/ASSESSMENT.md). Averaging is supported; a unique cross-architecture mechanism is not. |
+| “The correction is a reliable upgrade over the mix.” | Not established | Only 1.16% lower overall MSE; failed its 5% gain requirement; active MSE can worsen 3.29%. Its 53.08% quiet-prediction reduction is not a reduction in overall error. [Trade-off chart](results/correction_tradeoff.png). |
 | “Neural activity contains useful information about running in some recordings.” | Supported within the tested setting | Separate transformer mean-seed R²: TX103 0.471, TX57 0.123. Five other mice below 0.01. [All mice and controls](results/per_mouse_metrics.csv). This is association, not a causal account of behavior. |
 | “The selected transformer reliably beats the MLP on separate mice.” | Unsupported | +2.33% mean MSE gain, 3/7 mouse wins, 11/21 seed wins, −1.20% MAE gain. Practical gate fails; Holm p = 1. [Fixed independent-fit comparison](results/RESULTS.md). |
-| “The transformer reliably beats ridge on separate mice.” | Unsupported | +8.17% mean MSE gain, 3/7 mouse wins; both primary gates fail. A large development advantage did not become consistent separate-cohort evidence. |
+| “The transformer reliably beats ridge on the earlier seven visual mice.” | Unsupported | +8.17% mean MSE gain, 3/7 mouse wins; both primary gates fail. A large development advantage did not become consistent separate-cohort evidence. |
 | “The optimized transformer is a validated improvement over its smaller reference.” | Unsupported | Development +13.01% pooled mean gain, but the required first seed subset failed. Separate −0.22% mean gain. [All subsets](results/contrasts.csv). |
 | “Population compression is substantially cheaper in the measured implementation.” | Supported engineering result | Batch-64 CPU medians: population T 5.61 ms, population MLP 5.82 ms, local MLP 84.97 ms. Not an attention-specific advantage, equal-accuracy claim or deployment latency measurement. [Timing source](../experiments/2026-10-06_systematic_optimization/cost_results.json). |
 | “Correct coordinates were proved useless.” | Unsupported | Correct versus omitted coordinates: +0.50% MSE improvement, 7/12 paired wins, only 2/6 positive pool means; uncertainty crosses zero. One historically examined recording; overlapping neuron pools. [Coordinate report](../experiments/2026-10-02_coordinate16/report.md). |
@@ -22,11 +26,11 @@ This is a retrospective presentation of completed work, not a new protocol or a 
 
 ## Why some positive numbers are not headline claims
 
-The seven-mouse 2.33% average is not statistically or practically validated. The old 39.38% gain over ridge is a development result and disappears as a consistent advantage on the new cohort. The 13.01% gain over the small transformer fails the combined required seed-subset criterion. None of these is discarded; all appear alongside their failed conditions.
+The seven-mouse 2.33% average is not statistically or practically validated. The old 39.38% gain over ridge is a development result and did not remain consistent on the earlier seven-mouse visual cohort. The 13.01% gain over the small transformer fails the combined required seed-subset criterion. None of these is discarded; all appear alongside their failed conditions.
 
 The coordinate uncertainty intervals describe one recording conditional on its analysis and overlapping pools. They are not population-level biological confidence intervals. The seed range in the trace figure is also not a biological confidence interval.
 
-The strongest positive claims are narrower: some neural-to-running decoding occurred; an implementation choice reduced measured forward cost; and a concrete representational redundancy explains why feature reliance need not imply incremental predictive value. A transparent benchmark can demonstrate research skill without presenting these as a statistically significant new biological discovery.
+The latest positive result is the combined decoder on four sensorimotor mice, with the post hoc ridge comparison and matched ensemble controls above. Earlier positive findings remain: some neural-to-running decoding occurred; an implementation choice reduced measured forward cost; and a concrete representational redundancy explains why feature reliance need not imply incremental predictive value. A transparent benchmark can demonstrate research skill without presenting these as a statistically significant new biological discovery.
 
 ## Source trail
 

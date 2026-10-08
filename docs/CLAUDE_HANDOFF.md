@@ -1,5 +1,34 @@
 # Claude Code handoff
 
+## Latest: merge preparation
+
+Austin asked to get the changes ready for merge. The results branch packages the completed confidence-gating and ridge follow-ups plus the polished presentation. See [merge review](MERGE_REVIEW.md) for scope, evidence, artifact exclusions and limits. The next step is branch/PR review; merging into main still requires explicit approval. No training, rescoring or changes to old locked experiments are part of release preparation. Older uncommitted/unpublished statements below describe their original checkpoints in time; use Git/PR status for the current state.
+
+## Latest: portfolio presentation — complete
+
+User authorized a polished GitHub presentation with all models charted and a mix/correction/ridge replay. README now leads with the four-mouse ensemble result, five-model chart, correction trade-off, architecture illustration, same-family controls and clear cohort limits. `portfolio/build_current.py` builds three PNG/SVG figures and current_models.csv from `portfolio/data/current_reference.json`; no training/inference. Research report, evidence ledger, presentation kit and reproduction guide now agree with the current result.
+
+Viewer now uses all D3/D4/D7/D9 full test intervals (18,892 frames), all three paired seeds, exact512-neuron panels and published positions. It displays plain mix, ORIGINAL full-strength attention+BCE correction (not confidence gating) and tuned ridge, plus observed speed. Plane labels now derive from each recording. Main GIF uses D3/401 frames718–861 (earliest interval meeting the observed-only quiet/active rule),60 quiet/76 active/8 intermediate,12 seconds at50fps, fixed camera. Browser checks and GIF provenance live beside the viewer; source numeric predictions remain unchanged. Optional capture/encoding scripts are reproducible. Main model/correction caveats are explicit.
+
+Presentation edits plus prior confidence-gating/ridge studies remain LOCAL AND UNCOMMITTED on results-2026-10-07. No push or merge was performed for this work. Earlier main merge still lacks explicit approval. Do not repeat completed fits, scoring or diagnostics. Read README and portfolio/presentation_review.json for the new presentation state.
+
+## Latest: matched ridge comparison — complete
+
+User explicitly authorized checking the ensemble against regression. New `experiments/2026-10-07_holdout_ridge/` reuses exact D3/D4/D7/D9 prepared arrays and saved neural predictions. Ridge uses the existing histories16/32/64 × eight penalties; 96 analytic solutions, validation-only selection, all8 primary/matched choices locked before new test predictions. No neural training or locked historical edits. This is post hoc on now-examined mice.
+
+Blend versus tuned ridge: 25.10% mean relative MSE gain,4/4 mice,12/12 seed comparisons,26.20% MAE gain. Per mouse20.95/32.68/8.11/38.63%. Matched32-frame ridge:27.85% gain,4/4. Standalone T/MLP also beat tuned ridge20.75%/21.00%,4/4 each. Blend quiet and active MSE both lower than ridge on every mouse. Do not attribute the full ridge gap to ensembling or claim attention-specific superiority. Old neural-parent improvement remains5.64%/5.34%.
+
+Audit complete:96 validation scores,8 selections,52 metric records,6 contrasts; exact archived neural metrics and target/frame pairing; independent ridge prediction discrepancy<=9.77e-15. First audit used float32 clipping for saved neural arrays; separate `audit.py` fixes only audit-side casts, preserving original locked `run.py`, protocol, choices, predictions and summary. `audit_issue.json` records the failure/resolution; tolerances unchanged. Read ASSESSMENT/REPORT; do not rerun. This new study plus previous confidence-gating work is local and uncommitted. No job remains; no further experiment queued. No merge approval has been received.
+
+## Latest: confidence-gated correction — complete
+
+User authorized testing confidence gating after reframing the project around practical combined-model performance. New study `experiments/2026-10-07_confidence_gate/` uses saved attention+BCE logits/deltas and validation-only threshold/strength selection, with no new training.12 recordings=7 development+4 previousholdout+TX60later(11 distinctmice); three seeds. Thresholds.05/.1/.2/.3/.5, strengths0/.25/.5/.75/1; matched downward-only control; validation active-MSE guard1%mean,5%perseed. All24 choices locked before new scoring. Original locked experiments untouched; formerholdout is now explicitly development.
+
+Result: previousholdout gatedvsblend totalMSEgain.62%,3/4,quietpredictions52.59%lower4/4, butD3 totalharm1.09% andactiveharm3.26%, D4activeharm1.30%. Existingcorrection already1.16%totalgain and53.08%quietreduction; newgatingworseoverall. Downward-onlycontrol.68%gain. Development gated1.55%gain2/7,quiet4.89%4/7,activeharm2.12%. Both prospectivequiet-refinement gatesFAIL. Quietgain is reduction in mean predicted speed onquietframes, notoverallerror orclassificationFPR. Optionalresearchquiet-refinementframing supported, no uniqueconfidence-gatewin. Audit24 selections/144metricrecords, originalhashes unchanged, allchecksPASS. ASSESSMENT/REPORT/protocol/summary/manifest saved; no job remains running and no furthersearchqueued.
+
+README/main previouslypublishedclaim unchanged. Newfollowup and research-index/report notes are local uncommitted onresults-2026-10-07; do not merge or push automatically. Prior requestedmainmerge still lacksapproval. Read newASSESSMENT before proposing another correction, and do not repeat these diagnostics.
+
+
 ## Start here
 
 Workspace: `/Users/austinlin/neuron_transformer`. The user is handing the existing local workspace to Claude Code while Codex tokens reset. Work from this directory, not a fresh clone: trained checkpoints, prepared arrays and recent uncommitted experiments are local and deliberately ignored by Git.

@@ -1,86 +1,100 @@
 # Neural Behavior Decoding
 
-**What survives strong baselines and separate-recording validation?**
+**From 512 recorded neurons to a mouse’s running speed.**
 
-A research-engineering study of mouse running-speed decoding from population calcium activity. It compares transformers, MLPs and ridge regression, then asks whether apparent improvements survive matched controls, additional training seeds and seven separate mouse recordings.
+A research portfolio comparing linear regression, an MLP, a transformer, and their combined predictions on public neural recordings. The strongest practical result is a simple **MLP–transformer ensemble**: on four sensorimotor mice, it reduced mean relative test MSE by **25.1% versus tuned ridge regression** and **about 5% versus either standalone neural model**.
 
-**Result:** useful decoding in some recordings, cheaper population-based architectures, and no validated transformer advantage over the strongest simpler controls. The contribution is the controlled comparison and reproducible failure analysis—not a claim of a new state-of-the-art decoder.
+[Results](#findings-worth-keeping) · [How it works](#how-it-works) · [Code tour](docs/CODE_TOUR.md) · [Research report](portfolio/RESEARCH_REPORT.md) · [Experiment archive](research/EXPERIMENTS.md)
 
-![Animated replay of recorded neurons and running mice, comparing transformer, MLP and ridge predictions](portfolio/visualization/neural-observatory.gif)
+![Recorded neurons and running-speed illustrations: observed behavior, MLP–transformer mix, mix with correction, and ridge regression](portfolio/visualization/neural-observatory.gif)
 
-*Quiet → active → quiet, with a fixed 3D neuron view and smooth gait animation. TX103 · seed 401 · excerpt chosen from observed running only, not model accuracy. Mouse gait illustrates speed; it is not animal video.* [Static preview](portfolio/visualization/preview.png) · [Interactive viewer guide](portfolio/visualization/README.md)
+*One synchronized quiet → walking → quiet excerpt. D3 · paired seed 401 · fixed 3D view. The mouse gait illustrates speed; it is not animal video. The clip is selected from observed behavior, not prediction accuracy. Full-test scores for the displayed seed stay visible.* [Static preview](portfolio/visualization/preview.png) · [Offline interactive viewer](portfolio/visualization/README.md)
 
 ## Findings worth keeping
 
-**Averaging independently trained decoders was the most consistent improvement.** Across seven development mice and four mice never used in development before the holdout study, two-seed averages reduced mean relative test MSE by **5.4–6.1%**, and three-seed averages by **7.2–8.1%**. Neither family worsened any mouse's mean MSE. Transformer and MLP ensembles performed similarly; mixing architectures showed no measurable benefit over same-family ensembling at the same cost. Training and inference cost increase roughly 2–3×. [Ensembling results](experiments/2026-10-07_ensemble_check/ASSESSMENT.md)
+![All five models: error relative to tuned ridge and R-squared for each of four mice](portfolio/results/current_models.png)
 
-| Cohort | Model | Two-seed MSE gain vs single | Mouse wins | Seed wins | MAE gain | Three-seed MSE gain |
-| --- | --- | ---: | ---: | ---: | ---: | ---: |
-| Development (7 mice) | Transformer | +5.41% | 7/7 | 17/21 | +0.82% | +7.22% |
-| Development (7 mice) | MLP | +5.87% | 7/7 | 15/21 | +0.95% | +7.82% |
-| Holdout (4 new mice) | Transformer | +6.05% | 4/4 | 11/12 | +2.62% | +8.07% |
-| Holdout (4 new mice) | MLP | +6.08% | 4/4 | 11/12 | +2.46% | +8.11% |
-| TX60 later session (descriptive) | Both | +1.8–2.0% | 1/1 | 3/3 | positive | +2.5–2.7% |
+| Model | Mean relative MSE reduction vs tuned ridge | Mouse wins vs ridge | Role |
+| --- | ---: | ---: | --- |
+| Ridge regression | Reference | — | Validation-tuned linear baseline |
+| MLP | 21.00% | 4/4 | Strong nonlinear baseline |
+| Transformer | 20.75% | 4/4 | Temporal attention model |
+| **MLP + transformer** | **25.10%** | **4/4** | **Main combined model** |
+| Mix + learned correction | 25.94% | 4/4 | Experimental refinement; trade-off below |
 
-**Holdout process:** the protocol was frozen before download and all checkpoints locked before scoring; independent audits passed. Publisher files for later TX61/VR2 sessions contained D7's running trace and were excluded; D8 failed the preset flat-training-target rule. D3/D4/D7/D9 used a start-aligned common prefix for their two-frame activity/running length mismatch, under an amendment approved before numerical values were read; this does not independently verify sensor timing. [Holdout results and data issues](experiments/2026-10-07_holdout_confirmation/ASSESSMENT.md)
+These numbers use the **same four mice, neurons and test frames**. We average errors over three seeds within each mouse, then weight mice equally; we do not pool raw errors across recordings. Ridge chooses regularization and a 16/32/64-frame history using validation only. The neural parents use 32 frames. Against a matched 32-frame ridge, the mix gains 27.85%. [Exact table](portfolio/results/current_models.csv) · [Ridge comparison and audit](experiments/2026-10-07_holdout_ridge/ASSESSMENT.md)
 
-**Caveats:** 11 distinct mice from one lab, a known technique, and no statistical-significance or novelty claim. The four-mouse holdout blend comparison was pre-registered, but the same-family ensembling check—including its holdout rows and the combined 11-mouse analysis—was **post hoc**, not a new independent confirmation. The later TX60 session adds no new animal. These results reinforce the absence of a validated transformer advantage over the MLP.
+**The mix improves on both parents.** In the pre-registered holdout comparison, it reduced MSE by **5.64% versus the transformer** and **5.34% versus the MLP**, winning on all four mice against each. The additional ridge comparison above was **post hoc**, after the neural results were known. This is a practical result on this cohort, not proof of universal superiority. [Holdout assessment](experiments/2026-10-07_holdout_confirmation/ASSESSMENT.md)
 
-![Main comparisons and measured CPU cost](portfolio/results/overview.png)
+**Averaging is the dependable ingredient.** Same-cost controls found that averaging two independently trained transformers, or two MLPs, performs similarly to mixing architectures. Across seven visual mice and four sensorimotor mice, two-seed averages improved mean relative MSE by 5.4–6.1%; three-seed averages by 7.2–8.1%. The same-family and combined 11-mouse analyses are post hoc. Training and inference cost increase roughly 2–3×. We did not establish a reliable transformer advantage over the MLP. [Ensembling results](experiments/2026-10-07_ensemble_check/ASSESSMENT.md)
 
-| Question | What the evidence supports | Important limit |
-| --- | --- | --- |
-| Can neural activity predict running? | Yes in some recordings; the selected transformer reached R² 0.471 and 0.123 on two separate mice. | Five of seven separate mice had R² below 0.01; this is not a reliable general decoder. |
-| Does a well-tuned transformer beat a strong MLP? | On four reused development mice it had **10.28% higher MSE**. On seven separate mice, independent fits averaged **2.33% lower MSE**. | The separate result won only **3/7 mice**, had **1.20% worse MAE**, and failed the frozen gates; Holm-adjusted p = 1. |
-| Is population compression useful engineering? | Measured CPU batch-64 forwards took **5.61 ms** for the population transformer, **5.82 ms** for the population MLP and **84.97 ms** for the local-neuron MLP. | Roughly 15× faster in this benchmark; both population families benefit. Hardware-specific, excludes preprocessing/I/O, and accuracy is not equal. |
-| Did correct neuron coordinates add dependable value? | In the earlier controlled fixed-cell study, correct coordinates improved MSE by **0.50%** over omitted coordinates. | Uncertainty intervals crossed zero; both gates failed. An exact ID-embedding compensation explains redundancy in that additive tokenizer. |
-| What did separate validation expose? | **Zero speed beat every tested neural recipe and ridge on two mice.** Transformer MSE was **20.01× / 3.99×** the zero-speed error. | Both test periods had less running than training. This identifies a failure condition, not its cause. |
+<details>
+<summary>Same-family ensemble controls and earlier findings</summary>
 
-The earlier single-model comparisons in the table above average individual-seed errors within each mouse, then weight mice equally; their development and separate-cohort results are reported separately. The ensembling table instead evaluates averaged predictions against single-model errors, also weighting mice equally. The separate comparison tests fixed **training recipes fitted anew within each recording**, not transfer of pretrained weights to unseen mice. Physical time scales and publisher preprocessing were not harmonized between releases.
+| Cohort | Model | Two-seed MSE reduction vs single | Mouse wins | Three-seed reduction |
+| --- | --- | ---: | ---: | ---: |
+| Seven visual mice | Transformer | 5.41% | 7/7 | 7.22% |
+| Seven visual mice | MLP | 5.87% | 7/7 | 7.82% |
+| Four sensorimotor mice | Transformer | 6.05% | 4/4 | 8.07% |
+| Four sensorimotor mice | MLP | 6.08% | 4/4 | 8.11% |
 
-## Inspect or reproduce
+The later TX60 session is descriptive and adds no independent mouse. Earlier seven-mouse single-model comparisons were mixed: the transformer beat ridge on only 3/7 mice, and zero speed beat every tested neural recipe and ridge on two low-running recordings. Those results remain in the [historical results](portfolio/results/RESULTS.md); the newer four-mouse result does not erase them.
 
-- **[Core code tour](docs/CODE_TOUR.md):** six files to understand the data, transformer, MLP, training, ridge and evaluation.
-- **[Training guide](docs/TRAINING.md):** prepare a public recording and fit the fixed independent-recording recipes.
-- **[Interactive Neural Observatory](portfolio/visualization/index.html):** orbit the 3D neuron population and compare recorded running with transformer, MLP and ridge animations; works offline. [Viewer guide](portfolio/visualization/README.md).
-- **[Research report](portfolio/RESEARCH_REPORT.md):** the project story, architecture, results, limitations and remaining questions.
-- **[Exact results](portfolio/results/RESULTS.md):** all finalist comparisons, absolute accuracy and links to machine-readable tables.
-- **[Evidence ledger](portfolio/EVIDENCE.md):** which claims are supported, uncertain or unsupported.
-- **[Reproduction guide](portfolio/REPRODUCIBILITY.md):** rebuild the saved-prediction results without raw neural data or training.
-- **[Presentation kit](portfolio/PRESENTATION.md):** a short pitch, project bullets and a three-minute walkthrough.
-- **[Archive catalog](portfolio/data/ARCHIVE.md):** navigate all 54 experiment folders without treating them as independent studies.
-- **[Complete experiment record](research/EXPERIMENTS.md):** original sources, protocols, run histories and results, including unsuccessful and stopped work.
+Other retained findings: population compression substantially reduced measured CPU forward cost for both neural families; correct coordinates did not add dependable predictive value in the tested fixed-cell setup. Coordinates are used for the visualization. [Evidence ledger](portfolio/EVIDENCE.md) · [Earlier overview](portfolio/results/overview.png) · [Zero-speed controls](portfolio/results/zero_speed_control.png)
 
-From the repository root, in an environment with the listed dependencies:
+</details>
+
+## Why the correction stays experimental
+
+![Per-mouse trade-offs from the learned correction: overall MSE, quiet predicted speed, and active MSE](portfolio/results/correction_tradeoff.png)
+
+The correction lowers mean quiet-frame predicted speed by **53.08%**, but lowers overall MSE only **1.16% beyond the mix** and worsens active-period MSE by up to **3.29%**. It failed its frozen 5% improvement requirement. The GIF includes it to show the trade-off; it is not the recommended default. A later confidence-gated variant did not resolve the problem. [Correction result](experiments/2026-10-07_holdout_confirmation/ASSESSMENT.md) · [Confidence-gating follow-up](experiments/2026-10-07_confidence_gate/ASSESSMENT.md)
+
+## How it works
+
+![Architecture: recorded activity feeds a transformer and MLP; validation-selected weights combine their predictions, with an optional correction branch](portfolio/results/combined_architecture.png)
+
+Each parent learns to decode running speed from a short history of the same 512 neurons. The transformer uses temporal attention; the MLP provides a strong nonlinear comparison. A weight chosen on validation data combines their nonnegative predictions. The optional correction adds a small, bounded adjustment informed by activity and a learned movement score.
+
+This is **within-recording decoding**, fitted separately for each mouse—not a pretrained model transferred to unseen animals, future-speed forecasting, or a causal simulation. The clean [`decoding/`](decoding/) package teaches the standalone models; the evaluated mix and correction recipes are preserved in the [holdout experiment](experiments/2026-10-07_holdout_confirmation/holdout.py).
+
+## Evaluation and limits
+
+- **Chronological train/validation/test splits**, gaps, training-only normalization, fixed seeds and simple constant controls. Validation selects checkpoints, ridge settings and mixing weights.
+- **Original holdout process:** recipe frozen before download; all model checkpoints locked before scoring; independent audits passed. The later ridge and same-family ensemble comparisons are labeled post hoc.
+- **Data integrity:** later TX61/VR2 files contained D7’s running trace and were excluded; D8 failed the preset flat-training-target rule. Four sensorimotor recordings used a start-aligned common prefix for a two-frame mismatch under an amendment approved before numerical values were read. This does not independently verify sensor timing.
+- **Scope:** four sensorimotor mice in the headline comparison, one lab; seeds are not extra animals. No novelty, statistical-significance or deployment-readiness claim. The earlier seven visual mice include substantial failures. Physical sampling support was not harmonized between releases.
+
+[Protocols and data issues](experiments/2026-10-07_holdout_confirmation/ASSESSMENT.md) · [Full research report](portfolio/RESEARCH_REPORT.md) · [Claim boundaries](portfolio/EVIDENCE.md)
+
+## Explore and reproduce
+
+**Start with the code:** [six-file code tour](docs/CODE_TOUR.md) · [training guide](docs/TRAINING.md). The visualization and diagnostic archive are separate from the core learning path.
+
+**Open the interactive replay:** clone or download the repo, then open `portfolio/visualization/index.html` in a browser. All four mice, three paired seeds and complete test intervals are available offline. No server, model training or network connection is required.
+
+**Rebuild the current charts** from the bundled audited metric records:
 
 ```bash
 python3 -m pip install -r portfolio/requirements.txt
-python3 portfolio/rebuild.py
+python3 portfolio/build_current.py
 ```
 
-The compact bundle contains all four development mice, six finalist recipes and six seeds, plus all seven separate mice, both fitting regimes, three neural recipes and three seeds. Ridge and constant controls are included. Rebuilding recomputes **303 metric rows** and checks them against the archived results; it does not train or import a neural model. It produces CSV/JSON tables and standalone PNG/PDF figures.
-
-![Every separate mouse compared with zero speed](portfolio/results/zero_speed_control.png)
-
-## Scope and provenance
-
-The recent systematic search, continuous-search synthesis and separate validation account for **572 new neural fits** (440 + 60 + 72), with additional earlier work documented in the archive. This is a bounded, extensively searched design space—not exhaustive coverage of all transformers. Four development mice were repeatedly examined. Seven later mice were reserved for a fixed-recipe comparison; those recordings are now examined too. Seeds and overlapping windows are not additional animals.
-
-Data come from the [Stringer et al. spontaneous recordings](https://figshare.com/articles/Recordings_of_ten_thousand_neurons_in_visual_cortex_during_spontaneous_behaviors/6163622) and the [Stringer-coauthored Facemap v2 release](https://janelia.figshare.com/articles/dataset/Facemap_a_framework_for_modeling_neural_activity_based_on_orofacial_tracking/23712957/2). Credit belongs to the original experimental teams. This project performs a secondary analysis; it did not collect these recordings. [Methods and related work](portfolio/RESEARCH_REPORT.md#data-and-related-work) distinguish this benchmark from existing neural transformers.
-
-## Code layout
+This produces PNG/SVG figures and a per-mouse CSV without raw recordings, training or neural inference. The earlier compact prediction bundle remains reproducible with `python3 portfolio/rebuild.py` (303 historical metric rows). [Reproduction guide](portfolio/REPRODUCIBILITY.md) · [Current figure sources](portfolio/data/current_reference.json) · [Presentation kit](portfolio/PRESENTATION.md)
 
 | Directory | Purpose |
 | --- | --- |
-| `decoding/` | Readable, import-safe data preparation, transformer/MLP, training, ridge and held-out scoring |
-| `docs/` | Code tour and exact training commands |
-| `portfolio/` | Main findings, compact predictions, reproducible figures and offline 3D viewer |
-| `experiments/` | Unmodified historical source, protocols, reports, histories and result records |
-| `research/` | Complete archive inventory, early pilots, original prototype and cleanup verification |
-| `tests/` | Small synthetic checks and optional local-checkpoint compatibility check |
+| `decoding/` | Import-safe preparation, transformer/MLP, training, ridge and evaluation |
+| `docs/` | Code tour, training commands and handoff notes |
+| `portfolio/` | Current figures, research narrative, compact evidence and offline viewer |
+| `experiments/` | Preserved protocols, tested architectures, successes, failures and audits |
+| `research/` | Complete experiment index and original archive inventory |
+| `tests/` | Synthetic pipeline and optional checkpoint-compatibility checks |
 
-The clean model matches all **72 archived initial states exactly** and **2,016 sampled saved predictions within 4.77e-7**. Seven synthetic tests cover the new pipeline. These checks verify cleanup; they do not change the scientific result. No completed experiment was retrained during packaging. The training CLI supports independent recording fits; the historical archive retains shared training and the full search. Raw recordings, prepared arrays and trained checkpoints are excluded from Git.
+The documented systematic search, continuous-search work and separate validation alone account for 572 new neural fits; later experiments are additional and individually indexed. This is an extensive **bounded search**, not exhaustive coverage of all architectures. Raw recordings, prepared arrays and trained checkpoints stay outside Git. No neural model was retrained to make these charts or animations.
 
-The animated preview above plays directly in GitHub. To explore the running mice and neurons interactively, download or clone this repository and open `portfolio/visualization/index.html` in a browser. The full viewer works offline with the adjacent files; [static preview](portfolio/visualization/preview.png).
+## Data and credit
 
-Original code and prose: [MIT](LICENSE). Source datasets and included derivatives: [CC BY-NC 4.0 attribution and terms](NOTICE.md). Neural generation remains future work. Transformer superiority has not met the scientific gate.
+Secondary analysis of the [Stringer spontaneous recordings](https://figshare.com/articles/Recordings_of_ten_thousand_neurons_in_visual_cortex_during_spontaneous_behaviors/6163622) and the [Stringer-coauthored Facemap v2 release](https://janelia.figshare.com/articles/dataset/Facemap_a_framework_for_modeling_neural_activity_based_on_orofacial_tracking/23712957/2), including its sensorimotor recordings. Credit belongs to the original experimental teams; this project collected no animal data.
+
+Original code and prose: [MIT](LICENSE). Dataset derivatives, including data-bearing figures and animations: [CC BY-NC 4.0 attribution and terms](NOTICE.md). Neural generation remains future work.

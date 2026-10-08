@@ -2,8 +2,8 @@
 (() => {
   'use strict';
   const $ = id => document.getElementById(id);
-  const models = ['transformer', 'mlp', 'ridge'];
-  const colors = { observed: '#e6edf3', transformer: '#78b7ff', mlp: '#edb576', ridge: '#b6a3ee' };
+  const models = ['blend', 'corrected', 'ridge'];
+  const colors = { observed: '#e6edf3', blend: '#6fe3c4', corrected: '#f0a882', ridge: '#a8b3c7' };
   const state = { recording: null, seed: 401, head: 0, playing: false, rate: 12,
     yaw: -.57, pitch: .55, zoom: 1, hover: -1, lastFrame: -1, dirty: true };
   const cache = new Map();
@@ -64,6 +64,8 @@
       return [Math.min(...vals), Math.max(...vals)];
     });
     const scaleXY = Math.max(ranges[0][1] - ranges[0][0], ranges[1][1] - ranges[1][0]);
+    result.planes = [...new Set(Array.from({length:source.neurons}, (_,i)=>result.positions[i*3+2]))].sort((a,b)=>a-b);
+    result.planeMin = ranges[2][0]; result.planeMax = ranges[2][1];
     for (let i = 0; i < source.neurons; i++) {
       const [x, y, plane] = result.positions.slice(i * 3, i * 3 + 3);
       result.points.push({
@@ -84,7 +86,7 @@
     state.head = 0; state.lastFrame = -1; state.hover = -1; state.dirty = true;
     $('scrubber').max = String(record.frames - 1);
     $('last-frame').textContent = `TEST FRAME ${(record.frames - 1).toLocaleString()}`;
-    $('neuron-detail').textContent = `512 cells · ${record.plane_count} imaging planes · same input for every model`;
+    $('neuron-detail').textContent = `512 cells · ${record.plane_count} imaging planes · shared neuron panel`;
     $('neuron-tooltip').hidden = true;
     updateMetrics(); drawTrace(); render();
   }
@@ -146,10 +148,10 @@
     glow.addColorStop(0, '#23483a35'); glow.addColorStop(1, '#0d172200');
     ctx.fillStyle = glow; ctx.fillRect(0, 0, w, h);
     ctx.lineWidth = .7;
-    for (const plane of [0, 5, 10, 15, 19]) {
-      const y = (.5 - plane / 19) * 1.35;
+    for (const plane of state.recording.planes) {
+      const y = (.5 - (plane-state.recording.planeMin) / Math.max(1,state.recording.planeMax-state.recording.planeMin)) * 1.35;
       const corners = [[-1.1,-1.1],[1.1,-1.1],[1.1,1.1],[-1.1,1.1]].map(([x,z]) => project({x,y,z},w,h));
-      ctx.strokeStyle = plane === 0 || plane === 19 ? '#527b7650' : '#486c6928';
+      ctx.strokeStyle = plane === state.recording.planeMin || plane === state.recording.planeMax ? '#527b7650' : '#486c6928';
       ctx.beginPath(); corners.forEach((p,i) => i ? ctx.lineTo(p.x,p.y) : ctx.moveTo(p.x,p.y)); ctx.closePath(); ctx.stroke();
     }
     if (state.dirty) {
@@ -175,7 +177,7 @@
       }
     }
     ctx.font = '9px ui-sans-serif, system-ui'; ctx.fillStyle = '#8faeb6';
-    for (const [label, position] of [['x', {x:1.27,y:-.69,z:-1.1}], ['y', {x:-1.14,y:-.69,z:1.3}], ['plane 0', {x:-1.19,y:.77,z:-1.15}], ['plane 19', {x:-1.22,y:-.88,z:-1.15}]]) {
+    for (const [label, position] of [['x', {x:1.27,y:-.69,z:-1.1}], ['y', {x:-1.14,y:-.69,z:1.3}], [`plane ${state.recording.planeMin}`, {x:-1.19,y:.77,z:-1.15}], [`plane ${state.recording.planeMax}`, {x:-1.22,y:-.88,z:-1.15}]]) {
       const p=project(position,w,h); ctx.fillText(label,Math.max(8,Math.min(w-60,p.x)),Math.max(12,Math.min(h-12,p.y)));
     }
     updateTooltip();
@@ -323,8 +325,8 @@
     changeRecording(source.mice[0].id);
     setPlaying(!window.matchMedia('(prefers-reduced-motion: reduce)').matches);
     requestAnimationFrame(animate);
-    //expose a read-only snapshot for reproducibility checks and inspecting the displayed values
-    window.neuralViewer=Object.freeze({snapshot:()=>({recording:state.recording.id,frame:frame(),nativeFrame:state.recording.first_native_frame+frame(),
+    //expose deterministic seeking and a snapshot for replay capture and verification
+    window.neuralViewer=Object.freeze({setFrame:value=>{setPlaying(false);seek(value);},snapshot:()=>({recording:state.recording.id,frame:frame(),nativeFrame:state.recording.first_native_frame+frame(),
       seed:state.seed,playing:state.playing,rate:state.rate,camera:{yaw:state.yaw,pitch:state.pitch,zoom:state.zoom},
       neuronCount:state.recording.points.length,activityOffset:frame()*512,
       visibleNeuronCount:projections.filter(p=>p.x>=0&&p.x<=cloudWidth&&p.y>=0&&p.y<=cloudHeight).length,

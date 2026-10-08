@@ -9,10 +9,10 @@ import numpy as np
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
-STUDY = ROOT / 'experiments' / '2026-10-06_facemap_validation'
+STUDY = ROOT / 'experiments' / '2026-10-07_holdout_confirmation'
 PORTFOLIO = HERE.parent
-MICE = ['TX103', 'TX104', 'TX56', 'TX57', 'TX60', 'TX61', 'VR2']
-ROLES = {'transformer': 'optimized_attention', 'mlp': 'optimized_population_mlp'}
+MICE = ['D3', 'D4', 'D7', 'D9']
+RIDGE = ROOT / 'experiments' / '2026-10-07_holdout_ridge'
 
 
 def read(path):
@@ -30,13 +30,14 @@ def main():
                   position_encoding='little-endian float32 triplets: published xpos, ypos, iplane',
                   spatial_note='x/y are recorded coordinates; z is an imaging-plane index, not calibrated physical depth',
                   timing_note='Native-frame order. Playback frames per second is a display rate, not acquisition time.',
-                  model_note='Independent fits, fixed recipes; saved test predictions only. Coordinates are visualization inputs, not decoder inputs.')
+                  model_note='Saved transformer–MLP mix, original attention+BCE correction, and validation-tuned ridge. All fitted within recording. Ridge comparison post hoc. Coordinates only for visualization.')
     receipts, checks = [], []
     for mouse in MICE:
         folder = STUDY / 'prepared' / mouse
         meta = read(folder / 'metadata.json')
         panel = np.load(folder / 'panel.npy', allow_pickle=False)
-        raw = next((ROOT / 'data' / 'facemap_v2_visual').glob('*' + mouse + '_*.npz'))
+        records = read(STUDY/'protocol.json')['sets']['B_sensorimotor_new_mice']['recordings']
+        raw = ROOT/'data'/'holdout'/next(r['file'] for r in records if r['id']==mouse)
         with np.load(raw, allow_pickle=False) as source:
             positions = np.stack([source['xpos'][panel], source['ypos'][panel], source['iplane'][panel]], axis=1)
         activity = np.load(folder / 'test_seq.npy', mmap_mode='r', allow_pickle=False)[63:]
@@ -45,25 +46,31 @@ def main():
         assert activity.shape == (len(targets), 512) and np.isfinite(activity).all()
         assert np.array_equal(positions[:, 2], np.round(positions[:, 2]))
         lower = meta['lower']
-        reference = PORTFOLIO / 'data' / 'predictions' / f'separate_{mouse}.npz'
+        reference = RIDGE/'predictions'/f'{mouse}.npz'
         speed, scores = {}, {}
+        archived = read(RIDGE/'summary.json')['rows']
+        corrected_rows = read(STUDY/'summary.json')['rows']
+        zero = next(r['mse'] for r in archived if r['mouse']==mouse and r['model']=='zero')
         with np.load(reference, allow_pickle=False) as z:
             np.testing.assert_array_equal(targets, z['target'])
-            speed['observed'] = (z['target'] - lower).astype('<f4')
-            for display, role in ROLES.items():
-                for seed in output['seeds']:
-                    speed[f'{display}_{seed}'] = (np.maximum(z[f'independent__{role}__{seed}'].astype(np.float64), lower)-lower).astype('<f4')
-            speed['ridge'] = (np.maximum(z['ridge'].astype(np.float64), lower)-lower).astype('<f4')
-        #keep metrics in original float64 evaluation arithmetic; colors and motion use compact values
-        archived = read(STUDY / 'test_metrics.json')['rows']
-        for display, role in {**ROLES, 'ridge': 'ridge'}.items():
-            for seed in (output['seeds'] if display != 'ridge' else [None]):
-                row = next(r for r in archived if r['mouse'] == mouse and r['role'] == role and r['seed'] == seed and r['regime'] == ('control' if seed is None else 'independent'))
-                zero = next(r['mse'] for r in archived if r['mouse'] == mouse and r['role'] == 'zero_speed')
+            speed['observed'] = (z['target']-lower).astype('<f4')
+            for seed in output['seeds']:
+                key = f'blend_{seed}'
+                speed[key] = (np.maximum(z[key].astype(float), lower)-lower).astype('<f4')
+                with np.load(STUDY/'predictions'/f'{mouse}_{seed}.npz') as original:
+                    np.testing.assert_array_equal(targets, original['target'])
+                    speed[f'corrected_{seed}'] = (np.maximum(original['corrected'].astype(float), lower)-lower).astype('<f4')
+            speed['ridge'] = (np.maximum(z['ridge'].astype(float), lower)-lower).astype('<f4')
+        for display in ('blend', 'corrected', 'ridge'):
+            for seed in (output['seeds'] if display!='ridge' else [None]):
+                if display=='corrected':
+                    row = next(r for r in corrected_rows if r['recording']==mouse and r['arm']=='attention_bce' and r['seed']==seed)
+                else:
+                    row = next(r for r in archived if r['mouse']==mouse and r['model']==display and r['seed']==seed)
                 key = display if seed is None else f'{display}_{seed}'
                 scores[key] = {k: row[k] for k in ('mse', 'mae', 'r2')}
-                scores[key]['mse_over_zero'] = row['mse'] / zero
-                err = speed[key].astype(np.float64) - speed['observed'].astype(np.float64)
+                scores[key]['mse_over_zero'] = row['mse']/zero
+                err = speed[key].astype(float)-speed['observed'].astype(float)
                 np.testing.assert_allclose(np.mean(err**2), row['mse'], rtol=1e-6, atol=1e-8)
         quantized = np.rint(np.clip(activity, 0, 5)*51).astype(np.uint8)
         np.testing.assert_allclose(quantized.astype(np.float64)/51, np.clip(activity, 0, 5), atol=1/102+1e-6, rtol=0)
@@ -72,7 +79,8 @@ def main():
                                    speed={k: packed(v, '<f4') for k, v in speed.items()}, metrics=scores,
                                    plane_count=len(np.unique(positions[:, 2])), max_speed=float(max(v.max() for v in speed.values()))))
         receipts.append(dict(mouse=mouse, recording=str(raw.relative_to(ROOT)),
-                             source_recording_sha256=meta['source_uncompressed_sha256'],
+                             coordinate_source='publisher xpos/ypos/iplane at exact selected panel indices',
+                             correction_prediction_sha256={str(seed): hashlib.sha256((STUDY/'predictions'/f'{mouse}_{seed}.npz').read_bytes()).hexdigest() for seed in output['seeds']},
                              panel_sha256=hashlib.sha256((folder/'panel.npy').read_bytes()).hexdigest(),
                              predictions_sha256=hashlib.sha256(reference.read_bytes()).hexdigest(),
                              activity_sha256=hashlib.sha256((folder/'test_seq.npy').read_bytes()).hexdigest(),
@@ -84,7 +92,7 @@ def main():
     (HERE / 'data.js').write_text('window.NEURAL_VIEW_DATA = ' + serialized + ';\n')
     review = dict(new_fits=0, new_inference=0, frames=sum(m['frames'] for m in output['mice']),
                   checks=checks, receipts=receipts, raw_neural_recordings_not_copied=True,
-                  selection='All seven separate-cohort mice; full test intervals, all three fixed seeds. Default is first mouse/seed by ID.',
+                  selection='All four former holdout sensorimotor mice; full test intervals, all three fixed seeds. Default is first mouse/seed by ID.',
                   visual_only_changes='Activity color quantized and clipped; x/y jointly scaled, plane spacing schematic; motion illustrates speed.',
                   data_js_sha256=hashlib.sha256((HERE/'data.js').read_bytes()).hexdigest(),
                   bytes=(HERE/'data.js').stat().st_size)
