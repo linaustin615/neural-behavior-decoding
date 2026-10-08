@@ -1,0 +1,303 @@
+{
+  "development": {
+    "transformer": {
+      "summary": {
+        "mean_gain": 0.05411712844403974,
+        "mouse_wins": 7,
+        "slot_wins": 17,
+        "slots": 21,
+        "max_harm": 0.0,
+        "mean_mae_gain": 0.008192420076356581,
+        "triple_mean_gain": 0.07215617125871977,
+        "gate": {
+          "mean_gain": true,
+          "mouse_wins": true,
+          "slot_wins": true,
+          "harm": true,
+          "mae": true
+        },
+        "passed": true
+      },
+      "per_mouse": {
+        "TX103": {
+          "pair_gain": 0.04443552916800497,
+          "triple_gain": 0.05924737222400667,
+          "mae_gain": 0.009067280562428892,
+          "active_change": -0.04373790406355571,
+          "quiet_pred_change": 1.3877787807814457e-17
+        },
+        "TX104": {
+          "pair_gain": 0.10617571745277687,
+          "triple_gain": 0.14156762327036942,
+          "mae_gain": 0.003584451017323631,
+          "active_change": -0.06191069872482702,
+          "quiet_pred_change": 0.0
+        },
+        "TX56": {
+          "pair_gain": 0.01308967799437033,
+          "triple_gain": 0.017452903992493884,
+          "mae_gain": 0.005479104596653128,
+          "active_change": -0.006545758168103433,
+          "quiet_pred_change": 0.0
+        },
+        "TX57": {
+          "pair_gain": 0.012488564690908088,
+          "triple_gain": 0.016651419587877747,
+          "mae_gain": 0.004635508809804789,
+          "active_change": -0.005408732666805305,
+          "quiet_pred_change": 0.0
+        },
+        "TX60": {
+          "pair_gain": 0.04648809609109639,
+          "triple_gain": 0.06198412812146192,
+          "mae_gain": 0.01129263950809356,
+          "active_change": -0.022529370106564195,
+          "quiet_pred_change": 0.0
+        },
+        "TX61": {
+          "pair_gain": 0.1323560977908499,
+          "triple_gain": 0.17647479705446656,
+          "mae_gain": 0.013981727545090417,
+          "active_change": -0.1747395985004272,
+          "quiet_pred_change": 0.0
+        },
+        "VR2": {
+          "pair_gain": 0.023786215920271636,
+          "triple_gain": 0.03171495456036222,
+          "mae_gain": 0.009306228495101654,
+          "active_change": -0.013102481232645014,
+          "quiet_pred_change": -1.1102230246251565e-16
+        }
+      }
+    },
+    "mlp": {
+      "summary": {
+        "mean_gain": 0.05868013463573712,
+        "mouse_wins": 7,
+        "slot_wins": 15,
+        "slots": 21,
+        "max_harm": 0.0,
+        "mean_mae_gain": 0.009478895939222418,
+        "triple_mean_gain": 0.0782401795143161,
+        "gate": {
+          "mean_gain": true,
+          "mouse_wins": true,
+          "slot_wins": true,
+          "harm": true,
+          "mae": true
+        },
+        "passed": true
+      },
+      "per_mouse": {
+        "TX103": {
+          "pair_gain": 0.07461948855088019,
+          "triple_gain": 0.0994926514011738,
+          "mae_gain": 0.017398518609088365,
+          "active_change": -0.07279530758288777,
+          "quiet_pred_change": 1.3877787807814457e-17
+        },
+        "TX104": {
+          "pair_gain": 0.13273614383457266,
+          "triple_gain": 0.17698152511276355,
+          "mae_gain": 0.005090577318656364,
+          "active_change": -0.11439040112514276,
+          "quiet_pred_change": 5.551115123125783e-17
+        },
+        "TX56": {
+          "pair_gain": 0.01434005481234013,
+          "triple_gain": 0.01912007308312036,
+          "mae_gain": 0.007308271908380348,
+          "active_change": -0.0067856007065280055,
+          "quiet_pred_change": 1.1102230246251565e-16
+        },
+        "TX57": {
+          "pair_gain": 0.012401462939695018,
+          "triple_gain": 0.016535283919593025,
+          "mae_gain": 0.00519242417050636,
+          "active_change": -0.005355185499708259,
+          "quiet_pred_change": 0.0
+        },
+        "TX60": {
+          "pair_gain": 0.03935972585370584,
+          "triple_gain": 0.05247963447160786,
+          "mae_gain": 0.00920545780032267,
+          "active_change": -0.01652792577374418,
+          "quiet_pred_change": 0.0
+        },
+        "TX61": {
+          "pair_gain": 0.11022036237353916,
+          "triple_gain": 0.14696048316471866,
+          "mae_gain": 0.010251153505653532,
+          "active_change": -0.1074746436953391,
+          "quiet_pred_change": 0.0
+        },
+        "VR2": {
+          "pair_gain": 0.02708370408542682,
+          "triple_gain": 0.03611160544723546,
+          "mae_gain": 0.011905868261949282,
+          "active_change": -0.014397134397497569,
+          "quiet_pred_change": 0.0
+        }
+      }
+    }
+  },
+  "holdout_set_b": {
+    "transformer": {
+      "summary": {
+        "mean_gain": 0.06051905903715621,
+        "mouse_wins": 4,
+        "slot_wins": 11,
+        "slots": 12,
+        "max_harm": 0.0,
+        "mean_mae_gain": 0.026216600132624474,
+        "triple_mean_gain": 0.08069207871620843,
+        "gate": {
+          "mean_gain": true,
+          "mouse_wins": true,
+          "slot_wins": true,
+          "harm": true,
+          "mae": true
+        },
+        "passed": true
+      },
+      "per_mouse": {
+        "D3": {
+          "pair_gain": 0.06947045207272029,
+          "triple_gain": 0.09262726943029398,
+          "mae_gain": 0.029698130686083957,
+          "active_change": -0.07139337168851434,
+          "quiet_pred_change": 4.163336342344337e-17
+        },
+        "D4": {
+          "pair_gain": 0.0745179625848198,
+          "triple_gain": 0.09935728344642658,
+          "mae_gain": 0.027329567763957008,
+          "active_change": -0.07184290856954545,
+          "quiet_pred_change": -1.3877787807814457e-17
+        },
+        "D7": {
+          "pair_gain": 0.021366340538237605,
+          "triple_gain": 0.028488454050983547,
+          "mae_gain": 0.01542961364976747,
+          "active_change": -0.01480506104211221,
+          "quiet_pred_change": 0.0
+        },
+        "D9": {
+          "pair_gain": 0.07672148095284714,
+          "triple_gain": 0.1022953079371296,
+          "mae_gain": 0.03240908843068946,
+          "active_change": -0.07784927328696156,
+          "quiet_pred_change": 2.0816681711721685e-17
+        }
+      }
+    },
+    "mlp": {
+      "summary": {
+        "mean_gain": 0.06079043177821042,
+        "mouse_wins": 4,
+        "slot_wins": 11,
+        "slots": 12,
+        "max_harm": 0.0,
+        "mean_mae_gain": 0.02459253153974561,
+        "triple_mean_gain": 0.08105390903761386,
+        "gate": {
+          "mean_gain": true,
+          "mouse_wins": true,
+          "slot_wins": true,
+          "harm": true,
+          "mae": true
+        },
+        "passed": true
+      },
+      "per_mouse": {
+        "D3": {
+          "pair_gain": 0.062455106525565185,
+          "triple_gain": 0.08327347536742036,
+          "mae_gain": 0.024971692365416187,
+          "active_change": -0.06864722956702218,
+          "quiet_pred_change": 2.7755575615628914e-17
+        },
+        "D4": {
+          "pair_gain": 0.07558436598553642,
+          "triple_gain": 0.10077915464738185,
+          "mae_gain": 0.02939354676659045,
+          "active_change": -0.07463344498508806,
+          "quiet_pred_change": -1.3877787807814457e-17
+        },
+        "D7": {
+          "pair_gain": 0.013381224772972655,
+          "triple_gain": 0.017841633030630244,
+          "mae_gain": 0.01075675059997605,
+          "active_change": -0.007447095641035628,
+          "quiet_pred_change": 0.0
+        },
+        "D9": {
+          "pair_gain": 0.09174102982876742,
+          "triple_gain": 0.122321373105023,
+          "mae_gain": 0.03324813642699975,
+          "active_change": -0.08505967778760859,
+          "quiet_pred_change": 2.7755575615628914e-17
+        }
+      }
+    }
+  },
+  "holdout_TX60_s2": {
+    "transformer": {
+      "summary": {
+        "mean_gain": 0.01991500240566002,
+        "mouse_wins": 1,
+        "slot_wins": 3,
+        "slots": 3,
+        "max_harm": 0.0,
+        "mean_mae_gain": 0.005921550125039032,
+        "triple_mean_gain": 0.0265533365408801,
+        "gate": {
+          "mean_gain": false,
+          "mouse_wins": true,
+          "slot_wins": true,
+          "harm": true,
+          "mae": true
+        },
+        "passed": false
+      },
+      "per_mouse": {
+        "TX60_s2": {
+          "pair_gain": 0.01991500240566002,
+          "triple_gain": 0.0265533365408801,
+          "mae_gain": 0.005921550125039032,
+          "active_change": -0.008902054861037345,
+          "quiet_pred_change": 0.0
+        }
+      }
+    },
+    "mlp": {
+      "summary": {
+        "mean_gain": 0.018359586934253547,
+        "mouse_wins": 1,
+        "slot_wins": 3,
+        "slots": 3,
+        "max_harm": 0.0,
+        "mean_mae_gain": 0.006126400332771342,
+        "triple_mean_gain": 0.024479449245671248,
+        "gate": {
+          "mean_gain": false,
+          "mouse_wins": true,
+          "slot_wins": true,
+          "harm": true,
+          "mae": true
+        },
+        "passed": false
+      },
+      "per_mouse": {
+        "TX60_s2": {
+          "pair_gain": 0.018359586934253547,
+          "triple_gain": 0.024479449245671248,
+          "mae_gain": 0.006126400332771342,
+          "active_change": -0.007327663873145984,
+          "quiet_pred_change": 0.0
+        }
+      }
+    }
+  },
+  "inputs_match_audited_rows": true
+}

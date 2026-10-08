@@ -1,0 +1,57 @@
+{
+  "utc": "2026-10-07T13:27:40.325327+00:00",
+  "question": "does validation-selected shrinkage of the locked bounded corrections pass the unchanged bounded-hybrid gates?",
+  "disclosure": "NOT blind: unscaled test outcomes of these same checkpoints are known (bounded_hybrid summary.json); idea motivated by observed TX61 active harm. Validation already selected each checkpoint epoch, so the scale=1 option is optimistic on validation.",
+  "training": "none; locked checkpoints and parent predictions only",
+  "options": [
+    [
+      0.0,
+      "decrease_only"
+    ],
+    [
+      0.25,
+      "decrease_only"
+    ],
+    [
+      0.25,
+      "two_sided"
+    ],
+    [
+      0.5,
+      "decrease_only"
+    ],
+    [
+      0.5,
+      "two_sided"
+    ],
+    [
+      0.75,
+      "decrease_only"
+    ],
+    [
+      0.75,
+      "two_sided"
+    ],
+    [
+      1.0,
+      "decrease_only"
+    ],
+    [
+      1.0,
+      "two_sided"
+    ]
+  ],
+  "correction": "final=max(base+scale*g(delta),0); g=identity (two_sided) or min(delta,0) (decrease_only)",
+  "selection": "per mouse and arm, minimum mean-over-seeds full validation speed MSE in float64; exact ties (<=1e-12 relative) go to the earliest option",
+  "gate": "identical to bounded_hybrid protocol, applied to each scaled arm versus transformer, MLP and blend",
+  "limits": "exploratory, reused animals, third look at these test sets; no significance; no further threshold changes",
+  "source_sha256": {
+    "experiments/2026-10-07_correction_scaling/scaling.py": "b91c86fdf45009871d2881f485fd87d66b7ea26f0af961e11e1a5753ba102315",
+    "experiments/2026-10-07_bounded_hybrid/run.py": "364d0938efb48bac64e485a0d55bbc79807777968dac3a587df73cdf6bc31b76",
+    "experiments/2026-10-07_bounded_hybrid/protocol.json": "c866efea8a419d8c712402503ac240ac3acd3643d05c09cbdb707d256c9a15f8",
+    "experiments/2026-10-07_bounded_hybrid/base_lock.json": "91d3e046122e4fbdae09842d1b93c3082cd10d0bc55bb9460e58e1c8fa1861d2",
+    "experiments/2026-10-07_bounded_hybrid/evaluation_lock.json": "d5d66b2ba314850c3ffb1067cc469df66e389229e3cfba5a704018b7a5d20b2d",
+    "experiments/2026-10-07_bounded_hybrid/summary.json": "7e59d1c5cba1bf8cb1fc9676c43db5a6b9cfe1a1cb9ddd720885309fc83dcf81",
+    "experiments/2026-10-07_bounded_hybrid/audit.json": "2a6f34577f1dee52244affc6a898766eed8c965ed26c7f065d92eb61cc59a57b"
+  }
+}

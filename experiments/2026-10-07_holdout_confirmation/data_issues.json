@@ -1,0 +1,28 @@
+{
+  "utc": "2026-10-07T16:58:24.340684+00:00",
+  "values_inspected": false,
+  "method": "npz member headers and sha256 of run.npy bytes only; no activity, running or timestamp values read",
+  "integrity": "all 8 files match published size and CRC32; both archive md5 match",
+  "duplicated_run": {
+    "files": [
+      "spont_TX61_2020_11_02_2",
+      "spont_VR2_2020_10_26_1"
+    ],
+    "finding": "run.npy byte-identical to spont_D7_2021_11_18_2 run (sha256 prefix 78f6fdf24af3, length 21210), while their own tneural lengths are 23252/24002; publisher appears to have packaged D7 running into these files",
+    "consequence": "their behavioral target does not belong to these recordings; unusable"
+  },
+  "two_frame_offset": {
+    "files": [
+      "D3",
+      "D4",
+      "D7",
+      "D9"
+    ],
+    "finding": "run length equals tneural length; spks has exactly 2 more frames. Protocol allows <=1. Development cohort had 0-1 frame differences resolved by common prefix (author fig4 indexes run with neural indices from 0)"
+  },
+  "passed": [
+    "spont_TX60_2020_10_22_1 (diff1)",
+    "spont_D8_2021_11_18_3 (diff1; tcam absent, unused by us)"
+  ],
+  "status": "stopped before preparation per protocol; awaiting user decision on amendment"
+}

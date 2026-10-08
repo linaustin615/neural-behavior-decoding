@@ -1,0 +1,16 @@
+{
+  "utc": "2026-10-07T17:02:16.144473+00:00",
+  "approved_by": "user, after data_issues.json and before any holdout value was read",
+  "protocol_sha256": "da91cf01f8b8369c36b531e5da917757bb409c7fbbe4f12282275dca23c97c30",
+  "data_issues_sha256": "35401b5233376f9a945f373fc75889951cd69431445845bef6099cf75ed34c0e",
+  "changes": [
+    "exclude spont_TX61_2020_11_02_2 and spont_VR2_2020_10_26_1: their run.npy is byte-identical to D7 (publisher packaging error)",
+    "set A reduces to TX60_s2 only and is reported descriptively; no pass/fail from one recording",
+    "set B (D3,D4,D7,D8,D9) is the sole gated confirmation; gates unchanged (5/5 recording wins, 10/15 seed wins, >=5% mean gain, <=10% harm, MAE>=0; secondary 4/5 quiet wins and active safeguard)",
+    "alignment tolerance raised from <=1 to <=2 frames using the same start-aligned common prefix (author convention: neural index i pairs with run index i); applies to D3,D4,D7,D9",
+    "model mouse_index (selects frozen initialization tables only): D3=0, D4=1, D7=2, D8=3, D9=4, TX60_s2=4",
+    "alpha locked per recording immediately after its six parents finish (depends only on that recording validation); all checkpoints locked globally before any test scoring",
+    "preparation copies decoding/data.py prepare() exactly except the tolerance and mouse-ID check; parent fits mirror decoding/train.py fit(); corrections mirror bounded_hybrid run.py fit()"
+  ],
+  "unchanged": "all thresholds, recipes, seeds, selection rules and the single test scoring"
+}

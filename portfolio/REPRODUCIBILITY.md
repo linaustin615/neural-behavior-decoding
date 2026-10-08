@@ -1,5 +1,16 @@
 # Reproduce the saved results
 
+## Current four-mouse presentation
+
+Run `python3 portfolio/build_current.py` after installing `portfolio/requirements.txt`. It reads only [current_reference.json](data/current_reference.json), a compact copy of the audited ridge/holdout metric rows with source SHA-256 receipts. It produces `current_models`, `correction_tradeoff` and `combined_architecture` PNG/SVG figures, `current_models.csv` and `current_figures.json`. It does not fit models, load raw recordings, select new recipes or score a new test set. The five model rows share D3/D4/D7/D9 and seeds401/402/403 (ridge is deterministic); errors average within mouse before relative gains average across mice.
+
+The original correction is the full-strength attention+BCE branch, not the later confidence-gated variant. Quiet predicted speed is explicitly separated from MSE. Ridge and the combined presentation are post hoc; the original neural-parent comparison was pre-registered.
+
+The offline viewer contains all four full test intervals, saved mix/correction/ridge predictions, positions and quantized display activity. Its optional exporter requires the local holdout archive; [viewer reproduction and GIF capture](visualization/README.md) explain those extra inputs. Browser animation never runs model inference. The current charts are portable from the small JSON; they do not independently reconstruct MSE from raw predictions. The experiment audit records supply that check.
+
+## Earlier 303-row prediction bundle
+
+
 ## Fast path: no neural dataset or training
 
 From the repository root:

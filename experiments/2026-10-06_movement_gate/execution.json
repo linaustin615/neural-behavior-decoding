@@ -1,0 +1,16 @@
+{
+  "method": "CPU torch two threads per fit; independent recordings/seeds in separate Python workers; no agent delegation",
+  "budget": 84,
+  "epochs": 24,
+  "extra_workers": [
+    "TX57 all seeds",
+    "TX60 all seeds",
+    "TX61 all seeds",
+    "VR2 all seeds",
+    "TX56 seed501",
+    "TX56 seed502",
+    "TX56 seed503"
+  ],
+  "coordinator": "sequential train stage skips completed hash-verified worker fits, then locks all84",
+  "source_or_recipe_changes_during_training": false
+}

@@ -1,0 +1,52 @@
+{
+  "utc": "2026-10-06T23:44:17.540405+00:00",
+  "mice": [
+    "TX103",
+    "TX104",
+    "TX56",
+    "TX57",
+    "TX60",
+    "TX61",
+    "VR2"
+  ],
+  "seeds": [
+    601,
+    602,
+    603
+  ],
+  "arms": [
+    "attention_bce",
+    "mlp_bce",
+    "attention_mse"
+  ],
+  "fits": 63,
+  "epochs": 24,
+  "lr": 0.001,
+  "weight_decay": 0.001,
+  "batch": 64,
+  "alpha_grid": [
+    0.0,
+    0.25,
+    0.5,
+    0.75,
+    1.0
+  ],
+  "primary_goal": "combined decoder beats BOTH original transformer and MLP; isolated attention advantage is secondary",
+  "base": "clip original transformer/MLP speed at physical zero in float64; validation-select alpha per mouse across three seeds for (1-alpha)*MLP+alpha*transformer",
+  "mapping": "new601/602/603 paired with original401/402/403",
+  "correction": "trainable raw512x32 activity encoder width16 one block patch4; concatenate last token, population mean/std and base speed; head emits residual and movement logit; delta=.5*tanh(residual)*(1-sigmoid(logit)); final=max(base+delta,0)",
+  "initialization": "zero residual gives exactly the base prediction at epoch0; class-logit bias from training moving prevalence",
+  "loss": "speed MSE + BCE(weight1) for *_bce + .1*mean(1[speed>=.5]*delta^2); BCE labels speed>.05; identical protection penalty in all arms",
+  "selection": "minimum full validation speed MSE including epoch0; fixed24epochs AdamW cosine to.0001 clipgrad1; paired batches; no test labels in training or inference",
+  "barrier": "lock baseline alphas before fits; lock all63 selected checkpoints before scoring",
+  "gate": "for each arm versus each original parent: >=5%mean relative MSE gain,>=6/7mouse wins,>=14/21seed wins,maxmouseharm<=10%,meanMAEgain>=0; also >=5%gain vs blend, quiet wins>=5/7 against blend and no mouse activeMSE more than5%worse than blend",
+  "active": "observed speed>=.5 trainingSD; quiet<=.05; missing active/quiet slice not a win; no test-based threshold changes",
+  "limits": "exploratory reused animals; no independent significance; full parent weights frozen; not exhaustive; no automatic extensions",
+  "source_sha256": {
+    "experiments/2026-10-07_bounded_hybrid/run.py": "364d0938efb48bac64e485a0d55bbc79807777968dac3a587df73cdf6bc31b76",
+    "experiments/2026-10-06_frozen_retrieval/run.py": "b82b5785fd927cf18b2991f6bbf5216c6335c01090435ec49caea3f02d701e27",
+    "decoding/model.py": "7e28394a6f12c3d226bf31abaab2cf2b4b9cd703a671c1129ca5444cd85395a2",
+    "decoding/data.py": "194f6e6acb53653c36b8c915f65fd24d7b8aea0993241f623777f8d985b73613",
+    "decoding/config.py": "6e5e55429a238f6d91e354350fc450be4d8cb958ba964c0d26cb35105191b9b4"
+  }
+}

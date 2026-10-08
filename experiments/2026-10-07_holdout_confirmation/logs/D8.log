@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/Users/austinlin/neuron_transformer/experiments/2026-10-07_holdout_confirmation/holdout.py", line 345, in <module>
+    assert args.rec; pipeline(args.rec)
+  File "/Users/austinlin/neuron_transformer/experiments/2026-10-07_holdout_confirmation/holdout.py", line 245, in pipeline
+    prepare(rid)
+  File "/Users/austinlin/neuron_transformer/experiments/2026-10-07_holdout_confirmation/holdout.py", line 70, in prepare
+    assert speed_std>1e-6
+AssertionError

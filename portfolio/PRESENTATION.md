@@ -1,52 +1,43 @@
-# GitHub research-portfolio presentation
+# Presenting the project
 
-## Positioning
+## Short pitch
 
-**Title:** Neural Behavior Decoding: What Survives Strong Baselines?
+I built a reproducible benchmark for decoding mouse running speed from neural activity. It compares ridge regression, an MLP, a transformer and their combinations. On four sensorimotor mice, a validation-selected MLP–transformer ensemble reduced mean relative test MSE by 25.1% versus tuned ridge and about 5% versus either standalone neural model. Matched controls show that averaging is the dependable ingredient; a learned correction helps quiet predictions but introduces an active-period trade-off. Every comparison, failed trial and limitation remains traceable.
 
-**One line:** A reproducible study of transformers, MLPs and ridge regression for mouse running-speed decoding, showing where architectural gains hold, where they disappear, and what separate-recording validation reveals.
-
-**Short pitch:** I investigated whether transformers could extract useful behavioral relationships from population neural activity beyond strong simpler models. The recent work packages covered 572 neural fits, with a fixed-recipe evaluation on seven separate mice after extensive development. Population compression reduced measured CPU forward cost by about 15× relative to the local-neuron implementation, but both MLP and transformer benefited. The transformer did not establish reliable superiority, and two recordings exposed failures against zero speed. The deliverable is an auditable comparison, a concrete account of feature redundancy, and a portable bundle that rebuilds all finalist metrics and figures without training.
-
-This is a draft the project author can adapt. Keep descriptions of personal contribution accurate, including tool assistance if asked. The published datasets were collected by the original experimental teams.
-
-## Project bullets
-
-- Built a controlled mouse-behavior decoding benchmark with chronological splits, training-only normalization, locked checkpoints, strong linear/nonlinear baselines, and per-mouse evaluation across development and separate cohorts.
-- Compared population transformer and MLP decoders through a fixed structural/recipe search; measured approximately 15× lower batch-forward CPU time than the local-neuron MLP implementation, while documenting quality tradeoffs.
-- Tested fixed recipes on seven separate mice; identified two recordings where all tested model families lost to zero speed, and preserved the failed superiority result rather than reporting only a favorable average.
-- Packaged all finalist predictions, 303 metric rows, source hashes and complete per-mouse plots for reproduction without raw neural data or retraining.
-
-Do not compress these into “achieved a 15× faster and more accurate transformer,” “proved coordinates do not matter,” “state of the art,” or “statistically significant improvement.” Those descriptions are not supported.
+The neural-parent holdout comparison was pre-registered. The ridge comparison and same-family ensemble checks were post hoc. Each model was fitted within its recording; this is not zero-shot transfer.
 
 ## Three-minute walkthrough
 
 | Time | Show | Explain |
 | --- | --- | --- |
-| 0:00–0:30 | Root README | The question: does attention add reliable decoding value beyond identity, activity and strong baselines? |
-| 0:30–1:10 | Overview figure | Development transformer-versus-ridge gains looked strong, but the tuned MLP was stronger; population compression reduced runtime for both families. |
-| 1:10–1:50 | Zero-speed figure | Separate validation changes the interpretation: a relative win can still be a poor prediction. Keep every mouse, including the two failures. |
-| 1:50–2:20 | Architecture diagram and coordinate explanation | Explain the population read-in and the earlier exact ID/coordinate compensation. Separate representation, optimization and added information. |
-| 2:20–3:00 | `python3 portfolio/rebuild.py` and results table | Reproduce the evidence, identify the failed gates, and end on the narrower unresolved reliability question. |
+| 0:00–0:30 | README GIF | Recorded neurons and illustrative speed-driven mice; synchronized mix, corrected mix and ridge. The excerpt is chosen using observed behavior only. |
+| 0:30–1:10 | Five-model chart | Same four mice and test frames; 25.1% lower MSE than ridge. Standalone neural models already help; combining them adds about 5%. |
+| 1:10–1:40 | Architecture diagram | Activity feeds parallel MLP and transformer paths; validation chooses the mixing weight. Coordinates are for the 3D view only. |
+| 1:40–2:10 | Correction trade-off | Quiet predictions drop 53%, but overall MSE improves just 1.16%; running-period error can increase. Keep the plain mix as the default. |
+| 2:10–2:35 | Same-family ensemble controls | Two models of one family perform similarly. This is a practical ensembling result, not an invented uniquely superior transformer. |
+| 2:35–3:00 | Research report and archive | Earlier seven-mouse results include failures against zero speed. Show honest cohort boundaries, locked selections and reproducible figures. |
 
-## Questions a reviewer is likely to ask
+## Portfolio bullets
 
-**Why keep a transformer if the MLP is strong?** It remains a useful controlled reference and a plausible family for richer tasks. This benchmark does not establish a reason to prefer it for the current task. Keeping it is different from claiming it won.
+- Implemented and compared population transformers, strong MLPs and validation-tuned ridge for within-recording neural-to-behavior decoding.
+- Evaluated a combined decoder on four sensorimotor mice: 25.1% lower mean relative MSE than ridge in a post hoc comparison, and approximately 5% lower than each neural parent in the pre-registered holdout study.
+- Preserved the complete experiment history, paired seeds, simple controls, validation locks and independent numerical audits; tested same-cost ensembles and correction trade-offs.
+- Built an offline 3D replay and reproducible figures that connect recorded activity to predictions without presenting illustrations as biological simulation.
 
-**Was the search exhaustive?** It exhausted a declared 54-structure grid per population family, followed by bounded tuning. It did not cover every width, architecture, objective or training scale. Screening may miss slow learners.
+## Questions to be ready for
 
-**Does seven-mouse validation mean zero-shot transfer?** No. The recipes were fixed before new outcomes, then trained separately within each recording. Shared fitting is also reported descriptively. No unseen-mouse weights transfer is claimed from these results.
+**Why use both models if an MLP is strong?** The mix beats either single parent here. However, same-family ensembles perform similarly at matched model count, so the evidence does not require two different architectures.
 
-**Why is a positive 2.33% mean not enough?** It wins only three of seven mice, worsens MAE, misses the fixed practical threshold and fails the animal-level significance test. Selecting the mean alone would hide contradictory evidence.
+**Is correction better?** Slightly on overall average, but it missed the declared improvement requirement and worsens running-period error on some mice. We show it as experimental rather than promoting the largest headline number.
 
-**Is low running definitely the cause?** No. Lower test running mean and variance are measured, and every family fails the zero baseline on two mice. Activity changes, sampling support, preprocessing and coverage were not separated experimentally.
+**Does the model generalize to an unseen mouse?** The training recipe was tested on previously unused mice, but weights were fitted separately within each recording. Pretrained-weight transfer was not demonstrated.
 
-**What is original here?** The specific controlled evaluation, implemented comparison, preserved audit trail and synthesis of failure modes. Population transformers and neural decoding are established research areas. This is not a claim that their basic architecture was invented here.
+**Why are earlier results worse?** Different recordings and releases give different outcomes. The seven-mouse visual cohort includes low-running failures, whereas the four sensorimotor mice support the current result. The contribution of data shift, coverage, timing and modeling limitations was not fully isolated.
 
-**Can a reader retrain it immediately?** The portfolio reproduces metrics and figures from saved predictions. The clean `decoding/` package supports independent-recording fits after obtaining the large publisher recordings. It has synthetic pipeline tests and archived-checkpoint compatibility checks; the cleanup did not rerun the full real-data cohort or historical search. See [the training guide](../docs/TRAINING.md).
+**What did you invent?** The implemented benchmark, controlled evaluation, audit trail and synthesis are the project contribution. Neither ensembling nor the basic transformer/MLP architecture is claimed as a new research invention.
 
-## Release scope
+**Can I reproduce it?** `python3 portfolio/build_current.py` rebuilds the current figures from bundled audited records. `python3 portfolio/rebuild.py` reconstructs the earlier303-row evidence from saved predictions. Retraining needs the original publisher recordings; see the training guide.
 
-The release presents a controlled benchmark with its failed superiority gates intact. It includes the clean core, teaching guide, compact predictions, figures, offline viewer, and all historical small source/result records. The [experiment index](../research/EXPERIMENTS.md) distinguishes evaluated work from screening and the reconstruction study stopped before evaluation.
+## Avoid these claims
 
-Original code uses MIT; dataset-derived assets retain their publishers' CC BY-NC 4.0 terms. Raw recordings, prepared arrays and checkpoints remain outside Git. Release and cleanup do not create a statistically significant transformer advantage.
+“25% better because of attention,” “53% lower overall error from correction,” “works on any mouse,” “statistically significant,” “exhaustively searched every transformer,” and “generated realistic neural behavior” are not supported. Also avoid describing the entire project as unsuccessful: the ensemble result is a useful, measured improvement with clear limits.

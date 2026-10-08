@@ -1,0 +1,63 @@
+{
+  "passed": false,
+  "protocol_sha256": "da91cf01f8b8369c36b531e5da917757bb409c7fbbe4f12282275dca23c97c30",
+  "values_inspected": false,
+  "recordings": {
+    "TX60_s2": {
+      "set": "A_visual_later_sessions",
+      "file": "spont_TX60_2020_10_22_1_spks.npz",
+      "passed": true,
+      "neurons": 49748,
+      "frames": 23226,
+      "run_frames": 23225,
+      "spks_dtype": "float32",
+      "run_dtype": "float64"
+    },
+    "TX61_s2": {
+      "set": "A_visual_later_sessions",
+      "file": "spont_TX61_2020_11_02_2_spks.npz",
+      "passed": false,
+      "error": "AssertionError('spks frames 23252 vs run 21210')"
+    },
+    "VR2_s2": {
+      "set": "A_visual_later_sessions",
+      "file": "spont_VR2_2020_10_26_1_spks.npz",
+      "passed": false,
+      "error": "AssertionError('spks frames 24002 vs run 21210')"
+    },
+    "D3": {
+      "set": "B_sensorimotor_new_mice",
+      "file": "spont_D3_2021_11_22_2_spks.npz",
+      "passed": false,
+      "error": "AssertionError('spks frames 28683 vs run 28681')"
+    },
+    "D4": {
+      "set": "B_sensorimotor_new_mice",
+      "file": "spont_D4_2021_11_23_2_spks.npz",
+      "passed": false,
+      "error": "AssertionError('spks frames 23516 vs run 23514')"
+    },
+    "D7": {
+      "set": "B_sensorimotor_new_mice",
+      "file": "spont_D7_2021_11_18_2_spks.npz",
+      "passed": false,
+      "error": "AssertionError('spks frames 21212 vs run 21210')"
+    },
+    "D8": {
+      "set": "B_sensorimotor_new_mice",
+      "file": "spont_D8_2021_11_18_3_spks.npz",
+      "passed": true,
+      "neurons": 28258,
+      "frames": 21217,
+      "run_frames": 21218,
+      "spks_dtype": "float32",
+      "run_dtype": "float32"
+    },
+    "D9": {
+      "set": "B_sensorimotor_new_mice",
+      "file": "spont_D9_2021_11_22_2_spks.npz",
+      "passed": false,
+      "error": "AssertionError('spks frames 23588 vs run 23586')"
+    }
+  }
+}
