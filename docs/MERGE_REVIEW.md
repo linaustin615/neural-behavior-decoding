@@ -30,3 +30,5 @@ Merge preparation inspected the current changes, parsed the new Python/JSON file
 Only intended presentation media are included: the approximately 4.5 MB GIF, static preview, three PNG figures and SVG exports. The approximately 13.8 MB `data.js` is the existing offline-viewer format updated with compact display derivatives. All other new experiment records are text/JSON/CSV/source. Raw `data/`, prepared arrays, checkpoints and capture intermediates remain excluded. Dataset-derived assets retain the CC BY-NC 4.0 notice.
 
 The historical audit fields such as `published: false` describe their capture-time state, not the live GitHub branch. Earlier handoff notes are preserved as history; current Git and pull-request status determine publication state.
+
+Matplotlib SVG exports are marked as generated; their generator-emitted trailing spaces are exempt from Git's end-of-line whitespace check. The checked image bytes remain unchanged.

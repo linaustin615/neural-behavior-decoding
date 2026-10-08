@@ -5,3 +5,5 @@ research/original_application/** -text
 portfolio/data/** -text
 portfolio/visualization/data.js -text -diff linguist-generated=true
 *.csv whitespace=cr-at-eol
+#Matplotlib emits trailing spaces inside generated SVG path data
+portfolio/results/*.svg linguist-generated=true whitespace=-blank-at-eol
