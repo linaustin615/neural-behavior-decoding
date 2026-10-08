@@ -36,7 +36,7 @@ def main(folder):
         with Image.open(paths[index]) as img:
             sheet.paste(img.convert('RGB'),(i%2*width,i//2*height))
     #preserve small text and model accents instead of letting dark backgrounds dominate the palette
-    for i, color in enumerate(['#6fe3c4','#f0a882','#a8b3c7','#e6edf3','#95a8b9','#8795a0','#657582','#bd939b','#85e3d4']):
+    for i, color in enumerate(['#58a6ff','#ffb347','#c084fc','#e6edf3','#95a8b9','#8795a0','#657582','#bd939b','#85e3d4']):
         sheet.paste(color,(i*200,height*3,(i+1)*200,height*3+128))
     palette = sheet.quantize(colors=256, method=Image.Quantize.MEDIANCUT)
     frames=[]
@@ -52,6 +52,8 @@ def main(folder):
         for i in range(gif.n_frames): gif.seek(i); delays.append(gif.info['duration'])
         assert sum(delays)==12000 and gif.size==(capture['width'],capture['height'])
         review={k:v for k,v in capture.items() if k!='snapshots'}
+        review['camera']=capture['snapshots'][0]['camera']
+        review['model_colors']={'blend':'#58a6ff','corrected':'#ffb347','ridge':'#c084fc','observed':'#e6edf3'}
         review.update(asset=target.name,bytes=target.stat().st_size,sha256=sha(target),encoded_frames=gif.n_frames,
             encoded_duration_ms=sum(delays),infinite_loop=True,original_displayed_speeds_checked=2400,
             full_test_metrics_unchanged_every_frame=True,source_sha256={p.name:sha(p) for p in [HERE/'index.html',HERE/'app.js',HERE/'style.css',HERE/'data.js',HERE/'capture.js',HERE/'encode_gif.py']},

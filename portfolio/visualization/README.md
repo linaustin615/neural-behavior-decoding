@@ -8,6 +8,8 @@ Open [index.html](index.html) in a browser. Keep it beside `style.css`, `app.js`
 
 [Static preview](preview.png) · [Five-model results chart](../results/current_models.png) · [Correction trade-off](../results/correction_tradeoff.png)
 
+In this replay, **blue = mix**, **orange = mix + correction**, **violet = ridge**, and the neutral mouse shows observed speed. Mouse bodies stay neutral gray; model colors identify the legs, panel accents and timeline. The fixed camera looks across the slanted neuron population, with more vertical space to distinguish the imaging planes; recorded coordinates are unchanged.
+
 ## What you can explore
 
 - All four sensorimotor mice (D3/D4/D7/D9), three paired parent seeds (401/402/403), and every scored test frame: **18,892 frames** total. The correction seeds are 601/602/603, paired respectively. Ridge is deterministic.

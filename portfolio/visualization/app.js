@@ -3,9 +3,9 @@
   'use strict';
   const $ = id => document.getElementById(id);
   const models = ['blend', 'corrected', 'ridge'];
-  const colors = { observed: '#e6edf3', blend: '#6fe3c4', corrected: '#f0a882', ridge: '#a8b3c7' };
+  const colors = { observed: '#e6edf3', blend: '#58a6ff', corrected: '#ffb347', ridge: '#c084fc' };
   const state = { recording: null, seed: 401, head: 0, playing: false, rate: 12,
-    yaw: -.57, pitch: .55, zoom: 1, hover: -1, lastFrame: -1, dirty: true };
+    yaw: -1.4, pitch: -.15, zoom: 1, hover: -1, lastFrame: -1, dirty: true };
   const cache = new Map();
   const canvasCache = new Map();
   let projections = [], cloudWidth = 0, cloudHeight = 0, lastTick = 0, pointer = null;
@@ -236,7 +236,7 @@
     ctx.strokeStyle='#acbcc580';ctx.lineWidth=.7;
     for(const offset of [-5,0,5]){ctx.beginPath();ctx.moveTo(56,-7);ctx.lineTo(79,-8+offset);ctx.stroke();}
     leg(-25,0,false);leg(22,Math.PI,false);
-    ctx.strokeStyle=ink+'8c';ctx.lineWidth=1;ctx.beginPath();ctx.ellipse(-7,-10,42,22,-.07,Math.PI,Math.PI*1.78);ctx.stroke();
+    ctx.strokeStyle='#b6c4cf8c';ctx.lineWidth=1;ctx.beginPath();ctx.ellipse(-7,-10,42,22,-.07,Math.PI,Math.PI*1.78);ctx.stroke();
     ctx.restore();
   }
 
@@ -297,7 +297,7 @@
     $('rate').addEventListener('change',event=>{state.rate=Number(event.target.value);});
     $('scrubber').addEventListener('input',event=>{setPlaying(false);seek(Number(event.target.value));});
     $('trace').addEventListener('pointerdown',event=>{const r=event.target.getBoundingClientRect();setPlaying(false);seek(Math.round((event.clientX-r.left)/r.width*(state.recording.frames-1)));});
-    $('reset-view').addEventListener('click',()=>{state.yaw=-.57;state.pitch=.55;state.zoom=1;state.dirty=true;render();});
+    $('reset-view').addEventListener('click',()=>{state.yaw=-1.4;state.pitch=-.15;state.zoom=1;state.dirty=true;render();});
     const cloud=$('neurons');
     cloud.addEventListener('pointerdown',event=>{pointer={x:event.clientX,y:event.clientY};cloud.setPointerCapture(event.pointerId);});
     cloud.addEventListener('pointermove',event=>{

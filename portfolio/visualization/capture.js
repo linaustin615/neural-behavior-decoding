@@ -10,7 +10,7 @@ const preview = process.argv.includes('--preview');
 
 (async () => {
   fs.mkdirSync(out, {recursive:true});
-  const browser = await chromium.launch({channel:'chrome', headless:true});
+  const browser = await chromium.launch({channel:'chrome', headless:true, args:['--disable-gpu']});
   try {
     const page = await browser.newPage({viewport:{width:1120,height:1200},deviceScaleFactor:1,reducedMotion:'reduce'});
     const errors=[], requests=[];
@@ -72,8 +72,8 @@ const preview = process.argv.includes('--preview');
       await page.click('#play');await page.waitForTimeout(250);await page.click('#play');
       assert.ok((await page.evaluate(()=>window.neuralViewer.snapshot())).frame>1);
       await page.locator('#neurons').focus();await page.keyboard.press('ArrowRight');
-      assert.notEqual((await page.evaluate(()=>window.neuralViewer.snapshot())).camera.yaw,-.57);
-      await page.click('#reset-view');assert.equal((await page.evaluate(()=>window.neuralViewer.snapshot())).camera.yaw,-.57);
+      assert.notEqual((await page.evaluate(()=>window.neuralViewer.snapshot())).camera.yaw,-1.4);
+      await page.click('#reset-view');assert.equal((await page.evaluate(()=>window.neuralViewer.snapshot())).camera.yaw,-1.4);
       await page.setViewportSize({width:390,height:844});await page.waitForTimeout(100);
       assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth));
       await page.screenshot({path:path.join(out,'mobile.png'),fullPage:true});
@@ -89,6 +89,8 @@ const preview = process.argv.includes('--preview');
     await page.waitForTimeout(100);
     const height=await page.evaluate(()=>Math.ceil(document.querySelector('main').getBoundingClientRect().bottom));
     await page.setViewportSize({width:1120,height});
+    await page.evaluate(f=>window.neuralViewer.setFrame(f),clip.start+72);
+    await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
     await page.screenshot({path:path.join(out,'preview.png'),fullPage:true});
     if(preview){console.log(JSON.stringify({clip,height,errors,requests}));return;}
     const fps=50, duration=12, snapshots=[];
@@ -96,7 +98,7 @@ const preview = process.argv.includes('--preview');
       const head=clip.start+i*12/fps;
       const s=await page.evaluate(f=>{window.neuralViewer.setFrame(f);return window.neuralViewer.snapshot();},head);
       assert.equal(s.frame,Math.floor(head));assert.equal(s.visibleNeuronCount,512);
-      assert.deepEqual(s.camera,{yaw:-.57,pitch:.55,zoom:1});
+      assert.deepEqual(s.camera,{yaw:-1.4,pitch:-.15,zoom:1});
       snapshots.push(s);
       await page.screenshot({path:path.join(out,`frame-${String(i).padStart(4,'0')}.png`)});
       if(i%100===0)console.log(`Captured ${i}/600 frames`);
